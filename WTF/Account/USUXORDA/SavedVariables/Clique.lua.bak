@@ -13,10 +13,10 @@ CliqueDB3 = {
 		["Shantx - Pyrewood Village"] = {
 			["bindings"] = {
 				{
-					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
+					["type"] = "target",
 					["key"] = "CTRL-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -44,6 +44,15 @@ CliqueDB3 = {
 					["icon"] = 136168,
 					["spell"] = "Health Funnel",
 				}, -- [4]
+				{
+					["type"] = "spell",
+					["key"] = "ALT-BUTTON1",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 136210,
+					["spell"] = "Create Soulstone",
+				}, -- [5]
 			},
 		},
 	},

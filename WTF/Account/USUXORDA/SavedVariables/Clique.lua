@@ -13,10 +13,10 @@ CliqueDB3 = {
 		["Shantx - Pyrewood Village"] = {
 			["bindings"] = {
 				{
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
 					["key"] = "CTRL-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]

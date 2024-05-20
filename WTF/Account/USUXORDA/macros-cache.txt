@@ -18,7 +18,7 @@ VER 3 000000000000000A "SetFocus" "INV_MISC_QUESTIONMARK"
 /focus [@mouseover,exists,nodead] []
 END
 VER 3 0000000000000001 "ToggleBars" "INV_MISC_QUESTIONMARK"
-/run local bars, E = {3,4,5,6,7}, unpack(ElvUI); for _, n in pairs(bars) do local state = E.db.actionbar["bar"..n].enabled; E.db.actionbar["bar"..n].enabled = (state==false and true or false); E.ActionBars:PositionAndSizeBar("bar"..n) end 
+/run local a,b={3,4,5,6,7},unpack(ElvUI);for c,d in pairs(a)do local e=b.db.actionbar["bar"..d].visibility;b.db.actionbar["bar"..d].visibility=e=="hide"and"[petbattle]hide;show"or"hide"b.ActionBars:PositionAndSizeBar("bar"..d)end
 END
 VER 3 0000000000000006 "ZygorAction1" "134400"
 END

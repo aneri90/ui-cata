@@ -2,7 +2,7 @@ VER 3 0000000001000007 " Immolate" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cleartarget [dead]
 /targetenemy [noexists][dead][noharm]
-/cast Immolate(Rank 11)
+/cast Immolate
 END
 VER 3 0000000001000008 "Burst" "INV_MISC_QUESTIONMARK"
 #showtooltip Metamorphosis
@@ -29,7 +29,7 @@ VER 3 0000000001000001 "Incinerate" "INV_MISC_QUESTIONMARK"
 /targetenemy [noexists][dead][noharm]
 /petdefensive
 /petattack
-/cast Incinerate(Rank 4)
+/cast Incinerate
 END
 VER 3 0000000001000002 "Kick focus" "INV_MISC_QUESTIONMARK"
 #showtooltip

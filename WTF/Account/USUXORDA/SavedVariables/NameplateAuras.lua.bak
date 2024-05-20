@@ -7,7 +7,9 @@ NameplateAurasAceDB = {
 		["Shantx - Pyrewood Village"] = {
 			["CustomSpells2"] = {
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -15,24 +17,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Shield Wall",
 				}, -- [1]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -40,24 +42,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Smoke Bomb",
 				}, -- [2]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -65,24 +67,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Avenger's Shield",
 				}, -- [3]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -90,24 +92,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Pillar of Frost",
 				}, -- [4]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -115,24 +117,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Ice Block",
 				}, -- [5]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -140,24 +142,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Pain Suppression",
 				}, -- [6]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -165,24 +167,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Innervate",
 				}, -- [7]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -190,24 +192,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Polymorph",
 				}, -- [8]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -215,24 +217,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Horde Flag",
 				}, -- [9]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -240,24 +242,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Survival Instincts",
 				}, -- [10]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -265,24 +267,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Repentance",
 				}, -- [11]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -290,24 +292,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Netherstorm Flag",
 				}, -- [12]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -315,24 +317,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Kidney Shot",
 				}, -- [13]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -340,24 +342,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Blind",
 				}, -- [14]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -365,24 +367,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Roar of Sacrifice",
 				}, -- [15]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -390,24 +392,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Dragon's Breath",
 				}, -- [16]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -415,24 +417,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Bash",
 				}, -- [17]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -440,24 +442,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Anti-Magic Shell",
 				}, -- [18]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -465,24 +467,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Combat Readiness",
 				}, -- [19]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -490,24 +492,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Demoralizing Roar",
 				}, -- [20]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -515,24 +517,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Barkskin",
 				}, -- [21]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -540,24 +542,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Howl of Terror",
 				}, -- [22]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -565,24 +567,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Icy Veins",
 				}, -- [23]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -590,24 +592,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Sap",
 				}, -- [24]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -615,24 +617,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Shadowfury",
 				}, -- [25]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -640,24 +642,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Aura Mastery",
 				}, -- [26]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -665,24 +667,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Spell Reflection",
 				}, -- [27]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -690,24 +692,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Gnaw",
 				}, -- [28]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -715,24 +717,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Death Coil",
 				}, -- [29]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -740,24 +742,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Cheap Shot",
 				}, -- [30]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -765,24 +767,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Wyvern Sting",
 				}, -- [31]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -790,24 +792,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Dispersion",
 				}, -- [32]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -815,24 +817,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Shackle Undead",
 				}, -- [33]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -840,24 +842,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Fear",
 				}, -- [34]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -865,24 +867,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Guardian of Ancient Kings",
 				}, -- [35]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -890,24 +892,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Hex",
 				}, -- [36]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -915,24 +917,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Evasion",
 				}, -- [37]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -940,24 +942,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Leap",
 				}, -- [38]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -965,24 +967,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Solar Beam",
 				}, -- [39]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -990,24 +992,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Gouge",
 				}, -- [40]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1015,24 +1017,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Garrote - Silence",
 				}, -- [41]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1040,24 +1042,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Alliance Flag",
 				}, -- [42]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1065,24 +1067,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Deterrence",
 				}, -- [43]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1090,24 +1092,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Master's Call",
 				}, -- [44]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1115,24 +1117,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Killing Spree",
 				}, -- [45]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1140,24 +1142,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Power Infusion",
 				}, -- [46]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1165,24 +1167,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Earthgrab",
 				}, -- [47]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1190,24 +1192,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Hand of Freedom",
 				}, -- [48]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1215,24 +1217,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Intimidating Shout",
 				}, -- [49]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1240,24 +1242,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Predator's Swiftness",
 				}, -- [50]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1265,24 +1267,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Rapid Fire",
 				}, -- [51]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1290,24 +1292,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Freezing Trap",
 				}, -- [52]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1315,24 +1317,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Recklessness",
 				}, -- [53]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1340,24 +1342,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Divine Favor",
 				}, -- [54]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1365,24 +1367,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Psychic Scream",
 				}, -- [55]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1390,24 +1392,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Sin and Punishment",
 				}, -- [56]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1415,24 +1417,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Unstable Affliction",
 				}, -- [57]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1440,24 +1442,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Hand of Protection",
 				}, -- [58]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1465,24 +1467,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Entangling Roots",
 				}, -- [59]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1490,24 +1492,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Mind Control",
 				}, -- [60]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1515,24 +1517,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Seduction",
 				}, -- [61]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1540,24 +1542,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Divine Shield",
 				}, -- [62]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1565,24 +1567,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Axe Toss",
 				}, -- [63]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1590,24 +1592,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Arcane Power",
 				}, -- [64]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1615,24 +1617,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Strangulate",
 				}, -- [65]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1640,24 +1642,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Ardent Defender",
 				}, -- [66]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1665,24 +1667,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Cyclone",
 				}, -- [67]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1690,24 +1692,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Silence",
 				}, -- [68]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1715,24 +1717,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Berserker Rage",
 				}, -- [69]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1740,24 +1742,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Bladestorm",
 				}, -- [70]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1765,24 +1767,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Adrenaline Rush",
 				}, -- [71]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1790,24 +1792,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Vampiric Embrace",
 				}, -- [72]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1815,24 +1817,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Hammer of Justice",
 				}, -- [73]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1840,24 +1842,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Cloak of Shadows",
 				}, -- [74]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1865,24 +1867,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Freeze",
 				}, -- [75]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1890,24 +1892,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Charge Stun",
 				}, -- [76]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1915,24 +1917,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Grounding Totem Effect",
 				}, -- [77]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1940,24 +1942,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Scatter Shot",
 				}, -- [78]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1965,24 +1967,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Elemental Mastery",
 				}, -- [79]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -1990,24 +1992,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Maim",
 				}, -- [80]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -2015,24 +2017,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Banish",
 				}, -- [81]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -2040,24 +2042,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Bloodlust",
 				}, -- [82]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -2065,24 +2067,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Icebound Fortitude",
 				}, -- [83]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -2090,24 +2092,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Frost Nova",
 				}, -- [84]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -2115,24 +2117,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Guardian Spirit",
 				}, -- [85]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -2140,24 +2142,24 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 3,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Hand of Sacrifice",
 				}, -- [86]
 				{
-					["glowType"] = 3,
+					["iconGroups"] = {
+						true, -- [1]
+					},
 					["customBorderColor"] = {
 						1, -- [1]
 						0.1, -- [2]
@@ -2165,19 +2167,17 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["enabledState"] = 2,
-					["iconGroups"] = {
-						true, -- [1]
-					},
+					["glowType"] = 3,
 					["playerNpcMode"] = 1,
 					["animationDisplayMode"] = 1,
 					["showOnFriends"] = true,
 					["auraType"] = 1,
-					["customBorderType"] = 3,
-					["animationType"] = 2,
+					["showOnEnemies"] = true,
+					["iconSizeHeight"] = 45,
 					["animationTimer"] = 10,
 					["iconSizeWidth"] = 45,
-					["iconSizeHeight"] = 45,
-					["showOnEnemies"] = true,
+					["animationType"] = 2,
+					["customBorderType"] = 3,
 					["customBorderPath"] = "",
 					["spellName"] = "Cheat Death",
 				}, -- [87]
@@ -2262,14 +2262,14 @@ NameplateAurasAceDB = {
 					["AlwaysShowMyAuras"] = false,
 					["IconGrowDirection"] = 1,
 					["EnabledZoneTypes"] = {
-						["none"] = true,
+						["pvp"] = true,
 						["party"] = true,
 						["scenario"] = true,
 						["pvp_bg_40ppl"] = true,
-						["raid"] = true,
 						["unknown"] = true,
 						["arena"] = true,
-						["pvp"] = true,
+						["raid"] = true,
+						["none"] = true,
 					},
 					["TimerTextSoonToExpireColor"] = {
 						1, -- [1]
@@ -2293,24 +2293,31 @@ NameplateAurasAceDB = {
 						0, -- [3]
 						1, -- [4]
 					},
-					["StacksFont"] = "NAuras_TeenBold",
-					["StacksTextXOffset"] = -3,
+					["UseDefaultAuraTooltip"] = false,
+					["KeepAspectRatio"] = true,
 					["ShowAurasOnPlayerNameplate"] = false,
 					["Additions_ExplosiveOrbs"] = true,
 					["SortMode"] = 2,
-					["MinTimeToShowTenthsOfSeconds"] = 10,
+					["TimerTextColorHundredPercent"] = {
+						0.1, -- [1]
+						1, -- [2]
+						0.1, -- [3]
+						1, -- [4]
+					},
 					["Additions_DRPvE"] = false,
-					["AffixSpiteful"] = true,
+					["NpcBlacklist"] = {
+					},
 					["DispelIconSizeWidth"] = 45,
-					["InterruptsShowOnlyOnPlayers"] = true,
-					["ShowCooldownAnimation"] = true,
+					["AlwaysShowMyAurasBlacklist"] = {
+					},
+					["ShowOnlyOnTarget"] = false,
 					["IconXOffset"] = 0,
 					["ShowCooldownText"] = true,
 					["AffixSpitefulSound"] = 5274,
-					["DispelIconSizeHeight"] = 45,
+					["DefaultIconSizeHeight"] = 45,
 					["Additions_DispellableSpells_GlowType"] = 4,
-					["ShowDebuffBorders"] = true,
-					["IconYOffset"] = 50,
+					["DefaultIconSizeWidth"] = 45,
+					["IconGroupName"] = "First Icon Group",
 					["IconAlphaTarget"] = 1,
 					["IconAlpha"] = 1,
 					["DebuffBordersCurseColor"] = {
@@ -2320,26 +2327,19 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["ShowStacks"] = true,
-					["InterruptsIconSizeWidth"] = 45,
+					["ShowDebuffBorders"] = true,
 					["IconSpacing"] = 1,
 					["ShowAboveFriendlyUnits"] = true,
-					["IconGroupName"] = "First Icon Group",
-					["DefaultIconSizeWidth"] = 45,
-					["DefaultIconSizeHeight"] = 45,
+					["IconYOffset"] = 50,
+					["InterruptsIconSizeWidth"] = 45,
+					["DispelIconSizeHeight"] = 45,
 					["TimerTextAnchorIcon"] = "CENTER",
-					["ShowOnlyOnTarget"] = false,
-					["AlwaysShowMyAurasBlacklist"] = {
-					},
-					["NpcBlacklist"] = {
-					},
-					["TimerTextColorHundredPercent"] = {
-						0.1, -- [1]
-						1, -- [2]
-						0.1, -- [3]
-						1, -- [4]
-					},
-					["KeepAspectRatio"] = true,
-					["UseDefaultAuraTooltip"] = false,
+					["ShowCooldownAnimation"] = true,
+					["InterruptsShowOnlyOnPlayers"] = true,
+					["AffixSpiteful"] = true,
+					["MinTimeToShowTenthsOfSeconds"] = 10,
+					["StacksTextXOffset"] = -3,
+					["StacksFont"] = "NAuras_TeenBold",
 				}, -- [1]
 			},
 			["HidePlayerBlizzardFrame"] = true,
@@ -2367,11 +2367,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [1]
 				{
 					["customBorderColor"] = {
@@ -2393,11 +2393,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [2]
 				{
 					["customBorderColor"] = {
@@ -2419,11 +2419,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [3]
 				{
 					["customBorderColor"] = {
@@ -2445,11 +2445,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [4]
 				{
 					["customBorderColor"] = {
@@ -2471,11 +2471,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [5]
 				{
 					["customBorderColor"] = {
@@ -2497,11 +2497,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [6]
 				{
 					["customBorderColor"] = {
@@ -2523,11 +2523,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [7]
 				{
 					["customBorderColor"] = {
@@ -2549,11 +2549,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [8]
 				{
 					["customBorderColor"] = {
@@ -2575,11 +2575,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [9]
 				{
 					["customBorderColor"] = {
@@ -2601,11 +2601,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [10]
 				{
 					["customBorderColor"] = {
@@ -2627,11 +2627,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [11]
 				{
 					["customBorderColor"] = {
@@ -2653,11 +2653,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [12]
 				{
 					["customBorderColor"] = {
@@ -2679,11 +2679,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [13]
 				{
 					["customBorderColor"] = {
@@ -2705,11 +2705,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [14]
 				{
 					["customBorderColor"] = {
@@ -2731,11 +2731,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [15]
 				{
 					["customBorderColor"] = {
@@ -2757,11 +2757,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [16]
 				{
 					["customBorderColor"] = {
@@ -2783,11 +2783,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [17]
 				{
 					["customBorderColor"] = {
@@ -2809,11 +2809,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [18]
 				{
 					["customBorderColor"] = {
@@ -2835,11 +2835,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [19]
 				{
 					["customBorderColor"] = {
@@ -2861,11 +2861,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [20]
 				{
 					["customBorderColor"] = {
@@ -2887,11 +2887,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [21]
 				{
 					["customBorderColor"] = {
@@ -2913,11 +2913,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [22]
 				{
 					["customBorderColor"] = {
@@ -2939,11 +2939,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [23]
 				{
 					["customBorderColor"] = {
@@ -2965,11 +2965,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [24]
 				{
 					["customBorderColor"] = {
@@ -2991,11 +2991,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [25]
 				{
 					["customBorderColor"] = {
@@ -3017,11 +3017,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [26]
 				{
 					["customBorderColor"] = {
@@ -3043,11 +3043,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [27]
 				{
 					["customBorderColor"] = {
@@ -3069,11 +3069,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [28]
 				{
 					["customBorderColor"] = {
@@ -3095,11 +3095,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [29]
 				{
 					["customBorderColor"] = {
@@ -3121,11 +3121,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [30]
 				{
 					["customBorderColor"] = {
@@ -3147,11 +3147,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [31]
 				{
 					["customBorderColor"] = {
@@ -3173,11 +3173,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [32]
 				{
 					["customBorderColor"] = {
@@ -3199,11 +3199,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [33]
 				{
 					["customBorderColor"] = {
@@ -3225,11 +3225,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [34]
 				{
 					["customBorderColor"] = {
@@ -3251,11 +3251,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [35]
 				{
 					["customBorderColor"] = {
@@ -3277,11 +3277,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [36]
 				{
 					["customBorderColor"] = {
@@ -3303,11 +3303,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [37]
 				{
 					["customBorderColor"] = {
@@ -3329,11 +3329,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [38]
 				{
 					["customBorderColor"] = {
@@ -3355,11 +3355,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [39]
 				{
 					["customBorderColor"] = {
@@ -3381,11 +3381,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [40]
 				{
 					["customBorderColor"] = {
@@ -3407,11 +3407,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [41]
 				{
 					["customBorderColor"] = {
@@ -3433,11 +3433,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [42]
 				{
 					["customBorderColor"] = {
@@ -3459,11 +3459,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [43]
 				{
 					["customBorderColor"] = {
@@ -3485,11 +3485,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [44]
 				{
 					["customBorderColor"] = {
@@ -3511,11 +3511,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [45]
 				{
 					["customBorderColor"] = {
@@ -3537,11 +3537,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [46]
 				{
 					["customBorderColor"] = {
@@ -3563,11 +3563,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [47]
 				{
 					["customBorderColor"] = {
@@ -3589,11 +3589,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [48]
 				{
 					["customBorderColor"] = {
@@ -3615,11 +3615,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [49]
 				{
 					["customBorderColor"] = {
@@ -3641,11 +3641,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [50]
 				{
 					["customBorderColor"] = {
@@ -3667,11 +3667,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [51]
 				{
 					["customBorderColor"] = {
@@ -3693,11 +3693,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [52]
 				{
 					["customBorderColor"] = {
@@ -3719,11 +3719,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [53]
 				{
 					["customBorderColor"] = {
@@ -3745,11 +3745,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [54]
 				{
 					["customBorderColor"] = {
@@ -3771,11 +3771,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [55]
 				{
 					["customBorderColor"] = {
@@ -3797,11 +3797,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [56]
 				{
 					["customBorderColor"] = {
@@ -3823,11 +3823,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [57]
 				{
 					["customBorderColor"] = {
@@ -3849,11 +3849,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [58]
 				{
 					["customBorderColor"] = {
@@ -3875,11 +3875,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [59]
 				{
 					["customBorderColor"] = {
@@ -3901,11 +3901,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [60]
 				{
 					["customBorderColor"] = {
@@ -3927,11 +3927,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [61]
 				{
 					["customBorderColor"] = {
@@ -3953,11 +3953,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [62]
 				{
 					["customBorderColor"] = {
@@ -3979,11 +3979,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [63]
 				{
 					["customBorderColor"] = {
@@ -4005,11 +4005,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [64]
 				{
 					["customBorderColor"] = {
@@ -4031,11 +4031,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [65]
 				{
 					["customBorderColor"] = {
@@ -4057,11 +4057,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [66]
 				{
 					["customBorderColor"] = {
@@ -4083,11 +4083,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [67]
 				{
 					["customBorderColor"] = {
@@ -4109,11 +4109,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [68]
 				{
 					["customBorderColor"] = {
@@ -4135,11 +4135,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [69]
 				{
 					["customBorderColor"] = {
@@ -4161,11 +4161,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [70]
 				{
 					["customBorderColor"] = {
@@ -4187,11 +4187,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [71]
 				{
 					["customBorderColor"] = {
@@ -4213,11 +4213,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [72]
 				{
 					["customBorderColor"] = {
@@ -4239,11 +4239,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [73]
 				{
 					["customBorderColor"] = {
@@ -4265,11 +4265,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [74]
 				{
 					["customBorderColor"] = {
@@ -4291,11 +4291,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [75]
 				{
 					["customBorderColor"] = {
@@ -4317,11 +4317,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [76]
 				{
 					["customBorderColor"] = {
@@ -4343,11 +4343,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [77]
 				{
 					["customBorderColor"] = {
@@ -4369,11 +4369,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [78]
 				{
 					["customBorderColor"] = {
@@ -4395,11 +4395,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [79]
 				{
 					["customBorderColor"] = {
@@ -4421,11 +4421,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [80]
 				{
 					["customBorderColor"] = {
@@ -4447,11 +4447,11 @@ NameplateAurasAceDB = {
 					["showOnFriends"] = true,
 					["customBorderSize"] = 2,
 					["animationTimer"] = 10,
-					["iconSizeHeight"] = 42,
-					["customBorderType"] = 3,
 					["iconGroups"] = {
 						true, -- [1]
 					},
+					["customBorderType"] = 3,
+					["iconSizeHeight"] = 42,
 				}, -- [81]
 			},
 			["DBVersion"] = 25,
@@ -4534,14 +4534,14 @@ NameplateAurasAceDB = {
 					["AlwaysShowMyAuras"] = false,
 					["IconGrowDirection"] = 1,
 					["EnabledZoneTypes"] = {
-						["none"] = true,
+						["pvp"] = true,
 						["party"] = true,
 						["scenario"] = true,
 						["pvp_bg_40ppl"] = true,
-						["raid"] = true,
 						["unknown"] = true,
 						["arena"] = true,
-						["pvp"] = true,
+						["raid"] = true,
+						["none"] = true,
 					},
 					["TimerTextSoonToExpireColor"] = {
 						1, -- [1]
@@ -4565,24 +4565,31 @@ NameplateAurasAceDB = {
 						0, -- [3]
 						1, -- [4]
 					},
-					["StacksFont"] = "Naowh",
-					["StacksTextXOffset"] = 0,
+					["UseDefaultAuraTooltip"] = false,
+					["KeepAspectRatio"] = true,
 					["ShowAurasOnPlayerNameplate"] = false,
 					["Additions_ExplosiveOrbs"] = true,
 					["SortMode"] = 2,
-					["MinTimeToShowTenthsOfSeconds"] = 0,
+					["TimerTextColorHundredPercent"] = {
+						0.1, -- [1]
+						1, -- [2]
+						0.1, -- [3]
+						1, -- [4]
+					},
 					["Additions_DRPvE"] = false,
-					["AffixSpiteful"] = true,
+					["NpcBlacklist"] = {
+					},
 					["DispelIconSizeWidth"] = 45,
-					["InterruptsShowOnlyOnPlayers"] = true,
-					["ShowCooldownAnimation"] = true,
+					["AlwaysShowMyAurasBlacklist"] = {
+					},
+					["ShowOnlyOnTarget"] = false,
 					["IconXOffset"] = 0,
 					["ShowCooldownText"] = true,
 					["AffixSpitefulSound"] = 5274,
-					["DispelIconSizeHeight"] = 45,
+					["DefaultIconSizeHeight"] = 42,
 					["Additions_DispellableSpells_GlowType"] = 4,
-					["ShowDebuffBorders"] = true,
-					["IconYOffset"] = 24,
+					["DefaultIconSizeWidth"] = 42,
+					["IconGroupName"] = "First Icon Group",
 					["IconAlphaTarget"] = 1,
 					["IconAlpha"] = 1,
 					["DebuffBordersCurseColor"] = {
@@ -4592,26 +4599,19 @@ NameplateAurasAceDB = {
 						1, -- [4]
 					},
 					["ShowStacks"] = true,
-					["InterruptsIconSizeWidth"] = 45,
+					["ShowDebuffBorders"] = true,
 					["IconSpacing"] = 2,
 					["ShowAboveFriendlyUnits"] = false,
-					["IconGroupName"] = "First Icon Group",
-					["DefaultIconSizeWidth"] = 42,
-					["DefaultIconSizeHeight"] = 42,
+					["IconYOffset"] = 24,
+					["InterruptsIconSizeWidth"] = 45,
+					["DispelIconSizeHeight"] = 45,
 					["TimerTextAnchorIcon"] = "CENTER",
-					["ShowOnlyOnTarget"] = false,
-					["AlwaysShowMyAurasBlacklist"] = {
-					},
-					["NpcBlacklist"] = {
-					},
-					["TimerTextColorHundredPercent"] = {
-						0.1, -- [1]
-						1, -- [2]
-						0.1, -- [3]
-						1, -- [4]
-					},
-					["KeepAspectRatio"] = true,
-					["UseDefaultAuraTooltip"] = false,
+					["ShowCooldownAnimation"] = true,
+					["InterruptsShowOnlyOnPlayers"] = true,
+					["AffixSpiteful"] = true,
+					["MinTimeToShowTenthsOfSeconds"] = 0,
+					["StacksTextXOffset"] = 0,
+					["StacksFont"] = "Naowh",
 				}, -- [1]
 			},
 			["HidePlayerBlizzardFrame"] = true,

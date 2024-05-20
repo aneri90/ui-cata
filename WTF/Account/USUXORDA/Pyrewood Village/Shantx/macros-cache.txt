@@ -18,10 +18,16 @@ VER 3 0000000001000006 "Corruption" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cleartarget [dead]
 /targetenemy [noexists][dead][noharm]
-/cast Corruption(Rank 10)
+/cast Corruption
 END
 VER 3 000000000100000C "Felstorm" "134400"
 /cast Felstorm
+END
+VER 3 000000000100000D "Haunt" "134400"
+#showtooltip
+/cleartarget [dead]
+/targetenemy [noexists][dead][noharm]
+/cast Haunt
 END
 VER 3 0000000001000001 "Incinerate" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -33,11 +39,11 @@ VER 3 0000000001000001 "Incinerate" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000001000002 "Kick focus" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@focus,harm,nodead] Spell Lock(Rank 2)
+/cast [@focus,harm,nodead] Spell Lock
 END
 VER 3 0000000001000004 "Kick MO" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@mouseover,harm,nodead] [] Spell Lock(Rank 2)
+/cast [@mouseover,harm,nodead] [] Spell Lock
 END
 VER 3 0000000001000003 "Purge" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -47,7 +53,7 @@ VER 3 0000000001000009 "SB" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cleartarget [dead]
 /targetenemy [noexists][dead][noharm]
-/cast Shadow Bolt(Rank 13)
+/cast Shadow Bolt
 END
 VER 3 000000000100000A "SF" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -55,8 +61,9 @@ VER 3 000000000100000A "SF" "INV_MISC_QUESTIONMARK"
 /targetenemy [noexists][dead][noharm]
 /cast Soul Fire
 END
-VER 3 0000000001000005 "SF/MetaCharge" "INV_MISC_QUESTIONMARK"
+VER 3 000000000100000E "UA" "134400"
 #showtooltip
-/cast [noform:1] Shadowflame
-/cast [form:1] Demon Charge(Demon)
+/cleartarget [dead]
+/targetenemy [noexists][dead][noharm]
+/cast Unstable Affliction
 END

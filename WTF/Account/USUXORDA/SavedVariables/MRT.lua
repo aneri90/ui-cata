@@ -14,33 +14,33 @@ VMRT = {
 		["OptionsFormatting"] = true,
 		["enabled"] = true,
 		["LastUpdateName"] = "Latyleet-Gehennas",
-		["Outline"] = true,
+		["Strata"] = "HIGH",
 		["LastUpdateTime"] = 1662591389,
 		["Width"] = 295.1486206054688,
 		["BlackLastUpdateName"] = {
 		},
-		["FontName"] = "Interface\\Addons\\SharedMedia_MyMedia\\font\\Naowh.ttf",
+		["BlackLastUpdateTime"] = {
+		},
 		["Black"] = {
 			"", -- [1]
 			"", -- [2]
 			"", -- [3]
 		},
-		["Top"] = 182.2066345214844,
-		["Height"] = 177.1204986572266,
 		["DefName"] = "Brutallus",
-		["BlackLastUpdateTime"] = {
-		},
-		["Strata"] = "HIGH",
+		["Height"] = 177.1204986572266,
+		["Top"] = 182.2066345214844,
+		["FontName"] = "Interface\\Addons\\SharedMedia_MyMedia\\font\\Naowh.ttf",
+		["Outline"] = true,
 	},
 	["ProfileKeys"] = {
 		["Shantx-PyrewoodVillage"] = "Naowh",
 	},
 	["Encounter"] = {
-		["names"] = {
-		},
 		["list"] = {
 			["Shantx"] = {
 			},
+		},
+		["names"] = {
 		},
 	},
 	["MarksSimple"] = {
@@ -63,33 +63,33 @@ VMRT = {
 	},
 	["ExCD2"] = {
 		["upd4525"] = true,
-		["NoRaid"] = true,
+		["userDB"] = {
+		},
 		["gnGUIDs"] = {
 			["Refikah"] = 0,
 			["Naowhdada"] = 0,
 			["Defënder"] = 0,
 			["Édibles"] = 0,
-			["Ragnaröög"] = 0,
+			["Shantx"] = 0,
 			["Hundrashuno"] = 0,
 			["Armanalish"] = 0,
 			["Naowhpoopy"] = 0,
 			["Shamanatika"] = 0,
 			["Siimple"] = 0,
-			["Sianco"] = 0,
+			["Pungrunar"] = 0,
 			["Caowh"] = 0,
 			["Reijux"] = 0,
-			["Pungrunar"] = 0,
-			["Shantx"] = 0,
-		},
-		["upd4380"] = true,
-		["userDB"] = {
-		},
-		["CDECol"] = {
-			["10060;1"] = 1,
-			["29166;1"] = 1,
-			["49016;1"] = 1,
+			["Sianco"] = 0,
+			["Ragnaröög"] = 0,
 		},
 		["SplitOpt"] = true,
+		["NoRaid"] = true,
+		["CDECol"] = {
+			["29166;1"] = 1,
+			["10060;1"] = 1,
+			["49016;1"] = 1,
+		},
+		["upd4380"] = true,
 		["enabled"] = true,
 		["Save"] = {
 		},
@@ -106,16 +106,16 @@ VMRT = {
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["blacklistGeneral"] = true,
 				["posY"] = 986.22698974609,
-				["fontGeneral"] = true,
+				["fontOutline"] = true,
 				["iconGeneral"] = true,
 				["posX"] = 2.1048913002014,
 				["visibilityGeneral"] = true,
-				["fontOutline"] = true,
+				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [1]
 			{
 				["enabled"] = true,
@@ -123,16 +123,16 @@ VMRT = {
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["blacklistGeneral"] = true,
 				["posY"] = 986.22698974609,
-				["fontGeneral"] = true,
+				["fontOutline"] = true,
 				["iconGeneral"] = true,
 				["posX"] = 158.3491973877,
 				["visibilityGeneral"] = true,
-				["fontOutline"] = true,
+				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [2]
 			{
 				["enabled"] = true,
@@ -141,13 +141,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [3]
 			{
 				["frameGeneral"] = true,
@@ -155,13 +155,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [4]
 			{
 				["frameGeneral"] = true,
@@ -169,13 +169,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [5]
 			{
 				["frameGeneral"] = true,
@@ -183,13 +183,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [6]
 			{
 				["frameGeneral"] = true,
@@ -197,13 +197,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [7]
 			{
 				["frameGeneral"] = true,
@@ -211,13 +211,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [8]
 			{
 				["frameGeneral"] = true,
@@ -225,13 +225,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [9]
 			{
 				["frameGeneral"] = true,
@@ -239,13 +239,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [10]
 			{
 				["textureColorBackgroundActiveR"] = 1,
@@ -292,26 +292,26 @@ VMRT = {
 				["iconGray"] = false,
 				["textureColorTextCooldownG"] = 1,
 				["visibilityDisable5ppl"] = true,
-				["textureColorBackgroundCooldownB"] = 0,
-				["fontName"] = "Interface\\Addons\\SharedMedia_MyMedia\\font\\Naowh.ttf",
-				["visibilityDisableBG"] = true,
-				["textTemplateRight"] = "%time%",
+				["textureColorTimeLineCooldownR"] = 1,
+				["textureColorTimeLineActiveR"] = 1,
+				["methodsLineClickWhisper"] = true,
+				["textureColorTextActiveR"] = 0.5,
 				["textureAlphaTimeLine"] = 1,
-				["textureColorTextDefaultB"] = 1,
+				["textureColorTimeLineCooldownB"] = 1,
 				["methodsTimeLineAnimation"] = 2,
-				["textureColorBackgroundCooldownG"] = 0,
+				["textureColorTimeLineDefaultG"] = 1,
 				["methodsAlphaNotInRangeNum"] = 70,
 				["frameAnchorBottom"] = true,
-				["textureClassText"] = false,
+				["frameStrata"] = "BACKGROUND",
 				["methodsDisableActive"] = true,
 				["textureColorTimeLineActiveG"] = 1,
-				["frameStrata"] = "BACKGROUND",
-				["textureColorTimeLineDefaultG"] = 1,
-				["textureColorTimeLineCooldownB"] = 1,
-				["textureColorTextActiveR"] = 0.5,
-				["methodsLineClickWhisper"] = true,
-				["textureColorTimeLineActiveR"] = 1,
-				["textureColorTimeLineCooldownR"] = 1,
+				["textureClassText"] = false,
+				["textureColorBackgroundCooldownG"] = 0,
+				["textureColorTextDefaultB"] = 1,
+				["textTemplateRight"] = "%time%",
+				["visibilityDisableBG"] = true,
+				["fontName"] = "Interface\\Addons\\SharedMedia_MyMedia\\font\\Naowh.ttf",
+				["textureColorBackgroundCooldownB"] = 0,
 				["textureAlphaCooldown"] = 1,
 			}, -- [11]
 		},
@@ -339,22 +339,35 @@ VMRT = {
 		["ColorizeLowIlvl685"] = false,
 		["ColorizeNoEnch"] = true,
 		["ColorizeNoGems"] = true,
-		["ColorizeLowIlvl"] = true,
 		["ColorizeNoTopEnchGems"] = false,
+		["ColorizeLowIlvl"] = true,
 		["ColorizeNoValorUpgrade"] = false,
 	},
-	["WhoPulled"] = {
+	["Interrupts"] = {
+		["Profile"] = 1,
+		["Disabled"] = {
+		},
+		["Data"] = {
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+			{
+			}, -- [3]
+			[0] = {
+			},
+		},
 	},
 	["RaidCheck"] = {
 		["ReadyCheckFrameOnlyRL"] = true,
-		["ReadyCheckTop"] = 1004.974182128906,
+		["ReadyCheckFrameTimerFade"] = 4,
 		["RCW_Mini"] = true,
 		["ReadyCheckFrame"] = true,
-		["ReadyCheckFrameTimerFade"] = 4,
-		["ReadyCheckLeft"] = 596.47900390625,
-		["FlaskExp"] = 1,
 		["WeaponEnch"] = {
 		},
+		["FlaskExp"] = 1,
+		["ReadyCheckLeft"] = 596.47900390625,
+		["ReadyCheckTop"] = 1004.974182128906,
 	},
 	["Reminder2"] = {
 		["HistoryFrameShown"] = true,
@@ -386,12 +399,12 @@ VMRT = {
 		["v21"] = true,
 		["Profile"] = 1,
 		["generalSound2"] = "Interface\\AddOns\\MRT\\media\\Sounds\\KittenMeow.ogg",
-		["generalSound6"] = "Interface\\Addons\\MRT\\media\\Sounds\\bam.ogg",
+		["FontOutline"] = true,
 		["v38"] = true,
-		["generalSound3"] = "Interface\\Addons\\MRT\\media\\Sounds\\swordecho.ogg",
 		["removed"] = {
 		},
-		["FontOutline"] = true,
+		["generalSound3"] = "Interface\\Addons\\MRT\\media\\Sounds\\swordecho.ogg",
+		["generalSound6"] = "Interface\\Addons\\MRT\\media\\Sounds\\bam.ogg",
 	},
 	["Addon"] = {
 		["Timer"] = 0.1,
@@ -430,16 +443,16 @@ VMRT = {
 			[72] = 10,
 			[104] = 10,
 			[73] = 10,
-			[581] = 10,
-			[105] = 10,
-			[577] = 10,
-			[256] = 10,
-			[254] = 10,
 			[64] = 10,
+			[105] = 10,
+			[254] = 10,
+			[256] = 10,
+			[577] = 10,
+			[581] = 10,
 		},
 		["Type"] = 2,
-		["Strata"] = "HIGH",
 		["timeToKillAnalyze"] = 15,
+		["Strata"] = "HIGH",
 	},
 	["InviteTool"] = {
 		["Words"] = "инв inv byd штм 123",
@@ -491,18 +504,18 @@ VMRT = {
 					[103] = 10,
 					[72] = 10,
 					[104] = 10,
-					[252] = 10,
-					[73] = 10,
-					[254] = 10,
-					[105] = 10,
-					[256] = 10,
-					[577] = 10,
-					[581] = 10,
 					[1473] = 10,
+					[73] = 10,
+					[581] = 10,
+					[105] = 10,
+					[577] = 10,
+					[256] = 10,
+					[254] = 10,
+					[252] = 10,
 				},
 				["Type"] = 2,
-				["timeToKillAnalyze"] = 15,
 				["Strata"] = "HIGH",
+				["timeToKillAnalyze"] = 15,
 			},
 			["MarksSimple"] = {
 				["buffMax"] = 100,
@@ -543,17 +556,193 @@ VMRT = {
 				["ColorizeLowIlvl685"] = false,
 				["ColorizeNoEnch"] = true,
 				["ColorizeNoGems"] = true,
-				["ColorizeNoTopEnchGems"] = false,
 				["ColorizeLowIlvl"] = true,
+				["ColorizeNoTopEnchGems"] = false,
 				["ColorizeNoValorUpgrade"] = false,
 			},
-			["RaidCheck"] = {
-				["ReadyCheckFrameOnlyRL"] = true,
-				["ReadyCheckFrame"] = true,
-				["ReadyCheckFrameTimerFade"] = 4,
-				["WeaponEnch"] = {
+			["ExCD2"] = {
+				["upd4525"] = true,
+				["gnGUIDs"] = {
+					["Shantx"] = 0,
 				},
-				["FlaskExp"] = 1,
+				["NoRaid"] = true,
+				["CDECol"] = {
+				},
+				["upd4380"] = true,
+				["Save"] = {
+				},
+				["Profiles"] = {
+					["Now"] = "default",
+					["List"] = {
+					},
+				},
+				["userDB"] = {
+				},
+				["colSet"] = {
+					{
+						["enabled"] = true,
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [1]
+					{
+						["enabled"] = true,
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [2]
+					{
+						["enabled"] = true,
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [3]
+					{
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [4]
+					{
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [5]
+					{
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [6]
+					{
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [7]
+					{
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [8]
+					{
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [9]
+					{
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [10]
+					{
+						["frameGeneral"] = true,
+						["iconGray"] = true,
+						["textGeneral"] = true,
+						["methodsGeneral"] = true,
+						["blacklistGeneral"] = true,
+						["fontShadow"] = false,
+						["iconGeneral"] = true,
+						["fontOutline"] = true,
+						["visibilityGeneral"] = true,
+						["fontGeneral"] = true,
+						["textureAnimation"] = true,
+						["textureGeneral"] = true,
+					}, -- [11]
+				},
+				["Priority"] = {
+				},
+				["CDE"] = {
+				},
+				["OptFav"] = {
+				},
 			},
 			["Marks"] = {
 				["list"] = {
@@ -582,8 +771,8 @@ VMRT = {
 				},
 				["BlackLastUpdateTime"] = {
 				},
-				["FontSize"] = 12,
 				["OnlyPromoted"] = true,
+				["FontSize"] = 12,
 				["OptionsFormatting"] = true,
 			},
 			["LootLink"] = {
@@ -614,7 +803,6 @@ VMRT = {
 			["MarksBar"] = {
 				["pulltimer"] = 10,
 				["pulltimer_right"] = 10,
-				["Strata"] = "HIGH",
 				["Show"] = {
 					true, -- [1]
 					true, -- [2]
@@ -622,6 +810,7 @@ VMRT = {
 					true, -- [4]
 					true, -- [5]
 				},
+				["Strata"] = "HIGH",
 			},
 			["VisNote"] = {
 				["data"] = {
@@ -629,188 +818,12 @@ VMRT = {
 				["sync_data"] = {
 				},
 			},
-			["ExCD2"] = {
-				["upd4525"] = true,
-				["gnGUIDs"] = {
-					["Shantx"] = 0,
-				},
-				["NoRaid"] = true,
-				["CDECol"] = {
-				},
-				["upd4380"] = true,
-				["Save"] = {
-				},
-				["Profiles"] = {
-					["Now"] = "default",
-					["List"] = {
-					},
-				},
-				["userDB"] = {
-				},
-				["colSet"] = {
-					{
-						["enabled"] = true,
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [1]
-					{
-						["enabled"] = true,
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [2]
-					{
-						["enabled"] = true,
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [3]
-					{
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [4]
-					{
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [5]
-					{
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [6]
-					{
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [7]
-					{
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [8]
-					{
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [9]
-					{
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [10]
-					{
-						["frameGeneral"] = true,
-						["iconGray"] = true,
-						["textGeneral"] = true,
-						["methodsGeneral"] = true,
-						["blacklistGeneral"] = true,
-						["textureGeneral"] = true,
-						["iconGeneral"] = true,
-						["fontOutline"] = true,
-						["visibilityGeneral"] = true,
-						["fontGeneral"] = true,
-						["textureAnimation"] = true,
-						["fontShadow"] = false,
-					}, -- [11]
-				},
-				["Priority"] = {
-				},
-				["CDE"] = {
-				},
-				["OptFav"] = {
+			["RaidCheck"] = {
+				["ReadyCheckFrameOnlyRL"] = true,
+				["ReadyCheckFrame"] = true,
+				["ReadyCheckFrameTimerFade"] = 4,
+				["FlaskExp"] = 1,
+				["WeaponEnch"] = {
 				},
 			},
 		},
@@ -847,16 +860,16 @@ VMRT = {
 					[72] = 10,
 					[104] = 10,
 					[73] = 10,
-					[581] = 10,
-					[105] = 10,
-					[577] = 10,
-					[256] = 10,
-					[254] = 10,
 					[64] = 10,
+					[105] = 10,
+					[254] = 10,
+					[256] = 10,
+					[577] = 10,
+					[581] = 10,
 				},
 				["Type"] = 2,
-				["Strata"] = "HIGH",
 				["timeToKillAnalyze"] = 15,
+				["Strata"] = "HIGH",
 			},
 			["MarksSimple"] = {
 				["buffMax"] = 100,
@@ -897,137 +910,39 @@ VMRT = {
 				["ColorizeLowIlvl685"] = false,
 				["ColorizeNoEnch"] = true,
 				["ColorizeNoGems"] = true,
-				["ColorizeLowIlvl"] = true,
 				["ColorizeNoTopEnchGems"] = false,
+				["ColorizeLowIlvl"] = true,
 				["ColorizeNoValorUpgrade"] = false,
-			},
-			["Interrupts"] = {
-				["Profile"] = 1,
-				["Disabled"] = {
-				},
-				["Data"] = {
-					{
-					}, -- [1]
-					{
-					}, -- [2]
-					{
-					}, -- [3]
-					[0] = {
-					},
-				},
-			},
-			["Marks"] = {
-				["list"] = {
-				},
-			},
-			["BossWatcher"] = {
-				["optionsDamageGraph"] = true,
-				["fightsNum"] = 2,
-				["optionsPositionsDist"] = true,
-				["optionsHealingGraph"] = true,
-				["trackingDamageSpells"] = {
-				},
-			},
-			["Note"] = {
-				["BlackNames"] = {
-				},
-				["FontSize"] = 12,
-				["AutoLoad"] = {
-				},
-				["Left"] = 1408.357299804688,
-				["ShowOnlyInRaid"] = true,
-				["OnlyPromoted"] = true,
-				["ScaleBack"] = 0,
-				["Text1"] = "",
-				["OptionsFormatting"] = true,
-				["enabled"] = true,
-				["LastUpdateName"] = "Latyleet-Gehennas",
-				["Outline"] = true,
-				["LastUpdateTime"] = 1662591389,
-				["Width"] = 295.1486206054688,
-				["BlackLastUpdateName"] = {
-				},
-				["FontName"] = "Interface\\Addons\\SharedMedia_MyMedia\\font\\Naowh.ttf",
-				["BlackLastUpdateTime"] = {
-				},
-				["Top"] = 182.2066345214844,
-				["Height"] = 177.1204986572266,
-				["DefName"] = "Brutallus",
-				["Black"] = {
-					"", -- [1]
-					"", -- [2]
-					"", -- [3]
-				},
-				["Strata"] = "HIGH",
-			},
-			["LootLink"] = {
-			},
-			["RaidGroups"] = {
-				["KeepPosInGroup"] = true,
-				["upd4550"] = true,
-				["profiles"] = {
-				},
-			},
-			["RaidCheck"] = {
-				["ReadyCheckFrameOnlyRL"] = true,
-				["ReadyCheckFrameTimerFade"] = 4,
-				["RCW_Mini"] = true,
-				["ReadyCheckFrame"] = true,
-				["WeaponEnch"] = {
-				},
-				["ReadyCheckLeft"] = 596.47900390625,
-				["FlaskExp"] = 1,
-				["ReadyCheckTop"] = 1004.974182128906,
-			},
-			["Logging"] = {
-			},
-			["MarksBar"] = {
-				["pulltimer"] = 10,
-				["pulltimer_right"] = 10,
-				["Show"] = {
-					true, -- [1]
-					true, -- [2]
-					true, -- [3]
-					true, -- [4]
-					true, -- [5]
-				},
-				["Strata"] = "HIGH",
-			},
-			["VisNote"] = {
-				["data"] = {
-				},
-				["sync_data"] = {
-				},
 			},
 			["ExCD2"] = {
 				["upd4525"] = true,
-				["NoRaid"] = true,
+				["userDB"] = {
+				},
 				["gnGUIDs"] = {
 					["Refikah"] = 0,
 					["Naowhdada"] = 0,
 					["Defënder"] = 0,
 					["Édibles"] = 0,
-					["Ragnaröög"] = 0,
+					["Shantx"] = 0,
 					["Hundrashuno"] = 0,
 					["Armanalish"] = 0,
 					["Naowhpoopy"] = 0,
 					["Shamanatika"] = 0,
 					["Siimple"] = 0,
-					["Sianco"] = 0,
+					["Pungrunar"] = 0,
 					["Caowh"] = 0,
 					["Reijux"] = 0,
-					["Pungrunar"] = 0,
-					["Shantx"] = 0,
-				},
-				["upd4380"] = true,
-				["userDB"] = {
-				},
-				["CDECol"] = {
-					["10060;1"] = 1,
-					["29166;1"] = 1,
-					["49016;1"] = 1,
+					["Sianco"] = 0,
+					["Ragnaröög"] = 0,
 				},
 				["SplitOpt"] = true,
+				["NoRaid"] = true,
+				["CDECol"] = {
+					["29166;1"] = 1,
+					["10060;1"] = 1,
+					["49016;1"] = 1,
+				},
+				["upd4380"] = true,
 				["enabled"] = true,
 				["Save"] = {
 				},
@@ -1044,16 +959,16 @@ VMRT = {
 						["iconGray"] = true,
 						["textGeneral"] = true,
 						["methodsGeneral"] = true,
-						["fontShadow"] = false,
+						["textureGeneral"] = true,
 						["blacklistGeneral"] = true,
 						["posY"] = 986.22698974609,
-						["fontGeneral"] = true,
+						["posX"] = 2.1048913002014,
 						["iconGeneral"] = true,
 						["fontOutline"] = true,
 						["visibilityGeneral"] = true,
-						["posX"] = 2.1048913002014,
+						["fontGeneral"] = true,
 						["textureAnimation"] = true,
-						["textureGeneral"] = true,
+						["fontShadow"] = false,
 					}, -- [1]
 					{
 						["enabled"] = true,
@@ -1061,16 +976,16 @@ VMRT = {
 						["iconGray"] = true,
 						["textGeneral"] = true,
 						["methodsGeneral"] = true,
-						["fontShadow"] = false,
+						["textureGeneral"] = true,
 						["blacklistGeneral"] = true,
 						["posY"] = 986.22698974609,
-						["fontGeneral"] = true,
+						["posX"] = 158.3491973877,
 						["iconGeneral"] = true,
 						["fontOutline"] = true,
 						["visibilityGeneral"] = true,
-						["posX"] = 158.3491973877,
+						["fontGeneral"] = true,
 						["textureAnimation"] = true,
-						["textureGeneral"] = true,
+						["fontShadow"] = false,
 					}, -- [2]
 					{
 						["enabled"] = true,
@@ -1079,13 +994,13 @@ VMRT = {
 						["textGeneral"] = true,
 						["methodsGeneral"] = true,
 						["blacklistGeneral"] = true,
-						["fontShadow"] = false,
+						["textureGeneral"] = true,
 						["iconGeneral"] = true,
 						["fontOutline"] = true,
 						["visibilityGeneral"] = true,
 						["fontGeneral"] = true,
 						["textureAnimation"] = true,
-						["textureGeneral"] = true,
+						["fontShadow"] = false,
 					}, -- [3]
 					{
 						["frameGeneral"] = true,
@@ -1093,13 +1008,13 @@ VMRT = {
 						["textGeneral"] = true,
 						["methodsGeneral"] = true,
 						["blacklistGeneral"] = true,
-						["fontShadow"] = false,
+						["textureGeneral"] = true,
 						["iconGeneral"] = true,
 						["fontOutline"] = true,
 						["visibilityGeneral"] = true,
 						["fontGeneral"] = true,
 						["textureAnimation"] = true,
-						["textureGeneral"] = true,
+						["fontShadow"] = false,
 					}, -- [4]
 					{
 						["frameGeneral"] = true,
@@ -1107,13 +1022,13 @@ VMRT = {
 						["textGeneral"] = true,
 						["methodsGeneral"] = true,
 						["blacklistGeneral"] = true,
-						["fontShadow"] = false,
+						["textureGeneral"] = true,
 						["iconGeneral"] = true,
 						["fontOutline"] = true,
 						["visibilityGeneral"] = true,
 						["fontGeneral"] = true,
 						["textureAnimation"] = true,
-						["textureGeneral"] = true,
+						["fontShadow"] = false,
 					}, -- [5]
 					{
 						["frameGeneral"] = true,
@@ -1121,13 +1036,13 @@ VMRT = {
 						["textGeneral"] = true,
 						["methodsGeneral"] = true,
 						["blacklistGeneral"] = true,
-						["fontShadow"] = false,
+						["textureGeneral"] = true,
 						["iconGeneral"] = true,
 						["fontOutline"] = true,
 						["visibilityGeneral"] = true,
 						["fontGeneral"] = true,
 						["textureAnimation"] = true,
-						["textureGeneral"] = true,
+						["fontShadow"] = false,
 					}, -- [6]
 					{
 						["frameGeneral"] = true,
@@ -1135,13 +1050,13 @@ VMRT = {
 						["textGeneral"] = true,
 						["methodsGeneral"] = true,
 						["blacklistGeneral"] = true,
-						["fontShadow"] = false,
+						["textureGeneral"] = true,
 						["iconGeneral"] = true,
 						["fontOutline"] = true,
 						["visibilityGeneral"] = true,
 						["fontGeneral"] = true,
 						["textureAnimation"] = true,
-						["textureGeneral"] = true,
+						["fontShadow"] = false,
 					}, -- [7]
 					{
 						["frameGeneral"] = true,
@@ -1149,13 +1064,13 @@ VMRT = {
 						["textGeneral"] = true,
 						["methodsGeneral"] = true,
 						["blacklistGeneral"] = true,
-						["fontShadow"] = false,
+						["textureGeneral"] = true,
 						["iconGeneral"] = true,
 						["fontOutline"] = true,
 						["visibilityGeneral"] = true,
 						["fontGeneral"] = true,
 						["textureAnimation"] = true,
-						["textureGeneral"] = true,
+						["fontShadow"] = false,
 					}, -- [8]
 					{
 						["frameGeneral"] = true,
@@ -1163,13 +1078,13 @@ VMRT = {
 						["textGeneral"] = true,
 						["methodsGeneral"] = true,
 						["blacklistGeneral"] = true,
-						["fontShadow"] = false,
+						["textureGeneral"] = true,
 						["iconGeneral"] = true,
 						["fontOutline"] = true,
 						["visibilityGeneral"] = true,
 						["fontGeneral"] = true,
 						["textureAnimation"] = true,
-						["textureGeneral"] = true,
+						["fontShadow"] = false,
 					}, -- [9]
 					{
 						["frameGeneral"] = true,
@@ -1177,13 +1092,13 @@ VMRT = {
 						["textGeneral"] = true,
 						["methodsGeneral"] = true,
 						["blacklistGeneral"] = true,
-						["fontShadow"] = false,
+						["textureGeneral"] = true,
 						["iconGeneral"] = true,
 						["fontOutline"] = true,
 						["visibilityGeneral"] = true,
 						["fontGeneral"] = true,
 						["textureAnimation"] = true,
-						["textureGeneral"] = true,
+						["fontShadow"] = false,
 					}, -- [10]
 					{
 						["textureColorBackgroundActiveR"] = 1,
@@ -1230,26 +1145,26 @@ VMRT = {
 						["iconGray"] = false,
 						["textureColorTextCooldownG"] = 1,
 						["visibilityDisable5ppl"] = true,
-						["textureColorBackgroundCooldownB"] = 0,
-						["fontName"] = "Interface\\Addons\\SharedMedia_MyMedia\\font\\Naowh.ttf",
-						["visibilityDisableBG"] = true,
-						["textTemplateRight"] = "%time%",
+						["textureColorTimeLineCooldownR"] = 1,
+						["textureColorTimeLineActiveR"] = 1,
+						["methodsLineClickWhisper"] = true,
+						["textureColorTextActiveR"] = 0.5,
 						["textureAlphaTimeLine"] = 1,
-						["textureColorTextDefaultB"] = 1,
+						["textureColorTimeLineCooldownB"] = 1,
 						["methodsTimeLineAnimation"] = 2,
-						["textureColorBackgroundCooldownG"] = 0,
+						["textureColorTimeLineDefaultG"] = 1,
 						["methodsAlphaNotInRangeNum"] = 70,
 						["frameAnchorBottom"] = true,
-						["textureClassText"] = false,
+						["methodsDisableActive"] = true,
 						["frameStrata"] = "BACKGROUND",
 						["textureColorTimeLineActiveG"] = 1,
-						["methodsDisableActive"] = true,
-						["textureColorTimeLineDefaultG"] = 1,
-						["textureColorTimeLineCooldownB"] = 1,
-						["textureColorTextActiveR"] = 0.5,
-						["methodsLineClickWhisper"] = true,
-						["textureColorTimeLineActiveR"] = 1,
-						["textureColorTimeLineCooldownR"] = 1,
+						["textureClassText"] = false,
+						["textureColorBackgroundCooldownG"] = 0,
+						["textureColorTextDefaultB"] = 1,
+						["textTemplateRight"] = "%time%",
+						["visibilityDisableBG"] = true,
+						["fontName"] = "Interface\\Addons\\SharedMedia_MyMedia\\font\\Naowh.ttf",
+						["textureColorBackgroundCooldownB"] = 0,
 						["textureAlphaCooldown"] = 1,
 					}, -- [11]
 				},
@@ -1261,6 +1176,104 @@ VMRT = {
 					[10060] = true,
 				},
 				["OptFav"] = {
+				},
+			},
+			["Marks"] = {
+				["list"] = {
+				},
+			},
+			["BossWatcher"] = {
+				["optionsDamageGraph"] = true,
+				["fightsNum"] = 2,
+				["optionsPositionsDist"] = true,
+				["optionsHealingGraph"] = true,
+				["trackingDamageSpells"] = {
+				},
+			},
+			["Note"] = {
+				["BlackNames"] = {
+				},
+				["FontSize"] = 12,
+				["AutoLoad"] = {
+				},
+				["Left"] = 1408.357299804688,
+				["ShowOnlyInRaid"] = true,
+				["OnlyPromoted"] = true,
+				["ScaleBack"] = 0,
+				["Text1"] = "",
+				["OptionsFormatting"] = true,
+				["enabled"] = true,
+				["LastUpdateName"] = "Latyleet-Gehennas",
+				["Strata"] = "HIGH",
+				["LastUpdateTime"] = 1662591389,
+				["Width"] = 295.1486206054688,
+				["BlackLastUpdateName"] = {
+				},
+				["Black"] = {
+					"", -- [1]
+					"", -- [2]
+					"", -- [3]
+				},
+				["BlackLastUpdateTime"] = {
+				},
+				["DefName"] = "Brutallus",
+				["Height"] = 177.1204986572266,
+				["Top"] = 182.2066345214844,
+				["FontName"] = "Interface\\Addons\\SharedMedia_MyMedia\\font\\Naowh.ttf",
+				["Outline"] = true,
+			},
+			["LootLink"] = {
+			},
+			["RaidGroups"] = {
+				["KeepPosInGroup"] = true,
+				["upd4550"] = true,
+				["profiles"] = {
+				},
+			},
+			["RaidCheck"] = {
+				["ReadyCheckFrameOnlyRL"] = true,
+				["WeaponEnch"] = {
+				},
+				["RCW_Mini"] = true,
+				["ReadyCheckFrame"] = true,
+				["ReadyCheckTop"] = 1004.974182128906,
+				["FlaskExp"] = 1,
+				["ReadyCheckLeft"] = 596.47900390625,
+				["ReadyCheckFrameTimerFade"] = 4,
+			},
+			["Logging"] = {
+			},
+			["MarksBar"] = {
+				["pulltimer"] = 10,
+				["pulltimer_right"] = 10,
+				["Strata"] = "HIGH",
+				["Show"] = {
+					true, -- [1]
+					true, -- [2]
+					true, -- [3]
+					true, -- [4]
+					true, -- [5]
+				},
+			},
+			["VisNote"] = {
+				["data"] = {
+				},
+				["sync_data"] = {
+				},
+			},
+			["Interrupts"] = {
+				["Profile"] = 1,
+				["Disabled"] = {
+				},
+				["Data"] = {
+					{
+					}, -- [1]
+					{
+					}, -- [2]
+					{
+					}, -- [3]
+					[0] = {
+					},
 				},
 			},
 		},
@@ -1287,6 +1300,7 @@ VMRT = {
 	["MarksBar"] = {
 		["pulltimer"] = 10,
 		["pulltimer_right"] = 10,
+		["Strata"] = "HIGH",
 		["Show"] = {
 			true, -- [1]
 			true, -- [2]
@@ -1294,7 +1308,6 @@ VMRT = {
 			true, -- [4]
 			true, -- [5]
 		},
-		["Strata"] = "HIGH",
 	},
 	["VisNote"] = {
 		["data"] = {
@@ -1302,19 +1315,6 @@ VMRT = {
 		["sync_data"] = {
 		},
 	},
-	["Interrupts"] = {
-		["Profile"] = 1,
-		["Disabled"] = {
-		},
-		["Data"] = {
-			{
-			}, -- [1]
-			{
-			}, -- [2]
-			{
-			}, -- [3]
-			[0] = {
-			},
-		},
+	["WhoPulled"] = {
 	},
 }

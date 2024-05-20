@@ -67362,7 +67362,7 @@ WeakAurasOptionsSaved = {
 			["spells"] = "34673=135743",
 		},
 		["Soul Link"] = {
-			["spells"] = "19028=136160,25228=136160,63943=237171,79957=136160",
+			["spells"] = "19028=136160,25228=136160,63943=237171,79957=136160,25228=136160,25228=136160",
 		},
 		["Azure Silk Vest"] = {
 			["spells"] = "3859=132149",
@@ -74131,6 +74131,12 @@ WeakAurasOptionsSaved = {
 	["needsRebuild"] = false,
 	["version"] = "5.13.1",
 	["savedSnippets"] = {
+	},
+	["frame"] = {
+		["xOffset"] = 1490.3291015625,
+		["width"] = 830,
+		["height"] = 665,
+		["yOffset"] = 970.5362548828125,
 	},
 	["spellCacheStrings"] = true,
 	["spellCacheAchievements"] = true,

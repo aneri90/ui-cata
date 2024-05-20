@@ -92,9 +92,9 @@ BigWigs3DB = {
 					["fontName"] = "Naowh",
 					["BigWigsAnchor_height"] = 20.0000171661377,
 					["visibleBarLimitEmph"] = 2,
-					["BigWigsEmphasizeAnchor_y"] = 316,
-					["BigWigsEmphasizeAnchor_width"] = 194.9999389648438,
 					["BigWigsEmphasizeAnchor_x"] = 824,
+					["BigWigsEmphasizeAnchor_width"] = 194.9999389648438,
+					["BigWigsEmphasizeAnchor_y"] = 316,
 				},
 			},
 		},
@@ -104,16 +104,6 @@ BigWigs3DB = {
 		},
 		["BigWigs_Plugins_BossBlock"] = {
 		},
-		["BigWigs_Plugins_Messages"] = {
-			["profiles"] = {
-				["Naowh"] = {
-					["outline"] = "OUTLINE",
-					["emphFontName"] = "Naowh",
-					["fontName"] = "Naowh",
-					["emphOutline"] = "OUTLINE",
-				},
-			},
-		},
 		["BigWigs_Plugins_Proximity"] = {
 			["profiles"] = {
 				["Naowh"] = {
@@ -121,6 +111,16 @@ BigWigs3DB = {
 					["posy"] = 89.55585422703007,
 					["posx"] = 905.5335566172726,
 					["width"] = 139.9999847412109,
+				},
+			},
+		},
+		["BigWigs_Plugins_Messages"] = {
+			["profiles"] = {
+				["Naowh"] = {
+					["outline"] = "OUTLINE",
+					["emphFontName"] = "Naowh",
+					["fontName"] = "Naowh",
+					["emphOutline"] = "OUTLINE",
 				},
 			},
 		},
