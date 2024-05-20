@@ -1,0 +1,23 @@
+Cache/**
+Logs/**
+UTILS/**
+*.exe
+*.zip
+d3d12.dll
+.flavor.info
+WoW.mfil
+dxilconv7.dll
+DBGHELP.DLL
+GFSDK_Aftermath_Lib.x64.dll
+old/**
+.curseclient
+WTF/SavedVariables/Blizzard_Console.lua
+WTF/SavedVariables/Blizzard_Console.lua.bak
+GPUCache/
+## Addons Big files
+Interface/AddOns/TheUndermineJournal/MarketData-*.lua
+Interface/AddOns/RaiderIO/
+amd_ags_x64.dll
+#Curse Breaker
+WTF-Backup/
+World of Warcraft.app

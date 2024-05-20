@@ -1,0 +1,2 @@
+
+RatingBusterWOTLK_DB = nil

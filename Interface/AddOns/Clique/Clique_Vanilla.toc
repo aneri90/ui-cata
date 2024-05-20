@@ -1,0 +1,52 @@
+## Interface: 11502
+## Title: Clique
+## Author: Cladhaire
+## Version: v3.6.3-release
+## Notes: Simply powerful click-casting interface
+## IconTexture: Interface\AddOns\Clique\images\icon_square_64.tga
+## SavedVariables: CliqueDB, CliqueDB3
+## X-Curse-Project-ID: 15564
+## X-WoWI-ID: 5108
+## X-Wago-ID: Mj6jLxGR
+
+## X-Localizations: enUS, enGB, ruRU, zhCN, zhTW
+## X-CompatibleLocales: enUS, enGB, deDE, frFR, esES, esMX, zhCN, zhTW, koKR, ruRU
+
+AddonCore.lua
+i18n\Localization.enUS.lua
+i18n\Localization.ruRU.lua
+i18n\Localization.zhCN.lua
+i18n\Localization.zhTW.lua
+
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+libs\AceDB-3.0\AceDB-3.0.xml
+libs\tekKonfigAboutPanel.lua
+libs\LibDeflate\LibDeflate.lua
+libs\LibSerialize\LibSerialize.lua
+libs\LibDropDown\embed.xml
+
+DatabaseDefaults.lua
+ClickCastTemplate.xml
+
+Clique.xml
+Clique.lua
+CliqueSpellbook.lua
+
+Utils.lua
+ImportExport.lua
+
+config\BindConfig.lua
+config\OptionsPanel.lua
+config\BlizzardFramesConfig.lua
+config\DenylistConfig.lua
+
+modules\Blizzard_utils.lua
+modules\Blizzard_classic.lua
+modules\Blizzard_retail.lua
+modules\Blizzard_wrath.lua
+modules\Blizzard_dragonflight.lua
+
+#tests\HeaderTest.xml
+#tests\HeaderTest.lua
+#tests\TestSuite.lua

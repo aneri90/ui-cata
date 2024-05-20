@@ -1,0 +1,17 @@
+## Interface: 40400
+## Title: NameplateAuras [Cata]
+## Notes: Displays people's buffs/debuffs above their nameplates
+## SavedVariables: NameplateAurasAceDB
+## Version: 40400.0-release
+## X-Curse-Project-ID: 101192
+## X-Wago-ID: lQNl536e
+## OptionalDeps: Masque
+
+src\consts.lua
+embeds.xml
+locales\localizations.xml
+src\utils.lua
+src\spells.lua
+src\options-dialog.lua
+src\database.lua
+src\NameplateAuras.lua

@@ -1,0 +1,5 @@
+<Ui>
+	<Script file="LibSFDropDown.lua"/>
+	<Script file="LibSFDropDownMediaButtons.lua"/>
+	<Script file="LibSFDropDownSkins.lua"/>
+</Ui>
