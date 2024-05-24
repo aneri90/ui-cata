@@ -334,8 +334,7 @@ do --this can save some main file locals
 			z['Player-4373-032FFEE2']	= itsSimpy -- Shaman:		Kalline
 			z['Player-4373-03351BC7']	= itsSimpy -- [Horde] DK:	Imsojelly
 			-- Repooc
-			z['Poocsdk-Mankrik']		= ElvBlue -- [Horde] DK
-			z['Repooc-Mankrik']			= ElvBlue
+			z['Repooc-Atiesh']			= itsPooc -- [Alliance] Paladin
 		elseif E.Retail then
 			-- Elv
 			z['Elv-Spirestone']			= itsElv
@@ -350,6 +349,7 @@ do --this can save some main file locals
 			z['Whorlock-Spirestone']	= itsElv
 			-- Repooc
 			z['Sifpooc-Stormrage']		= itsPooc	-- [Alliance] DH
+			z['Depooc-Stormrage']		= itsPooc	-- [Alliance] DH
 			z['Fragmented-Stormrage']	= itsPooc	-- [Alliance] Warlock
 			z['Dapooc-Stormrage']		= itsPooc	-- [Alliance] Druid
 			z['Poocvoker-Stormrage']	= itsPooc	-- [Alliance] Evoker
@@ -361,6 +361,7 @@ do --this can save some main file locals
 			z['Player-1168-0698394A']	= itsSimpy -- Rogue:	Buddercup
 			z['Player-1168-069A3A12']	= itsSimpy -- Paladin:	Cutepally
 			z['Player-1168-0A99F54B']	= itsSimpy -- Mage:		Cuddle
+			z['Player-1168-0ACDC528']	= itsSimpy -- Priest:	Snuggle
 			z['Player-1168-0680170F']	= itsSimpy -- DK:		Ezek
 			z['Player-1168-06981C6F']	= itsSimpy -- Warrior:	Glice
 			z['Player-1168-0698066B']	= itsSimpy -- Shaman:	Kalline
@@ -490,6 +491,7 @@ do --this can save some main file locals
 			z['Player-1401-04217BB2']	= ElvPurple	-- [Alliance] Warlock:	Asragoth
 			z['Player-1401-0421EB9F']	= ElvBlue	-- [Alliance] Warrior:	Brìtt
 			z['Player-1401-0421F909']	= ElvRed	-- [Alliance] Paladin:	Damará
+			z["Player-1401-0AB0E6D1"]	= ElvRed --	 . [Alliance] Paladin:	Damara/WoW Remix
 			z['Player-1401-0421EC36']	= ElvBlue	-- [Alliance] Priest:	Jazira
 			z['Player-1401-0A9B0131']	= ElvYellow	-- [Alliance] Rogue:	Anonia
 			z['Player-1401-041E4D64']	= ElvGreen	-- [Alliance] Monk:		Maithilis
@@ -516,6 +518,7 @@ do --this can save some main file locals
 			z['Player-1598-0C0DD01B']	= ElvBlue -- [Horde] Warlock
 			z['Player-1598-0BF8013A']	= ElvBlue -- [Horde] Warrior
 			z['Player-1598-0BF56103']	= ElvBlue -- [Horde] Shaman
+			z['Player-1598-0F87B5AA']	= ElvBlue -- [Alliance] Priest
 			-- Sneaky Darth
 			z['Player-1925-05F494A6']	= ElvPurple
 			z['Player-1925-05F495A1']	= ElvPurple
@@ -1870,9 +1873,9 @@ function CH:MessageFormatter(frame, info, chatType, chatGroup, chatTarget, chann
 		showLink = nil
 
 		-- fix blizzard formatting errors from localization strings
-		-- arg1 = gsub(arg1, '%%%d', '%%s') -- replace %1 to %s (russian client specific?) [broken since BFA?]
 		arg1 = gsub(arg1, '(%d%%)([^%%%a])', '%1%%%2') -- escape percentages that need it [broken since SL?]
 		arg1 = gsub(arg1, '(%d%%)$', '%1%%') -- escape percentages on the end
+		arg1 = gsub(arg1, '^%%o', '%%s') -- replace %o to %s [broken in cata classic?]: "%o gular zila amanare rukadare." from "Cabal Zealot"
 	else
 		arg1 = gsub(arg1, '%%', '%%%%') -- escape any % characters, as it may otherwise cause an 'invalid option in format' error
 	end

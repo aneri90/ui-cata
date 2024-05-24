@@ -23,3 +23,4 @@ WeakAurasArchive: enabled
 RatingBuster: disabled
 ElvUI_Options: enabled
 Blizzard_CombatText: enabled
+LittleWigs_Cataclysm: enabled

@@ -1,8 +1,5 @@
 
 AtlasLootClassicDB = {
-	["profileKeys"] = {
-		["Shantx - Pyrewood Village"] = "Shantx - Pyrewood Village",
-	},
 	["global"] = {
 		["__addonrevision"] = 3020000,
 		["VendorPrice"] = {
@@ -12,6 +9,9 @@ AtlasLootClassicDB = {
 			[29468] = "honor:2000",
 			[35906] = "honor:2000",
 		},
+	},
+	["profileKeys"] = {
+		["Shantx - Pyrewood Village"] = "Shantx - Pyrewood Village",
 	},
 	["profiles"] = {
 		["Shantx - Pyrewood Village"] = {

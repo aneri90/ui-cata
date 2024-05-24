@@ -3,7 +3,7 @@ BigWigs3DB = {
 	["namespaces"] = {
 		["BigWigs_Plugins_Victory"] = {
 		},
-		["LibDualSpec-1.0"] = {
+		["BigWigs_Plugins_BossBlock"] = {
 		},
 		["BigWigs_Plugins_Sounds"] = {
 			["profiles"] = {
@@ -27,7 +27,7 @@ BigWigs3DB = {
 				},
 			},
 		},
-		["BigWigs_Plugins_AutoReply"] = {
+		["BigWigs_Plugins_Statistics"] = {
 		},
 		["BigWigs_Bosses_Professor Putricide"] = {
 			["profiles"] = {
@@ -70,7 +70,7 @@ BigWigs3DB = {
 				},
 			},
 		},
-		["BigWigs_Plugins_Raid Icons"] = {
+		["BigWigs_Plugins_Wipe"] = {
 		},
 		["BigWigs_Plugins_InfoBox"] = {
 		},
@@ -92,17 +92,20 @@ BigWigs3DB = {
 					["fontName"] = "Naowh",
 					["BigWigsAnchor_height"] = 20.0000171661377,
 					["visibleBarLimitEmph"] = 2,
-					["BigWigsEmphasizeAnchor_y"] = 316,
 					["BigWigsEmphasizeAnchor_width"] = 194.9999389648438,
 					["BigWigsEmphasizeAnchor_x"] = 824,
+					["BigWigsEmphasizeAnchor_y"] = 316,
 				},
 			},
 		},
-		["BigWigs_Plugins_Wipe"] = {
+		["BigWigs_Bosses_Felmyst"] = {
+			["profiles"] = {
+				["Naowh"] = {
+					[45661] = 3129591,
+				},
+			},
 		},
-		["BigWigs_Plugins_Statistics"] = {
-		},
-		["BigWigs_Plugins_BossBlock"] = {
+		["LibDualSpec-1.0"] = {
 		},
 		["BigWigs_Plugins_Messages"] = {
 			["profiles"] = {
@@ -113,6 +116,10 @@ BigWigs3DB = {
 					["emphOutline"] = "OUTLINE",
 				},
 			},
+		},
+		["BigWigs_Plugins_AutoReply"] = {
+		},
+		["BigWigs_Plugins_Raid Icons"] = {
 		},
 		["BigWigs_Plugins_Proximity"] = {
 			["profiles"] = {
@@ -133,16 +140,14 @@ BigWigs3DB = {
 		},
 		["BigWigs_Plugins_Pull"] = {
 		},
-		["BigWigs_Bosses_Felmyst"] = {
-			["profiles"] = {
-				["Naowh"] = {
-					[45661] = 3129591,
-				},
-			},
-		},
 	},
 	["profileKeys"] = {
 		["Shantx - Pyrewood Village"] = "Naowh",
+	},
+	["global"] = {
+		["watchedMovies"] = {
+			[-323] = true,
+		},
 	},
 	["profiles"] = {
 		["Shantx - Pyrewood Village"] = {

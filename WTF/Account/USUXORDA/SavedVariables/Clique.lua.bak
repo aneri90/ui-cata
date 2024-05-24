@@ -3,7 +3,12 @@ CliqueDB = nil
 CliqueDB3 = {
 	["char"] = {
 		["Shantx - Pyrewood Village"] = {
+			["spec1_profileKey"] = "Shantx - Pyrewood Village",
+			["fastooc"] = false,
+			["spec2_profileKey"] = "Shantx - Pyrewood Village",
+			["downclick"] = false,
 			["alerthidden"] = true,
+			["specswap"] = false,
 		},
 	},
 	["profileKeys"] = {
@@ -13,10 +18,10 @@ CliqueDB3 = {
 		["Shantx - Pyrewood Village"] = {
 			["bindings"] = {
 				{
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
 					["key"] = "CTRL-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]

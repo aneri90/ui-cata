@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1716206289,
+	["tstmp"] = 1716501173,
 	["profiles"] = {
 		{
 			["config"] = {
@@ -18,22 +18,10 @@ HidingBarDB = {
 					["LibDBIcon10_MethodRaidTools"] = {
 						["tstmp"] = 1715238828,
 					},
-					["LibDBIcon10_BugSack"] = {
+					["LibDBIcon10_Leatrix_Maps"] = {
 						["tstmp"] = 1715238828,
 					},
 					["LibDBIcon10_BigWigs"] = {
-						["tstmp"] = 1715238828,
-					},
-					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1715238828,
-					},
-					["LibDBIcon10_Plater"] = {
-						["tstmp"] = 1715238828,
-					},
-					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1715238828,
-					},
-					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
 						["tstmp"] = 1715238828,
 					},
 					["LibDBIcon10_Questie"] = {
@@ -42,7 +30,19 @@ HidingBarDB = {
 					["LibDBIcon10_Leatrix_Plus"] = {
 						["tstmp"] = 1715238828,
 					},
-					["LibDBIcon10_Leatrix_Maps"] = {
+					["LibDBIcon10_DetailsStreamer"] = {
+						["tstmp"] = 1715238828,
+					},
+					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
+						["tstmp"] = 1715238828,
+					},
+					["LibDBIcon10_Plater"] = {
+						["tstmp"] = 1715238828,
+					},
+					["LibDBIcon10_WeakAuras"] = {
+						["tstmp"] = 1715238828,
+					},
+					["LibDBIcon10_BugSack"] = {
 						["tstmp"] = 1715238828,
 					},
 				},
@@ -68,9 +68,9 @@ HidingBarDB = {
 				},
 				["grabMinimap"] = true,
 				["grabMinimapAfterN"] = 1,
-				["customGrabList"] = {
-				},
 				["ombGrabQueue"] = {
+				},
+				["customGrabList"] = {
 				},
 				["ignoreMBtn"] = {
 				},
@@ -124,25 +124,25 @@ HidingBarDB = {
 						["gapSize"] = 0,
 						["interceptTooltip"] = true,
 						["buttonDirection"] = {
-							["V"] = 0,
 							["H"] = 0,
+							["V"] = 0,
 						},
 						["borderOffset"] = 4,
 						["omb"] = {
-							["hide"] = true,
+							["distanceToBar"] = 0,
 							["anchor"] = "right",
 							["barDisplacement"] = 0,
 							["size"] = 31,
-							["distanceToBar"] = 0,
+							["hide"] = true,
 						},
 						["buttonSize"] = 31,
 						["frameStrata"] = 2,
 						["lineBorderSize"] = 2,
 						["fadeOpacity"] = 0.2,
 						["orientation"] = 0,
-						["barOffset"] = 2,
-						["hideHandler"] = 2,
 						["borderSize"] = 16,
+						["hideHandler"] = 2,
+						["barOffset"] = 2,
 					},
 					["name"] = "Bar 1",
 				}, -- [1]
@@ -154,70 +154,73 @@ HidingBarDB = {
 				["addFromDataBroker"] = true,
 				["mbtnSettings"] = {
 					["LibDBIcon10_Details"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
 					},
 					["LibDBIcon10_PallyPower"] = {
-						["tstmp"] = 1716206289,
-					},
-					["LibDBIcon10_AtlasLoot"] = {
-						["tstmp"] = 1716206289,
-					},
-					["LibDBIcon10_MethodRaidTools"] = {
-						["tstmp"] = 1716206289,
-					},
-					["LibDBIcon10_Leatrix_Maps"] = {
-						["tstmp"] = 1716206289,
-					},
-					["LibDBIcon10_BigWigs"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
 					},
 					["LibDBIcon10_Leatrix_Plus"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
 					},
-					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1716206290,
+					["LibDBIcon10_AtlasLoot"] = {
+						["tstmp"] = 1716501173,
 					},
-					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1716206289,
-					},
-					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1716206289,
+					["LibDBIcon10_MethodRaidTools"] = {
+						["tstmp"] = 1716501173,
 					},
 					["LibDBIcon10_BugSack"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
 					},
-					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1716206289,
+					["ZygorGuidesViewerMapIcon"] = {
+						["tstmp"] = 1716501173,
 					},
 					["LibDBIcon10_Plater"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
+					},
+					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
+						["tstmp"] = 1716501173,
+					},
+					["LibDBIcon10_DetailsStreamer"] = {
+						["tstmp"] = 1716501173,
+					},
+					["LibDBIcon10_WeakAuras"] = {
+						["tstmp"] = 1716501173,
+					},
+					["LibDBIcon10_Questie"] = {
+						["tstmp"] = 1716501173,
+					},
+					["LibDBIcon10_BigWigs"] = {
+						["tstmp"] = 1716501173,
+					},
+					["LibDBIcon10_Leatrix_Maps"] = {
+						["tstmp"] = 1716241155,
 					},
 				},
 				["btnSettings"] = {
 					["LFGBulletinBoard"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
 					},
 					["HidingBar"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
 					},
 					["AtlasLoot"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
 					},
 					["BigWigs"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
 					},
 					["WeakAuras"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
 					},
 					["MRT"] = {
-						["tstmp"] = 1716206289,
+						["tstmp"] = 1716501173,
 					},
 				},
 				["grabMinimap"] = true,
 				["grabMinimapAfterN"] = 1,
-				["customGrabList"] = {
-				},
 				["ombGrabQueue"] = {
+				},
+				["customGrabList"] = {
 				},
 				["ignoreMBtn"] = {
 					"GatherMatePin", -- [1]
@@ -272,26 +275,26 @@ HidingBarDB = {
 						["gapSize"] = 0,
 						["interceptTooltip"] = true,
 						["buttonDirection"] = {
-							["V"] = 0,
 							["H"] = 0,
+							["V"] = 0,
 						},
 						["borderOffset"] = 4,
 						["omb"] = {
-							["hide"] = false,
+							["distanceToBar"] = 0,
 							["anchor"] = "right",
 							["barDisplacement"] = -2,
 							["size"] = 32,
-							["distanceToBar"] = 0,
+							["hide"] = false,
 						},
 						["buttonSize"] = 31,
 						["frameStrata"] = 2,
 						["lineBorderSize"] = 2,
-						["lock"] = false,
+						["borderSize"] = 16,
 						["fadeOpacity"] = 0.2,
 						["orientation"] = 0,
-						["barOffset"] = 2,
 						["hideHandler"] = 2,
-						["borderSize"] = 16,
+						["barOffset"] = 2,
+						["lock"] = false,
 					},
 					["name"] = "Bar 1",
 				}, -- [1]

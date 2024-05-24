@@ -4080,7 +4080,7 @@ WeakAurasOptionsSaved = {
 			["spells"] = "8151=132092",
 		},
 		["Defend Wyrmrest"] = {
-			["spells"] = "107576=134158,110763=135202",
+			["spells"] = "107576=134158,110763=382928",
 		},
 		["Seal of Reckoning"] = {
 			["spells"] = "15277=135971,15346=135971",
@@ -4935,7 +4935,7 @@ WeakAurasOptionsSaved = {
 			["spells"] = "103819=135829,108374=135829",
 		},
 		["Attack Wyrmrest"] = {
-			["spells"] = "107577=134154,110768=135202",
+			["spells"] = "107577=134154,110768=382928",
 		},
 		["Engulfing Twilight"] = {
 			["spells"] = "103762=136223",
@@ -4980,7 +4980,7 @@ WeakAurasOptionsSaved = {
 			["spells"] = "103653=135981",
 		},
 		["Whip Terrorfiend"] = {
-			["spells"] = "35673=135202",
+			["spells"] = "35673=382928",
 		},
 		["Breastplate of Kings"] = {
 			["spells"] = "34533=136241",
@@ -15312,7 +15312,7 @@ WeakAurasOptionsSaved = {
 			["spells"] = "77794=462651,77795=462651,77796=462651,77800=462651,96300=462651",
 		},
 		["Auto Attack"] = {
-			["spells"] = "6603=135202",
+			["spells"] = "6603=382928",
 		},
 		["Fetid Absorption"] = {
 			["spells"] = "86002=132099",
@@ -29451,7 +29451,7 @@ WeakAurasOptionsSaved = {
 			["spells"] = "64764=135923,64765=135893",
 		},
 		["Clayton's Test Spell"] = {
-			["spells"] = "64755=135202",
+			["spells"] = "64755=382928",
 		},
 		["Opening Arcane Prison"] = {
 			["spells"] = "45441=135732",
@@ -45381,7 +45381,7 @@ WeakAurasOptionsSaved = {
 			["spells"] = "32395=136123",
 		},
 		["Shadow Embrace"] = {
-			["spells"] = "32385=136198,32386=136198,32387=136198,32388=136198,32389=136198,32392=136198,32389=136198",
+			["spells"] = "32385=136198,32386=136198,32387=136198,32388=136198,32389=136198,32392=136198",
 		},
 		["Master Buff (Melee)"] = {
 			["spells"] = "35874=132333",
@@ -74132,13 +74132,13 @@ WeakAurasOptionsSaved = {
 	["version"] = "5.13.1",
 	["savedSnippets"] = {
 	},
-	["spellCacheAchievements"] = true,
+	["spellCacheStrings"] = true,
 	["frame"] = {
 		["xOffset"] = 1490.3291015625,
-		["yOffset"] = 970.5362548828125,
-		["height"] = 665,
 		["width"] = 830,
+		["height"] = 665,
+		["yOffset"] = 970.5362548828125,
 	},
-	["spellCacheStrings"] = true,
+	["spellCacheAchievements"] = true,
 	["build"] = "54737",
 }

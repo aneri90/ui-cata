@@ -1,0 +1,25 @@
+## Interface: 40400
+## Title: |cffffffffZygor Guide Viewer |r|cffec8000(Cataclysm)|r
+## Notes: Free multi-purpose leveling guide viewer, Classic edition.
+## Author: Zygor Guides
+## DefaultState: enabled
+## LoadOnDemand: 0
+## SavedVariables: ZygorGuidesViewerClassicSettings
+## - SavedVariablesPerCharacter: ZygorGuidesViewerSettingsChar
+## OptionalDeps: Cartographer, Cartographer3, TomTom, WorldQuestTracker
+## X-Category: 
+## X-Credits: 
+## X-eMail: zygor@zygorguides.com
+## X-Website: http://zygorguides.com/
+## X-License: GPL
+## IconTexture: Interface\Addons\ZygorGuidesViewerClassicTBC\Skins\addon-icon
+## Version: 2.1
+
+Libs\Libs.xml
+Libs-CATA\Libs.xml
+
+Retrofit.lua
+Localization\Localization.xml
+Localization-CATA\Localization.xml
+
+files-CATA.xml

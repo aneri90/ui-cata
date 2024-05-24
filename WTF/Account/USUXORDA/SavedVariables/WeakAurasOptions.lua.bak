@@ -45381,7 +45381,7 @@ WeakAurasOptionsSaved = {
 			["spells"] = "32395=136123",
 		},
 		["Shadow Embrace"] = {
-			["spells"] = "32385=136198,32386=136198,32387=136198,32388=136198,32389=136198,32392=136198",
+			["spells"] = "32385=136198,32386=136198,32387=136198,32388=136198,32389=136198,32392=136198,32389=136198",
 		},
 		["Master Buff (Melee)"] = {
 			["spells"] = "35874=132333",
@@ -67362,7 +67362,7 @@ WeakAurasOptionsSaved = {
 			["spells"] = "34673=135743",
 		},
 		["Soul Link"] = {
-			["spells"] = "19028=136160,25228=136160,63943=237171,79957=136160,25228=136160,25228=136160",
+			["spells"] = "19028=136160,25228=136160,63943=237171,79957=136160",
 		},
 		["Azure Silk Vest"] = {
 			["spells"] = "3859=132149",
@@ -74132,13 +74132,13 @@ WeakAurasOptionsSaved = {
 	["version"] = "5.13.1",
 	["savedSnippets"] = {
 	},
+	["spellCacheAchievements"] = true,
 	["frame"] = {
 		["xOffset"] = 1490.3291015625,
-		["width"] = 830,
-		["height"] = 665,
 		["yOffset"] = 970.5362548828125,
+		["height"] = 665,
+		["width"] = 830,
 	},
 	["spellCacheStrings"] = true,
-	["spellCacheAchievements"] = true,
 	["build"] = "54737",
 }

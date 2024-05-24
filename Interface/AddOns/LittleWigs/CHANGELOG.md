@@ -1,7 +1,7 @@
 # LittleWigs
 
-## [v10.2.53](https://github.com/BigWigsMods/LittleWigs/tree/v10.2.53) (2024-05-17)
-[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v10.2.52...v10.2.53) [Previous Releases](https://github.com/BigWigsMods/LittleWigs/releases)
+## [v10.2.54](https://github.com/BigWigsMods/LittleWigs/tree/v10.2.54) (2024-05-21)
+[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v10.2.53...v10.2.54) [Previous Releases](https://github.com/BigWigsMods/LittleWigs/releases)
 
-- MoP/MogushanPalace/XinTheWeaponmaster: Circle of Flame, Whirlwinding Axes, timers  
-- MoP/MogushanPalace/TrialOfTheKing: Whirling Dervish, Magnetic Field, timers  
+- MoP/TempleOfTheJadeSerpent/WiseMari: Fix Call Water icon  
+- Cataclysm/ThroneTides/Ozumat: Fix Autotalk in Classic  

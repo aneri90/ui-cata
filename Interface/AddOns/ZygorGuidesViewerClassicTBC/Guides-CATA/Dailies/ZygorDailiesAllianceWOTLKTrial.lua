@@ -1,0 +1,32 @@
+local ZygorGuidesViewer=ZygorGuidesViewer
+if not ZygorGuidesViewer then return end
+if UnitFactionGroup("player")~="Alliance" then return end
+if ZGV:DoMutex("DailiesAWOTLK") then return end
+ZygorGuidesViewer.GuideMenuTier = "TRI"
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\The Burning Crusade\\Shattered Sun Offensive\\Shattered Sun Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Wyrmrest Accord Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Dalaran Fishing Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Dalaran Cooking Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Jewelcrafting Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\The Kalu'ak Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\The Oracles/Frenzyheart Dailies\\The Oracles Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\The Oracles/Frenzyheart Dailies\\Frenzyheart Tribe Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\The Sons of Hodir\\The Sons of Hodir Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Icecrown\\The Skybreaker Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Icecrown\\Shadowvault Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Icecrown\\Death's Rise Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Black Knight Questline")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Crusader Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Aspirant Rank Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Valiant Rank Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Valiant Rank Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Valiant Rank Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Valiant Rank Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Valiant Rank Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Champion of Stormwind")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Champion of Darnassus")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Champion of Ironforge")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Champion of Gnomeregan")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Champion of The Exodar")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Champion Rank Dailies")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Dailies Guides\\Wrath of the Lich King\\Argent Tournament Grounds\\Champion Rank Dailies")

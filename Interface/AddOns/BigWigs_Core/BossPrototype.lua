@@ -60,7 +60,7 @@ local allowedEvents = {}
 local difficulty
 local UpdateDispelStatus, UpdateInterruptStatus = nil, nil
 local myGUID, myRole, myRolePosition
-local myGroupGUIDs, myGroupRolePositions = {}, {}
+local myGroupGUIDs, myGroupRoles, myGroupRolePositions = {}, {}, {}
 local solo = false
 local classColorMessages = true
 local englishSayMessages = false
@@ -68,8 +68,11 @@ do -- Update some data that may be called at the top of modules (prior to initia
 	local _, _, diff = GetInstanceInfo()
 	difficulty = diff
 	myGUID = UnitGUID("player")
-	local _, role, position = LibSpec:MySpecialization()
-	myRole, myRolePosition = role, position
+	if LibSpec then
+		local _, role, position = LibSpec:MySpecialization()
+		myRole, myRolePosition = role, position
+		LibSpec:RequestSpecialization()
+	end
 end
 local updateData = function(module)
 	myGUID = UnitGUID("player")
@@ -1697,16 +1700,20 @@ end
 -- @section role
 
 do
-	local function update(_, _, position, player)
+	local function update(_, role, position, player)
 		myGroupRolePositions[player] = position
+		myGroupRoles[player] = role
 	end
-	LibSpec:Register(loader, update)
+	if LibSpec then
+		LibSpec:Register(loader, update)
+	end
 end
 
 --- Ask LibSpecialization to update the role positions of everyone in your group.
--- @string[opt="channel"] channel the specific addon comm channel to use, empty for automatic (recommended).
-function boss:UpdateRolePositions(channel)
-	LibSpec:RequestSpecialization(channel)
+function boss:UpdateRolePositions()
+	if LibSpec then
+		LibSpec:RequestSpecialization()
+	end
 end
 
 --- Check if your talent tree role is MELEE.
@@ -1736,7 +1743,12 @@ end
 -- @return boolean
 function boss:Tank(unit)
 	if unit then
-		return GetPartyAssignment("MAINTANK", unit) or UnitGroupRolesAssigned(unit) == "TANK"
+		local role = myGroupRoles[unit]
+		if role then
+			return role == "TANK"
+		else
+			return GetPartyAssignment("MAINTANK", unit) or UnitGroupRolesAssigned(unit) == "TANK"
+		end
 	else
 		return myRole == "TANK"
 	end
@@ -1769,7 +1781,12 @@ end
 -- @return boolean
 function boss:Healer(unit)
 	if unit then
-		return UnitGroupRolesAssigned(unit) == "HEALER"
+		local role = myGroupRoles[unit]
+		if role then
+			return role == "HEALER"
+		else
+			return UnitGroupRolesAssigned(unit) == "HEALER"
+		end
 	else
 		return myRole == "HEALER"
 	end
@@ -1780,7 +1797,12 @@ end
 -- @return boolean
 function boss:Damager(unit)
 	if unit then
-		return UnitGroupRolesAssigned(unit) == "DAMAGER"
+		local role = myGroupRoles[unit]
+		if role then
+			return role == "DAMAGER"
+		else
+			return UnitGroupRolesAssigned(unit) == "DAMAGER"
+		end
 	else
 		if myRole == "DAMAGER" then
 			return myRolePosition
@@ -2184,7 +2206,9 @@ end
 function boss:MessageOld(key, color, sound, text, icon)
 	if icon == nil then icon = type(text) == "number" and text or key end
 	self:Message(key, color, text, icon)
-	self:PlaySound(key, sound)
+	if sound then
+		self:PlaySound(key, sound)
+	end
 end
 
 function boss:Message(key, color, text, icon, disableEmphasize)
@@ -2280,7 +2304,9 @@ do
 	function boss:StackMessageOld(key, player, stack, color, sound, text, icon)
 		if icon == nil then icon = type(text) == "number" and text or key end
 		self:StackMessage(key, color, player, stack, 0, text, icon)
-		self:PlaySound(key, sound)
+		if sound then
+			self:PlaySound(key, sound)
+		end
 	end
 
 	--- Display a buff/debuff stack warning message.
@@ -2315,12 +2341,14 @@ do
 	-- @bool[opt] alwaysPlaySound if true, play the sound even if player is not you
 	function boss:TargetMessageOld(key, player, color, sound, text, icon, alwaysPlaySound)
 		if icon == nil then icon = type(text) == "number" and text or key end
-		self:PlaySound(key, sound, nil, not alwaysPlaySound and player)
 		if type(player) == "table" then
 			self:TargetsMessage(key, color, player, #player, text, icon)
 			twipe(player)
 		else
 			self:TargetMessage(key, color, player, text, icon)
+		end
+		if sound then
+			self:PlaySound(key, sound, nil, not alwaysPlaySound and player)
 		end
 	end
 
