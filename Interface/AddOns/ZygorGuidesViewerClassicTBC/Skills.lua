@@ -26,6 +26,7 @@ end, after="all"})
 
 function Skills:EventDriver(event,payload)
 	if not ZGV.db.profile.nc_skills or not ZGV.db.profile.nc_skills_trainer then return end
+	if not Skills:GetLearnableSkills() then return end
 
 	if event=="TRAINER_SHOW" then
 		Skills.SkillsPopup:Hide()
@@ -765,7 +766,7 @@ local function CalcStep()
 	if Skills.SkillTrainerInDistance then
 		if Skills.SkillsPopup.LastTrainer~=Skills.SkillTrainerInDistance then
 			ZGV:Debug("&skills popup, showing by distance")
-			if ZGV.db.profile.nc_skills and ZGV.db.profile.nc_skills_dist and ZGV.db.profile.nc_enable then ZGV.NotificationCenter:AddEntry("skills", "You have new skills available.", "Click to see skills.",{cleartype=true}) end
+			if ZGV.db.profile.nc_skills and ZGV.db.profile.nc_skills_dist and ZGV.db.profile.nc_enable and Skills:GetLearnableSkills() then ZGV.NotificationCenter:AddEntry("skills", "You have new skills available.", "Click to see skills.",{cleartype=true}) end
 			Skills.SkillsPopup.LastTrainer = Skills.SkillTrainerInDistance
 		else
 			ZGV:Debug("&skills popup, already shown for this npc")
@@ -791,11 +792,11 @@ local function CalcThread()
 					Skills.SkillsPopup.LastTrainer = nil
 				end	
 
-				if ZGV.db.profile.nc_skills and ZGV.db.profile.nc_skills_dist and ZGV.db.profile.nc_enable and dist<dist_threshold_show then
+				if ZGV.db.profile.nc_skills and ZGV.db.profile.nc_skills_dist and ZGV.db.profile.nc_enable and Skills:GetLearnableSkills() and dist<dist_threshold_show then
 					ZGV:Debug("&skills popup, found by distance "..id)
 					Skills.SkillTrainerInDistance = id
 					return true
-				elseif ZGV.db.profile.nc_skills and ZGV.db.profile.nc_skills_town and ZGV.db.profile.nc_enable and npc.m==Skills.SkillSearchByMap and (npc.m~=Skills.SkillTrainerShownByMap) then
+				elseif ZGV.db.profile.nc_skills and ZGV.db.profile.nc_skills_town and ZGV.db.profile.nc_enable and Skills:GetLearnableSkills() and npc.m==Skills.SkillSearchByMap and (npc.m~=Skills.SkillTrainerShownByMap) then
 					ZGV:Debug("&skills popup, found for capital "..Skills.SkillSearchByMap)
 					Skills.SkillTrainerShownByMap = Skills.SkillSearchByMap
 					ZGV.NotificationCenter:AddEntry("skills", "You have new skills available.", "Click to see skills.",{cleartype=true})
@@ -826,7 +827,7 @@ function Skills:MaybeShowPopupByDistance()
 	
 	local x,y,m=LibRover:GetPlayerPosition()
 
-	if ZGV.db.profile.nc_skills_town and ZGV.db.profile.nc_skills and m and Skills.SkillTrainerShownByMap~=m then -- we changed maps, and care about town popups
+	if ZGV.db.profile.nc_skills_town and ZGV.db.profile.nc_skills and Skills:GetLearnableSkills() and m and Skills.SkillTrainerShownByMap~=m then -- we changed maps, and care about town popups
 		if capitals[m] then
 			ZGV:Debug("&skills popup, new map - capital")
 			Skills.SkillSearchByMap = m
@@ -837,7 +838,7 @@ function Skills:MaybeShowPopupByDistance()
 		end
 	end
 
-	if (ZGV.db.profile.nc_skills_town or ZGV.db.profile.nc_skills_dist) and ZGV.db.profile.nc_skills then
+	if (ZGV.db.profile.nc_skills_town or ZGV.db.profile.nc_skills_dist) and Skills:GetLearnableSkills() and ZGV.db.profile.nc_skills then
 		Skills.WorkerFrame:SetScript("OnUpdate",CalcStep)
 		Skills.thread = coroutine.create(CalcThread)
 	end
@@ -851,7 +852,7 @@ function Skills:ShowToast()
 			count = count + 1
 		end
 	end
-	if count == 0 and ZGV.db.profile.nc_enable and ZGV.db.profile.nc_skills then
+	if count == 0 and ZGV.db.profile.nc_enable and ZGV.db.profile.nc_skills and Skills:GetLearnableSkills() then
 		ZGV.NotificationCenter:AddEntry("skills", "You have new skills available.", "Click to see skills.",{cleartype=true})
 	else
 		return

@@ -77,7 +77,7 @@ Record your profession data for the Gold Guide. |complete hasprof("Tailoring",1)
 step
 You're all set!
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Eastern Kingdoms (1-60)\\Worgen (1-13)",{
+ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Eastern Kingdoms (1-60)\\Worgen (1-13)",{
 author="support@zygorguides.com",
 condition_suggested=function() return raceclass('Worgen') and not completedq(28517) and not raceclass('DEATHKNIGHT') end,
 condition_suggested_exclusive=true,
@@ -1054,9 +1054,9 @@ talk Genn Greymane##48736
 turnin The Howling Oak##28517 |goto Darnassus 48.13,14.42
 accept Breaking Waves of Change##26385 |goto Darnassus 48.13,14.42
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Mount Hyjal (80-82)",{
+ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Cataclysm 80-85\\Mount Hyjal (80-82)",{
 author="support@zygorguides.com",
-next="Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Deepholm (82-83)",
+next="Leveling Guides\\Cataclysm 80-85\\Deepholm (82-83)",
 startlevel=80.00,
 dynamic=true,
 },[[
@@ -2401,9 +2401,9 @@ step
 talk Naraat the Earthspeaker##45226
 turnin The Battle Is Won, The War Goes On##27398 |goto Stormwind City 74.55,19.04
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Vashj'ir (80-82)",{
+ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Cataclysm 80-85\\Vashj'ir (80-82)",{
 author="support@zygorguides.com",
-next="Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Deepholm (82-83)",
+next="Leveling Guides\\Cataclysm 80-85\\Deepholm (82-83)",
 startlevel=80.00,
 dynamic=true,
 },[[
@@ -4130,9 +4130,9 @@ step
 talk Captain Taylor##44490
 turnin Defending the Rift##26193 |goto 69.76,34.41
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Deepholm (82-83)",{
+ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Cataclysm 80-85\\Deepholm (82-83)",{
 author="support@zygorguides.com",
-next="Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Uldum (83-84)",
+next="Leveling Guides\\Cataclysm 80-85\\Uldum (83-84)",
 startlevel=82.00,
 dynamic=true,
 },[[
@@ -4166,7 +4166,18 @@ step
 talk Earthcaller Yevaa##42573
 |tip Inside the building.
 accept Where's Goldmine?##26409 |goto 49.49,53.35
-accept The Explorers##27952 |goto 49.49,53.35
+accept The Explorers##27952 |goto 49.49,53.35 |only if level >= 83
+step
+talk Explorer Mowi##44799
+|tip Inside the building.
+turnin The Explorers##27952 |goto 47.31,51.40
+accept The Twilight Plot##27004 |goto 47.31,51.40
+|only if level >= 83
+step
+talk Prospector Brewer##44802
+|tip Inside the building.
+accept Fly Over##27006 |goto 47.32,51.36
+|only if level >= 83
 step
 talk Maruut Stonebinder##43065
 |tip Inside the building.
@@ -4182,15 +4193,6 @@ talk Caretaker Nuunwa##45300
 |tip He walks around this area.
 |tip Inside the building.
 home Temple of Earth |goto 49.22,51.87 |q 27135 |future
-step
-talk Explorer Mowi##44799
-|tip Inside the building.
-turnin The Explorers##27952 |goto 47.31,51.40
-accept The Twilight Plot##27004 |goto 47.31,51.40
-step
-talk Prospector Brewer##44802
-|tip Inside the building.
-accept Fly Over##27006 |goto 47.32,51.36
 step
 Leave the building |goto 49.98,55.37 < 30 |walk |only if (subzone("Deepholm") or subzone("Temple of Earth"))
 talk Initiate Goldmine##42574
@@ -4284,7 +4286,7 @@ stickystart "Collect_Elemental_Ore"
 step
 use The Ace of Earthly Sundering##60490
 |tip Use it on Emerald Colossuses to weaken them.
-|tip They lookw like large rock giants.
+|tip They look like large rock giants.
 kill 5 Sundered Emerald Colossus##44229 |q 27932/1 |goto 34.61,77.79
 step
 label "Collect_Elemental_Ore"
@@ -4522,6 +4524,7 @@ step
 talk Explorer Mowi##44799
 |tip Inside the building.
 accept Decryption Made Easy##27040 |goto 47.31,51.40
+|only if completedq(27006)
 step
 talk Maruut Stonebinder##43065
 |tip Inside the building.
@@ -4559,6 +4562,7 @@ step
 _Click the Complete Quest Box:_
 turnin Decryption Made Easy##27040
 accept The Wrong Sequence##27058
+|only if completedq(27006)
 step
 click Waygate Controller##205161
 Destroy the Waygate |q 27058/1 |goto 39.15,73.83
@@ -4570,6 +4574,7 @@ Enter the building |goto 49.98,55.37 < 30 |walk
 talk Explorer Mowi##44799
 |tip Inside the building.
 turnin The Wrong Sequence##27058 |goto 47.31,51.40
+|only if completedq(27006)
 step
 talk Prospector Brewer##44802
 |tip Inside the building.
@@ -4578,43 +4583,47 @@ step
 Leave the building |goto 49.98,55.37 < 30 |walk |only if (subzone("Deepholm") or subzone("Temple of Earth"))
 talk Stormcaller Mylra##42684
 |tip At the top of the airship.
-|tip The airship flies high up around this area.
+|tip The airship flies high up and patrols around this area.
+|tip Because it patrols, quest arrows on the ship may not always be accurate.
 turnin Diplomacy First##26247 |goto 60.89,47.32
 accept All Our Friends Are Dead##26248 |goto 60.89,47.32
 accept The Admiral's Cabin##26249 |goto 60.89,47.32
+The ship may also be in these areas:
+[64.79,53.35]
+[60.96,38.37]
 step
 use the Spirit Totem##58167
 |tip Use it on Slain Crew Members.
 |tip They look like dead Alliance soldiers on the airship.
-|tip The airship flies high up around this area.
+|tip The airship flies high up and patrols around this area.
 |tip You may be attacked.
 Recover Information from #6# Slain Crew Members |q 26248/1 |goto 60.89,47.32
 '|talk Slain Crew Member##42681
 step
 talk First Mate Moody##43082
 |tip Inside the large room with yellow windows, on the deck of the airship.
-|tip The airship flies high up around this area.
+|tip The airship flies high up and patrols around this area.
 turnin The Admiral's Cabin##26249 |goto 60.89,47.32
 accept Without a Captain or Crew##26427 |goto 60.89,47.32
 step
 click Bottle of Whiskey##204280
 |tip It looks like a small yellow bottle on the edge of a life boat, on the right side of the deck of the airship.
-|tip The airship flies high up around this area.
+|tip The airship flies high up and patrols around this area.
 collect Bottle of Whiskey##58798 |q 26427/1 |goto 60.89,47.32
 step
 click Spool of Rope##204279+
-|tip They look like coiled up ropes on the ground on the deck of the airship.
-|tip The airship flies high up around this area.
+|tip They look like coiled up ropes on the ground on the front-end of the deck of the airship.
+|tip The airship flies high up and patrols around this area.
 collect Spool of Rope##58806 |q 26427/2 |goto 60.89,47.32
 step
 talk First Mate Moody##43082
 |tip Inside the large room with yellow windows, on the deck of the airship.
-|tip The airship flies high up around this area.
+|tip The airship flies high up and patrols around this area.
 turnin Without a Captain or Crew##26427 |goto 60.89,47.32
 step
 talk Stormcaller Mylra##42684
 |tip At the top of the airship.
-|tip The airship flies high up around this area.
+|tip The airship flies high up and patrols around this area.
 turnin All Our Friends Are Dead##26248 |goto 60.89,47.32
 accept Take No Prisoners##26251 |goto 60.89,47.32
 accept On Second Thought, Take One Prisoner##26250 |goto 60.89,47.32
@@ -4622,7 +4631,7 @@ stickystart "Kill_Twilight_Saboteurs"
 step
 kill Mor'norokk the Hateful##42801
 |tip He looks like a purple two-headed ogre downstairs inside the airship.
-|tip The airship flies high up around this area.
+|tip The airship flies high up and patrols around this area.
 |tip He will eventually surrender.
 talk Mor'norokk the Hateful##42801
 Subdue Mor'norokk the Hateful |q 26250/1 |goto 60.89,47.32
@@ -4631,24 +4640,24 @@ label "Kill_Twilight_Saboteurs"
 kill 6 Twilight Saboteur##42885 |q 26251/1 |goto 60.89,47.32
 |tip They look like humans wearing robes.
 |tip Downstairs inside the airship. |notinsticky
-|tip The airship flies high up around this area. |notinsticky
+|tip The airship flies high up and patrols around this area. |notinsticky
 step
 talk Stormcaller Mylra##42684
 |tip At the top of the airship.
-|tip The airship flies high up around this area.
+|tip The airship flies high up and patrols around this area.
 turnin Take No Prisoners##26251 |goto 60.89,47.32
 turnin On Second Thought, Take One Prisoner##26250 |goto 60.89,47.32
 accept Some Spraining to Do##26254 |goto 60.89,47.32
 step
 clicknpc Stormbeak##42887
 |tip It looks like a large eagle flying nearby, at the top of the airship.
-|tip The airship flies high up around this area.
+|tip The airship flies high up and patrols around this area.
 Watch the dialogue
 Interrogate Mok'norrok |q 26254/1 |goto 60.89,47.32
 step
 talk Stormcaller Mylra##42684
 |tip At the top of the airship.
-|tip The airship flies high up around this area.
+|tip The airship flies high up and patrols around this area.
 turnin Some Spraining to Do##26254 |goto 60.89,47.32
 accept Return to the Temple of Earth##26255 |goto 60.89,47.32
 step
@@ -4746,7 +4755,7 @@ accept Maziel's Ascendancy##27102 |goto 67.20,70.17
 step
 Enter the cave |goto 69.49,68.02 < 20 |walk
 kill Maziel##44967 |q 27102/1 |goto 72.87,61.92
-|tip Inside the cave.
+|tip Inside the cave on the bottom floor.
 step
 _Click the Complete Quest Box:_
 turnin Maziel's Ascendancy##27102
@@ -5161,6 +5170,80 @@ talk Earthcaller Torunscar##43809
 turnin Audience with the Stonemother##26752 |goto 56.06,13.46
 accept Rallying the Earthen Ring##26827 |goto 56.06,13.46
 step
+talk Earthcaller Yevaa##42573
+|tip Inside the building.
+accept The Explorers##27952 |goto 49.49,53.35
+|only if level >= 83
+step
+talk Explorer Mowi##44799
+|tip Inside the building.
+turnin The Explorers##27952 |goto 47.31,51.40
+accept The Twilight Plot##27004 |goto 47.31,51.40
+|only if level >= 83
+step
+talk Prospector Brewer##44802
+|tip Inside the building.
+accept Fly Over##27006 |goto 47.32,51.36
+|only if level >= 83
+stickystart "Collect_Masters_Gate_Plans"
+step
+Investigate the Masters' Gate |q 27006/1 |goto 38.95,74.14
+step
+label "Collect_Masters_Gate_Plans"
+Kill Twilight enemies around this area
+|tip They look like various humanoid enemies.
+collect Masters' Gate Plans##60745 |q 27004/1 |goto 40.42,70.45
+|tip This has a low drop rate.
+'|kill Twilight Armsman##44847, Twilight Crusher##44849, Twilight Cryptomancer##44855
+step
+talk Explorer Mowi##44799
+|tip Inside the building.
+turnin The Twilight Plot##27004 |goto 47.31,51.40
+step
+talk Prospector Brewer##44802
+|tip Inside the building.
+turnin Fly Over##27006 |goto 47.31,51.36
+accept Fight Fire and Water and Air with...##27042 |goto 47.31,51.36
+|only if completedq(27952)
+step
+talk Explorer Mowi##44799
+|tip Inside the building.
+accept Decryption Made Easy##27040 |goto 47.31,51.40
+|only if completedq(27006)
+stickystart "Decrypt_Plans"
+step
+Leave the building |goto 49.98,55.37 < 30 |walk |only if (subzone("Deepholm") or subzone("Temple of Earth"))
+kill Bound Air Elemental##44885
+Acquire the Air Ward |q 27042/3 |goto 40.52,72.38
+step
+kill Bound Fire Elemental##44887
+Acquire the Fire Ward |q 27042/1 |goto 36.00,67.37
+step
+kill Bound Water Elemental##44886
+Acquire the Water Ward |q 27042/2 |goto 40.82,66.28
+step
+label "Decrypt_Plans"
+click One-Time Decryption Engine##205145+
+|tip They look like metal machines with a circular scroll spinning around them.
+Decrypt #6# Plans |q 27040/1 |goto 40.21,68.60
+step
+_Click the Complete Quest Box:_
+turnin Decryption Made Easy##27040
+accept The Wrong Sequence##27058
+|only if completedq(27006)
+step
+click Waygate Controller##205161
+Destroy the Waygate |q 27058/1 |goto 39.15,73.83
+step
+kill Haethen Kaul##44835 |q 27042/4 |goto 39.87,62.17
+|tip Up on the floating rock.
+step
+Enter the building |goto 49.98,55.37 < 30 |walk
+talk Explorer Mowi##44799
+|tip Inside the building.
+turnin The Wrong Sequence##27058 |goto 47.31,51.40
+|only if completedq(27006)
+step
 Enter the building |goto 49.98,55.37 < 30 |walk |only if not subzone("Temple of Earth")
 talk Yuldris Smolderfury##45034
 |tip He walks around this area.
@@ -5280,9 +5363,9 @@ talk Explorer Mowi##44799
 |tip Inside the building.
 accept That's No Pyramid!##28292 |goto 47.31,51.40
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Uldum (83-84)",{
+ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Cataclysm 80-85\\Uldum (83-84)",{
 author="support@zygorguides.com",
-next="Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Twilight Highlands (84-85)",
+next="Leveling Guides\\Cataclysm 80-85\\Twilight Highlands (84-85)",
 startlevel=83.00,
 dynamic=true,
 },[[
@@ -6501,7 +6584,7 @@ step
 talk Brann Bronzebeard##49351
 turnin The Coffer of Promise##28633 |goto 44.86,67.32
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Twilight Highlands (84-85)",{
+ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Cataclysm 80-85\\Twilight Highlands (84-85)",{
 author="support@zygorguides.com",
 startlevel=84,
 endlevel=85,

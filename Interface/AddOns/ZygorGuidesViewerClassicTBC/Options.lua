@@ -1962,7 +1962,12 @@ function ZGV:Options_DefineOptionTables()
 	do
 		AddOption('',{ type = 'description', name=L['opt_group_notification'], font=ZGV.font_dialog})
 			AddOptionSpace()
-			AddOption('nc_enable',{ type = 'toggle', width = "full", _default = true })
+			AddOption('nc_enable',{ type = 'toggle', width = "full", _default = true,
+				set = function(i,v) 
+					Setter_Simple(i,v)
+					ZGV.NotificationCenter:UpdateButton()
+				end,
+			})
 			AddOptionSpace()
 			AddOption('nc_size',{
 				type = 'select',

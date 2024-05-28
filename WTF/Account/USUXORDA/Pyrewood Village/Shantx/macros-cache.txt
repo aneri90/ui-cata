@@ -9,10 +9,22 @@ VER 3 0000000001000008 "Burst" "INV_MISC_QUESTIONMARK"
 /use 14
 /cast Metamorphosis
 END
+VER 3 0000000001000010 "CB" "134400"
+#showtooltip
+/cleartarget [dead]
+/targetenemy [noexists][dead][noharm]
+/cast Chaos Bolt
+END
 VER 3 000000000100000B "Circle/Dismount" "134400"
 #showtooltip
 /dismount
 /cast Demonic Circle: Summon
+END
+VER 3 0000000001000011 "Conf" "134400"
+#showtooltip
+/cleartarget [dead]
+/targetenemy [noexists][dead][noharm]
+/cast Conflagrate
 END
 VER 3 0000000001000006 "Corruption" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -29,6 +41,10 @@ VER 3 000000000100000D "Haunt" "134400"
 /targetenemy [noexists][dead][noharm]
 /cast Haunt
 END
+VER 3 0000000001000012 "Havoc MO" "134400"
+#showtooltip
+/cast [@mouseover,harm,nodead] Bane of Havoc
+END
 VER 3 0000000001000001 "Incinerate" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cleartarget [dead]
@@ -38,16 +54,14 @@ VER 3 0000000001000001 "Incinerate" "INV_MISC_QUESTIONMARK"
 /cast Incinerate
 END
 VER 3 0000000001000002 "Kick focus" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@focus,harm,nodead] Spell Lock
+/cast [@focus, pet:felhunter]Spell Lock;[@focus, pet:felguard]Axe Toss;[@focus, pet:succubus]Seduction;
 END
 VER 3 0000000001000004 "Kick MO" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@mouseover,harm,nodead] [] Spell Lock
+/cast [@player, pet:imp]Singe Magic;[@mouseover, pet:felhunter]Spell Lock;[@mouseover, pet:felguard]Axe Toss;[@mouseover, pet:succubus]Seduction;
 END
 VER 3 0000000001000003 "Purge" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@mouseover,harm,nodead] [] Devour Magic(Rank 6)
+/cast [@mouseover,harm,nodead] [] Devour Magic
 END
 VER 3 0000000001000009 "SB" "INV_MISC_QUESTIONMARK"
 #showtooltip

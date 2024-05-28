@@ -14,6 +14,9 @@ PallyPower_Assignments = {
 PallyPower_NormalAssignments = {
 }
 PallyPower_AuraAssignments = {
+	["Nyastia-Auberdine"] = 5,
+	["Novokk"] = 0,
+	["Póni-MirageRaceway"] = 6,
 }
 PallyPower_SavedPresets = {
 	["PallyPower_NormalAssignments"] = {

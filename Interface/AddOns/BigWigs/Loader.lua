@@ -37,7 +37,7 @@ do
 	local ALPHA = "ALPHA"
 
 	local releaseType
-	local myGitHash = "4b71aff" -- The ZIP packager will replace this with the Git hash.
+	local myGitHash = "35e83a8" -- The ZIP packager will replace this with the Git hash.
 	local releaseString
 	--[=[@alpha@
 	-- The following code will only be present in alpha ZIPs.
@@ -379,6 +379,7 @@ do
 		[962] = lw_mop, -- Gate of the Setting Sun
 		[994] = lw_mop, -- Mogu'shan Palace
 		[1001] = lw_mop, -- Scarlet Halls
+		[1007] = lw_mop, -- Scholomance
 		[1011] = lw_mop, -- Siege of Niuzao Temple
 		[1112] = lw_mop, -- Pursuing the Black Harvest
 		[1004] = lw_mop, -- Scarlet Monastery

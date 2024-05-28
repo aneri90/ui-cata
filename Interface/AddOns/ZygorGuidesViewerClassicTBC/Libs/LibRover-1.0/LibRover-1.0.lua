@@ -4576,9 +4576,6 @@ do
 				    or (SP_EXPERT_RIDING and (1 + 1.5))  -- +150%
 				    or 0
 
-			local dragonspeed = SP_DRAGONRIDING_BASICS and 10
-			local dragonspeed_nerfed = SP_EXPERT_RIDING and dragonspeed and dragonspeed * 0.85
-
 			local canfly = flyspeed>0
 			local canfly_in_azeroth = canfly and (Lib.IsRetail or SP_LICENCE_CATA)
 			local canfly_in_northrend = canfly and (Lib.IsRetail or SP_LICENCE_WOTLK)
@@ -4589,6 +4586,9 @@ do
 			local canfly_in_sl = canfly and Q_MEMORIES_SUNLESS_SKIES
 			local canfly_in_slzm = canfly and A_UNLOCKING_THE_SECRETS
 			local canfly_in_df = canfly and A_DRAGON_ISLES_PATHFINDER -- useless, but there it is
+
+			local dragonspeed = SP_DRAGONRIDING_BASICS and 10
+			local dragonspeed_nerfed = canfly and dragonspeed and dragonspeed * 0.85
 
 			if ZGV and ZGV.db then  -- debug overrides
 				flyspeed=ZGV.db.profile.debug_librover_maxspeed or flyspeed
@@ -4601,7 +4601,7 @@ do
 				if ZGV.db.profile.debug_librover_flightsl~=nil then canfly_in_sl=ZGV.db.profile.debug_librover_flightsl end
 				if ZGV.db.profile.debug_librover_dragonriding~=nil then 
 					dragonspeed = ZGV.db.profile.debug_librover_dragonriding and 10
-					dragonspeed_nerfed = SP_EXPERT_RIDING and dragonspeed and dragonspeed * 0.85
+					dragonspeed_nerfed = canfly and dragonspeed and dragonspeed * 0.85
 				end
 			end
 
@@ -4618,7 +4618,7 @@ do
 				["Nazjatar"] = { groundspeed + max(BONUS_BFA_PATHFINDER_1,BONUS_GUILDPERK_MOUNTUP), dragonspeed_nerfed or (canfly_in_bfa and flyspeed) or 0, canfly_in_bfa and flyspeed or 0 },
 				["Shadowlands"] = { groundspeed + max(BONUS_GUILDPERK_MOUNTUP) , dragonspeed_nerfed or (canfly_in_sl and flyspeed) or 0, canfly_in_sl and flyspeed or 0 },
 				["ShadowlandsZereth"] = { groundspeed + max(BONUS_GUILDPERK_MOUNTUP) , canfly_in_slzm and (dragonspeed_nerfed or flyspeed) or 0, canfly_in_slzm and flyspeed or 0 },
-				["DragonIsles"] = { groundspeed + max(BONUS_GUILDPERK_MOUNTUP) , dragonspeed or (canfly_in_df and flyspeed) or 0, canfly_in_df and flyspeed or dragonspeed_nerfed or 0 }, -- store normal flying mount speed for comfort mode
+				["DragonIsles"] = { groundspeed + max(BONUS_GUILDPERK_MOUNTUP) , dragonspeed or (canfly_in_df and flyspeed) or 0, SP_DRAGONRIDING_BASICS and flyspeed or 0 }, -- store normal flying mount speed for comfort mode
 			}
 
 			Lib.debug_maxspeeds = {
@@ -4655,18 +4655,18 @@ do
 				if (system and Lib.ZoneIsOutdoor(zoneid)) or (meta.flyable==true) then
 					local run,fly,comfortdragon
 					local bonus=0.0
-					if system==MAPENUM["EASTERNKINGDOMS"] or system==MAPENUM["KALIMDOR"] or system==MAPENUM["DEEPHOLM"] then run,fly=unpack(Lib.speeds["Azeroth"])
-					elseif system==MAPENUM["OUTLAND"] then run,fly=unpack(Lib.speeds["Outland"])
-					elseif system==MAPENUM["NORTHREND"] then run,fly=unpack(Lib.speeds["Northrend"])
-					elseif system==MAPENUM["PANDARIA"] then run,fly=unpack(Lib.speeds["Pandaria"])
-					elseif system==MAPENUM["DRAENOR"] then run,fly=unpack(Lib.speeds["Draenor"])
-					elseif system==MAPENUM["BROKENISLES"] then run,fly=unpack(Lib.speeds["Legion"])
-					elseif system==MAPENUM["ARGUS"] then run,fly=unpack(Lib.speeds["Argus"])
-					elseif system==MAPENUM["ZANDALAR"] then run,fly=unpack(Lib.speeds["Zandalar"])
-					elseif system==MAPENUM["KULTIRAS"] then run,fly=unpack(Lib.speeds["KulTiras"])
-					elseif system==MAPENUM["NAZJATAR"] then run,fly=unpack(Lib.speeds["Nazjatar"])
-					elseif system==MAPENUM["SHADOWLANDS"] then run,fly=unpack(Lib.speeds["Shadowlands"])
-					elseif system==MAPENUM["ZERETHMORTIS"] then run,fly=unpack(Lib.speeds["ShadowlandsZereth"])
+					if system==MAPENUM["EASTERNKINGDOMS"] or system==MAPENUM["KALIMDOR"] or system==MAPENUM["DEEPHOLM"] then run,fly,comfortdragon=unpack(Lib.speeds["Azeroth"])
+					elseif system==MAPENUM["OUTLAND"] then run,fly,comfortdragon=unpack(Lib.speeds["Outland"])
+					elseif system==MAPENUM["NORTHREND"] then run,fly,comfortdragon=unpack(Lib.speeds["Northrend"])
+					elseif system==MAPENUM["PANDARIA"] then run,fly,comfortdragon=unpack(Lib.speeds["Pandaria"])
+					elseif system==MAPENUM["DRAENOR"] then run,fly,comfortdragon=unpack(Lib.speeds["Draenor"])
+					elseif system==MAPENUM["BROKENISLES"] then run,fly,comfortdragon=unpack(Lib.speeds["Legion"])
+					elseif system==MAPENUM["ARGUS"] then run,fly,comfortdragon=unpack(Lib.speeds["Argus"])
+					elseif system==MAPENUM["ZANDALAR"] then run,fly,comfortdragon=unpack(Lib.speeds["Zandalar"])
+					elseif system==MAPENUM["KULTIRAS"] then run,fly,comfortdragon=unpack(Lib.speeds["KulTiras"])
+					elseif system==MAPENUM["NAZJATAR"] then run,fly,comfortdragon=unpack(Lib.speeds["Nazjatar"])
+					elseif system==MAPENUM["SHADOWLANDS"] then run,fly,comfortdragon=unpack(Lib.speeds["Shadowlands"])
+					elseif system==MAPENUM["ZERETHMORTIS"] then run,fly,comfortdragon=unpack(Lib.speeds["ShadowlandsZereth"])
 					elseif system==MAPENUM["DRAGONISLES"] then run,fly,comfortdragon=unpack(Lib.speeds["DragonIsles"])
 					else run,fly=1,0 end
 

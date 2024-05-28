@@ -13660,182 +13660,11 @@ _DAMAGE:_ |grouprole DAMAGE
 |tip DPS with high mobility or dots should control the "Shadow of Obsidius" clones during the encounter. |grouprole DAMAGE
 |tip If you're designated to kite the Shadows, avoid being within melee range of Obsidius. |grouprole DAMAGE
 |tip
-Click Here to Continue |confrim
+Click Here to Continue |confirm
 step
 talk Finkle Einhorn##49476
 turnin Ascendant Lord Obsidius##28741 |goto 68.8,56.0
 |only if haveq(28741)
-]])
-ZygorGuidesViewer:RegisterGuide("Dungeon Guides\\Cataclysm Dungeons\\End Time",{
-mapid=401,
-achieveid={6117},
-patch='40300',
-condition_suggested=function() return level>=35 and level<=35 end,
-keywords={"Twilight, Highlands, Hour"},
-author="support@zygorguides.com",
-description="This guide will walk you through the End of Time dungeon.",
-},[[
-step
-Press _I_ and queue for End Time or enter the dungeon with your group |goto End Time/1 81.0,44.1 < 100 |c
-step
-talk Alurmi##57864
-accept Archival Purposes##30097 |goto End Time 79.6,45.1
-step
-talk Nozdormu##54476
-accept Murozond##30096 |goto 79.6,45.0
-step
-label "transit"
-Click Time Transit Device and choose one of the destinations:
-<Emerald Dragonshrine> |goto End Time/5 66.5,79.5 < 5 |noway |c |next "Emerald" |or
-<Azure Dragonshrine> |goto End Time/2 |noway |c |next "Azure" |or
-<Ruby Dragonshrine> |goto End Time/3 34.3,43.2 < 5 |noway |c |next "Ruby" |or
-<Obsidian Dragonshrine> |goto End Time/4 29.2,16.0 < 5 |noway |c |next "Obsidian" |or
-<Bronze Dragonshrine> |goto End Time/6 36.5,77.5 < 5 |noway |c |next "Bronze" |or
-step
-label "Emerald"
-kill Time-Twisted Nightsaber##54688+, Time-Twisted Sentinel##54512+
-_Everyone:_
-|tip In this section, you will need to start the trash by aggroing a Nightsaber. Once you have started, you will have to fight until the boss appears.
-|tip There are Nightsabers and Sentinel's which keep spawning, you will have to fight constantly (they do not hit hard), stack together in the Moonlight so the tank can keep aggro.
-|tip Run to each of the Moonlights as they appear and stay in it until it disappears.
-Repeat until Tyrande shows up.
-confirm
-step
-label "Tyrande"
-kill Echo of Tyrande##54544 |goto End Time/5 51.8,42.9
-_Everyone:_ |grouprole EVERYONE
-|tip Tyrande will will send out waves of Moonlance which you will need to avoid. |grouprole EVERYONE
-|tip When Tyrande is at 30% health she will be surrounded by Tears of Elune, this looks like fireworks and damages anyone within 4 yards of it. |grouprole EVERYONE
-_Damage:_ |grouprole DAMAGE
-|tip Tyrande will cast Eyes of the Goddess which move around the outside of the pool causing damage and silencing players. |grouprole DAMAGE
-|tip It is best to remain in the pool to avoid these, but the pool will reduce your casting speed so use any speed increasing abilities you have to counteract this. |grouprole DAMAGE
-_Healer:_ |grouprole HEALER
-|tip Moonlance can be dispelled if a party member is hit by it. |grouprole HEALER
-|tip Piercing Gaze of Elune can also be dispelled. |grouprole HEALER
-_Tank:_ |grouprole TANK
-|tip Absorb or Reflect Moonbolt when possible. |grouprole TANK
-|tip Dodge Moonlance. |grouprole TANK
-|tip Use a Damage Modifer when Tyrande 30% Health. |grouprole TANK
-kill 2 Echos in the End Time instance |q 30097/1 |only if haveq(30097)
-confirm
-step
-label "next_1"
-Click Time Transit Device and choose one of the destinations:
-<Azure Dragonshrine> |goto End Time/2 |noway |c |next "Azure" |or
-<Ruby Dragonshrine> |goto End Time/3 34.3,43.2 < 5 |noway |c |next "Ruby" |or
-<Obsidian Dragonshrine> |goto End Time/4 29.2,16.0 < 5 |noway |c |next "Obsidian" |or
-<Bronze Dragonshrine> |goto End Time/6 36.5,77.5 < 5 |noway |c |next "Bronze" |or
-step
-label "Azure"
-kill Time-Twisted Priest##54690+, Time-Twisted Sorceress##54691+, Time-Twisted Rifleman##54693+, Time-Twisted Footman##54687+
-_Everyone:_
-|tip Clearing the trash mobs in this room is not very difficult. You want to start killing the Priest, then the Riflemen. Make sure to have the Dps kill the Fountain of Light that are summoned also.
-|tip If you can, Control the Sorceress by using Shackle or Turn Undead. If you cannot, kill Sorceress 2nd.
-|tip To summon the Echo of Jaina, you will need to go around and click 16 Fragments of Jaina's Staff. Once you have clicked all 16, she will appear in the middle of the map, in the blue swirling circle.
-confirm
-step
-label "Jaina"
-kill Echo of Jaina##54445
-_Everyone:_ |grouprole EVERYONE
-|tip Jaina will Pyroblast the tank throughout the whole fight, this is just a fireball that causes medium damage. This cannot be silenced but can be reflected. |grouprole EVERYONE
-|tip Jaina randomly creates a bomb called Flarecore, in a random area that will explode and hit all party members if not touched before 10 seconds. Running into this will cause less damage, the faster someone gets to it. |grouprole EVERYONE
-|tip Jaina will blink at random times and throw 3 Frost Blades that can only be dodged, not jumped over. |grouprole EVERYONE
-_Damage:_ |grouprole DAMAGE
-|tip Jaina periodically creates a bomb called Flarecore, in a random area that will explode and hit all party members if not touched before 10 seconds. Running into this will cause less damage, the faster someone gets to it. |grouprole DAMAGE
-|tip Jaina will blink at random times and throw 3 Frost Blades that can only be dodged, not jumped over. |grouprole DAMAGE
-_Tank:_ |grouprole TANK
-|tip Absorb or Reflect Pyroblast when possible. |grouprole TANK
-|tip Immediately touch Flarecore. |grouprole TANK
-|tip Dodge Frost Blades. |grouprole TANK
-Kill 2 Echos in the End Time instance. |q 30097/1 |only if haveq(30097)
-confirm
-step
-label "next_2"
-Click Time Transit Device and choose one of the destinations:
-<Emerald Dragonshrine> |goto End Time/5 66.5,79.5 < 5 |noway |c |next "Emerald" |or
-<Ruby Dragonshrine> |goto End Time/3 34.3,43.2 < 5 |noway |c |next "Ruby" |or
-<Obsidian Dragonshrine> |goto End Time/4 29.2,16.0 < 5 |noway |c |next "Obsidian" |or
-<Bronze Dragonshrine> |goto End Time/6 36.5,77.5 < 5 |noway |c |next "Bronze" |or
-step
-label "Ruby"
-kill Time-Twisted Geist##54511+
-|tip Target the Geists and kill them with AoE, kill all Geists first, they cause the most damage.
-confirm
-step
-label "Sylvanas"
-kill Echo of Sylvanas##54123  |goto End Time/3 55.8,39.0
-_Everyone:_
-|tip Spread out 10 yards apart. |grouprole EVERYONE
-|tip Avoid Blighted Ground. |grouprole EVERYONE
-|tip All party members must target the same Risen Ghoul and kill it before it reaches Sylvanas, or this will deal AoE damage and wipe the party. Once you kill the ghoul, run through the opening in the shadows and wait until Sylvanas is on the ground again. |grouprole EVERYONE
-_Healer:_ |grouprole HEALER
-|tip Dispell Shriek of the Highborne asap, this will deal damage and slow the target for 30 seconds. |grouprole HEALER
-Kill 2 Echos in the End Time instance |q 30097/1 |only if haveq(30097)
-confirm
-step
-label "next_3"
-Click Time Transit Device and choose one of the destinations:
-<Emerald Dragonshrine> |goto End Time/5 66.5,79.5 < 5 |noway |c |next "Emerald" |or
-<Azure Dragonshrine> |goto End Time/2 |noway |c |next "Azure" |or
-<Obsidian Dragonshrine> |goto End Time/4 29.2,16.0 < 5 |noway |c |next "Obsidian" |or
-<Bronze Dragonshrine> |goto End Time/6 36.5,77.5 < 5 |noway |c |next "Bronze" |or
-step
-label "Obsidian"
-kill Time-Twisted Drake##54543+, Time-Twisted Seer##54553+, Time-Twisted Breaker##54552+
-|tip If you can, try and Control the Twisted Breaker, this mob can hit very hard.
-|tip If any of these mobs step into the lava, they will get a buff that will do extra fire damage.
-confirm
-step
-label "Baine"
-kill Echo of Baine##54431
-_Everyone:_ |grouprole EVERYONE
-|tip If you step in the Lava briefly, you will gain a debuff that makes you take additional fire damage, and a 20 second buff that will give you additional 10k damage per melee hit. |grouprole EVERYONE
-|tip Baine will also periodically break the rock most of the group is standing on, so make sure to use each platform in a circular path and leave the last rock next to the mainland to retreat to if you cannot kill him. |grouprole EVERYONE
-_Tank:_ |grouprole TANK
-|tip Run to other rocks as they explode. |grouprole TANK
-|tip Use damage reduction ability during Molten Axe. |grouprole TANK
-kill 2 Echos in the End Time instance |q 30097/1 |only if haveq(30097)
-confirm
-step
-label "next_4"
-Click Time Transit Device and choose one of the destinations:
-<Emerald Dragonshrine> |goto End Time/5 66.5,79.5 <5 |noway |c |next "Emerald" |or
-<Azure Dragonshrine> |goto End Time/2 |noway |c |next "Azure" |or
-<Ruby Dragonshrine> |goto End Time/3 34.3,43.2 <5 |noway |c |next "Ruby" |or
-<Bronze Dragonshrine> |goto End Time/6 36.5,77.5 <5 |noway |c |next "Bronze" |or
-step
-label "Bronze"
-kill Murozond##54432 |q 30096/1 |only if haveq(30096) |goto End Time/6 48.2,32.4
-kill Muronzond##54432 |only if not haveq(30096) |goto End Time/6 48.2,32.4
-_Everyone:_ |grouprole EVERYONE
-|tip Distortion Bombs will be cast at random players and leave a circle or arcane on the ground avoid standing in these. |grouprole EVERYONE
-|tip You will see five hourglass symbols on your screen. By clicking the large hourglass in the middle of the room, you will use 1 hourglass, this resets everyone's revives, cooldowns, all health, and clears the Distortion Bombs on the ground. |grouprole EVERYONE
-_Healer:_ |grouprole HEALER
-|tip Tank and Melee cannot avoid Temporal Blast, a small AoE that deals 25k damage, this will need to be healed through. |grouprole HEALER
-|tip The Tank will be hit with Infinite Breath. This is shadow damage that is dealt in a cone in front of Muronzond and will follow tank if he moves left or right. This will need to be healed through. |grouprole HEALER
-_Tank:_ |grouprole TANK
-|tip Face boss away from group. |grouprole TANK
-|tip Use damage reduction ability during Infinite Breath. |grouprole TANK
-|tip Rotate Boss away from Distortion Bombs. |grouprole TANK
-|tip As a tank you will need to face Boss aways from group. Muronzond has Tail Swipe so group cannot be directly behind boss. |grouprole TANK
-Defeat Muronzond |scenariogoal 2/24803
-step
-label "next_5"
-After you kill Murozond wait for Alurmi
-talk Alurmi##57864
-turnin Archival Purposes##30097
-step
-talk Nozdormu##54751
-turnin Murozond##30096 |goto 52.1,44.5
-step
-talk Nozdormu##54751
-accept The Well of Eternity##30098 |goto 52.1,44.5
-step
-If you wish to continue to the Well of Eternity talk to Nozdormu and he will teleport you there
-talk Nozdormu##54751 |goto 52.1,44.5
-Tell him "Take me to the Well of Eternity" |goto Well of Eternity |noway |c
-step
-Congratulations! You have completed End Time
 ]])
 ZygorGuidesViewer:RegisterGuide("Dungeon Guides\\Cataclysm Dungeons\\Grim Batol",{
 mapid=293,
@@ -13850,7 +13679,7 @@ label "lfg"
 Press _I_ and queue for Grim Batol or enter the dungeon with your group |goto Grim Batol/0 12.2,56.1 < 100 |c
 step
 talk Farseer Tooranu##50385
-accept Kill the Courier##28853 |goto Grim Batol,18.4,55.2
+accept Kill the Courier##28853 |goto Grim Batol 18.4,55.2
 step
 talk Velastrasza##50390
 accept Soften them Up##28852 |goto 19,55
@@ -13860,105 +13689,152 @@ accept Closing a Dark Chapter##28854 |goto 19.4,53
 step
 map Grim Batol
 path follow strict;loop off;ants straight
-path	18.0,43.4	20.2,39.6	26.2,39.8
-path	27.9,27.1	31.8,26.2
-Follow the path, clearing the trash as you go.
-You will need to kill the nets that are holding the dragons down.
+path	18.0,43.4	20.2,39.6	26.2,39.8	27.9,27.1	31.8,26.2
+Follow the path
+|tip Clear trash as you move.
+|tip You will need to kill the nets that are holding the dragons down.
 |tip Opening the world map will display an ant trail guiding you through the current floor.
-confirm
+Click Here to Continue |confirm
 step
 clicknpc Battered Red Drake##42571
 |tip You will end up flying through the instance, gaining the ability to attack groups of enemies.
 |tip The damage that you do to them stays even after you land.
 Kill 15 Twilight's Hammer Minions |q 28852/1
 Kill 25 Trogg Dwellwers |q 28852/2
-Note that if you didn't get all of the Trogg Dwellers, you can fly back and get them at the end of the instance.
-Click here once you've landed. |confirm
+|tip Note that if you didn't get all of the Trogg Dwellers, you can fly back and get them at the end of the instance.
+Click Here to Continue |confirm
 |only if haveq(28852)
 step
 map Grim Batol
 path follow strict;loop off;ants straight
-path	32.8,29.9	31.9,39.4	34.3,54.3
-path	30.0,58.6	35.2,68.2
-Follow the path, clearing the trash as you go.
+path	32.8,29.9	31.9,39.4	34.3,54.3	30.0,58.6	35.2,68.2
+Follow the path
+|tip Clear trash as you move.
 |tip Opening the world map will display an ant trail guiding you through the current floor.
-confirm
+Click Here to Continue |confirm
 step
 kill General Umbriss##39625
-|tip He will randomly use Blitz towards a party member. You need to move out of his path to avoid damage.
-|tip He will also use Ground Siege in a random direction. It will also need to be avoided.
-|tip The tank will be hit with Bleeding Wound which does massive damage every 2 seconds until they are healed to 90% of their health.
-|tip At 30% he will get a Frenzy affect gaining 50% attack speed and damage.
-|tip He will summon adds. Make sure to keep them more than 10 yards away from the boss. If close to the boss when they die, they will give the boss a 100% damage buff.
-|tip If the adds get near the boss, they will be buffed and deal significant more damage. |only if heroic_dung()
-|tip He will cast Modgud's Malady which needs to be dispelled. It is a Magic debuff and stacks up to 10 times. |only if heroic_dung()
-Defeat General Umbriss |scenariogoal 1/24816 |goto 40.4,68.4
+_EVERYONE:_ |grouprole EVERYONE
+|tip Umbriss charges at random players with the "Blitz" ability. |grouprole EVERYONE
+|tip If in your direction, move out of the way immediately. |grouprole EVERYONE
+|tip Move out of "Ground Siege" as it appears. |grouprole EVERYONE
+|tip When he summons add, crowd control the "Malignant Trogg". |grouprole EVERYONE
+|tip If you are unable to use crowd control, you must keep it 10 yards away form the boss and kill it. |grouprole EVERYONE
+|tip He will gain the "Frenzy"  buff at 30%, dealing out more damage quickly. |grouprole EVERYONE
+|tip
+_HEALER:_ |grouprole HEALER
+|tip For "Bleeding Wound", the tank will need to be healed above 90% health for it to be removed. |grouprole HEALER
+|tip If the Malignant Trogg isn't crowd controlled, you will need to pay attention for "Modgud's Malady", dispelling it as it appears. |grouprole HEALER
+|tip It can stack up to 10 times. |grouprole HEALER |only if heroic_dung()
+|tip
+_TANK:_ |grouprole TANK
+|tip When afflicted by "Bleeding Wound", consider mitigation abilities to help your healer. |grouprole TANK
+|tip
+_DAMAGE:_ |grouprole DAMAGE
+|tip Focus down "Trogg Dwellers" as they appear. |grouprole DAMAGE
+|tip
+Click Here to Continue |confirm
 step
-Wait for a patrol to come here. |goto 46.3,48.5
-Watch for _Forgemaster Throngus_ who patrols through the room. Go back into the hallway if you haven't cleared the trash yet. |goto 48.7,47.1
-Once the trash is cleared, click here. |confirm |goto 45.7,43.6
+Wait Here for the Patrol |goto 46.3,48.5
+|tip Watch for "Forgemaster Throngus" who patrols through the room.
+|tip Go back into the hallway if you haven't cleared the trash yet.
+Enter the hallway here if you haven't cleared trash yet [48.7,47.1]
+Move Here Once the Trash is Cleared [45.7,43.6]
+Click Here to Continue |confirm
 step
 kill Forgemaster Throngus##40177
-|tip This boss cycles through weapons, which have different strategies depending on which he's holding:
-|tip While using a Mace his movement speed will be decreased by 70%, but his damage will be increased by 200%. The tank will need to kite him.
-|tip He will jump to random party members during Mace stance inflicting damage as a dot for 5 seconds.
-|tip He will leave a trail of Burning Flames behind him as he walks, avoid it at all cost. |only if heroic_dung()
-|tip While using Dual Blades he loses 20% damage, but uses the _Thrash_ ability, causing him to attack an additional two times when he swings his weapons.
-|tip He will also use Disorienting Roar while in Dual Blade stance, reducing casting and attack speed by 50%. This effect can be removed by using an ability or spell.
-|tip He will also leave Burning Flames on whoever he hits, which can be dispelled. This effect stack with each hit. |only if heroic_dung()
-|tip While using his Phalanx He takes 99% reduced damage. Move behind him to bypass this mechanic.
-|tip While in Phalanx stance, there will also be archers constantly firing at your group.
-|tip He will use the ability Flaming Shield which deals fire damage to anyone in front of his shield, so be quick to move behind him. |only if heroic_dung()
-Defeat Forgemaster Throngus |scenariogoal 1/24813 |goto 44.7,38.6
+_EVERYONE:_ |grouprole EVERYONE
+|tip He frenquently used "Mighty Stomp" which causes a "Cave In" at the location of random players. |grouprole EVERYONE
+|tip Move out of the Cave In. |grouprole EVERYONE
+|tip He will cycle through weapons during the encounter. |grouprole EVERYONE
+|tip
+|tip When the "Shield" is equipped, he points the shield in a random direction, reducing all damage by 99% in that direction. |grouprole EVERYONE
+|tip He will also have an AoE attack called "Burning Flames" for anyone in front of the shield. |grouprole EVERYONE
+|tip
+|tip With the "Mace" equipped, the tank need to kite him as he'll deal 200% increased damage and walk 70% slower. |grouprole EVERYONE
+|tip He will also leap towards random party members, stunning them and dealing a 5 second DoT. |grouprole EVERYONE
+|tip He will leave behind "Lava Patchs" which deal deadly fire damage, so avoid trailing behind him. |grouprole EVERYONE |only if heroic_dung()
+|tip
+|tip With "Swords" equipped, he gains the "Thrash" ability which strikes the target multiple times. |grouprole EVERYONE
+|tip He also gains the "Disorienting Roar" ability that reduces your attack speed by 50% and  can only be removed by using abilities. |grouprole EVERYONE
+|tip If applicable, use instant abilities to remove it quickly. |grouprole EVERYONE
+|tip
+_TANK:_ |grouprole TANK
+|tip Remember to kite him if he's holding the Mace weapon. |grouprole TANK
+|tip
+Click Here to Continue |confirm
 step
 map Grim Batol
 path follow strict;loop off
 path	56.8,47.9	60.6,53.5	60.4,63.4
 path	63.8,64.6	67.2,68.1	73.0,59.0
 path	68.5,54.7	70.7,41.7	69.8,30.2
-Kill trash and follow the path to Drahga Shadowburner. |goto 69.8,30.2 < 5
+Follow the path
+|tip Kill trash on the way to Drahga Shadowburner.
 |tip Opening the world map will display an ant trail guiding you through the current floor.
-confirm
+Click Here to Continue |confirm |goto 69.8,30.2 < 5
 step
 kill Darhga Shadowburner##40319
-_Phase 1:_
-|tip He will use Invocation of Flame which will mark the ground at a random location. It will summon a fire elemental that targets a random player, shooting a red beam.
-|tip ALL DPS EXCEPT FOR THE TARGET need to kill it as soon as possible.
-|tip His basic attack is Burning Shadowbolt, which can be interrupted.
-_Phase 2:_
-|tip At 25% he will retreat and the dragon Valiona will catch him. Tank her at the center of the room.
-|tip Invocation of Flame will still be used, so be aware of the spawn point and target.
-|tip She will use Devouring Flames which is a wide cone attack, so don't stand in front of her.
-|tip She will use Valiona's Flame which targets a random player and breathes a 40 yard long cone which stuns and damages all players within the cone.
-|tip She swipes, so don't stand in front of her.
-|tip She places Seeping Twilight on the ground, a large circular pool on the ground that deals out damage over time.
-|tip When her health is low she will drop Drahga Shadowburner.
+_PHASE 1:_
+_EVERYONE:_ |grouprole EVERYONE
+|tip Watch for "Invocation of Flame", spawning an Invoked Flaming Spirit. |grouprole EVERYONE
+|tip The Invoked Flaming Spirit targets random players, indicated by a red line. |grouprole EVERYONE
+|tip The target should run away until the Flame Spirit dies. |grouprole EVERYONE
+|tip If desired, set up a kick rotation for "Burning Shadowbolt" as it can be interrupted.|grouprole EVERYONE
+|tip
+_DAMAGE:_ |grouprole DAMAGE
+|tip Focus down the "Invoked Flaming Spirit" as a priority. |grouprole DAMAGE
+|tip
+_PHASE 2:_
+kill Valiona##45992
+_EVERYONE:_ |grouprole EVERYONE
+|tip He retreats at 25% health, running to Valiona. |grouprole EVERYONE
+|tip "Invocation of Flame" mechanics persist through this phase. |grouprole EVERYONE
+|tip Be mindful of "Devouring Flames" as she uses it in a random direction. |grouprole EVERYONE
+|tip It's a wide cone attack that deals heavy damage and should be avoided. |grouprole EVERYONE
+|tip She casts "Sleeping Twilight" at random players which requires you to move from it quickly. |grouprole EVERYONE
+|tip When her health is low she will drop Drahga Shadowburner. |grouprole EVERYONE
+|tip
+_TANK:_ |grouprole TANK
+|tip Position her at the center of the room. |grouprole TANK
+|tip
+_DAMAGE:_ |grouprole DAMAGE
+|tip Don't stand in front of her. |grouprole DAMAGE
+|tip
 collect Missive to Cho'gall##66927 |q 28853/1 |only if haveq(28853)
-Defeat Darhga Shadowburner |scenariogoal 1/24812 |goto 70.3,20.7
+Click Here to Continue |confirm
 step
 map Grim Batol
 path follow strict;loop off
 path	77.0,40.0	85.8,40.0	86.1,57.4
-Follow the path to Erudax, The Duke of Below. |goto 86.1,57.4 < 5
+Follow the path
 |tip Opening the world map will display an ant trail guiding you through the current floor.
-confirm
+Click Here to Continue |confirm |goto 86.1,57.4 < 5
 step
 kill Erudax##40484 |only if not haveq(28854)
-kill Erudax |q 28854/1 |only if haveq(28854)
-|tip The main mechanic for this fight is Shadow Gale, in which he will create a purple void zone circle on the ground. The entire group needs to move into it as fast as they can so that they aren't killed by the AoE that effects players outside of the circle. He will take double damage during the duration of the spell.
-|tip Each time he uses Shadow Gale, he will summon 2 Faceless Corruptor. Use every ability you have to slow them down and kill them.
-|tip ONLY SLOWING EFFECTS will work on them. If you don't kill them they will eventually heal the boss.
-|tip He will use Enfeebling Blow which will knock the tank back, giving him a debuff called Feeble Body, increasing the damage the tank will take by 100% for 3 seconds.
-|tip He will use Binding Shadows which is an AoE root that you can step out of before it hits the ground.
-|tip If you don't kill the adds fast enough, they will be buffed with Shield of Nightmares, which will damage your group each time the add is hit. |only if heroic_dung()
-Defeat Erudax |scenariogoal 1/34416 |goto 85.7,60.9
-step
-You can either run to the beginning of the dungeon to turn in your quests.
-Or
-You can Right Click the dungeon finder icon on your mini map, teleport out of the dungeon, then teleport back in to the entrance.
-|confirm
+kill Erudax##40484 |q 28854/1 |only if haveq(28854) |or
+_EVERYONE:_ |grouprole EVERYONE
+|tip Avoid the projectiles launched from "Binding Shadows" as they will stun you and heal the boss. |grouprole EVERYONE
+|tip "Shadow Gale" covers the entire room except for the eye of the storm. |grouprole EVERYONE
+|tip Look for a circle not covered by shadow and move to it quick. |grouprole EVERYONE
+|tip At the end of each Shadow Gale, two "Faceless Corruptors" spawn. |grouprole EVERYONE
+|tip If not killed quickly, they heal the boss. |grouprole EVERYONE
+|tip They will gain "Shield of Nightmares" if not killed fast enough, dealing group-wide damage to whenever they hit the add. |grouprole EVERYONE |only if heroic_dung()
+|tip They also use "Twilight Corruption" when reaching Alexstrasza's Eggs, spawning 2 "Twilight Hatchlings". |grouprole EVERYONE
+|tip They attack random players with "Twilight Blast".
+|tip
+_TANK:_ |grouprole TANK
+|tip When afflicted by "Feeble Body" you wil take 200% extra damage for 5 seconds. |grouprole TANK
+|tip Kite until the debuff is gone. |grouprole TANK
+|tip
+_DAMAGE:_ |grouprole DAMAGE
+|tip Focus down Faceless Corruptors after each Shadow Gale as a priority. |grouprole DAMAGE
+|tip Use abilities that reduce movement speed on the while killing them. |grouprole DAMAGE
+|tip
+Click Here to Continue |confirm |or
 step
 talk Farseer Tooranu##50385
+|tip You can right click the dungeon finder icon on your mini map to teleport out of the dungeon, then back in as long as you're still in the group.
 turnin Kill the Courier##28853 |goto Grim Batol,18.4,55.2
 step
 talk Velastrasza##50390
@@ -13966,8 +13842,6 @@ turnin Soften them Up##28852 |goto 19,55
 step
 talk Baleflame##50387
 turnin Closing a Dark Chapter##28854 |goto 19.4,53
-step
-Congratulations! You have completed Grim Batol
 ]])
 ZygorGuidesViewer:RegisterGuide("Dungeon Guides\\Cataclysm Dungeons\\Halls of Origination",{
 mapid=297,
@@ -13979,6 +13853,23 @@ author="support@zygorguides.com",
 description="This guide will walk you through the Halls of Origination dungeon.",
 },[[
 step
+_EVERYONE:_ |grouprole EVERYONE
+|tip |grouprole EVERYONE
+|tip |grouprole EVERYONE
+|tip |grouprole EVERYONE
+_HEALER:_ |grouprole HEALER
+|tip |grouprole HEALER
+|tip |grouprole HEALER
+|tip |grouprole HEALER
+_TANK:_ |grouprole TANK
+|tip |grouprole TANK
+|tip |grouprole TANK
+|tip |grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip  |grouprole DAMAGE
+|tip  |grouprole DAMAGE
+|tip  |grouprole DAMAGE
+step
 label "start"
 Press _I_ and queue for Halls of Origination or enter the dungeon with your group |goto Halls of Origination/1 49.9,93.6 < 5 |c
 step
@@ -13988,49 +13879,92 @@ path	48.1,87.1	48.3,75.1	50.0,72.9
 path	50.3,63.3	53.8,63.3
 Follow the path |goto 53.8,63.3 < 5
 |tip Opening the world map will display an ant trail guiding you through the current floor.
-confirm
+Click Here to Continue |confirm
 step
 kill Temple Guardian Anhuur##39425
-You will have 2 phases when fighting this boss
-_Phase 1:_
-|tip Fight this boss until he becomes immune to damage. This happens at 66% and 33%.
-|tip He will cast Burning Light, which will cause a beam of light to shoot from the wall. Don't stand in the fire it creates on the ground.
-|tip He will cast Divine Reckoning at a random party member. After 8 seconds, the spell will erupt and damage you along with anyone within 7 yards of you. It is a Magic Debuff and can be dispelled.
-_Phase 2:_
-|tip When he casts Shield of Light he becomes immune to damage.
-|tip You will have to jump off the sides of the platform to the right or left, then click the switch to deactivate  shield of light and run back. |only if not heroic_dung()
-|tip You will have to jump off the sides of the platform to the right and left, then click the switch to deactivate  shield of light and run back. |only if heroic_dung()
-|tip Once he has shield of light, he will start channeling _Reverberating Hymn which deals 400 holy damage per stack. It stacks every 4 seconds and lasts until you click the left and right switches.
-|tip Immediately moving into phase 2, Pit Vipers will spawn on the ground near the levers. The tank should take care to pick them up so that a DPS can click the lever.
-Defeat Temple Guardian Anhuur |scenariogoal 1/24827 |goto Halls of Origination 58.3,62.7
+_PHASE 1:_
+_EVERYONE:_ |grouprole EVERYONE
+|tip Don't stand in "Burning Light". |grouprole EVERYONE
+|tip He gains the "Shield of Light" ability at 66% as well as 33%, granting him damage immunity, which starts the second phase. |grouprole EVERYONE
+|tip
+_HEALER:_ |grouprole HEALER
+|tip Remove "Divine Reckoning" debuffs when applicable. |grouprole HEALER
+|tip If allowed to go off, it damages allies within 7 yards of the afflicted player. |grouprole HEALER
+|tip
+_PHASE 2:_
+_EVERYONE:_ |grouprole EVERYONE
+|tip While casting "Reverberating Hymn", 2 players must jump into the pit of vipers where there are 2 switches that need to be hit. |grouprole EVERYONE
+|tip Kill the vipers and click the switches, which take 8 seconds to use. |grouprole EVERYONE
+|tip After the switches are hit, you can interrupt Reverberating Hymn, reverting back to Phase 1. |grouprole EVERYONE
+|tip
+_HEALER:_ |grouprole HEALER
+|tip During Reverberating Hymn, the group will take heavy damage. |grouprole HEALER
+|tip
+_TANK:_ |grouprole TANK
+|tip If you are able, during Reverberating Hymn, jump into the pits and pick up the vipers so that DPS can click the levers as soon as possible. |grouprole TANK
+|tip
+Click Here to Continue |confirm
 step
 map Halls of Origination/1
 path follow smart; loop off; ants curved; dist 15
-path	61.3,63.4	67.2,63.4	67.6,52.6
-path	71.3,50.1	84.0,50.0
+path	61.3,63.4	67.2,63.4	67.6,52.6	71.3,50.1	84.0,50.0
 path	Halls of Origination/2 32.9,49.3
 Follow the path
 |tip Opening the world map will display an ant trail guiding you through the current floor.
-confirm
+Click Here to Continue |confirm
 step
-Kill all the mobs in this area, then click a Camel to continue. |invehicle |c
+clicknpc Camel##39443
+|tip Kill all the mobs in this area, then click a Camel to continue.
+Ride the Camel |invehicle |c
 step
 kill Earthrager Ptah##39428
 You will have 2 phases when fighting this boss
-_Phase 1:_
+_PHASE 1:_
+_EVERYONE:_ |grouprole EVERYONE
+|tip |grouprole EVERYONE
+|tip |grouprole EVERYONE
+|tip |grouprole EVERYONE
+_HEALER:_ |grouprole HEALER
+|tip |grouprole HEALER
+|tip |grouprole HEALER
+|tip |grouprole HEALER
+_TANK:_ |grouprole TANK
+|tip |grouprole TANK
+|tip |grouprole TANK
+|tip |grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip  |grouprole DAMAGE
+|tip  |grouprole DAMAGE
+|tip  |grouprole DAMAGE
 |tip Look out for Earth Spike. The ground will rumble, then erupt a spike, move when you see dust.
 |tip He will use Flame Bolt, which is channeled and damages 2 random players. |only if not heroic_dung()
 |tip He will use Flame Bolt, which is channeled and damages 3 random players. |only if heroic_dung()
 |tip He will use Raging Smash which will damage the tank and 2 additional targets within melee range.
-_Phase 2:_
+_PHASE 2:_
+_EVERYONE:_ |grouprole EVERYONE
+|tip |grouprole EVERYONE
+|tip |grouprole EVERYONE
+|tip |grouprole EVERYONE
+_HEALER:_ |grouprole HEALER
+|tip |grouprole HEALER
+|tip |grouprole HEALER
+|tip |grouprole HEALER
+_TANK:_ |grouprole TANK
+|tip |grouprole TANK
+|tip |grouprole TANK
+|tip |grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip  |grouprole DAMAGE
+|tip  |grouprole DAMAGE
+|tip  |grouprole DAMAGE
 |tip At 50% Ptah will burrow and you will have to fight some mobs.
 |tip He will summon a Sand Vortex that moves around the battlefield.
 |tip He will summon Dustbone Horrors and _Jeweled Scarabs_, which need to be killed before the boss returns.
 |tip Be aware of quicksand, this will slow your movement and cause damage while standing in it.
-Defeat Earthrager Ptah |scenariogoal 1/25097 |goto 49.8,49.3
+Click Here to Continue |confirm
 step
 click Halls of Origination Transit Device##204979 |goto 66.7,48.5
-Teleport to The Maker's Rise. |goto Halls of Origination 67.5,52.8 < 5 |noway |c
+Teleport to The Maker's Rise |goto Halls of Origination 67.5,52.8 < 5 |noway |c
 step
 map Halls of Origination/1
 path follow smart; loop off; ants curved; dist 15
@@ -14038,27 +13972,43 @@ path	63.6,49.9	56.4,49.4
 talk Brann Bronzebeard##39908
 Tell him "We're ready! Go, Brann!" |goto 56.0,44.7
 |tip Opening the world map will display an ant trail guiding you through the current floor.
-confirm
+Click Here to Continue |confirm
 step
 Kill each Elemental Warden on the platforms around this room
 [49.0,32.6]
 [63.3,32.6]
 [63.3,22.1]
 [49.2,22.0]
-|confirm
+Click Here to Continue |confirm
 step
 kill Anraphet##39788
+_EVERYONE:_ |grouprole EVERYONE
+|tip |grouprole EVERYONE
+|tip |grouprole EVERYONE
+|tip |grouprole EVERYONE
+_HEALER:_ |grouprole HEALER
+|tip |grouprole HEALER
+|tip |grouprole HEALER
+|tip |grouprole HEALER
+_TANK:_ |grouprole TANK
+|tip |grouprole TANK
+|tip |grouprole TANK
+|tip |grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip  |grouprole DAMAGE
+|tip  |grouprole DAMAGE
+|tip  |grouprole DAMAGE
 |tip This boss is more of a Healing intensive fight for the whole group.
 |tip Anraphet will cast Alpha Beams, this cause damage to a player and all players around them.
 |tip It will leave circle on the ground you need to avoid for 3 seconds. |only if not heroic_dung()
 |tip It will leave circle on the ground you need to avoid and lingers throughout the fight. |only if heroic_dung()
 |tip Anraphet will go into Omega Stance causing damage to the whole group for 8 seconds.
 |tip After Omega Stance or Alpha Beams, he will use Crumbling Ruin, decreasing the groups health by 8%. It stacks 10 times.
-Defeat Anraphet |scenariogoal 1/24828 |goto 56.2,19.3
+Click Here to Continue |confirm
 step
 click Halls of Origination Transit Device##204979 |goto 56.2,27.2
 Teleport to The Maker's Rise. |goto 67.5,52.8 < 5
-confirm
+Click Here to Continue |confirm
 step
 click The Maker's Lift Controller##207669 |goto 66.4,48.3
 Bring Elevator to the 2nd floor |goto Halls of Origination/3 45.9,47.6 |noway |c
@@ -14071,21 +14021,21 @@ kill Ammunae##39731 |goto 47.1,78.8
 |tip He will use Rampant Growth, transforming all Seedling Pods into Bloodpetal Sprouts which will inflict massive damage to the party.
 |tip He will spawn a Spore. It moves slowly and when it dies, it leaves a spore cloud with a 6 yard radius that deals nature damage every 1.5 seconds.
 |tip The Noxious Spore cloud that spawn can also dish out major damage to any plant life, inflicting 12 to 18% of it's health.
-|confirm
+Click here to Continue |confirm
 step
 kill Setesh##39732 |goto 67.1,49.5
 |tip He will cast Chaos Bolt at a random party member.
 |tip He will also place Seed of Chaos on a random party member. When it detonates, the group will take shadow damage.
 |tip Through the fight, he will Summon Chaos Portals. It will spawn monsters that the DPS need to kill, then despawn after around 25 seconds. |only if not heroic_dung()
 |tip Through the fight, he will Summon Chaos Portals. It will spawn monsters while it is up. The DPS will need to attack the portal to stop it from spawning adds. |only if heroic_dung()
-|confirm
+Click Here to Continue |confirm
 step
 kill Isiset##39587 |goto 26.7,49.8
 |tip She will cast Supernova through out the fight. You can turn away from her to avoid the disorienting effect right before she finishes her cast.
 |tip When she reaches 66 and 33% health, she will use her Mirror Images ability.
 |tip At 66% she will split into 3 forms. Kill the Veil of Sky Mirror Image.
 |tip At 33% she will split into 2 forms. Kill the Celestial Call Mirror Image.
-|confirm
+Click Here to Continue |confirm
 step
 kill Rajh##39378
 |tip Rajh will start with 100 energy and cast spells at 20 energy each.
@@ -14096,9 +14046,7 @@ kill Rajh##39378
 |tip The Solar Wind will leave Solar Fire on the ground, which deal out massive damage. |only if heroic_dung
 |tip When he reaches 10 or less energy, he walks to the middle of the room and casts Blessing of the Sun.
 |tip He will become 100% more vulnerable to player attack, while regenerating his energy and causing AoE fire damage to your group.
-Defeat Rajh |scenariogoal 1/34418 |goto 47.2,19.7
-step
-Congratulations you have completed _Halls of Origination_!
+Click Here to Continue |confirm
 ]])
 ZygorGuidesViewer:RegisterGuide("Dungeon Guides\\Cataclysm Dungeons\\Hour of Twilight",{
 mapid=399,

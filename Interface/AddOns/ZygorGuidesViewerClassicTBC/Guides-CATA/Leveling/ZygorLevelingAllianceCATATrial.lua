@@ -4,7 +4,7 @@ if UnitFactionGroup("player")~="Alliance" then return end
 if ZGV:DoMutex("LevelingACATA") then return end
 ZygorGuidesViewer.GuideMenuTier = "TRI"
 ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Startup Guide Wizard")
-ZygorGuidesViewer:RegisterGuide("Zygor's Alliance Leveling Guides\\Eastern Kingdoms (1-60)\\Worgen (1-13)",{
+ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Eastern Kingdoms (1-60)\\Worgen (1-13)",{
 author="support@zygorguides.com",
 condition_suggested=function() return raceclass('Worgen') and not completedq(28517) and not raceclass('DEATHKNIGHT') end,
 condition_suggested_exclusive=true,
@@ -981,8 +981,8 @@ talk Genn Greymane##48736
 turnin The Howling Oak##28517 |goto Darnassus 48.13,14.42
 accept Breaking Waves of Change##26385 |goto Darnassus 48.13,14.42
 ]])
-ZygorGuidesViewer:RegisterGuidePlaceholder("Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Mount Hyjal (80-82)")
-ZygorGuidesViewer:RegisterGuidePlaceholder("Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Vashj'ir (80-82)")
-ZygorGuidesViewer:RegisterGuidePlaceholder("Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Deepholm (82-83)")
-ZygorGuidesViewer:RegisterGuidePlaceholder("Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Uldum (83-84)")
-ZygorGuidesViewer:RegisterGuidePlaceholder("Zygor's Alliance Leveling Guides\\Cataclysm 80-85\\Twilight Highlands (84-85)")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Cataclysm 80-85\\Mount Hyjal (80-82)")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Cataclysm 80-85\\Vashj'ir (80-82)")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Cataclysm 80-85\\Deepholm (82-83)")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Cataclysm 80-85\\Uldum (83-84)")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Cataclysm 80-85\\Twilight Highlands (84-85)")

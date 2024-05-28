@@ -353,14 +353,17 @@ function Upgrades:IsUpgrade(itemlink,options)
 	if slot_1 then equipped_item_1 = Upgrades.EquippedItems[slot_1] end
 	if slot_2 then equipped_item_2 = Upgrades.EquippedItems[slot_2] end
 
-	if equipped_item_1 and (not not equipped_item_1.twohander)~=(not not is2hnd) then  return false, "", 0, 0, "2hnd mismatch" end
+	local twohndcheck = equipped_item_1
+	if slot_1==17 then twohndcheck = Upgrades.EquippedItems[16] end -- for offhand only items check twohandness of mainhand weapon
+	if twohndcheck and (not not twohndcheck.twohander)~=(not not is2hnd) then  return false, "", 0, 0, "2hnd mismatch" end
 
 	-- protect fishing gear if fishing pole is equipped
 	if equipped_item_1 and fishing_gear[equipped_item_1.itemid] then
 		local mainhand = Upgrades.EquippedItems[INVSLOT_MAINHAND].itemlink
 		if mainhand then 
 			mainhand = ItemScore:GetItemDetails(mainhand)
-			if mainhand.subclass==20 then return false, "", 0, 0, "gone fishing" end
+			if mainhand.class==Enum.ItemClass.Weapon and mainhand.sublcass==Enum.ItemWeaponSubclass.Fishingpole then return false, "", 0, 0, "gone fishing" end
+			if mainhand.class==Enum.ItemClass.Profession and mainhand.sublcass==Enum.ItemProfessionSubclass.Fishing then return false, "", 0, 0, "gone fishing" end
 		end
 	end
 
@@ -963,6 +966,8 @@ end
 
 function Upgrades.HandleBagItem(itemButton, quality, itemLink, doNotSuppressOverlays, isBound)
 	if itemButton.zygorGearUpgrade then itemButton.zygorGearUpgrade:Hide() end
+	itemButton:SetAlpha(1)
+
 	if not ZGV.db.profile.autogear then return end
 	if not ZGV.db.profile.markupgrades then return end
 

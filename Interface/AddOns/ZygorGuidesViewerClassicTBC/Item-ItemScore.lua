@@ -1120,7 +1120,7 @@ local function ItemScore_SetTooltipData(tooltip)
 				elseif change_2 < 0 then
 					v = ZGV.IconSets.AuctionToolsPriceIcons.DOWN1:GetFontString(width,height,nil,nil,255,0,0)
 				else
-					t = ZGV.IconSets.AuctionToolsPriceIcons.BULLET:GetFontString(width,height,nil,nil,155,155,155)
+					v = ZGV.IconSets.AuctionToolsPriceIcons.BULLET:GetFontString(width,height,nil,nil,155,155,155)
 				end
 			end
 

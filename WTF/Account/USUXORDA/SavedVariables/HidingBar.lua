@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1716501173,
+	["tstmp"] = 1716873875,
 	["profiles"] = {
 		{
 			["config"] = {
@@ -24,25 +24,25 @@ HidingBarDB = {
 					["LibDBIcon10_BigWigs"] = {
 						["tstmp"] = 1715238828,
 					},
-					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1715238828,
-					},
 					["LibDBIcon10_Leatrix_Plus"] = {
 						["tstmp"] = 1715238828,
 					},
+					["LibDBIcon10_Questie"] = {
+						["tstmp"] = 1715238828,
+					},
 					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1715238828,
-					},
-					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1715238828,
-					},
-					["LibDBIcon10_Plater"] = {
 						["tstmp"] = 1715238828,
 					},
 					["LibDBIcon10_WeakAuras"] = {
 						["tstmp"] = 1715238828,
 					},
 					["LibDBIcon10_BugSack"] = {
+						["tstmp"] = 1715238828,
+					},
+					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
+						["tstmp"] = 1715238828,
+					},
+					["LibDBIcon10_Plater"] = {
 						["tstmp"] = 1715238828,
 					},
 				},
@@ -154,66 +154,69 @@ HidingBarDB = {
 				["addFromDataBroker"] = true,
 				["mbtnSettings"] = {
 					["LibDBIcon10_Details"] = {
-						["tstmp"] = 1716501173,
-					},
-					["LibDBIcon10_PallyPower"] = {
-						["tstmp"] = 1716501173,
+						["tstmp"] = 1716873875,
 					},
 					["LibDBIcon10_Leatrix_Plus"] = {
-						["tstmp"] = 1716501173,
+						["tstmp"] = 1716873875,
 					},
-					["LibDBIcon10_AtlasLoot"] = {
-						["tstmp"] = 1716501173,
-					},
-					["LibDBIcon10_MethodRaidTools"] = {
-						["tstmp"] = 1716501173,
+					["LibDBIcon10_PallyPower"] = {
+						["tstmp"] = 1716873875,
 					},
 					["LibDBIcon10_BugSack"] = {
-						["tstmp"] = 1716501173,
-					},
-					["ZygorGuidesViewerMapIcon"] = {
-						["tstmp"] = 1716501173,
-					},
-					["LibDBIcon10_Plater"] = {
-						["tstmp"] = 1716501173,
-					},
-					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1716501173,
-					},
-					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1716501173,
-					},
-					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1716501173,
-					},
-					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1716501173,
-					},
-					["LibDBIcon10_BigWigs"] = {
-						["tstmp"] = 1716501173,
+						["tstmp"] = 1716873875,
 					},
 					["LibDBIcon10_Leatrix_Maps"] = {
 						["tstmp"] = 1716241155,
 					},
+					["LibDBIcon10_MethodRaidTools"] = {
+						["tstmp"] = 1716873875,
+					},
+					["LibDBIcon10_Plater"] = {
+						["tstmp"] = 1716873875,
+					},
+					["ZygorGuidesViewerMapIcon"] = {
+						["tstmp"] = 1716873875,
+					},
+					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
+						["tstmp"] = 1716873875,
+					},
+					["LibDBIcon10_BigWigs"] = {
+						["tstmp"] = 1716873875,
+					},
+					["LibDBIcon10_DetailsStreamer"] = {
+						["tstmp"] = 1716873875,
+					},
+					["LibDBIcon10_WeakAuras"] = {
+						["tstmp"] = 1716873875,
+					},
+					["LibDBIcon10_Questie"] = {
+						["tstmp"] = 1716712233,
+					},
+					["LibDBIcon10_LoonBestInSlot"] = {
+						["tstmp"] = 1716873875,
+					},
+					["LibDBIcon10_AtlasLoot"] = {
+						["tstmp"] = 1716873875,
+					},
 				},
 				["btnSettings"] = {
 					["LFGBulletinBoard"] = {
-						["tstmp"] = 1716501173,
+						["tstmp"] = 1716873875,
 					},
 					["HidingBar"] = {
-						["tstmp"] = 1716501173,
+						["tstmp"] = 1716873875,
 					},
 					["AtlasLoot"] = {
-						["tstmp"] = 1716501173,
+						["tstmp"] = 1716873875,
 					},
 					["BigWigs"] = {
-						["tstmp"] = 1716501173,
+						["tstmp"] = 1716873875,
 					},
 					["WeakAuras"] = {
-						["tstmp"] = 1716501173,
+						["tstmp"] = 1716873875,
 					},
 					["MRT"] = {
-						["tstmp"] = 1716501173,
+						["tstmp"] = 1716873875,
 					},
 				},
 				["grabMinimap"] = true,
@@ -280,6 +283,7 @@ HidingBarDB = {
 						},
 						["borderOffset"] = 4,
 						["omb"] = {
+							["minimapPos"] = 250.1779107996223,
 							["distanceToBar"] = 0,
 							["anchor"] = "right",
 							["barDisplacement"] = -2,

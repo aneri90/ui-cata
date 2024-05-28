@@ -2,25 +2,28 @@ if not ZGV.ZTA then return end
 
 -- official builds
 ZGV.ZTA:RegisterBuild("DEATHKNIGHT","Zygor Blood Tanking (31/0/10)",[[
-	3/3 Blade Barrier
-	2/3 Bladed Armor
-	3/3 Scent of Blood
+	2/2 Butchery
+	3/3 Bladed Armor
+	2/3 Scent of Blood
 	2/2 Scarlet Fever
-	3/3 Toughness
+	2/2 Improved Blood Tap
+	2/2 Abomination's Might
 	1/1 Bone Shield
-	1 Bladed Armor // (Now 3/3)
+	1/3 Toughness
 	2/2 Improved Blood Presence
 	2/2 Blood Parasite
-	1/2 Sanguine Fortitude
-	1/1 Rune Tap
+	2/2 Sanguine Fortitude
 	1/1 Vampiric Blood
+	1/1 Rune Tap
 	3/3 Will of the Necropolis
 	3/3 Improved Death Strike
+	1 Crimson Scourge
 	1/1 Dancing Rune Weapon
-	1 Sanguine Fortitude // (Now 2/2)
-	3/3 Virulence
 	3/3 Epidemic
+	2/2 Unholy Command
 	3/3 Morbidity
+	1 Crimson Scourge // (Now 2/2)
+	1 Runic Power Mastery
 ]],[[
 	Prime Glyph of Death and Decay
 	Prime Glyph of Heart Strike

@@ -3,7 +3,7 @@ BigWigs3DB = {
 	["namespaces"] = {
 		["BigWigs_Plugins_Victory"] = {
 		},
-		["BigWigs_Plugins_BossBlock"] = {
+		["LibDualSpec-1.0"] = {
 		},
 		["BigWigs_Plugins_Sounds"] = {
 			["profiles"] = {
@@ -70,14 +70,14 @@ BigWigs3DB = {
 				},
 			},
 		},
-		["BigWigs_Plugins_Wipe"] = {
+		["BigWigs_Plugins_Raid Icons"] = {
 		},
 		["BigWigs_Plugins_InfoBox"] = {
 		},
 		["BigWigs_Plugins_Bars"] = {
 			["profiles"] = {
 				["Naowh"] = {
-					["outline"] = "OUTLINE",
+					["BigWigsEmphasizeAnchor_y"] = 316,
 					["fontSize"] = 12,
 					["BigWigsAnchor_width"] = 188.9999694824219,
 					["BigWigsAnchor_y"] = 278,
@@ -88,38 +88,19 @@ BigWigs3DB = {
 					["barStyle"] = "ElvUI",
 					["BigWigsEmphasizeAnchor_height"] = 22.0000057220459,
 					["growup"] = true,
-					["fontSizeEmph"] = 12,
+					["BigWigsEmphasizeAnchor_width"] = 194.9999389648438,
 					["fontName"] = "Naowh",
 					["BigWigsAnchor_height"] = 20.0000171661377,
 					["visibleBarLimitEmph"] = 2,
-					["BigWigsEmphasizeAnchor_width"] = 194.9999389648438,
-					["BigWigsEmphasizeAnchor_x"] = 824,
-					["BigWigsEmphasizeAnchor_y"] = 316,
-				},
-			},
-		},
-		["BigWigs_Bosses_Felmyst"] = {
-			["profiles"] = {
-				["Naowh"] = {
-					[45661] = 3129591,
-				},
-			},
-		},
-		["LibDualSpec-1.0"] = {
-		},
-		["BigWigs_Plugins_Messages"] = {
-			["profiles"] = {
-				["Naowh"] = {
 					["outline"] = "OUTLINE",
-					["emphFontName"] = "Naowh",
-					["fontName"] = "Naowh",
-					["emphOutline"] = "OUTLINE",
+					["BigWigsEmphasizeAnchor_x"] = 824,
+					["fontSizeEmph"] = 12,
 				},
 			},
 		},
-		["BigWigs_Plugins_AutoReply"] = {
+		["BigWigs_Plugins_Wipe"] = {
 		},
-		["BigWigs_Plugins_Raid Icons"] = {
+		["BigWigs_Plugins_BossBlock"] = {
 		},
 		["BigWigs_Plugins_Proximity"] = {
 			["profiles"] = {
@@ -131,6 +112,18 @@ BigWigs3DB = {
 				},
 			},
 		},
+		["BigWigs_Plugins_AutoReply"] = {
+		},
+		["BigWigs_Plugins_Messages"] = {
+			["profiles"] = {
+				["Naowh"] = {
+					["outline"] = "OUTLINE",
+					["emphFontName"] = "Naowh",
+					["fontName"] = "Naowh",
+					["emphOutline"] = "OUTLINE",
+				},
+			},
+		},
 		["BigWigs_Bosses_M'uru"] = {
 			["profiles"] = {
 				["Naowh"] = {
@@ -139,6 +132,13 @@ BigWigs3DB = {
 			},
 		},
 		["BigWigs_Plugins_Pull"] = {
+		},
+		["BigWigs_Bosses_Felmyst"] = {
+			["profiles"] = {
+				["Naowh"] = {
+					[45661] = 3129591,
+				},
+			},
 		},
 	},
 	["profileKeys"] = {

@@ -646,13 +646,12 @@ _DAMAGE:_ |grouprole DAMAGE
 |tip DPS with high mobility or dots should control the "Shadow of Obsidius" clones during the encounter. |grouprole DAMAGE
 |tip If you're designated to kite the Shadows, avoid being within melee range of Obsidius. |grouprole DAMAGE
 |tip
-Click Here to Continue |confrim
+Click Here to Continue |confirm
 step
 talk Finkle Einhorn##49476
 turnin Ascendant Lord Obsidius##28741 |goto 68.8,56.0
 |only if haveq(28741)
 ]])
-ZygorGuidesViewer:RegisterGuidePlaceholder("Dungeon Guides\\Cataclysm Dungeons\\End Time")
 ZygorGuidesViewer:RegisterGuidePlaceholder("Dungeon Guides\\Cataclysm Dungeons\\Grim Batol")
 ZygorGuidesViewer:RegisterGuidePlaceholder("Dungeon Guides\\Cataclysm Dungeons\\Halls of Origination")
 ZygorGuidesViewer:RegisterGuidePlaceholder("Dungeon Guides\\Cataclysm Dungeons\\Hour of Twilight")

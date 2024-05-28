@@ -307,7 +307,7 @@ function WW.PathFoundHandler(state,path,ext,reason)
 	end
 
 	if last then
-		WW:SetWaypoint(last.m,last.x,last.y,tonumber(last.title),last.w,last.region)
+		WW:SetWaypoint(last.m,last.x,last.y,tonumber(last.title) or "NPC",last.w,last.region)
 	end
 end
 

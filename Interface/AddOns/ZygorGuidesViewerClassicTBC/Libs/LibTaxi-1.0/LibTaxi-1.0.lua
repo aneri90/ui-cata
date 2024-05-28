@@ -438,6 +438,9 @@ do
 	-- return: is_known, is_suspicious
 	function Lib:IsContinentKnown(cont)
 		if not cont then cont=Lib:GetCurrentMapContinent() end
+
+		if not Lib.taxipoints[cont] then return true,false end -- we do not have any taxis on this continent, so don't bother
+
 		if self.master["c_"..(cont or 0)]~=nil then
 			return true,false -- return whatever we know
 		else

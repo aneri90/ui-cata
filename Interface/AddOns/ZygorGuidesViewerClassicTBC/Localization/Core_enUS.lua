@@ -1553,7 +1553,7 @@ ZygorGuidesViewer_L("Main", "enUS", function()
 		tooltip_waypoint_coords = "Location: |cffffaa00%s|r",
 
 	-- ZygorMapIcon ---------------------------------------------------------------------------------------------------
-		minimap_tooltip = COLOR_TIP_MOUSE.."Click|r to toggle guide window|n"..COLOR_TIP_MOUSE.."Right-click|r to configure|n",
+		minimap_tooltip = COLOR_TIP_MOUSE.."(Left-Click)|r Notifications|n"..COLOR_TIP_MOUSE.."(Right-Click)|r Toggle Viewer",
 		minimap_tooltip_ex1 = COLOR_TIP_MOUSE.."Ctrl+Alt+Right-click|r to start profiling|n",
 		minimap_tooltip_ex2 = COLOR_TIP_MOUSE.."Ctrl+Alt+Right-click|r to stop profiling|n",
 

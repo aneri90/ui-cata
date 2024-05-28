@@ -58,6 +58,15 @@ CliqueDB3 = {
 					["icon"] = 136210,
 					["spell"] = "Create Soulstone",
 				}, -- [5]
+				{
+					["type"] = "spell",
+					["key"] = "SHIFT-BUTTON1",
+					["sets"] = {
+						["friend"] = true,
+					},
+					["icon"] = 463285,
+					["spell"] = "Dark Intent",
+				}, -- [6]
 			},
 		},
 	},

@@ -53,8 +53,9 @@ function ZygorGuidesViewerMapIcon_Mixin:SetLoading(enable)
 end
 
 function ZygorGuidesViewerMapIcon_Mixin:OnClick(button)
+	GameTooltip:Hide()
 	if button=="LeftButton" then
-		if ZGV.db.profile.nc_enable and not IsShiftKeyDown() then
+		if ZGV.db.profile.nc_enable then
 			if self.loading then
 				ZGV.NotificationCenter.ShowOnLoad = true
 			else
@@ -64,7 +65,7 @@ function ZygorGuidesViewerMapIcon_Mixin:OnClick(button)
 			ZGV:ToggleFrame()
 		end
 	else
-		ZygorGuidesViewer:OpenOptions()
+		ZGV:ToggleFrame()
 	end
 end
 function ZygorGuidesViewerMapIcon_Mixin:OnDragStart()
@@ -82,7 +83,13 @@ function ZygorGuidesViewerMapIcon_Mixin:OnLoad()
 end
 
 function ZygorGuidesViewerMapIcon_Mixin:OnEnter()
+	if not ZGV.db.profile.nc_enable then return end
+
+	GameTooltip:SetOwner(self, "BOTTOMLEFT")
+	GameTooltip:SetText(ZGV.L['minimap_tooltip'])
+	GameTooltip:Show()
 end
 
 function ZygorGuidesViewerMapIcon_Mixin:OnLeave()
+	GameTooltip:Hide()
 end

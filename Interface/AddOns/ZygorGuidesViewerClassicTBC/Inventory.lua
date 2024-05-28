@@ -10,6 +10,30 @@ Inventory.Items = {}
 
 local PlayerName = UnitName("player")
 
+
+-- Move viewer next to vendor frame if covered by it.
+-- Called from vendor goaltype
+function Inventory:AttachViewerVendor()
+	if not ZGV.db.profile.repositionviewer then return end
+
+	local frame = ZGV.Frame:GetParent()
+
+	if (frame:GetLeft() < MerchantFrame:GetRight()) and (frame:GetTop()<MerchantFrame:GetTop() and frame:GetTop()>MerchantFrame:GetBottom()) then
+		ZGV.F.SaveFrameAnchor(frame,"frame_anchor_prevendor")
+		frame:ClearAllPoints()
+		frame:SetPoint("LEFT",MerchantFrame,"RIGHT")
+	end
+end
+
+-- Move viewer back to original position
+function Inventory:DetachViewerVendor()
+	if not ZGV.db.profile.repositionviewer then return end
+
+	if ZGV.db.profile.frame_anchor_prevendor then
+		ZGV.F.SetFrameAnchor(ZGV.Frame:GetParent(),ZGV.db.profile.frame_anchor_prevendor)
+	end
+end
+
 -------------------------------------------------------------------------------
 --------- Trash items action button
 -------------------------------------------------------------------------------
@@ -566,7 +590,7 @@ function Inventory.OnEvent(self, event)
 		Inventory.greysellbutton:SetShown(ZGV.db.profile.showgreysellbutton)
 
 		if ZGV.db.profile.autosell and ZGV.db.profile.enable_vendor_tools then Inventory:SellGreyItems() end
-		if ZGV.db.profile.autosellother and ZGV.db.profile.enable_vendor_tools then Inventory:SellUnusableItems() end
+		--if ZGV.db.profile.autosellother and ZGV.db.profile.enable_vendor_tools then Inventory:SellUnusableItems() end
 
 		Inventory.FindItemsToBuyMissedNames = false
 		ZGV:ScheduleTimer(function()  -- MERCHANT_SHOW now fires before MerchantFrame is visible, delay till next onupdate

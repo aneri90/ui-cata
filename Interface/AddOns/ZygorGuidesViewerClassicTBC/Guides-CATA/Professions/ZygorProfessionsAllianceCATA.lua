@@ -7685,17 +7685,13 @@ step
 Follow the road |goto Moonglade 40.25,37.05 < 30 |only if walking
 talk Lorelae Wintersong##12022
 |tip Inside the building.
-buy Formula: Enchant Cloak - Superior Defense##16224 |goto Moonglade 48.24,40.14 |or 2
-buy Formula: Runed Arcanite Rod##16243 |goto Moonglade 48.24,40.14 |or 2
-|tip These are limited supply items that can also be purchased from the auction house.
-|tip The Superior Defense formula has a longer respawn timer.
+buy Formula: Enchant Cloak - Superior Defense##16224 |goto Moonglade 48.24,40.14 |or
+|tip This is a limited supply item that can also be purchased from the auction house.
+|tip The Superior Defense formula has a long respawn timer.
 '|complete skill("Enchanting") >= 300 |or
 step
 use the Formula: Enchant Cloak - Superior Defense##16224
 Learn Enchant Cloak - Superior Defense |learn Enchant Cloak - Superior Defense##20015
-step
-use the Formula: Runed Arcanite Rod##16243
-Learn Runed Arcanite Rod |learn Runed Arcanite Rod##20051
 step
 cast Disenchant##13262
 collect 72 Illusion Dust##16204 |or
@@ -7737,6 +7733,10 @@ label "Collect_Golden_Pearl_300"
 collect 1 Golden Pearl##13926 |or
 |tip Farm it using the "Golden Pearl" farming guide or purchase it from the Auction House.
 '|complete skill("Enchanting") >= 300 |or
+step
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Runed Arcanite Rod |learn Runed Arcanite Rod##20051 |goto Stormwind City/0 52.90,74.46
 step
 create 1 Runed Arcanite Rod##20051,Enchanting,300
 |tip Save this, you will need it for future steps.
@@ -11118,7 +11118,7 @@ step
 Open Your Engineering Crafting Panel:
 _<Create 20 Handful of Obsidium Bolts>_
 |tip Save them for later.
-Reach 465 Engineering |skill Engineering,465 |goto Stormwind City/0 63.66,36.64
+'|complete skill("Engineering") >= 460
 step
 talk Lilliam Sparkspindle##5518
 learn Electrified Ether##94748 |goto Stormwind City/0 62.84,31.97
@@ -11129,19 +11129,19 @@ path	39.56,47.29	41.39,48.90	41.53,46.16	39.76,44.61
 kill Storm Vortex##47728+
 collect 30 Volatile Air##52328 |or
 |tip Or purchase them from the auction house |notinsticky
-'|complete skill("Engineering") >= 480 |or
+'|complete skill("Engineering") >= 460 |or
 step
 Open Your Engineering Crafting Panel:
-_<Create 15 Electrified Ether>_
+_<Create 20 Electrified Ether>_
 |tip Save them for later.
-Reach 480 Engineering |skill Engineering,480 |goto Stormwind City/0 63.66,36.64
+Reach 460 Engineering |skill Engineering,460 |goto Stormwind City/0 63.66,36.64
 step
 talk Lilliam Sparkspindle##5518
 learn Volatile Seaforium Blastpack##84409 |goto Stormwind City/0 62.84,31.97
 step
 Open Your Engineering Crafting Panel:
 _<Create 13 Volatile Seaforium Blastpack>_
-Reach 492 Engineering |skill Engineering,492 |goto Stormwind City/0 63.66,36.64
+Reach 473 Engineering |skill Engineering,473 |goto Stormwind City/0 63.66,36.64
 step
 talk Lilliam Sparkspindle##5518
 learn Safety Catch Removal Kit##84410 |goto Stormwind City/0 62.84,31.97
@@ -11167,7 +11167,8 @@ collect 30 Obsidium Bar##54849 |or
 step
 Open Your Engineering Crafting Panel:
 _<Create 3 Safety Catch Removal Kit>_
-Reach 495 Engineering |skill Engineering,495 |goto Stormwind City/0 63.66,36.64
+|tip Each craft gives 5 skill points.
+Reach 488 Engineering |skill Engineering,488 |goto Stormwind City/0 63.66,36.64
 step
 talk Lilliam Sparkspindle##5518
 learn Lure Master Tackle Box##84415 |goto Stormwind City/0 62.84,31.97
@@ -11195,6 +11196,7 @@ collect 300 Elementium Bar##52186 |or
 step
 Open Your Engineering Crafting Panel:
 _<Create 15 Lure Master Tackle Box>_
+|tip You may need to create less or more based on luck.
 Reach 510 Engineering |skill Engineering,510 |goto Stormwind City/0 63.66,36.64
 step
 talk Lilliam Sparkspindle##5518
@@ -13920,6 +13922,122 @@ talk Catarina Stanford##30713
 Train Illustrious Grand Master Inscription |skillmax Inscription,525 |goto Stormwind City/0 49.83,74.82
 |tip You must be at least level 75.
 step
+talk Catarina Stanford##30713
+|tip Inside the building.
+learn Blackfallow Ink##86004 |goto Stormwind City/0 49.83,74.82
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+learn Mysterious Fortune Card##86609 |goto Stormwind City/0 49.83,74.82
+step
+talk Stanly McCormick##30730
+|tip Inside the building.
+buy 10 Resilient Parchment##39502 |goto Stormwind City/0 49.57,74.95
+|only if skill("Inscription") < 460
+step
+collect 10 Blackfallow Ink##61978
+|tip Ashen Pigment can be Milled from Azshara's Veil, Cinderbloom, Heartblossom, Stormvine, Twilight Jasmine, and Whiptail.
+|only if skill("Inscription") < 460
+step
+Open Your Inscription Crafting Panel:
+_<Create 10 Mysterious Fortune Card>_
+Reach 460 Inscription |skill Inscription,460
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+learn Scroll of Stamina IX##89372 |goto Stormwind City/0 49.83,74.82
+step
+talk Stanly McCormick##30730
+|tip Inside the building.
+buy 10 Resilient Parchment##39502 |goto Stormwind City/0 49.57,74.95
+|only if skill("Inscription") < 465
+step
+collect 5 Blackfallow Ink##61978
+|tip Ashen Pigment can be Milled from Azshara's Veil, Cinderbloom, Heartblossom, Stormvine, Twilight Jasmine, and Whiptail.
+|only if skill("Inscription") < 465
+step
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Stamina IX>_
+Reach 465 Inscription |skill Inscription,465
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+learn Glyph of Colossus Smash##89815 |goto Stormwind City/0 49.83,74.82
+step
+talk Stanly McCormick##30730
+|tip Inside the building.
+buy 2 Common Parchment##10648 |goto Stormwind City/0 49.57,74.95
+|only if skill("Inscription") < 471
+step
+collect 6 Blackfallow Ink##61978
+|tip Ashen Pigment can be Milled from Azshara's Veil, Cinderbloom, Heartblossom, Stormvine, Twilight Jasmine, and Whiptail.
+|only if skill("Inscription") < 471
+step
+Open Your Inscription Crafting Panel:
+_<Create 2 Glyph of Colossus Smash>_
+|tip Each craft gives 3 skill points.
+Reach 471 Inscription |skill Inscription,471
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+learn Scroll of Agility IX##89370 |goto Stormwind City/0 49.83,74.82
+step
+talk Stanly McCormick##30730
+|tip Inside the building.
+buy 8 Resilient Parchment##39502 |goto Stormwind City/0 49.57,74.95
+|only if skill("Inscription") < 475
+step
+collect 4 Blackfallow Ink##61978
+|tip Ashen Pigment can be Milled from Azshara's Veil, Cinderbloom, Heartblossom, Stormvine, Twilight Jasmine, and Whiptail.
+|only if skill("Inscription") < 475
+step
+Open Your Inscription Crafting Panel:
+_<Create 4 Scroll of Agility IX>_
+Reach 475 Inscription |skill Inscription,475
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+learn Inferno Ink##86005 |goto Stormwind City/0 49.83,74.82
+step
+collect 14 Burning Embers##61980
+|tip Burning Embers can be Milled from Azshara's Veil, Cinderbloom, Heartblossom, Stormvine, Twilight Jasmine, and Whiptail.
+|only if skill("Inscription") < 482
+step
+Open Your Inscription Crafting Panel:
+_<Create 7 Inferno Ink>_
+Reach 482 Inscription |skill Inscription,482
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+learn Dust of Disappearance##92027 |goto Stormwind City/0 49.83,74.82
+step
+collect 18 Blackfallow Ink##61978
+|tip Ashen Pigment can be Milled from Azshara's Veil, Cinderbloom, Heartblossom, Stormvine, Twilight Jasmine, and Whiptail.
+|only if skill("Inscription") < 490
+step
+Open Your Inscription Crafting Panel:
+_<Create 18 Dust of Disappearance>_
+Reach 490 Inscription |skill Inscription,490
+step
+map Deepholm/0
+path follow loose; loop on; ants curved; dist 20
+path	68.2,25.6	67.2,32.0	68.6,35.8	69.0,42.6	73.0,45.0
+path	77.2,42.8	76.8,35.6	74.6,32.8	74.8,28.4	72.2,26.6
+Kill enemies in the area
+collect Technique: Origami Rock##65650
+step
+use the Technique: Origami Rock##65650
+learn Origami Rock##86645
+step
+talk Stanly McCormick##30730
+|tip Inside the building.
+buy 30 Resilient Parchment##39502 |goto Stormwind City/0 49.57,74.95
+|only if skill("Inscription") < 500
+step
+Open Your Inscription Crafting Panel:
+_<Create 10 Origami Rock>_
+Reach 500 Inscription |skill Inscription,500
+step
 kill Schnottz Infantryman##48629+
 |tip They spawn in large groups all around this area.
 collect Technique: Origami Beetle##65651 |goto Uldum/0 39.82,11.67
@@ -13929,30 +14047,113 @@ learn Origami Beetle##86646
 step
 talk Stanly McCormick##30730
 |tip Inside the building.
-buy 345 Light Parchment##39354 |goto Stormwind City/0 49.57,74.95
+buy 30 Resilient Parchment##39502 |goto Stormwind City/0 49.57,74.95
 |only if skill("Inscription") < 510
 step
 Open Your Inscription Crafting Panel:
-_<Create 80 Origami Beetle>_
-|tip Keep making them until you reach skill 60.
+_<Create 10 Origami Beetle>_
+|tip Keep making them until you reach 510 Inscription.
 Reach 510 Inscription |skill Inscription,510
 step
 talk Catarina Stanford##30713
 |tip Inside the building.
-learn Blackfallow Ink##86004 |goto 49.83,74.82
+learn Dungeoneering Guide##86641 |goto Stormwind City/0 49.83,74.82
+step
+talk Stanly McCormick##30730
+|tip Inside the building.
+buy 40 Resilient Parchment##39502 |goto Stormwind City/0 49.57,74.95
+|only if skill("Inscription") < 520
+stickystart "Volatile_Life_520"
+stickystart "Volatile_Water_520"
+step
+collect 32 Inferno Ink##61981
+|tip Burning Embers can be Milled from Azshara's Veil, Cinderbloom, Heartblossom, Stormvine, Twilight Jasmine, and Whiptail.
+|only if skill("Inscription") < 520
+step
+label "Volatile_Life_520"
+map Mount Hyjal/0
+path follow smart; loop on; ants straight; dist 30
+path	63.52,31.55	59.57,32.88	56.84,34.54	54.71,29.36	53.13,31.28
+path	48.07,30.68	45.74,27.86	36.60,22.67	35.18,25.84	33.14,25.57
+path	33.77,34.17	33.99,37.06	27.61,39.43	25.94,37.24	24.30,33.51
+path	23.48,36.14	21.88,38.77	15.82,40.94	13.52,40.33	14.38,45.61
+path	17.12,53.39	19.25,57.53	23.37,59.85	24.79,61.79	27.32,59.90
+path	28.50,54.44	31.11,52.22	34.43,54.53	35.78,57.57	36.87,62.02
+path	38.97,61.57	40.29,59.61	41.57,56.62	49.01,57.60	51.13,57.93
+path	51.16,53.77	51.72,51.91	54.23,53.26	55.58,57.23	57.62,54.09
+path	61.08,59.46	61.30,60.55	65.74,54.83	69.41,55.41	72.97,59.21
+path	74.00,61.72	77.50,59.62	79.41,55.08	81.41,51.90
+|tip Gather Cinderbloom and other herbs along the path.
+click Cinderbloom##202747+
+click Stormvine##52984+
+collect 98 Volatile Life##52329
+|tip It can also be purchased from the auction house.
+|only if skill("Inscription") < 520
+step
+label "Volatile_Water_520"
+map Twilight Highlands/0
+path follow smart; loop on; ants straight; dist 30
+path	29.60,66.46	28.77,62.37	31.51,59.47	33.77,56.98	35.75,60.13
+path	34.61,63.05
+kill Enslaved Waterspout##46329+
+|tip You can also fish in any schools of fish for Volatile Water as well. |only if skill("Fishing") >= 450
+collect 24 Volatile Water##52326
+|tip It can also be purchased from the auction house.
+|only if skill("Inscription") < 520
+step
+Open Your Inscription Crafting Panel:
+_<Create 4 Dungeoneering Guide>_
+|tip Each craft gives 3 skill points.
+Reach 520 Inscription |skill Inscription,520
 step
 talk Catarina Stanford##30713
 |tip Inside the building.
-learn Forged Documents##89244 |goto 49.83,74.82
+learn Silver Inlaid Leaf##86653 |goto Stormwind City/0 49.83,74.82
+stickystart "Volatile_Life_525"
+stickystart "Volatile_Air_525"
+stickystart "Inferno_Ink_525"
 step
-collect 43 Blackfallow Ink##61978
-|tip Create them with Inscription or purchase them from the Auction House.
-|tip Ashen Pigment can be Milled from Azshara's Veil, Cinderbloom, Heartblossom, Stormvine, Twilight Jasmine, and Whiptail.
+talk Casandra Downs##49703
+|tip She may not be visible if you have not done quests in the area.
+buy Silver Charm Bracelet##67335 |goto Twilight Highlands/0 78.54,76.16
+step
+label "Inferno_Ink_525"
+collect 12 Inferno Ink##61981
+|tip Burning Embers can be Milled from Azshara's Veil, Cinderbloom, Heartblossom, Stormvine, Twilight Jasmine, and Whiptail.
+|only if skill("Inscription") < 525
+step
+label "Volatile_Life_525"
+map Mount Hyjal/0
+path follow smart; loop on; ants straight; dist 30
+path	63.52,31.55	59.57,32.88	56.84,34.54	54.71,29.36	53.13,31.28
+path	48.07,30.68	45.74,27.86	36.60,22.67	35.18,25.84	33.14,25.57
+path	33.77,34.17	33.99,37.06	27.61,39.43	25.94,37.24	24.30,33.51
+path	23.48,36.14	21.88,38.77	15.82,40.94	13.52,40.33	14.38,45.61
+path	17.12,53.39	19.25,57.53	23.37,59.85	24.79,61.79	27.32,59.90
+path	28.50,54.44	31.11,52.22	34.43,54.53	35.78,57.57	36.87,62.02
+path	38.97,61.57	40.29,59.61	41.57,56.62	49.01,57.60	51.13,57.93
+path	51.16,53.77	51.72,51.91	54.23,53.26	55.58,57.23	57.62,54.09
+path	61.08,59.46	61.30,60.55	65.74,54.83	69.41,55.41	72.97,59.21
+path	74.00,61.72	77.50,59.62	79.41,55.08	81.41,51.90
+|tip Gather Cinderbloom and other herbs along the path.
+click Cinderbloom##202747+
+click Stormvine##52984+
+collect 36 Volatile Life##52329
+|tip It can also be purchased from the auction house.
+|only if skill("Inscription") < 525
+step
+label "Volatile_Air_525"
+map Twilight Highlands/0
+path follow smart; loop on; ants straight; dist 30
+path	39.56,47.29	41.39,48.90	41.53,46.16	39.76,44.61
+kill Storm Vortex##47728+
+collect 12 Volatile Air##52328
+|tip It can also be purchased from the auction house.
 |only if skill("Inscription") < 525
 step
 Open Your Inscription Crafting Panel:
-_<Create 15 Research: Blackfallow Ink>_
-|tip If you are not Pandaren, you can get the first point from creating Forged Documents.
+_<Create 1 Silver Inlaid Leaf>_
+|tip Each craft gives 5 skill points.
 Reach 525 Inscription |skill Inscription,525
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Jewelcrafting\\Jewelcrafting (1-525)",{

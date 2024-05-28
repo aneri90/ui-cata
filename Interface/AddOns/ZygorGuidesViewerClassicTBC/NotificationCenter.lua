@@ -63,7 +63,7 @@ function ZGV_Notification_Entry_Template_Mixin:StartFadeTimer()
 		ZGV.UIFrameFade.UIFrameFadeOut(self, FADEOUT_TIME, 1, 0, function() 
 			C_Timer.After(0,function() 
 				self:Hide() 
-				if self.entry.data.transient then
+				if self.entry and self.entry.data.transient then
 					NC:RemoveEntry(self.entry.ident)
 				end
 				NC:UpdateButton() 
@@ -193,7 +193,7 @@ function NC:Startup()
 		daily =		{iconkey="DAILY", priority=33}, -- dismiss
 		weekly =	{iconkey="WEEKLY", priority=34}, -- dismiss
 
-		gear =		{iconkey="GEAR", priority=41, click=function() OpenAllBags() end},
+		gear =		{iconkey="GEAR", priority=41, click=function() ZGV.ItemScore.Upgrades.DimItems=true OpenAllBags() end},
 		skills =	{iconkey="SKILL", priority=42, click=function() ZGV.Skills:ShowSkillPopup(nil,nil,"forceShow") end},
 
 		orientation =	{iconkey="ORIENTATION", priority=51, click=function() ZGV.Tabs:LoadGuideToTab("Leveling Guides\\Startup Guide Wizard") end},
@@ -543,11 +543,13 @@ function NC:SaveNotifications()
 end
 
 function NC:UpdateButton()
-	for i,entry in ipairs(NC.Entries) do
-		if not entry.data.reviewed then
-			-- show orange border
-			ZGV.ButtonSets.Minimap.ACTIVE:AssignToButton(ZygorGuidesViewerMapIcon)
-			return
+	if ZGV.db.profile.nc_enable then
+		for i,entry in ipairs(NC.Entries) do
+			if not entry.data.reviewed then
+				-- show orange border
+				ZGV.ButtonSets.Minimap.ACTIVE:AssignToButton(ZygorGuidesViewerMapIcon)
+				return
+			end
 		end
 	end
 	ZGV.ButtonSets.Minimap.NORMAL:AssignToButton(ZygorGuidesViewerMapIcon)

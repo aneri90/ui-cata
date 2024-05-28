@@ -4,7 +4,7 @@ if UnitFactionGroup("player")~="Horde" then return end
 if ZGV:DoMutex("LevelingHCATA") then return end
 ZygorGuidesViewer.GuideMenuTier = "TRI"
 ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Startup Guide Wizard")
-ZygorGuidesViewer:RegisterGuide("Zygor's Horde Leveling Guides\\Kalimdor (1-60)\\Goblin (1-12)",{
+ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Kalimdor (1-60)\\Goblin (1-12)",{
 author="support@zygorguides.com",
 condition_suggested=function() return raceclass('Goblin') and not completedq(25267) and not raceclass('DEATHKNIGHT') end,
 condition_suggested_exclusive=true,
@@ -1155,29 +1155,29 @@ talk Darkspear Loyalist##86884
 turnin Warchief's Emissary##25266 |goto Durotar 57.65,9.77
 accept Message for Garrosh##25267 |goto Durotar 57.65,9.77
 step
-Enter the building |goto Orgrimmar 49.45,70.97 < 10 |walk
+Enter the building |goto Orgrimmar 50.11,76.24 < 10 |walk
 talk Eitrigg##3144
 |tip Inside the building.
-accept Missing Reports##26803 |goto Orgrimmar 48.61,66.84
+accept Missing Reports##26803 |goto Orgrimmar 49.21,72.26
 step
 talk Garrosh Hellscream##39605
 |tip Inside the building.
-turnin Message for Garrosh##25267 |goto |goto 47.23,64.58
-accept Report to the Labor Captain##25275 |goto 47.23,64.58
+turnin Message for Garrosh##25267 |goto |goto 48.11,70.46
+accept Report to the Labor Captain##25275 |goto 48.11,70.46
 step
 talk Gotura Fourwinds##35068
 |tip Inside the building.
-accept Preserving the Barrens##26642 |goto 46.66,65.55
+accept Preserving the Barrens##26642 |goto 47.64,71.22
 step
-Ride the elevator up |goto 51.02,55.45 < 15 |only if walking
+Ride the elevator up |goto 50.75,63.53 < 15 |only if walking
 talk Doras##3310
 |tip Up on the plateau.
-turnin Missing Reports##26803 |goto 49.15,50.67
-accept Flight to Razor Hill##26804 |goto 49.15,50.67
+turnin Missing Reports##26803 |goto 49.68,59.23
+accept Flight to Razor Hill##26804 |goto 49.68,59.23
 step
 talk Doras##3310
 |tip Up on the plateau.
-fpath Orgrimmar |goto 49.15,50.67
+fpath Orgrimmar |goto 49.68,59.23
 step
 talk Gar'Thok##3139
 |tip Upstairs inside the building.
@@ -1188,13 +1188,13 @@ talk Burok##41140
 turnin Reports to Orgrimmar##26806 |goto 53.09,43.58
 accept Return to Eitrigg##26807 |goto 53.09,43.58
 step
-Enter the building |goto Orgrimmar 49.45,70.97 < 10 |walk
+Enter the building |goto Orgrimmar 50.11,76.24 < 10 |walk
 talk Eitrigg##3144
 |tip Inside the building.
-turnin Return to Eitrigg##26807 |goto Orgrimmar 48.61,66.84
+turnin Return to Eitrigg##26807 |goto Orgrimmar 49.21,72.26
 ]])
-ZygorGuidesViewer:RegisterGuidePlaceholder("Zygor's Horde Leveling Guides\\Cataclysm 80-85\\Mount Hyjal (80-82)")
-ZygorGuidesViewer:RegisterGuidePlaceholder("Zygor's Horde Leveling Guides\\Cataclysm 80-85\\Vashj'ir (80-82)")
-ZygorGuidesViewer:RegisterGuidePlaceholder("Zygor's Horde Leveling Guides\\Cataclysm 80-85\\Deepholm (82-83)")
-ZygorGuidesViewer:RegisterGuidePlaceholder("Zygor's Horde Leveling Guides\\Cataclysm 80-85\\Uldum (83-84)")
-ZygorGuidesViewer:RegisterGuidePlaceholder("Zygor's Horde Leveling Guides\\Cataclysm 80-85\\Twilight Highlands (84-85)")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Cataclysm 80-85\\Mount Hyjal (80-82)")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Cataclysm 80-85\\Vashj'ir (80-82)")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Cataclysm 80-85\\Deepholm (82-83)")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Cataclysm 80-85\\Uldum (83-84)")
+ZygorGuidesViewer:RegisterGuidePlaceholder("Leveling Guides\\Cataclysm 80-85\\Twilight Highlands (84-85)")
