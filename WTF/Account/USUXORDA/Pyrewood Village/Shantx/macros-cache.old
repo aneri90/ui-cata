@@ -5,9 +5,11 @@ VER 3 0000000001000007 " Immolate" "INV_MISC_QUESTIONMARK"
 /cast Immolate
 END
 VER 3 0000000001000008 "Burst" "INV_MISC_QUESTIONMARK"
-#showtooltip Metamorphosis
+#showtooltip [form:1] Immolation Aura; Metamorphosis
+/use 10
+/use 13
 /use 14
-/cast Metamorphosis
+/cast [form:1] Immolation Aura; Metamorphosis
 END
 VER 3 0000000001000010 "CB" "134400"
 #showtooltip
@@ -32,6 +34,17 @@ VER 3 0000000001000006 "Corruption" "INV_MISC_QUESTIONMARK"
 /targetenemy [noexists][dead][noharm]
 /cast Corruption
 END
+VER 3 0000000001000013 "DS" "134400"
+#showtooltip Demon Soul
+/use [nopet:Felguard] Summon Felguard 
+/stopmacro [nopet:Felguard]
+/use Demon Soul
+/use 10
+/use 13
+/use 14
+/use Soulburn
+/use Summon Felhunter
+END
 VER 3 000000000100000C "Felstorm" "134400"
 /cast Felstorm
 END
@@ -53,21 +66,11 @@ VER 3 0000000001000001 "Incinerate" "INV_MISC_QUESTIONMARK"
 /petattack
 /cast Incinerate
 END
-VER 3 0000000001000013 "Kick Fel" "134400"
-#showtooltip
-/cast [@focus,harm,nodead] Axe Toss
-END
-VER 3 0000000001000014 "Kick Fel Focus" "134400"
-#showtooltip
-/cast [@mouseover,harm,nodead] Axe Toss
-END
 VER 3 0000000001000002 "Kick focus" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [pet:Felhunter,@focus,harm,nodead] Spell Lock
+/cast [@focus, pet:felhunter]Spell Lock;[@focus, pet:felguard]Axe Toss;[@focus, pet:succubus]Seduction;
 END
 VER 3 0000000001000004 "Kick MO" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@mouseover,harm,nodead] Spell Lock
+/cast [@player, pet:imp]Singe Magic;[@mouseover, pet:felhunter]Spell Lock;[@mouseover, pet:felguard]Axe Toss;[@mouseover, pet:succubus]Seduction;
 END
 VER 3 0000000001000003 "Purge" "INV_MISC_QUESTIONMARK"
 #showtooltip

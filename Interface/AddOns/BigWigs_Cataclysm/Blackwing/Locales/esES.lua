@@ -1,6 +1,51 @@
 
-local L = BigWigs:NewBossLocale("Atramedes", "esES") or BigWigs:NewBossLocale("Atramedes", "esMX")
+local L = BigWigs:NewBossLocale("Magmaw", "esES")
 if not L then return end
+if L then
+	L.stage2_yell_trigger = "¡Inconcebible! ¡Existe la posibilidad de que venzáis a mi gusano de lava! Quizás yo pueda... desequilibrar la balanza."
+
+	L.slump = "Cae"
+	L.slump_desc = "Cae hacia delante exponiendose a sí mismo, permitiendo que el rodeo empiece."
+	L.slump_bar = "Rodeo"
+	L.slump_message = "¡Yeepah, móntalo!"
+	L.slump_emote_trigger = "¡%s cae hacia delante y deja expuestas sus tenazas!"
+
+	L.expose_emote_trigger = "cabeza"
+end
+
+L = BigWigs:NewBossLocale("Omnotron Defense System", "esES")
+if L then
+	L.nef = "Lord Victor Nefarius"
+	L.nef_desc = "Avisos para las abilidades de Lord Victor Nefarius"
+
+	L.pool = "Generador de poder sobrecargado"
+
+	L.switch = "Cambio"
+	L.switch_desc = "Avisa los cambios"
+	L.switch_message = "%s %s"
+
+	L.next_switch = "Siguiente activación"
+
+	L.nef_next = "Bufo de habilidad"
+
+	L.bomb_message = "¡Un moco TE persigue!"
+	L.cloud_message = "¡Nube en TI!"
+	L.protocol_message = "¡Bomba de veneno inminente!"
+
+	L.custom_on_iconomnotron = "Icono en el jefe activo"
+	L.custom_on_iconomnotron_desc = "Coloca el icono principal de raid en el jefe activo (requiere ayudante o lider)."
+end
+
+L = BigWigs:NewBossLocale("Chimaeron", "esES")
+if L then
+	L.bileotron_engage = "El Bilistrón se activa y empieza a emitir una sustancia de olor asqueroso."
+
+	L.next_system_failure = "Siguiente fallo del sistema"
+
+	L.phase2_message = "¡Fase de Mortalidad pronto!"
+end
+
+L = BigWigs:NewBossLocale("Atramedes", "esES")
 if L then
 	L.ground_phase = "Fase en tierra"
 	L.ground_phase_desc = "Avisa cuando Atramedes aterriza."
@@ -14,47 +59,7 @@ if L then
 	L.searing_soon = "¡Llamas abrasadoras en 10 seg!"
 end
 
-L = BigWigs:NewBossLocale("Chimaeron", "esES") or BigWigs:NewBossLocale("Chimaeron", "esMX")
-if L then
-	L.bileotron_engage = "El Bilistrón se activa y empieza a emitir una sustancia de olor asqueroso."
-
-	L.next_system_failure = "Siguiente fallo del sistema"
-
-	L.phase2_message = "¡Fase de Mortalidad pronto!"
-end
-
-L = BigWigs:NewBossLocale("Magmaw", "esES") or BigWigs:NewBossLocale("Magmaw", "esMX")
-if L then
-	-- heroic
-	L.blazing = "Esqueletos"
-	L.blazing_desc = "Invoca Ensamblaje osario llameante."
-	L.blazing_message = "¡Add inminente!"
-	L.blazing_bar = "Esqueleto"
-
-	L.armageddon = "Armageddon"
-	L.armageddon_desc = "Warn if Armageddon is cast during the head phase."
-
-	L.phase2 = "Fase 2"
-	L.phase2_desc = "Aviso para la transición de la fase 2 y visualiza el comprobador de rango."
-	L.phase2_message = "¡Fase 2!"
-	L.phase2_yell = "¡Inconcebible! ¡Existe la posibilidad de que venzáis a mi gusano de lava! Quizás yo pueda... desequilibrar la balanza."
-
-	-- normal
-	L.slump = "Cae"
-	L.slump_desc = "Cae hacia delante exponiendose a sí mismo, permitiendo que el rodeo empiece."
-	L.slump_bar = "Rodeo"
-	L.slump_message = "¡Yeepah, móntalo!"
-	L.slump_trigger = "¡%s cae hacia delante y deja expuestas sus tenazas!"
-
-	L.infection_message = "¡Estás infectado!"
-
-	L.expose_trigger = "cabeza"
-	L.expose_message = "¡Cabeza expuesta!"
-
-	L.spew_warning = "¡Vómito de lava pronto!"
-end
-
-L = BigWigs:NewBossLocale("Maloriak", "esES") or BigWigs:NewBossLocale("Maloriak", "esMX")
+L = BigWigs:NewBossLocale("Maloriak", "esES")
 if L then
 	--heroic
 	L.sludge = "Fango oscuro"
@@ -87,7 +92,7 @@ if L then
 	L.dark_phase = "Fase |cFF660099Oscura|r"
 end
 
-L = BigWigs:NewBossLocale("Nefarian", "esES") or BigWigs:NewBossLocale("Nefarian", "esMX")
+L = BigWigs:NewBossLocale("Nefarian", "esES")
 if L then
 	L.phase = "Fases"
 	L.phase_desc = "Avisa los cambios de fase."
@@ -108,27 +113,3 @@ if L then
 
 	L.chromatic_prototype = "Prototipo cromático" -- 3 adds name
 end
-
-L = BigWigs:NewBossLocale("Omnotron Defense System", "esES") or BigWigs:NewBossLocale("Omnotron Defense System", "esMX")
-if L then
-	L.nef = "Lord Victor Nefarius"
-	L.nef_desc = "Avisos para las abilidades de Lord Victor Nefarius"
-
-	L.pool = "Generador de poder sobrecargado"
-
-	L.switch = "Cambio"
-	L.switch_desc = "Avisa los cambios"
-	L.switch_message = "%s %s"
-
-	L.next_switch = "Siguiente activación"
-
-	L.nef_next = "Bufo de habilidad"
-
-	L.bomb_message = "¡Un moco TE persigue!"
-	L.cloud_message = "¡Nube en TI!"
-	L.protocol_message = "¡Bomba de veneno inminente!"
-
-	L.custom_on_iconomnotron = "Icono en el jefe activo"
-	L.custom_on_iconomnotron_desc = "Coloca el icono principal de raid en el jefe activo (requiere ayudante o lider)."
-end
-

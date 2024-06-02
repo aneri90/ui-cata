@@ -1,4 +1,4 @@
-local L = BigWigs:NewBossLocale("Beth'tilac", "esES") or BigWigs:NewBossLocale("Beth'tilac", "esMX")
+local L = BigWigs:NewBossLocale("Beth'tilac", "esES")
 if not L then return end
 if L then
 	L.flare_desc = "Show a timer bar for AoE flare."
@@ -9,7 +9,7 @@ if L then
 	L.spinner_warn = "Hiladoras #%d"
 end
 
-L = BigWigs:NewBossLocale("Lord Rhyolith", "esES") or BigWigs:NewBossLocale("Lord Rhyolith", "esMX")
+L = BigWigs:NewBossLocale("Lord Rhyolith", "esES")
 if L then
 	L.armor = "Armadura obsidiana"
 	L.armor_desc = "Avisar cuando los stacs de armadura estén desapareciendo de Piroclaso."
@@ -28,7 +28,7 @@ if L then
 	L.stomp = "Pisotón"
 end
 
-L = BigWigs:NewBossLocale("Alysrazor", "esES") or BigWigs:NewBossLocale("Alysrazor", "esMX")
+L = BigWigs:NewBossLocale("Alysrazor", "esES")
 if L then
 	L.fullpower_soon_message = "¡Poder máximo inminente!"
 	L.halfpower_soon_message = "¡Fase 4 inminente!"
@@ -58,7 +58,7 @@ if L then
 	L.initiate_east = "Iniciado al Este"
 end
 
-L = BigWigs:NewBossLocale("Shannox", "esES") or BigWigs:NewBossLocale("Shannox", "esMX")
+L = BigWigs:NewBossLocale("Shannox", "esES")
 if L then
 	L.safe = "%s a salvo"
 	L.wary_dog = "¡%s es cauteloso!"
@@ -74,7 +74,7 @@ if L then
 	L.crystal_desc = "Avisa a quien Shannox lance una trampa de cristal debajo."
 end
 
-L = BigWigs:NewBossLocale("Baleroc", "esES") or BigWigs:NewBossLocale("Baleroc", "esMX")
+L = BigWigs:NewBossLocale("Baleroc", "esES")
 if L then
 	L.torment = "Stacs de Tormento en Foco"
 	L.torment_desc = "Avisa cuando tu /focus gana otro stac de Tormento."
@@ -85,7 +85,7 @@ if L then
 	L.link_message = "Enlazado"
 end
 
-L = BigWigs:NewBossLocale("Majordomo Staghelm", "esES") or BigWigs:NewBossLocale("Majordomo Staghelm", "esMX")
+L = BigWigs:NewBossLocale("Majordomo Staghelm", "esES")
 if L then
 	L.seed_explosion = "¡Explotarás pronto!"
 	L.seed_bar = "¡Explotas!"
@@ -93,7 +93,7 @@ if L then
 	L.leap_say = "Salto"
 end
 
-L = BigWigs:NewBossLocale("Ragnaros", "esES") or BigWigs:NewBossLocale("Ragnaros", "esMX")
+L = BigWigs:NewBossLocale("Ragnaros", "esES")
 if L then
 	L.intermission_end_trigger1 = "Sulfuras será vuestro fin."
 	L.intermission_end_trigger2 = "¡De rodillas, mortales! Esto termina ahora."

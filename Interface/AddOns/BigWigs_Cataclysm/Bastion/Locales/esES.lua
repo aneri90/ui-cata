@@ -1,6 +1,13 @@
 
-local L = BigWigs:NewBossLocale("Cho'gall", "esES") or BigWigs:NewBossLocale("Cho'gall", "esMX")
+local L = BigWigs:NewBossLocale("Halfus Wyrmbreaker", "esES")
 if not L then return end
+if L then
+	L.strikes_message = "Golpes"
+
+	L.engage_yell_trigger = "¡Cho'gall acabará con vosotros! ¡CON TODOS!"
+end
+
+L = BigWigs:NewBossLocale("Cho'gall", "esES")
 if L then
 	L.orders = "Cambios de posición"
 	L.orders_desc = "Avisa cuando Cho'gall cambia el orden de posiciones entre Sombra/Llama."
@@ -27,7 +34,7 @@ if L then
 	L.phase2_soon = "¡Fase 2 inminente!"
 end
 
-L = BigWigs:NewBossLocale("Valiona and Theralion", "esES") or BigWigs:NewBossLocale("Valiona and Theralion", "esMX")
+L = BigWigs:NewBossLocale("Valiona and Theralion", "esES")
 if L then
 	L.phase_switch = "Cambio de fase"
 	L.phase_switch_desc = "Avisa los cambios de fase"
@@ -44,17 +51,7 @@ if L then
 	L.twilight_shift = "Cambio"
 end
 
-L = BigWigs:NewBossLocale("Halfus Wyrmbreaker", "esES") or BigWigs:NewBossLocale("Halfus Wyrmbreaker", "esMX")
-if L then
-	L.strikes_message = "Golpes"
-
-	L.breath_message = "¡Aliento inminente!"
-	L.breath_bar = "Aliento"
-
-	L.engage_yell = "¡Cho'gall acabará con vosotros! ¡CON TODOS!"
-end
-
-L = BigWigs:NewBossLocale("Sinestra", "esES") or BigWigs:NewBossLocale("Sinestra", "esMX")
+L = BigWigs:NewBossLocale("Sinestra", "esES")
 if L then
 	L.whelps = "Crías"
 	L.whelps_desc = "Aviso para la oleada de crías."
@@ -71,7 +68,7 @@ if L then
 	L.phase_desc = "Avisa los cambios de fase"
 end
 
-L = BigWigs:NewBossLocale("Ascendant Council", "esES") or BigWigs:NewBossLocale("Ascendant Council", "esMX")
+L = BigWigs:NewBossLocale("Ascendant Council", "esES")
 if L then
 	L.static_overload_say = "Sobrecarga estática"
 	L.gravity_core_say = "Núcleo de gravedad"

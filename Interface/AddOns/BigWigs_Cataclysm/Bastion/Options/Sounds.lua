@@ -1,11 +1,13 @@
 
 BigWigs:AddSounds("Halfus Wyrmbreaker", {
-	[83908] = "info",
+	[83707] = "alert",
+	[83710] = "info",
+	[84030] = "long",
 })
 
 BigWigs:AddSounds("Valiona and Theralion", {
 	[86059] = "alarm",
-	[86369] = "long",
+	[86369] = "warning",
 	[86408] = "alarm",
 	[86622] = "alarm",
 	[86788] = {"alert","warning"},

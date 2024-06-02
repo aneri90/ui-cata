@@ -5,9 +5,11 @@ VER 3 0000000001000007 " Immolate" "INV_MISC_QUESTIONMARK"
 /cast Immolate
 END
 VER 3 0000000001000008 "Burst" "INV_MISC_QUESTIONMARK"
-#showtooltip Metamorphosis
+#showtooltip [form:1] Immolation Aura; Metamorphosis
+/use 10
+/use 13
 /use 14
-/cast Metamorphosis
+/cast [form:1] Immolation Aura; Metamorphosis
 END
 VER 3 0000000001000010 "CB" "134400"
 #showtooltip
@@ -31,6 +33,15 @@ VER 3 0000000001000006 "Corruption" "INV_MISC_QUESTIONMARK"
 /cleartarget [dead]
 /targetenemy [noexists][dead][noharm]
 /cast Corruption
+END
+VER 3 0000000001000013 "DS" "134400"
+#showtooltip Demon Soul
+/use [nopet:Felguard] Summon Felguard 
+/stopmacro [nopet:Felguard]
+/use Demon Soul
+/use 10
+/use 13
+/use 14
 END
 VER 3 000000000100000C "Felstorm" "134400"
 /cast Felstorm

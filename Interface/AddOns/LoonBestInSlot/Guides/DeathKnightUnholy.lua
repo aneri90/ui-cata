@@ -2,24 +2,30 @@ local spec0 = LBIS:RegisterSpec(LBIS.L["Death Knight"], LBIS.L["Unholy"], "0")
 local spec1 = LBIS:RegisterSpec(LBIS.L["Death Knight"], LBIS.L["Unholy"], "1")
 
 LBIS:AddGem(spec0, "68779", "3", "True") --Reverberating Shadowspirit Diamond
+LBIS:AddGem(spec1, "52291", "3", "True") --Chaotic Shadowspirit Diamond
 LBIS:AddGem(spec0, "59479", "3", "False") --Quick Cogwheel
 LBIS:AddGem(spec0, "59478", "3", "False") --Smooth Cogwheel
 LBIS:AddGem(spec0, "52243", "3", "False") --Sovereign Demonseye
 LBIS:AddGem(spec0, "52206", "3", "False") --Bold Inferno Ruby
 LBIS:AddGem(spec0, "52214", "3", "False") --Fierce Ember Topaz
 LBIS:AddGem(spec0, "52213", "3", "False") --Etched Demonseye
+LBIS:AddGem(spec1, "52222", "3", "False") --Inscribed Ember Topaz
 
 LBIS:AddEnchant(spec1, "86933", LBIS.L["Head"]) --Arcanum of the Dragonmaw
 LBIS:AddEnchant(spec1, "86901", LBIS.L["Shoulder"]) --Greater Inscription of Jagged Stone
+LBIS:AddEnchant(spec1, "86401", LBIS.L["Shoulder"]) --Lionsmane Inscription
 LBIS:AddEnchant(spec1, "75178", LBIS.L["Back"]) --Swordguard Embroidery
 LBIS:AddEnchant(spec1, "74247", LBIS.L["Back"]) --Enchant Cloak - Greater Critical Strike
 LBIS:AddEnchant(spec1, "74250", LBIS.L["Chest"]) --Enchant Chest - Peerless Stats
 LBIS:AddEnchant(spec1, "96261", LBIS.L["Wrist"]) --Enchant Bracer - Major Strength
+LBIS:AddEnchant(spec1, "85009", LBIS.L["Wrist"]) --Draconic Embossment - Strength
 LBIS:AddEnchant(spec1, "82175", LBIS.L["Hands"]) --Synapse Springs
 LBIS:AddEnchant(spec1, "74254", LBIS.L["Hands"]) --Enchant Gloves - Mighty Strength
-LBIS:AddEnchant(spec1, "55016", LBIS.L["Waist"]) --Nitro Boosts
+LBIS:AddEnchant(spec1, "74212", LBIS.L["Hands"]) --Enchant Gloves - Exceptional Strength
 LBIS:AddEnchant(spec1, "76168", LBIS.L["Waist"]) --Ebonsteel Belt Buckle
+LBIS:AddEnchant(spec1, "55016", LBIS.L["Waist"]) --Nitro Boosts
 LBIS:AddEnchant(spec1, "78171", LBIS.L["Legs"]) --Dragonscale Leg Armor
+LBIS:AddEnchant(spec1, "78169", LBIS.L["Legs"]) --Scorched Leg Armor
 LBIS:AddEnchant(spec1, "74199", LBIS.L["Feet"]) --Enchant Boots - Haste
 LBIS:AddEnchant(spec1, "74215", LBIS.L["Ring"]) --Enchant Ring - Strength
 LBIS:AddEnchant(spec1, "53344", LBIS.L["Two Hand"]) --Rune of the Fallen Crusader
@@ -74,6 +80,7 @@ LBIS:AddItem(spec0, "56284", LBIS.L["Two Hand"], "Alt") --Whitefin Axe
 LBIS:AddItem(spec0, "56456", LBIS.L["Two Hand"], "Alt") --Wild Hammer
 LBIS:AddItem(spec0, "64674", LBIS.L["Ranged/Relic"], "BIS") --Relic of Aggramar
 LBIS:AddItem(spec0, "56279", LBIS.L["Ranged/Relic"], "Alt") --Conch of Thundering Waves
+LBIS:AddItem(spec0, "63480", LBIS.L["Ranged/Relic"], "Alt") --Record of the Brotherhood's End
 LBIS:AddItem(spec0, "62243", LBIS.L["Ranged/Relic"], "Alt") --Notched Jawbone
 
 LBIS:AddItem(spec1, "65181", LBIS.L["Head"], "BIS") --Magma Plated Helmet

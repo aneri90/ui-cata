@@ -5,9 +5,9 @@ CliqueDB3 = {
 		["Shantx - Pyrewood Village"] = {
 			["spec1_profileKey"] = "Shantx - Pyrewood Village",
 			["fastooc"] = false,
-			["alerthidden"] = true,
-			["downclick"] = false,
 			["spec2_profileKey"] = "Shantx - Pyrewood Village",
+			["downclick"] = false,
+			["alerthidden"] = true,
 			["specswap"] = false,
 		},
 	},
@@ -18,10 +18,10 @@ CliqueDB3 = {
 		["Shantx - Pyrewood Village"] = {
 			["bindings"] = {
 				{
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
 					["key"] = "CTRL-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]

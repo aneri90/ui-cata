@@ -24041,69 +24041,220 @@ NUI.PlaterData = {
 	["cast_statusbar_spark_width"] = 4,
 }
 NUI.WeakAurasData = {
-	["Reminder: buffs"] = {
-	["arcLength"] = 360,
-	["controlledChildren"] = {
-	"Flask",
-	"Food",
-	"Fortitude",
-	"Kings",
-	"Arcane Int",
-	"Might",
-	"Wisdom",
-	},
-	["borderBackdrop"] = "Blizzard Tooltip",
+	["Blessing of Sacrifice (Active)"] = {
+	["iconSource"] = -1,
 	["wagoID"] = "fFdRT46Na",
-	["authorOptions"] = {
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
 	},
 	["preferToUpdate"] = false,
-	["regionType"] = "dynamicgroup",
-	["groupIcon"] = 132810,
+	["customText"] = "",
+	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
-	["sort"] = "none",
-	["parent"] = "NaowhUI - UI Elements - Cataclysm",
-	["borderColor"] = {
+	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["useGroup_count"] = false,
+	["matchesShowOn"] = "showOnActive",
+	["subeventPrefix"] = "SPELL",
+	["use_tooltip"] = false,
+	["spellName"] = {
+	"Power Word: Barrier",
+	},
+	["unit"] = "player",
+	["use_unit"] = true,
+	["debuffType"] = "HELPFUL",
+	["custom_hide"] = "timed",
+	["useName"] = true,
+	["use_debuffClass"] = false,
+	["subeventSuffix"] = "_CAST_SUCCESS",
+	["buffShowOn"] = "showOnActive",
+	["type"] = "aura2",
+	["event"] = "Combat Log",
+	["names"] = {
+	"Blessing of Sacrifice",
+	},
+	["auranames"] = {
+	"Blessing of Sacrifice",
+	},
+	["use_spellName"] = true,
+	["spellIds"] = {
+	},
+	["use_sourceUnit"] = true,
+	["duration"] = "10",
+	["combineMatches"] = "showLowest",
+	["sourceUnit"] = "player",
+	["unevent"] = "timed",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "all",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["stickyDuration"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
 	0,
 	0,
 	0,
 	1,
 	},
-	["space"] = 4,
-	["url"] = "NaowhUI",
-	["actions"] = {
-	["start"] = {
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
 	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["triggers"] = {
 	{
-	["trigger"] = {
-	["unit"] = "player",
-	["type"] = "aura2",
-	["spellIds"] = {
+	["glowFrequency"] = 0.25,
+	["type"] = "subglow",
+	["glowDuration"] = 1,
+	["glowType"] = "Pixel",
+	["glowThickness"] = 1,
+	["glowYOffset"] = 1,
+	["glowColor"] = {
+	1,
+	1,
+	1,
+	1,
 	},
-	["subeventSuffix"] = "_CAST_START",
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	["event"] = "Health",
-	["names"] = {
+	["useGlowColor"] = false,
+	["glowXOffset"] = 1,
+	["glowLength"] = 10,
+	["glow"] = true,
+	["glowScale"] = 1,
+	["glowLines"] = 8,
+	["glowBorder"] = false,
+	},
+	{
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = true,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
+	["text_visible"] = true,
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
+	["anchorYOffset"] = 0,
+	["text_shadowYOffset"] = 0,
+	["text_fontSize"] = 14,
+	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_text_format_p_time_format"] = 0,
 	},
 	},
-	["untrigger"] = {
+	["height"] = 26,
+	["width"] = 34,
+	["load"] = {
+	["talent2"] = {
+	["multi"] = {
 	},
 	},
+	["talent"] = {
+	["multi"] = {
 	},
-	["columnSpace"] = 4,
-	["radius"] = 200,
+	},
+	["class"] = {
+	["single"] = "PALADIN",
+	["multi"] = {
+	["PALADIN"] = true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["race"] = {
+	["multi"] = {
+	},
+	},
+	["use_itemequiped"] = false,
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
+	["alpha"] = 1,
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayIcon"] = 135966,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
 	["animation"] = {
 	["start"] = {
 	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
 	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
 	},
 	["main"] = {
 	["type"] = "none",
@@ -24113,88 +24264,52 @@ NUI.WeakAurasData = {
 	},
 	["finish"] = {
 	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
 	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
 	},
 	},
-	["align"] = "RIGHT",
-	["useLimit"] = false,
-	["selfPoint"] = "BOTTOMRIGHT",
-	["desc"] = "",
-	["stagger"] = 0,
-	["fullCircle"] = true,
-	["version"] = 16,
-	["subRegions"] = {
+	["authorOptions"] = {
 	},
-	["borderInset"] = 1,
 	["config"] = {
 	},
-	["load"] = {
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	},
-	["internalVersion"] = 73,
-	["backdropColor"] = {
-	1,
-	1,
-	1,
-	0.5,
-	},
-	["sortHybridTable"] = {
-	["Wisdom"] = false,
-	["Fortitude"] = false,
-	["Food"] = false,
-	["Might"] = false,
-	["Flask"] = false,
-	["Kings"] = false,
-	["Arcane Int"] = false,
-	},
-	["animate"] = false,
-	["source"] = "import",
-	["scale"] = 1,
-	["centerType"] = "LR",
-	["border"] = false,
-	["borderEdge"] = "Square Full White",
-	["stepAngle"] = 15,
-	["borderSize"] = 2,
-	["limit"] = 5,
-	["gridWidth"] = 6,
-	["grow"] = "GRID",
-	["constantFactor"] = "RADIUS",
-	["rowSpace"] = 4,
-	["borderOffset"] = 4,
-	["semver"] = "2.0.6",
+	["url"] = "NaowhUI",
+	["desaturate"] = false,
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = false,
+	["auto"] = true,
 	["tocversion"] = 40400,
-	["id"] = "Reminder: buffs",
-	["alpha"] = 1,
+	["id"] = "Blessing of Sacrifice (Active)",
+	["zoom"] = 0.3,
 	["frameStrata"] = 3,
 	["anchorFrameType"] = "SCREEN",
-	["xOffset"] = -516,
-	["uid"] = "RwXAMSgkK59",
-	["yOffset"] = 43.536682128906,
-	["gridType"] = "LU",
+	["keepAspectRatio"] = true,
+	["uid"] = "tA2aPx6CGOw",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	["do_glow"] = false,
+	["do_custom"] = false,
+	["custom"] = "",
+	["do_sound"] = true,
+	["glow_action"] = "show",
+	["glow_type"] = "ACShine",
+	["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\bam.ogg",
+	["glow_frame"] = "WeakAuras:Blessing of Sacrifice (Active)",
+	},
+	["init"] = {
+	["custom"] = "",
+	["do_custom"] = false,
+	},
+	["finish"] = {
+	["do_sound"] = false,
+	},
+	},
 	["conditions"] = {
 	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["rotation"] = 0,
+	["cooldown"] = false,
+	["xOffset"] = 0,
 	},
 	["Nitro Boosts"] = {
 	["text2Point"] = "CENTER",
@@ -24294,7 +24409,7 @@ NUI.WeakAurasData = {
 	["use_genericShowOn"] = true,
 	["genericShowOn"] = "showAlways",
 	["unit"] = "player",
-	["itemSlot"] = 6,
+	["itemSlot"] = 8,
 	["debuffType"] = "HELPFUL",
 	["type"] = "item",
 	["subeventSuffix"] = "_CAST_START",
@@ -24342,7 +24457,7 @@ NUI.WeakAurasData = {
 	},
 	},
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -24493,7 +24608,7 @@ NUI.WeakAurasData = {
 	["text1FontFlags"] = "OUTLINE",
 	["text2Font"] = "Friz Quadrata TT",
 	["width"] = 32,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["useCooldownModRate"] = true,
 	["id"] = "Nitro Boosts",
 	["text2"] = "%p",
@@ -24601,7 +24716,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -24754,7 +24869,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
@@ -24786,73 +24901,120 @@ NUI.WeakAurasData = {
 	["cooldown"] = false,
 	["xOffset"] = 0,
 	},
-	["Focus Castbar"] = {
-	["sparkWidth"] = 8,
-	["iconSource"] = -1,
-	["xOffset"] = 0,
+	["!MerfinUI: Consumables - Cataclysm Classic"] = {
+	["grow"] = "GRID",
+	["controlledChildren"] = {
+	"Flask: Flask of the Draconic Mind (+300 int)",
+	"Flask. Flask of Titanic Strength (+300 Strength)",
+	"Flask. Flask of the Winds (+300 Agility)",
+	"Flask: Flask of Steelskin (+450 Stamina)",
+	"Flask. Flask of Flowing Water (+300 Spirit)",
+	"Battle Elixir: Elixir of the Naga (+225 Expertise Rating)",
+	"Battle Elixir: Elixir of the Cobra (+225 Critical Strike)",
+	"Battle Elixir: Impossible Accuracy (+225 Hit Rating)",
+	"Battle Elixir: Ghost Elixir (+225 Spirit)",
+	"Battle Elixir: Elixir of the Master (+225 Mastery Rating)",
+	"Battle Elixir: Elixir of Mighty Speed (+225 Haste Rating)",
+	"Guardian Elixir: Elixir of Deep Earth (+900 Armor)",
+	"Guardian Elixir: Prismatic Elixir (+90 Magic Resistance)",
+	"Potion: Volcanic Potion (+1200 Intellect)",
+	"Potion: Potion of the Tol'vir (+1200 Agility)",
+	"Potion: Golemblood Potion (+1200 Strength)",
+	"Potion: Earthen Potion (+800 Armor)",
+	"Potion: Potion of Concentration (2k Mana Per Second)",
+	"Potion: Mysterious Potion (~50K Health and ~20K Mana)",
+	"Food: Baked Rockfish (+90 Critical Strike and +90 Stamina)",
+	"Food: Basilisk Liverdog (+90 Haste Rating and +90 Stamina)",
+	"Food: Beer-Basted Crocolisk (+90 Strength and +90 Stamina)",
+	"Food: Blackbelly Sushi (+90 Parry and +90 Stamina)",
+	"Food: Crocolisk Au Gratin (+90 Expertise Rating and +90 Stamina)",
+	"Food: Delicious Sagefish Tail (+90 Spirit and +90 Stamina)",
+	"Food: Grilled Dragon (+90 Hit Rating and +90 Stamina)",
+	"Food: Lavascale Minestrone (+90 Mastery Rating and +90 Stamina)",
+	"Food: Mushroom Sauce Mudfish (+90 Dodge Rating and +90 Stamina)",
+	"Food: Severed Sagefish Head (+90 Intellect and +90 Stamina)",
+	"Food: Skewered Eeld (+90 Agility and +90 Stamina)",
+	"Food: Seafood Magnifique Feast (+90 Primary Stat and +90 Stamina)",
+	"Food: Healthstone",
+	},
+	["borderBackdrop"] = "Blizzard Tooltip",
+	["wagoID"] = "fFdRT46Na",
+	["authorOptions"] = {
+	},
 	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["sparkRotation"] = 0,
+	["yOffset"] = -221.8,
+	["gridType"] = "RD",
+	["sort"] = "none",
+	["xOffset"] = -393,
+	["fullCircle"] = true,
+	["space"] = -1,
 	["url"] = "NaowhUI",
 	["actions"] = {
 	["start"] = {
-	["custom"] = "\n\n",
-	["do_custom"] = false,
 	},
 	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
 	},
 	["finish"] = {
-	["custom"] = "\n\n",
-	["do_custom"] = false,
 	},
 	},
-	["fontFlags"] = "OUTLINE",
-	["icon_color"] = {
-	1,
-	1,
-	1,
-	1,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["unit"] = "player",
+	["type"] = "aura2",
+	["spellIds"] = {
 	},
-	["enableGradient"] = false,
-	["selfPoint"] = "CENTER",
-	["barColor"] = {
+	["subeventSuffix"] = "_CAST_START",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	["event"] = "Health",
+	["names"] = {
+	},
+	},
+	["untrigger"] = {
+	},
+	},
+	},
+	["columnSpace"] = 4,
+	["radius"] = 200,
+	["borderColor"] = {
 	0,
-	0.63921568627451,
-	1,
+	0,
+	0,
 	1,
 	},
-	["desaturate"] = false,
-	["sparkOffsetY"] = 0,
-	["gradientOrientation"] = "HORIZONTAL",
+	["useLimit"] = false,
+	["align"] = "LEFT",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["desc"] = "https://discord.gg/merfin",
+	["stagger"] = 0,
+	["rotation"] = 0,
+	["version"] = 20,
+	["subRegions"] = {
+	},
+	["internalVersion"] = 73,
+	["selfPoint"] = "TOPLEFT",
 	["load"] = {
-	["ingroup"] = {
-	["multi"] = {
-	},
-	},
-	["use_never"] = false,
 	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_vehicle"] = false,
-	["class"] = {
-	["single"] = "DEMONHUNTER",
-	["multi"] = {
-	["DEMONHUNTER"] = true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["difficulty"] = {
-	["multi"] = {
-	},
-	},
-	["race"] = {
 	["multi"] = {
 	},
 	},
@@ -24860,80 +25022,526 @@ NUI.WeakAurasData = {
 	["multi"] = {
 	},
 	},
-	["pvptalent"] = {
+	["class"] = {
 	["multi"] = {
 	},
 	},
-	["talent2"] = {
+	["size"] = {
 	["multi"] = {
 	},
 	},
-	["role"] = {
-	["multi"] = {
 	},
+	["config"] = {
 	},
-	["faction"] = {
-	["multi"] = {
+	["backdropColor"] = {
+	1,
+	1,
+	1,
+	0.5,
 	},
+	["uid"] = "VODjOL3Je2M",
+	["animate"] = false,
+	["sortHybridTable"] = {
+	["Battle Elixir: Ghost Elixir (+225 Spirit)"] = false,
+	["Potion: Mysterious Potion (~50K Health and ~20K Mana)"] = false,
+	["Potion: Potion of the Tol'vir (+1200 Agility)"] = false,
+	["Food: Healthstone"] = false,
+	["Flask. Flask of Flowing Water (+300 Spirit)"] = false,
+	["Battle Elixir: Elixir of the Naga (+225 Expertise Rating)"] = false,
+	["Battle Elixir: Impossible Accuracy (+225 Hit Rating)"] = false,
+	["Flask: Flask of Steelskin (+450 Stamina)"] = false,
+	["Flask: Flask of the Draconic Mind (+300 int)"] = false,
+	["Flask. Flask of Titanic Strength (+300 Strength)"] = false,
+	["Food: Seafood Magnifique Feast (+90 Primary Stat and +90 Stamina)"] = false,
+	["Guardian Elixir: Elixir of Deep Earth (+900 Armor)"] = false,
+	["Potion: Potion of Concentration (2k Mana Per Second)"] = false,
+	["Food: Skewered Eeld (+90 Agility and +90 Stamina)"] = false,
+	["Battle Elixir: Elixir of Mighty Speed (+225 Haste Rating)"] = false,
+	["Battle Elixir: Elixir of the Master (+225 Mastery Rating)"] = false,
+	["Food: Blackbelly Sushi (+90 Parry and +90 Stamina)"] = false,
+	["Food: Mushroom Sauce Mudfish (+90 Dodge Rating and +90 Stamina)"] = false,
+	["Potion: Volcanic Potion (+1200 Intellect)"] = false,
+	["Food: Delicious Sagefish Tail (+90 Spirit and +90 Stamina)"] = false,
+	["Food: Grilled Dragon (+90 Hit Rating and +90 Stamina)"] = false,
+	["Food: Lavascale Minestrone (+90 Mastery Rating and +90 Stamina)"] = false,
+	["Flask. Flask of the Winds (+300 Agility)"] = false,
+	["Guardian Elixir: Prismatic Elixir (+90 Magic Resistance)"] = false,
+	["Potion: Earthen Potion (+800 Armor)"] = false,
+	["Food: Crocolisk Au Gratin (+90 Expertise Rating and +90 Stamina)"] = false,
+	["Food: Severed Sagefish Head (+90 Intellect and +90 Stamina)"] = false,
+	["Food: Baked Rockfish (+90 Critical Strike and +90 Stamina)"] = false,
+	["Food: Basilisk Liverdog (+90 Haste Rating and +90 Stamina)"] = false,
+	["Food: Beer-Basted Crocolisk (+90 Strength and +90 Stamina)"] = false,
+	["Potion: Golemblood Potion (+1200 Strength)"] = false,
+	["Battle Elixir: Elixir of the Cobra (+225 Critical Strike)"] = false,
 	},
-	["zoneIds"] = "",
-	},
-	["smoothProgress"] = false,
-	["useAdjustededMin"] = false,
-	["regionType"] = "aurabar",
-	["texture"] = "Melli",
-	["zoom"] = 0.3,
-	["auto"] = true,
+	["scale"] = 1,
+	["centerType"] = "LR",
+	["border"] = false,
+	["borderEdge"] = "Square Full White",
+	["regionType"] = "dynamicgroup",
+	["borderSize"] = 2,
+	["limit"] = 5,
+	["stepAngle"] = 15,
+	["gridWidth"] = 3,
+	["constantFactor"] = "RADIUS",
+	["rowSpace"] = 4,
+	["borderOffset"] = 4,
+	["semver"] = "2.0.10",
 	["tocversion"] = 40400,
+	["id"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["frameStrata"] = 1,
 	["alpha"] = 1,
-	["sparkColor"] = {
-	1,
-	1,
-	1,
-	1,
+	["anchorFrameType"] = "SCREEN",
+	["arcLength"] = 360,
+	["borderInset"] = 1,
+	["parent"] = "NaowhUI - UI Elements - Cataclysm",
+	["source"] = "import",
+	["conditions"] = {
 	},
-	["sparkOffsetX"] = 0,
+	["information"] = {
+	},
+	["anchorPoint"] = "CENTER",
+	},
+	["Potion: Golemblood Potion (+1200 Strength)"] = {
+	["iconSource"] = 0,
 	["wagoID"] = "fFdRT46Na",
-	["parent"] = "All-round",
-	["customText"] = "aura_env.reanchor()",
-	["sparkRotationMode"] = "AUTO",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["use_rune"] = true,
-	["duration"] = "1",
-	["genericShowOn"] = "showAlways",
-	["unit"] = "focus",
-	["powertype"] = 18,
-	["use_powertype"] = false,
-	["debuffType"] = "HELPFUL",
-	["type"] = "unit",
-	["subeventSuffix"] = "_CAST_START",
-	["use_showOn"] = true,
-	["event"] = "Cast",
-	["custom_hide"] = "timed",
-	["names"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79634",
 	},
-	["use_genericShowOn"] = true,
+	["event"] = "Health",
+	["unit"] = "player",
 	["spellIds"] = {
 	},
-	["use_inverse"] = false,
-	["rune"] = 1,
-	["unevent"] = "auto",
-	["use_unit"] = true,
 	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
 	},
 	["untrigger"] = {
-	["unit"] = "focus",
 	},
 	},
-	["disjunctive"] = "all",
+	{
+	["trigger"] = {
+	["itemName"] = 58146,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58146,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
 	["progressSource"] = {
 	-1,
 	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463920",
+	["uid"] = "mehTtkNL3(c",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Potion: Golemblood Potion (+1200 Strength)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
 	},
 	["animation"] = {
 	["start"] = {
@@ -24955,174 +25563,6 @@ NUI.WeakAurasData = {
 	["easeType"] = "none",
 	},
 	},
-	["backdropInFront"] = false,
-	["stickyDuration"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_anchor"] = "bar",
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["type"] = "subforeground",
-	},
-	{
-	["text_shadowXOffset"] = 1,
-	["text_text_format_t_time_legacy_floor"] = true,
-	["text_fontType"] = "OUTLINE",
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["text_text_format_t_time_dynamic_threshold"] = 60,
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_t_time_format"] = 0,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["text_text_format_t_format"] = "timed",
-	["text_visible"] = true,
-	["text_text_format_p_time_precision"] = 1,
-	["type"] = "subtext",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text"] = "%p / %t",
-	["text_shadowYOffset"] = -1,
-	["text_text_format_p_time_format"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_text_format_t_time_mod_rate"] = true,
-	["text_anchorPoint"] = "INNER_RIGHT",
-	["text_text_format_t_time_precision"] = 1,
-	["anchorYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 60,
-	["text_text_format_p_format"] = "timed",
-	},
-	{
-	["text_text_format_n_format"] = "none",
-	["text_text"] = "%n",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_shadowYOffset"] = -1,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "INNER_LEFT",
-	["text_visible"] = true,
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_shadowXOffset"] = 1,
-	},
-	},
-	["height"] = 26,
-	["sparkBlendMode"] = "ADD",
-	["backdropColor"] = {
-	1,
-	1,
-	1,
-	0.5,
-	},
-	["source"] = "import",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["authorOptions"] = {
-	},
-	["borderInFront"] = false,
-	["spark"] = true,
-	["icon_side"] = "LEFT",
-	["icon"] = true,
-	["borderBackdrop"] = "None",
-	["sparkHeight"] = 36,
-	["width"] = 320,
-	["id"] = "Focus Castbar",
-	["customTextUpdate"] = "update",
-	["semver"] = "2.0.6",
-	["backgroundColor"] = {
-	0,
-	0,
-	0,
-	0.60000002384186,
-	},
-	["sparkHidden"] = "NEVER",
-	["useAdjustededMax"] = false,
-	["frameStrata"] = 4,
-	["anchorFrameType"] = "SCREEN",
-	["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-	["config"] = {
-	},
-	["inverse"] = false,
-	["sparkDesature"] = false,
-	["orientation"] = "HORIZONTAL",
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 1,
-	["variable"] = "interruptible",
-	["value"] = 1,
-	},
-	["changes"] = {
-	{
-	["value"] = {
-	0,
-	0.63921568627451,
-	1,
-	1,
-	},
-	["property"] = "barColor",
-	},
-	},
-	},
-	},
-	["barColor2"] = {
-	1,
-	1,
-	0,
-	1,
-	},
-	["uid"] = "fGFR8yOnZDV",
 	},
 	["Frag Belt"] = {
 	["text2Point"] = "CENTER",
@@ -25196,7 +25636,7 @@ NUI.WeakAurasData = {
 	["level"] = {
 	"51",
 	},
-	["use_never"] = true,
+	["use_never"] = false,
 	["zoneIds"] = "",
 	},
 	["useAdjustededMin"] = false,
@@ -25270,7 +25710,7 @@ NUI.WeakAurasData = {
 	},
 	},
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -25421,7 +25861,7 @@ NUI.WeakAurasData = {
 	["text1FontFlags"] = "OUTLINE",
 	["text2Font"] = "Friz Quadrata TT",
 	["width"] = 32,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["useCooldownModRate"] = true,
 	["id"] = "Frag Belt",
 	["text2"] = "%p",
@@ -25542,7 +25982,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -25710,7 +26150,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = false,
 	["tocversion"] = 40400,
@@ -25744,56 +26184,82 @@ NUI.WeakAurasData = {
 	["cooldown"] = false,
 	["xOffset"] = 0,
 	},
-	["Might"] = {
-	["iconSource"] = 0,
+	["Combat Potion (Active)"] = {
+	["iconSource"] = -1,
 	["wagoID"] = "fFdRT46Na",
 	["color"] = {
-	0.4,
-	0.4,
-	0.4,
+	1,
+	1,
+	1,
 	1,
 	},
 	["preferToUpdate"] = false,
+	["customText"] = "",
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
 	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
 	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["type"] = "aura2",
-	["subeventSuffix"] = "_CAST_START",
-	["matchesShowOn"] = "showOnMissing",
-	["event"] = "Health",
-	["unit"] = "player",
+	["spellId"] = "229206",
 	["auranames"] = {
-	"48934",
-	"48932",
-	"47436",
-	"79102",
+	"79476",
+	"79633",
+	"79634",
+	"79475",
+	"78993",
+	"79632",
+	"79635",
+	"79468",
+	"79481",
+	"79477",
+	"79474",
 	},
-	["useExactSpellId"] = false,
-	["spellIds"] = {
-	},
-	["useName"] = true,
-	["auraspellids"] = {
-	},
+	["matchesShowOn"] = "showOnActive",
 	["subeventPrefix"] = "SPELL",
-	["names"] = {
-	},
+	["use_tooltip"] = false,
+	["buffShowOn"] = "showOnActive",
 	["debuffType"] = "HELPFUL",
+	["showClones"] = true,
+	["type"] = "aura2",
+	["use_debuffClass"] = false,
+	["auraspellids"] = {
+	"229206",
+	},
+	["names"] = {
+	"Potion of Prolonged Power",
+	},
+	["fetchTooltip"] = true,
+	["event"] = "Health",
+	["custom_hide"] = "timed",
+	["useGroup_count"] = false,
+	["use_spellId"] = true,
+	["name"] = "Potion of Prolonged Power",
+	["useName"] = true,
+	["spellIds"] = {
+	229206,
+	},
+	["combineMatches"] = "showLowest",
+	["unit"] = "player",
+	["subeventSuffix"] = "_CAST_START",
 	},
 	["untrigger"] = {
 	},
 	},
-	["activeTriggerMode"] = -10,
+	["activeTriggerMode"] = 1,
 	},
 	["internalVersion"] = 73,
-	["keepAspectRatio"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
 	["selfPoint"] = "CENTER",
-	["desaturate"] = false,
-	["version"] = 16,
+	["stickyDuration"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -25811,20 +26277,293 @@ NUI.WeakAurasData = {
 	["border_edge"] = "Square Full White",
 	["type"] = "subborder",
 	},
+	{
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
 	},
-	["height"] = 36,
-	["width"] = 42,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = true,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
+	["text_visible"] = true,
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
+	["anchorYOffset"] = 0,
+	["text_shadowYOffset"] = 0,
+	["text_fontSize"] = 14,
+	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_text_format_p_time_format"] = 0,
+	},
+	},
+	["height"] = 26,
+	["width"] = 34,
 	["load"] = {
-	["use_class"] = false,
-	["size"] = {
+	["talent2"] = {
 	["multi"] = {
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["twenty"] = true,
 	},
 	},
 	["talent"] = {
+	["single"] = 9,
+	["multi"] = {
+	[9] = true,
+	},
+	},
+	["class"] = {
+	["single"] = "DEATHKNIGHT",
+	["multi"] = {
+	["DEATHKNIGHT"] = true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["race"] = {
+	["multi"] = {
+	},
+	},
+	["use_itemequiped"] = false,
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["single"] = 3,
+	["multi"] = {
+	[2] = true,
+	[3] = true,
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
+	["alpha"] = 1,
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayIcon"] = 253400,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	},
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["url"] = "NaowhUI",
+	["desaturate"] = false,
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = false,
+	["auto"] = true,
+	["tocversion"] = 40400,
+	["id"] = "Combat Potion (Active)",
+	["zoom"] = 0.3,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["keepAspectRatio"] = true,
+	["uid"] = "UvlHEXnYyYX",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	["do_glow"] = false,
+	["custom"] = "",
+	["glow_action"] = "show",
+	["glow_type"] = "ACShine",
+	["do_custom"] = false,
+	["glow_frame"] = "WeakAuras:Potion of Prolonged Power (Active)",
+	},
+	["init"] = {
+	["custom"] = "",
+	["do_custom"] = false,
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	},
+	["cooldown"] = false,
+	["xOffset"] = 0,
+	},
+	["Food"] = {
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["useName"] = true,
+	["auranames"] = {
+	"33256",
+	},
+	["debuffType"] = "HELPFUL",
+	["event"] = "Health",
+	["subeventPrefix"] = "SPELL",
+	["unit"] = "player",
+	["rem"] = "300",
+	["spellIds"] = {
+	},
+	["type"] = "aura2",
+	["remOperator"] = "<",
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["useRem"] = true,
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"33256",
+	},
+	["matchesShowOn"] = "showOnMissing",
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["names"] = {
+	},
+	["useName"] = true,
+	["subeventPrefix"] = "SPELL",
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "any",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["glowFrequency"] = 0.25,
+	["type"] = "subglow",
+	["glowDuration"] = 1,
+	["glowType"] = "Pixel",
+	["glowThickness"] = 1,
+	["glowYOffset"] = 1,
+	["glowColor"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["useGlowColor"] = false,
+	["glowXOffset"] = 1,
+	["glowLength"] = 10,
+	["glow"] = false,
+	["glowScale"] = 1,
+	["glowLines"] = 8,
+	["glowBorder"] = false,
+	},
+	},
+	["height"] = 36,
+	["load"] = {
+	["size"] = {
 	["multi"] = {
 	},
 	},
@@ -25844,220 +26583,100 @@ NUI.WeakAurasData = {
 	},
 	["class"] = {
 	["multi"] = {
-	["DEATHKNIGHT"] = true,
-	["WARRIOR"] = true,
-	["ROGUE"] = true,
-	["HUNTER"] = true,
-	["DRUID"] = true,
-	["SHAMAN"] = true,
-	["PALADIN"] = true,
 	},
 	},
 	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["talent"] = {
 	["multi"] = {
 	},
 	},
 	["use_instance_type"] = false,
 	},
-	["url"] = "NaowhUI",
 	["useAdjustededMax"] = false,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
+	["uid"] = "WGurAkncNuF",
 	["source"] = "import",
-	["cooldown"] = false,
-	["progressSource"] = {
-	-1,
-	"",
-	},
+	["parent"] = "Reminder: buffs",
+	["url"] = "NaowhUI",
 	["useAdjustededMin"] = false,
 	["regionType"] = "icon",
-	["displayIcon"] = "Interface\\Icons\\Spell_Holy_FistOfJustice",
+	["cooldown"] = true,
+	["xOffset"] = 0,
+	["authorOptions"] = {
+	},
 	["zoom"] = 0.3,
-	["parent"] = "Reminder: buffs",
-	["config"] = {
-	},
-	["useCooldownModRate"] = true,
-	["auto"] = true,
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
 	["cooldownTextDisabled"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["tocversion"] = 40400,
-	["id"] = "Might",
-	["frameStrata"] = 1,
+	["id"] = "Food",
+	["useCooldownModRate"] = true,
 	["alpha"] = 1,
-	["anchorFrameType"] = "SCREEN",
-	["authorOptions"] = {
-	},
-	["uid"] = "CLCqW7t)vqY",
-	["inverse"] = false,
-	["xOffset"] = 0,
-	["conditions"] = {
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	},
-	["ElvUI Player Name Strata"] = {
-	["outline"] = "OUTLINE",
-	["wagoID"] = "fFdRT46Na",
-	["authorOptions"] = {
-	},
-	["displayText_format_p_time_dynamic_threshold"] = 60,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["displayText_format_p_time_format"] = 0,
-	["customTextUpdate"] = "event",
-	["url"] = "NaowhUI",
-	["actions"] = {
-	["start"] = {
-	["custom"] = "ElvUF_Player.RaisedElementParent:SetFrameStrata(\"MEDIUM\")",
-	["do_custom"] = true,
-	},
-	["init"] = {
-	["custom"] = "ElvUF_Player.RaisedElementParent:SetFrameStrata(\"MEDIUM\")",
-	["do_custom"] = true,
-	},
-	["finish"] = {
-	},
-	},
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["type"] = "unit",
-	["use_alwaystrue"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["use_absorbMode"] = true,
-	["event"] = "Conditions",
-	["unit"] = "player",
-	["spellIds"] = {
-	},
-	["subeventPrefix"] = "SPELL",
-	["use_absorbHealMode"] = true,
-	["use_unit"] = true,
-	["names"] = {
-	},
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	["activeTriggerMode"] = -10,
-	},
-	["displayText_format_p_time_mod_rate"] = true,
-	["displayText_format_p_time_legacy_floor"] = false,
-	["selfPoint"] = "BOTTOM",
-	["font"] = "Friz Quadrata TT",
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	},
-	["load"] = {
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	},
-	["fontSize"] = 12,
-	["source"] = "import",
-	["uid"] = "fACwZAwnBq1",
-	["shadowXOffset"] = 1,
-	["preferToUpdate"] = false,
-	["regionType"] = "text",
-	["parent"] = "All-round",
-	["displayText_format_p_format"] = "timed",
-	["conditions"] = {
-	},
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["displayText_format_p_time_precision"] = 1,
-	["justify"] = "LEFT",
-	["displayText"] = "",
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "ElvUI Player Name Strata",
-	["shadowYOffset"] = -1,
-	["frameStrata"] = 1,
-	["anchorFrameType"] = "SCREEN",
-	["xOffset"] = 0,
+	["width"] = 42,
+	["icon"] = true,
 	["config"] = {
 	},
-	["automaticWidth"] = "Auto",
-	["wordWrap"] = "WordWrap",
-	["shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
+	["inverse"] = false,
+	["keepAspectRatio"] = true,
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["variable"] = "show",
+	["value"] = 1,
 	},
-	["fixedWidth"] = 200,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	{
+	["value"] = true,
+	["property"] = "sub.3.glow",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = "<",
+	["variable"] = "expirationTime",
+	["value"] = "300",
+	},
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "sub.3.glow",
+	},
+	},
+	},
+	},
 	["information"] = {
 	["forceEvents"] = true,
 	},
-	["internalVersion"] = 73,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
 	},
 	["Greater Drums of War"] = {
 	["text2Point"] = "CENTER",
@@ -26253,7 +26872,7 @@ NUI.WeakAurasData = {
 	},
 	},
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -26404,7 +27023,7 @@ NUI.WeakAurasData = {
 	["text1FontFlags"] = "OUTLINE",
 	["text2Font"] = "Friz Quadrata TT",
 	["width"] = 32,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["useCooldownModRate"] = true,
 	["id"] = "Greater Drums of War",
 	["text2"] = "%p",
@@ -26510,7 +27129,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -26681,7 +27300,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
@@ -26716,404 +27335,11 @@ NUI.WeakAurasData = {
 	["cooldown"] = false,
 	["xOffset"] = 0,
 	},
-	["Mythical Mana Potion"] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = 3,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
-	},
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["text1Enabled"] = true,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
-	["load"] = {
-	["use_petbattle"] = false,
-	["class_and_spec"] = {
-	["multi"] = {
-	[260] = true,
-	[261] = true,
-	[263] = true,
-	[104] = true,
-	[253] = true,
-	[577] = true,
-	[268] = true,
-	[269] = true,
-	[254] = true,
-	[581] = true,
-	[255] = true,
-	[259] = true,
-	[103] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_vehicle"] = false,
-	["level_operator"] = {
-	">=",
-	},
-	["size"] = {
-	["multi"] = {
-	["scenario"] = true,
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["ratedpvp"] = true,
-	["party"] = true,
-	["none"] = true,
-	["flexible"] = true,
-	["twenty"] = true,
-	["pvp"] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_size"] = false,
-	["use_level"] = false,
-	["use_vehicleUi"] = false,
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["level"] = {
-	"51",
-	},
-	["use_never"] = false,
-	["zoneIds"] = "",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["text2FontSize"] = 24,
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["text2Enabled"] = false,
-	["config"] = {
-	},
-	["displayIcon"] = 236868,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Potions Tracker - Naowh",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["itemName"] = 57192,
-	["use_alwaystrue"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
-	["unit"] = "player",
-	["type"] = "item",
-	["use_unit"] = true,
-	["spellIds"] = {
-	},
-	["genericShowOn"] = "showAlways",
-	["names"] = {
-	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["unevent"] = "auto",
-	["itemName"] = 57192,
-	["use_genericShowOn"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["unit"] = "player",
-	["duration"] = "1",
-	["use_itemName"] = true,
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
-	["genericShowOn"] = "showOnCooldown",
-	["spellIds"] = {
-	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["use_unit"] = true,
-	["type"] = "item",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["use_exact_itemName"] = true,
-	["use_count"] = true,
-	["use_absorbMode"] = true,
-	["unit"] = "player",
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["subeventSuffix"] = "_CAST_START",
-	["subeventPrefix"] = "SPELL",
-	["event"] = "Item Count",
-	["spellIds"] = {
-	},
-	["names"] = {
-	},
-	["unevent"] = "auto",
-	["count"] = "1",
-	["use_itemName"] = true,
-	["duration"] = "1",
-	["use_unit"] = true,
-	["itemName"] = 57192,
-	["count_operator"] = ">=",
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t) return t[3] end",
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	["stickyDuration"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "CENTER",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
-	["text_color"] = {
-	0.55686274509804,
-	1,
-	0.61960784313725,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "BOTTOM",
-	["text_visible"] = true,
-	["text_fontType"] = "OUTLINE",
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_text_format_p_time_mod_rate"] = true,
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
-	["anchorXOffset"] = 0,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
-	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
-	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_format"] = "timed",
-	},
-	},
-	["height"] = 26,
-	["useAdjustededMax"] = false,
-	["text2Containment"] = "INSIDE",
-	["source"] = "import",
-	["text1Font"] = "Friz Quadrata TT",
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["cooldown"] = true,
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["uid"] = "YIe)TTMRVDB",
-	["text1Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["zoom"] = 0.3,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["text1"] = "%s",
-	["text1FontFlags"] = "OUTLINE",
-	["text2Font"] = "Friz Quadrata TT",
-	["width"] = 32,
-	["semver"] = "2.0.6",
-	["useCooldownModRate"] = true,
-	["id"] = "Mythical Mana Potion",
-	["text2"] = "%p",
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
-	["alpha"] = 1,
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	},
-	{
-	["value"] = 0,
-	["variable"] = "show",
-	},
-	},
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.5.text_visible",
-	},
-	},
-	},
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["useTooltip"] = false,
-	},
 	["All-round"] = {
 	["controlledChildren"] = {
-	"Saronite Bomb - Reminder",
-	"Global Thermal Sapper Charge - Reminder",
 	"Durability low",
 	"Target Castbar",
 	"Focus Castbar",
-	"Shadow Fissure",
 	"ElvUI Target Name Strata",
 	"ElvUI Player Name Strata",
 	},
@@ -27163,7 +27389,7 @@ NUI.WeakAurasData = {
 	},
 	["internalVersion"] = 73,
 	["selfPoint"] = "BOTTOMLEFT",
-	["version"] = 16,
+	["version"] = 20,
 	["load"] = {
 	["talent2"] = {
 	["multi"] = {
@@ -27226,7 +27452,7 @@ NUI.WeakAurasData = {
 	["xOffset"] = 0,
 	["groupIcon"] = 135733,
 	["borderOffset"] = 5,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["tocversion"] = 40400,
 	["id"] = "All-round",
 	["frameStrata"] = 2,
@@ -27328,7 +27554,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -27481,7 +27707,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
@@ -27513,107 +27739,45 @@ NUI.WeakAurasData = {
 	["cooldown"] = false,
 	["xOffset"] = 0,
 	},
-	["Mythical Healing Potion"] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = 3,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
-	},
+	["Battle Elixir: Elixir of the Cobra (+225 Critical Strike)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
 	["preferToUpdate"] = false,
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["text1Enabled"] = true,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
-	["load"] = {
-	["use_petbattle"] = false,
-	["class_and_spec"] = {
-	["multi"] = {
-	[260] = true,
-	[261] = true,
-	[263] = true,
-	[104] = true,
-	[253] = true,
-	[577] = true,
-	[268] = true,
-	[269] = true,
-	[254] = true,
-	[581] = true,
-	[255] = true,
-	[259] = true,
-	[103] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_vehicle"] = false,
-	["level_operator"] = {
-	">=",
-	},
-	["size"] = {
-	["multi"] = {
-	["scenario"] = true,
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["ratedpvp"] = true,
-	["party"] = true,
-	["none"] = true,
-	["flexible"] = true,
-	["twenty"] = true,
-	["pvp"] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_size"] = false,
-	["use_level"] = false,
-	["use_vehicleUi"] = false,
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["level"] = {
-	"51",
-	},
-	["use_never"] = false,
-	["zoneIds"] = "",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["text2FontSize"] = 24,
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["text2Enabled"] = false,
-	["config"] = {
-	},
-	["displayIcon"] = 236868,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Potions Tracker - Naowh",
 	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
+	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["itemName"] = 57191,
-	["use_alwaystrue"] = true,
+	["type"] = "aura2",
+	["auranames"] = {
+	"79477",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58092,
 	["subeventSuffix"] = "_CAST_START",
 	["use_genericShowOn"] = true,
 	["use_itemName"] = true,
 	["unit"] = "player",
 	["type"] = "item",
-	["use_unit"] = true,
 	["spellIds"] = {
 	},
 	["genericShowOn"] = "showAlways",
@@ -27628,62 +27792,392 @@ NUI.WeakAurasData = {
 	},
 	{
 	["trigger"] = {
-	["unevent"] = "auto",
-	["itemName"] = 57191,
-	["use_genericShowOn"] = true,
+	["type"] = "item",
+	["use_count"] = true,
 	["subeventSuffix"] = "_CAST_START",
-	["unit"] = "player",
-	["duration"] = "1",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
 	["use_itemName"] = true,
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
+	["unit"] = "player",
+	["itemName"] = 58092,
 	["genericShowOn"] = "showOnCooldown",
 	["spellIds"] = {
 	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["use_unit"] = true,
-	["type"] = "item",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["use_exact_itemName"] = true,
-	["use_count"] = true,
-	["use_absorbMode"] = true,
-	["unit"] = "player",
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["subeventSuffix"] = "_CAST_START",
 	["subeventPrefix"] = "SPELL",
 	["event"] = "Item Count",
-	["spellIds"] = {
-	},
+	["count"] = "0",
 	["names"] = {
 	},
-	["unevent"] = "auto",
-	["count"] = "1",
-	["use_itemName"] = true,
-	["duration"] = "1",
-	["use_unit"] = true,
-	["itemName"] = 57191,
-	["count_operator"] = ">=",
+	["count_operator"] = ">",
 	},
 	["untrigger"] = {
 	},
 	},
 	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t) return t[3] end",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
 	["progressSource"] = {
 	-1,
 	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463860",
+	["uid"] = "mgYfJUhNKJA",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Battle Elixir: Elixir of the Cobra (+225 Critical Strike)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
 	},
 	["animation"] = {
 	["start"] = {
@@ -27705,8 +28199,895 @@ NUI.WeakAurasData = {
 	["easeType"] = "none",
 	},
 	},
+	},
+	["Food: Crocolisk Au Gratin (+90 Expertise Rating and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["subeventSuffix"] = "_CAST_START",
+	["event"] = "Health",
+	["unit"] = "player",
+	["names"] = {
+	},
+	["auraspellids"] = {
+	"87637",
+	},
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
+	["subeventPrefix"] = "SPELL",
+	["auranames"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 62664,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "any",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["desc"] = "https://discord.gg/merfin",
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["cooldown"] = true,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["displayIcon"] = "350567",
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["keepAspectRatio"] = false,
+	["xOffset"] = 0,
+	["config"] = {
+	},
+	["useTooltip"] = false,
+	["url"] = "NaowhUI",
+	["cooldownTextDisabled"] = true,
+	["zoom"] = 0.3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Crocolisk Au Gratin (+90 Expertise Rating and +90 Stamina)",
+	["alpha"] = 1,
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["uid"] = "v0Hqdj(AJGh",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	},
+	["Battle Elixir: Impossible Accuracy (+225 Hit Rating)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79481",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58094,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58094,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "464029",
+	["uid"] = "TM0uzqo1I9o",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Battle Elixir: Impossible Accuracy (+225 Hit Rating)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	},
+	["Power Infusion (Active)"] = {
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["preferToUpdate"] = false,
+	["customText"] = "",
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["useGroup_count"] = false,
+	["matchesShowOn"] = "showOnActive",
+	["unit"] = "player",
+	["use_tooltip"] = false,
+	["debuffType"] = "HELPFUL",
+	["type"] = "aura2",
+	["use_debuffClass"] = false,
+	["auraspellids"] = {
+	"10060",
+	},
+	["auranames"] = {
+	"Pain Suppression",
+	},
+	["event"] = "Health",
+	["names"] = {
+	"Pain Suppression",
+	},
+	["subeventPrefix"] = "SPELL",
+	["custom_hide"] = "timed",
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
+	["combineMatches"] = "showLowest",
+	["subeventSuffix"] = "_CAST_START",
+	["buffShowOn"] = "showOnActive",
+	},
+	["untrigger"] = {
+	},
+	},
+	["activeTriggerMode"] = 1,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -27728,9 +29109,9 @@ NUI.WeakAurasData = {
 	["glowFrequency"] = 0.25,
 	["type"] = "subglow",
 	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
+	["glowType"] = "Pixel",
 	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
+	["glowYOffset"] = 1,
 	["glowColor"] = {
 	1,
 	1,
@@ -27738,62 +29119,32 @@ NUI.WeakAurasData = {
 	1,
 	},
 	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
+	["glowXOffset"] = 1,
 	["glowLength"] = 10,
-	["glow"] = false,
+	["glow"] = true,
 	["glowScale"] = 1,
 	["glowLines"] = 8,
 	["glowBorder"] = false,
 	},
 	{
 	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
+	["text_text"] = "%p",
 	["text_shadowColor"] = {
 	0,
 	0,
 	0,
 	1,
 	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "CENTER",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
-	["text_color"] = {
-	0.55686274509804,
-	1,
-	0.61960784313725,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "BOTTOM",
-	["text_visible"] = true,
-	["text_fontType"] = "OUTLINE",
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_text_format_p_time_mod_rate"] = true,
 	["text_selfPoint"] = "AUTO",
 	["text_automaticWidth"] = "Auto",
 	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
+	["text_text_format_p_time_legacy_floor"] = true,
 	["text_justify"] = "CENTER",
 	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
 	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
 	["text_color"] = {
 	1,
 	1,
@@ -27801,117 +29152,151 @@ NUI.WeakAurasData = {
 	1,
 	},
 	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
 	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
 	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
+	["text_shadowYOffset"] = 0,
 	["text_fontSize"] = 14,
 	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_format"] = "timed",
+	["text_text_format_p_time_format"] = 0,
 	},
 	},
 	["height"] = 26,
-	["useAdjustededMax"] = false,
-	["text2Containment"] = "INSIDE",
-	["source"] = "import",
-	["text1Font"] = "Friz Quadrata TT",
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["cooldown"] = true,
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["uid"] = "YxHVmXAZNIP",
-	["text1Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["zoom"] = 0.3,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
+	["width"] = 34,
+	["load"] = {
+	["talent2"] = {
+	["multi"] = {
 	},
 	},
-	["text1"] = "%s",
-	["text1FontFlags"] = "OUTLINE",
-	["text2Font"] = "Friz Quadrata TT",
-	["width"] = 32,
-	["semver"] = "2.0.6",
-	["useCooldownModRate"] = true,
-	["id"] = "Mythical Healing Potion",
-	["text2"] = "%p",
-	["frameStrata"] = 2,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
+	["use_never"] = false,
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	["DRUID"] = true,
+	["MONK"] = true,
+	["PRIEST"] = true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["race"] = {
+	["multi"] = {
+	},
+	},
+	["use_itemequiped"] = false,
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
 	["alpha"] = 1,
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	},
-	{
-	["value"] = 0,
-	["variable"] = "show",
-	},
-	},
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.5.text_visible",
-	},
-	},
-	},
-	},
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["parent"] = "Aura bar (Player buffs)",
 	["information"] = {
 	["forceEvents"] = true,
 	["ignoreOptionsEventErrors"] = true,
 	},
-	["useTooltip"] = false,
+	["displayIcon"] = 253400,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
 	},
-	["Kings"] = {
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	},
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["url"] = "NaowhUI",
+	["desaturate"] = false,
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = false,
+	["auto"] = true,
+	["tocversion"] = 40400,
+	["id"] = "Power Infusion (Active)",
+	["zoom"] = 0.3,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["keepAspectRatio"] = true,
+	["uid"] = "5ZRhUOrz7OL",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	["do_glow"] = false,
+	["do_custom"] = false,
+	["custom"] = "",
+	["do_sound"] = true,
+	["glow_action"] = "show",
+	["glow_type"] = "ACShine",
+	["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\bam.ogg",
+	["glow_frame"] = "WeakAuras:Pain Suppression (Active)",
+	},
+	["init"] = {
+	["custom"] = "",
+	["do_custom"] = false,
+	},
+	["finish"] = {
+	["do_sound"] = false,
+	},
+	},
+	["conditions"] = {
+	},
+	["cooldown"] = false,
+	["xOffset"] = 0,
+	},
+	["Flask: Flask of the Draconic Mind (+300 int)"] = {
 	["iconSource"] = 0,
 	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	0.4,
-	0.4,
-	0.4,
-	1,
-	},
+	["xOffset"] = 0,
 	["preferToUpdate"] = false,
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
@@ -27922,23 +29307,16 @@ NUI.WeakAurasData = {
 	{
 	["trigger"] = {
 	["type"] = "aura2",
-	["subeventSuffix"] = "_CAST_START",
-	["matchesShowOn"] = "showOnMissing",
+	["auranames"] = {
+	"79470",
+	},
 	["event"] = "Health",
 	["unit"] = "player",
-	["auranames"] = {
-	"25898",
-	"20217",
-	"72586",
-	"79061",
-	},
-	["useExactSpellId"] = false,
 	["spellIds"] = {
 	},
-	["useName"] = true,
-	["auraspellids"] = {
-	},
 	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
 	["names"] = {
 	},
 	["debuffType"] = "HELPFUL",
@@ -27946,13 +29324,58 @@ NUI.WeakAurasData = {
 	["untrigger"] = {
 	},
 	},
+	{
+	["trigger"] = {
+	["itemName"] = 58086,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58086,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
-	["keepAspectRatio"] = true,
+	["keepAspectRatio"] = false,
 	["selfPoint"] = "CENTER",
 	["desaturate"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -27970,33 +29393,107 @@ NUI.WeakAurasData = {
 	["border_edge"] = "Square Full White",
 	["type"] = "subborder",
 	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
 	},
-	["height"] = 36,
-	["width"] = 42,
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
 	["load"] = {
-	["size"] = {
-	["multi"] = {
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["twenty"] = true,
-	},
-	},
-	["instance_type"] = {
-	["multi"] = {
-	[176] = true,
-	[4] = true,
-	[194] = true,
-	[9] = true,
-	[5] = true,
-	[193] = true,
-	[3] = true,
-	[6] = true,
-	[175] = true,
-	[148] = true,
-	},
-	},
-	["class"] = {
+	["talent"] = {
 	["multi"] = {
 	},
 	},
@@ -28004,14 +29501,49 @@ NUI.WeakAurasData = {
 	["multi"] = {
 	},
 	},
-	["talent"] = {
+	["class"] = {
 	["multi"] = {
 	},
 	},
-	["use_instance_type"] = false,
+	["size"] = {
+	["multi"] = {
+	},
+	},
 	},
 	["url"] = "NaowhUI",
 	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463930",
+	["uid"] = "EH2SqmeFfGN",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Flask: Flask of the Draconic Mind (+300 int)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
 	},
@@ -28020,38 +29552,186 @@ NUI.WeakAurasData = {
 	["finish"] = {
 	},
 	},
-	["source"] = "import",
-	["cooldown"] = false,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["displayIcon"] = "Interface\\Icons\\Spell_Magic_MageArmor",
-	["zoom"] = 0.3,
-	["parent"] = "Reminder: buffs",
-	["config"] = {
-	},
-	["useCooldownModRate"] = true,
-	["auto"] = true,
-	["cooldownTextDisabled"] = false,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Kings",
-	["frameStrata"] = 1,
-	["alpha"] = 1,
-	["anchorFrameType"] = "SCREEN",
-	["authorOptions"] = {
-	},
-	["uid"] = "(nIVCKz)phl",
-	["inverse"] = false,
-	["xOffset"] = 0,
 	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
 	},
 	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
 	},
 	["animation"] = {
 	["start"] = {
@@ -28074,15 +29754,10 @@ NUI.WeakAurasData = {
 	},
 	},
 	},
-	["Wisdom"] = {
+	["Flask. Flask of Titanic Strength (+300 Strength)"] = {
 	["iconSource"] = 0,
 	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	0.4,
-	0.4,
-	0.4,
-	1,
-	},
+	["xOffset"] = 0,
 	["preferToUpdate"] = false,
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
@@ -28093,22 +29768,16 @@ NUI.WeakAurasData = {
 	{
 	["trigger"] = {
 	["type"] = "aura2",
-	["subeventSuffix"] = "_CAST_START",
-	["matchesShowOn"] = "showOnMissing",
+	["auranames"] = {
+	"79472",
+	},
 	["event"] = "Health",
 	["unit"] = "player",
-	["auranames"] = {
-	"48938",
-	"48936",
-	"58777",
-	},
-	["useExactSpellId"] = false,
 	["spellIds"] = {
 	},
-	["useName"] = true,
-	["auraspellids"] = {
-	},
 	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
 	["names"] = {
 	},
 	["debuffType"] = "HELPFUL",
@@ -28116,13 +29785,58 @@ NUI.WeakAurasData = {
 	["untrigger"] = {
 	},
 	},
+	{
+	["trigger"] = {
+	["itemName"] = 58088,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58088,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
-	["keepAspectRatio"] = true,
+	["keepAspectRatio"] = false,
 	["selfPoint"] = "CENTER",
 	["desaturate"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -28140,56 +29854,157 @@ NUI.WeakAurasData = {
 	["border_edge"] = "Square Full White",
 	["type"] = "subborder",
 	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
 	},
-	["height"] = 36,
-	["width"] = 42,
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
 	["load"] = {
-	["use_class"] = false,
-	["size"] = {
-	["multi"] = {
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["twenty"] = true,
-	},
-	},
 	["talent"] = {
 	["multi"] = {
-	},
-	},
-	["instance_type"] = {
-	["multi"] = {
-	[176] = true,
-	[4] = true,
-	[194] = true,
-	[9] = true,
-	[5] = true,
-	[193] = true,
-	[3] = true,
-	[6] = true,
-	[175] = true,
-	[148] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	["HUNTER"] = true,
-	["WARLOCK"] = true,
-	["SHAMAN"] = true,
-	["MAGE"] = true,
-	["DRUID"] = true,
-	["PALADIN"] = true,
-	["PRIEST"] = true,
 	},
 	},
 	["spec"] = {
 	["multi"] = {
 	},
 	},
-	["use_instance_type"] = false,
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
 	},
 	["url"] = "NaowhUI",
 	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463931",
+	["uid"] = "WXnkHnOoh83",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Flask. Flask of Titanic Strength (+300 Strength)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
 	},
@@ -28198,38 +30013,186 @@ NUI.WeakAurasData = {
 	["finish"] = {
 	},
 	},
-	["source"] = "import",
-	["cooldown"] = false,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["displayIcon"] = "Interface\\Icons\\Spell_Holy_SealOfWisdom",
-	["zoom"] = 0.3,
-	["parent"] = "Reminder: buffs",
-	["config"] = {
-	},
-	["useCooldownModRate"] = true,
-	["auto"] = true,
-	["cooldownTextDisabled"] = false,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Wisdom",
-	["frameStrata"] = 1,
-	["alpha"] = 1,
-	["anchorFrameType"] = "SCREEN",
-	["authorOptions"] = {
-	},
-	["uid"] = "BKbBA30Vf6K",
-	["inverse"] = false,
-	["xOffset"] = 0,
 	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
 	},
 	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
 	},
 	["animation"] = {
 	["start"] = {
@@ -28314,7 +30277,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -28469,7 +30432,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
@@ -28551,7 +30514,7 @@ NUI.WeakAurasData = {
 	["displayText_format_p_time_legacy_floor"] = false,
 	["selfPoint"] = "BOTTOM",
 	["font"] = "Friz Quadrata TT",
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -28615,7 +30578,7 @@ NUI.WeakAurasData = {
 	["easeType"] = "none",
 	},
 	},
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["tocversion"] = 40400,
 	["id"] = "ElvUI Target Name Strata",
 	["shadowYOffset"] = -1,
@@ -28712,7 +30675,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -28865,7 +30828,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
@@ -28893,6 +30856,467 @@ NUI.WeakAurasData = {
 	},
 	["cooldown"] = false,
 	["xOffset"] = 0,
+	},
+	["Battle Elixir: Elixir of the Master (+225 Mastery Rating)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79635",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58148,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58148,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463921",
+	["uid"] = "WK5hQ0tOU32",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Battle Elixir: Elixir of the Master (+225 Mastery Rating)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
 	},
 	["Adamantite Grenade"] = {
 	["text2Point"] = "CENTER",
@@ -29088,7 +31512,7 @@ NUI.WeakAurasData = {
 	},
 	},
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -29239,7 +31663,7 @@ NUI.WeakAurasData = {
 	["text1FontFlags"] = "OUTLINE",
 	["text2Font"] = "Friz Quadrata TT",
 	["width"] = 32,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["useCooldownModRate"] = true,
 	["id"] = "Adamantite Grenade",
 	["text2"] = "%p",
@@ -29284,6 +31708,162 @@ NUI.WeakAurasData = {
 	["ignoreOptionsEventErrors"] = true,
 	},
 	["useTooltip"] = false,
+	},
+	["Merfin: Equipped Items: Backend - DATA [Cataclysm]"] = {
+	["outline"] = "OUTLINE",
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["displayText_format_p_time_dynamic_threshold"] = 60,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["displayIcon"] = 134148,
+	["cooldownSwipe"] = true,
+	["displayText_format_p_time_format"] = 0,
+	["customTextUpdate"] = "event",
+	["automaticWidth"] = "Auto",
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	["custom"] = "local backend = aura_env\n\nlocal WA_MAIN_EVENT = 'WA_MERFIN_EQUIPPED_ITEMS'\n\nlocal SendEvent = function(event, ...)\n    WeakAuras.ScanEvents(WA_MAIN_EVENT, event, ...)\nend\n\n-- > DATA ARRAYS\n\nbackend.DATA = {}\n\n-- [itemId] = procId,\n-- [itemId] = { procId1, procId2 },\nbackend.DATA.ITEMS = {\n    -- trinkets < 80 lvl\n    [63241] = 93791,            -- Very Soft Pillow\n    [65931] = 93740,            -- Poison Cloud\n    [64597] = 95216,            -- Light's Embrace\n    [53597] = 93225,            -- Toy Windmill\n    [60856] = 84343,            -- Metro-Gnome Relationship Ray (NYI)\n    [57325] = 92044,            -- Bileberry Smelling Salts\n    [59617] = 92162,            -- Mentalist's Protective Bottle\n    [57346] = 90842,            -- Mindfletcher Talisman\n    [59661] = 90848,            -- Pelagic Prism\n    [59664] = 90848,            -- Pelagic Prism\n    [59792] = 91339,            -- Petrified Spider Crab\n    [59633] = 90855,            -- Severed Visionary Tentacle\n    [59630] = 90855,            -- Severed Visionary Tentacle\n    [59707] = 92045,            -- Wavespeaker's Focus\n    [59710] = 92045,            -- Wavespeaker's Focus\n    [59685] = 91344,            -- Kvaldir Battle Standard\n    [59689] = 91344,            -- Kvaldir Battle Standard\n    [61462] = 92056,            -- Gear Detector\n    [61433] = 92172,            -- Insignia of Diplomacy\n    [61429] = 90889,            -- Insignia of the Earthen Lord\n    [61448] = 91345,            -- Oremantle's Favor\n    [61411] = 90892,            -- Stonemother's Kiss\n    [63839] = 91080,            -- Harmlight Token\n    [63840] = 92071,            -- Juju of Nimbleness\n    [63838] = 91353,            -- Shrine-Cleansing Purifier\n    [63745] = 92188,            -- Za'brox's Lucky Tooth\n    [63742] = 92188,            -- Za'brox's Lucky Tooth\n    [65803] = 92164,            -- Harrison's Insignia of Panache\n    [58640] = 60215,            -- QA Combat Test Tank Trinket 2\n    [63632] = 93248,            -- Horn of the Traitor\n    [63633] = 93248,            -- Horn of the Traitor\n    [65923] = 93742,            -- Barov Servant Caller\n    [62978] = 95879,            -- Devourer's Stomach\n    [62966] = 95880,            -- Emissary's Watch\n    [62984] = 95881,            -- Omarion's Gift\n    [62995] = 95882,            -- Underlord's Mandible\n    [56847] = 78830,            -- Chelsea's Nightmare\n    [56849] = 78922,            -- Gus' First Aid Kit\n    [63192] = 95227,            -- Tosselwrench's Shrinker\n    [63194] = 95185,            -- Rhea's Last Egg\n    [65357] = 95224,            -- Rainbow Generator\n    [65286] = 25750,            -- Ancient Seed Casing\n    [63245] = 93749,            -- Lunk's Special Gear\n    [64627] = 93229,            -- Dying Breath\n    [69861] = 42292,            -- Medallion of the Alliance\n    [69862] = 42292,            -- Medallion of the Horde\n    \n    -- 80 lvl < trinkets < 85 lvl\n    [73147] = 102747,            -- Beastsoul Idol of Rage\n    [73150] = 102742,            -- Beastsoul Stone of Rage\n    [73109] = 102748,            -- Dreadsoul Idol of Destruction\n    [73106] = 102744,            -- Dreadsoul Stone of Destruction\n    [73157] = 102741,            -- Ebonsoul Defender's Idol\n    [73160] = 102742,            -- Ebonsoul Defender's Stone\n    [73155] = 102740,            -- Ebonsoul Idol of Battle\n    [73154] = 102742,            -- Ebonsoul Stone of Battle\n    [73104] = 102748,            -- Magesoul Idol of Destruction\n    [73101] = 102744,            -- Magesoul Stone of Destruction\n    [73119] = 102748,            -- Seraphic Idol of Destruction\n    [73114] = 102746,            -- Seraphic Idol of Wisdom\n    [73116] = 102744,            -- Seraphic Stone of Destruction\n    [73111] = 102744,            -- Seraphic Stone of Wisdom\n    [73124] = 102747,            -- Shadowstalking Idol of Rage\n    [73121] = 102776,            -- Shadowstalking Stone of Rage\n    [73137] = 102748,            -- Stormbinder Idol of Destruction\n    [73132] = 102747,            -- Stormbinder Idol of Rage\n    [73142] = 102780,            -- Stormbinder Idol of Wisdom\n    [73167] = 102741,            -- Valiant Defender's Idol\n    [73170] = 102742,            -- Valiant Defender's Stone\n    [73165] = 102740,            -- Valiant Idol of Battle\n    [73164] = 102742,            -- Valiant Stone of Battle\n    [73066] = 102748,            -- Wildsoul Idol of Destruction\n    [73068] = 102747,            -- Wildsoul Idol of Rage\n    [73129] = 102746,            -- Wildsoul Idol of Wisdom\n    [73065] = 102744,            -- Wildsoul Stone of Destruction\n    [73067] = 102742,            -- Wildsoul Stone of Rage\n    [73126] = 102744,            -- Wildsoul Stone of Wisdom\n    [73060] = 102741,            -- Zealous Defender's Idol\n    [73042] = 102742,            -- Zealous Defender's Stone\n    [73062] = 102740,            -- Zealous Idol of Battle\n    [73063] = 102746,            -- Zealous Idol of Wisdom\n    [73061] = 102742,            -- Zealous Stone of Battle\n    [73064] = 102744,            -- Zealous Stone of Wisdom\n    [66879] = 95870,            -- Bottled Lightning\n    [67152] = 95877,            -- Lady La-La's Singing Shell\n    [67101] = 95872,            -- Unquenchable Flame\n    [60403] = 82645,            -- Elementium Dragonling\n    [67037] = 95874,            -- Binding Promise\n    [55845] = 92186,            -- Heart of Thunder\n    [55814] = 91351,            -- Magnetite Mirror\n    [52199] = 73549,            -- Figurine - Demon Panther\n    [52354] = 73552,            -- Figurine - Dream Owl\n    [52352] = 73550,            -- Figurine - Earthen Guardian\n    [52353] = 73551,            -- Figurine - Jeweled Serpent\n    [52351] = 73522,            -- Figurine - King of Boars\n    [67118] = 95875,            -- Electrospark Heartstarter\n    [56136] = 91296,            -- Corrupted Egg Shell\n    [55881] = 92199,            -- Impetuous Query\n    [56132] = 91376,            -- Mark of Khardros\n    [56115] = 92098,            -- Skardyn's Grace\n    [55874] = 92085,            -- Tia's Grace\n    [63843] = 92071,            -- Blood-Soaked Ale Mug\n    [63841] = 91355,            -- Tank-Commander Insignia\n    [63842] = 90927,            -- World-Queller Focus\n    [65175] = 92336,            -- Baradin Footman's Tags\n    [65176] = 92337,            -- Baradin Grunt's Talisman\n    [66994] = 91341,            -- Soul's Anguish\n    [56462] = 90985,            -- Gale of Shadows Heroic\n    [56370] = 92187,            -- Heart of Thunder Heroic    \n    [56406] = 92200,            -- Impetuous Query Heroic\n    [56345] = 91352,            -- Magnetite Mirror Heroic\n    [56285] = 91340,            -- Might of the Ocean Heroic\n    [56440] = 92099,            -- Skardyn's Grace Heroic\n    [56394] = 92089,            -- Tia's Grace Heroic\n    [64687] = 92226,            -- Bloodthirsty Gladiator's Badge of Conquest\n    [64688] = 92225,            -- Bloodthirsty Gladiator's Badge of Dominance\n    [64689] = 92224,            -- Bloodthirsty Gladiator's Badge of Victory\n    [64740] = 92223,            -- Bloodthirsty Gladiator's Emblem of Cruelty\n    [64741] = 92223,            -- Bloodthirsty Gladiator's Emblem of Meditation\n    [64742] = 92223,            -- Bloodthirsty Gladiator's Emblem of Tenacity\n    [58184] = 91155,            -- Core of Ripeness\n    [62048] = 89181,            -- Darkmoon Car[Druid] Earthquake\n    [62050] = 89182,            -- Darkmoon Car[Druid] Tsunami\n    [58181] = 92104,            -- Fluid Death\n    -- [59461] = 91836,          -- Fury of Angerforge Merfin https://www.wowhead.com/cata/item=59461/fury-of-angerforge\n    -- [59514] = ,               -- Heart of Ignacious MERFIN https://www.wowhead.com/cata/item=59514/heart-of-ignacious\n    -- [59354] = ,               -- Jar of Ancient Remedies Merfin https://www.wowhead.com/cata/item=59354/jar-of-ancient-remedies\n    -- [64645] = ,               -- Tyrande's Favorite Doll Merfin https://www.wowhead.com/cata/item=64645/tyrandes-favorite-doll\n    [68712] = 91828,            -- Impatience of Youth\n    [58180] = 91810,            -- License to Slay\n    [68711] = 91192,            -- Mandala of Stirring Patterns\n    [62466] = 92222,            -- Mirror of Broken Images\n    [62471] = 92222,            -- Mirror of Broken Images\n    [68713] = 92222,            -- Mirror of Broken Images\n    [58183] = 91019,            -- Soul Casket\n    [68710] = 91047,            -- Stump of Time\n    [68709] = 92123,            -- Unsolvable Riddle\n    [62468] = 92123,            -- Unsolvable Riddle\n    [62463] = 92123,            -- Unsolvable Riddle\n    [59515] = 92213,            -- Vial of Stolen Memories\n    [74034] = 109994,           -- Pit Fighter\n    [71333] = 101285,           -- Bitterer Balebrew Charm\n    [71338] = 101285,           -- Brawler's Trophy\n    [71334] = 101286,            -- Bubblier Brightbrew Charm\n    [64789] = 42292,            -- Bloodthirsty Gladiator's Medallion of Cruelty\n    [64790] = 42292,            -- Bloodthirsty Gladiator's Medallion of Cruelty\n    [64791] = 42292,            -- Bloodthirsty Gladiator's Medallion of Meditation\n    [64792] = 42292,            -- Bloodthirsty Gladiator's Medallion of Meditation\n    [64793] = 42292,            -- Bloodthirsty Gladiator's Medallion of Tenacity\n    [64794] = 42292,            -- Bloodthirsty Gladiator's Medallion of Tenacity\n    [71335] = 101287,            -- Coren's Chilled Chromium Coaster\n    [70141] = 100322,            -- Dwyer's Caber\n    [71337] = 101291,            -- Mithril Stopwatch\n    [70142] = 100612,            -- Moonwell Chalice\n    [70143] = 101492,            -- Moonwell Phial\n    [71336] = 101289,            -- Petrified Pickled Egg\n    [70144] = 101515,            -- Ricket's Magnetic Fireball\n    [61033] = 84969,            -- Vicious Gladiator's Badge of Conquest\n    [61035] = 84968,            -- Vicious Gladiator's Badge of Dominance\n    [61034] = 84966,            -- Vicious Gladiator's Badge of Victory\n    [61027] = 84960,            -- Vicious Gladiator's Emblem of Accuracy\n    [61028] = 84960,            -- Vicious Gladiator's Emblem of Alacrity\n    [61026] = 84960,            -- Vicious Gladiator's Emblem of Cruelty\n    [61031] = 84960,            -- Vicious Gladiator's Emblem of Meditation\n    [61030] = 84960,            -- Vicious Gladiator's Emblem of Proficiency\n    [61029] = 84960,            -- Vicious Gladiator's Emblem of Prowess\n    [61032] = 84960,            -- Vicious Gladiator's Emblem of Tenacity\n    [60795] = 42292,            -- Vicious Gladiator's Medallion of Accuracy\n    [60802] = 42292,            -- Vicious Gladiator's Medallion of Accuracy\n    [60796] = 42292,            -- Vicious Gladiator's Medallion of Alacrity\n    [60803] = 42292,            -- Vicious Gladiator's Medallion of Alacrity\n    [60798] = 42292,            -- Vicious Gladiator's Medallion of Command\n    [60805] = 42292,            -- Vicious Gladiator's Medallion of Command\n    [60794] = 42292,            -- Vicious Gladiator's Medallion of Cruelty\n    [60801] = 42292,            -- Vicious Gladiator's Medallion of Cruelty\n    [60799] = 42292,            -- Vicious Gladiator's Medallion of Meditation\n    [60806] = 42292,            -- Vicious Gladiator's Medallion of Meditation\n    [60797] = 42292,            -- Vicious Gladiator's Medallion of Prowess\n    [60804] = 42292,            -- Vicious Gladiator's Medallion of Prowess\n    [60800] = 42292,            -- Vicious Gladiator's Medallion of Tenacity\n    [60807] = 42292,            -- Vicious Gladiator's Medallion of Tenacity\n    [70517] = 99711,            -- Vicious Gladiator's Badge of Conquest\n    [70518] = 99712,            -- Vicious Gladiator's Badge of Dominance\n    [70519] = 99713,            -- Vicious Gladiator's Badge of Victory\n    [70563] = 99714,            -- Vicious Gladiator's Emblem of Cruelty\n    [70564] = 99714,            -- Vicious Gladiator's Emblem of Meditation\n    [70565] = 99714,            -- Vicious Gladiator's Emblem of Tenacity\n    [70577] = 99718,            -- Vicious Gladiator's Insignia of Conquest\n    [70578] = 99720,            -- Vicious Gladiator's Insignia of Dominance\n    [70579] = 99722,            -- Vicious Gladiator's Insignia of Victory\n    [70603] = 42292,            -- Vicious Gladiator's Medallion of Cruelty\n    [70602] = 42292,            -- Vicious Gladiator's Medallion of Cruelty\n    [70604] = 42292,            -- Vicious Gladiator's Medallion of Meditation\n    [70605] = 42292,            -- Vicious Gladiator's Medallion of Meditation\n    [70606] = 42292,            -- Vicious Gladiator's Medallion of Tenacity\n    [70607] = 42292,            -- Vicious Gladiator's Medallion of Tenacity\n    -- [65110] = ,            -- MERFIN https://www.wowhead.com/cata/item=65110/heart-of-ignacious\n    -- [65029] = ,            -- MERFIN https://www.wowhead.com/cata/item=65029/jar-of-ancient-remedies\n    [65109] = 92357,            -- Vial of Stolen Memories\n    [69001] = 97009,            -- Ancient Petrified Seed\n    [68972] = 96934,            -- Apparatus of Khaz'goroth\n    [69002] = 97010,            -- Essence of the Eternal Flame\n    [69000] = 97008,            -- Fiery Quintessence\n    [72898] = 102662,            -- Foul Gift of the Demon Lord\n    [68926] = 96907,            -- Jaws of Defeat\n    [68982] = 96962,            -- Necromantic Focus\n    [72901] = 102660,            -- Rosary of Light\n    [68998] = 97007,            -- Rune of Zeth\n    [68915] = 96879,            -- Scales of Life\n    [68996] = 96988,            -- Stay of Execution\n    [72899] = 102664,            -- Varo'then's Brooch\n    [60233] = 91173,            -- Shard of Woe\n    [77985] = 109791,            -- Bottled Wishes\n    [77988] = 109778,            -- Fire of the Deep\n    [77983] = 109785,            -- Indomitable Pride\n    [77984] = 109714,            -- Kiroptyric Sigil\n    [77986] = 109791,            -- Reflection of the Light\n    [77987] = 109746,            -- Rotting Skull\n    [70399] = 99739,            -- Ruthless Gladiator's Badge of Conquest\n    [70401] = 99741,            -- Ruthless Gladiator's Badge of Dominance\n    [70400] = 99740,            -- Ruthless Gladiator's Badge of Victory\n    [70396] = 99737,            -- Ruthless Gladiator's Emblem of Cruelty\n    [70397] = 99737,            -- Ruthless Gladiator's Emblem of Meditation\n    [70398] = 99737,            -- Ruthless Gladiator's Emblem of Tenacity\n    [70404] = 99749,            -- Ruthless Gladiator's Insignia of Conquest\n    [70402] = 99743,            -- Ruthless Gladiator's Insignia of Dominance\n    [70403] = 99747,            -- Ruthless Gladiator's Insignia of Victory\n    [70393] = 42292,            -- Ruthless Gladiator's Medallion of Cruelty\n    [70390] = 42292,            -- Ruthless Gladiator's Medallion of Cruelty\n    [70394] = 42292,            -- Ruthless Gladiator's Medallion of Meditation\n    [70391] = 42292,            -- Ruthless Gladiator's Medallion of Meditation\n    [70392] = 42292,            -- Ruthless Gladiator's Medallion of Tenacity\n    [70395] = 42292,            -- Ruthless Gladiator's Medallion of Tenacity\n    [68995] = 96980,            -- Vessel of Acceleration\n    [77979] = 109721,            -- Vial of Shadows\n    [77977] = 109748,            -- Eye of Unmaking\n    [77976] = 109811,            -- Heart of Unliving\n    [77978] = 109780,            -- Resolve of Undying\n    [72304] = 102441,            -- Ruthless Gladiator's Badge of Conquest\n    [72448] = 102437,            -- Ruthless Gladiator's Badge of Dominance\n    [72450] = 102434,            -- Ruthless Gladiator's Badge of Victory\n    [72359] = 102438,            -- Ruthless Gladiator's Emblem of Cruelty\n    [72361] = 102438,            -- Ruthless Gladiator's Emblem of Meditation\n    [72360] = 102438,            -- Ruthless Gladiator's Emblem of Tenacity\n    [72410] = 42292,            -- Ruthless Gladiator's Medallion of Cruelty\n    [72411] = 42292,            -- Ruthless Gladiator's Medallion of Cruelty\n    [72414] = 42292,            -- Ruthless Gladiator's Medallion of Meditation\n    [72415] = 42292,            -- Ruthless Gladiator's Medallion of Meditation\n    [72412] = 42292,            -- Ruthless Gladiator's Medallion of Tenacity\n    [72413] = 42292,            -- Ruthless Gladiator's Medallion of Tenacity\n    [77975] = 109793,            -- Will of Unbinding\n    [77974] = 109717,            -- Wrath of Unchaining\n    [69199] = 97177,            -- Ancient Petrified Seed\n    [69113] = 97127,            -- Apparatus of Khaz'goroth\n    [69200] = 97179,            -- Essence of the Eternal Flame\n    [69198] = 97176,            -- Fiery Quintessence\n    [69111] = 97120,            -- Jaws of Defeat\n    [69139] = 97131,            -- Necromantic Focus\n    [69185] = 97146,            -- Rune of Zeth\n    [69109] = 97117,            -- Scales of Life\n    [69184] = 97145,            -- Stay of Execution\n    [77114] = 107948,            -- Bottled Wishes\n    [77117] = 77117,            -- Fire of the Deep\n    [77211] = 77211,            -- Indomitable Pride\n    [77113] = 107947,            -- Kiroptyric Sigil\n    [77115] = 107948,            -- Reflection of the Light\n    [77116] = 107949,            -- Rotting Skull\n    [69167] = 97142,            -- Vessel of Acceleration\n    [77207] = 107994,            -- Vial of Shadows\n    [73648] = 105132,            -- Cataclysmic Gladiator's Badge of Conquest\n    [73498] = 105134,            -- Cataclysmic Gladiator's Badge of Dominance\n    [73496] = 105133,            -- Cataclysmic Gladiator's Badge of Victory\n    [73593] = 105144,            -- Cataclysmic Gladiator's Emblem of Cruelty\n    [73591] = 105144,            -- Cataclysmic Gladiator's Emblem of Meditation\n    [73592] = 105144,            -- Cataclysmic Gladiator's Emblem of Tenacity\n    [73538] = 42292,            -- Cataclysmic Gladiator's Medallion of Cruelty\n    [73539] = 42292,            -- Cataclysmic Gladiator's Medallion of Cruelty\n    [73534] = 42292,            -- Cataclysmic Gladiator's Medallion of Meditation\n    [73535] = 42292,            -- Cataclysmic Gladiator's Medallion of Meditation\n    [73536] = 42292,            -- Cataclysmic Gladiator's Medallion of Tenacity\n    [73537] = 42292,            -- Cataclysmic Gladiator's Medallion of Tenacity\n    [77200] = 107966,            -- Eye of Unmaking\n    [77199] = 107962,            -- Heart of Unliving\n    [77201] = 107968,            -- Resolve of Undying\n    [77198] = 107970,            -- Will of Unbinding\n    [77197] = 107960,            -- Wrath of Unchaining\n    [78005] = 109792,            -- Bottled Wishes\n    [78008] = 109779,            -- Fire of the Deep\n    [78003] = 109786,            -- Indomitable Pride\n    [78004] = 109715,            -- Kiroptyric Sigil\n    [78006] = 109792,            -- Reflection of the Light\n    [78007] = 109747,            -- Rotting Skull\n    [77999] = 109724,            -- Vial of Shadows\n    [77997] = 109750,            -- Eye of Unmaking\n    [77996] = 109813,            -- Heart of Unliving\n    [77998] = 109782,            -- Resolve of Undying\n    [77995] = 109795,            -- Will of Unbinding\n    [77994] = 109719,            -- Wrath of Unchaining\n    \n    -- PVP Lvl 85\n    [61045] = 85027,            -- Vicious Gladiator's Insignia of Dominance\n    [61046] = 85032,            -- Vicious Gladiator's Insignia of Victory\n    [61047] = 85022,            -- Vicious Gladiator's Insignia of Conquest\n    [64762] = 92218,            -- Bloodthirsty Gladiator's Insignia of Dominance\n    [64763] = 92216,            -- Bloodthirsty Gladiator's Insignia of Victory\n    [64761] = 92220,            -- Bloodthirsty Gladiator's Insignia of Conquest\n    \n    -- Cataclysm Quest rewards\n    [65805] = 92166,            -- Harrison's Insignia of Panache\n    [65805] = 92166,            -- Schnotzz's Medallion of Command\n    [65804] = 92166,            -- Talisman of Sinister Order\n    [55237] = 92166,            -- Porcelain Crab\n    \n    -- Cataclysm Dungeon and World drops 308-333\n    [55251] = 91341,            -- Might of the Ocean\n    [55256] = 91135,            -- Sea Star\n    [55889] = 90989,            -- Anhuur's Hymnal\n    [55995] = 91147,            -- Blood of Isiset\n    [55868] = 91363,            -- Heart of Solace\n    [56102] = 92096,            -- Left Eye of Rajh\n    [56100] = 91370,            -- Right Eye of Rajh\n    [55879] = 90996,            -- Sorrowsong\n    [56121] = 92208,            -- Throngus's Finger\n    [66969] = 92052,            -- Heart of the Vile\n    [55795] = 92069,            -- Key to the Endless Chamber\n    [55816] = 92179,            -- Leaden Despair\n    [55854] = 91141,            -- Rainsong\n    [55819] = 91138,            -- Tear of Blood\n    [55810] = 90896,            -- Tendrils of Burrowing Dark\n    [55266] = 92052,            -- Grace of the Herald\n    [55787] = 90885,            -- Witching Hourglass\n    [56138] = 90953,            -- Gale of Shadows\n    \n    -- Cataclysm Dungeon 346\n    [56407] = 90992,            -- Anhuur's Hymnal\n    [56414] = 91149,            -- Blood of Isiset\n    [56295] = 92087,            -- Grace of the Herald\n    [56393] = 91364,            -- Heart of Solace\n    [56328] = 92091,            -- Key to the Endless Chamber\n    [56347] = 92184,            -- Leaden Despair\n    [56427] = 92094,            -- Left Eye of Rajh\n    [56280] = 92174,            -- Porcelain Crab\n    [56377] = 91143,            -- Rainsong\n    [56431] = 91368,            -- Right Eye of Rajh\n    [56400] = 91002,            -- Sorrowsong\n    [56351] = 91139,            -- Tear of Blood\n    [56339] = 90898,            -- Tendrils of Burrowing Dark\n    [56449] = 92205,            -- Throngus's Finger\n    [56320] = 90887,            -- Witching Hourglass\n    [56458] = 91374,            -- Mark of Khardros\n    [56290] = 91136,            -- Sea Star\n    [56463] = 91308,            -- Corrupted Egg Shell\n    \n    -- Cataclysm Raid 359\n    [59520] = 92108,            -- Unheeded Warning\n    [59519] = 91024,            -- Theralion's Mirror\n    [59332] = 92235,            -- Symbiotic Worm\n    [59441] = 92124,            -- Prestor's Talisman of Machination\n    [59224] = 91816,            -- Heart of Rage\n    [59500] = 91184,            -- Fall of Mortality\n    [59473] = 92126,            -- Essence of the Cyclone\n    [59506] = 91821,            -- Crushing Weight\n    [59326] = 91007,            -- Bell of Enraging Resonance\n    \n    -- Cataclysm 365\n    [71633] = 101515,            -- Aella's Bottle\n    \n    -- Cataclysm Raid 372\n    [65105] = 92320,            -- Theralion's Mirror\n    [65048] = 92355,            -- Symbiotic Worm\n    [65026] = 92349,            -- Prestor's Talisman of Machination\n    [65072] = 92345,            -- Heart of Rage\n    [65124] = 92332,            -- Fall of Mortality\n    [65140] = 92351,            -- Essence of the Cyclone\n    [65118] = 92342,            -- Crushing Weight\n    [65053] = 92318,            -- Bell of Enraging Resonance\n    \n    \n    -- Cataclysm Raid 384\n    [68927] = 96911,            -- The Hungerer\n    [68994] = 96977,            -- Matrix Restabilizer Haste\n    [68994] = 96978,            -- Matrix Restabilizer Crit\n    [68994] = 96979,            -- Matrix Restabilizer Mastery\n    [68983] = 96966,            -- Eye of Blazing Power   \n    [68981] = 96945,            -- Spidersilk Spindle\n    \n    -- Cataclysm Raid 397\n    [69112] = 97125,            -- The Hungerer\n    [69150] = 97139,            -- Matrix Restabilizer Haste\n    [69150] = 97140,            -- Matrix Restabilizer Crit\n    [69150] = 97141,            -- Matrix Restabilizer Mastery\n    [69149] = 97136,            -- Eye of Blazing Power    \n    [69138] = 97129,            -- Spidersilk Spindle\n    \n    -- Cataclysm Dungeon 378\n    [72897] = 102659,            -- Arrow of Time\n    [72900] = 102667,            -- Veil of Lies\n    [74035] = 109993,            -- Master Pit Fighter\n    \n    -- Dragon Soul Heroic 410\n    [77989] = 109804,            -- Seal of the Seven Signs\n    [77990] = 109776,            -- Soulshifter Vortex\n    [77991] = 109789,            -- Insignia of the Corrupted Mind\n    [77992] = 109744,            -- Creche of the Final Dragon\n    [77993] = 109711,            -- Starcatcher Compass\n    \n    -- Dragon Soul Normal 397\n    [77206] = 107986,            -- Soulshifter Vortex\n    [77202] = 107982,           -- Starcatcher Compass\n    [77203] = 107982,           -- Insignia of the Corrupted Mind\n    [77204] = 107982,           -- Seal of the Seven Signs\n    [77205] = 107988,            -- Creche of the Final Dragon\n    \n    -- Dragon Soul LFR 384\n    [77969] = 109802,            -- Seal of the Seven Signs\n    [77970] = 109774,            -- Soulshifter Vortex\n    [77971] = 109787,            -- Insignia of the Corrupted Mind\n    [77972] = 109742,            -- Creche of the Final Dragon\n    [77973] = 109709,            -- Starcatcher Compass\n    \n    -- Season 11 Arena 403\n    [73643] = 105135,            -- Cataclysmic Gladiator's Insignia of Conquest\n    [73497] = 105137,            -- Cataclysmic Gladiator's Insignia of Dominance\n    [73491] = 105139,            -- Cataclysmic Gladiator's Insignia of Victory\n    \n    -- Season 11 Arena 390\n    [72455] = 102432,            -- Ruthless Gladiator's Insignia of Victory\n    [72449] = 102435,            -- Ruthless Gladiator's Insignia of Dominance\n    [72309] = 102439,            -- Ruthless Gladiator's Insignia of Conquest\n    \n    -- Darkmoon Cards\n    [62047] = 89091,            -- Darkmoon Car[Druid] Volcano\n    \n    -- Tol Barad factions\n    [62467] = 91192,            -- Mandala of Stirring Patterns\n    [62472] = 91192,            -- Mandala of Stirring Patterns\n    [62465] = 91047,            -- Stump of Time\n    [62470] = 91047,            -- Stump of Time\n    \n    -- Valour Vendor 4.0\n    [58182] = 92233,            -- Bedrock Talisman\n    \n}\n\n-- [enchantId] = procId\nbackend.DATA.ENCHANTS = {\n    -- Cataclysm\n    [4099] = 74245,    -- Landslide\n    [4097] = 74241,    -- Power Torrent\n    [4083] = 74221,    -- Hurricane\n    [4084] = 74224,    -- Heartsong\n    [4115] = 75170,    -- Lightweave Embroidery\n    [4118] = 75176,    -- Swordguard Embroidery\n    [4116] = 75173,    -- Darkglow Embroidery\n    [4175] = 95712,    -- Gnomish X-Ray Scope\n    [4223] = 54861,    -- Nitroboosts\n}\n\n-- [gemId] = procId\nbackend.DATA.GEMS = {\n}\n\n-- [procId] = cooldown\nbackend.DATA.COOLDOWNS = {\n    -- Tol Barad factions\n    [91192] = 50,            -- Mandala of Stirring Patterns, confirm!\n    [91047] = 75,            -- Stump of Time\n    \n    -- Valour Vendor 4.0\n    [92233] = 30,            -- Bedrock Talisman\n    \n    -- Dragon Soul Heroic 410\n    [109804] = 90,            -- Seal of the Seven Signs\n    [109776] = 90,            -- Soulshifter Vortex\n    [109789] = 90,            -- Insignia of the Corrupted Mind\n    [109744] = 90,            -- Creche of the Final Dragon\n    [109711] = 90,            -- Starcatcher Compass\n    \n    -- Dragon Soul Normal 397\n    [107986] = 90,            -- Soulshifter Vortex\n    [107982] = 90,            -- Starcatcher Compass, Insignia of the Corrupted Mind, Seal of the Seven Signs\n    [107988] = 90,            -- Creche of the Final Dragon\n    \n    -- Dragon Soul LFR 384\n    [109802] = 90,            -- Seal of the Seven Signs\n    [109774] = 90,            -- Soulshifter Vortex\n    [109787] = 90,            -- Insignia of the Corrupted Mind\n    [109742] = 90,            -- Creche of the Final Dragon\n    [109709] = 90,            -- Starcatcher Compass\n    \n    -- Cataclysm Dungeon 378\n    [102659] = 50,            -- Arrow of Time\n    [102667] = 50,            -- Veil of Lies\n    [109993] = 50,            -- Master Pit Fighter\n    \n    -- Cataclysm Raid 397\n    [97125] = 60,            -- The Hungerer\n    [97139] = 105,            -- Matrix Restabilizer Haste\n    [97140] = 105,            -- Matrix Restabilizer Crit\n    [97141] = 105,            -- Matrix Restabilizer Mastery\n    [97129] = 60,            -- Spidersilk Spindle\n    \n    -- Cataclysm Raid 384\n    [96911] = 60,            -- The Hungerer\n    [96977] = 105,            -- Matrix Restabilizer Haste\n    [96978] = 105,            -- Matrix Restabilizer Crit\n    [96979] = 105,            -- Matrix Restabilizer Mastery\n    [96945] = 60,            -- Spidersilk Spindle\n    \n    -- Cataclysm Raid 372\n    [92320] = 50,            -- Theralion's Mirror, confirm!\n    [92355] = 30,            -- Symbiotic Worm\n    [92349] = 75,            -- Prestor's Talisman of Machination\n    [92345] = 90,            -- Heart of Rage\n    [92332] = 75,            -- Fall of Mortality, confirm!\n    [92351] = 50,            -- Essence of the Cyclone\n    [92342] = 75,            -- Crushing Weight, confirm!\n    [92318] = 100,            -- Bell of Enraging Resonance\n    \n    -- Cataclysm Raid 359\n    [91024] = 50,            -- Theralion's Mirror, confirm!\n    [92235] = 30,            -- Symbiotic Worm\n    [92124] = 75,            -- Prestor's Talisman of Machination\n    [91816] = 90,            -- Heart of Rage, confirm!\n    [91184] = 75,            -- Fall of Mortality, confirm!\n    [92126] = 50,            -- Essence of the Cyclone\n    [91821] = 75,            -- Crushing Weight, confirm!\n    [91007] = 100,            -- Bell of Enraging Resonance\n    [92108] = 50,            -- Unheeded Warning, confirm!\n    \n    -- Cataclysm Dungeon 346\n    [90992] = 50,            -- Anhuur's Hymnal\n    [91149] = 100,            -- Blood of Isiset\n    [92087] = 50,            -- Grace of the Herald\n    [91364] = 100,            -- Heart of Solace\n    [92091] = 75,            -- Key to the Endless Chamber\n    [92184] = 30,            -- Leaden Despair\n    [92094] = 50,            -- Left Eye of Rajh\n    [92174] = 80,            -- Porcelain Crab, confirm!\n    [91143] = 75,            -- Rainsong\n    [91368] = 50,            -- Right Eye of Rajh\n    [91002] = 10,            -- Sorrowsong, very spammy\n    [91139] = 75,            -- Tear of Blood\n    [90898] = 75,            -- Tendrils of Burrowing Dark\n    [92205] = 60,            -- Throngus's Finger\n    [90887] = 75,            -- Witching Hourglass\n    \n    -- Cataclysm Quest rewards\n    [92166] = 80,            -- Harrison's Insignia of Panache, Schnotzz's Medallion of Command, Talisman of Sinister Order, \n    -- Porcelain Crab\n    \n    -- PvP Lvl 85\n    [85027] = 50,            -- Vicious Gladiator's Insignia of Dominance\n    [85032] = 50,            -- Vicious Gladiator's Insignia of Victory\n    [85022] = 50,            -- Vicious Gladiator's Insignia of Conquest\n    [92218] = 50,            -- Bloodthirsty Gladiator's Insignia of Dominance\n    [92216] = 50,            -- Bloodthirsty Gladiator's Insignia of Victory\n    [92220] = 50,            -- Bloodthirsty Gladiator's Insignia of Conquest\n    \n    -- Cataclysm enchants\n    [74245] = 0,            -- Landslide\n    [74241] = 45,           -- Power Torrent\n    [74221] = 45,           -- Hurricane\n    [74224] = 20,            -- Heartsong\n    [95712] = 64,           -- Lightweave Embroidery\n    [75176] = 64,           -- Swordguard Embroidery\n    [75173] = 64,           -- Darkglow Embroidery\n    [95712] = 30,           -- Gnomish X-Ray Scope\n    \n    \n}\n\n-- [itemId] = extraProcId\nbackend.DATA.EXTRA_PROCS = {\n}\n\n-- [procId] = true (f.e. Balance Idols)\nbackend.DATA.NO_COOLDOWN_ITEMS = {\n}\n\n-- > EVENT HANDLERS\n\nlocal OnEvent = {}\n\nOnEvent['OPTIONS'] = function()\nend\n\nOnEvent['STATUS'] = function()\n    SendEvent('DATA_INIT', backend.DATA)\nend\n\nOnEvent[WA_MAIN_EVENT] = function(subEvent)\n    if subEvent == 'FORCED_TEST' then\n        SendEvent('DATA_INIT', backend.DATA)\n    end\nend\n\nbackend.OnBackendEvent = function(e, ...)\n    return OnEvent[e](...)\nend\n\n\n\n",
+	["do_custom"] = true,
+	},
+	["finish"] = {
+	},
+	},
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "custom",
+	["custom_type"] = "status",
+	["custom_hide"] = "timed",
+	["customVariables"] = "{\n    duration = true,\n    expirationTime = true,\n    \n    isProc = {\n        display = \"Has Proc Buff\",\n        type = \"bool\",\n    },\n    \n    itemId = {\n        display = \"Item ID\",\n        type = \"number\",\n    },\n    \n    itemType = {\n        display = \"Item Type\",\n        type = \"select\",\n        values = {\n            [\"INTERNAL\"] = \"Item w/ Internal CD\",\n            [\"ON_USE\"] = \"Item w/ Use CD\",\n            [\"NO_CD\"] = \"Item w/o CD\",\n        }\n    },\n}",
+	["event"] = "Health",
+	["subeventPrefix"] = "SPELL",
+	["unit"] = "player",
+	["custom"] = "function(...)\n    aura_env.OnBackendEvent(...)\nend",
+	["spellIds"] = {
+	},
+	["events"] = "STATUS",
+	["check"] = "event",
+	["names"] = {
+	},
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	["activeTriggerMode"] = -10,
+	},
+	["displayText_format_p_format"] = "timed",
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["xOffset"] = 0,
+	["displayText"] = "",
+	["shadowYOffset"] = -1,
+	["Homerqt"] = {
+	},
+	["parent"] = "[Merfin] Equipped Items (Cataclysm)",
+	["font"] = "Friz Quadrata TT",
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	},
+	["height"] = 40,
+	["cooldownEdge"] = false,
+	["load"] = {
+	["use_never"] = false,
+	["use_vehicleUi"] = false,
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["icon"] = true,
+	["displayText_format_p_time_mod_rate"] = true,
+	["fontSize"] = 12,
+	["source"] = "import",
+	["displayText_format_p_time_legacy_floor"] = false,
+	["shadowXOffset"] = 1,
+	["wordWrap"] = "WordWrap",
+	["preferToUpdate"] = false,
+	["conditions"] = {
+	},
+	["regionType"] = "text",
+	["desaturate"] = false,
+	["authorOptions"] = {
+	},
+	["url"] = "NaowhUI",
+	["selfPoint"] = "CENTER",
+	["information"] = {
+	["forceEvents"] = false,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayText_format_p_time_precision"] = 1,
+	["width"] = 40,
+	["uid"] = "Jg8B(wnUgGP",
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Merfin: Equipped Items: Backend - DATA [Cataclysm]",
+	["zoom"] = 0.3,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["justify"] = "LEFT",
+	["config"] = {
+	},
+	["inverse"] = true,
+	["useCooldownModRate"] = true,
+	["shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["fixedWidth"] = 200,
+	["cooldown"] = true,
+	["frameStrata"] = 1,
 	},
 	["Presence (DK)"] = {
 	["iconSource"] = -1,
@@ -29349,7 +31929,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -29503,7 +32083,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
@@ -29591,7 +32171,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -29762,7 +32342,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
@@ -29855,7 +32435,7 @@ NUI.WeakAurasData = {
 	["internalVersion"] = 73,
 	["selfPoint"] = "BOTTOM",
 	["font"] = "Naowh",
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -29921,7 +32501,7 @@ NUI.WeakAurasData = {
 	["preferToUpdate"] = false,
 	["width"] = 233.00004577637,
 	["xOffset"] = 0,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["uid"] = "32BfITbueJJ",
 	["justify"] = "LEFT",
 	["tocversion"] = 40400,
@@ -30172,7 +32752,7 @@ NUI.WeakAurasData = {
 	},
 	},
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -30323,7 +32903,7 @@ NUI.WeakAurasData = {
 	["text1FontFlags"] = "OUTLINE",
 	["text2Font"] = "Friz Quadrata TT",
 	["width"] = 32,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["useCooldownModRate"] = true,
 	["id"] = "Greater Drums of Speed",
 	["text2"] = "%p",
@@ -30369,7 +32949,7 @@ NUI.WeakAurasData = {
 	},
 	["useTooltip"] = false,
 	},
-	["Saronite Bomb - Reminder"] = {
+	["Hand of Freedom (Active)"] = {
 	["iconSource"] = -1,
 	["wagoID"] = "fFdRT46Na",
 	["color"] = {
@@ -30379,588 +32959,71 @@ NUI.WeakAurasData = {
 	1,
 	},
 	["preferToUpdate"] = false,
-	["yOffset"] = -234,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["cooldownEdge"] = false,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["itemName"] = 41119,
-	["subeventSuffix"] = "_CAST_START",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
-	["unit"] = "player",
-	["type"] = "item",
-	["spellIds"] = {
-	},
-	["genericShowOn"] = "showOnReady",
-	["names"] = {
-	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["type"] = "item",
-	["use_count"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["debuffType"] = "HELPFUL",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
-	["unit"] = "player",
-	["itemName"] = 41119,
-	["genericShowOn"] = "showOnReady",
-	["spellIds"] = {
-	},
-	["subeventPrefix"] = "SPELL",
-	["event"] = "Item Count",
-	["count"] = "1",
-	["names"] = {
-	},
-	["count_operator"] = ">=",
-	},
-	["untrigger"] = {
-	},
-	},
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["desaturate"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%s",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Friz Quadrata TT",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-	["text_fontSize"] = 12,
-	["anchorXOffset"] = 0,
-	["text_visible"] = true,
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	},
-	["height"] = 24,
-	["load"] = {
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["instance_type"] = {
-	["multi"] = {
-	[176] = true,
-	[4] = true,
-	[194] = true,
-	[9] = true,
-	[5] = true,
-	[193] = true,
-	[3] = true,
-	[6] = true,
-	[175] = true,
-	[148] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["use_combat"] = true,
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_instance_type"] = false,
-	},
-	["useAdjustededMax"] = false,
-	["uid"] = "e8Dw5FPOnU3",
-	["source"] = "import",
-	["parent"] = "All-round",
-	["url"] = "NaowhUI",
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["cooldown"] = false,
-	["xOffset"] = 0,
-	["authorOptions"] = {
-	},
-	["zoom"] = 0.3,
-	["frameStrata"] = 1,
-	["anchorFrameType"] = "SCREEN",
-	["cooldownTextDisabled"] = false,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Saronite Bomb - Reminder",
-	["useCooldownModRate"] = true,
-	["alpha"] = 1,
-	["width"] = 24,
-	["icon"] = true,
-	["config"] = {
-	},
-	["inverse"] = false,
-	["keepAspectRatio"] = false,
-	["conditions"] = {
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	},
-	["Offensive Items - Naowh"] = {
-	["grow"] = "UP",
-	["controlledChildren"] = {
-	"Nitro Boosts",
-	"Frag Belt",
-	"Greater Drums of War",
-	"Greater Drums of Battle",
-	"Greater Drums of Speed",
-	"Super Sapper Charge",
-	"Goblin Sapper Charge",
-	"Global Thermal Sapper Charge",
-	"Adamantite Grenade",
-	"Cobalt Frag Bomb",
-	"Saronite Bomb",
-	},
-	["borderBackdrop"] = "Blizzard Tooltip",
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "NaowhUI - UI Elements - Cataclysm",
-	["preferToUpdate"] = false,
-	["groupIcon"] = 237295,
-	["sortHybridTable"] = {
-	["Adamantite Grenade"] = false,
-	["Nitro Boosts"] = false,
-	["Greater Drums of Battle"] = false,
-	["Greater Drums of War"] = false,
-	["Greater Drums of Speed"] = false,
-	["Super Sapper Charge"] = false,
-	["Cobalt Frag Bomb"] = false,
-	["Goblin Sapper Charge"] = false,
-	["Saronite Bomb"] = false,
-	["Global Thermal Sapper Charge"] = false,
-	["Frag Belt"] = false,
-	},
-	["anchorPoint"] = "CENTER",
-	["arcLength"] = 360,
-	["fullCircle"] = true,
-	["rowSpace"] = 4,
-	["url"] = "NaowhUI",
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["unit"] = "player",
-	["type"] = "aura2",
-	["spellIds"] = {
-	},
-	["subeventSuffix"] = "_CAST_START",
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	["event"] = "Health",
-	["names"] = {
-	},
-	},
-	["untrigger"] = {
-	},
-	},
-	},
-	["columnSpace"] = 4,
-	["radius"] = 200,
-	["xOffset"] = 378,
-	["useLimit"] = false,
-	["align"] = "CENTER",
-	["rotation"] = 0,
-	["yOffset"] = -43,
-	["desc"] = "",
-	["stagger"] = 0,
-	["gridType"] = "RD",
-	["version"] = 16,
-	["subRegions"] = {
-	},
-	["alpha"] = 1,
-	["borderColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["load"] = {
-	["use_class"] = false,
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["zoneIds"] = "",
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	},
-	["space"] = 4,
-	["backdropColor"] = {
-	1,
-	1,
-	1,
-	0.5,
-	},
-	["background"] = "None",
-	["animate"] = false,
-	["internalVersion"] = 73,
-	["scale"] = 1,
-	["centerType"] = "LR",
-	["border"] = false,
-	["borderEdge"] = "Square Full White",
-	["stepAngle"] = 15,
-	["borderSize"] = 2,
-	["limit"] = 5,
-	["authorOptions"] = {
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	["uid"] = "gd8Abv2L6kf",
-	["constantFactor"] = "RADIUS",
-	["source"] = "import",
-	["borderOffset"] = 4,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Offensive Items - Naowh",
-	["backgroundInset"] = 0,
-	["gridWidth"] = 4,
-	["anchorFrameType"] = "SCREEN",
-	["regionType"] = "dynamicgroup",
-	["borderInset"] = 1,
-	["sort"] = "none",
-	["selfPoint"] = "BOTTOM",
-	["frameStrata"] = 2,
-	["conditions"] = {
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["config"] = {
-	},
-	},
-	["Healthstone "] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = -1,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
-	{
-	["type"] = "space",
-	["variableWidth"] = true,
-	["height"] = 1,
-	["width"] = 1,
-	["useHeight"] = false,
-	},
-	},
-	["preferToUpdate"] = false,
+	["customText"] = "",
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["useTooltip"] = false,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
-	["load"] = {
-	["use_spellknown"] = false,
-	["use_never"] = false,
-	["talent"] = {
-	["single"] = 106,
-	["multi"] = {
-	[28] = true,
-	[106] = true,
-	},
-	},
-	["zoneIds"] = "",
-	["class"] = {
-	["single"] = "DEATHKNIGHT",
-	["multi"] = {
-	["DEATHKNIGHT"] = true,
-	["HUNTER"] = true,
-	},
-	},
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	},
-	["text1FontFlags"] = "OUTLINE",
-	["regionType"] = "icon",
-	["text2FontSize"] = 24,
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["text2Enabled"] = false,
-	["config"] = {
-	},
-	["displayIcon"] = 236871,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Potions Tracker - Naowh",
 	["cooldownSwipe"] = true,
 	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
+	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["itemName"] = 36892,
+	["spellId"] = {
+	"1044",
+	},
 	["auranames"] = {
-	"54861",
+	"1044",
 	},
-	["use_genericShowOn"] = true,
-	["genericShowOn"] = "showAlways",
+	["duration"] = "8",
 	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["auraspellids"] = {
-	"35476",
-	"35135",
-	"35475",
-	"35478",
-	"35477",
-	},
+	["use_tooltip"] = false,
+	["useExactSpellId"] = true,
+	["custom_hide"] = "timed",
 	["names"] = {
+	"Blessing of Freedom",
 	},
-	["subeventSuffix"] = "_CAST_START",
-	["use_itemName"] = true,
 	["unit"] = "player",
-	["realSpellName"] = 0,
-	["use_spellName"] = true,
+	["subeventSuffix"] = "_CAST_SUCCESS",
+	["buffShowOn"] = "showOnActive",
 	["spellIds"] = {
+	1044,
 	},
-	["useExactSpellId"] = false,
-	["event"] = "Cooldown Progress (Item)",
-	["useName"] = true,
-	["use_track"] = true,
-	["spellName"] = 20572,
+	["type"] = "aura2",
+	["use_debuffClass"] = false,
+	["unevent"] = "timed",
+	["use_spellName"] = false,
+	["auraspellids"] = {
+	"1044",
+	},
+	["event"] = "Combat Log",
+	["useGroup_count"] = false,
+	["spellName"] = {
+	"Demoralizing Shout",
+	},
+	["use_spellId"] = true,
+	["name"] = "Blessing of Freedom",
+	["use_sourceUnit"] = true,
+	["matchesShowOn"] = "showOnActive",
+	["combineMatches"] = "showLowest",
+	["sourceUnit"] = "player",
+	["debuffType"] = "HELPFUL",
 	},
 	["untrigger"] = {
 	},
 	},
-	{
-	["trigger"] = {
-	["itemName"] = 5512,
-	["use_count"] = false,
-	["auranames"] = {
-	"54861",
-	},
-	["use_genericShowOn"] = true,
-	["genericShowOn"] = "showAlways",
-	["names"] = {
-	},
-	["unit"] = "player",
-	["debuffType"] = "HELPFUL",
-	["useExactSpellId"] = false,
-	["useName"] = true,
-	["auraspellids"] = {
-	"35476",
-	"35135",
-	"35475",
-	"35478",
-	"35477",
-	},
-	["subeventSuffix"] = "_CAST_START",
-	["spellName"] = 20572,
-	["count"] = "0",
-	["event"] = "Item Count",
-	["use_exact_itemName"] = false,
-	["realSpellName"] = 0,
-	["use_spellName"] = true,
-	["spellIds"] = {
-	},
-	["use_itemName"] = true,
-	["subeventPrefix"] = "SPELL",
-	["type"] = "item",
-	["use_track"] = true,
-	["count_operator"] = ">",
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t)\nreturn t[1]\nend",
-	["activeTriggerMode"] = -10,
+	["disjunctive"] = "any",
+	["activeTriggerMode"] = 1,
 	},
 	["internalVersion"] = 73,
 	["progressSource"] = {
 	-1,
 	"",
 	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["colorR"] = 1,
-	["duration_type"] = "seconds",
-	["alphaType"] = "straight",
-	["colorB"] = 1,
-	["colorG"] = 1,
-	["alphaFunc"] = "function(progress, start, delta)\n    return start + (progress * delta)\nend\n",
-	["use_alpha"] = false,
-	["type"] = "none",
-	["easeType"] = "none",
-	["colorA"] = 1,
-	["scaley"] = 1,
-	["alpha"] = 0,
-	["scalex"] = 1,
-	["y"] = 0,
-	["x"] = 0,
-	["easeStrength"] = 3,
-	["scaleType"] = "custom",
-	["scaleFunc"] = "function(progress, startX, startY, scaleX, scaleY)\n    return startX + (progress * (scaleX - startX)), startY + (progress * (scaleY - startY))\nend",
-	["rotate"] = 0,
-	["preset"] = "pulse",
-	["use_scale"] = true,
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
+	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -30977,77 +33040,26 @@ NUI.WeakAurasData = {
 	["border_visible"] = true,
 	["border_edge"] = "Square Full White",
 	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "CENTER",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
-	["text_color"] = {
-	0.55686274509804,
-	1,
-	0.61960784313725,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "BOTTOM",
-	["text_visible"] = true,
-	["text_fontType"] = "OUTLINE",
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
 	},
 	{
 	["text_shadowXOffset"] = 0,
 	["text_text"] = "%p",
-	["text_text_format_p_time_mod_rate"] = true,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
 	["text_selfPoint"] = "AUTO",
 	["text_automaticWidth"] = "Auto",
 	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
+	["text_text_format_p_time_legacy_floor"] = true,
 	["text_justify"] = "CENTER",
 	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
 	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
 	["text_color"] = {
 	1,
 	1,
@@ -31055,221 +33067,173 @@ NUI.WeakAurasData = {
 	1,
 	},
 	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
 	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
 	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
+	["text_shadowYOffset"] = 0,
 	["text_fontSize"] = 14,
 	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_format"] = "timed",
+	["text_text_format_p_time_format"] = 0,
 	},
 	},
 	["height"] = 26,
-	["useAdjustededMax"] = false,
-	["text2"] = "%p",
-	["text2Containment"] = "INSIDE",
-	["text1Color"] = {
-	1,
-	1,
-	1,
-	1,
+	["width"] = 34,
+	["load"] = {
+	["talent2"] = {
+	["multi"] = {
 	},
-	["cooldown"] = true,
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
 	},
-	["anchorFrameParent"] = false,
+	["talent"] = {
+	["single"] = 9,
+	["multi"] = {
+	[9] = true,
+	},
+	},
+	["class"] = {
+	["single"] = "WARRIOR",
+	["multi"] = {
+	["WARRIOR"] = true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["race"] = {
+	["multi"] = {
+	},
+	},
+	["use_itemequiped"] = false,
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["single"] = 3,
+	["multi"] = {
+	[2] = true,
+	[3] = true,
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
 	["alpha"] = 1,
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text2Font"] = "Friz Quadrata TT",
-	["xOffset"] = 0,
+	["useAdjustededMax"] = false,
 	["source"] = "import",
-	["text1"] = "%s",
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayIcon"] = 253400,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	},
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["url"] = "NaowhUI",
+	["desaturate"] = false,
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = false,
+	["auto"] = true,
+	["tocversion"] = 40400,
+	["id"] = "Hand of Freedom (Active)",
+	["zoom"] = 0.3,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["keepAspectRatio"] = true,
+	["uid"] = "vct(N6Ypff8",
+	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
+	["do_glow"] = false,
+	["custom"] = "",
+	["do_custom"] = false,
 	},
 	["init"] = {
-	["custom"] = "\n\n",
+	["custom"] = "",
 	["do_custom"] = false,
 	},
 	["finish"] = {
 	},
 	},
-	["width"] = 32,
-	["text1Enabled"] = true,
-	["semver"] = "2.0.6",
-	["frameStrata"] = 4,
-	["id"] = "Healthstone ",
-	["uid"] = "ih7f0j02ZSY",
-	["useCooldownModRate"] = true,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["zoom"] = 0.3,
-	["inverse"] = true,
-	["text1Font"] = "Friz Quadrata TT",
 	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = -2,
-	["op"] = "",
-	["variable"] = "OR",
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["op"] = "==",
-	["variable"] = "value",
-	["value"] = "0",
 	},
-	{
-	["trigger"] = 1,
-	["variable"] = "onCooldown",
-	["value"] = 1,
+	["cooldown"] = false,
+	["xOffset"] = 0,
 	},
-	},
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	{
-	["value"] = 0.85,
-	["property"] = "alpha",
-	},
-	},
-	},
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["useAdjustededMin"] = false,
-	},
-	["Cobalt Frag Bomb"] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = 3,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
-	},
+	["Food: Beer-Basted Crocolisk (+90 Strength and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
 	["preferToUpdate"] = false,
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["text1Enabled"] = true,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
-	["load"] = {
-	["use_petbattle"] = false,
-	["class_and_spec"] = {
-	["multi"] = {
-	[260] = true,
-	[261] = true,
-	[263] = true,
-	[104] = true,
-	[253] = true,
-	[577] = true,
-	[268] = true,
-	[269] = true,
-	[254] = true,
-	[581] = true,
-	[255] = true,
-	[259] = true,
-	[103] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_vehicle"] = false,
-	["level_operator"] = {
-	">=",
-	},
-	["size"] = {
-	["multi"] = {
-	["scenario"] = true,
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["ratedpvp"] = true,
-	["party"] = true,
-	["none"] = true,
-	["flexible"] = true,
-	["twenty"] = true,
-	["pvp"] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_size"] = false,
-	["use_level"] = false,
-	["use_vehicleUi"] = false,
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["level"] = {
-	"51",
-	},
-	["use_never"] = false,
-	["zoneIds"] = "",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["text2FontSize"] = 24,
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["text2Enabled"] = false,
-	["config"] = {
-	},
-	["displayIcon"] = 135826,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Offensive Items - Naowh",
 	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
+	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["itemName"] = 40771,
-	["use_alwaystrue"] = true,
+	["type"] = "aura2",
 	["subeventSuffix"] = "_CAST_START",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
+	["event"] = "Health",
 	["unit"] = "player",
-	["type"] = "item",
-	["use_unit"] = true,
-	["spellIds"] = {
-	},
-	["genericShowOn"] = "showAlways",
 	["names"] = {
 	},
-	["event"] = "Cooldown Progress (Item)",
+	["auraspellids"] = {
+	"87584",
+	},
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
 	["subeventPrefix"] = "SPELL",
+	["auranames"] = {
+	},
 	["debuffType"] = "HELPFUL",
 	},
 	["untrigger"] = {
@@ -31277,349 +33241,23 @@ NUI.WeakAurasData = {
 	},
 	{
 	["trigger"] = {
-	["unevent"] = "auto",
-	["itemName"] = 40771,
-	["use_genericShowOn"] = true,
+	["type"] = "item",
+	["use_count"] = true,
 	["subeventSuffix"] = "_CAST_START",
-	["unit"] = "player",
-	["duration"] = "1",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
 	["use_itemName"] = true,
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
+	["unit"] = "player",
+	["itemName"] = 62665,
 	["genericShowOn"] = "showOnCooldown",
 	["spellIds"] = {
 	},
-	["event"] = "Cooldown Progress (Item)",
 	["subeventPrefix"] = "SPELL",
-	["use_unit"] = true,
-	["type"] = "item",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["itemName"] = 40771,
-	["use_count"] = true,
-	["duration"] = "1",
-	["unit"] = "player",
-	["use_includeCharges"] = false,
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["subeventSuffix"] = "_CAST_START",
-	["subeventPrefix"] = "SPELL",
-	["use_itemName"] = true,
-	["spellIds"] = {
-	},
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
-	["count"] = "1",
-	["use_exact_itemName"] = true,
-	["unevent"] = "auto",
 	["event"] = "Item Count",
-	["use_unit"] = true,
-	["count_operator"] = ">=",
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t) return t[3] end",
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	["stickyDuration"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
-	["text_color"] = {
-	0.55686274509804,
-	1,
-	0.61960784313725,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "OUTER_RIGHT",
-	["text_visible"] = true,
-	["text_fontType"] = "OUTLINE",
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_text_format_p_time_mod_rate"] = true,
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
-	["anchorXOffset"] = 0,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
-	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
-	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_format"] = "timed",
-	},
-	},
-	["height"] = 26,
-	["useAdjustededMax"] = false,
-	["text2Containment"] = "INSIDE",
-	["source"] = "import",
-	["text1Font"] = "Friz Quadrata TT",
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["cooldown"] = true,
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["uid"] = "qxAlUleddys",
-	["text1Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["zoom"] = 0.3,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["text1"] = "%s",
-	["text1FontFlags"] = "OUTLINE",
-	["text2Font"] = "Friz Quadrata TT",
-	["width"] = 32,
-	["semver"] = "2.0.6",
-	["useCooldownModRate"] = true,
-	["id"] = "Cobalt Frag Bomb",
-	["text2"] = "%p",
-	["frameStrata"] = 4,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
-	["alpha"] = 1,
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	},
-	{
-	["value"] = 0,
-	["variable"] = "show",
-	},
-	},
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.5.text_visible",
-	},
-	},
-	},
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["useTooltip"] = false,
-	},
-	["Flask"] = {
-	["iconSource"] = 0,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Reminder: buffs",
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["useName"] = true,
-	["auranames"] = {
-	"28520",
-	"60347",
-	"53755",
-	"53760",
-	"53758",
-	"67016",
-	"54212",
-	"17627",
-	"53749",
-	},
-	["debuffType"] = "HELPFUL",
-	["event"] = "Health",
-	["subeventPrefix"] = "SPELL",
-	["unit"] = "player",
-	["rem"] = "300",
-	["spellIds"] = {
-	},
-	["type"] = "aura2",
-	["remOperator"] = "<",
-	["subeventSuffix"] = "_CAST_START",
+	["count"] = "0",
 	["names"] = {
 	},
-	["useRem"] = true,
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["type"] = "aura2",
-	["auranames"] = {
-	"28520",
-	"60347",
-	"53755",
-	"53760",
-	"53758",
-	"67016",
-	"54212",
-	"17627",
-	"53749",
-	},
-	["matchesShowOn"] = "showOnMissing",
-	["event"] = "Health",
-	["unit"] = "player",
-	["spellIds"] = {
-	},
-	["names"] = {
-	},
-	["useName"] = true,
-	["subeventPrefix"] = "SPELL",
-	["subeventSuffix"] = "_CAST_START",
-	["debuffType"] = "HELPFUL",
+	["count_operator"] = ">",
 	},
 	["untrigger"] = {
 	},
@@ -31628,10 +33266,14 @@ NUI.WeakAurasData = {
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
-	["keepAspectRatio"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
 	["selfPoint"] = "CENTER",
 	["desaturate"] = false,
-	["version"] = 16,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -31650,49 +33292,119 @@ NUI.WeakAurasData = {
 	["type"] = "subborder",
 	},
 	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 1,
-	["glowColor"] = {
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
 	1,
 	1,
 	1,
 	1,
 	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 1,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
 	},
 	},
-	["height"] = 36,
+	["height"] = 26,
+	["width"] = 32,
 	["load"] = {
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["use_never"] = false,
-	["instance_type"] = {
-	["multi"] = {
-	[176] = true,
-	[4] = true,
-	[194] = true,
-	[9] = true,
-	[5] = true,
-	[193] = true,
-	[3] = true,
-	[6] = true,
-	[175] = true,
-	[148] = true,
-	},
-	},
-	["class"] = {
+	["talent"] = {
 	["multi"] = {
 	},
 	},
@@ -31700,45 +33412,59 @@ NUI.WeakAurasData = {
 	["multi"] = {
 	},
 	},
-	["talent"] = {
+	["class"] = {
 	["multi"] = {
 	},
 	},
-	["use_instance_type"] = false,
+	["size"] = {
+	["multi"] = {
 	},
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
 	},
+	},
+	["desc"] = "https://discord.gg/merfin",
 	["useAdjustededMax"] = false,
-	["config"] = {
-	},
 	["source"] = "import",
-	["authorOptions"] = {
-	},
 	["cooldown"] = true,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["displayIcon"] = "350565",
 	["useAdjustededMin"] = false,
 	["regionType"] = "icon",
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["displayIcon"] = 236877,
+	["keepAspectRatio"] = false,
 	["xOffset"] = 0,
-	["cooldownEdge"] = false,
-	["anchorFrameType"] = "SCREEN",
-	["useCooldownModRate"] = true,
+	["config"] = {
+	},
+	["useTooltip"] = false,
+	["url"] = "NaowhUI",
+	["cooldownTextDisabled"] = true,
 	["zoom"] = 0.3,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["tocversion"] = 40400,
-	["id"] = "Flask",
-	["frameStrata"] = 1,
+	["id"] = "Food: Beer-Basted Crocolisk (+90 Strength and +90 Stamina)",
 	["alpha"] = 1,
-	["width"] = 42,
-	["cooldownTextDisabled"] = false,
-	["uid"] = "1x03ogWLr8I",
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["uid"] = "wJQuM12Ch50",
 	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
@@ -31752,37 +33478,1164 @@ NUI.WeakAurasData = {
 	{
 	["check"] = {
 	["trigger"] = 2,
-	["variable"] = "show",
-	["value"] = 1,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
 	},
 	["changes"] = {
 	{
-	["value"] = true,
-	["property"] = "desaturate",
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
 	},
-	{
-	["value"] = true,
-	["property"] = "sub.3.glow",
+	["property"] = "color",
 	},
 	},
 	},
 	{
 	["check"] = {
 	["trigger"] = 1,
-	["op"] = "<",
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
 	["variable"] = "expirationTime",
-	["value"] = "300",
+	["value"] = "10",
 	},
 	["changes"] = {
 	{
-	["value"] = true,
-	["property"] = "sub.3.glow",
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
 	},
 	},
 	},
 	},
 	["information"] = {
-	["forceEvents"] = true,
+	},
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	},
+	["Merfin: Equipped Items: Backend - Handlers"] = {
+	["outline"] = "OUTLINE",
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["displayText_format_p_time_dynamic_threshold"] = 60,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["displayIcon"] = 134148,
+	["cooldownSwipe"] = true,
+	["displayText_format_p_time_format"] = 0,
+	["customTextUpdate"] = "event",
+	["automaticWidth"] = "Auto",
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	["custom"] = "--> We'll initialize DATA after handling an event from DATA WA\nlocal DATA = {}\n\nlocal INVALID_EVENTS = {\n    SPELL_DISPEL            = true,\n    SPELL_DISPEL_FAILED     = true,\n    SPELL_STOLEN            = true,\n    SPELL_AURA_BROKEN       = true,\n    SPELL_AURA_BROKEN_SPELL = true,\n    SPELL_CAST_FAILED       = true,\n    SPELL_PERIODIC_HEAL     = true,\n    SPELL_CAST_SUCCESS      = true,\n}\n\nlocal debug = aura_env.config.debug\nlocal debugPrint = function(...)\n    if not debug then return end\n    print(...)\nend\n\n\nlocal copyData = function(linked_data, handlers_data)\n    for i, v in pairs(linked_data) do\n        if not handlers_data[i] then\n            handlers_data[i] = v\n        end\n    end\nend\n\nlocal setData = function(link_to_data)\n    if link_to_data then\n        local data_tables = { 'ITEMS', 'COOLDOWNS', 'GEMS', 'ENCHANTS', 'NO_COOLDOWN_ITEMS', 'EXTRA_PROCS' }\n        for _, tName in ipairs(data_tables) do\n            if link_to_data[tName] then\n                DATA[tName] = DATA[tName] or {}\n                copyData(link_to_data[tName] , DATA[tName])\n            end\n        end\n        return true\n    end\nend\n\nlocal getData = function()\n    return DATA\nend\n\n--> Putting Global functions to local scope\nlocal tinsert, stformat, substr = table.insert, string.format, string.sub\n\n\n--> Setting constants\nlocal WA_MAIN_EVENT = 'WA_MERFIN_EQUIPPED_ITEMS'\nlocal HEX_NO_GUID = \"0x0000000000000000\"\nlocal MY_GUID = UnitGUID(\"player\")\n\nlocal backend = aura_env\n\n-- Main Table with full info about item\nbackend.items = {\n    --[[\n    [itemId] = {\n        equipmentSlot = number,\n        backend.procs = table,\n        isProc = boolean,\n        itemTexture = string, (constant)\n        procTexture = string,\n        stacks = number,\n        cooldown = number, (constant)\n        duration = number, (as cooldown duration)\n        expirationTime = number, (as cooldown expTime)\n        procDuration = number, (as proc duration)\n        procExpirationTime = number, (as proc expTime)\n        isEnchant = boolean,\n        extraProcId = number,\n        enchantId = number,\n        metaGem = number,\n    }\n    ]]\n}\n\n-- Secondary Table with Equipment Slots ids info\nbackend.equipmentSlots = {\n    -- [equipmentSlot] = itemId,\n}\n\n-- Secondary Table with Main Procs ids info\nbackend.procs = {\n    -- [procId] = itemId,\n}\n\n-- Secondary Table with Extra Procs ids info\nbackend.extraProcs = {\n    -- [extraProcId] = itemId,\n}\n\n--> :Base[Druid] helpful funcs\n\nlocal SendEvent = function(event, ...)\n    WeakAuras.ScanEvents(WA_MAIN_EVENT, event, ...)\nend\n\n-- @returns table - numbers\nlocal GetValuesTable = function(value)\n    local t = {}\n    if type(value) == \"table\" then\n        for _, v in pairs(value) do\n            tinsert(t, v)\n        end\n    elseif type(value) ~= \"table\" then\n        tinsert(t, value)\n    end\n    return t\nend\n\n-- @returns number - itemId, number - enchantId\nlocal GetSlotItemInfo = function(slotID)\n    -- Get the item link of the equipped item in the specified slot\n    local itemLink = GetInventoryItemLink(\"player\", slotID)\n    if itemLink then\n        -- Extract the item string from the item link\n        local itemString = string.match(itemLink, \"item:([%-?%d:]+)\")\n        if itemString then\n            -- Split the item string into its components\n            local itemComponents = {strsplit(\":\", itemString)}\n            -- The 1st component of the item string is the item ID\n            local itemID = tonumber(itemComponents[1])\n            -- The 2nd component of the item string is the enchant ID\n            local enchantID = tonumber(itemComponents[2])\n            -- The 14th component of the item string is the meta gem ID\n            local metaGemID = tonumber(itemComponents[14])\n            local tinkerId = tonumber(itemComponents[10])\n            return itemID, enchantID, metaGemID, tinkerId\n        end\n    end\n    return nil, nil, nil\nend\n\n\n\n--> Helpful funcs that work with frontend data tables\n\n-- @returns string - custom type names (\"NO_CD\", \"ON_USE\", \"INTERNAL\"), number - cooldown time \nlocal GetCooldownInfo = function(equipmentSlot, procId)\n    local _,_, enable = GetInventoryItemCooldown(\"player\", equipmentSlot)\n    \n    if enable == 1 then\n        return \"ON_USE\", nil\n    end\n    \n    if enable == 0 then\n        local cooldown = DATA.NO_COOLDOWN_ITEMS[procId]\n        \n        if cooldown then\n            return \"NO_CD\", 0\n        end\n        \n        return \"INTERNAL\", DATA.COOLDOWNS[procId] or 45\n    end\nend\n\nlocal OnUse = function(equipmentSlot, itemId)\n    local startTime, duration = GetInventoryItemCooldown(\"player\", equipmentSlot)\n    if duration > 0 then\n        local expirationTime = startTime + duration\n        if expirationTime > backend.items[itemId].expirationTime then\n            backend.items[itemId].duration = duration\n            backend.items[itemId].expirationTime = expirationTime\n            return true\n        end\n    end\nend\n\nlocal OnExtraProc = function(itemId, extraProcId)\n    local _,_, stacks = WA_GetUnitBuff(\"player\", extraProcId)\n    backend.items[itemId].stacks = stacks\nend\n\nlocal OnProc = function(equipmentSlot, itemId, spellId)\n    \n    local _, icon, stacks, _, buffDuration, buffExpirationTime = WA_GetUnitBuff(\"player\", spellId)\n    \n    if backend.items[itemId].type == \"INTERNAL\" then        \n        local cooldown = backend.items[itemId].cooldown\n        backend.items[itemId].duration = cooldown\n        backend.items[itemId].expirationTime = buffExpirationTime - buffDuration + cooldown\n    end\n    \n    backend.items[itemId].isProc = true\n    backend.items[itemId].procTexture = icon\n    backend.items[itemId].procDuration = buffDuration\n    backend.items[itemId].procExpirationTime = buffExpirationTime\n    backend.items[itemId].stacks = stacks\n    SendEvent('ITEM_CHANGED', equipmentSlot)\nend\n\nlocal InitEquipmentSlot = function(equipmentSlot)\n    local itemId, enchantId, metaGem = GetSlotItemInfo(equipmentSlot)\n    if itemId and equipmentSlot == 6 then\n        -- If Engineering is learnt (slight work around)\n        if WeakAuras.IsSpellKnownForLoad(51306) then\n            enchantId = 4223\n        end\n    end\n    -- Initialize if new item was equipped or the item changed its equiptment slot\n    if itemId then\n        local data = getData()\n        local procId = data.ITEMS[itemId] or data.ENCHANTS[enchantId] or data.GEMS[metaGem]\n        -- If the item has any proc or cooldown mechanic \n        if procId or select(3, GetInventoryItemCooldown(\"player\", equipmentSlot)) == 1 then\n            backend.equipmentSlots[equipmentSlot] = itemId\n            -- If item is not new, just update his equipment slot\n            if backend.items[itemId] then\n                backend.items[itemId].equipmentSlot = equipmentSlot\n            else\n                backend.items[itemId] = {\n                    procs = {},\n                    extraProc = data.EXTRA_PROCS[itemId],\n                    itemTexture = GetItemIcon(itemId),\n                    expirationTime = GetTime(),  \n                    equipmentSlot = equipmentSlot \n                }\n                \n                if not procId then\n                    backend.items[itemId].type = \"ON_USE\"\n                    return true\n                end\n                \n                local p = GetValuesTable(procId)\n                \n                for _, procId in pairs(p) do\n                    tinsert(backend.items[itemId].procs, procId)\n                    backend.procs[procId] = itemId\n                    if not backend.items[itemId].type then\n                        local type, cooldown = GetCooldownInfo(equipmentSlot, procId)\n                        \n                        backend.items[itemId].type = type\n                        \n                        if type == \"INTERNAL\" then\n                            backend.items[itemId].cooldown = cooldown\n                        end\n                    end\n                end\n                \n                local extraProcId = data.EXTRA_PROCS[itemId]\n                \n                if extraProcId then\n                    backend.extraProcs[extraProcId] = itemId\n                end\n                if enchantId then\n                    backend.items[itemId].enchantId = enchantId\n                end\n                if metaGem then\n                    backend.items[itemId].metaGem = metaGem\n                end\n            end\n            return true\n        end\n    end\n    \n    -- Otherwise set equipment slot to nil (it can be either empty or its item is not in the data)\n    if backend.equipmentSlots[equipmentSlot] then\n        backend.equipmentSlots[equipmentSlot] = nil\n    end\nend\n\n--> Frontend Initialize\n\nlocal frontend = {}\n\nfrontend.arrays = {\n    \n    enchants = {\n        [1] = 4099, -- Landslide\n        [2] = 4097, -- Power Torrent\n        [3] = 4083, -- Hurricane\n        [4] = 4084, -- Heartsong\n        [5] = 4115, -- Lightweave Embroidery\n        [6] = 4118, -- Swordguard Embroidery\n        [7] = 4116, -- Darkglow Embroidery\n        [8] = 4175, -- Gnomish X-Ray Scope\n        [9] = 4223, -- Nitroboosts\n    },\n    \n    metaGems = {\n        [1] = 41385, -- Invigorating Earthsiege Diamond\n        [2] = 41400, -- Thundering Skyflare Diamond\n        [3] = 41401, -- Insightful Earthsiege Diamond\n    },\n    \n}\n\nfrontend.GetConfig = function(link_to_frontend)\n    \n    local config = link_to_frontend.config\n    \n    -- Creating Settings where we save all individual config options\n    local settings = {\n        --[[\n        equipmentSlots = {\n            [slotId] = true,\n        },\n        enchants = {\n            [enchantId] = true,\n        },\n        gems = {\n            [gemId] = true,\n        },\n        orders = {\n            [slotId] = index,\n        },\n        disabledItems = {\n            [itemId] = true,\n        },\n        disabledGlows = {\n            [itemId] = true,\n        },\n        ]]\n    }\n    \n    -- Config: Display Options Group\n    local displayOpt = config.display\n    \n    settings.showAlways = displayOpt.showAlways\n    settings.showProc = displayOpt.showProc\n    settings.showCd = displayOpt.showCd\n    settings.itemTextureAlways = displayOpt.itemTextureAlways\n    settings.glowReadyToUse = displayOpt.glowReadyToUse\n    settings.glowProc = displayOpt.glowProc\n    settings.disableGlowNoCd = displayOpt.disableGlowNoC\n    \n    -- Config: Display Options Group. Equipment Slots\n    for id, enabled in ipairs(displayOpt.equipmentSlots) do\n        if enabled then\n            settings.equipmentSlots = settings.equipmentSlots or {}\n            settings.equipmentSlots[id] = true\n        end\n    end\n    \n    \n    -- Config: Display Options Group. Enchants\n    settings.enchants = {}\n    for i, enabled in ipairs(displayOpt.validEnchants) do\n        if enabled then\n            local id = frontend.arrays.enchants[i]\n            settings.enchants[id] = true\n        end\n    end\n    \n    -- Config: Display Options Group. Meta Gems\n    settings.gems = {}\n    for i, enabled in ipairs(displayOpt.validMetaGems) do\n        if enabled then\n            local id = frontend.arrays.metaGems[i]\n            settings.gems[id] = true\n        end\n    end\n    \n    -- Config: Display Options Group. Order\n    settings.orders = {}\n    for slotIdStr, index in pairs(displayOpt.order) do\n        local slotId = tonumber(slotIdStr)\n        settings.orders[slotId] = index\n    end\n    \n    -- Config: Advanced Options Group\n    local advancedOpt = config.advanced\n    \n    settings.disabledItems = {}\n    settings.disabledGlows = {}\n    for _, data in ipairs(advancedOpt) do\n        local itemId = data.itemId\n        if data.disable then\n            settings.disabledItems[itemId] = true\n        end\n        if data.disableGlow then\n            settings.disabledGlows[itemId] = true\n        end\n    end\n    \n    link_to_frontend.settings = settings\n    return true\nend \n\nfrontend.Register = function(link_to_frontend)\n    -- Need to be reviewed later\n    if frontend.GetConfig(link_to_frontend) then\n        return true\n    end\nend\n\nlocal LoadLastSession = function(equipmentSlot, itemId)\n    backend.saved = backend.saved or {}\n    local db = backend.saved[WeakAuras.me]\n    if not db then return end\n    \n    if db[itemId] then\n        local expirationTimeOS = db[itemId].expirationTimeOS\n        local cooldown = expirationTimeOS - time()\n        return cooldown\n    end\nend\n\nlocal SaveLastSession = function()\n    backend.saved = backend.saved or {}\n    backend.saved[WeakAuras.me] = {}\n    local db = backend.saved[WeakAuras.me]\n    for itemId, itemData in pairs(backend.items) do\n        if itemData.type == 'INTERNAL' or itemData.type == 'NO_CD' then\n            local expirationTime = itemData.expirationTime\n            db[itemId] = db[itemId] or {}\n            db[itemId].expirationTimeOS = expirationTime - GetTime() + time()\n        end\n    end\nend\n\nbackend.Init = function(link_to_data)\n    \n    if not setData(link_to_data) then return end\n    \n    local anyEquipmentSlot = false\n    for equipmentSlot = 1, 18 do\n        if InitEquipmentSlot(equipmentSlot) then\n            anyEquipmentSlot = true\n        end\n    end\n    if anyEquipmentSlot then\n        -- Check if new registered items have any proc or cooldown in aura_env.saved\n        for equipmentSlot, itemId in pairs(backend.equipmentSlots) do\n            local isBuffed = false\n            for _, procId in ipairs(backend.items[itemId].procs) do\n                if WA_GetUnitBuff(\"player\", procId) then\n                    isBuffed = true\n                    OnProc(equipmentSlot, itemId, procId)\n                    if backend.items[itemId].extraProc then\n                        OnExtraProc(itemId, backend.items[itemId].extraProc)\n                    end\n                    break\n                end\n            end\n            \n            -- Item item doesn't have an active proc\n            if not isBuffed then\n                local itemData = backend.items[itemId]\n                itemData.isProc = false\n                itemData.stacks = 0\n                \n                if itemData.type == 'INTERNAL' or itemData.type == 'NO_CD' then\n                    local savedCooldown = LoadLastSession(equipmentSlot, itemId)\n                    if savedCooldown and savedCooldown > 0 then\n                        itemData.duration = itemData.cooldown or type == \"NO_CD\" and 30\n                        itemData.expirationTime = savedCooldown + GetTime()\n                    end\n                elseif itemData.type == \"ON_USE\" then\n                    OnUse(equipmentSlot, itemId)  \n                end\n            end\n        end\n    end\n    \n    backend.initialized = true\n    --WeakAuras.timer:ScheduleTimer(SendEvent, 0.1, 'BACKEND_INITIALIZED', backend)\n    SendEvent('BACKEND_INITIALIZED', backend)\nend\n\n--> Events Handler\n\nlocal OnEvent = {}\n\nOnEvent['OPTIONS'] = function()\n    backend.initialized = false\n    SaveLastSession()\nend\n\nOnEvent['STATUS'] = function()\nend\n\nOnEvent['COMBAT_LOG_EVENT_UNFILTERED'] = function(_, subEvent, _, sourceGUID, _,_,_, destGUID, _,_,_, spellId)\n    if not subEvent then return end\n    if INVALID_EVENTS[subEvent] then return end\n    if ((destGUID == MY_GUID and ((not sourceGUID or sourceGUID == HEX_NO_GUID) or sourceGUID == destGUID)) or sourceGUID == MY_GUID) then\n        if backend.procs[spellId] then\n            \n            if spellId == 89091 and subEvent == 'SPELL_DAMAGE' then\n                return\n            end\n            \n            local itemId = backend.procs[spellId]\n            local equipmentSlot = backend.items[itemId].equipmentSlot\n            local type = backend.items[itemId].type\n            \n            if GetInventoryItemID(\"player\", equipmentSlot) ~= itemId then return end\n            if subEvent == \"SPELL_AURA_APPLIED\" \n            or subEvent == \"SPELL_AURA_REFRESH\" \n            or subEvent == \"SPELL_AURA_APPLIED_DOSE\" \n            or subEvent == \"SPELL_AURA_REMOVED_DOSE\" then\n                OnProc(equipmentSlot, itemId, spellId)\n                SendEvent('ITEM_CHANGED', equipmentSlot)\n                \n            elseif subEvent == \"SPELL_AURA_REMOVED\" then\n                backend.items[itemId].isProc = false\n                backend.items[itemId].stacks = 0\n                \n                if type == \"ON_USE\" then\n                    OnUse(equipmentSlot, itemId)\n                    \n                elseif type == \"NO_CD\" then\n                    backend.items[itemId].duration = 0\n                    backend.items[itemId].expirationTime = GetTime()\n                end\n                \n            elseif type == \"INTERNAL\" then\n                backend.items[itemId].isProc = false\n                backend.items[itemId].duration = backend.items[itemId].cooldown\n                backend.items[itemId].expirationTime = backend.items[itemId].duration + GetTime()\n            end\n            \n            SendEvent('ITEM_CHANGED', equipmentSlot)\n            return true\n        end\n        \n        if backend.extraProcs[spellId] then\n            \n            if subEvent == \"SPELL_AURA_APPLIED\" \n            or subEvent == \"SPELL_AURA_REFRESH\" \n            or subEvent == \"SPELL_AURA_APPLIED_DOSE\" \n            or subEvent == \"SPELL_AURA_REMOVED_DOSE\"\n            or subEvent == \"SPELL_AURA_REMOVED\" then\n                \n                local itemId = backend.extraProcs[spellId]\n                local equipmentSlot = backend.items[itemId].equipmentSlot\n                \n                OnExtraProc(itemId, spellId)\n                SendEvent('ITEM_CHANGED', equipmentSlot)\n                return true\n                \n            end\n        end\n    end\n    \nend\n\nOnEvent['PLAYER_EQUIPMENT_CHANGED'] = function(equipmentSlot, isEmpty)\n    \n    local timestamp = GetTime()\n    \n    if not isEmpty and InitEquipmentSlot(equipmentSlot) then\n        \n        local itemId = backend.equipmentSlots[equipmentSlot]\n        local type = backend.items[itemId].type\n        \n        backend.items[itemId].icon = backend.items[itemId].itemTexture\n        backend.items[itemId].stacks = 0\n        backend.items[itemId].isProc = false\n        \n        if type == \"ON_USE\" then\n            \n            OnUse(equipmentSlot, itemId)\n            \n        elseif type == \"INTERNAL\" then\n            local currentCooldown = backend.items[itemId].expirationTime - timestamp\n            \n            if currentCooldown > 30 then\n                backend.items[itemId].duration = backend.items[itemId].cooldown\n                backend.items[itemId].expirationTime = timestamp + backend.items[itemId].cooldown\n                \n            elseif currentCooldown < backend.items[itemId].cooldown then\n                backend.items[itemId].duration = backend.items[itemId].cooldown\n                backend.items[itemId].expirationTime = timestamp + backend.items[itemId].cooldown\n                \n            elseif currentCooldown > 30 then\n                backend.items[itemId].duration = backend.items[itemId].cooldown\n                backend.items[itemId].expirationTime = savedCooldown + timestamp\n            end\n            \n        elseif type == \"NO_CD\" then\n            \n            if equipmentSlot ~= 18 then\n                backend.items[itemId].duration = 30\n                backend.items[itemId].expirationTime = timestamp + 30\n            end\n            \n        end\n        \n    else\n        backend.equipmentSlots[equipmentSlot] = nil\n    end\n    \n    SendEvent('ITEM_CHANGED', equipmentSlot)\nend\n\nOnEvent['BAG_UPDATE_COOLDOWN'] = function()\n    for equipmentSlot in pairs(backend.equipmentSlots) do\n        local itemId = GetInventoryItemID(\"player\", equipmentSlot)\n        if itemId and itemId == backend.equipmentSlots[equipmentSlot]\n        and backend.items[itemId].type == \"ON_USE\"\n        and OnUse(equipmentSlot, itemId) then\n            backend.items[itemId].stacks = 0\n            SendEvent('ITEM_CHANGED', equipmentSlot)\n        end\n    end\nend\n\nOnEvent['PLAYER_LEAVING_WORLD'] = function()\n    SaveLastSession()\nend\n\nOnEvent[WA_MAIN_EVENT] = function(subEvent, ...)\n    if subEvent == 'DATA_INIT' then\n        backend.Init(...)\n        \n    elseif subEvent == 'REGISTER_FRONTEND' then\n        local link_to_frontend = ...\n        if frontend.Register(link_to_frontend) then\n            SendEvent('REGISTER_FRONTEND_FINISHED', link_to_frontend.id)\n        end\n    end\nend\n\nbackend.OnBackendEvent = function(e, ...)\n    if e == WA_MAIN_EVENT or backend.initialized then\n        return OnEvent[e](...)\n    end\nend\n\nlocal BuildState = function(settings, itemData, itemId)\n    \n    local isProc = itemData.isProc\n    local state = {}\n    state.progressType = 'timed'\n    state.changed = true\n    state.autoHide = not settings.showAlways\n    state.duration = (isProc and settings.showProc) and itemData.procDuration or itemData.duration or 0\n    state.expirationTime = (isProc and settings.showProc) and itemData.procExpirationTime or itemData.expirationTime or GetTime()\n    state.icon = (isProc and settings.showProc and not settings.itemTextureAlways) and itemData.procTexture or itemData.itemTexture\n    state.stacks = (isProc and settings.showProc) and itemData.stacks or 0\n    state.isEnchant = itemData.isEnchant\n    state.itemType = itemData.type\n    state.itemId = itemId\n    state.isProc = isProc\n    state.equipmentSlot = itemData.equipmentSlot\n    state.showProc = settings.showProc\n    state.disableGlowNoCd = settings.disableGlowNoCd\n    state.disabledGlow = settings.disabledGlows[itemId]\n    state.index = settings.orders[itemData.equipmentSlot]\n    \n    local equimentSlotCondition = settings.equipmentSlots[itemData.equipmentSlot]\n    local enchantCondition = not itemData.enchantId or not DATA.ENCHANTS[itemData.enchantId] or settings.enchants[itemData.enchantId]\n    local gemCondition = not itemData.metaGem or not DATA.GEMS[itemData.metaGem] or settings.gems[itemData.metaGem]\n    local isEnabled = not settings.disabledItems[itemId]\n    \n    if equimentSlotCondition and enchantCondition and gemCondition and isEnabled  then\n        if settings.showAlways then\n            state.show = true\n        elseif settings.showCd then\n            state.show = GetTime() < itemData.expirationTime\n        elseif settings.showProc then\n            state.show = isProc\n        end\n    else\n        state.show = false\n    end\n    \n    return state\nend\n\nbackend.OnFrontendEvent = function(a, subEvent, link_to_frontend, ...)\n    \n    local settings = link_to_frontend.settings\n    \n    if subEvent == 'REGISTER_FRONTEND_FINISHED' then\n        local frontendId = ...\n        if frontendId == link_to_frontend.id then\n            local anyState = false\n            for equipmentSlot, itemId in pairs(backend.equipmentSlots) do\n                if settings.equipmentSlots[equipmentSlot] then\n                    local itemData = backend.items[itemId]\n                    local state = BuildState(settings, itemData, itemId)\n                    a[equipmentSlot] = state\n                    anyState = true\n                end\n            end\n            return anyState\n        end\n    elseif subEvent == 'ITEM_CHANGED' then\n        local equipmentSlot = ...\n        if not backend.equipmentSlots[equipmentSlot] then\n            if a[equipmentSlot] then\n                a[equipmentSlot].show = false\n                a[equipmentSlot].changed = true\n                return true\n            end\n        else\n            local itemId = backend.equipmentSlots[equipmentSlot]\n            local itemData = backend.items[itemId]\n            local state = BuildState(settings, itemData, itemId)\n            a[equipmentSlot] = state\n            return true\n        end\n    end\nend",
+	["do_custom"] = true,
+	},
+	["finish"] = {
+	},
+	},
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "custom",
+	["custom_type"] = "status",
+	["custom_hide"] = "timed",
+	["customVariables"] = "{\n    duration = true,\n    expirationTime = true,\n    \n    isProc = {\n        display = \"Has Proc Buff\",\n        type = \"bool\",\n    },\n    \n    itemId = {\n        display = \"Item ID\",\n        type = \"number\",\n    },\n    \n    itemType = {\n        display = \"Item Type\",\n        type = \"select\",\n        values = {\n            [\"INTERNAL\"] = \"Item w/ Internal CD\",\n            [\"ON_USE\"] = \"Item w/ Use CD\",\n            [\"NO_CD\"] = \"Item w/o CD\",\n        }\n    },\n}",
+	["event"] = "Health",
+	["subeventPrefix"] = "SPELL",
+	["unit"] = "player",
+	["custom"] = "function(...)\n    aura_env.OnBackendEvent(...)\nend",
+	["spellIds"] = {
+	},
+	["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED:SPELL_AURA_REFRESH:SPELL_AURA_APPLIED_DOSE:SPELL_AURA_REMOVED_DOSE:SPELL_DAMAGE:SPELL_HEAL:SPELL_ENERGIZE, PLAYER_EQUIPMENT_CHANGED, BAG_UPDATE_COOLDOWN, PLAYER_LEAVING_WORLD, WA_MERFIN_EQUIPPED_ITEMS",
+	["check"] = "event",
+	["names"] = {
+	},
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	["activeTriggerMode"] = -10,
+	},
+	["displayText_format_p_format"] = "timed",
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["xOffset"] = 0,
+	["displayText"] = "",
+	["shadowYOffset"] = -1,
+	["Homerqt"] = {
+	},
+	["parent"] = "[Merfin] Equipped Items (Cataclysm)",
+	["font"] = "Friz Quadrata TT",
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	},
+	["height"] = 40,
+	["cooldownEdge"] = false,
+	["load"] = {
+	["use_never"] = false,
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["icon"] = true,
+	["displayText_format_p_time_mod_rate"] = true,
+	["fontSize"] = 12,
+	["source"] = "import",
+	["displayText_format_p_time_legacy_floor"] = false,
+	["shadowXOffset"] = 1,
+	["wordWrap"] = "WordWrap",
+	["preferToUpdate"] = false,
+	["conditions"] = {
+	},
+	["regionType"] = "text",
+	["desaturate"] = false,
+	["authorOptions"] = {
+	{
+	["type"] = "toggle",
+	["default"] = false,
+	["key"] = "debug",
+	["useDesc"] = false,
+	["name"] = "Debug",
+	["width"] = 1,
+	},
+	},
+	["url"] = "NaowhUI",
+	["selfPoint"] = "CENTER",
+	["information"] = {
+	["saved"] = "JrX2u4zKArPMCUfNAjfZfGp",
+	["forceEvents"] = false,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayText_format_p_time_precision"] = 1,
+	["width"] = 40,
+	["uid"] = "jBOMGyIVp6I",
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Merfin: Equipped Items: Backend - Handlers",
+	["zoom"] = 0.3,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["justify"] = "LEFT",
+	["config"] = {
+	["debug"] = false,
+	},
+	["inverse"] = true,
+	["useCooldownModRate"] = true,
+	["shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["fixedWidth"] = 200,
+	["cooldown"] = true,
+	["frameStrata"] = 1,
+	},
+	["Flask. Flask of Flowing Water (+300 Spirit)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"94160",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 67438,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 67438,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463929",
+	["uid"] = "kqf)N936l8u",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Flask. Flask of Flowing Water (+300 Spirit)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	},
+	["Battle Elixir: Elixir of the Naga (+225 Expertise Rating)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79474",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58089,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58089,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "134792",
+	["uid"] = "Dd24dVIpinY",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Battle Elixir: Elixir of the Naga (+225 Expertise Rating)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
 	},
 	["animation"] = {
 	["start"] = {
@@ -32003,7 +34856,7 @@ NUI.WeakAurasData = {
 	},
 	},
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -32154,7 +35007,7 @@ NUI.WeakAurasData = {
 	["text1FontFlags"] = "OUTLINE",
 	["text2Font"] = "Friz Quadrata TT",
 	["width"] = 32,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["useCooldownModRate"] = true,
 	["id"] = "Greater Drums of Battle",
 	["text2"] = "%p",
@@ -32199,6 +35052,162 @@ NUI.WeakAurasData = {
 	["ignoreOptionsEventErrors"] = true,
 	},
 	["useTooltip"] = false,
+	},
+	["Merfin: Equipped Items: Backend - DATA [WoTLK]"] = {
+	["outline"] = "OUTLINE",
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["displayText_format_p_time_dynamic_threshold"] = 60,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["displayIcon"] = 134148,
+	["cooldownSwipe"] = true,
+	["displayText_format_p_time_format"] = 0,
+	["customTextUpdate"] = "event",
+	["automaticWidth"] = "Auto",
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	["custom"] = "local backend = aura_env\n\nlocal WA_MAIN_EVENT = 'WA_MERFIN_EQUIPPED_ITEMS'\n\nlocal SendEvent = function(event, ...)\n    WeakAuras.ScanEvents(WA_MAIN_EVENT, event, ...)\nend\n\n-- > DATA ARRAYS\n\nbackend.DATA = {}\n\n-- [itemId] = procId,\n-- [itemId] = { procId1, procId2 },\nbackend.DATA.ITEMS = {\n    [37111] = {60512, 60513, 60514, 60515}, [23835] = 99999, [23836] = 99999, [32782] = 41301, [24390] = 31794,\n    [28040] = 33662, [28041] = 33667, [28042] = 33668, [25829] = 33828,\n    [24551] = 32140, [27922] = { 33511, 33513 }, [27924] = { 33511, 33513 },\n    [24376] = 31771, [27927] = { 33522, 33523 }, [27926] = { 33522, 33523 },\n    [25787] = 32600, [25786] = 99999, [25619] = 32355, [25620] = 32355,\n    [28108] = 33759, [28109] = 33746, [25937] = 39200, [25936] = 39201,\n    [31856] = { 39439, 39441 }, [31858] = 99999, [31859] = 99999,\n    [31857] = 39443, [26055] = 33012, [27416] = 33014, [31617] = 33667,\n    [25628] = 32362, [25633] = 32362, [31615] = 33662, [32771] = 41263,\n    [29181] = 99999, [25634] = 32367, [32770] = 41261, [29776] = 35733,\n    [32864] = 40815, [30300] = 36372, [29370] = 35163, [29383] = 35166,\n    [29376] = 35165, [38290] = 51953, [38288] = 51954, [38287] = 51955,\n    [29387] = 35169, [38289] = 51952, [30293] = 36347, [28034] = { 33648, 33649 },\n    [27891] = 33479, [27900] = 33486, [30340] = 36432, [32658] = 40729,\n    [27683] = 33370, [27529] = 33089, [28288] = 33807, [34472] = 45053,\n    [28785] = 37658, [32654] = 40724, [28190] = 33370, [28370] = 34210,\n    [28121] = 34106, [28727] = 29601, [29132] = 35337, [28590] = 38332,\n    [24128] = 31047, [30346] = 99999, [28418] = 34321, [30841] = 37877,\n    [28528] = 34519, [32534] = 40538, [28223] = 34000, [30349] = 99999,\n    [29179] = 35337, [24126] = 31040, [27770] = 39228, [30343] = 99999,\n    [28235] = 99999, [30345] = 99999, [24125] = 31039, [30344] = 99999,\n    [34473] = 45058, [34471] = 45064, [28234] = 99999, [30350] = 99999,\n    [28237] = 99999, [24124] = 31038, [28242] = 99999, [30348] = 99999,\n    [28240] = 99999, [28239] = 99999, [30351] = 99999, [24127] = 31045,\n    [27828] = 33400, [28243] = 99999, [28238] = 99999, [28241] = 99999,\n    [28236] = 99999, [28830] = 34775, [28789] = 34747, [28823] = 37706,\n    [35702] = 46784, [35700] = 46783, [35694] = 46782, [35703] = 46785,\n    [35693] = 46780, [30627] = 42084, [30626] = 38348, [30720] = 37445,\n    [30447] = 37198, [30664] = { 37343, 37340, 37341, 37342, 37344 },\n    [30450] = 37174, [30619] = 38324, [37864] = 99999, [30620] = 38325,\n    [37865] = 99999, [30663] = 37243, [30665] = 40402, [30629] = 38351,\n    [30448] = 37508, [37128] = 48042, [37127] = 48041, [34029] = 43995,\n    [33831] = 43716, [33832] = 44055, [34050] = 44055, [34576] = 44055,\n    [34578] = 44055, [33829] = 43712, [34049] = 44055, [34580] = 44055,\n    [34163] = 44055, [34579] = 44055, [35326] = 44055, [35327] = 44055,\n    [34162] = 44055, [34577] = 44055, [33830] = 43713, [33828] = 43710,\n    [32505] = 40477, [32501] = 40464, [32483] = 40396, [32496] = 37656,\n    [34427] = 45040, [34429] = 45044, [34428] = 45049, [34430] = 45052,\n    [10725] = 99999, [41589] = 44055, [35935] = 47215, [38257] = 47816,\n    [36874] = 47816, [38073] = 33662, [38760] = 48875, [44308] = 60318,\n    [23824] = 30452, [35581] = 30452,\n    \n    [21625] = 26467, [29387] = 35169, [38358] = 51353,\n    [40865] = 54808, [40767] = 55018, [43837] = 61617,\n    [38763] = 61426, [38764] = 61427, [38765] = 61428,\n    [43836] = 61620, [44013] = 59657, [44015] = 59657,\n    [44014] = 59658, [36993] = 60214, [36972] = 60471,\n    [38359] = 51348, [37064] = 60307, [37220] = 60218,\n    [37660] = 60479, [45131] = 63250, [45219] = 63250,\n    [37390] = 60302, [37264] = 60483, [37657] = 60520,\n    [40430] = 60525, [37844] = 60521, [37734] = 60517,\n    [37166] = 60305, [37638] = 60180, [37873] = 60480,\n    [37872] = 60215, [37723] = 60299, [42341] = 56121,\n    [44063] = 59757, [42418] = 56188, [42413] = 56186,\n    [42395] = 56184, [41121] = 55039,\n    [42987] = { 60229, 60233, 60234, 60235 },\n    [44253] = { 60229, 60233, 60234, 60235 },   \n    [44255] = { 60229, 60233, 60234, 60235 },\n    [44254] = { 60229, 60233, 60234, 60235 },\n    [42990] = 60203, [19288] = 23684, [42989] = 60196,\n    [42988] = 57350, [44912] = 60064, [40682] = 60064,\n    [49706] = 60064, [44914] = 60065, [40684] = 60065,\n    [49074] = 60065, [39229] = 60492, [43573] = 58904,\n    [37835] = 49623, [40685] = 60062, [49078] = 60062,    \n    [47213] = 67669, [47214] = 67671, [47215] = 67666,    \n    [40683] = 60054, [39388] = 60527, [39292] = 60180,    \n    [39257] = 60439, [49080] = 68443, [49116] = 68271,    \n    [49118] = 68270, [42122] = 42292, [42123] = 42292,    \n    [37254] = 48333, [40382] = 60538, [40256] = 60437,    \n    [40258] = 60530, [40373] = 60488, [40255] = 60494,    \n    [40371] = 60443, [40432] = 60486, [40431] = 60314,    \n    [40372] = 60258, [46088] = 64527, [46087] = 64525,    \n    [46086] = 64524, [40257] = 60286, [42129] = 55915,    \n    [42130] = 55915, [42132] = 55915, [42128] = 55915,    \n    [46083] = 42292, [46085] = 42292, [46081] = 42292,    \n    [46084] = 42292, [46082] = 42292, [45866] = 42292,    \n    [45286] = 65014, [45866] = 65004, [45308] = 65006,    \n    [46021] = 65012, [45313] = 65011, [45292] = 65008,    \n    [45507] = 64765, [45929] = 65003, [45490] = 64741,    \n    [45931] = 65019, [46038] = 65024, [45522] = 64790,    \n    [45263] = 64800, [45466] = 64707, [46051] = 64999,    \n    [40531] = 60319, [45148] = 64712, [45158] = 64763,    \n    [40532] = 60526, [42126] = 42292, [42124] = 42292,    \n    [46312] = 64983, [50198] = 71403, [47881] = 67738,    \n    [47725] = 67738, [47879] = 67736, [47726] = 67736,    \n    [47882] = 67728, [47727] = 67728, [47880] = 67726,    \n    [47728] = 67726, [50259] = 71564, [50235] = 71569,    \n    [50260] = 71568, [45535] = 64739, [45518] = 64713,    \n    [45609] = 64772, [46017] = 64411,    \n    [47303] = { 67703, 67708 }, [47115] = { 67703, 67708 },  \n    [47271] = 67696, [47041] = 67696, [48020] = 67747,    \n    [47948] = 67747, [47316] = 67713, [47182] = 67713,    \n    [48018] = 67744, [47946] = 67744, [48021] = 67742,    \n    [47949] = 67742, [48019] = 67740, [47947] = 67740,    \n    [48724] = 67684, [48722] = 67683, [47290] = 67699,    \n    [47080] = 67699, [48724] = 67684, [48722] = 67683,    \n    [47734] = 67695, [47735] = 67694, [42133] = 67596,    \n    [42134] = 67596, [42136] = 67596, [42137] = 67596,    \n    [42135] = 67596, [50342] = 71401, [50341] = 71575,    \n    [50340] = 71570, [50339] = 71565,    \n    [47464] = { 67772, 67773 }, [47131] = { 67772, 67773 },  \n    [47432] = 67750, [47059] = 67750, [47477] = 67759,    \n    [47188] = 67759, [47451] = 67753, [47088] = 67753,    \n    [50353] = 71601, [50358] = 71584, [50343] = 71541,    \n    [50360] = 71605, [50359] = 71610, [50352] = 71633,    \n    [50362] = { 71485, 71492, 71486, 71484, 71491, 71487 },  \n    [50344] = 71577, [50345] = 71572, [50351] = 71432,    \n    [50355] = 71396, [50361] = 71635, [50357] = 71579,    \n    [50356] = 71586, [51378] = 42292, [51377] = 42292,    \n    [50346] = 71574, [50354] = 71607, [50726] = 71607,\n    [54569] = 75458, [54572] = 75466, [54571] = 75477,    \n    [54573] = 75490, [50366] = 71641, [50349] = 71639,    \n    [50348] = 71644, [50365] = 71636, [50706] = 71432,    \n    [50363] = { 71556, 71560, 71558, 71561, 71559, 71557 }, \n    [50364] = 71638, [50397] = 72416, [50398] = 72416, \n    [50401] = 72412, [50402] = 72412, [52571] = 72412,   \n    [52572] = 72412, [50399] = 72418, [50400] = 72418, \n    [50403] = 72414, [50404] = 72414, [54590] = 75456,    \n    [54588] = 75473, [54591] = 75480, [54589] = 75495,\n    \n    -- Idols\n    [50457] = 71177, [47670] = 67360, [50454] = 71184,\n    [47671] = 67358, [50456] = 71175, [47668] = 67355,\n    [45509] = 64951, [38360] = 57909, [42582] = 60566,\n    [42587] = 60547, [42574] = 60544, [42575] = 60565,\n    [42583] = 60567, [42588] = 60549, [42584] = 60568,\n    [42589] = 60551, [42585] = 60569, [42591] = 60553,\n    [51429] = 60555, [51437] = 60570,\n    \n    -- Totems\n    [50463] = 71216, [47667] = 67391, [50458] = 71199,\n    [50464] = 71220, [47665] = 67388, [40322] = 60766,\n    [47666] = 67385, [40708] = 60771, [42601] = 60566,\n    [42606] = 60547, [42593] = 60544, [42594] = 60565,\n    [42602] = 60567, [42607] = 60549, [42603] = 60568, \n    [42608] = 60551, [42604] = 60569, [42609] = 60553,  \n    [51507] = 60555, [51513] = 60570,\n    \n    -- Sigils\n    [50462] = 71229, [50459] = 71227, [47672] = 67380, \n    [47673] = 67383, [45144] = 64963, [40714] = 62146, \n    [40715] = 60828, [42619] = 60547, [42620] = 60549, \n    [42621] = 60551, [42622] = 60553, [51417] = 60555,\n    \n    -- Librams\n    [40706] = 60819, [40707] = 60795, [42851] = 60547,\n    [42611] = 60544, [42852] = 60549, [45145] = 65182,\n    [42853] = 60551, [47661] = 67371, [47662] = 67364,\n    [47664] = 67378, [42854] = 60553, [50455] = 71187,\n    [50460] = 71192, [50461] = 71197, [51478] = 60555,\n    \n    -- TBC Boots\n    [35581] = 30452, [23824] = 30452,\n    \n}\n\n-- [enchantId] = procId\nbackend.DATA.ENCHANTS = {\n    [3859] = 55001,    \n    [3722] = 55637,    \n    [3728] = 55767,    \n    [3730] = 55775,    \n    [3790] = 59626,    \n    [3603] = 54757,    \n    [3604] = 54758,    \n    [3606] = 54861,\n    [3789] = 59620,\n    [3869] = 64440,   \n    [3870] = 64568, \n    [2673] = 28093,\n    [3368] = 53365,\n    [3369] = 53386,\n    [1900] = 20007,\n}\n\n-- [gemId] = procId\nbackend.DATA.GEMS = {\n    [41401] = 55382, -- Insightful Earthsiege Diamond\n    [41385] = 55341, -- Invigorating Earthsiege Diamond\n    [41400] = 55379, -- Thundering Skyflare Diamond \n}\n\n-- [procId] = cooldown\nbackend.DATA.COOLDOWNS = {\n    [72416] = 60,    \n    [72412] = 60,    \n    [72418] = 60,    \n    [72414] = 60,    \n    [51348] = 10,    \n    [51353] = 10,    \n    [54808] = 60,    \n    [55018] = 60,    \n    [71485] = 105,\n    [71492] = 105,\n    [71486] = 105,\n    [71484] = 105,\n    [71491] = 105,\n    [71487] = 105,\n    [71556] = 105,\n    [71560] = 105,\n    [71558] = 105,\n    [71561] = 105,\n    [71559] = 105,\n    [71557] = 105,\n    [71605] = 90,    \n    [71636] = 90,    \n    [55637] = 60,    \n    [55775] = 60,    \n    [55767] = 60,    \n    [59626] = 35, \n    [64568] = 10,\n    [55382] = 15,  \n    [40373] = 15,\n    [75473] = 50,\n    [75466] = 50,\n    --[20007] = 0,\n}\n\n-- [itemId] = extraProcId\nbackend.DATA.EXTRA_PROCS = {\n    [50348] = 71643,    \n    [50353] = 71600,    \n    [47879] = 67735,    \n    [47726] = 67735,    \n    [48018] = 67743,    \n    [47946] = 67743,    \n    [47880] = 67723,    \n    [47728] = 67723,    \n    [48019] = 67739,    \n    [47947] = 67739,    \n    [47881] = 67737,    \n    [47725] = 67737,    \n    [48020] = 67746,    \n    [47948] = 67746,  \n    [46051] = 65000,\n}\n\n-- [procId] = true (f.e. Balance Idols)\nbackend.DATA.NO_COOLDOWN_ITEMS= {\n    [60486] = true, [60525] = true, [60314] = true,    \n    [60196] = true, [71575] = true, [71577] = true,    \n    [71570] = true, [71572] = true, [71432] = true,    \n    [71396] = true, [65006] = true, [71600] = true,    \n    [71643] = true, [67696] = true, [67750] = true,    \n    [67713] = true, [67759] = true, [71177] = true, \n    [67360] = true, [59620] = true, [64440] = true,\n    [71184] = true, [67358] = true, [71175] = true, \n    [67355] = true, [64951] = true, [57909] = true, \n    [60566] = true, [60547] = true, [60544] = true,\n    [60565] = true, [60567] = true, [60549] = true,\n    [60568] = true, [60551] = true, [60569] = true,\n    [60553] = true, [60555] = true, [60570] = true,\n    [71216] = true, [67391] = true, [71199] = true, \n    [71220] = true, [67388] = true, [60766] = true,\n    [60771] = true, [60566] = true, [60565] = true, \n    [60567] = true, [60568] = true, [60569] = true,\n    [60570] = true, [71229] = true, [71227] = true, \n    [67380] = true, [67383] = true, [64963] = true,\n    [60828] = true, [62146] = true, [67385] = true,  \n    [60819] = true, [60795] = true, [65182] = true,\n    [67371] = true, [67364] = true, [67378] = true,  \n    [71187] = true, [71192] = true, [71197] = true,\n    [28093] = true, [53365] = true, [60512] = true, \n    [60513] = true, [60514] = true, [60515] = true,\n    [20007] = true,\n}\n\n-- > EVENT HANDLERS\n\nlocal OnEvent = {}\n\nOnEvent['OPTIONS'] = function()\nend\n\nOnEvent['STATUS'] = function()\n    SendEvent('DATA_INIT', backend.DATA)\nend\n\nOnEvent[WA_MAIN_EVENT] = function(subEvent)\n    if subEvent == 'FORCED_TEST' then\n        SendEvent('DATA_INIT', backend.DATA)\n    end\nend\n\nbackend.OnBackendEvent = function(e, ...)\n    return OnEvent[e](...)\nend",
+	["do_custom"] = true,
+	},
+	["finish"] = {
+	},
+	},
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "custom",
+	["custom_type"] = "status",
+	["custom_hide"] = "timed",
+	["customVariables"] = "{\n    duration = true,\n    expirationTime = true,\n    \n    isProc = {\n        display = \"Has Proc Buff\",\n        type = \"bool\",\n    },\n    \n    itemId = {\n        display = \"Item ID\",\n        type = \"number\",\n    },\n    \n    itemType = {\n        display = \"Item Type\",\n        type = \"select\",\n        values = {\n            [\"INTERNAL\"] = \"Item w/ Internal CD\",\n            [\"ON_USE\"] = \"Item w/ Use CD\",\n            [\"NO_CD\"] = \"Item w/o CD\",\n        }\n    },\n}",
+	["event"] = "Health",
+	["subeventPrefix"] = "SPELL",
+	["unit"] = "player",
+	["custom"] = "function(...)\n    aura_env.OnBackendEvent(...)\nend",
+	["spellIds"] = {
+	},
+	["events"] = "STATUS",
+	["check"] = "event",
+	["names"] = {
+	},
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	["activeTriggerMode"] = -10,
+	},
+	["displayText_format_p_format"] = "timed",
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["xOffset"] = 0,
+	["displayText"] = "",
+	["shadowYOffset"] = -1,
+	["Homerqt"] = {
+	},
+	["parent"] = "[Merfin] Equipped Items (Cataclysm)",
+	["font"] = "Friz Quadrata TT",
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	},
+	["height"] = 40,
+	["cooldownEdge"] = false,
+	["load"] = {
+	["use_never"] = false,
+	["use_vehicleUi"] = false,
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["icon"] = true,
+	["displayText_format_p_time_mod_rate"] = true,
+	["fontSize"] = 12,
+	["source"] = "import",
+	["displayText_format_p_time_legacy_floor"] = false,
+	["shadowXOffset"] = 1,
+	["wordWrap"] = "WordWrap",
+	["preferToUpdate"] = false,
+	["conditions"] = {
+	},
+	["regionType"] = "text",
+	["desaturate"] = false,
+	["authorOptions"] = {
+	},
+	["url"] = "NaowhUI",
+	["selfPoint"] = "CENTER",
+	["information"] = {
+	["forceEvents"] = false,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayText_format_p_time_precision"] = 1,
+	["width"] = 40,
+	["uid"] = "4yrA2P7ZimI",
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Merfin: Equipped Items: Backend - DATA [WoTLK]",
+	["zoom"] = 0.3,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["justify"] = "LEFT",
+	["config"] = {
+	},
+	["inverse"] = true,
+	["useCooldownModRate"] = true,
+	["shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["fixedWidth"] = 200,
+	["cooldown"] = true,
+	["frameStrata"] = 1,
 	},
 	["Aura Mastery "] = {
 	["iconSource"] = 0,
@@ -32255,7 +35264,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -32409,7 +35418,7 @@ NUI.WeakAurasData = {
 	["finish"] = {
 	},
 	},
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = true,
 	["auto"] = false,
 	["tocversion"] = 40400,
@@ -32427,13 +35436,472 @@ NUI.WeakAurasData = {
 	["cooldown"] = false,
 	["alpha"] = 1,
 	},
+	["Battle Elixir: Elixir of Mighty Speed (+225 Haste Rating)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79632",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58144,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58144,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "464025",
+	["uid"] = "nNEh91RozoL",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Battle Elixir: Elixir of Mighty Speed (+225 Haste Rating)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	},
 	["Aura bar (Player buffs)"] = {
 	["arcLength"] = 360,
 	["controlledChildren"] = {
 	"Presence (DK)",
 	"Active Seal (Paladin)",
-	"Equipped Items - Icon 3",
-	"Merfin: Death Knight T9 bonus",
 	"Innervate (Active)",
 	"Blessing of Sacrifice (Active)",
 	"Pain Suppression (Active)",
@@ -32454,8 +35922,8 @@ NUI.WeakAurasData = {
 	"Haste (Active)",
 	"Stoneform (Active)",
 	"Divine Guardian (Active)",
-	"Potion (Active)",
 	"Absorb Potion (Active)",
+	"Combat Potion (Active)",
 	"Drink",
 	},
 	["borderBackdrop"] = "Blizzard Tooltip",
@@ -32528,7 +35996,7 @@ NUI.WeakAurasData = {
 	["alpha"] = 1,
 	["stagger"] = 0,
 	["useAnchorPerUnit"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["sortHybridTable"] = {
 	["Spirit Link Totem (Active)"] = false,
 	["Guaridan Spirit (Active)"] = false,
@@ -32536,26 +36004,24 @@ NUI.WeakAurasData = {
 	["Power Infusion (Active)"] = false,
 	["Aura Mastery "] = false,
 	["Berserking (Active)"] = false,
-	["Drink"] = false,
 	["Hand of Salvation (Active)"] = false,
 	["Anti-Magic Zone (Active)"] = false,
+	["Combat Potion (Active)"] = false,
+	["Drink"] = false,
 	["Absorb Potion (Active)"] = false,
-	["Potion (Active)"] = false,
-	["Divine Guardian (Active)"] = false,
-	["Stoneform (Active)"] = false,
 	["Active Seal (Paladin)"] = false,
 	["Bloodlust (Active)"] = false,
 	["Blood Fury (Active)"] = false,
 	["Haste (Active)"] = false,
 	["Presence (DK)"] = false,
-	["Tricks of the Trade (Active)"] = false,
-	["Innervate (Active)"] = false,
-	["Blessing of Sacrifice (Active)"] = false,
-	["Hand of Freedom (Active)"] = false,
-	["Merfin: Death Knight T9 bonus"] = false,
-	["Power Word: Barrier (Active)"] = false,
 	["Unholy Frenzy (Active)"] = false,
-	["Equipped Items - Icon 3"] = false,
+	["Innervate (Active)"] = false,
+	["Stoneform (Active)"] = false,
+	["Hand of Freedom (Active)"] = false,
+	["Divine Guardian (Active)"] = false,
+	["Tricks of the Trade (Active)"] = false,
+	["Blessing of Sacrifice (Active)"] = false,
+	["Power Word: Barrier (Active)"] = false,
 	["Pain Suppression (Active)"] = false,
 	},
 	["uid"] = "rSQu6(7Dtjg",
@@ -32615,7 +36081,7 @@ NUI.WeakAurasData = {
 	1,
 	0.5,
 	},
-	["gridWidth"] = 6,
+	["gridWidth"] = 3,
 	["animate"] = true,
 	["xOffset"] = -1,
 	["scale"] = 1,
@@ -32630,7 +36096,7 @@ NUI.WeakAurasData = {
 	["constantFactor"] = "RADIUS",
 	["grow"] = "GRID",
 	["borderOffset"] = 16,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["tocversion"] = 40400,
 	["id"] = "Aura bar (Player buffs)",
 	["borderEdge"] = "1 Pixel",
@@ -32653,2817 +36119,6 @@ NUI.WeakAurasData = {
 	["ignoreOptionsEventErrors"] = true,
 	},
 	["borderInset"] = 0,
-	},
-	["Volcanic Potion"] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = 3,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
-	},
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["text1Enabled"] = true,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
-	["load"] = {
-	["use_petbattle"] = false,
-	["class_and_spec"] = {
-	["multi"] = {
-	[260] = true,
-	[261] = true,
-	[263] = true,
-	[104] = true,
-	[253] = true,
-	[577] = true,
-	[268] = true,
-	[269] = true,
-	[254] = true,
-	[581] = true,
-	[255] = true,
-	[259] = true,
-	[103] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_vehicle"] = false,
-	["level_operator"] = {
-	">=",
-	},
-	["size"] = {
-	["multi"] = {
-	["scenario"] = true,
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["ratedpvp"] = true,
-	["party"] = true,
-	["none"] = true,
-	["flexible"] = true,
-	["twenty"] = true,
-	["pvp"] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_size"] = false,
-	["use_level"] = false,
-	["use_vehicleUi"] = false,
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["level"] = {
-	"51",
-	},
-	["use_never"] = false,
-	["zoneIds"] = "",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["text2FontSize"] = 24,
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["text2Enabled"] = false,
-	["config"] = {
-	},
-	["displayIcon"] = 236871,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Potions Tracker - Naowh",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["type"] = "item",
-	["auranames"] = {
-	"53908",
-	},
-	["unit"] = "player",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
-	["subeventPrefix"] = "SPELL",
-	["useName"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["spellIds"] = {
-	},
-	["genericShowOn"] = "showAlways",
-	["event"] = "Cooldown Progress (Item)",
-	["itemName"] = 58091,
-	["names"] = {
-	},
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["unevent"] = "auto",
-	["itemName"] = 58091,
-	["use_genericShowOn"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["unit"] = "player",
-	["duration"] = "1",
-	["use_itemName"] = true,
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
-	["genericShowOn"] = "showOnCooldown",
-	["spellIds"] = {
-	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["use_unit"] = true,
-	["type"] = "item",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["use_exact_itemName"] = true,
-	["use_count"] = true,
-	["use_absorbMode"] = true,
-	["unit"] = "player",
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["subeventSuffix"] = "_CAST_START",
-	["subeventPrefix"] = "SPELL",
-	["event"] = "Item Count",
-	["spellIds"] = {
-	},
-	["names"] = {
-	},
-	["unevent"] = "auto",
-	["count"] = "1",
-	["use_itemName"] = true,
-	["duration"] = "1",
-	["use_unit"] = true,
-	["itemName"] = 58091,
-	["count_operator"] = ">=",
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t) return t[3] end",
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	["stickyDuration"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "CENTER",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
-	["text_color"] = {
-	0.55686274509804,
-	1,
-	0.61960784313725,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "BOTTOM",
-	["text_visible"] = true,
-	["text_fontType"] = "OUTLINE",
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_text_format_p_time_mod_rate"] = true,
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
-	["anchorXOffset"] = 0,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
-	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
-	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_format"] = "timed",
-	},
-	},
-	["height"] = 26,
-	["useAdjustededMax"] = false,
-	["text2Containment"] = "INSIDE",
-	["source"] = "import",
-	["text1Font"] = "Friz Quadrata TT",
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["cooldown"] = true,
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["uid"] = "WWsoegCw9l(",
-	["text1Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["zoom"] = 0.3,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["text1"] = "%s",
-	["text1FontFlags"] = "OUTLINE",
-	["text2Font"] = "Friz Quadrata TT",
-	["width"] = 32,
-	["semver"] = "2.0.6",
-	["useCooldownModRate"] = true,
-	["id"] = "Volcanic Potion",
-	["text2"] = "%p",
-	["frameStrata"] = 4,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
-	["alpha"] = 1,
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	},
-	{
-	["value"] = 0,
-	["variable"] = "show",
-	},
-	},
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.5.text_visible",
-	},
-	},
-	},
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["useTooltip"] = false,
-	},
-	["Drink"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["preferToUpdate"] = false,
-	["customText"] = "",
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["spellId"] = "229206",
-	["auranames"] = {
-	"1137",
-	"1131",
-	},
-	["matchesShowOn"] = "showOnActive",
-	["subeventPrefix"] = "SPELL",
-	["use_tooltip"] = false,
-	["debuffType"] = "HELPFUL",
-	["showClones"] = true,
-	["type"] = "aura2",
-	["use_debuffClass"] = false,
-	["auraspellids"] = {
-	"229206",
-	},
-	["names"] = {
-	"Potion of Prolonged Power",
-	},
-	["buffShowOn"] = "showOnActive",
-	["event"] = "Health",
-	["useName"] = true,
-	["useGroup_count"] = false,
-	["use_spellId"] = true,
-	["name"] = "Potion of Prolonged Power",
-	["custom_hide"] = "timed",
-	["spellIds"] = {
-	229206,
-	},
-	["combineMatches"] = "showLowest",
-	["unit"] = "player",
-	["subeventSuffix"] = "_CAST_START",
-	},
-	["untrigger"] = {
-	},
-	},
-	["activeTriggerMode"] = 1,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
-	["useCooldownModRate"] = true,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["type"] = "subtext",
-	["text_text_format_p_time_precision"] = 1,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
-	},
-	},
-	["height"] = 26,
-	["width"] = 34,
-	["load"] = {
-	["talent2"] = {
-	["multi"] = {
-	},
-	},
-	["talent"] = {
-	["single"] = 9,
-	["multi"] = {
-	[9] = true,
-	},
-	},
-	["class"] = {
-	["single"] = "DEATHKNIGHT",
-	["multi"] = {
-	["DEATHKNIGHT"] = true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["difficulty"] = {
-	["multi"] = {
-	},
-	},
-	["race"] = {
-	["multi"] = {
-	},
-	},
-	["faction"] = {
-	["multi"] = {
-	},
-	},
-	["pvptalent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["single"] = 3,
-	["multi"] = {
-	[2] = true,
-	[3] = true,
-	},
-	},
-	["role"] = {
-	["multi"] = {
-	},
-	},
-	["ingroup"] = {
-	["multi"] = {
-	},
-	},
-	["zoneIds"] = "",
-	},
-	["alpha"] = 1,
-	["useAdjustededMax"] = false,
-	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 253400,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	},
-	["authorOptions"] = {
-	},
-	["config"] = {
-	},
-	["url"] = "NaowhUI",
-	["desaturate"] = false,
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = false,
-	["auto"] = true,
-	["tocversion"] = 40400,
-	["id"] = "Drink",
-	["zoom"] = 0.3,
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["keepAspectRatio"] = true,
-	["uid"] = "FUZJYy)4(6i",
-	["inverse"] = false,
-	["actions"] = {
-	["start"] = {
-	["do_glow"] = false,
-	["custom"] = "",
-	["glow_action"] = "show",
-	["glow_type"] = "ACShine",
-	["do_custom"] = false,
-	["glow_frame"] = "WeakAuras:Potion of Prolonged Power (Active)",
-	},
-	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["finish"] = {
-	},
-	},
-	["conditions"] = {
-	},
-	["cooldown"] = false,
-	["xOffset"] = 0,
-	},
-	["Earthen Potion"] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = 3,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
-	},
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["text1Enabled"] = true,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
-	["load"] = {
-	["use_petbattle"] = false,
-	["class_and_spec"] = {
-	["multi"] = {
-	[260] = true,
-	[261] = true,
-	[263] = true,
-	[104] = true,
-	[253] = true,
-	[577] = true,
-	[268] = true,
-	[269] = true,
-	[254] = true,
-	[581] = true,
-	[255] = true,
-	[259] = true,
-	[103] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_vehicle"] = false,
-	["level_operator"] = {
-	">=",
-	},
-	["size"] = {
-	["multi"] = {
-	["scenario"] = true,
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["ratedpvp"] = true,
-	["party"] = true,
-	["none"] = true,
-	["flexible"] = true,
-	["twenty"] = true,
-	["pvp"] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_size"] = false,
-	["use_level"] = false,
-	["use_vehicleUi"] = false,
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["level"] = {
-	"51",
-	},
-	["use_never"] = false,
-	["zoneIds"] = "",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["text2FontSize"] = 24,
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["text2Enabled"] = false,
-	["config"] = {
-	},
-	["displayIcon"] = 236868,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Potions Tracker - Naowh",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["itemName"] = 58090,
-	["use_alwaystrue"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
-	["unit"] = "player",
-	["type"] = "item",
-	["use_unit"] = true,
-	["spellIds"] = {
-	},
-	["genericShowOn"] = "showAlways",
-	["names"] = {
-	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["unevent"] = "auto",
-	["itemName"] = 58090,
-	["use_genericShowOn"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["unit"] = "player",
-	["duration"] = "1",
-	["use_itemName"] = true,
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
-	["genericShowOn"] = "showOnCooldown",
-	["spellIds"] = {
-	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["use_unit"] = true,
-	["type"] = "item",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["use_exact_itemName"] = true,
-	["use_count"] = true,
-	["use_absorbMode"] = true,
-	["unit"] = "player",
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["subeventSuffix"] = "_CAST_START",
-	["subeventPrefix"] = "SPELL",
-	["event"] = "Item Count",
-	["spellIds"] = {
-	},
-	["names"] = {
-	},
-	["unevent"] = "auto",
-	["count"] = "1",
-	["use_itemName"] = true,
-	["duration"] = "1",
-	["use_unit"] = true,
-	["itemName"] = 58090,
-	["count_operator"] = ">=",
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t) return t[3] end",
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	["stickyDuration"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "CENTER",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
-	["text_color"] = {
-	0.55686274509804,
-	1,
-	0.61960784313725,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "BOTTOM",
-	["text_visible"] = true,
-	["text_fontType"] = "OUTLINE",
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_text_format_p_time_mod_rate"] = true,
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
-	["anchorXOffset"] = 0,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
-	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
-	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_format"] = "timed",
-	},
-	},
-	["height"] = 26,
-	["useAdjustededMax"] = false,
-	["text2Containment"] = "INSIDE",
-	["source"] = "import",
-	["text1Font"] = "Friz Quadrata TT",
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["cooldown"] = true,
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["uid"] = "xeXu5GGKU07",
-	["text1Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["zoom"] = 0.3,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["text1"] = "%s",
-	["text1FontFlags"] = "OUTLINE",
-	["text2Font"] = "Friz Quadrata TT",
-	["width"] = 32,
-	["semver"] = "2.0.6",
-	["useCooldownModRate"] = true,
-	["id"] = "Earthen Potion",
-	["text2"] = "%p",
-	["frameStrata"] = 2,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
-	["alpha"] = 1,
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	},
-	{
-	["value"] = 0,
-	["variable"] = "show",
-	},
-	},
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.5.text_visible",
-	},
-	},
-	},
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["useTooltip"] = false,
-	},
-	["Tricks of the Trade (Active)"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["preferToUpdate"] = false,
-	["customText"] = "",
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["useGroup_count"] = false,
-	["matchesShowOn"] = "showOnActive",
-	["unit"] = "player",
-	["use_tooltip"] = false,
-	["debuffType"] = "HELPFUL",
-	["type"] = "aura2",
-	["use_debuffClass"] = false,
-	["auraspellids"] = {
-	"57933",
-	},
-	["auranames"] = {
-	"Pain Suppression",
-	},
-	["event"] = "Health",
-	["names"] = {
-	"Pain Suppression",
-	},
-	["subeventPrefix"] = "SPELL",
-	["custom_hide"] = "timed",
-	["spellIds"] = {
-	},
-	["useName"] = false,
-	["useExactSpellId"] = true,
-	["combineMatches"] = "showLowest",
-	["subeventSuffix"] = "_CAST_START",
-	["buffShowOn"] = "showOnActive",
-	},
-	["untrigger"] = {
-	},
-	},
-	["activeTriggerMode"] = 1,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
-	["useCooldownModRate"] = true,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 1,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 1,
-	["glowLength"] = 10,
-	["glow"] = true,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["type"] = "subtext",
-	["text_text_format_p_time_precision"] = 1,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
-	},
-	},
-	["height"] = 26,
-	["width"] = 34,
-	["load"] = {
-	["talent2"] = {
-	["multi"] = {
-	},
-	},
-	["use_never"] = false,
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	["DRUID"] = true,
-	["MONK"] = true,
-	["PRIEST"] = true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["ingroup"] = {
-	["multi"] = {
-	},
-	},
-	["difficulty"] = {
-	["multi"] = {
-	},
-	},
-	["race"] = {
-	["multi"] = {
-	},
-	},
-	["use_itemequiped"] = false,
-	["pvptalent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["role"] = {
-	["multi"] = {
-	},
-	},
-	["faction"] = {
-	["multi"] = {
-	},
-	},
-	["zoneIds"] = "",
-	},
-	["alpha"] = 1,
-	["useAdjustededMax"] = false,
-	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 253400,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	},
-	["authorOptions"] = {
-	},
-	["config"] = {
-	},
-	["url"] = "NaowhUI",
-	["desaturate"] = false,
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = false,
-	["auto"] = true,
-	["tocversion"] = 40400,
-	["id"] = "Tricks of the Trade (Active)",
-	["zoom"] = 0.3,
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["keepAspectRatio"] = true,
-	["uid"] = "E4(hRD9VZVm",
-	["inverse"] = false,
-	["actions"] = {
-	["start"] = {
-	["do_glow"] = false,
-	["do_custom"] = false,
-	["custom"] = "",
-	["do_sound"] = true,
-	["glow_action"] = "show",
-	["glow_type"] = "ACShine",
-	["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\bam.ogg",
-	["glow_frame"] = "WeakAuras:Pain Suppression (Active)",
-	},
-	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["finish"] = {
-	["do_sound"] = false,
-	},
-	},
-	["conditions"] = {
-	},
-	["cooldown"] = false,
-	["xOffset"] = 0,
-	},
-	["Merfin: Death Knight T9 bonus"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Aura bar (Player buffs)",
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["type"] = "aura2",
-	["auranames"] = {
-	"67117",
-	},
-	["event"] = "Health",
-	["unit"] = "player",
-	["spellIds"] = {
-	},
-	["subeventPrefix"] = "SPELL",
-	["useName"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["names"] = {
-	},
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["type"] = "combatlog",
-	["spellId"] = {
-	"67117",
-	},
-	["subeventSuffix"] = "_AURA_APPLIED",
-	["duration"] = "45",
-	["event"] = "Combat Log",
-	["unit"] = "player",
-	["destUnit"] = "player",
-	["use_spellId"] = true,
-	["use_sourceUnit"] = false,
-	["use_destUnit"] = true,
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["use_exact_itemName"] = true,
-	["use_genericShowOn"] = true,
-	["genericShowOn"] = "showOnCooldown",
-	["subeventPrefix"] = "SPELL",
-	["equipped_operator"] = ">=",
-	["equipped"] = "2",
-	["debuffType"] = "HELPFUL",
-	["custom_hide"] = "custom",
-	["type"] = "item",
-	["names"] = {
-	},
-	["custom_type"] = "status",
-	["unit"] = "player",
-	["use_equipped"] = true,
-	["use_itemName"] = true,
-	["events"] = "",
-	["itemSetId"] = "872",
-	["use_itemSetId"] = true,
-	["spellIds"] = {
-	},
-	["itemName"] = 0,
-	["check"] = "event",
-	["event"] = "Item Set",
-	["subeventSuffix"] = "_CAST_START",
-	["use_unit"] = true,
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["use_exact_itemName"] = true,
-	["use_genericShowOn"] = true,
-	["genericShowOn"] = "showOnCooldown",
-	["subeventPrefix"] = "SPELL",
-	["equipped_operator"] = ">=",
-	["equipped"] = "2",
-	["debuffType"] = "HELPFUL",
-	["custom_hide"] = "custom",
-	["type"] = "item",
-	["names"] = {
-	},
-	["custom_type"] = "status",
-	["unit"] = "player",
-	["use_equipped"] = true,
-	["use_itemName"] = true,
-	["events"] = "",
-	["itemSetId"] = "871",
-	["use_itemSetId"] = true,
-	["spellIds"] = {
-	},
-	["itemName"] = 0,
-	["check"] = "event",
-	["event"] = "Item Set",
-	["subeventSuffix"] = "_CAST_START",
-	["use_unit"] = true,
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "any",
-	["customTriggerLogic"] = "",
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["desaturate"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_text_format_p_time_mod_rate"] = true,
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
-	["anchorXOffset"] = 0,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "ArchivoNarrow-Bold",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
-	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
-	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fontSize"] = 17,
-	["text_text_format_p_time_dynamic_threshold"] = 3,
-	["text_text_format_p_format"] = "timed",
-	},
-	{
-	["glowFrequency"] = 0.35,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 1,
-	["glowColor"] = {
-	1,
-	1,
-	0,
-	1,
-	},
-	["useGlowColor"] = true,
-	["glowXOffset"] = 0.5,
-	["glowLength"] = 20,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 6,
-	["glowBorder"] = true,
-	},
-	},
-	["height"] = 26,
-	["load"] = {
-	["use_class"] = true,
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["item_bonusid_equipped"] = "",
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["single"] = "DEATHKNIGHT",
-	["multi"] = {
-	},
-	},
-	["use_item_bonusid_equipped"] = false,
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	},
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useAdjustededMax"] = false,
-	["config"] = {
-	},
-	["source"] = "import",
-	["authorOptions"] = {
-	},
-	["cooldown"] = true,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["displayIcon"] = 136129,
-	["xOffset"] = 0,
-	["cooldownEdge"] = false,
-	["anchorFrameType"] = "SCREEN",
-	["useCooldownModRate"] = true,
-	["zoom"] = 0.3,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Merfin: Death Knight T9 bonus",
-	["frameStrata"] = 3,
-	["alpha"] = 1,
-	["width"] = 34,
-	["cooldownTextDisabled"] = true,
-	["uid"] = "a7(xCCNh4LF",
-	["inverse"] = false,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["finish"] = {
-	},
-	},
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 1,
-	["variable"] = "show",
-	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 1,
-	["variable"] = "show",
-	["value"] = 0,
-	},
-	},
-	},
-	["changes"] = {
-	{
-	["value"] = {
-	1,
-	1,
-	0.74901962280273,
-	1,
-	},
-	["property"] = "sub.3.text_color",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.4.glow",
-	},
-	},
-	},
-	{
-	["check"] = {
-	["trigger"] = 2,
-	["variable"] = "show",
-	["value"] = 1,
-	},
-	["linked"] = true,
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	{
-	["value"] = true,
-	["property"] = "inverse",
-	},
-	},
-	},
-	{
-	["check"] = {
-	["trigger"] = -1,
-	["variable"] = "alwaystrue",
-	},
-	["linked"] = true,
-	["changes"] = {
-	{
-	["property"] = "sub.3.text_visible",
-	},
-	{
-	["property"] = "cooldownSwipe",
-	},
-	},
-	},
-	},
-	["information"] = {
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	},
-	["Goblin Sapper Charge"] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = 3,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
-	},
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["text1Enabled"] = true,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
-	["load"] = {
-	["use_petbattle"] = false,
-	["class_and_spec"] = {
-	["multi"] = {
-	[260] = true,
-	[261] = true,
-	[263] = true,
-	[104] = true,
-	[253] = true,
-	[577] = true,
-	[268] = true,
-	[269] = true,
-	[254] = true,
-	[581] = true,
-	[255] = true,
-	[259] = true,
-	[103] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_vehicle"] = false,
-	["level_operator"] = {
-	">=",
-	},
-	["size"] = {
-	["multi"] = {
-	["scenario"] = true,
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["ratedpvp"] = true,
-	["party"] = true,
-	["none"] = true,
-	["flexible"] = true,
-	["twenty"] = true,
-	["pvp"] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_size"] = false,
-	["use_level"] = false,
-	["use_vehicleUi"] = false,
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["level"] = {
-	"51",
-	},
-	["use_never"] = false,
-	["zoneIds"] = "",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["text2FontSize"] = 24,
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["text2Enabled"] = false,
-	["config"] = {
-	},
-	["displayIcon"] = 135826,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Offensive Items - Naowh",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["itemName"] = 10646,
-	["use_alwaystrue"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
-	["unit"] = "player",
-	["type"] = "item",
-	["use_unit"] = true,
-	["spellIds"] = {
-	},
-	["genericShowOn"] = "showAlways",
-	["names"] = {
-	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["unevent"] = "auto",
-	["itemName"] = 10646,
-	["use_genericShowOn"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["unit"] = "player",
-	["duration"] = "1",
-	["use_itemName"] = true,
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
-	["genericShowOn"] = "showOnCooldown",
-	["spellIds"] = {
-	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["use_unit"] = true,
-	["type"] = "item",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["itemName"] = 10646,
-	["use_count"] = true,
-	["duration"] = "1",
-	["unit"] = "player",
-	["use_includeCharges"] = false,
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["subeventSuffix"] = "_CAST_START",
-	["subeventPrefix"] = "SPELL",
-	["use_itemName"] = true,
-	["spellIds"] = {
-	},
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
-	["count"] = "1",
-	["use_exact_itemName"] = true,
-	["unevent"] = "auto",
-	["event"] = "Item Count",
-	["use_unit"] = true,
-	["count_operator"] = ">=",
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t) return t[3] end",
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	["stickyDuration"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
-	["text_color"] = {
-	0.55686274509804,
-	1,
-	0.61960784313725,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "OUTER_RIGHT",
-	["text_visible"] = true,
-	["text_fontType"] = "OUTLINE",
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_text_format_p_time_mod_rate"] = true,
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
-	["anchorXOffset"] = 0,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
-	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
-	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_format"] = "timed",
-	},
-	},
-	["height"] = 26,
-	["useAdjustededMax"] = false,
-	["text2Containment"] = "INSIDE",
-	["source"] = "import",
-	["text1Font"] = "Friz Quadrata TT",
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["cooldown"] = true,
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["uid"] = "WTR8Ai33PDb",
-	["text1Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["zoom"] = 0.3,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["text1"] = "%s",
-	["text1FontFlags"] = "OUTLINE",
-	["text2Font"] = "Friz Quadrata TT",
-	["width"] = 32,
-	["semver"] = "2.0.6",
-	["useCooldownModRate"] = true,
-	["id"] = "Goblin Sapper Charge",
-	["text2"] = "%p",
-	["frameStrata"] = 2,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
-	["alpha"] = 1,
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	},
-	{
-	["value"] = 0,
-	["variable"] = "show",
-	},
-	},
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.5.text_visible",
-	},
-	},
-	},
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["useTooltip"] = false,
-	},
-	["Shadow Fissure"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "All-round",
-	["preferToUpdate"] = false,
-	["yOffset"] = -110,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["type"] = "combatlog",
-	["spellId"] = {
-	"27810",
-	},
-	["subeventSuffix"] = "_CAST_SUCCESS",
-	["duration"] = "3",
-	["event"] = "Combat Log",
-	["unit"] = "player",
-	["use_spellId"] = true,
-	["spellIds"] = {
-	},
-	["names"] = {
-	},
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["keepAspectRatio"] = false,
-	["selfPoint"] = "CENTER",
-	["desaturate"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%s",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Friz Quadrata TT",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-	["text_fontSize"] = 12,
-	["anchorXOffset"] = 0,
-	["text_visible"] = true,
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = true,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "DODGE",
-	["text_text_format_p_time_mod_rate"] = true,
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
-	["anchorXOffset"] = 0,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
-	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
-	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 60,
-	["text_text_format_p_format"] = "timed",
-	},
-	},
-	["height"] = 64,
-	["load"] = {
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	},
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useAdjustededMax"] = false,
-	["config"] = {
-	},
-	["source"] = "import",
-	["authorOptions"] = {
-	},
-	["cooldown"] = true,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["displayIcon"] = "136134",
-	["xOffset"] = -273.00006103516,
-	["cooldownEdge"] = false,
-	["anchorFrameType"] = "SCREEN",
-	["useCooldownModRate"] = true,
-	["zoom"] = 0.3,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Shadow Fissure",
-	["frameStrata"] = 1,
-	["alpha"] = 1,
-	["width"] = 64,
-	["cooldownTextDisabled"] = false,
-	["uid"] = "1of1nJGWAoW",
-	["inverse"] = false,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
-	["do_sound"] = true,
-	},
-	},
-	["conditions"] = {
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	},
-	["Spirit Link Totem (Active)"] = {
-	["iconSource"] = 0,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["auranames"] = {
-	"209426",
-	},
-	["matchesShowOn"] = "showAlways",
-	["subeventPrefix"] = "SPELL",
-	["use_tooltipValue"] = true,
-	["debuffType"] = "HELPFUL",
-	["type"] = "aura2",
-	["namePattern_operator"] = "==",
-	["useExactSpellId"] = true,
-	["names"] = {
-	},
-	["tooltipValue_operator"] = "==",
-	["event"] = "Health",
-	["tooltip"] = "20%",
-	["auraspellids"] = {
-	"325174",
-	},
-	["tooltip_operator"] = "==",
-	["spellIds"] = {
-	},
-	["useName"] = false,
-	["subeventSuffix"] = "_CAST_START",
-	["tooltipValueNumber"] = 1,
-	["unit"] = "player",
-	["tooltipValue"] = "20",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["spellId"] = {
-	"98008",
-	},
-	["duration"] = "6",
-	["unit"] = "player",
-	["use_sourceFlags"] = true,
-	["debuffType"] = "HELPFUL",
-	["type"] = "combatlog",
-	["subeventSuffix"] = "_CAST_SUCCESS",
-	["subeventPrefix"] = "SPELL",
-	["event"] = "Combat Log",
-	["use_sourceFlags2"] = false,
-	["use_sourceFlags3"] = false,
-	["use_spellId"] = true,
-	["spellIds"] = {
-	},
-	["use_sourceUnit"] = false,
-	["unevent"] = "timed",
-	["use_destUnit"] = false,
-	["names"] = {
-	},
-	["sourceFlags"] = "InGroup",
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "all",
-	["activeTriggerMode"] = 2,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
-	["useCooldownModRate"] = true,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 1,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 1,
-	["glowLength"] = 10,
-	["glow"] = true,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["type"] = "subtext",
-	["text_text_format_p_time_precision"] = 1,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
-	},
-	},
-	["height"] = 26,
-	["width"] = 34,
-	["load"] = {
-	["zoneIds"] = "",
-	["use_never"] = false,
-	["talent"] = {
-	["single"] = 10,
-	["multi"] = {
-	[10] = true,
-	},
-	},
-	["class_and_spec"] = {
-	["single"] = 253,
-	["multi"] = {
-	[253] = true,
-	},
-	},
-	["class"] = {
-	["single"] = "HUNTER",
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["single"] = 1,
-	["multi"] = {
-	true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	},
-	["cooldownEdge"] = false,
-	["useAdjustededMax"] = false,
-	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 237586,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	["desaturate"] = false,
-	["config"] = {
-	},
-	["keepAspectRatio"] = true,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["id"] = "Spirit Link Totem (Active)",
-	["zoom"] = 0.3,
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["xOffset"] = 0,
-	["uid"] = "uN20nQE)nCf",
-	["inverse"] = true,
-	["authorOptions"] = {
-	},
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 1,
-	["variable"] = "buffed",
-	["value"] = 0,
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	},
-	},
-	},
-	["cooldown"] = false,
-	["alpha"] = 1,
-	},
-	["Guaridan Spirit (Active)"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["preferToUpdate"] = false,
-	["customText"] = "",
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["useGroup_count"] = false,
-	["matchesShowOn"] = "showOnActive",
-	["subeventPrefix"] = "SPELL",
-	["use_tooltip"] = false,
-	["debuffType"] = "HELPFUL",
-	["useName"] = true,
-	["use_debuffClass"] = false,
-	["subeventSuffix"] = "_CAST_START",
-	["event"] = "Health",
-	["custom_hide"] = "timed",
-	["names"] = {
-	"Guardian Spirit",
-	},
-	["spellIds"] = {
-	},
-	["type"] = "aura2",
-	["auranames"] = {
-	"47788",
-	},
-	["combineMatches"] = "showLowest",
-	["unit"] = "player",
-	["buffShowOn"] = "showOnActive",
-	},
-	["untrigger"] = {
-	},
-	},
-	["activeTriggerMode"] = 1,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
-	["useCooldownModRate"] = true,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 1,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 1,
-	["glowLength"] = 10,
-	["glow"] = true,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["type"] = "subtext",
-	["text_text_format_p_time_precision"] = 1,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
-	},
-	},
-	["height"] = 26,
-	["width"] = 34,
-	["load"] = {
-	["talent2"] = {
-	["multi"] = {
-	},
-	},
-	["use_never"] = false,
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	["DRUID"] = true,
-	["MONK"] = true,
-	["PRIEST"] = true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["ingroup"] = {
-	["multi"] = {
-	},
-	},
-	["difficulty"] = {
-	["multi"] = {
-	},
-	},
-	["race"] = {
-	["multi"] = {
-	},
-	},
-	["use_itemequiped"] = false,
-	["pvptalent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["role"] = {
-	["multi"] = {
-	},
-	},
-	["faction"] = {
-	["multi"] = {
-	},
-	},
-	["zoneIds"] = "",
-	},
-	["alpha"] = 1,
-	["useAdjustededMax"] = false,
-	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 237542,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	},
-	["authorOptions"] = {
-	},
-	["config"] = {
-	},
-	["url"] = "NaowhUI",
-	["desaturate"] = false,
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = false,
-	["auto"] = true,
-	["tocversion"] = 40400,
-	["id"] = "Guaridan Spirit (Active)",
-	["zoom"] = 0.3,
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["keepAspectRatio"] = true,
-	["uid"] = "waKC9UUcUsD",
-	["inverse"] = false,
-	["actions"] = {
-	["start"] = {
-	["do_glow"] = false,
-	["do_custom"] = false,
-	["custom"] = "",
-	["do_sound"] = true,
-	["glow_action"] = "show",
-	["glow_type"] = "ACShine",
-	["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\bam.ogg",
-	["glow_frame"] = "WeakAuras:Guaridan Spirit (Active)",
-	},
-	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["finish"] = {
-	["do_sound"] = false,
-	},
-	},
-	["conditions"] = {
-	},
-	["cooldown"] = false,
-	["xOffset"] = 0,
 	},
 	["Saronite Bomb"] = {
 	["text2Point"] = "CENTER",
@@ -35659,7 +36314,7 @@ NUI.WeakAurasData = {
 	},
 	},
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -35810,9 +36465,649 @@ NUI.WeakAurasData = {
 	["text1FontFlags"] = "OUTLINE",
 	["text2Font"] = "Friz Quadrata TT",
 	["width"] = 32,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["useCooldownModRate"] = true,
 	["id"] = "Saronite Bomb",
+	["text2"] = "%p",
+	["frameStrata"] = 4,
+	["anchorFrameType"] = "SCREEN",
+	["desaturate"] = false,
+	["xOffset"] = 0,
+	["inverse"] = true,
+	["alpha"] = 1,
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	["checks"] = {
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	{
+	["value"] = 0,
+	["variable"] = "show",
+	},
+	},
+	},
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	{
+	["value"] = true,
+	["property"] = "sub.5.text_visible",
+	},
+	},
+	},
+	},
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["useTooltip"] = false,
+	},
+	["Drink"] = {
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["preferToUpdate"] = false,
+	["customText"] = "",
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["spellId"] = "229206",
+	["auranames"] = {
+	"1137",
+	"1131",
+	},
+	["matchesShowOn"] = "showOnActive",
+	["subeventPrefix"] = "SPELL",
+	["use_tooltip"] = false,
+	["debuffType"] = "HELPFUL",
+	["showClones"] = true,
+	["type"] = "aura2",
+	["use_debuffClass"] = false,
+	["auraspellids"] = {
+	"229206",
+	},
+	["names"] = {
+	"Potion of Prolonged Power",
+	},
+	["buffShowOn"] = "showOnActive",
+	["event"] = "Health",
+	["useName"] = true,
+	["useGroup_count"] = false,
+	["use_spellId"] = true,
+	["name"] = "Potion of Prolonged Power",
+	["custom_hide"] = "timed",
+	["spellIds"] = {
+	229206,
+	},
+	["combineMatches"] = "showLowest",
+	["unit"] = "player",
+	["subeventSuffix"] = "_CAST_START",
+	},
+	["untrigger"] = {
+	},
+	},
+	["activeTriggerMode"] = 1,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["stickyDuration"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = true,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
+	["text_visible"] = true,
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
+	["anchorYOffset"] = 0,
+	["text_shadowYOffset"] = 0,
+	["text_fontSize"] = 14,
+	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_text_format_p_time_format"] = 0,
+	},
+	},
+	["height"] = 26,
+	["width"] = 34,
+	["load"] = {
+	["talent2"] = {
+	["multi"] = {
+	},
+	},
+	["talent"] = {
+	["single"] = 9,
+	["multi"] = {
+	[9] = true,
+	},
+	},
+	["class"] = {
+	["single"] = "DEATHKNIGHT",
+	["multi"] = {
+	["DEATHKNIGHT"] = true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["race"] = {
+	["multi"] = {
+	},
+	},
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["single"] = 3,
+	["multi"] = {
+	[2] = true,
+	[3] = true,
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
+	["alpha"] = 1,
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayIcon"] = 253400,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	},
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["url"] = "NaowhUI",
+	["desaturate"] = false,
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = false,
+	["auto"] = true,
+	["tocversion"] = 40400,
+	["id"] = "Drink",
+	["zoom"] = 0.3,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["keepAspectRatio"] = true,
+	["uid"] = "FUZJYy)4(6i",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	["do_glow"] = false,
+	["custom"] = "",
+	["glow_action"] = "show",
+	["glow_type"] = "ACShine",
+	["do_custom"] = false,
+	["glow_frame"] = "WeakAuras:Potion of Prolonged Power (Active)",
+	},
+	["init"] = {
+	["custom"] = "",
+	["do_custom"] = false,
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	},
+	["cooldown"] = false,
+	["xOffset"] = 0,
+	},
+	["Cobalt Frag Bomb"] = {
+	["text2Point"] = "CENTER",
+	["iconSource"] = 3,
+	["text1FontSize"] = 12,
+	["authorOptions"] = {
+	},
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["url"] = "NaowhUI",
+	["icon"] = true,
+	["text1Enabled"] = true,
+	["keepAspectRatio"] = true,
+	["selfPoint"] = "CENTER",
+	["text1Containment"] = "INSIDE",
+	["text1Point"] = "BOTTOMRIGHT",
+	["text2FontFlags"] = "OUTLINE",
+	["load"] = {
+	["use_petbattle"] = false,
+	["class_and_spec"] = {
+	["multi"] = {
+	[260] = true,
+	[261] = true,
+	[263] = true,
+	[104] = true,
+	[253] = true,
+	[577] = true,
+	[268] = true,
+	[269] = true,
+	[254] = true,
+	[581] = true,
+	[255] = true,
+	[259] = true,
+	[103] = true,
+	},
+	},
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["use_vehicle"] = false,
+	["level_operator"] = {
+	">=",
+	},
+	["size"] = {
+	["multi"] = {
+	["scenario"] = true,
+	["ten"] = true,
+	["twentyfive"] = true,
+	["fortyman"] = true,
+	["ratedpvp"] = true,
+	["party"] = true,
+	["none"] = true,
+	["flexible"] = true,
+	["twenty"] = true,
+	["pvp"] = true,
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["use_size"] = false,
+	["use_level"] = false,
+	["use_vehicleUi"] = false,
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["level"] = {
+	"51",
+	},
+	["use_never"] = false,
+	["zoneIds"] = "",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["text2FontSize"] = 24,
+	["cooldownTextDisabled"] = true,
+	["auto"] = false,
+	["tocversion"] = 40400,
+	["text2Enabled"] = false,
+	["config"] = {
+	},
+	["displayIcon"] = 135826,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "Offensive Items - Naowh",
+	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
+	["cooldownEdge"] = false,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["itemName"] = 40771,
+	["use_alwaystrue"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["use_unit"] = true,
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["unevent"] = "auto",
+	["itemName"] = 40771,
+	["use_genericShowOn"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["unit"] = "player",
+	["duration"] = "1",
+	["use_itemName"] = true,
+	["names"] = {
+	},
+	["use_absorbMode"] = true,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["use_unit"] = true,
+	["type"] = "item",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 40771,
+	["use_count"] = true,
+	["duration"] = "1",
+	["unit"] = "player",
+	["use_includeCharges"] = false,
+	["debuffType"] = "HELPFUL",
+	["type"] = "item",
+	["subeventSuffix"] = "_CAST_START",
+	["subeventPrefix"] = "SPELL",
+	["use_itemName"] = true,
+	["spellIds"] = {
+	},
+	["names"] = {
+	},
+	["use_absorbMode"] = true,
+	["count"] = "1",
+	["use_exact_itemName"] = true,
+	["unevent"] = "auto",
+	["event"] = "Item Count",
+	["use_unit"] = true,
+	["count_operator"] = ">=",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["stickyDuration"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["glowFrequency"] = 0.25,
+	["type"] = "subglow",
+	["glowDuration"] = 1,
+	["glowType"] = "Pixel",
+	["glowThickness"] = 1,
+	["glowYOffset"] = 0,
+	["glowColor"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["useGlowColor"] = false,
+	["glowXOffset"] = 0,
+	["glowLength"] = 10,
+	["glow"] = false,
+	["glowScale"] = 1,
+	["glowLines"] = 8,
+	["glowBorder"] = false,
+	},
+	{
+	["text_shadowXOffset"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.s",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_3.2_format"] = "none",
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 0,
+	["text_color"] = {
+	0.55686274509804,
+	1,
+	0.61960784313725,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_text_format_3.s_format"] = "none",
+	["text_anchorPoint"] = "OUTER_RIGHT",
+	["text_visible"] = true,
+	["text_fontType"] = "OUTLINE",
+	["text_fontSize"] = 14,
+	["anchorXOffset"] = 0,
+	["text_anchorYOffset"] = 0,
+	},
+	{
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_fontType"] = "OUTLINE",
+	["type"] = "subtext",
+	["anchorXOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_p_time_format"] = 0,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_p_time_precision"] = 1,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["anchorYOffset"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_fontSize"] = 14,
+	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_text_format_p_format"] = "timed",
+	},
+	},
+	["height"] = 26,
+	["useAdjustededMax"] = false,
+	["text2Containment"] = "INSIDE",
+	["source"] = "import",
+	["text1Font"] = "Friz Quadrata TT",
+	["text2Color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["cooldown"] = true,
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["uid"] = "qxAlUleddys",
+	["text1Color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["zoom"] = 0.3,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["text1"] = "%s",
+	["text1FontFlags"] = "OUTLINE",
+	["text2Font"] = "Friz Quadrata TT",
+	["width"] = 32,
+	["semver"] = "2.0.10",
+	["useCooldownModRate"] = true,
+	["id"] = "Cobalt Frag Bomb",
 	["text2"] = "%p",
 	["frameStrata"] = 4,
 	["anchorFrameType"] = "SCREEN",
@@ -36050,7 +37345,7 @@ NUI.WeakAurasData = {
 	},
 	},
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -36201,7 +37496,7 @@ NUI.WeakAurasData = {
 	["text1FontFlags"] = "OUTLINE",
 	["text2Font"] = "Friz Quadrata TT",
 	["width"] = 32,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["useCooldownModRate"] = true,
 	["id"] = "Global Thermal Sapper Charge",
 	["text2"] = "%p",
@@ -36247,7 +37542,373 @@ NUI.WeakAurasData = {
 	},
 	["useTooltip"] = false,
 	},
-	["Potion of the Tol'vir"] = {
+	["Food: Lavascale Minestrone (+90 Mastery Rating and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["subeventSuffix"] = "_CAST_START",
+	["event"] = "Health",
+	["unit"] = "player",
+	["names"] = {
+	},
+	["auraspellids"] = {
+	"87594",
+	},
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
+	["subeventPrefix"] = "SPELL",
+	["auranames"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 62663,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "any",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["desc"] = "https://discord.gg/merfin",
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["cooldown"] = true,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["displayIcon"] = "351499",
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["keepAspectRatio"] = false,
+	["xOffset"] = 0,
+	["config"] = {
+	},
+	["useTooltip"] = false,
+	["url"] = "NaowhUI",
+	["cooldownTextDisabled"] = true,
+	["zoom"] = 0.3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Lavascale Minestrone (+90 Mastery Rating and +90 Stamina)",
+	["alpha"] = 1,
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["uid"] = "eEq44EAGm0v",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	},
+	["Goblin Sapper Charge"] = {
 	["text2Point"] = "CENTER",
 	["iconSource"] = 3,
 	["text1FontSize"] = 12,
@@ -36331,16 +37992,16 @@ NUI.WeakAurasData = {
 	["text2Enabled"] = false,
 	["config"] = {
 	},
-	["displayIcon"] = 236868,
+	["displayIcon"] = 135826,
 	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Potions Tracker - Naowh",
+	["parent"] = "Offensive Items - Naowh",
 	["cooldownSwipe"] = true,
 	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["itemName"] = 58145,
+	["itemName"] = 10646,
 	["use_alwaystrue"] = true,
 	["subeventSuffix"] = "_CAST_START",
 	["use_genericShowOn"] = true,
@@ -36363,7 +38024,7 @@ NUI.WeakAurasData = {
 	{
 	["trigger"] = {
 	["unevent"] = "auto",
-	["itemName"] = 58145,
+	["itemName"] = 10646,
 	["use_genericShowOn"] = true,
 	["subeventSuffix"] = "_CAST_START",
 	["unit"] = "player",
@@ -36386,25 +38047,26 @@ NUI.WeakAurasData = {
 	},
 	{
 	["trigger"] = {
-	["use_exact_itemName"] = true,
+	["itemName"] = 10646,
 	["use_count"] = true,
-	["use_absorbMode"] = true,
+	["duration"] = "1",
 	["unit"] = "player",
+	["use_includeCharges"] = false,
 	["debuffType"] = "HELPFUL",
 	["type"] = "item",
 	["subeventSuffix"] = "_CAST_START",
 	["subeventPrefix"] = "SPELL",
-	["event"] = "Item Count",
+	["use_itemName"] = true,
 	["spellIds"] = {
 	},
 	["names"] = {
 	},
-	["unevent"] = "auto",
+	["use_absorbMode"] = true,
 	["count"] = "1",
-	["use_itemName"] = true,
-	["duration"] = "1",
+	["use_exact_itemName"] = true,
+	["unevent"] = "auto",
+	["event"] = "Item Count",
 	["use_unit"] = true,
-	["itemName"] = 58145,
 	["count_operator"] = ">=",
 	},
 	["untrigger"] = {
@@ -36440,7 +38102,7 @@ NUI.WeakAurasData = {
 	},
 	},
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -36462,7 +38124,7 @@ NUI.WeakAurasData = {
 	["glowFrequency"] = 0.25,
 	["type"] = "subglow",
 	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
+	["glowType"] = "Pixel",
 	["glowThickness"] = 1,
 	["glowYOffset"] = 0,
 	["glowColor"] = {
@@ -36490,7 +38152,7 @@ NUI.WeakAurasData = {
 	1,
 	},
 	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "CENTER",
+	["text_selfPoint"] = "AUTO",
 	["text_automaticWidth"] = "Auto",
 	["text_fixedWidth"] = 64,
 	["anchorYOffset"] = 0,
@@ -36508,7 +38170,7 @@ NUI.WeakAurasData = {
 	["text_shadowYOffset"] = 0,
 	["text_wordWrap"] = "WordWrap",
 	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "BOTTOM",
+	["text_anchorPoint"] = "OUTER_RIGHT",
 	["text_visible"] = true,
 	["text_fontType"] = "OUTLINE",
 	["text_fontSize"] = 14,
@@ -36571,7 +38233,7 @@ NUI.WeakAurasData = {
 	1,
 	1,
 	},
-	["uid"] = "ijVmsxoRJ0s",
+	["uid"] = "WTR8Ai33PDb",
 	["text1Color"] = {
 	1,
 	1,
@@ -36591,160 +38253,347 @@ NUI.WeakAurasData = {
 	["text1FontFlags"] = "OUTLINE",
 	["text2Font"] = "Friz Quadrata TT",
 	["width"] = 32,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["useCooldownModRate"] = true,
-	["id"] = "Potion of the Tol'vir",
+	["id"] = "Goblin Sapper Charge",
 	["text2"] = "%p",
+	["frameStrata"] = 2,
+	["anchorFrameType"] = "SCREEN",
+	["desaturate"] = false,
+	["xOffset"] = 0,
+	["inverse"] = true,
+	["alpha"] = 1,
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	["checks"] = {
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	{
+	["value"] = 0,
+	["variable"] = "show",
+	},
+	},
+	},
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	{
+	["value"] = true,
+	["property"] = "sub.5.text_visible",
+	},
+	},
+	},
+	},
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["useTooltip"] = false,
+	},
+	["Tricks of the Trade (Active)"] = {
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["preferToUpdate"] = false,
+	["customText"] = "",
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["useGroup_count"] = false,
+	["matchesShowOn"] = "showOnActive",
+	["unit"] = "player",
+	["use_tooltip"] = false,
+	["debuffType"] = "HELPFUL",
+	["type"] = "aura2",
+	["use_debuffClass"] = false,
+	["auraspellids"] = {
+	"57933",
+	},
+	["auranames"] = {
+	"Pain Suppression",
+	},
+	["event"] = "Health",
+	["names"] = {
+	"Pain Suppression",
+	},
+	["subeventPrefix"] = "SPELL",
+	["custom_hide"] = "timed",
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
+	["combineMatches"] = "showLowest",
+	["subeventSuffix"] = "_CAST_START",
+	["buffShowOn"] = "showOnActive",
+	},
+	["untrigger"] = {
+	},
+	},
+	["activeTriggerMode"] = 1,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["stickyDuration"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["glowFrequency"] = 0.25,
+	["type"] = "subglow",
+	["glowDuration"] = 1,
+	["glowType"] = "Pixel",
+	["glowThickness"] = 1,
+	["glowYOffset"] = 1,
+	["glowColor"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["useGlowColor"] = false,
+	["glowXOffset"] = 1,
+	["glowLength"] = 10,
+	["glow"] = true,
+	["glowScale"] = 1,
+	["glowLines"] = 8,
+	["glowBorder"] = false,
+	},
+	{
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = true,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
+	["text_visible"] = true,
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
+	["anchorYOffset"] = 0,
+	["text_shadowYOffset"] = 0,
+	["text_fontSize"] = 14,
+	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_text_format_p_time_format"] = 0,
+	},
+	},
+	["height"] = 26,
+	["width"] = 34,
+	["load"] = {
+	["talent2"] = {
+	["multi"] = {
+	},
+	},
+	["use_never"] = false,
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	["DRUID"] = true,
+	["MONK"] = true,
+	["PRIEST"] = true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["race"] = {
+	["multi"] = {
+	},
+	},
+	["use_itemequiped"] = false,
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
+	["alpha"] = 1,
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayIcon"] = 253400,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	},
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["url"] = "NaowhUI",
+	["desaturate"] = false,
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = false,
+	["auto"] = true,
+	["tocversion"] = 40400,
+	["id"] = "Tricks of the Trade (Active)",
+	["zoom"] = 0.3,
 	["frameStrata"] = 3,
 	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
-	["alpha"] = 1,
+	["keepAspectRatio"] = true,
+	["uid"] = "E4(hRD9VZVm",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	["do_glow"] = false,
+	["do_custom"] = false,
+	["custom"] = "",
+	["do_sound"] = true,
+	["glow_action"] = "show",
+	["glow_type"] = "ACShine",
+	["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\bam.ogg",
+	["glow_frame"] = "WeakAuras:Pain Suppression (Active)",
+	},
+	["init"] = {
+	["custom"] = "",
+	["do_custom"] = false,
+	},
+	["finish"] = {
+	["do_sound"] = false,
+	},
+	},
 	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
 	},
-	{
-	["value"] = 0,
-	["variable"] = "show",
+	["cooldown"] = false,
+	["xOffset"] = 0,
 	},
-	},
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.5.text_visible",
-	},
-	},
-	},
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["useTooltip"] = false,
-	},
-	["Potion of Concentration"] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = 3,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
-	},
+	["Food: Grilled Dragon (+90 Hit Rating and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
 	["preferToUpdate"] = false,
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["text1Enabled"] = true,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
-	["load"] = {
-	["use_petbattle"] = false,
-	["class_and_spec"] = {
-	["multi"] = {
-	[260] = true,
-	[261] = true,
-	[263] = true,
-	[104] = true,
-	[253] = true,
-	[577] = true,
-	[268] = true,
-	[269] = true,
-	[254] = true,
-	[581] = true,
-	[255] = true,
-	[259] = true,
-	[103] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_vehicle"] = false,
-	["level_operator"] = {
-	">=",
-	},
-	["size"] = {
-	["multi"] = {
-	["scenario"] = true,
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["ratedpvp"] = true,
-	["party"] = true,
-	["none"] = true,
-	["flexible"] = true,
-	["twenty"] = true,
-	["pvp"] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_size"] = false,
-	["use_level"] = false,
-	["use_vehicleUi"] = false,
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["level"] = {
-	"51",
-	},
-	["use_never"] = false,
-	["zoneIds"] = "",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["text2FontSize"] = 24,
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["text2Enabled"] = false,
-	["config"] = {
-	},
-	["displayIcon"] = 236868,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Potions Tracker - Naowh",
 	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
+	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["itemName"] = 57194,
-	["use_alwaystrue"] = true,
+	["type"] = "aura2",
 	["subeventSuffix"] = "_CAST_START",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
+	["event"] = "Health",
 	["unit"] = "player",
-	["type"] = "item",
-	["use_unit"] = true,
-	["spellIds"] = {
-	},
-	["genericShowOn"] = "showAlways",
 	["names"] = {
 	},
-	["event"] = "Cooldown Progress (Item)",
+	["auraspellids"] = {
+	"87595",
+	},
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
 	["subeventPrefix"] = "SPELL",
+	["auranames"] = {
+	},
 	["debuffType"] = "HELPFUL",
 	},
 	["untrigger"] = {
@@ -36752,56 +38601,28 @@ NUI.WeakAurasData = {
 	},
 	{
 	["trigger"] = {
-	["unevent"] = "auto",
-	["itemName"] = 57194,
-	["use_genericShowOn"] = true,
+	["type"] = "item",
+	["use_count"] = true,
 	["subeventSuffix"] = "_CAST_START",
-	["unit"] = "player",
-	["duration"] = "1",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
 	["use_itemName"] = true,
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
+	["unit"] = "player",
+	["itemName"] = 62666,
 	["genericShowOn"] = "showOnCooldown",
 	["spellIds"] = {
 	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["use_unit"] = true,
-	["type"] = "item",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["use_exact_itemName"] = true,
-	["use_count"] = true,
-	["use_absorbMode"] = true,
-	["unit"] = "player",
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["subeventSuffix"] = "_CAST_START",
 	["subeventPrefix"] = "SPELL",
 	["event"] = "Item Count",
-	["spellIds"] = {
-	},
+	["count"] = "0",
 	["names"] = {
 	},
-	["unevent"] = "auto",
-	["count"] = "1",
-	["use_itemName"] = true,
-	["duration"] = "1",
-	["use_unit"] = true,
-	["itemName"] = 57194,
-	["count_operator"] = ">=",
+	["count_operator"] = ">",
 	},
 	["untrigger"] = {
 	},
 	},
-	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t) return t[3] end",
+	["disjunctive"] = "any",
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
@@ -36809,6 +38630,161 @@ NUI.WeakAurasData = {
 	-1,
 	"",
 	},
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["desc"] = "https://discord.gg/merfin",
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["cooldown"] = true,
 	["animation"] = {
 	["start"] = {
 	["type"] = "none",
@@ -36829,146 +38805,27 @@ NUI.WeakAurasData = {
 	["easeType"] = "none",
 	},
 	},
-	["stickyDuration"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
+	["displayIcon"] = "237335",
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["keepAspectRatio"] = false,
+	["xOffset"] = 0,
+	["config"] = {
 	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "CENTER",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
-	["text_color"] = {
-	0.55686274509804,
-	1,
-	0.61960784313725,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "BOTTOM",
-	["text_visible"] = true,
-	["text_fontType"] = "OUTLINE",
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_text_format_p_time_mod_rate"] = true,
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
-	["anchorXOffset"] = 0,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
-	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
-	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_format"] = "timed",
-	},
-	},
-	["height"] = 26,
-	["useAdjustededMax"] = false,
-	["text2Containment"] = "INSIDE",
-	["source"] = "import",
-	["text1Font"] = "Friz Quadrata TT",
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["cooldown"] = true,
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["uid"] = "efzv2cPkWCo",
-	["text1Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
+	["useTooltip"] = false,
+	["url"] = "NaowhUI",
+	["cooldownTextDisabled"] = true,
 	["zoom"] = 0.3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Grilled Dragon (+90 Hit Rating and +90 Stamina)",
+	["alpha"] = 1,
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["uid"] = "KF(jLeuGtQd",
+	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
 	},
@@ -36977,55 +38834,102 @@ NUI.WeakAurasData = {
 	["finish"] = {
 	},
 	},
-	["text1"] = "%s",
-	["text1FontFlags"] = "OUTLINE",
-	["text2Font"] = "Friz Quadrata TT",
-	["width"] = 32,
-	["semver"] = "2.0.6",
-	["useCooldownModRate"] = true,
-	["id"] = "Potion of Concentration",
-	["text2"] = "%p",
-	["frameStrata"] = 4,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
-	["alpha"] = 1,
 	["conditions"] = {
 	{
 	["check"] = {
 	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	},
-	{
-	["value"] = 0,
-	["variable"] = "show",
-	},
-	},
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
 	},
 	["changes"] = {
 	{
-	["value"] = true,
-	["property"] = "desaturate",
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
 	},
 	{
-	["value"] = true,
-	["property"] = "sub.5.text_visible",
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
 	},
 	},
 	},
 	},
 	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
 	},
-	["useTooltip"] = false,
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
 	},
 	["Super Sapper Charge"] = {
 	["text2Point"] = "CENTER",
@@ -37221,7 +39125,7 @@ NUI.WeakAurasData = {
 	},
 	},
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -37372,7 +39276,7 @@ NUI.WeakAurasData = {
 	["text1FontFlags"] = "OUTLINE",
 	["text2Font"] = "Friz Quadrata TT",
 	["width"] = 32,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["useCooldownModRate"] = true,
 	["id"] = "Super Sapper Charge",
 	["text2"] = "%p",
@@ -37418,202 +39322,135 @@ NUI.WeakAurasData = {
 	},
 	["useTooltip"] = false,
 	},
-	["Potion (Active)"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
+	["Offensive Items - Naowh"] = {
+	["grow"] = "UP",
+	["controlledChildren"] = {
+	"Nitro Boosts",
+	"Frag Belt",
+	"Greater Drums of War",
+	"Greater Drums of Battle",
+	"Greater Drums of Speed",
+	"Super Sapper Charge",
+	"Goblin Sapper Charge",
+	"Global Thermal Sapper Charge",
+	"Adamantite Grenade",
+	"Cobalt Frag Bomb",
+	"Saronite Bomb",
 	},
+	["borderBackdrop"] = "Blizzard Tooltip",
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "NaowhUI - UI Elements - Cataclysm",
 	["preferToUpdate"] = false,
-	["customText"] = "",
-	["yOffset"] = 0,
+	["groupIcon"] = 237295,
+	["sortHybridTable"] = {
+	["Adamantite Grenade"] = false,
+	["Nitro Boosts"] = false,
+	["Greater Drums of Battle"] = false,
+	["Greater Drums of War"] = false,
+	["Greater Drums of Speed"] = false,
+	["Super Sapper Charge"] = false,
+	["Cobalt Frag Bomb"] = false,
+	["Goblin Sapper Charge"] = false,
+	["Saronite Bomb"] = false,
+	["Global Thermal Sapper Charge"] = false,
+	["Frag Belt"] = false,
+	},
 	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["icon"] = true,
+	["arcLength"] = 360,
+	["fullCircle"] = true,
+	["rowSpace"] = 4,
+	["url"] = "NaowhUI",
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["spellId"] = "229206",
-	["useGroup_count"] = false,
-	["matchesShowOn"] = "showOnActive",
 	["unit"] = "player",
-	["use_tooltip"] = false,
-	["debuffType"] = "HELPFUL",
 	["type"] = "aura2",
-	["use_debuffClass"] = false,
-	["auraspellids"] = {
-	"229206",
-	},
-	["custom_hide"] = "timed",
-	["buffShowOn"] = "showOnActive",
-	["event"] = "Health",
-	["useName"] = true,
-	["auranames"] = {
-	"53908",
-	"53909",
-	},
-	["use_spellId"] = true,
-	["name"] = "Potion of Prolonged Power",
-	["subeventPrefix"] = "SPELL",
 	["spellIds"] = {
-	229206,
-	},
-	["combineMatches"] = "showLowest",
-	["names"] = {
-	"Potion of Prolonged Power",
 	},
 	["subeventSuffix"] = "_CAST_START",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	["event"] = "Health",
+	["names"] = {
+	},
 	},
 	["untrigger"] = {
 	},
 	},
-	["activeTriggerMode"] = 1,
 	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
-	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["columnSpace"] = 4,
+	["radius"] = 200,
+	["xOffset"] = 378,
+	["useLimit"] = false,
+	["align"] = "CENTER",
+	["rotation"] = 0,
+	["yOffset"] = -43,
+	["desc"] = "",
+	["stagger"] = 0,
+	["gridType"] = "RD",
+	["version"] = 20,
 	["subRegions"] = {
-	{
-	["type"] = "subbackground",
 	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
+	["alpha"] = 1,
+	["borderColor"] = {
 	0,
 	0,
 	0,
 	1,
 	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["type"] = "subtext",
-	["text_text_format_p_time_precision"] = 1,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
-	},
-	},
-	["height"] = 26,
-	["width"] = 34,
 	["load"] = {
-	["talent2"] = {
-	["multi"] = {
-	},
-	},
+	["use_class"] = false,
 	["talent"] = {
-	["single"] = 9,
 	["multi"] = {
-	[9] = true,
+	},
+	},
+	["zoneIds"] = "",
+	["spec"] = {
+	["multi"] = {
 	},
 	},
 	["class"] = {
-	["single"] = "DEATHKNIGHT",
 	["multi"] = {
-	["DEATHKNIGHT"] = true,
 	},
 	},
 	["size"] = {
 	["multi"] = {
 	},
 	},
-	["ingroup"] = {
-	["multi"] = {
 	},
+	["space"] = 4,
+	["backdropColor"] = {
+	1,
+	1,
+	1,
+	0.5,
 	},
-	["difficulty"] = {
-	["multi"] = {
+	["background"] = "None",
+	["animate"] = false,
+	["internalVersion"] = 73,
+	["scale"] = 1,
+	["centerType"] = "LR",
+	["border"] = false,
+	["borderEdge"] = "Square Full White",
+	["stepAngle"] = 15,
+	["borderSize"] = 2,
+	["limit"] = 5,
+	["authorOptions"] = {
 	},
-	},
-	["race"] = {
-	["multi"] = {
-	},
-	},
-	["use_itemequiped"] = false,
-	["pvptalent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["single"] = 3,
-	["multi"] = {
-	[2] = true,
-	[3] = true,
-	},
-	},
-	["role"] = {
-	["multi"] = {
-	},
-	},
-	["faction"] = {
-	["multi"] = {
-	},
-	},
-	["zoneIds"] = "",
-	},
-	["alpha"] = 1,
-	["useAdjustededMax"] = false,
-	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 253400,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
 	["animation"] = {
 	["start"] = {
 	["type"] = "none",
-	["easeType"] = "none",
 	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
 	["duration_type"] = "seconds",
+	["easeType"] = "none",
 	},
 	["main"] = {
 	["type"] = "none",
@@ -37623,101 +39460,86 @@ NUI.WeakAurasData = {
 	},
 	["finish"] = {
 	["type"] = "none",
-	["easeType"] = "none",
 	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
 	["duration_type"] = "seconds",
+	["easeType"] = "none",
 	},
 	},
-	["authorOptions"] = {
+	["uid"] = "gd8Abv2L6kf",
+	["constantFactor"] = "RADIUS",
+	["source"] = "import",
+	["borderOffset"] = 4,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Offensive Items - Naowh",
+	["backgroundInset"] = 0,
+	["gridWidth"] = 4,
+	["anchorFrameType"] = "SCREEN",
+	["regionType"] = "dynamicgroup",
+	["borderInset"] = 1,
+	["sort"] = "none",
+	["selfPoint"] = "BOTTOM",
+	["frameStrata"] = 2,
+	["conditions"] = {
+	},
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
 	},
 	["config"] = {
 	},
-	["url"] = "NaowhUI",
-	["desaturate"] = false,
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = false,
-	["auto"] = true,
-	["tocversion"] = 40400,
-	["id"] = "Potion (Active)",
-	["zoom"] = 0.3,
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["keepAspectRatio"] = true,
-	["uid"] = "1CzAG9sj79b",
-	["inverse"] = false,
-	["actions"] = {
-	["start"] = {
-	["do_glow"] = false,
-	["custom"] = "",
-	["glow_action"] = "show",
-	["glow_type"] = "ACShine",
-	["do_custom"] = false,
-	["glow_frame"] = "WeakAuras:Potion of Prolonged Power (Active)",
 	},
-	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["finish"] = {
-	},
-	},
-	["conditions"] = {
-	},
-	["cooldown"] = false,
-	["xOffset"] = 0,
-	},
-	["Blessing of Sacrifice (Active)"] = {
-	["iconSource"] = -1,
+	["Food: Healthstone"] = {
+	["iconSource"] = 0,
 	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
 	["preferToUpdate"] = false,
-	["customText"] = "",
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
 	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
 	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["useGroup_count"] = false,
-	["matchesShowOn"] = "showOnActive",
-	["subeventPrefix"] = "SPELL",
-	["use_tooltip"] = false,
-	["spellName"] = {
-	"Power Word: Barrier",
-	},
+	["itemName"] = 5512,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
 	["unit"] = "player",
-	["use_unit"] = true,
-	["debuffType"] = "HELPFUL",
-	["custom_hide"] = "timed",
-	["useName"] = true,
-	["use_debuffClass"] = false,
-	["subeventSuffix"] = "_CAST_SUCCESS",
-	["buffShowOn"] = "showOnActive",
-	["type"] = "aura2",
-	["event"] = "Combat Log",
-	["names"] = {
-	"Blessing of Sacrifice",
-	},
-	["auranames"] = {
-	"Blessing of Sacrifice",
-	},
-	["use_spellName"] = true,
+	["type"] = "item",
+	["genericShowOn"] = "showAlways",
 	["spellIds"] = {
 	},
-	["use_sourceUnit"] = true,
-	["duration"] = "10",
-	["combineMatches"] = "showLowest",
-	["sourceUnit"] = "player",
-	["unevent"] = "timed",
+	["use_remaining"] = false,
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 5512,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
 	},
 	["untrigger"] = {
 	},
@@ -37731,9 +39553,9 @@ NUI.WeakAurasData = {
 	"",
 	},
 	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
+	["desaturate"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -37752,45 +39574,82 @@ NUI.WeakAurasData = {
 	["type"] = "subborder",
 	},
 	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 1,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 1,
-	["glowLength"] = 10,
-	["glow"] = true,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
 	["text_shadowColor"] = {
 	0,
 	0,
 	0,
 	1,
 	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
+	["text_text_format_2.p_time_legacy_floor"] = false,
 	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
+	["text_text_format_p_time_legacy_floor"] = false,
 	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
 	["anchorXOffset"] = 0,
 	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
 	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
 	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
 	["text_color"] = {
 	1,
 	1,
@@ -37798,54 +39657,36 @@ NUI.WeakAurasData = {
 	1,
 	},
 	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
+	["text_text_format_1.p_time_precision"] = 1,
 	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
 	},
 	},
 	["height"] = 26,
-	["width"] = 34,
+	["width"] = 32,
 	["load"] = {
-	["talent2"] = {
-	["multi"] = {
-	},
-	},
 	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["single"] = "PALADIN",
-	["multi"] = {
-	["PALADIN"] = true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["ingroup"] = {
-	["multi"] = {
-	},
-	},
-	["difficulty"] = {
-	["multi"] = {
-	},
-	},
-	["race"] = {
-	["multi"] = {
-	},
-	},
-	["use_itemequiped"] = false,
-	["pvptalent"] = {
 	["multi"] = {
 	},
 	},
@@ -37853,34 +39694,25 @@ NUI.WeakAurasData = {
 	["multi"] = {
 	},
 	},
-	["role"] = {
+	["class"] = {
 	["multi"] = {
 	},
 	},
-	["faction"] = {
+	["size"] = {
 	["multi"] = {
 	},
 	},
-	["zoneIds"] = "",
 	},
-	["alpha"] = 1,
+	["desc"] = "https://discord.gg/merfin",
 	["useAdjustededMax"] = false,
 	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 135966,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
+	["cooldown"] = true,
 	["animation"] = {
 	["start"] = {
 	["type"] = "none",
-	["easeType"] = "none",
 	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
 	["duration_type"] = "seconds",
+	["easeType"] = "none",
 	},
 	["main"] = {
 	["type"] = "none",
@@ -37890,105 +39722,545 @@ NUI.WeakAurasData = {
 	},
 	["finish"] = {
 	["type"] = "none",
-	["easeType"] = "none",
 	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
 	["duration_type"] = "seconds",
+	["easeType"] = "none",
 	},
 	},
-	["authorOptions"] = {
-	},
+	["displayIcon"] = "135230",
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["keepAspectRatio"] = false,
+	["xOffset"] = 0,
 	["config"] = {
 	},
+	["useTooltip"] = false,
 	["url"] = "NaowhUI",
-	["desaturate"] = false,
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = false,
-	["auto"] = true,
-	["tocversion"] = 40400,
-	["id"] = "Blessing of Sacrifice (Active)",
+	["cooldownTextDisabled"] = true,
 	["zoom"] = 0.3,
-	["frameStrata"] = 3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Healthstone",
+	["alpha"] = 1,
+	["frameStrata"] = 1,
 	["anchorFrameType"] = "SCREEN",
-	["keepAspectRatio"] = true,
-	["uid"] = "tA2aPx6CGOw",
+	["authorOptions"] = {
+	},
+	["uid"] = "49mDUcESvCL",
 	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
-	["do_glow"] = false,
-	["do_custom"] = false,
-	["custom"] = "",
-	["do_sound"] = true,
-	["glow_action"] = "show",
-	["glow_type"] = "ACShine",
-	["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\bam.ogg",
-	["glow_frame"] = "WeakAuras:Blessing of Sacrifice (Active)",
 	},
 	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
 	},
 	["finish"] = {
-	["do_sound"] = false,
 	},
 	},
 	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
 	},
-	["cooldown"] = false,
-	["xOffset"] = 0,
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
 	},
-	["Unholy Frenzy (Active)"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
 	["color"] = {
 	1,
 	1,
 	1,
 	1,
 	},
+	},
+	["Food: Basilisk Liverdog (+90 Haste Rating and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
 	["preferToUpdate"] = false,
-	["customText"] = "",
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
 	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
 	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["useGroup_count"] = false,
-	["matchesShowOn"] = "showOnActive",
-	["unit"] = "player",
-	["use_tooltip"] = false,
-	["debuffType"] = "HELPFUL",
 	["type"] = "aura2",
-	["use_debuffClass"] = false,
-	["auraspellids"] = {
-	"49016",
-	"55213",
-	},
-	["auranames"] = {
-	"Pain Suppression",
-	},
+	["subeventSuffix"] = "_CAST_START",
 	["event"] = "Health",
+	["unit"] = "player",
 	["names"] = {
-	"Pain Suppression",
 	},
-	["subeventPrefix"] = "SPELL",
-	["custom_hide"] = "timed",
+	["auraspellids"] = {
+	"87599",
+	},
 	["spellIds"] = {
 	},
 	["useName"] = false,
 	["useExactSpellId"] = true,
-	["combineMatches"] = "showLowest",
-	["subeventSuffix"] = "_CAST_START",
-	["buffShowOn"] = "showOnActive",
+	["subeventPrefix"] = "SPELL",
+	["auranames"] = {
+	},
+	["debuffType"] = "HELPFUL",
 	},
 	["untrigger"] = {
 	},
 	},
-	["activeTriggerMode"] = 1,
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 62665,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "any",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "133973",
+	["uid"] = "XHiKYWdNc2c",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Basilisk Liverdog (+90 Haste Rating and +90 Stamina)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	},
+	["Food: Seafood Magnifique Feast (+90 Primary Stat and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["itemName"] = 62290,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["genericShowOn"] = "showAlways",
+	["spellIds"] = {
+	},
+	["use_remaining"] = false,
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 62290,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "all",
+	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
 	["progressSource"] = {
@@ -37996,9 +40268,9 @@ NUI.WeakAurasData = {
 	"",
 	},
 	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
+	["desaturate"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -38017,45 +40289,82 @@ NUI.WeakAurasData = {
 	["type"] = "subborder",
 	},
 	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 1,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 1,
-	["glowLength"] = 10,
-	["glow"] = true,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
 	["text_shadowColor"] = {
 	0,
 	0,
 	0,
 	1,
 	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
+	["text_text_format_2.p_time_legacy_floor"] = false,
 	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
+	["text_text_format_p_time_legacy_floor"] = false,
 	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
 	["anchorXOffset"] = 0,
 	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
 	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
 	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
 	["text_color"] = {
 	1,
 	1,
@@ -38063,56 +40372,36 @@ NUI.WeakAurasData = {
 	1,
 	},
 	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
+	["text_text_format_1.p_time_precision"] = 1,
 	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
 	},
 	},
 	["height"] = 26,
-	["width"] = 34,
+	["width"] = 32,
 	["load"] = {
-	["talent2"] = {
-	["multi"] = {
-	},
-	},
-	["use_never"] = false,
 	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	["DRUID"] = true,
-	["MONK"] = true,
-	["PRIEST"] = true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["ingroup"] = {
-	["multi"] = {
-	},
-	},
-	["difficulty"] = {
-	["multi"] = {
-	},
-	},
-	["race"] = {
-	["multi"] = {
-	},
-	},
-	["use_itemequiped"] = false,
-	["pvptalent"] = {
 	["multi"] = {
 	},
 	},
@@ -38120,34 +40409,25 @@ NUI.WeakAurasData = {
 	["multi"] = {
 	},
 	},
-	["role"] = {
+	["class"] = {
 	["multi"] = {
 	},
 	},
-	["faction"] = {
+	["size"] = {
 	["multi"] = {
 	},
 	},
-	["zoneIds"] = "",
 	},
-	["alpha"] = 1,
+	["desc"] = "https://discord.gg/merfin",
 	["useAdjustededMax"] = false,
 	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 253400,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
+	["cooldown"] = true,
 	["animation"] = {
 	["start"] = {
 	["type"] = "none",
-	["easeType"] = "none",
 	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
 	["duration_type"] = "seconds",
+	["easeType"] = "none",
 	},
 	["main"] = {
 	["type"] = "none",
@@ -38157,52 +40437,122 @@ NUI.WeakAurasData = {
 	},
 	["finish"] = {
 	["type"] = "none",
-	["easeType"] = "none",
 	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
 	["duration_type"] = "seconds",
+	["easeType"] = "none",
 	},
 	},
-	["authorOptions"] = {
-	},
+	["displayIcon"] = "350559",
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["keepAspectRatio"] = false,
+	["xOffset"] = 0,
 	["config"] = {
 	},
+	["useTooltip"] = false,
 	["url"] = "NaowhUI",
-	["desaturate"] = false,
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = false,
-	["auto"] = true,
-	["tocversion"] = 40400,
-	["id"] = "Unholy Frenzy (Active)",
+	["cooldownTextDisabled"] = true,
 	["zoom"] = 0.3,
-	["frameStrata"] = 3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Seafood Magnifique Feast (+90 Primary Stat and +90 Stamina)",
+	["alpha"] = 1,
+	["frameStrata"] = 1,
 	["anchorFrameType"] = "SCREEN",
-	["keepAspectRatio"] = true,
-	["uid"] = "OEBHl1A43(f",
+	["authorOptions"] = {
+	},
+	["uid"] = "HA(HLoAZlGk",
 	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
-	["do_glow"] = false,
-	["do_custom"] = false,
-	["custom"] = "",
-	["do_sound"] = true,
-	["glow_action"] = "show",
-	["glow_type"] = "ACShine",
-	["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\bam.ogg",
-	["glow_frame"] = "WeakAuras:Pain Suppression (Active)",
 	},
 	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
 	},
 	["finish"] = {
-	["do_sound"] = false,
 	},
 	},
 	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
 	},
-	["cooldown"] = false,
-	["xOffset"] = 0,
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
 	},
 	["Blessing of Protection (Active)"] = {
 	["iconSource"] = -1,
@@ -38278,7 +40628,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -38452,7 +40802,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
@@ -38484,136 +40834,10 @@ NUI.WeakAurasData = {
 	["cooldown"] = false,
 	["xOffset"] = 0,
 	},
-	["NaowhUI - UI Elements - Cataclysm"] = {
-	["controlledChildren"] = {
-	"All-round",
-	"Reminder: buffs",
-	"Aura bar (Player buffs)",
-	"Potions Tracker - Naowh",
-	"Offensive Items - Naowh",
-	},
-	["borderBackdrop"] = "Blizzard Tooltip",
-	["wagoID"] = "fFdRT46Na",
-	["authorOptions"] = {
-	},
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["borderColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["url"] = "NaowhUI",
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["unit"] = "player",
-	["type"] = "aura2",
-	["spellIds"] = {
-	},
-	["subeventSuffix"] = "_CAST_START",
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	["event"] = "Health",
-	["names"] = {
-	},
-	},
-	["untrigger"] = {
-	},
-	},
-	},
-	["internalVersion"] = 73,
-	["selfPoint"] = "CENTER",
-	["version"] = 16,
-	["subRegions"] = {
-	},
-	["load"] = {
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	},
-	["backdropColor"] = {
-	1,
-	1,
-	1,
-	0.5,
-	},
-	["source"] = "import",
-	["scale"] = 1,
-	["border"] = false,
-	["borderEdge"] = "Square Full White",
-	["regionType"] = "group",
-	["borderSize"] = 2,
-	["xOffset"] = 0,
-	["borderOffset"] = 4,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "NaowhUI - UI Elements - Cataclysm",
-	["groupIcon"] = "136099",
-	["frameStrata"] = 1,
-	["anchorFrameType"] = "SCREEN",
-	["alpha"] = 1,
-	["config"] = {
-	},
-	["uid"] = "hSK9Eksq8F0",
-	["borderInset"] = 1,
-	["conditions"] = {
-	},
-	["information"] = {
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	},
-	["Arcane Int"] = {
+	["Food: Severed Sagefish Head (+90 Intellect and +90 Stamina)"] = {
 	["iconSource"] = 0,
 	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	0.4,
-	0.4,
-	0.4,
-	1,
-	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
 	["preferToUpdate"] = false,
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
@@ -38625,36 +40849,60 @@ NUI.WeakAurasData = {
 	["trigger"] = {
 	["type"] = "aura2",
 	["subeventSuffix"] = "_CAST_START",
-	["matchesShowOn"] = "showOnMissing",
 	["event"] = "Health",
 	["unit"] = "player",
-	["auranames"] = {
-	"61316",
-	"43002",
-	"42995",
-	"79058",
+	["names"] = {
 	},
-	["useExactSpellId"] = false,
+	["auraspellids"] = {
+	"87587",
+	},
 	["spellIds"] = {
 	},
-	["useName"] = true,
-	["auraspellids"] = {
-	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
 	["subeventPrefix"] = "SPELL",
-	["names"] = {
+	["auranames"] = {
 	},
 	["debuffType"] = "HELPFUL",
 	},
 	["untrigger"] = {
 	},
 	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 62671,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "any",
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
-	["keepAspectRatio"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
 	["selfPoint"] = "CENTER",
 	["desaturate"] = false,
-	["version"] = 16,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -38672,33 +40920,120 @@ NUI.WeakAurasData = {
 	["border_edge"] = "Square Full White",
 	["type"] = "subborder",
 	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
 	},
-	["height"] = 36,
-	["width"] = 42,
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = false,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
 	["load"] = {
-	["size"] = {
-	["multi"] = {
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["twenty"] = true,
-	},
-	},
-	["instance_type"] = {
-	["multi"] = {
-	[176] = true,
-	[4] = true,
-	[194] = true,
-	[9] = true,
-	[5] = true,
-	[193] = true,
-	[3] = true,
-	[6] = true,
-	[175] = true,
-	[148] = true,
-	},
-	},
-	["class"] = {
+	["talent"] = {
 	["multi"] = {
 	},
 	},
@@ -38706,14 +41041,60 @@ NUI.WeakAurasData = {
 	["multi"] = {
 	},
 	},
-	["talent"] = {
+	["class"] = {
 	["multi"] = {
 	},
 	},
-	["use_instance_type"] = false,
+	["size"] = {
+	["multi"] = {
 	},
-	["url"] = "NaowhUI",
+	},
+	},
+	["desc"] = "https://discord.gg/merfin",
 	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["cooldown"] = true,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["displayIcon"] = "351505",
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["keepAspectRatio"] = false,
+	["xOffset"] = 0,
+	["config"] = {
+	},
+	["useTooltip"] = false,
+	["url"] = "NaowhUI",
+	["cooldownTextDisabled"] = true,
+	["zoom"] = 0.3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Severed Sagefish Head (+90 Intellect and +90 Stamina)",
+	["alpha"] = 1,
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["uid"] = ")JnVn7DVQg9",
+	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
 	},
@@ -38722,38 +41103,542 @@ NUI.WeakAurasData = {
 	["finish"] = {
 	},
 	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	},
+	["Battle Elixir: Ghost Elixir (+225 Spirit)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79468",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58084,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58084,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
 	["source"] = "import",
-	["cooldown"] = false,
+	["cooldown"] = true,
 	["progressSource"] = {
 	-1,
 	"",
 	},
 	["useAdjustededMin"] = false,
 	["regionType"] = "icon",
-	["displayIcon"] = "Interface\\Icons\\Spell_Holy_MagicalSentry",
-	["zoom"] = 0.3,
-	["parent"] = "Reminder: buffs",
-	["config"] = {
+	["displayIcon"] = "463924",
+	["uid"] = ")iSWRbfCFK6",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
 	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
 	["useCooldownModRate"] = true,
-	["auto"] = true,
-	["cooldownTextDisabled"] = false,
-	["semver"] = "2.0.6",
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
 	["tocversion"] = 40400,
-	["id"] = "Arcane Int",
+	["id"] = "Battle Elixir: Ghost Elixir (+225 Spirit)",
 	["frameStrata"] = 1,
 	["alpha"] = 1,
 	["anchorFrameType"] = "SCREEN",
 	["authorOptions"] = {
 	},
-	["uid"] = "initGKnHkpw",
+	["config"] = {
+	},
 	["inverse"] = false,
-	["xOffset"] = 0,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
 	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
 	},
 	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
 	},
 	["animation"] = {
 	["start"] = {
@@ -38776,8 +41661,8 @@ NUI.WeakAurasData = {
 	},
 	},
 	},
-	["Food"] = {
-	["iconSource"] = -1,
+	["Spirit Link Totem (Active)"] = {
+	["iconSource"] = 0,
 	["wagoID"] = "fFdRT46Na",
 	["color"] = {
 	1,
@@ -38789,7 +41674,1284 @@ NUI.WeakAurasData = {
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
 	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
+	["url"] = "NaowhUI",
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["auranames"] = {
+	"209426",
+	},
+	["matchesShowOn"] = "showAlways",
+	["subeventPrefix"] = "SPELL",
+	["use_tooltipValue"] = true,
+	["debuffType"] = "HELPFUL",
+	["type"] = "aura2",
+	["namePattern_operator"] = "==",
+	["useExactSpellId"] = true,
+	["names"] = {
+	},
+	["tooltipValue_operator"] = "==",
+	["event"] = "Health",
+	["tooltip"] = "20%",
+	["auraspellids"] = {
+	"325174",
+	},
+	["tooltip_operator"] = "==",
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["subeventSuffix"] = "_CAST_START",
+	["tooltipValueNumber"] = 1,
+	["unit"] = "player",
+	["tooltipValue"] = "20",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["spellId"] = {
+	"98008",
+	},
+	["duration"] = "6",
+	["unit"] = "player",
+	["use_sourceFlags"] = true,
+	["debuffType"] = "HELPFUL",
+	["type"] = "combatlog",
+	["subeventSuffix"] = "_CAST_SUCCESS",
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Combat Log",
+	["use_sourceFlags2"] = false,
+	["use_sourceFlags3"] = false,
+	["use_spellId"] = true,
+	["spellIds"] = {
+	},
+	["use_sourceUnit"] = false,
+	["unevent"] = "timed",
+	["use_destUnit"] = false,
+	["names"] = {
+	},
+	["sourceFlags"] = "InGroup",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "all",
+	["activeTriggerMode"] = 2,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["stickyDuration"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["glowFrequency"] = 0.25,
+	["type"] = "subglow",
+	["glowDuration"] = 1,
+	["glowType"] = "Pixel",
+	["glowThickness"] = 1,
+	["glowYOffset"] = 1,
+	["glowColor"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["useGlowColor"] = false,
+	["glowXOffset"] = 1,
+	["glowLength"] = 10,
+	["glow"] = true,
+	["glowScale"] = 1,
+	["glowLines"] = 8,
+	["glowBorder"] = false,
+	},
+	{
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = true,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
+	["text_visible"] = true,
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
+	["anchorYOffset"] = 0,
+	["text_shadowYOffset"] = 0,
+	["text_fontSize"] = 14,
+	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_text_format_p_time_format"] = 0,
+	},
+	},
+	["height"] = 26,
+	["width"] = 34,
+	["load"] = {
+	["zoneIds"] = "",
+	["use_never"] = false,
+	["talent"] = {
+	["single"] = 10,
+	["multi"] = {
+	[10] = true,
+	},
+	},
+	["class_and_spec"] = {
+	["single"] = 253,
+	["multi"] = {
+	[253] = true,
+	},
+	},
+	["class"] = {
+	["single"] = "HUNTER",
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["single"] = 1,
+	["multi"] = {
+	true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
 	["cooldownEdge"] = false,
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayIcon"] = 237586,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["desaturate"] = false,
+	["config"] = {
+	},
+	["keepAspectRatio"] = true,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = true,
+	["auto"] = false,
+	["tocversion"] = 40400,
+	["id"] = "Spirit Link Totem (Active)",
+	["zoom"] = 0.3,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["xOffset"] = 0,
+	["uid"] = "uN20nQE)nCf",
+	["inverse"] = true,
+	["authorOptions"] = {
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "buffed",
+	["value"] = 0,
+	},
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	},
+	["cooldown"] = false,
+	["alpha"] = 1,
+	},
+	["Guaridan Spirit (Active)"] = {
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["preferToUpdate"] = false,
+	["customText"] = "",
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["useGroup_count"] = false,
+	["matchesShowOn"] = "showOnActive",
+	["subeventPrefix"] = "SPELL",
+	["use_tooltip"] = false,
+	["debuffType"] = "HELPFUL",
+	["useName"] = true,
+	["use_debuffClass"] = false,
+	["subeventSuffix"] = "_CAST_START",
+	["event"] = "Health",
+	["custom_hide"] = "timed",
+	["names"] = {
+	"Guardian Spirit",
+	},
+	["spellIds"] = {
+	},
+	["type"] = "aura2",
+	["auranames"] = {
+	"47788",
+	},
+	["combineMatches"] = "showLowest",
+	["unit"] = "player",
+	["buffShowOn"] = "showOnActive",
+	},
+	["untrigger"] = {
+	},
+	},
+	["activeTriggerMode"] = 1,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["stickyDuration"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["glowFrequency"] = 0.25,
+	["type"] = "subglow",
+	["glowDuration"] = 1,
+	["glowType"] = "Pixel",
+	["glowThickness"] = 1,
+	["glowYOffset"] = 1,
+	["glowColor"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["useGlowColor"] = false,
+	["glowXOffset"] = 1,
+	["glowLength"] = 10,
+	["glow"] = true,
+	["glowScale"] = 1,
+	["glowLines"] = 8,
+	["glowBorder"] = false,
+	},
+	{
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = true,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
+	["text_visible"] = true,
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
+	["anchorYOffset"] = 0,
+	["text_shadowYOffset"] = 0,
+	["text_fontSize"] = 14,
+	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_text_format_p_time_format"] = 0,
+	},
+	},
+	["height"] = 26,
+	["width"] = 34,
+	["load"] = {
+	["talent2"] = {
+	["multi"] = {
+	},
+	},
+	["use_never"] = false,
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	["DRUID"] = true,
+	["MONK"] = true,
+	["PRIEST"] = true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["race"] = {
+	["multi"] = {
+	},
+	},
+	["use_itemequiped"] = false,
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
+	["alpha"] = 1,
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayIcon"] = 237542,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	},
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["url"] = "NaowhUI",
+	["desaturate"] = false,
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = false,
+	["auto"] = true,
+	["tocversion"] = 40400,
+	["id"] = "Guaridan Spirit (Active)",
+	["zoom"] = 0.3,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["keepAspectRatio"] = true,
+	["uid"] = "waKC9UUcUsD",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	["do_glow"] = false,
+	["do_custom"] = false,
+	["custom"] = "",
+	["do_sound"] = true,
+	["glow_action"] = "show",
+	["glow_type"] = "ACShine",
+	["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\bam.ogg",
+	["glow_frame"] = "WeakAuras:Guaridan Spirit (Active)",
+	},
+	["init"] = {
+	["custom"] = "",
+	["do_custom"] = false,
+	},
+	["finish"] = {
+	["do_sound"] = false,
+	},
+	},
+	["conditions"] = {
+	},
+	["cooldown"] = false,
+	["xOffset"] = 0,
+	},
+	["Food: Mushroom Sauce Mudfish (+90 Dodge Rating and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["subeventSuffix"] = "_CAST_START",
+	["event"] = "Health",
+	["unit"] = "player",
+	["names"] = {
+	},
+	["auraspellids"] = {
+	"87601",
+	},
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
+	["subeventPrefix"] = "SPELL",
+	["auranames"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 62667,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "any",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["desc"] = "https://discord.gg/merfin",
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["cooldown"] = true,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["displayIcon"] = "350558",
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["keepAspectRatio"] = false,
+	["xOffset"] = 0,
+	["config"] = {
+	},
+	["useTooltip"] = false,
+	["url"] = "NaowhUI",
+	["cooldownTextDisabled"] = true,
+	["zoom"] = 0.3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Mushroom Sauce Mudfish (+90 Dodge Rating and +90 Stamina)",
+	["alpha"] = 1,
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["uid"] = "DA9dvoNEFpV",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	},
+	["Food: Delicious Sagefish Tail (+90 Spirit and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["subeventSuffix"] = "_CAST_START",
+	["event"] = "Health",
+	["unit"] = "player",
+	["names"] = {
+	},
+	["auraspellids"] = {
+	"87588",
+	},
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
+	["subeventPrefix"] = "SPELL",
+	["auranames"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 62666,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "any",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["desc"] = "https://discord.gg/merfin",
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["cooldown"] = true,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["displayIcon"] = "351503",
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["keepAspectRatio"] = false,
+	["xOffset"] = 0,
+	["config"] = {
+	},
+	["useTooltip"] = false,
+	["url"] = "NaowhUI",
+	["cooldownTextDisabled"] = true,
+	["zoom"] = 0.3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Delicious Sagefish Tail (+90 Spirit and +90 Stamina)",
+	["alpha"] = 1,
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["uid"] = "6oYg00tFLdZ",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	},
+	["Reminder: buffs"] = {
+	["arcLength"] = 360,
+	["controlledChildren"] = {
+	"Flask",
+	"Food",
+	},
+	["borderBackdrop"] = "Blizzard Tooltip",
+	["wagoID"] = "fFdRT46Na",
+	["authorOptions"] = {
+	},
+	["preferToUpdate"] = false,
+	["regionType"] = "dynamicgroup",
+	["groupIcon"] = 132810,
+	["anchorPoint"] = "CENTER",
+	["sort"] = "none",
+	["parent"] = "NaowhUI - UI Elements - Cataclysm",
+	["borderColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["space"] = 4,
+	["url"] = "NaowhUI",
 	["actions"] = {
 	["start"] = {
 	},
@@ -38801,9 +42963,1302 @@ NUI.WeakAurasData = {
 	["triggers"] = {
 	{
 	["trigger"] = {
+	["unit"] = "player",
+	["type"] = "aura2",
+	["spellIds"] = {
+	},
+	["subeventSuffix"] = "_CAST_START",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	["event"] = "Health",
+	["names"] = {
+	},
+	},
+	["untrigger"] = {
+	},
+	},
+	},
+	["columnSpace"] = 4,
+	["radius"] = 200,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["align"] = "RIGHT",
+	["useLimit"] = false,
+	["selfPoint"] = "BOTTOMRIGHT",
+	["desc"] = "",
+	["stagger"] = 0,
+	["fullCircle"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	},
+	["borderInset"] = 1,
+	["config"] = {
+	},
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["internalVersion"] = 73,
+	["backdropColor"] = {
+	1,
+	1,
+	1,
+	0.5,
+	},
+	["sortHybridTable"] = {
+	["Food"] = false,
+	["Flask"] = false,
+	},
+	["animate"] = false,
+	["source"] = "import",
+	["scale"] = 1,
+	["centerType"] = "LR",
+	["border"] = false,
+	["borderEdge"] = "Square Full White",
+	["stepAngle"] = 15,
+	["borderSize"] = 2,
+	["limit"] = 5,
+	["gridWidth"] = 6,
+	["grow"] = "GRID",
+	["constantFactor"] = "RADIUS",
+	["rowSpace"] = 4,
+	["borderOffset"] = 4,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Reminder: buffs",
+	["alpha"] = 1,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["xOffset"] = -516,
+	["uid"] = "RwXAMSgkK59",
+	["yOffset"] = 43.536682128906,
+	["gridType"] = "LU",
+	["conditions"] = {
+	},
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["rotation"] = 0,
+	},
+	["Power Word: Barrier (Active)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
+	["url"] = "NaowhUI",
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["auranames"] = {
+	"209426",
+	},
+	["matchesShowOn"] = "showAlways",
+	["subeventPrefix"] = "SPELL",
+	["use_tooltipValue"] = true,
+	["debuffType"] = "HELPFUL",
+	["type"] = "aura2",
+	["namePattern_operator"] = "==",
+	["useExactSpellId"] = true,
+	["names"] = {
+	},
+	["tooltipValue_operator"] = "==",
+	["event"] = "Health",
+	["tooltip"] = "20%",
+	["auraspellids"] = {
+	"81782",
+	},
+	["tooltip_operator"] = "==",
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["subeventSuffix"] = "_CAST_START",
+	["tooltipValueNumber"] = 1,
+	["unit"] = "player",
+	["tooltipValue"] = "20",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["spellId"] = {
+	"62618",
+	},
+	["duration"] = "8",
+	["unit"] = "player",
+	["use_sourceFlags"] = true,
+	["debuffType"] = "HELPFUL",
+	["type"] = "combatlog",
+	["subeventSuffix"] = "_CAST_SUCCESS",
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Combat Log",
+	["use_sourceFlags2"] = false,
+	["use_sourceFlags3"] = false,
+	["use_spellId"] = true,
+	["spellIds"] = {
+	},
+	["use_sourceUnit"] = false,
+	["unevent"] = "timed",
+	["use_destUnit"] = false,
+	["names"] = {
+	},
+	["sourceFlags"] = "InGroup",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "all",
+	["activeTriggerMode"] = 2,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["stickyDuration"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["glowFrequency"] = 0.25,
+	["type"] = "subglow",
+	["glowDuration"] = 1,
+	["glowType"] = "Pixel",
+	["glowThickness"] = 1,
+	["glowYOffset"] = 1,
+	["glowColor"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["useGlowColor"] = false,
+	["glowXOffset"] = 1,
+	["glowLength"] = 10,
+	["glow"] = true,
+	["glowScale"] = 1,
+	["glowLines"] = 8,
+	["glowBorder"] = false,
+	},
+	{
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = true,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
+	["text_visible"] = true,
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
+	["anchorYOffset"] = 0,
+	["text_shadowYOffset"] = 0,
+	["text_fontSize"] = 14,
+	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_text_format_p_time_format"] = 0,
+	},
+	},
+	["height"] = 26,
+	["width"] = 34,
+	["load"] = {
+	["zoneIds"] = "",
+	["use_never"] = false,
+	["talent"] = {
+	["single"] = 10,
+	["multi"] = {
+	[10] = true,
+	},
+	},
+	["class_and_spec"] = {
+	["single"] = 253,
+	["multi"] = {
+	[253] = true,
+	},
+	},
+	["class"] = {
+	["single"] = "HUNTER",
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["single"] = 1,
+	["multi"] = {
+	true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["cooldownEdge"] = false,
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayIcon"] = 253400,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["desaturate"] = false,
+	["config"] = {
+	},
+	["keepAspectRatio"] = true,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = true,
+	["auto"] = false,
+	["tocversion"] = 40400,
+	["id"] = "Power Word: Barrier (Active)",
+	["zoom"] = 0.3,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["xOffset"] = 0,
+	["uid"] = "5B2yJeGoh6B",
+	["inverse"] = true,
+	["authorOptions"] = {
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "buffed",
+	["value"] = 0,
+	},
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	},
+	["cooldown"] = false,
+	["alpha"] = 1,
+	},
+	["[Merfin] Equipped Items (Cataclysm)"] = {
+	["grow"] = "GRID",
+	["controlledChildren"] = {
+	"Merfin: Equipped Items - Frontend [Cataclysm]",
+	"Merfin: Equipped Items: Backend - Handlers",
+	"Merfin: Equipped Items: Backend - DATA [Cataclysm]",
+	"Merfin: Equipped Items: Backend - DATA [WoTLK]",
+	},
+	["borderBackdrop"] = "Blizzard Tooltip",
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = -218,
+	["preferToUpdate"] = false,
+	["sortHybridTable"] = {
+	["Merfin: Equipped Items: Backend - DATA [WoTLK]"] = false,
+	["Merfin: Equipped Items - Frontend [Cataclysm]"] = false,
+	["Merfin: Equipped Items: Backend - Handlers"] = false,
+	["Merfin: Equipped Items: Backend - DATA [Cataclysm]"] = false,
+	},
+	["yOffset"] = 3,
+	["gridType"] = "RU",
+	["regionType"] = "dynamicgroup",
+	["fullCircle"] = true,
+	["rowSpace"] = 3,
+	["url"] = "NaowhUI",
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["unit"] = "player",
+	["type"] = "aura2",
+	["spellIds"] = {
+	},
+	["subeventSuffix"] = "_CAST_START",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	["event"] = "Health",
+	["names"] = {
+	},
+	},
+	["untrigger"] = {
+	},
+	},
+	},
+	["columnSpace"] = 3,
+	["internalVersion"] = 73,
+	["arcLength"] = 360,
+	["useLimit"] = false,
+	["align"] = "RIGHT",
+	["parent"] = "NaowhUI - UI Elements - Cataclysm",
+	["animate"] = false,
+	["groupIcon"] = "443374",
+	["rotation"] = 0,
+	["anchorPoint"] = "TOPRIGHT",
+	["version"] = 20,
+	["subRegions"] = {
+	},
+	["config"] = {
+	},
+	["borderColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["space"] = -1,
+	["backdropColor"] = {
+	1,
+	1,
+	1,
+	0.5,
+	},
+	["radius"] = 200,
+	["source"] = "import",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["scale"] = 1,
+	["centerType"] = "LR",
+	["border"] = false,
+	["borderEdge"] = "Square Full White",
+	["stepAngle"] = 15,
+	["borderSize"] = 2,
+	["sort"] = "none",
+	["selfPoint"] = "BOTTOMLEFT",
+	["stagger"] = 0,
+	["anchorFrameParent"] = false,
+	["constantFactor"] = "RADIUS",
+	["authorOptions"] = {
+	},
+	["borderOffset"] = 4,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "[Merfin] Equipped Items (Cataclysm)",
+	["uid"] = "8yi5dckkSNO",
+	["alpha"] = 1,
+	["anchorFrameType"] = "SELECTFRAME",
+	["frameStrata"] = 2,
+	["borderInset"] = 1,
+	["gridWidth"] = 3,
+	["anchorFrameFrame"] = "ElvUF_Player",
+	["conditions"] = {
+	},
+	["information"] = {
+	},
+	["limit"] = 5,
+	},
+	["Food: Blackbelly Sushi (+90 Parry and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["subeventSuffix"] = "_CAST_START",
+	["event"] = "Health",
+	["unit"] = "player",
+	["names"] = {
+	},
+	["auraspellids"] = {
+	"87602",
+	},
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
+	["subeventPrefix"] = "SPELL",
+	["auranames"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 62665,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "any",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["desc"] = "https://discord.gg/merfin",
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["cooldown"] = true,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["displayIcon"] = "351506",
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["keepAspectRatio"] = false,
+	["xOffset"] = 0,
+	["config"] = {
+	},
+	["useTooltip"] = false,
+	["url"] = "NaowhUI",
+	["cooldownTextDisabled"] = true,
+	["zoom"] = 0.3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Blackbelly Sushi (+90 Parry and +90 Stamina)",
+	["alpha"] = 1,
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["uid"] = "slSiywZC2cC",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	},
+	["Food: Skewered Eeld (+90 Agility and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["subeventSuffix"] = "_CAST_START",
+	["event"] = "Health",
+	["unit"] = "player",
+	["names"] = {
+	},
+	["auraspellids"] = {
+	"87586",
+	},
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
+	["subeventPrefix"] = "SPELL",
+	["auranames"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 62669,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "any",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = false,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["desc"] = "https://discord.gg/merfin",
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["cooldown"] = true,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["displayIcon"] = "351508",
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["keepAspectRatio"] = false,
+	["xOffset"] = 0,
+	["config"] = {
+	},
+	["useTooltip"] = false,
+	["url"] = "NaowhUI",
+	["cooldownTextDisabled"] = true,
+	["zoom"] = 0.3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Food: Skewered Eeld (+90 Agility and +90 Stamina)",
+	["alpha"] = 1,
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["uid"] = "pdISz8EUSPa",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	},
+	["Flask"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "Reminder: buffs",
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["url"] = "NaowhUI",
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
 	["useName"] = true,
 	["auranames"] = {
-	"33256",
+	"28520",
+	"60347",
+	"53755",
+	"53760",
+	"53758",
+	"67016",
+	"54212",
+	"17627",
+	"53749",
+	"79470",
+	"79637",
+	"79471",
+	"79472",
+	"53755",
+	"79469",
+	"28519",
+	"94160",
+	"92679",
 	},
 	["debuffType"] = "HELPFUL",
 	["event"] = "Health",
@@ -38824,21 +44279,41 @@ NUI.WeakAurasData = {
 	},
 	{
 	["trigger"] = {
-	["type"] = "aura2",
+	["rem"] = "300",
 	["auranames"] = {
-	"33256",
+	"28520",
+	"60347",
+	"53755",
+	"53760",
+	"53758",
+	"67016",
+	"54212",
+	"17627",
+	"53749",
+	"79470",
+	"79637",
+	"79471",
+	"79472",
+	"53755",
+	"79469",
+	"28519",
+	"94160",
+	"92679",
 	},
+	["debuffType"] = "HELPFUL",
 	["matchesShowOn"] = "showOnMissing",
 	["event"] = "Health",
-	["unit"] = "player",
-	["spellIds"] = {
-	},
 	["names"] = {
 	},
-	["useName"] = true,
+	["unit"] = "player",
+	["type"] = "aura2",
+	["spellIds"] = {
+	},
 	["subeventPrefix"] = "SPELL",
+	["remOperator"] = "<",
 	["subeventSuffix"] = "_CAST_START",
-	["debuffType"] = "HELPFUL",
+	["useName"] = true,
+	["useRem"] = false,
 	},
 	["untrigger"] = {
 	},
@@ -38847,13 +44322,10 @@ NUI.WeakAurasData = {
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
+	["keepAspectRatio"] = true,
 	["selfPoint"] = "CENTER",
 	["desaturate"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -38899,6 +44371,7 @@ NUI.WeakAurasData = {
 	["multi"] = {
 	},
 	},
+	["use_never"] = false,
 	["instance_type"] = {
 	["multi"] = {
 	[176] = true,
@@ -38927,36 +44400,52 @@ NUI.WeakAurasData = {
 	},
 	["use_instance_type"] = false,
 	},
-	["useAdjustededMax"] = false,
-	["uid"] = "WGurAkncNuF",
-	["source"] = "import",
-	["parent"] = "Reminder: buffs",
-	["url"] = "NaowhUI",
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["cooldown"] = true,
-	["xOffset"] = 0,
-	["authorOptions"] = {
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
 	},
-	["zoom"] = 0.3,
-	["frameStrata"] = 1,
-	["anchorFrameType"] = "SCREEN",
-	["cooldownTextDisabled"] = false,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Food",
-	["useCooldownModRate"] = true,
-	["alpha"] = 1,
-	["width"] = 42,
-	["icon"] = true,
+	["useAdjustededMax"] = false,
 	["config"] = {
 	},
+	["source"] = "import",
+	["authorOptions"] = {
+	},
+	["cooldown"] = true,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["displayIcon"] = 236877,
+	["xOffset"] = 0,
+	["cooldownEdge"] = false,
+	["anchorFrameType"] = "SCREEN",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Flask",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["width"] = 42,
+	["cooldownTextDisabled"] = false,
+	["uid"] = "1x03ogWLr8I",
 	["inverse"] = false,
-	["keepAspectRatio"] = true,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
 	["conditions"] = {
 	{
 	["check"] = {
-	["trigger"] = 2,
+	["trigger"] = 1,
 	["variable"] = "show",
 	["value"] = 1,
 	},
@@ -39010,107 +44499,410 @@ NUI.WeakAurasData = {
 	},
 	},
 	},
-	["Potion of Speed"] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = 3,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
-	},
+	["Food: Baked Rockfish (+90 Critical Strike and +90 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
 	["preferToUpdate"] = false,
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
 	["icon"] = true,
-	["text1Enabled"] = true,
-	["keepAspectRatio"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["subeventSuffix"] = "_CAST_START",
+	["event"] = "Health",
+	["unit"] = "player",
+	["names"] = {
+	},
+	["auraspellids"] = {
+	"87597",
+	},
+	["spellIds"] = {
+	},
+	["useName"] = false,
+	["useExactSpellId"] = true,
+	["subeventPrefix"] = "SPELL",
+	["auranames"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 62661,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "any",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
 	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 60,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 2,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 1,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = -1,
+	["border_color"] = {
+	0.43921571969986,
+	1,
+	0,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
 	["load"] = {
-	["use_petbattle"] = false,
-	["class_and_spec"] = {
-	["multi"] = {
-	[260] = true,
-	[261] = true,
-	[263] = true,
-	[104] = true,
-	[253] = true,
-	[577] = true,
-	[268] = true,
-	[269] = true,
-	[254] = true,
-	[581] = true,
-	[255] = true,
-	[259] = true,
-	[103] = true,
-	},
-	},
 	["talent"] = {
 	["multi"] = {
 	},
 	},
-	["use_vehicle"] = false,
-	["level_operator"] = {
-	">=",
-	},
-	["size"] = {
+	["spec"] = {
 	["multi"] = {
-	["scenario"] = true,
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["ratedpvp"] = true,
-	["party"] = true,
-	["none"] = true,
-	["flexible"] = true,
-	["twenty"] = true,
-	["pvp"] = true,
 	},
 	},
 	["class"] = {
 	["multi"] = {
 	},
 	},
-	["use_size"] = false,
-	["use_level"] = false,
-	["use_vehicleUi"] = false,
-	["spec"] = {
+	["size"] = {
 	["multi"] = {
 	},
 	},
-	["level"] = {
-	"51",
 	},
-	["use_never"] = false,
-	["zoneIds"] = "",
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
 	},
 	["useAdjustededMin"] = false,
 	["regionType"] = "icon",
-	["text2FontSize"] = 24,
+	["displayIcon"] = "351500",
+	["uid"] = "K5vy0BxJXCv",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
 	["cooldownTextDisabled"] = true,
-	["auto"] = false,
+	["semver"] = "2.0.10",
 	["tocversion"] = 40400,
-	["text2Enabled"] = false,
+	["id"] = "Food: Baked Rockfish (+90 Critical Strike and +90 Stamina)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
 	["config"] = {
 	},
-	["displayIcon"] = 236868,
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	},
+	["Potion: Potion of Concentration (2k Mana Per Second)"] = {
+	["iconSource"] = 0,
 	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Potions Tracker - Naowh",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
 	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
+	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["itemName"] = 40211,
-	["use_alwaystrue"] = true,
+	["type"] = "aura2",
+	["auranames"] = {
+	"78993",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HARMFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 57194,
 	["subeventSuffix"] = "_CAST_START",
 	["use_genericShowOn"] = true,
 	["use_itemName"] = true,
 	["unit"] = "player",
 	["type"] = "item",
-	["use_unit"] = true,
 	["spellIds"] = {
 	},
 	["genericShowOn"] = "showAlways",
@@ -39125,56 +44917,678 @@ NUI.WeakAurasData = {
 	},
 	{
 	["trigger"] = {
-	["unevent"] = "auto",
-	["itemName"] = 40211,
-	["use_genericShowOn"] = true,
+	["type"] = "item",
+	["use_count"] = true,
 	["subeventSuffix"] = "_CAST_START",
-	["unit"] = "player",
-	["duration"] = "1",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
 	["use_itemName"] = true,
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
+	["unit"] = "player",
+	["itemName"] = 57194,
 	["genericShowOn"] = "showOnCooldown",
 	["spellIds"] = {
 	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["use_unit"] = true,
-	["type"] = "item",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["use_exact_itemName"] = true,
-	["use_count"] = true,
-	["use_absorbMode"] = true,
-	["unit"] = "player",
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["subeventSuffix"] = "_CAST_START",
 	["subeventPrefix"] = "SPELL",
 	["event"] = "Item Count",
-	["spellIds"] = {
-	},
+	["count"] = "0",
 	["names"] = {
 	},
-	["unevent"] = "auto",
-	["count"] = "1",
-	["use_itemName"] = true,
-	["duration"] = "1",
-	["use_unit"] = true,
-	["itemName"] = 40211,
-	["count_operator"] = ">=",
+	["count_operator"] = ">",
 	},
 	["untrigger"] = {
 	},
 	},
 	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t) return t[3] end",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 2,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463900",
+	["uid"] = "h8GfMK6kbo4",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Potion: Potion of Concentration (2k Mana Per Second)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	},
+	["NaowhUI - UI Elements - Cataclysm"] = {
+	["controlledChildren"] = {
+	"All-round",
+	"Reminder: buffs",
+	"Aura bar (Player buffs)",
+	"[Merfin] Equipped Items (Cataclysm)",
+	"!MerfinUI: Consumables - Cataclysm Classic",
+	"Offensive Items - Naowh",
+	},
+	["borderBackdrop"] = "Blizzard Tooltip",
+	["wagoID"] = "fFdRT46Na",
+	["authorOptions"] = {
+	},
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["borderColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["url"] = "NaowhUI",
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["unit"] = "player",
+	["type"] = "aura2",
+	["spellIds"] = {
+	},
+	["subeventSuffix"] = "_CAST_START",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	["event"] = "Health",
+	["names"] = {
+	},
+	},
+	["untrigger"] = {
+	},
+	},
+	},
+	["internalVersion"] = 73,
+	["selfPoint"] = "CENTER",
+	["version"] = 20,
+	["subRegions"] = {
+	},
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["backdropColor"] = {
+	1,
+	1,
+	1,
+	0.5,
+	},
+	["source"] = "import",
+	["scale"] = 1,
+	["border"] = false,
+	["borderEdge"] = "Square Full White",
+	["regionType"] = "group",
+	["borderSize"] = 2,
+	["xOffset"] = 0,
+	["borderOffset"] = 4,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "NaowhUI - UI Elements - Cataclysm",
+	["groupIcon"] = "136099",
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["alpha"] = 1,
+	["config"] = {
+	},
+	["uid"] = "hSK9Eksq8F0",
+	["borderInset"] = 1,
+	["conditions"] = {
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	},
+	["Focus Castbar"] = {
+	["sparkWidth"] = 8,
+	["iconSource"] = -1,
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["sparkRotation"] = 0,
+	["url"] = "NaowhUI",
+	["actions"] = {
+	["start"] = {
+	["custom"] = "\n\n",
+	["do_custom"] = false,
+	},
+	["init"] = {
+	["custom"] = "",
+	["do_custom"] = false,
+	},
+	["finish"] = {
+	["custom"] = "\n\n",
+	["do_custom"] = false,
+	},
+	},
+	["fontFlags"] = "OUTLINE",
+	["icon_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["enableGradient"] = false,
+	["selfPoint"] = "CENTER",
+	["barColor"] = {
+	0,
+	0.63921568627451,
+	1,
+	1,
+	},
+	["desaturate"] = false,
+	["sparkOffsetY"] = 0,
+	["gradientOrientation"] = "HORIZONTAL",
+	["load"] = {
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["use_never"] = false,
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["use_vehicle"] = false,
+	["class"] = {
+	["single"] = "DEMONHUNTER",
+	["multi"] = {
+	["DEMONHUNTER"] = true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["race"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["talent2"] = {
+	["multi"] = {
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
+	["smoothProgress"] = false,
+	["useAdjustededMin"] = false,
+	["regionType"] = "aurabar",
+	["texture"] = "Melli",
+	["zoom"] = 0.3,
+	["auto"] = true,
+	["tocversion"] = 40400,
+	["alpha"] = 1,
+	["sparkColor"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["sparkOffsetX"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["parent"] = "All-round",
+	["customText"] = "aura_env.reanchor()",
+	["sparkRotationMode"] = "AUTO",
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["use_rune"] = true,
+	["duration"] = "1",
+	["genericShowOn"] = "showAlways",
+	["unit"] = "focus",
+	["powertype"] = 18,
+	["use_powertype"] = false,
+	["debuffType"] = "HELPFUL",
+	["type"] = "unit",
+	["subeventSuffix"] = "_CAST_START",
+	["use_showOn"] = true,
+	["event"] = "Cast",
+	["custom_hide"] = "timed",
+	["names"] = {
+	},
+	["use_genericShowOn"] = true,
+	["spellIds"] = {
+	},
+	["use_inverse"] = false,
+	["rune"] = 1,
+	["unevent"] = "auto",
+	["use_unit"] = true,
+	["subeventPrefix"] = "SPELL",
+	},
+	["untrigger"] = {
+	["unit"] = "focus",
+	},
+	},
+	["disjunctive"] = "all",
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
@@ -39202,8 +45616,237 @@ NUI.WeakAurasData = {
 	["easeType"] = "none",
 	},
 	},
+	["backdropInFront"] = false,
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_anchor"] = "bar",
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["type"] = "subforeground",
+	},
+	{
+	["text_shadowXOffset"] = 1,
+	["text_text_format_t_time_legacy_floor"] = true,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_t_time_dynamic_threshold"] = 60,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_t_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = true,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_t_format"] = "timed",
+	["text_visible"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["type"] = "subtext",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text"] = "%p / %t",
+	["text_shadowYOffset"] = -1,
+	["text_text_format_p_time_format"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_text_format_t_time_mod_rate"] = true,
+	["text_anchorPoint"] = "INNER_RIGHT",
+	["text_text_format_t_time_precision"] = 1,
+	["anchorYOffset"] = 0,
+	["text_fontSize"] = 14,
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_n_format"] = "none",
+	["text_text"] = "%n",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["type"] = "subtext",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_shadowYOffset"] = -1,
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "INNER_LEFT",
+	["text_visible"] = true,
+	["text_fontSize"] = 14,
+	["anchorXOffset"] = 0,
+	["text_shadowXOffset"] = 1,
+	},
+	},
+	["height"] = 26,
+	["sparkBlendMode"] = "ADD",
+	["backdropColor"] = {
+	1,
+	1,
+	1,
+	0.5,
+	},
+	["source"] = "import",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["authorOptions"] = {
+	},
+	["borderInFront"] = false,
+	["spark"] = true,
+	["icon_side"] = "LEFT",
+	["icon"] = true,
+	["borderBackdrop"] = "None",
+	["sparkHeight"] = 36,
+	["width"] = 320,
+	["id"] = "Focus Castbar",
+	["customTextUpdate"] = "update",
+	["semver"] = "2.0.10",
+	["backgroundColor"] = {
+	0,
+	0,
+	0,
+	0.60000002384186,
+	},
+	["sparkHidden"] = "NEVER",
+	["useAdjustededMax"] = false,
+	["frameStrata"] = 4,
+	["anchorFrameType"] = "SCREEN",
+	["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+	["config"] = {
+	},
+	["inverse"] = false,
+	["sparkDesature"] = false,
+	["orientation"] = "HORIZONTAL",
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "interruptible",
+	["value"] = 1,
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0,
+	0.63921568627451,
+	1,
+	1,
+	},
+	["property"] = "barColor",
+	},
+	},
+	},
+	},
+	["barColor2"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["uid"] = "fGFR8yOnZDV",
+	},
+	["Potion: Mysterious Potion (~50K Health and ~20K Mana)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["itemName"] = 57099,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 57099,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "all",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -39222,75 +45865,76 @@ NUI.WeakAurasData = {
 	["type"] = "subborder",
 	},
 	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
+	["text_text_format_p_time_format"] = 0,
 	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
+	["text_text"] = "%2.p",
+	["text_text_format_2.p_time_format"] = 0,
 	["text_shadowColor"] = {
 	0,
 	0,
 	0,
 	1,
 	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "CENTER",
-	["text_automaticWidth"] = "Auto",
+	["text_text_format_2.p_time_legacy_floor"] = false,
 	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
+	["text_text_format_p_time_legacy_floor"] = false,
 	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
 	["text_color"] = {
-	0.55686274509804,
 	1,
-	0.61960784313725,
+	1,
+	1,
 	1,
 	},
-	["text_font"] = "Naowh",
 	["text_shadowYOffset"] = 0,
 	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "BOTTOM",
-	["text_visible"] = true,
 	["text_fontType"] = "OUTLINE",
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
+	["text_fontSize"] = 12,
+	["text_text_format_p_time_dynamic_threshold"] = 60,
 	["text_text_format_p_time_mod_rate"] = true,
 	["text_selfPoint"] = "AUTO",
 	["text_automaticWidth"] = "Auto",
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_2.p_format"] = "timed",
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_font"] = "Naowh",
+	["text_anchorYOffset"] = 2,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_precision"] = 1,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_p_format"] = "timed",
+	["text_shadowXOffset"] = 0,
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_visible"] = true,
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
 	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 2,
 	["text_text_format_p_time_legacy_floor"] = false,
 	["text_justify"] = "CENTER",
 	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
 	["type"] = "subtext",
-	["anchorXOffset"] = 0,
+	["anchorYOffset"] = 0,
 	["text_color"] = {
 	1,
 	1,
@@ -39298,50 +45942,73 @@ NUI.WeakAurasData = {
 	1,
 	},
 	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
+	["text_text_format_1.p_time_precision"] = 1,
 	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
 	["text_wordWrap"] = "WordWrap",
 	["text_visible"] = true,
 	["text_anchorPoint"] = "CENTER",
-	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_format"] = "timed",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
 	},
 	},
 	["height"] = 26,
-	["useAdjustededMax"] = false,
-	["text2Containment"] = "INSIDE",
-	["source"] = "import",
-	["text1Font"] = "Friz Quadrata TT",
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
 	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
 	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463925",
+	["uid"] = "XZVDsvkwqKY",
 	["color"] = {
 	1,
 	1,
 	1,
 	1,
 	},
-	["uid"] = "HsgAg)e)nyc",
-	["text1Color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
 	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Potion: Mysterious Potion (~50K Health and ~20K Mana)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
 	},
@@ -39350,55 +46017,591 @@ NUI.WeakAurasData = {
 	["finish"] = {
 	},
 	},
-	["text1"] = "%s",
-	["text1FontFlags"] = "OUTLINE",
-	["text2Font"] = "Friz Quadrata TT",
-	["width"] = 32,
-	["semver"] = "2.0.6",
-	["useCooldownModRate"] = true,
-	["id"] = "Potion of Speed",
-	["text2"] = "%p",
-	["frameStrata"] = 2,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
-	["alpha"] = 1,
 	["conditions"] = {
 	{
 	["check"] = {
 	["trigger"] = 2,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = "==",
 	["variable"] = "onCooldown",
 	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
 	},
-	{
-	["value"] = 0,
-	["variable"] = "show",
-	},
-	},
-	},
+	["linked"] = true,
 	["changes"] = {
 	{
 	["value"] = true,
 	["property"] = "desaturate",
 	},
+	},
+	},
 	{
-	["value"] = true,
-	["property"] = "sub.5.text_visible",
+	["check"] = {
+	["trigger"] = -1,
+	["variable"] = "alwaystrue",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
 	},
 	},
 	},
 	},
 	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
 	},
-	["useTooltip"] = false,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	},
+	["Potion: Earthen Potion (+800 Armor)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79475",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58090,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58090,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "236874",
+	["uid"] = "2yBTu8DGh5e",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Potion: Earthen Potion (+800 Armor)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
 	},
 	["Target Castbar"] = {
 	["sparkWidth"] = 8,
@@ -39571,7 +46774,7 @@ NUI.WeakAurasData = {
 	},
 	["backdropInFront"] = false,
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -39687,7 +46890,7 @@ NUI.WeakAurasData = {
 	["width"] = 218,
 	["id"] = "Target Castbar",
 	["customTextUpdate"] = "update",
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["backgroundColor"] = {
 	0,
 	0,
@@ -39732,17 +46935,12 @@ NUI.WeakAurasData = {
 	},
 	["uid"] = "QfPhKkjWGJP",
 	},
-	["Global Thermal Sapper Charge - Reminder"] = {
+	["Merfin: Equipped Items - Frontend [Cataclysm]"] = {
 	["iconSource"] = -1,
 	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
+	["parent"] = "[Merfin] Equipped Items (Cataclysm)",
 	["preferToUpdate"] = false,
-	["yOffset"] = -234,
+	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
 	["cooldownSwipe"] = true,
 	["cooldownEdge"] = false,
@@ -39750,1073 +46948,30 @@ NUI.WeakAurasData = {
 	["start"] = {
 	},
 	["init"] = {
+	["custom"] = "local frontend = aura_env\nlocal backend\n\nlocal WA_MAIN_EVENT = 'WA_MERFIN_EQUIPPED_ITEMS'\n\nlocal SendEvent = function(event, ...)\n    WeakAuras.ScanEvents(WA_MAIN_EVENT, event, ...)\nend\n\nlocal OnEvent = OnEvent or {}\n\nOnEvent['OPTIONS'] = function(a, ...)\n    SendEvent('FORCED_TEST')\nend\n\nOnEvent['STATUS'] = function(a, ...)\nend\n\nOnEvent[WA_MAIN_EVENT] = function(a, subEvent, ...)\n    if subEvent == 'BACKEND_INITIALIZED' then\n        local link_to_backend = ...\n        backend = link_to_backend\n        SendEvent('REGISTER_FRONTEND', frontend)\n    elseif backend then\n        return backend.OnFrontendEvent(a, subEvent, frontend, ...)\n    end\nend\n\nfrontend.TSU = function(a, e, ...)\n    return OnEvent[e](a, ...)\nend",
+	["do_custom"] = true,
 	},
 	["finish"] = {
 	},
 	},
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["itemName"] = 42641,
-	["subeventSuffix"] = "_CAST_START",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
-	["unit"] = "player",
-	["type"] = "item",
-	["spellIds"] = {
-	},
-	["genericShowOn"] = "showOnReady",
-	["names"] = {
-	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["type"] = "item",
-	["use_count"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["debuffType"] = "HELPFUL",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
-	["unit"] = "player",
-	["itemName"] = 42641,
-	["genericShowOn"] = "showOnReady",
-	["spellIds"] = {
-	},
-	["subeventPrefix"] = "SPELL",
-	["event"] = "Item Count",
-	["count"] = "1",
-	["names"] = {
-	},
-	["count_operator"] = ">=",
-	},
-	["untrigger"] = {
-	},
-	},
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["desaturate"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%s",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Friz Quadrata TT",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-	["text_fontSize"] = 12,
-	["anchorXOffset"] = 0,
-	["text_visible"] = true,
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	},
-	["height"] = 24,
-	["load"] = {
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["instance_type"] = {
-	["multi"] = {
-	[176] = true,
-	[4] = true,
-	[194] = true,
-	[9] = true,
-	[5] = true,
-	[193] = true,
-	[3] = true,
-	[6] = true,
-	[175] = true,
-	[148] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["use_combat"] = true,
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_instance_type"] = false,
-	},
-	["useAdjustededMax"] = false,
-	["uid"] = "Wso67InKHuU",
-	["source"] = "import",
-	["parent"] = "All-round",
-	["url"] = "NaowhUI",
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["cooldown"] = false,
-	["xOffset"] = 0,
-	["authorOptions"] = {
-	},
-	["zoom"] = 0.3,
-	["frameStrata"] = 1,
-	["anchorFrameType"] = "SCREEN",
-	["cooldownTextDisabled"] = false,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Global Thermal Sapper Charge - Reminder",
-	["useCooldownModRate"] = true,
-	["alpha"] = 1,
-	["width"] = 24,
-	["icon"] = true,
-	["config"] = {
-	},
-	["inverse"] = false,
-	["keepAspectRatio"] = false,
-	["conditions"] = {
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	},
-	["Active Seal (Paladin)"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["preferToUpdate"] = false,
-	["customText"] = "",
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["track"] = "auto",
-	["auranames"] = {
-	"20166",
-	"21084",
-	"20165",
-	"20164",
-	"20375",
-	"348704",
-	"31801",
-	},
-	["use_genericShowOn"] = true,
-	["genericShowOn"] = "showAlways",
-	["unit"] = "player",
-	["use_showgcd"] = true,
-	["custom_hide"] = "timed",
-	["debuffType"] = "HELPFUL",
-	["spellName"] = 27139,
-	["useName"] = true,
-	["use_unit"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["use_showOn"] = true,
-	["duration"] = "1",
-	["event"] = "Cooldown Progress (Spell)",
-	["use_exact_spellName"] = true,
-	["realSpellName"] = 27139,
-	["use_spellName"] = true,
-	["spellIds"] = {
-	},
-	["subeventPrefix"] = "SPELL",
-	["type"] = "aura2",
-	["names"] = {
-	},
-	["use_track"] = true,
-	["unevent"] = "auto",
-	},
-	["untrigger"] = {
-	["showOn"] = "showOnCooldown",
-	["genericShowOn"] = "showAlways",
-	["spellName"] = 642,
-	},
-	},
-	{
-	["trigger"] = {
-	["type"] = "unit",
-	["use_alwaystrue"] = true,
-	["unit"] = "player",
-	["debuffType"] = "HELPFUL",
-	["event"] = "Conditions",
-	["use_unit"] = true,
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "any",
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
-	["useCooldownModRate"] = true,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 1,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 1,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = true,
-	},
-	{
-	["text_text_format_p_time_format"] = 1,
-	["text_text"] = "%p",
-	["text_text_format_p_gcd_cast"] = false,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["rotateText"] = "NONE",
-	["text_text_format_p_decimal_precision"] = 1,
-	["text_text_format_p_gcd_gcd"] = true,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_text_format_p_gcd_channel"] = false,
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_text_format_p_gcd_hide_zero"] = false,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["type"] = "subtext",
-	["text_font"] = "Naowh",
-	["text_anchorYOffset"] = 0,
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_shadowXOffset"] = 0,
-	["text_anchorPoint"] = "BOTTOM",
-	["text_text_format_p_abbreviate"] = false,
-	["text_text_format_p_big_number_format"] = "AbbreviateNumbers",
-	["text_text_format_p_format"] = "timed",
-	["text_text_format_p_abbreviate_max"] = 8,
-	["text_visible"] = false,
-	},
-	},
-	["height"] = 26,
-	["width"] = 34,
-	["load"] = {
-	["talent2"] = {
-	["multi"] = {
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["talent"] = {
-	["single"] = 5,
-	["multi"] = {
-	[5] = true,
-	},
-	},
-	["faction"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["single"] = "PALADIN",
-	["multi"] = {
-	},
-	},
-	["use_petbattle"] = false,
-	["spec"] = {
-	["single"] = 3,
-	["multi"] = {
-	},
-	},
-	["difficulty"] = {
-	["multi"] = {
-	},
-	},
-	["role"] = {
-	["multi"] = {
-	},
-	},
-	["use_spec"] = true,
-	["pvptalent"] = {
-	["multi"] = {
-	},
-	},
-	["use_class"] = true,
-	["race"] = {
-	["multi"] = {
-	},
-	},
-	["ingroup"] = {
-	["multi"] = {
-	},
-	},
-	["zoneIds"] = "",
-	},
-	["alpha"] = 1,
-	["useAdjustededMax"] = false,
-	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 135924,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	["authorOptions"] = {
-	},
-	["config"] = {
-	},
-	["url"] = "NaowhUI",
-	["desaturate"] = false,
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = true,
-	["auto"] = true,
-	["tocversion"] = 40400,
-	["id"] = "Active Seal (Paladin)",
-	["zoom"] = 0.3,
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["keepAspectRatio"] = true,
-	["uid"] = "dWcuaLQjnDT",
-	["inverse"] = false,
-	["actions"] = {
-	["start"] = {
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["finish"] = {
-	},
-	},
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 1,
-	["op"] = "==",
-	["variable"] = "show",
-	["value"] = 0,
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	},
-	},
-	{
-	["check"] = {
-	["trigger"] = 1,
-	["op"] = "<",
-	["variable"] = "expirationTime",
-	["value"] = "360",
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "sub.4.text_visible",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.3.glow",
-	},
-	},
-	},
-	},
-	["cooldown"] = false,
-	["xOffset"] = 0,
-	},
-	["Blood Fury (Active)"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["preferToUpdate"] = false,
-	["customText"] = "",
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["spellId"] = "271107",
-	["useGroup_count"] = false,
-	["matchesShowOn"] = "showOnActive",
-	["unit"] = "player",
-	["use_tooltip"] = false,
-	["debuffType"] = "HELPFUL",
-	["type"] = "aura2",
-	["use_debuffClass"] = false,
-	["auraspellids"] = {
-	"20572",
-	},
-	["subeventPrefix"] = "SPELL",
-	["names"] = {
-	"Berserking",
-	},
-	["event"] = "Health",
-	["custom_hide"] = "timed",
-	["buffShowOn"] = "showOnActive",
-	["use_spellId"] = true,
-	["name"] = "Golden Luster",
-	["auranames"] = {
-	"Berserking",
-	},
-	["spellIds"] = {
-	},
-	["combineMatches"] = "showLowest",
-	["useExactSpellId"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	},
-	["untrigger"] = {
-	},
-	},
-	["activeTriggerMode"] = 1,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
-	["useCooldownModRate"] = true,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["type"] = "subtext",
-	["text_text_format_p_time_precision"] = 1,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
-	},
-	},
-	["height"] = 26,
-	["width"] = 34,
-	["load"] = {
-	["talent2"] = {
-	["multi"] = {
-	},
-	},
-	["talent"] = {
-	["single"] = 9,
-	["multi"] = {
-	[9] = true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["single"] = "DEATHKNIGHT",
-	["multi"] = {
-	["DEATHKNIGHT"] = true,
-	},
-	},
-	["race"] = {
-	["single"] = "Orc",
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["single"] = 3,
-	["multi"] = {
-	[2] = true,
-	[3] = true,
-	},
-	},
-	["difficulty"] = {
-	["multi"] = {
-	},
-	},
-	["role"] = {
-	["multi"] = {
-	},
-	},
-	["use_itemequiped"] = false,
-	["pvptalent"] = {
-	["multi"] = {
-	},
-	},
-	["use_race"] = true,
-	["faction"] = {
-	["multi"] = {
-	},
-	},
-	["ingroup"] = {
-	["multi"] = {
-	},
-	},
-	["zoneIds"] = "",
-	},
-	["alpha"] = 1,
-	["useAdjustededMax"] = false,
-	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 253400,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	},
-	["authorOptions"] = {
-	},
-	["config"] = {
-	},
-	["url"] = "NaowhUI",
-	["desaturate"] = false,
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = false,
-	["auto"] = true,
-	["tocversion"] = 40400,
-	["id"] = "Blood Fury (Active)",
-	["zoom"] = 0.3,
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["keepAspectRatio"] = true,
-	["uid"] = "hQzO5Mj8xQT",
-	["inverse"] = false,
-	["actions"] = {
-	["start"] = {
-	["do_glow"] = false,
-	["custom"] = "",
-	["glow_action"] = "show",
-	["glow_type"] = "ACShine",
-	["do_custom"] = false,
-	["glow_frame"] = "WeakAuras:Berserking (Active)",
-	},
-	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["finish"] = {
-	},
-	},
-	["conditions"] = {
-	},
-	["cooldown"] = false,
-	["xOffset"] = 0,
-	},
-	["Haste (Active)"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["preferToUpdate"] = false,
-	["customText"] = "",
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["spellId"] = "271107",
-	["useGroup_count"] = false,
-	["matchesShowOn"] = "showOnActive",
-	["unit"] = "player",
-	["use_tooltip"] = false,
-	["debuffType"] = "HELPFUL",
-	["type"] = "aura2",
-	["use_debuffClass"] = false,
-	["auraspellids"] = {
-	"13494",
-	"38282",
-	},
-	["subeventPrefix"] = "SPELL",
-	["names"] = {
-	"Berserking",
-	},
-	["event"] = "Health",
-	["custom_hide"] = "timed",
-	["buffShowOn"] = "showOnActive",
-	["use_spellId"] = true,
-	["name"] = "Golden Luster",
-	["auranames"] = {
-	"Berserking",
-	},
-	["spellIds"] = {
-	},
-	["combineMatches"] = "showLowest",
-	["useExactSpellId"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	},
-	["untrigger"] = {
-	},
-	},
-	["activeTriggerMode"] = 1,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
-	["useCooldownModRate"] = true,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["type"] = "subtext",
-	["text_text_format_p_time_precision"] = 1,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
-	},
-	},
-	["height"] = 26,
-	["width"] = 34,
-	["load"] = {
-	["talent2"] = {
-	["multi"] = {
-	},
-	},
-	["talent"] = {
-	["single"] = 9,
-	["multi"] = {
-	[9] = true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["class"] = {
-	["single"] = "DEATHKNIGHT",
-	["multi"] = {
-	["DEATHKNIGHT"] = true,
-	},
-	},
-	["race"] = {
-	["single"] = "Orc",
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["single"] = 3,
-	["multi"] = {
-	[2] = true,
-	[3] = true,
-	},
-	},
-	["difficulty"] = {
-	["multi"] = {
-	},
-	},
-	["role"] = {
-	["multi"] = {
-	},
-	},
-	["use_itemequiped"] = false,
-	["pvptalent"] = {
-	["multi"] = {
-	},
-	},
-	["use_race"] = true,
-	["faction"] = {
-	["multi"] = {
-	},
-	},
-	["ingroup"] = {
-	["multi"] = {
-	},
-	},
-	["zoneIds"] = "",
-	},
-	["alpha"] = 1,
-	["useAdjustededMax"] = false,
-	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 253400,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	},
-	["authorOptions"] = {
-	},
-	["config"] = {
-	},
-	["url"] = "NaowhUI",
-	["desaturate"] = false,
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = false,
-	["auto"] = true,
-	["tocversion"] = 40400,
-	["id"] = "Haste (Active)",
-	["zoom"] = 0.3,
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["keepAspectRatio"] = true,
-	["uid"] = "bJY8tEuwde3",
-	["inverse"] = false,
-	["actions"] = {
-	["start"] = {
-	["do_glow"] = false,
-	["do_custom"] = false,
-	["custom"] = "",
-	["do_sound"] = true,
-	["glow_action"] = "show",
-	["glow_type"] = "ACShine",
-	["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\ESPARK1.ogg",
-	["glow_frame"] = "WeakAuras:Berserking (Active)",
-	},
-	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["finish"] = {
-	},
-	},
-	["conditions"] = {
-	},
-	["cooldown"] = false,
-	["xOffset"] = 0,
-	},
-	["Equipped Items - Icon 3"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["xOffset"] = 0,
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["cooldownEdge"] = false,
-	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
 	["type"] = "custom",
 	["custom_type"] = "stateupdate",
-	["customVariables"] = "{\n    duration = true,\n    expirationTime = true,\n    \n    isProc = {\n        display = \"Has Proc Buff\",\n        type = \"bool\",\n    },\n    \n    itemId = {\n        display = \"Item ID\",\n        type = \"number\",\n    },\n    \n    itemType = {\n        display = \"Item Type\",\n        type = \"select\",\n        values = {\n            [\"INTERNAL\"] = \"Item w/ Internal CD\",\n            [\"ON_USE\"] = \"Item w/ Use CD\",\n            [\"NO_CD\"] = \"Item w/o CD\",\n        }\n    },\n}",
-	["event"] = "Health",
+	["customVariables"] = "{\n    expirationTime = true,\n    \n    itemType = {\n        display = \"Item Type\",\n        type = \"select\",\n        values = {\n            [\"INTERNAL\"] = \"Item Internal CD\",\n            [\"ON_USE\"] = \"Item Usable CD\",\n            [\"NO_CD\"] = \"Item w/o CD\",\n        }\n    },\n    \n    isProc = {\n        display ='Is Proc Active',\n        type = 'bool',\n    },\n    \n    showProc = {\n        display = \"Is 'Show Proc' setting selected\",\n        type = 'bool',\n    },\n    \n}",
 	["unit"] = "player",
-	["subeventSuffix"] = "_CAST_START",
+	["event"] = "Combat Log",
 	["subeventPrefix"] = "SPELL",
+	["use_unit"] = true,
+	["custom"] = "function(...)\n    return aura_env.TSU(...)\nend",
 	["spellIds"] = {
 	},
+	["events"] = "WA_MERFIN_EQUIPPED_ITEMS",
+	["check"] = "event",
 	["names"] = {
 	},
-	["check"] = "event",
-	["custom"] = "function(allstates, event, ...)\n    return aura_env.OnTrigger(allstates, event, ...)\nend",
-	["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_REMOVED:SPELL_AURA_REFRESH:SPELL_AURA_APPLIED_DOSE:SPELL_DAMAGE:SPELL_HEAL:SPELL_ENERGIZE, PLAYER_EQUIPMENT_CHANGED, BAG_UPDATE_COOLDOWN, PLAYER_LOGOUT, OPTIONS_CLOSE",
+	["subeventSuffix"] = "_CAST_START",
 	["debuffType"] = "HELPFUL",
 	},
 	["untrigger"] = {
@@ -40847,14 +47002,14 @@ NUI.WeakAurasData = {
 	},
 	},
 	["desaturate"] = false,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
 	},
 	{
 	["border_size"] = 1,
-	["border_offset"] = 1,
+	["border_offset"] = 0,
 	["border_color"] = {
 	0,
 	0,
@@ -40864,60 +47019,6 @@ NUI.WeakAurasData = {
 	["border_visible"] = true,
 	["border_edge"] = "Square Full White",
 	["type"] = "subborder",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0.85882352941176,
-	1,
-	1,
-	},
-	["border_visible"] = false,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 1,
-	["glowColor"] = {
-	1,
-	1,
-	0,
-	0.75,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 1,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1.5,
-	["glowLines"] = 8,
-	["glowBorder"] = true,
-	},
-	{
-	["api"] = false,
-	["model_x"] = 0,
-	["model_st_us"] = 40,
-	["model_st_rz"] = 0,
-	["model_alpha"] = 0.55,
-	["model_fileId"] = "166181",
-	["model_path"] = "spells/flamecircleeffect.m2",
-	["model_st_ty"] = 0,
-	["model_y"] = 0,
-	["model_st_rx"] = 270,
-	["rotation"] = 80.62889485029,
-	["type"] = "submodel",
-	["model_st_tx"] = 0,
-	["model_st_ry"] = 0,
-	["model_z"] = 0,
-	["model_visible"] = false,
-	["model_st_tz"] = 0,
-	["bar_model_clip"] = true,
 	},
 	{
 	["text_shadowXOffset"] = 0,
@@ -40938,13 +47039,13 @@ NUI.WeakAurasData = {
 	1,
 	1,
 	},
-	["text_font"] = "Naowh",
+	["text_font"] = "Expressway",
 	["text_text_format_p_time_format"] = 0,
 	["text_shadowYOffset"] = 0,
 	["text_text_format_p_time_precision"] = 1,
 	["text_wordWrap"] = "WordWrap",
 	["text_visible"] = true,
-	["text_anchorPoint"] = "BOTTOM",
+	["text_anchorPoint"] = "CENTER",
 	["anchorYOffset"] = 0,
 	["text_shadowColor"] = {
 	0,
@@ -40952,8 +47053,8 @@ NUI.WeakAurasData = {
 	0,
 	1,
 	},
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
 	["text_text_format_p_format"] = "timed",
 	},
 	{
@@ -40969,16 +47070,16 @@ NUI.WeakAurasData = {
 	["rotateText"] = "NONE",
 	["text_text_format_p_time_dynamic_threshold"] = 60,
 	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
+	["text_anchorXOffset"] = 2,
 	["text_color"] = {
 	1,
 	1,
 	1,
 	1,
 	},
-	["text_font"] = "Naowh",
+	["text_font"] = "Expressway",
 	["text_shadowYOffset"] = 0,
-	["text_anchorYOffset"] = 0,
+	["text_anchorYOffset"] = -2,
 	["text_shadowColor"] = {
 	0,
 	0,
@@ -40987,24 +47088,60 @@ NUI.WeakAurasData = {
 	},
 	["text_wordWrap"] = "WordWrap",
 	["text_visible"] = true,
-	["text_anchorPoint"] = "TOP",
+	["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
 	["text_fontType"] = "OUTLINE",
 	["text_text_format_p_time_precision"] = 1,
-	["text_fontSize"] = 14,
+	["text_fontSize"] = 15,
 	["anchorXOffset"] = 0,
 	["text_shadowXOffset"] = 0,
+	},
+	{
+	["border_size"] = 2,
+	["border_offset"] = -1,
+	["border_color"] = {
+	1,
+	1,
+	0.74901962280273,
+	1,
+	},
+	["border_visible"] = false,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["glowFrequency"] = 0.25,
+	["type"] = "subglow",
+	["glowDuration"] = 1,
+	["glowType"] = "Pixel",
+	["glowThickness"] = 2,
+	["glowYOffset"] = -1,
+	["glowColor"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["useGlowColor"] = false,
+	["glowXOffset"] = -1,
+	["glowLength"] = 15,
+	["glow"] = false,
+	["glowScale"] = 1,
+	["glowLines"] = 8,
+	["glowBorder"] = false,
 	},
 	},
 	["height"] = 26,
 	["width"] = 34,
 	["load"] = {
-	["use_never"] = false,
 	["talent"] = {
 	["multi"] = {
 	},
 	},
+	["use_vehicleUi"] = false,
 	["class"] = {
+	["single"] = "MAGE",
 	["multi"] = {
+	["MAGE"] = true,
 	},
 	},
 	["spec"] = {
@@ -41016,47 +47153,30 @@ NUI.WeakAurasData = {
 	},
 	},
 	},
-	["url"] = "NaowhUI",
+	["icon"] = true,
 	["useAdjustededMax"] = false,
-	["selfPoint"] = "CENTER",
 	["source"] = "import",
-	["cooldown"] = false,
+	["cooldown"] = true,
 	["progressSource"] = {
 	-1,
 	"",
 	},
+	["displayIcon"] = 134063,
 	["useAdjustededMin"] = false,
 	["regionType"] = "icon",
-	["displayIcon"] = 134148,
-	["uid"] = ")DkvpzEuU4R",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["parent"] = "Aura bar (Player buffs)",
-	["useCooldownModRate"] = true,
-	["zoom"] = 0.3,
-	["cooldownTextDisabled"] = true,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Equipped Items - Icon 3",
-	["frameStrata"] = 3,
-	["alpha"] = 1,
-	["anchorFrameType"] = "SCREEN",
+	["selfPoint"] = "CENTER",
 	["authorOptions"] = {
 	{
 	["subOptions"] = {
 	{
 	["type"] = "description",
-	["text"] = "|cFFA330C9Merfin: Equipped Items|r",
+	["text"] = "|cFFA330C9Merfin: Equipped Items|r (Cataclysm)",
 	["fontSize"] = "large",
 	["width"] = 2,
 	},
 	{
 	["type"] = "description",
-	["text"] = "|cffa3a3a3The aura coding is provided by Merfin. \nIf you struggle with something, feel free to ask for help on: https://discord.gg/q9z5Az6|r",
+	["text"] = "|cffa3a3a3If you struggle with something, feel free to ask for help on: https://discord.gg/q9z5Az6|r",
 	["fontSize"] = "medium",
 	["width"] = 2,
 	},
@@ -41090,7 +47210,7 @@ NUI.WeakAurasData = {
 	["key"] = "showAlways",
 	["useDesc"] = true,
 	["name"] = "Show Always",
-	["width"] = 0.6,
+	["width"] = 1,
 	},
 	{
 	["type"] = "toggle",
@@ -41099,7 +47219,16 @@ NUI.WeakAurasData = {
 	["key"] = "showProc",
 	["useDesc"] = true,
 	["name"] = "Show Proc",
-	["width"] = 0.6,
+	["width"] = 1,
+	},
+	{
+	["type"] = "toggle",
+	["default"] = true,
+	["desc"] = "Display Item Cooldown",
+	["key"] = "showCd",
+	["useDesc"] = true,
+	["name"] = "Show Cooldown",
+	["width"] = 1,
 	},
 	{
 	["type"] = "toggle",
@@ -41108,34 +47237,43 @@ NUI.WeakAurasData = {
 	["key"] = "itemTextureAlways",
 	["useDesc"] = true,
 	["name"] = "Item Icon Always",
-	["width"] = 0.6,
+	["width"] = 1,
 	},
 	{
 	["type"] = "toggle",
 	["default"] = true,
-	["desc"] = "Glow in combat if the item is ready to use. ( [Glow 2] in Display Tab )",
-	["key"] = "glowReadyToUse",
-	["useDesc"] = true,
-	["name"] = "Glow Ready to Use",
-	["width"] = 0.6,
-	},
-	{
-	["type"] = "toggle",
-	["default"] = true,
-	["desc"] = "Glow on Proc Buff. ( [Glow 1] in Display Tab )",
+	["desc"] = "Highlight on Proc Buff. ( [Glow 1] in Display Tab )",
 	["key"] = "glowProc",
 	["useDesc"] = true,
-	["name"] = "Glow on Proc Buff",
-	["width"] = 0.6,
+	["name"] = "Highlight on Proc Buff",
+	["width"] = 1,
+	},
+	{
+	["type"] = "toggle",
+	["default"] = true,
+	["desc"] = "Highlight on Proc Buff with a Border. ( [Border 2] in Display Tab )",
+	["key"] = "highlightBorder",
+	["useDesc"] = true,
+	["name"] = "Highlight as Border",
+	["width"] = 1,
 	},
 	{
 	["type"] = "toggle",
 	["default"] = false,
-	["desc"] = "Do not Glow on proc buff if the Item doesn't have cooldown (f.e. Idols / Librams etc.)",
+	["desc"] = "Highlight on Proc Buff with a Glow Effect. ( [Glow 1] in Display Tab )",
+	["key"] = "highlightGlow",
+	["useDesc"] = true,
+	["name"] = "Highlight as Glow",
+	["width"] = 1,
+	},
+	{
+	["type"] = "toggle",
+	["default"] = false,
+	["desc"] = "Do not Highlight on proc buff if the Item doesn't have cooldown (f.e. Idols / Librams etc.)",
 	["key"] = "disableGlowNoCd",
 	["useDesc"] = true,
-	["name"] = "Don't Glow no CD",
-	["width"] = 0.6,
+	["name"] = "Don't Highlight Items w/o CD",
+	["width"] = 1,
 	},
 	{
 	["type"] = "space",
@@ -41193,7 +47331,7 @@ NUI.WeakAurasData = {
 	},
 	{
 	["type"] = "description",
-	["text"] = "|cffa3a3a3By default it displays only items and enchants that are in the database. The database contains all WotLK exp. items 150-284 ilvl (including some specific lvl70 trinkets that are used for block tanking), enchantments and meta gems. If you wish to register items with Use effect even that aren't in the databse, please, mark the checkbox below|r\n",
+	["text"] = "|cffa3a3a3By default it displays only item that are in the databse. If you wish to register items with Use effect even that aren't in the database, please, mark the checkbox below|r\n",
 	["fontSize"] = "medium",
 	["width"] = 2,
 	},
@@ -41225,25 +47363,17 @@ NUI.WeakAurasData = {
 	true,
 	true,
 	true,
-	true,
-	true,
-	true,
-	true,
 	},
 	["values"] = {
-	"|TInterface\\Icons\\Spell_Magic_FeatherFall:14:14:0:0:64:64:4:60:4:60|t Springy Arachnoweave (Parachute)",
-	"|TInterface\\Icons\\Spell_Arcane_PrismaticCloak:14:14:0:0:64:64:4:60:4:60|t Lightweave Embroidery (SP)",
-	"|TInterface\\Icons\\Spell_Nature_GiftoftheWaterSpirit:14:14:0:0:64:64:4:60:4:60|t Darkglow Embroidery (Mana)",
-	"|TInterface\\Icons\\Ability_Rogue_ThrowingSpecialization:14:14:0:0:64:64:4:60:4:60|t Swordguard Embroidery (AP)",
-	"|TInterface\\Icons\\Spell_Fire_Burnout:14:14:0:0:64:64:4:60:4:60|t Hand-Mounted Pyro Rocket",
-	"|TInterface\\Icons\\Spell_Shaman_ElementalOath:14:14:0:0:64:64:4:60:4:60|t Hyperspeed Accelerators",
-	"|TInterface\\Icons\\Spell_Fire_BurningSpeed:14:14:0:0:64:64:4:60:4:60|t Nitroboosts",
-	"|TInterface\\Icons\\Spell_Shadow_UnstableAffliction_1:14:14:0:0:64:64:4:60:4:60|t Black Magic",
-	"|TInterface\\Icons\\spell_nature_strength:14:14:0:0:64:64:4:60:4:60|t Berserking",
-	"|TInterface\\Icons\\inv_sword_121:14:14:0:0:64:64:4:60:4:60|t Blade Warding",
-	"|TInterface\\Icons\\inv_misc_gem_bloodstone_03:14:14:0:0:64:64:4:60:4:60|t Blood Draining",
-	"|TInterface\\Icons\\Spell_Nature_UnrelentingStorm:14:14:0:0:64:64:4:60:4:60|t Mongoose",
-	"|TInterface\\Icons\\Spell_Holy_BlessingOfStrength:14:14:0:0:64:64:4:60:4:60|t Unholy Strength",
+	"|TInterface\\Icons\\Ability_Paladin_SacredCleansing:14:14:0:0:64:64:4:60:4:60|t Landslide",
+	"|TInterface\\Icons\\Ability_Paladin_SacredCleansing:14:14:0:0:64:64:4:60:4:60|t Power Torrent",
+	"|TInterface\\Icons\\Spell_Nature_Cyclone:14:14:0:0:64:64:4:60:4:60|t Hurricane",
+	"|TInterface\\Icons\\Ability_Paladin_SacredCleansing:14:14:0:0:64:64:4:60:4:60|t Heartsong",
+	"|TInterface\\Icons\\Spell_Arcane_PrismaticCloak:14:14:0:0:64:64:4:60:4:60|t Lightweave Embroidery",
+	"|TInterface\\Icons\\Ability_Rogue_ThrowingSpecialization:14:14:0:0:64:64:4:60:4:60|t Swordguard Embroidery",
+	"|TInterface\\Icons\\Spell_Nature_GiftoftheWaterSpirit:14:14:0:0:64:64:4:60:4:60|t Darkglow Embroidery",
+	"|TInterface\\Icons\\inv_misc_scopea:14:14:0:0:64:64:4:60:4:60|t Gnomish X-Ray Scope",
+	"|T135788:14:14:0:0:64:64:4:60:4:60|t Nitro Boosts",
 	},
 	["key"] = "validEnchants",
 	["useDesc"] = false,
@@ -41260,14 +47390,8 @@ NUI.WeakAurasData = {
 	{
 	["type"] = "multiselect",
 	["default"] = {
-	true,
-	false,
-	false,
 	},
 	["values"] = {
-	"|TInterface\\Icons\\INV_Jewelcrafting_ShadowSpirit_02:14:14:0:0:64:64:4:60:4:60|t Invigorating Earthsiege Diamond",
-	"|TInterface\\Icons\\INV_Jewelcrafting_IceDiamond_02:14:14:0:0:64:64:4:60:4:60|t Thundering Skyflare Diamond",
-	"|TInterface\\Icons\\INV_Jewelcrafting_ShadowSpirit_02:14:14:0:0:64:64:4:60:4:60|t Insightful Earthsiege Diamond",
 	},
 	["key"] = "validMetaGems",
 	["useDesc"] = false,
@@ -41513,7 +47637,7 @@ NUI.WeakAurasData = {
 	["useDesc"] = false,
 	["nameSource"] = 0,
 	["width"] = 1,
-	["useCollapse"] = true,
+	["useCollapse"] = false,
 	["collapse"] = false,
 	["name"] = "Standart Settings",
 	["key"] = "display",
@@ -41534,7 +47658,7 @@ NUI.WeakAurasData = {
 	{
 	["type"] = "input",
 	["useDesc"] = true,
-	["width"] = 0.5,
+	["width"] = 1,
 	["name"] = "Item Name:",
 	["default"] = "Reign of the Dead",
 	["desc"] = "optional",
@@ -41548,18 +47672,11 @@ NUI.WeakAurasData = {
 	["useDesc"] = false,
 	["max"] = 999999,
 	["step"] = 1,
-	["width"] = 0.3,
+	["width"] = 1,
 	["min"] = 1,
 	["key"] = "itemId",
-	["name"] = "Item ID:",
+	["name"] = "Item Id",
 	["default"] = 47477,
-	},
-	{
-	["type"] = "space",
-	["variableWidth"] = true,
-	["height"] = 1,
-	["width"] = 0.4,
-	["useHeight"] = false,
 	},
 	{
 	["type"] = "toggle",
@@ -41584,7 +47701,7 @@ NUI.WeakAurasData = {
 	["useDesc"] = false,
 	["nameSource"] = 1,
 	["width"] = 1,
-	["useCollapse"] = true,
+	["useCollapse"] = false,
 	["collapse"] = false,
 	["name"] = "Advanced Settings",
 	["key"] = "advanced",
@@ -41597,14 +47714,14 @@ NUI.WeakAurasData = {
 	["config"] = {
 	["display"] = {
 	["equipmentSlots"] = {
+	true,
 	false,
 	false,
 	false,
 	false,
+	true,
 	false,
-	false,
-	false,
-	false,
+	true,
 	false,
 	true,
 	true,
@@ -41614,7 +47731,7 @@ NUI.WeakAurasData = {
 	true,
 	true,
 	false,
-	false,
+	true,
 	},
 	["order"] = {
 	["9"] = 18,
@@ -41627,21 +47744,20 @@ NUI.WeakAurasData = {
 	["18"] = 10,
 	["7"] = 17,
 	["6"] = 16,
-	["14"] = 3,
-	["15"] = 4,
+	["14"] = 2,
+	["15"] = 3,
 	["16"] = 8,
 	["17"] = 9,
-	["13"] = 2,
-	["12"] = 6,
-	["11"] = 5,
-	["10"] = 1,
+	["13"] = 1,
+	["12"] = 5,
+	["11"] = 4,
+	["10"] = 6,
 	},
 	["showAlways"] = true,
-	["disableGlowNoCd"] = true,
+	["showCd"] = true,
+	["highlightBorder"] = false,
+	["disableGlowNoCd"] = false,
 	["validMetaGems"] = {
-	false,
-	false,
-	false,
 	},
 	["validEnchants"] = {
 	true,
@@ -41653,45 +47769,65 @@ NUI.WeakAurasData = {
 	true,
 	true,
 	true,
-	true,
-	true,
-	true,
-	true,
 	},
-	["glowReadyToUse"] = true,
+	["highlightGlow"] = true,
 	["showProc"] = true,
 	["glowProc"] = true,
-	["itemTextureAlways"] = false,
+	["itemTextureAlways"] = true,
 	["registerAnyOnUse"] = false,
 	},
 	["TitleDesc"] = {
 	},
 	["advanced"] = {
-	{
-	["disableGlow"] = false,
-	["itemName"] = "Reign of the Dead",
-	["disable"] = false,
-	["itemId"] = 47477,
 	},
 	},
-	},
+	["url"] = "NaowhUI",
+	["anchorFrameParent"] = false,
+	["useCooldownModRate"] = true,
+	["frameStrata"] = 1,
+	["zoom"] = 0.3,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Merfin: Equipped Items - Frontend [Cataclysm]",
+	["cooldownTextDisabled"] = true,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["xOffset"] = 0,
+	["uid"] = "I60(zQE(oPl",
 	["inverse"] = true,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	["custom"] = "-- [itemId] = procId,\n-- [itemId] = { procId1, procId2 },\nlocal ITEM_DATA = {\n    [37111] = {60512, 60513, 60514, 60515}, [23835] = 99999, [23836] = 99999, [32782] = 41301, [24390] = 31794,\n    [28040] = 33662, [28041] = 33667, [28042] = 33668, [25829] = 33828,\n    [24551] = 32140, [27922] = { 33511, 33513 }, [27924] = { 33511, 33513 },\n    [24376] = 31771, [27927] = { 33522, 33523 }, [27926] = { 33522, 33523 },\n    [25787] = 32600, [25786] = 99999, [25619] = 32355, [25620] = 32355,\n    [28108] = 33759, [28109] = 33746, [25937] = 39200, [25936] = 39201,\n    [31856] = { 39439, 39441 }, [31858] = 99999, [31859] = 99999,\n    [31857] = 39443, [26055] = 33012, [27416] = 33014, [31617] = 33667,\n    [25628] = 32362, [25633] = 32362, [31615] = 33662, [32771] = 41263,\n    [29181] = 99999, [25634] = 32367, [32770] = 41261, [29776] = 35733,\n    [32864] = 40815, [30300] = 36372, [29370] = 35163, [29383] = 35166,\n    [29376] = 35165, [38290] = 51953, [38288] = 51954, [38287] = 51955,\n    [29387] = 35169, [38289] = 51952, [30293] = 36347, [28034] = { 33648, 33649 },\n    [27891] = 33479, [27900] = 33486, [30340] = 36432, [32658] = 40729,\n    [27683] = 33370, [27529] = 33089, [28288] = 33807, [34472] = 45053,\n    [28785] = 37658, [32654] = 40724, [28190] = 33370, [28370] = 34210,\n    [28121] = 34106, [28727] = 29601, [29132] = 35337, [28590] = 38332,\n    [24128] = 31047, [30346] = 99999, [28418] = 34321, [30841] = 37877,\n    [28528] = 34519, [32534] = 40538, [28223] = 34000, [30349] = 99999,\n    [29179] = 35337, [24126] = 31040, [27770] = 39228, [30343] = 99999,\n    [28235] = 99999, [30345] = 99999, [24125] = 31039, [30344] = 99999,\n    [34473] = 45058, [34471] = 45064, [28234] = 99999, [30350] = 99999,\n    [28237] = 99999, [24124] = 31038, [28242] = 99999, [30348] = 99999,\n    [28240] = 99999, [28239] = 99999, [30351] = 99999, [24127] = 31045,\n    [27828] = 33400, [28243] = 99999, [28238] = 99999, [28241] = 99999,\n    [28236] = 99999, [28830] = 34775, [28789] = 34747, [28823] = 37706,\n    [35702] = 46784, [35700] = 46783, [35694] = 46782, [35703] = 46785,\n    [35693] = 46780, [30627] = 42084, [30626] = 38348, [30720] = 37445,\n    [30447] = 37198, [30664] = { 37343, 37340, 37341, 37342, 37344 },\n    [30450] = 37174, [30619] = 38324, [37864] = 99999, [30620] = 38325,\n    [37865] = 99999, [30663] = 37243, [30665] = 40402, [30629] = 38351,\n    [30448] = 37508, [37128] = 48042, [37127] = 48041, [34029] = 43995,\n    [33831] = 43716, [33832] = 44055, [34050] = 44055, [34576] = 44055,\n    [34578] = 44055, [33829] = 43712, [34049] = 44055, [34580] = 44055,\n    [34163] = 44055, [34579] = 44055, [35326] = 44055, [35327] = 44055,\n    [34162] = 44055, [34577] = 44055, [33830] = 43713, [33828] = 43710,\n    [32505] = 40477, [32501] = 40464, [32483] = 40396, [32496] = 37656,\n    [34427] = 45040, [34429] = 45044, [34428] = 45049, [34430] = 45052,\n    [10725] = 99999, [41589] = 44055, [35935] = 47215, [38257] = 47816,\n    [36874] = 47816, [38073] = 33662, [38760] = 48875, [44308] = 60318,\n    \n    [21625] = 26467, [29387] = 35169, [38358] = 51353,\n    [40865] = 54808, [40767] = 55018, [43837] = 61617,\n    [38763] = 61426, [38764] = 61427, [38765] = 61428,\n    [43836] = 61620, [44013] = 59657, [44015] = 59657,\n    [44014] = 59658, [36993] = 60214, [36972] = 60471,\n    [38359] = 51348, [37064] = 60307, [37220] = 60218,\n    [37660] = 60479, [45131] = 63250, [45219] = 63250,\n    [37390] = 60302, [37264] = 60483, [37657] = 60520,\n    [40430] = 60525, [37844] = 60521, [37734] = 60517,\n    [37166] = 60305, [37638] = 60180, [37873] = 60480,\n    [37872] = 60215, [37723] = 60299, [42341] = 56121,\n    [44063] = 59757, [42418] = 56188, [42413] = 56186,\n    [42395] = 56184, [41121] = 55039,\n    [42987] = { 60229, 60233, 60234, 60235 },\n    [44253] = { 60229, 60233, 60234, 60235 },   \n    [44255] = { 60229, 60233, 60234, 60235 },\n    [44254] = { 60229, 60233, 60234, 60235 },\n    [42990] = 60203, [19288] = 23684, [42989] = 60196,\n    [42988] = 57350, [44912] = 60064, [40682] = 60064,\n    [49706] = 60064, [44914] = 60065, [40684] = 60065,\n    [49074] = 60065, [39229] = 60492, [43573] = 58904,\n    [37835] = 49623, [40685] = 60062, [49078] = 60062,    \n    [47213] = 67669, [47214] = 67671, [47215] = 67666,    \n    [40683] = 60054, [39388] = 60527, [39292] = 60180,    \n    [39257] = 60439, [49080] = 68443, [49116] = 68271,    \n    [49118] = 68270, [42122] = 42292, [42123] = 42292,    \n    [37254] = 48333, [40382] = 60538, [40256] = 60437,    \n    [40258] = 60530, [40373] = 60488, [40255] = 60494,    \n    [40371] = 60443, [40432] = 60486, [40431] = 60314,    \n    [40372] = 60258, [46088] = 64527, [46087] = 64525,    \n    [46086] = 64524, [40257] = 60286, [42129] = 55915,    \n    [42130] = 55915, [42132] = 55915, [42128] = 55915,    \n    [46083] = 42292, [46085] = 42292, [46081] = 42292,    \n    [46084] = 42292, [46082] = 42292, [45866] = 42292,    \n    [45286] = 65014, [45866] = 65004, [45308] = 65006,    \n    [46021] = 65012, [45313] = 65011, [45292] = 65008,    \n    [45507] = 64765, [45929] = 65003, [45490] = 64741,    \n    [45931] = 65019, [46038] = 65024, [45522] = 64790,    \n    [45263] = 64800, [45466] = 64707, [46051] = 64999,    \n    [40531] = 60319, [45148] = 64712, [45158] = 64763,    \n    [40532] = 60526, [42126] = 42292, [42124] = 42292,    \n    [46312] = 64983, [50198] = 71403, [47881] = 67738,    \n    [47725] = 67738, [47879] = 67736, [47726] = 67736,    \n    [47882] = 67728, [47727] = 67728, [47880] = 67726,    \n    [47728] = 67726, [50259] = 71564, [50235] = 71569,    \n    [50260] = 71568, [45535] = 64739, [45518] = 64713,    \n    [45609] = 64772, [46017] = 64411,    \n    [47303] = { 67703, 67708 }, [47115] = { 67703, 67708 },  \n    [47271] = 67696, [47041] = 67696, [48020] = 67747,    \n    [47948] = 67747, [47316] = 67713, [47182] = 67713,    \n    [48018] = 67744, [47946] = 67744, [48021] = 67742,    \n    [47949] = 67742, [48019] = 67740, [47947] = 67740,    \n    [48724] = 67684, [48722] = 67683, [47290] = 67699,    \n    [47080] = 67699, [48724] = 67684, [48722] = 67683,    \n    [47734] = 67695, [47735] = 67694, [42133] = 67596,    \n    [42134] = 67596, [42136] = 67596, [42137] = 67596,    \n    [42135] = 67596, [50342] = 71401, [50341] = 71575,    \n    [50340] = 71570, [50339] = 71565,    \n    [47464] = { 67772, 67773 }, [47131] = { 67772, 67773 },  \n    [47432] = 67750, [47059] = 67750, [47477] = 67759,    \n    [47188] = 67759, [47451] = 67753, [47088] = 67753,    \n    [50353] = 71601, [50358] = 71584, [50343] = 71541,    \n    [50360] = 71605, [50359] = 71610, [50352] = 71633,    \n    [50362] = { 71485, 71492, 71486, 71484, 71491, 71487 },  \n    [50344] = 71577, [50345] = 71572, [50351] = 71432,    \n    [50355] = 71396, [50361] = 71635, [50357] = 71579,    \n    [50356] = 71586, [51378] = 42292, [51377] = 42292,    \n    [50346] = 71574, [50354] = 71607, [50726] = 71607,\n    [54569] = 75458, [54572] = 75466, [54571] = 75477,    \n    [54573] = 75490, [50366] = 71641, [50349] = 71639,    \n    [50348] = 71644, [50365] = 71636, [50706] = 71432,    \n    [50363] = { 71556, 71560, 71558, 71561, 71559, 71557 }, \n    [50364] = 71638, [50397] = 72416, [50398] = 72416, \n    [50401] = 72412, [50402] = 72412, [52571] = 72412,   \n    [52572] = 72412, [50399] = 72418, [50400] = 72418, \n    [50403] = 72414, [50404] = 72414, [54590] = 75456,    \n    [54588] = 75473, [54591] = 75480, [54589] = 75495,\n    [45158] = 64763,\n    \n    -- Idols\n    [50457] = 71177, [47670] = 67360, [50454] = 71184,\n    [47671] = 67358, [50456] = 71175, [47668] = 67355,\n    [45509] = 64951, [38360] = 57909, [42582] = 60566,\n    [42587] = 60547, [42574] = 60544, [42575] = 60565,\n    [42583] = 60567, [42588] = 60549, [42584] = 60568,\n    [42589] = 60551, [42585] = 60569, [42591] = 60553,\n    [51429] = 60555, [51437] = 60570,\n    \n    -- Totems\n    [50463] = 71216, [47667] = 67391, [50458] = 71199,\n    [50464] = 71220, [47665] = 67388, [40322] = 60766,\n    [47666] = 67385, [40708] = 60771, [42601] = 60566,\n    [42606] = 60547, [42593] = 60544, [42594] = 60565,\n    [42602] = 60567, [42607] = 60549, [42603] = 60568, \n    [42608] = 60551, [42604] = 60569, [42609] = 60553,  \n    [51507] = 60555, [51513] = 60570,\n    \n    -- Sigils\n    [50462] = 71229, [50459] = 71227, [47672] = 67380, \n    [47673] = 67383, [45144] = 64963, [40714] = 62146, \n    [40715] = 60828, [42619] = 60547, [42620] = 60549, \n    [42621] = 60551, [42622] = 60553, [51417] = 60555,\n    \n    -- Librams\n    [40706] = 60819, [40707] = 60795, [42851] = 60547,\n    [42611] = 60544, [42852] = 60549, [45145] = 65182,\n    [42853] = 60551, [47661] = 67371, [47662] = 67364,\n    [47664] = 67378, [42854] = 60553, [50455] = 71187,\n    [50460] = 71192, [50461] = 71197, [51478] = 60555,\n    \n    -- TBC Boots\n    [35581] = 30452, [23824] = 30452,\n    \n}\n\n-- [enchantId] = procId\nlocal ENCHANT_DATA = {\n    [3859] = 55001,    \n    [3722] = 55637,    \n    [3728] = 55767,    \n    [3730] = 55775,    \n    [3790] = 59626,    \n    [3603] = 54757,    \n    [3604] = 54758,    \n    [3606] = 54861,\n    [3789] = 59620,\n    [3869] = 64440,   \n    [3870] = 64568, \n    [2673] = 28093,\n    [3368] = 53365,\n    [3369] = 53386,\n}\n\n-- [gemId] = procId\nlocal GEMS_DATA = {\n    [41401] = 55382, -- Insightful Earthsiege Diamond\n    [41385] = 55341, -- Invigorating Earthsiege Diamond\n    [41400] = 55379, -- Thundering Skyflare Diamond \n}\n\n-- [procId] = cooldown\nlocal COOLDOWNS_DATA = {\n    [72416] = 60,    \n    [72412] = 60,    \n    [72418] = 60,    \n    [72414] = 60,    \n    [51348] = 10,    \n    [51353] = 10,    \n    [54808] = 60,    \n    [55018] = 60,    \n    [71485] = 105,\n    [71492] = 105,\n    [71486] = 105,\n    [71484] = 105,\n    [71491] = 105,\n    [71487] = 105,\n    [71556] = 105,\n    [71560] = 105,\n    [71558] = 105,\n    [71561] = 105,\n    [71559] = 105,\n    [71557] = 105,\n    [71605] = 90,    \n    [71636] = 90,    \n    [55637] = 60,    \n    [55775] = 60,    \n    [55767] = 60,    \n    [59626] = 35, \n    [64568] = 10,\n    [55382] = 15,  \n    [40373] = 15,\n}\n\n-- [itemId] = extraProcId\nlocal EXTRA_PROCS_DATA = {\n    [50348] = 71643,    \n    [50353] = 71600,    \n    [47879] = 67735,    \n    [47726] = 67735,    \n    [48018] = 67743,    \n    [47946] = 67743,    \n    [47880] = 67723,    \n    [47728] = 67723,    \n    [48019] = 67739,    \n    [47947] = 67739,    \n    [47881] = 67737,    \n    [47725] = 67737,    \n    [48020] = 67746,    \n    [47948] = 67746,  \n    [46051] = 65000,\n}\n\n-- [procId] = true (f.e. Balance Idols)\nlocal NO_COOLDOWN_ITEMS_DATA = {\n    [60486] = true, [60525] = true, [60314] = true,    \n    [60196] = true, [71575] = true, [71577] = true,    \n    [71570] = true, [71572] = true, [71432] = true,    \n    [71396] = true, [65006] = true, [71600] = true,    \n    [71643] = true, [67696] = true, [67750] = true,    \n    [67713] = true, [67759] = true, [71177] = true, \n    [67360] = true, [59620] = true, [64440] = true,\n    [71184] = true, [67358] = true, [71175] = true, \n    [67355] = true, [64951] = true, [57909] = true, \n    [60566] = true, [60547] = true, [60544] = true,\n    [60565] = true, [60567] = true, [60549] = true,\n    [60568] = true, [60551] = true, [60569] = true,\n    [60553] = true, [60555] = true, [60570] = true,\n    [71216] = true, [67391] = true, [71199] = true, \n    [71220] = true, [67388] = true, [60766] = true,\n    [60771] = true, [60566] = true, [60565] = true, \n    [60567] = true, [60568] = true, [60569] = true,\n    [60570] = true, [71229] = true, [71227] = true, \n    [67380] = true, [67383] = true, [64963] = true,\n    [60828] = true, [62146] = true, [67385] = true,  \n    [60819] = true, [60795] = true, [65182] = true,\n    [67371] = true, [67364] = true, [67378] = true,  \n    [71187] = true, [71192] = true, [71197] = true,\n    [28093] = true, [53365] = true, [60512] = true, \n    [60513] = true, [60514] = true, [60515] = true,\n}\n\nlocal INVALID_EVENTS = {\n    SPELL_DISPEL            = true,\n    SPELL_DISPEL_FAILED     = true,\n    SPELL_STOLEN            = true,\n    SPELL_AURA_REMOVED_DOSE = true,\n    SPELL_AURA_BROKEN       = true,\n    SPELL_AURA_BROKEN_SPELL = true,\n    SPELL_CAST_FAILED       = true,\n    SPELL_PERIODIC_HEAL     = true,\n    SPELL_CAST_SUCCESS      = true,\n}\n\nlocal hexNoGUID = \"0x0000000000000000\"\n\nlocal tinsert = table.insert\nlocal stformat = string.format\nlocal substr = string.sub\nlocal myGUID = UnitGUID(\"player\")\n\nlocal ItemWidget = aura_env\nlocal cfg = ItemWidget.config\n\nlocal items = {\n    -- [itemId] = {\n    --     equipmentSlot = number,\n    --     procs = table,\n    --     isProc = boolean,\n    --     itemTexture = string, (constant)\n    --     procTexture = string,\n    --     stacks = number,\n    --     cooldown = number, (constant)\n    --     duration = number, (as cooldown duration)\n    --     expirationTime = number, (as cooldown expTime)\n    --     procDuration = number, (as proc duration)\n    --     procExpirationTime = number, (as proc expTime)\n    -- }\n}\n\nlocal equipmentSlots = {\n    -- [equipmentSlot] = itemId,\n}\n\nlocal procs = {\n    -- [procId] = itemId,\n}\n\nlocal extraProcs = {\n    -- [extraProcId] = itemId,\n}\n\nlocal settings = {\n    equipmentSlots = {},\n    order = {},\n    advanced = {},\n    registerAnyOnUse = cfg.display.registerAnyOnUse,\n    showAlways = cfg.display.showAlways,\n    showProc = cfg.display.showProc,\n    itemTextureAlways = cfg.display.itemTextureAlways,\n}\n\nItemWidget.settings = settings\n\nlocal InitConfig = function()\n    \n    for slot, enable in ipairs(cfg.display.equipmentSlots) do\n        if enable then\n            settings.equipmentSlots[slot] = true\n        end\n    end\n    \n    local validEnchants = {\n        [1] = 3859,\n        [2] = 3722,\n        [3] = 3728,\n        [4] = 3730,\n        [5] = 3603, \n        [6] = 3604,\n        [7] = 3606,\n        [8] = 3790,\n        [9] = 3789,\n        [10] = 3869,\n        [11] = 3870,\n        [12] = 2673,\n        [13] = 3370,\n    }\n    \n    for i, v in ipairs(cfg.display.validEnchants) do\n        if not v then\n            local enchantId = validEnchants[i]\n            ENCHANT_DATA[enchantId] = nil\n        end\n    end\n    \n    local validMetaGems = {\n        [1] = 41385, -- Invigorating Earthsiege Diamond\n        [2] = 41400, -- Thundering Skyflare Diamond\n        [3] = 41401, -- Insightful Earthsiege Diamond\n    }\n    \n    for i, v in ipairs(cfg.display.validMetaGems) do\n        if not v then\n            local metaGemId = validMetaGems[i]\n            GEMS_DATA[metaGemId] = nil\n        end\n    end\n    \n    for equipmentSlot, index in pairs(cfg.display.order) do\n        local equipmentSlot = tonumber(equipmentSlot)\n        settings.order[equipmentSlot] = index\n    end\n    \n    for _, optionsData in ipairs(cfg.advanced) do\n        local itemId = optionsData.itemId\n        \n        if optionsData.disable then\n            ITEM_DATA[itemId] = nil\n        end\n        \n        settings.advanced[itemId] = {\n            disableGlow = optionsData.disableGlow\n        }\n    end\n    \nend \n\n-- return: table - numbers\nlocal GetValuesTable = function(value)\n    local t = {}\n    if type(value) == \"table\" then\n        for _, v in pairs(value) do\n            tinsert(t, v)\n        end\n    elseif type(value) ~= \"table\" then\n        tinsert(t, value)\n    end\n    return t\nend\n\n-- return: number - itemId, number - enchantId\nlocal GetSlotItemInfo = function(equipmentSlot)\n    \n    local itemLink = GetInventoryItemLink(\"player\", equipmentSlot)\n    \n    if itemLink then\n        local itemString = select(3, strfind(itemLink, \"|H(.+)|h\"))\n        local _, itemId, enchantId, metaGem = strsplit(\":\", itemString)\n        return tonumber(itemId), tonumber(enchantId), tonumber(metaGem)\n    end\n    \nend\n\n-- return: string - custom type names (\"NO_CD\", \"ON_USE\", \"INTERNAL\"), number - cooldown time \nlocal GetCooldownInfo = function(equipmentSlot, procId)\n    local _,_, enable = GetInventoryItemCooldown(\"player\", equipmentSlot)\n    \n    if enable == 1 then\n        return \"ON_USE\", nil\n    end\n    \n    if enable == 0 then\n        local cooldown = NO_COOLDOWN_ITEMS_DATA[procId]\n        \n        if cooldown then\n            return \"NO_CD\", 0\n        end\n        \n        return \"INTERNAL\", COOLDOWNS_DATA[procId] or 45\n    end\nend\n\nlocal CanRegister = function(equipmentSlot, procId)\n    if procId then\n        return true\n    end\n    \n    if settings.registerAnyOnUse then\n        local _,_, enable = GetInventoryItemCooldown(\"player\", equipmentSlot)\n        return enable == 1\n    end\nend\n\nlocal SetState = {\n    \n    AutoHide = function()\n        return not settings.showAlways\n    end,\n    \n    Show = function(state)\n        return settings.showAlways or GetTime() < state.expirationTime\n    end,\n    \n    Duration = function(itemId)\n        local isProc = items[itemId].isProc\n        return (isProc and settings.showProc) and items[itemId].procDuration or items[itemId].duration or 0\n    end,\n    \n    ExpirationTime = function(itemId)\n        local isProc = items[itemId].isProc\n        return (isProc and settings.showProc) and items[itemId].procExpirationTime or items[itemId].expirationTime or GetTime()\n    end,\n    \n    Index = function(equipmentSlot)\n        return settings.order[equipmentSlot]\n    end,\n    \n    Icon = function(itemId)\n        local isProc = items[itemId].isProc\n        return (isProc and settings.showProc and not settings.itemTextureAlways) and items[itemId].procTexture or items[itemId].itemTexture\n    end,\n    \n    Stacks = function(itemId)\n        local isProc = items[itemId].isProc\n        return (isProc and settings.showProc) and items[itemId].stacks or 0\n    end,\n    \n    IsProc = function(itemId)\n        local isProc = items[itemId].isProc\n        return isProc and settings.showProc\n    end,\n    \n}\n\nlocal InitAura = function(allstates, equipmentSlot, itemId)\n    local stateName = stformat(\"IW_Slot%d\", equipmentSlot)\n    \n    allstates[stateName] = allstates[stateName] or {\n        progressType = \"timed\",\n        autoHide = SetState.AutoHide(),\n        index = SetState.Index(equipmentSlot),\n        itemType = items[itemId].type,\n        itemId = itemId,\n        equipmentSlot = equipmentSlot,\n    }\n    \n    allstates[stateName].stacks = SetState.Stacks(itemId)\n    allstates[stateName].isProc = SetState.IsProc(itemId)\n    allstates[stateName].icon = SetState.Icon(itemId)\n    allstates[stateName].duration = SetState.Duration(itemId)\n    allstates[stateName].expirationTime = SetState.ExpirationTime(itemId)\n    allstates[stateName].show = SetState.Show(allstates[stateName])\n    allstates[stateName].changed = true\nend\n\nlocal RemoveAura = function(allstates, equipmentSlot)\n    equipmentSlots[equipmentSlot] = nil\n    local stateName = stformat(\"IW_Slot%d\", equipmentSlot)\n    if allstates[stateName] then\n        allstates[stateName].show = false\n        allstates[stateName].changed = true\n    end\n    \n    return true\nend\n\nlocal InitItem = function(equipmentSlot, itemId, procId)\n    \n    if items[itemId] then\n        items[itemId].equipmentSlot = equipmentSlot\n        return\n    end\n    \n    items[itemId] = {\n        procs = {},\n        extraProc = EXTRA_PROCS_DATA[itemId],\n        itemTexture = GetItemIcon(itemId),\n        expirationTime = GetTime(),  \n        equipmentSlot = equipmentSlot \n    }\n    \n    if not procId then\n        items[itemId].type = \"ON_USE\"\n        return true\n    end\n    \n    local p = GetValuesTable(procId)\n    \n    for _, procId in pairs(p) do\n        tinsert(items[itemId].procs, procId)\n        procs[procId] = itemId\n        if not items[itemId].type then\n            local type, cooldown = GetCooldownInfo(equipmentSlot, procId)\n            \n            items[itemId].type = type\n            \n            if type == \"INTERNAL\" then\n                items[itemId].cooldown = cooldown\n            end\n        end\n    end\n    \n    local extraProcId = EXTRA_PROCS_DATA[itemId]\n    \n    if extraProcId then\n        extraProcs[extraProcId] = itemId\n    end\n    \nend \n\nlocal InitEquipmentSlot = function(allstates, equipmentSlot)\n    \n    local itemId, enchantId, metaGem = GetSlotItemInfo(equipmentSlot)\n    \n    if itemId then \n        local procId = ITEM_DATA[itemId] or ENCHANT_DATA[enchantId] or GEMS_DATA[metaGem]\n        if CanRegister(equipmentSlot, procId) then\n            equipmentSlots[equipmentSlot] = itemId\n            InitItem(equipmentSlot, itemId, procId)\n            return true\n        end\n    end\n    \n    if equipmentSlots[equipmentSlot] then\n        equipmentSlots[equipmentSlot] = nil\n    end\n    \nend\n\n-- return: number - cooldown\nlocal LoadLastSession = function(allstates, equipmentSlot, itemId)\n    aura_env.saved = aura_env.saved or {}\n    local db = aura_env.saved[WeakAuras.me]\n    if not db then return end\n    \n    if db[itemId] then\n        local expirationTimeOS = db[itemId].expirationTimeOS\n        local cooldown = expirationTimeOS - time()\n        return cooldown\n    end\nend\n\nlocal OnUse = function(allstates, equipmentSlot, itemId)\n    local startTime, duration = GetInventoryItemCooldown(\"player\", equipmentSlot)\n    if duration > 0 then\n        local expirationTime = startTime + duration\n        if expirationTime > items[itemId].expirationTime then\n            items[itemId].duration = duration\n            items[itemId].expirationTime = expirationTime\n            return true\n        end\n    end\nend\n\nlocal BagUpdateCooldown = function(allstates)\n    local update = false\n    \n    for equipmentSlot in pairs(settings.equipmentSlots) do\n        local itemId = GetInventoryItemID(\"player\", equipmentSlot)\n        if itemId and itemId == equipmentSlots[equipmentSlot]\n        and items[itemId].type == \"ON_USE\"\n        and (not settings.showProc or not items[itemId].isProc)\n        and OnUse(allstates, equipmentSlot, itemId) then\n            \n            items[itemId].stacks = 0\n            InitAura(allstates, equipmentSlot, itemId)\n            update = true\n            \n        end\n    end\n    \n    return update\nend\n\nlocal EquipmentSlotChanged = function(allstates, equipmentSlot, isEmpty)\n    \n    if not isEmpty and InitEquipmentSlot(allstates, equipmentSlot) then\n        \n        local timestamp = GetTime()\n        \n        local itemId = equipmentSlots[equipmentSlot]\n        local type = items[itemId].type\n        \n        items[itemId].icon = items[itemId].itemTexture\n        items[itemId].stacks = 0\n        items[itemId].isProc = false\n        \n        if type == \"ON_USE\" then\n            \n            OnUse(allstates, equipmentSlot, itemId)\n            \n        elseif type == \"INTERNAL\" then\n            local currentCooldown = items[itemId].expirationTime - timestamp\n            local savedCooldown = LoadLastSession(allstates, equipmentSlot, itemId)\n            \n            if currentCooldown > 30 then\n                items[itemId].duration = items[itemId].cooldown\n                items[itemId].expirationTime = timestamp + items[itemId].cooldown\n                \n            elseif not savedCooldown or savedCooldown < items[itemId].cooldown then\n                items[itemId].duration = items[itemId].cooldown\n                items[itemId].expirationTime = timestamp + items[itemId].cooldown\n                \n            elseif savedCooldown > 30 then\n                items[itemId].duration = items[itemId].cooldown\n                items[itemId].expirationTime = savedCooldown + timestamp\n                \n            end\n            \n        elseif type == \"NO_CD\" then\n            \n            if equipmentSlot ~= 18 then\n                items[itemId].duration = 30\n                items[itemId].expirationTime = timestamp + 30\n            end\n            \n        end\n        \n        return InitAura(allstates, equipmentSlot, itemId)\n    end\n    \n    return RemoveAura(allstates, equipmentSlot)\n    \nend\n\nlocal OnExtraProc = function(itemId, extraProcId)\n    local _,_, stacks = WA_GetUnitBuff(\"player\", extraProcId)\n    items[itemId].stacks = stacks\nend\n\nlocal OnProc = function(allstates, equipmentSlot, itemId, spellId)\n    \n    local _, icon, stacks, _, buffDuration, buffExpirationTime = WA_GetUnitBuff(\"player\", spellId)\n    \n    if items[itemId].type == \"INTERNAL\" then\n        local cooldown = items[itemId].cooldown\n        items[itemId].duration = cooldown\n        items[itemId].expirationTime = buffExpirationTime - buffDuration + cooldown\n    end\n    \n    items[itemId].isProc = true\n    items[itemId].procTexture = icon\n    items[itemId].procDuration = buffDuration\n    items[itemId].procExpirationTime = buffExpirationTime\n    items[itemId].stacks = stacks\n    \nend\n\nlocal OnCLEUF = function(allstates, ...)\n    local _, subEvent, _, sourceGUID, _,_,_, destGUID, _,_,_, spellId = ...\n    \n    if not subEvent then return end\n    if INVALID_EVENTS[subEvent] then return end\n    if substr(subEvent, 0, 6) ~= \"SPELL_\" then return end\n    \n    if ((destGUID == myGUID and ((not sourceGUID or sourceGUID == hexNoGUID) or sourceGUID == destGUID)) or sourceGUID == myGUID) then\n        \n        if procs[spellId] then\n            \n            local itemId = procs[spellId]\n            local equipmentSlot = items[itemId].equipmentSlot\n            local type = items[itemId].type\n            \n            if GetInventoryItemID(\"player\", equipmentSlot) ~= itemId then return end\n            \n            if subEvent == \"SPELL_AURA_APPLIED\" \n            or subEvent == \"SPELL_AURA_REFRESH\" \n            or subEvent == \"SPELL_AURA_APPLIED_DOSE\" then\n                \n                OnProc(allstates, equipmentSlot, itemId, spellId)\n                InitAura(allstates, equipmentSlot, itemId)\n                \n            elseif subEvent == \"SPELL_AURA_REMOVED\" then\n                items[itemId].isProc = false\n                items[itemId].stacks = 0\n                \n                if type == \"ON_USE\" then\n                    OnUse(allstates, equipmentSlot, itemId)\n                    \n                elseif type == \"NO_CD\" then\n                    items[itemId].duration = 0\n                    items[itemId].expirationTime = GetTime()\n                end\n                \n            elseif type == \"INTERNAL\" then\n                items[itemId].isProc = false\n                items[itemId].duration = items[itemId].cooldown\n                items[itemId].expirationTime = items[itemId].duration + GetTime()\n            end\n            \n            InitAura(allstates, equipmentSlot, itemId)\n            return true\n        end\n        \n        if extraProcs[spellId] then\n            \n            if subEvent == \"SPELL_AURA_APPLIED\" \n            or subEvent == \"SPELL_AURA_REFRESH\" \n            or subEvent == \"SPELL_AURA_APPLIED_DOSE\" \n            or subEvent == \"SPELL_AURA_REMOVED\" then\n                \n                local itemId = extraProcs[spellId]\n                local equipmentSlot = items[itemId].equipmentSlot\n                \n                OnExtraProc(itemId, spellId)\n                InitAura(allstates, equipmentSlot, itemId)\n                return true\n                \n            end\n        end\n    end\nend\n\nlocal OnInit = function(allstates)\n    InitConfig()\n    \n    local updated = false\n    for equipmentSlot in pairs(settings.equipmentSlots) do\n        if InitEquipmentSlot(allstates, equipmentSlot) then\n            updated = true\n        end\n    end\n    \n    if not updated then return end\n    \n    -- display active item procs or load last session\n    for equipmentSlot, itemId in pairs(equipmentSlots) do\n        \n        local isBuffed = false\n        for _, procId in ipairs(items[itemId].procs) do\n            if WA_GetUnitBuff(\"player\", procId) then\n                isBuffed = true\n                OnProc(allstates, equipmentSlot, itemId, procId)\n                if items[itemId].extraProc then\n                    OnExtraProc(itemId, items[itemId].extraProc)\n                end\n                break\n            end\n        end\n        \n        if not isBuffed then\n            \n            items[itemId].isProc = false\n            items[itemId].stacks = 0\n            \n            local type = items[itemId].type\n            if type == \"INTERNAL\" or type == \"NO_CD\" then\n                local savedCooldown = LoadLastSession(allstates, equipmentSlot, itemId)\n                \n                if savedCooldown and savedCooldown > 0 then\n                    items[itemId].duration = items[itemId].cooldown or type == \"NO_CD\" and 30\n                    items[itemId].expirationTime = savedCooldown + GetTime()\n                end\n            end\n            \n            if type == \"ON_USE\" then\n                OnUse(allstates, equipmentSlot, itemId)  \n            end\n            \n        end\n        \n        InitAura(allstates, equipmentSlot, itemId)\n    end\n    \n    return true\nend\n\nlocal SaveLastSession = function()\n    aura_env.saved = aura_env.saved or {}\n    aura_env.saved[WeakAuras.me] = {}\n    local db = aura_env.saved[WeakAuras.me]\n    for itemId, itemData in pairs(items) do\n        local expirationTime = itemData.expirationTime\n        db[itemId] = db[itemId] or {}\n        db[itemId].expirationTimeOS = expirationTime - GetTime() + time()\n    end\nend\n\nItemWidget.OnTrigger = function(allstates, event, ...)\n    \n    if event == \"OPTIONS\" then\n        \n        if WeakAuras.IsOptionsOpen() and ItemWidget.initialized then\n            ItemWidget.initialized = false\n            SaveLastSession()\n        end\n        \n        return OnInit(allstates)\n        \n    elseif event == \"OPTIONS_CLOSE\" then\n        \n        ItemWidget.initialized = true\n        return OnInit(allstates)\n        \n    elseif ItemWidget.initialized then\n        \n        if event == \"PLAYER_EQUIPMENT_CHANGED\" then\n            local equipmentSlot, isEmpty = ...\n            if settings.equipmentSlots[equipmentSlot] then\n                EquipmentSlotChanged(allstates, equipmentSlot, isEmpty)\n                return true\n            end\n            \n        elseif event == \"BAG_UPDATE_COOLDOWN\" then\n            return BagUpdateCooldown(allstates)\n            \n        elseif event == \"COMBAT_LOG_EVENT_UNFILTERED\" then\n            return OnCLEUF(allstates, CombatLogGetCurrentEventInfo())\n            \n        elseif event == \"PLAYER_LOGOUT\" then\n            SaveLastSession()\n        end\n    end\nend",
-	["do_custom"] = true,
-	},
-	["finish"] = {
-	},
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
 	},
 	["conditions"] = {
 	{
 	["check"] = {
 	["trigger"] = -2,
-	["op"] = ">",
 	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "showProc",
+	["value"] = 1,
+	},
+	{
+	["trigger"] = 1,
+	["variable"] = "isProc",
+	["value"] = 1,
+	},
+	},
+	},
+	["changes"] = {
+	{
+	["property"] = "inverse",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["op"] = ">",
 	["checks"] = {
 	{
 	["trigger"] = 1,
@@ -41705,7 +47841,11 @@ NUI.WeakAurasData = {
 	["value"] = 0,
 	},
 	},
+	["value"] = "0",
+	["variable"] = "expirationTime",
+	["trigger"] = 1,
 	},
+	["linked"] = true,
 	["changes"] = {
 	{
 	["value"] = true,
@@ -41716,225 +47856,172 @@ NUI.WeakAurasData = {
 	{
 	["check"] = {
 	["trigger"] = -2,
-	["op"] = "==",
 	["variable"] = "AND",
 	["checks"] = {
 	{
-	["trigger"] = -1,
-	["op"] = "==",
-	["variable"] = "customcheck",
-	["value"] = "function()\n    local itemId = aura_env.state.itemId\n    local itemType = aura_env.state.itemType\n    \n    local display = aura_env.config.display\n    local advanced = aura_env.settings.advanced[itemId]\n    \n    \n    if display.glowProc and not (advanced and advanced.disableGlow) then\n        return not display.disableGlowNoCd or itemType ~= \"NO_CD\"\n    end\nend",
-	},
-	{
 	["trigger"] = 1,
-	["op"] = "==",
-	["variable"] = "isProc",
+	["variable"] = "showProc",
 	["value"] = 1,
 	},
 	{
 	["trigger"] = 1,
-	["op"] = ">",
-	["variable"] = "expirationTime",
-	["value"] = "0",
+	["variable"] = "isProc",
+	["value"] = 1,
+	},
+	{
+	["trigger"] = -1,
+	["variable"] = "customcheck",
+	["value"] = "function()\n    local state = aura_env.state\n    \n    if not state then return end\n    local disableGlowNoCd = state.disableGlowNoCd\n    local disabledGlow = state.disabledGlow\n    \n    if state.itemType == 'NO_CD' and disableGlowNoCd then\n        return\n    end\n    \n    -- Advanced Settings\n    if disabledGlow then\n        return\n    end\n    \n    return true\nend",
+	},
+	{
+	["trigger"] = -1,
+	["variable"] = "customcheck",
+	["value"] = "function()\n    return aura_env.config.display.highlightBorder\nend",
 	},
 	},
 	},
 	["changes"] = {
 	{
 	["value"] = true,
+	["property"] = "sub.5.border_visible",
 	},
 	},
 	},
 	{
 	["check"] = {
 	["trigger"] = -2,
-	["op"] = "==",
 	["variable"] = "AND",
 	["checks"] = {
 	{
 	["trigger"] = 1,
-	["op"] = "==",
-	["variable"] = "isProc",
+	["variable"] = "showProc",
 	["value"] = 1,
 	},
 	{
 	["trigger"] = 1,
+	["variable"] = "isProc",
+	["value"] = 1,
+	},
+	{
+	["trigger"] = -1,
+	["variable"] = "customcheck",
+	["value"] = "function()\n    local state = aura_env.state\n    \n    if not state then return end\n    local disableGlowNoCd = state.disableGlowNoCd\n    local disabledGlow = state.disabledGlow\n    \n    if state.itemType == 'NO_CD' and disableGlowNoCd then\n        return\n    end\n    \n    -- Advanced Settings\n    if disabledGlow then\n        return\n    end\n    \n    return true\nend",
+	},
+	{
+	["trigger"] = -1,
+	["variable"] = "customcheck",
+	["value"] = "function()\n    return aura_env.config.display.highlightGlow\nend",
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "sub.6.glow",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
 	["op"] = ">",
 	["variable"] = "expirationTime",
-	["value"] = "0",
-	},
-	},
+	["value"] = "10",
 	},
 	["changes"] = {
 	{
-	["property"] = "inverse",
+	["property"] = "sub.3.text_color",
 	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
 	{
 	["value"] = {
-	0.52549019607843,
 	1,
-	0.46666666666667,
+	1,
+	0,
 	1,
 	},
-	["property"] = "sub.6.text_color",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.5.model_visible",
-	},
-	{
-	["value"] = true,
-	["property"] = "sub.4.glow",
+	["property"] = "sub.3.text_color",
 	},
 	},
 	},
 	{
 	["check"] = {
-	["trigger"] = -2,
-	["op"] = "==",
-	["variable"] = "AND",
-	["checks"] = {
-	{
-	["trigger"] = -1,
-	["op"] = "==",
-	["variable"] = "customcheck",
-	["value"] = "function()\n    return aura_env.config.display.glowReadyToUse \nend",
-	},
-	{
-	["trigger"] = -1,
-	["op"] = "<=",
-	["variable"] = "incombat",
-	["value"] = 1,
-	},
-	{
 	["trigger"] = 1,
-	["op"] = "==",
-	["variable"] = "itemType",
-	["value"] = "ON_USE",
-	},
-	{
-	["trigger"] = 1,
-	["op"] = "<=",
+	["op"] = ">",
 	["variable"] = "expirationTime",
 	["value"] = "0",
 	},
-	},
-	},
+	["linked"] = true,
 	["changes"] = {
 	{
-	["value"] = true,
-	["property"] = "sub.3.border_visible",
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.3.text_color",
 	},
 	},
 	},
 	},
 	["information"] = {
-	["forceEvents"] = true,
+	["forceEvents"] = false,
+	["ignoreOptionsEventErrors"] = true,
 	},
 	["Homerqt"] = {
 	},
 	},
-	["Runic Healing Injector"] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = 3,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
-	},
+	["Potion: Potion of the Tol'vir (+1200 Agility)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
 	["preferToUpdate"] = false,
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["text1Enabled"] = true,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
-	["load"] = {
-	["use_petbattle"] = false,
-	["class_and_spec"] = {
-	["multi"] = {
-	[260] = true,
-	[261] = true,
-	[263] = true,
-	[104] = true,
-	[253] = true,
-	[577] = true,
-	[268] = true,
-	[269] = true,
-	[254] = true,
-	[581] = true,
-	[255] = true,
-	[259] = true,
-	[103] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_vehicle"] = false,
-	["level_operator"] = {
-	">=",
-	},
-	["size"] = {
-	["multi"] = {
-	["scenario"] = true,
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["ratedpvp"] = true,
-	["party"] = true,
-	["none"] = true,
-	["flexible"] = true,
-	["twenty"] = true,
-	["pvp"] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_size"] = false,
-	["use_level"] = false,
-	["use_vehicleUi"] = false,
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["level"] = {
-	"51",
-	},
-	["use_never"] = false,
-	["zoneIds"] = "",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["text2FontSize"] = 24,
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["text2Enabled"] = false,
-	["config"] = {
-	},
-	["displayIcon"] = 236868,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Potions Tracker - Naowh",
 	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
+	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["itemName"] = 41166,
-	["use_alwaystrue"] = true,
+	["type"] = "aura2",
+	["auranames"] = {
+	"79633",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58145,
 	["subeventSuffix"] = "_CAST_START",
 	["use_genericShowOn"] = true,
 	["use_itemName"] = true,
 	["unit"] = "player",
 	["type"] = "item",
-	["use_unit"] = true,
 	["spellIds"] = {
 	},
 	["genericShowOn"] = "showAlways",
@@ -41949,62 +48036,392 @@ NUI.WeakAurasData = {
 	},
 	{
 	["trigger"] = {
-	["unevent"] = "auto",
-	["itemName"] = 41166,
-	["use_genericShowOn"] = true,
+	["type"] = "item",
+	["use_count"] = true,
 	["subeventSuffix"] = "_CAST_START",
-	["unit"] = "player",
-	["duration"] = "1",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
 	["use_itemName"] = true,
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
+	["unit"] = "player",
+	["itemName"] = 58145,
 	["genericShowOn"] = "showOnCooldown",
 	["spellIds"] = {
 	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["use_unit"] = true,
-	["type"] = "item",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["use_exact_itemName"] = true,
-	["use_count"] = true,
-	["use_absorbMode"] = true,
-	["unit"] = "player",
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["subeventSuffix"] = "_CAST_START",
 	["subeventPrefix"] = "SPELL",
 	["event"] = "Item Count",
-	["spellIds"] = {
-	},
+	["count"] = "0",
 	["names"] = {
 	},
-	["unevent"] = "auto",
-	["count"] = "1",
-	["use_itemName"] = true,
-	["duration"] = "1",
-	["use_unit"] = true,
-	["itemName"] = 41166,
-	["count_operator"] = ">=",
+	["count_operator"] = ">",
 	},
 	["untrigger"] = {
 	},
 	},
 	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t) return t[3] end",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
 	["progressSource"] = {
 	-1,
 	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463923",
+	["uid"] = "YXEPdj2HwpN",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Potion: Potion of the Tol'vir (+1200 Agility)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
 	},
 	["animation"] = {
 	["start"] = {
@@ -42026,8 +48443,70 @@ NUI.WeakAurasData = {
 	["easeType"] = "none",
 	},
 	},
+	},
+	["Blood Fury (Active)"] = {
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["preferToUpdate"] = false,
+	["customText"] = "",
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["spellId"] = "271107",
+	["useGroup_count"] = false,
+	["matchesShowOn"] = "showOnActive",
+	["unit"] = "player",
+	["use_tooltip"] = false,
+	["debuffType"] = "HELPFUL",
+	["type"] = "aura2",
+	["use_debuffClass"] = false,
+	["auraspellids"] = {
+	"20572",
+	},
+	["subeventPrefix"] = "SPELL",
+	["names"] = {
+	"Berserking",
+	},
+	["event"] = "Health",
+	["custom_hide"] = "timed",
+	["buffShowOn"] = "showOnActive",
+	["use_spellId"] = true,
+	["name"] = "Golden Luster",
+	["auranames"] = {
+	"Berserking",
+	},
+	["spellIds"] = {
+	},
+	["combineMatches"] = "showLowest",
+	["useExactSpellId"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	},
+	["untrigger"] = {
+	},
+	},
+	["activeTriggerMode"] = 1,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -42046,75 +48525,24 @@ NUI.WeakAurasData = {
 	["type"] = "subborder",
 	},
 	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
-	["glowLength"] = 10,
-	["glow"] = false,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
 	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
+	["text_text"] = "%p",
 	["text_shadowColor"] = {
 	0,
 	0,
 	0,
 	1,
 	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "CENTER",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
-	["text_color"] = {
-	0.55686274509804,
-	1,
-	0.61960784313725,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_shadowYOffset"] = 0,
-	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "BOTTOM",
-	["text_visible"] = true,
-	["text_fontType"] = "OUTLINE",
-	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_text_format_p_time_mod_rate"] = true,
 	["text_selfPoint"] = "AUTO",
 	["text_automaticWidth"] = "Auto",
 	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
+	["text_text_format_p_time_legacy_floor"] = true,
 	["text_justify"] = "CENTER",
 	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
 	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
 	["text_color"] = {
 	1,
 	1,
@@ -42122,50 +48550,652 @@ NUI.WeakAurasData = {
 	1,
 	},
 	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
 	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
 	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
+	["text_shadowYOffset"] = 0,
 	["text_fontSize"] = 14,
 	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_format"] = "timed",
+	["text_text_format_p_time_format"] = 0,
 	},
 	},
 	["height"] = 26,
-	["useAdjustededMax"] = false,
-	["text2Containment"] = "INSIDE",
-	["source"] = "import",
-	["text1Font"] = "Friz Quadrata TT",
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
+	["width"] = 34,
+	["load"] = {
+	["talent2"] = {
+	["multi"] = {
 	},
-	["cooldown"] = true,
+	},
+	["talent"] = {
+	["single"] = 9,
+	["multi"] = {
+	[9] = true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["single"] = "DEATHKNIGHT",
+	["multi"] = {
+	["DEATHKNIGHT"] = true,
+	},
+	},
+	["race"] = {
+	["single"] = "Orc",
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["single"] = 3,
+	["multi"] = {
+	[2] = true,
+	[3] = true,
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["use_itemequiped"] = false,
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["use_race"] = true,
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
+	["alpha"] = 1,
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayIcon"] = 253400,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	},
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["url"] = "NaowhUI",
+	["desaturate"] = false,
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = false,
+	["auto"] = true,
+	["tocversion"] = 40400,
+	["id"] = "Blood Fury (Active)",
+	["zoom"] = 0.3,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["keepAspectRatio"] = true,
+	["uid"] = "hQzO5Mj8xQT",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	["do_glow"] = false,
+	["custom"] = "",
+	["glow_action"] = "show",
+	["glow_type"] = "ACShine",
+	["do_custom"] = false,
+	["glow_frame"] = "WeakAuras:Berserking (Active)",
+	},
+	["init"] = {
+	["custom"] = "",
+	["do_custom"] = false,
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	},
+	["cooldown"] = false,
+	["xOffset"] = 0,
+	},
+	["Haste (Active)"] = {
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
 	["color"] = {
 	1,
 	1,
 	1,
 	1,
 	},
-	["uid"] = "T9QSBMgiah0",
-	["text1Color"] = {
+	["preferToUpdate"] = false,
+	["customText"] = "",
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["customTextUpdate"] = "update",
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["spellId"] = "271107",
+	["useGroup_count"] = false,
+	["matchesShowOn"] = "showOnActive",
+	["unit"] = "player",
+	["use_tooltip"] = false,
+	["debuffType"] = "HELPFUL",
+	["type"] = "aura2",
+	["use_debuffClass"] = false,
+	["auraspellids"] = {
+	"13494",
+	"38282",
+	},
+	["subeventPrefix"] = "SPELL",
+	["names"] = {
+	"Berserking",
+	},
+	["event"] = "Health",
+	["custom_hide"] = "timed",
+	["buffShowOn"] = "showOnActive",
+	["use_spellId"] = true,
+	["name"] = "Golden Luster",
+	["auranames"] = {
+	"Berserking",
+	},
+	["spellIds"] = {
+	},
+	["combineMatches"] = "showLowest",
+	["useExactSpellId"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	},
+	["untrigger"] = {
+	},
+	},
+	["activeTriggerMode"] = 1,
+	},
+	["internalVersion"] = 73,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["selfPoint"] = "CENTER",
+	["stickyDuration"] = false,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = true,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["type"] = "subtext",
+	["text_text_format_p_time_precision"] = 1,
+	["text_color"] = {
 	1,
 	1,
 	1,
 	1,
 	},
+	["text_font"] = "Naowh",
+	["text_text_format_p_format"] = "timed",
+	["text_anchorYOffset"] = 0,
+	["text_visible"] = true,
+	["text_wordWrap"] = "WordWrap",
+	["text_fontType"] = "OUTLINE",
+	["text_anchorPoint"] = "TOP",
+	["anchorYOffset"] = 0,
+	["text_shadowYOffset"] = 0,
+	["text_fontSize"] = 14,
+	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_text_format_p_time_format"] = 0,
+	},
+	},
+	["height"] = 26,
+	["width"] = 34,
+	["load"] = {
+	["talent2"] = {
+	["multi"] = {
+	},
+	},
+	["talent"] = {
+	["single"] = 9,
+	["multi"] = {
+	[9] = true,
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["single"] = "DEATHKNIGHT",
+	["multi"] = {
+	["DEATHKNIGHT"] = true,
+	},
+	},
+	["race"] = {
+	["single"] = "Orc",
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["single"] = 3,
+	["multi"] = {
+	[2] = true,
+	[3] = true,
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["use_itemequiped"] = false,
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["use_race"] = true,
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
+	["alpha"] = 1,
+	["useAdjustededMax"] = false,
+	["source"] = "import",
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
+	},
+	["displayIcon"] = 253400,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeType"] = "none",
+	["easeStrength"] = 3,
+	["preset"] = "slidebottom",
+	["duration_type"] = "seconds",
+	},
+	},
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["url"] = "NaowhUI",
+	["desaturate"] = false,
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = false,
+	["auto"] = true,
+	["tocversion"] = 40400,
+	["id"] = "Haste (Active)",
 	["zoom"] = 0.3,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["keepAspectRatio"] = true,
+	["uid"] = "bJY8tEuwde3",
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	["do_glow"] = false,
+	["do_custom"] = false,
+	["custom"] = "",
+	["do_sound"] = true,
+	["glow_action"] = "show",
+	["glow_type"] = "ACShine",
+	["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\ESPARK1.ogg",
+	["glow_frame"] = "WeakAuras:Berserking (Active)",
+	},
+	["init"] = {
+	["custom"] = "",
+	["do_custom"] = false,
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	},
+	["cooldown"] = false,
+	["xOffset"] = 0,
+	},
+	["Potion: Volcanic Potion (+1200 Intellect)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79476",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58091,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58091,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463922",
+	["uid"] = "6XXIq6cv76)",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Potion: Volcanic Potion (+1200 Intellect)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
 	},
@@ -42174,55 +49204,668 @@ NUI.WeakAurasData = {
 	["finish"] = {
 	},
 	},
-	["text1"] = "%s",
-	["text1FontFlags"] = "OUTLINE",
-	["text2Font"] = "Friz Quadrata TT",
-	["width"] = 32,
-	["semver"] = "2.0.6",
-	["useCooldownModRate"] = true,
-	["id"] = "Runic Healing Injector",
-	["text2"] = "%p",
-	["frameStrata"] = 2,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
-	["alpha"] = 1,
 	["conditions"] = {
 	{
 	["check"] = {
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
 	["checks"] = {
 	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
 	["trigger"] = 2,
 	["variable"] = "onCooldown",
 	["value"] = 1,
 	},
-	{
-	["value"] = 0,
-	["variable"] = "show",
 	},
 	},
-	},
+	["linked"] = true,
 	["changes"] = {
 	{
 	["value"] = true,
 	["property"] = "desaturate",
 	},
+	},
+	},
 	{
-	["value"] = true,
-	["property"] = "sub.5.text_visible",
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
 	},
 	},
 	},
 	},
 	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
 	},
-	["useTooltip"] = false,
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	},
+	["Guardian Elixir: Prismatic Elixir (+90 Magic Resistance)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79631",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58143,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58143,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "464027",
+	["uid"] = "kMJY2xPMpeP",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Guardian Elixir: Prismatic Elixir (+90 Magic Resistance)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
 	},
 	["Bloodlust (Active)"] = {
 	["iconSource"] = -1,
@@ -42295,7 +49938,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -42448,7 +50091,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
@@ -42480,171 +50123,80 @@ NUI.WeakAurasData = {
 	["cooldown"] = false,
 	["xOffset"] = 0,
 	},
-	["Golemblood Potion"] = {
-	["text2Point"] = "CENTER",
-	["iconSource"] = 3,
-	["text1FontSize"] = 12,
-	["authorOptions"] = {
+	["Active Seal (Paladin)"] = {
+	["iconSource"] = -1,
+	["wagoID"] = "fFdRT46Na",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
 	},
 	["preferToUpdate"] = false,
+	["customText"] = "",
 	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["text1Enabled"] = true,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["text1Containment"] = "INSIDE",
-	["text1Point"] = "BOTTOMRIGHT",
-	["text2FontFlags"] = "OUTLINE",
-	["load"] = {
-	["use_petbattle"] = false,
-	["class_and_spec"] = {
-	["multi"] = {
-	[260] = true,
-	[261] = true,
-	[263] = true,
-	[104] = true,
-	[253] = true,
-	[577] = true,
-	[268] = true,
-	[269] = true,
-	[254] = true,
-	[581] = true,
-	[255] = true,
-	[259] = true,
-	[103] = true,
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_vehicle"] = false,
-	["level_operator"] = {
-	">=",
-	},
-	["size"] = {
-	["multi"] = {
-	["scenario"] = true,
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["ratedpvp"] = true,
-	["party"] = true,
-	["none"] = true,
-	["flexible"] = true,
-	["twenty"] = true,
-	["pvp"] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["use_size"] = false,
-	["use_level"] = false,
-	["use_vehicleUi"] = false,
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["level"] = {
-	"51",
-	},
-	["use_never"] = false,
-	["zoneIds"] = "",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["text2FontSize"] = 24,
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["text2Enabled"] = false,
-	["config"] = {
-	},
-	["displayIcon"] = 236868,
-	["wagoID"] = "fFdRT46Na",
-	["parent"] = "Potions Tracker - Naowh",
 	["cooldownSwipe"] = true,
 	["customTextUpdate"] = "update",
 	["cooldownEdge"] = false,
+	["icon"] = true,
 	["triggers"] = {
 	{
 	["trigger"] = {
-	["itemName"] = 58146,
-	["use_alwaystrue"] = true,
-	["subeventSuffix"] = "_CAST_START",
-	["use_genericShowOn"] = true,
-	["use_itemName"] = true,
-	["unit"] = "player",
-	["type"] = "item",
-	["use_unit"] = true,
-	["spellIds"] = {
+	["track"] = "auto",
+	["auranames"] = {
+	"20154",
+	"21084",
+	"20165",
+	"20164",
+	"20375",
+	"348704",
+	"31801",
 	},
+	["use_genericShowOn"] = true,
 	["genericShowOn"] = "showAlways",
+	["unit"] = "player",
+	["use_showgcd"] = true,
+	["custom_hide"] = "timed",
+	["debuffType"] = "HELPFUL",
+	["spellName"] = 27139,
+	["useName"] = true,
+	["use_unit"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["use_showOn"] = true,
+	["duration"] = "1",
+	["event"] = "Cooldown Progress (Spell)",
+	["use_exact_spellName"] = true,
+	["realSpellName"] = 27139,
+	["use_spellName"] = true,
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["type"] = "aura2",
 	["names"] = {
 	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
+	["use_track"] = true,
+	["unevent"] = "auto",
 	},
 	["untrigger"] = {
+	["showOn"] = "showOnCooldown",
+	["genericShowOn"] = "showAlways",
+	["spellName"] = 642,
 	},
 	},
 	{
 	["trigger"] = {
-	["unevent"] = "auto",
-	["itemName"] = 58146,
-	["use_genericShowOn"] = true,
-	["subeventSuffix"] = "_CAST_START",
+	["type"] = "unit",
+	["use_alwaystrue"] = true,
 	["unit"] = "player",
-	["duration"] = "1",
-	["use_itemName"] = true,
-	["names"] = {
-	},
-	["use_absorbMode"] = true,
-	["genericShowOn"] = "showOnCooldown",
-	["spellIds"] = {
-	},
-	["event"] = "Cooldown Progress (Item)",
-	["subeventPrefix"] = "SPELL",
-	["use_unit"] = true,
-	["type"] = "item",
 	["debuffType"] = "HELPFUL",
+	["event"] = "Conditions",
+	["use_unit"] = true,
 	},
 	["untrigger"] = {
 	},
 	},
-	{
-	["trigger"] = {
-	["use_exact_itemName"] = true,
-	["use_count"] = true,
-	["use_absorbMode"] = true,
-	["unit"] = "player",
-	["debuffType"] = "HELPFUL",
-	["type"] = "item",
-	["subeventSuffix"] = "_CAST_START",
-	["subeventPrefix"] = "SPELL",
-	["event"] = "Item Count",
-	["spellIds"] = {
-	},
-	["names"] = {
-	},
-	["unevent"] = "auto",
-	["count"] = "1",
-	["use_itemName"] = true,
-	["duration"] = "1",
-	["use_unit"] = true,
-	["itemName"] = 58146,
-	["count_operator"] = ">=",
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "custom",
-	["customTriggerLogic"] = "function(t) return t[3] end",
+	["disjunctive"] = "any",
 	["activeTriggerMode"] = -10,
 	},
 	["internalVersion"] = 73,
@@ -42652,28 +50204,10 @@ NUI.WeakAurasData = {
 	-1,
 	"",
 	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
+	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
-	["version"] = 16,
+	["useCooldownModRate"] = true,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -42695,9 +50229,9 @@ NUI.WeakAurasData = {
 	["glowFrequency"] = 0.25,
 	["type"] = "subglow",
 	["glowDuration"] = 1,
-	["glowType"] = "buttonOverlay",
+	["glowType"] = "Pixel",
 	["glowThickness"] = 1,
-	["glowYOffset"] = 0,
+	["glowYOffset"] = 1,
 	["glowColor"] = {
 	1,
 	1,
@@ -42705,211 +50239,232 @@ NUI.WeakAurasData = {
 	1,
 	},
 	["useGlowColor"] = false,
-	["glowXOffset"] = 0,
+	["glowXOffset"] = 1,
 	["glowLength"] = 10,
 	["glow"] = false,
 	["glowScale"] = 1,
 	["glowLines"] = 8,
-	["glowBorder"] = false,
+	["glowBorder"] = true,
 	},
 	{
-	["text_shadowXOffset"] = 0,
-	["text_text_format_s_format"] = "none",
-	["text_text"] = "%3.s",
+	["text_text_format_p_time_format"] = 1,
+	["text_text"] = "%p",
+	["text_text_format_p_gcd_cast"] = false,
 	["text_shadowColor"] = {
 	0,
 	0,
 	0,
 	1,
 	},
-	["text_text_format_3.2_format"] = "none",
-	["text_selfPoint"] = "CENTER",
-	["text_automaticWidth"] = "Auto",
 	["text_fixedWidth"] = 64,
-	["anchorYOffset"] = 0,
-	["text_justify"] = "CENTER",
+	["text_text_format_p_time_legacy_floor"] = true,
 	["rotateText"] = "NONE",
-	["type"] = "subtext",
-	["text_anchorXOffset"] = 0,
+	["text_text_format_p_decimal_precision"] = 1,
+	["text_text_format_p_gcd_gcd"] = true,
 	["text_color"] = {
-	0.55686274509804,
 	1,
-	0.61960784313725,
+	1,
+	1,
 	1,
 	},
-	["text_font"] = "Naowh",
+	["text_text_format_p_gcd_channel"] = false,
 	["text_shadowYOffset"] = 0,
 	["text_wordWrap"] = "WordWrap",
-	["text_text_format_3.s_format"] = "none",
-	["text_anchorPoint"] = "BOTTOM",
-	["text_visible"] = true,
 	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_gcd_hide_zero"] = false,
 	["text_fontSize"] = 14,
-	["anchorXOffset"] = 0,
-	["text_anchorYOffset"] = 0,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
+	["text_text_format_p_time_dynamic_threshold"] = 0,
 	["text_text_format_p_time_mod_rate"] = true,
 	["text_selfPoint"] = "AUTO",
 	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = false,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["text_fontType"] = "OUTLINE",
-	["type"] = "subtext",
-	["anchorXOffset"] = 0,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_time_format"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_text_format_p_time_precision"] = 1,
-	["text_wordWrap"] = "WordWrap",
-	["text_visible"] = true,
-	["text_anchorPoint"] = "CENTER",
 	["anchorYOffset"] = 0,
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
+	["text_justify"] = "CENTER",
+	["type"] = "subtext",
+	["text_font"] = "Naowh",
+	["text_anchorYOffset"] = 0,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_precision"] = 1,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_p_abbreviate"] = false,
+	["text_text_format_p_big_number_format"] = "AbbreviateNumbers",
 	["text_text_format_p_format"] = "timed",
+	["text_text_format_p_abbreviate_max"] = 8,
+	["text_visible"] = false,
 	},
 	},
 	["height"] = 26,
+	["width"] = 34,
+	["load"] = {
+	["talent2"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	["talent"] = {
+	["single"] = 5,
+	["multi"] = {
+	[5] = true,
+	},
+	},
+	["faction"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["single"] = "PALADIN",
+	["multi"] = {
+	},
+	},
+	["use_petbattle"] = false,
+	["spec"] = {
+	["single"] = 3,
+	["multi"] = {
+	},
+	},
+	["difficulty"] = {
+	["multi"] = {
+	},
+	},
+	["role"] = {
+	["multi"] = {
+	},
+	},
+	["use_spec"] = true,
+	["pvptalent"] = {
+	["multi"] = {
+	},
+	},
+	["use_class"] = true,
+	["race"] = {
+	["multi"] = {
+	},
+	},
+	["ingroup"] = {
+	["multi"] = {
+	},
+	},
+	["zoneIds"] = "",
+	},
+	["alpha"] = 1,
 	["useAdjustededMax"] = false,
-	["text2Containment"] = "INSIDE",
 	["source"] = "import",
-	["text1Font"] = "Friz Quadrata TT",
-	["text2Color"] = {
-	1,
-	1,
-	1,
-	1,
+	["parent"] = "Aura bar (Player buffs)",
+	["information"] = {
+	["forceEvents"] = true,
+	["ignoreOptionsEventErrors"] = true,
 	},
-	["cooldown"] = true,
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
+	["displayIcon"] = 135924,
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
 	},
-	["uid"] = "L0dHigmJ2(G",
-	["text1Color"] = {
-	1,
-	1,
-	1,
-	1,
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
 	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["url"] = "NaowhUI",
+	["desaturate"] = false,
+	["semver"] = "2.0.10",
+	["cooldownTextDisabled"] = true,
+	["auto"] = true,
+	["tocversion"] = 40400,
+	["id"] = "Active Seal (Paladin)",
 	["zoom"] = 0.3,
+	["frameStrata"] = 3,
+	["anchorFrameType"] = "SCREEN",
+	["keepAspectRatio"] = true,
+	["uid"] = "dWcuaLQjnDT",
+	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
+	["custom"] = "",
+	["do_custom"] = false,
 	},
 	["init"] = {
+	["custom"] = "",
+	["do_custom"] = false,
 	},
 	["finish"] = {
 	},
 	},
-	["text1"] = "%s",
-	["text1FontFlags"] = "OUTLINE",
-	["text2Font"] = "Friz Quadrata TT",
-	["width"] = 32,
-	["semver"] = "2.0.6",
-	["useCooldownModRate"] = true,
-	["id"] = "Golemblood Potion",
-	["text2"] = "%p",
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["desaturate"] = false,
-	["xOffset"] = 0,
-	["inverse"] = true,
-	["alpha"] = 1,
 	["conditions"] = {
 	{
 	["check"] = {
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	["checks"] = {
-	{
-	["trigger"] = 2,
-	["variable"] = "onCooldown",
-	["value"] = 1,
-	},
-	{
-	["value"] = 0,
+	["trigger"] = 1,
+	["op"] = "==",
 	["variable"] = "show",
-	},
-	},
+	["value"] = 0,
 	},
 	["changes"] = {
 	{
 	["value"] = true,
 	["property"] = "desaturate",
 	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = "<",
+	["variable"] = "expirationTime",
+	["value"] = "360",
+	},
+	["changes"] = {
 	{
 	["value"] = true,
-	["property"] = "sub.5.text_visible",
+	["property"] = "sub.4.text_visible",
+	},
+	{
+	["value"] = true,
+	["property"] = "sub.3.glow",
 	},
 	},
 	},
 	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
+	["cooldown"] = false,
+	["xOffset"] = 0,
 	},
-	["useTooltip"] = false,
-	},
-	["Potions Tracker - Naowh"] = {
-	["grow"] = "GRID",
-	["controlledChildren"] = {
-	"Healthstone ",
-	"Volcanic Potion",
-	"Potion of Concentration",
-	"Potion of the Tol'vir",
-	"Golemblood Potion",
-	"Mythical Mana Potion",
-	"Mythical Healing Potion",
-	"Runic Healing Injector",
-	"Potion of Speed",
-	"Earthen Potion",
-	},
-	["borderBackdrop"] = "Blizzard Tooltip",
+	["ElvUI Player Name Strata"] = {
+	["outline"] = "OUTLINE",
 	["wagoID"] = "fFdRT46Na",
-	["parent"] = "NaowhUI - UI Elements - Cataclysm",
-	["preferToUpdate"] = false,
-	["groupIcon"] = 133780,
-	["sortHybridTable"] = {
-	["Volcanic Potion"] = false,
-	["Earthen Potion"] = false,
-	["Potion of the Tol'vir"] = false,
-	["Potion of Concentration"] = false,
-	["Potion of Speed"] = false,
-	["Mythical Mana Potion"] = false,
-	["Mythical Healing Potion"] = false,
-	["Runic Healing Injector"] = false,
-	["Healthstone "] = false,
-	["Golemblood Potion"] = false,
+	["authorOptions"] = {
 	},
+	["displayText_format_p_time_dynamic_threshold"] = 60,
+	["yOffset"] = 0,
 	["anchorPoint"] = "CENTER",
-	["arcLength"] = 360,
-	["fullCircle"] = true,
-	["rowSpace"] = 4,
+	["displayText_format_p_time_format"] = 0,
+	["customTextUpdate"] = "event",
 	["url"] = "NaowhUI",
 	["actions"] = {
 	["start"] = {
+	["custom"] = "ElvUF_Player.RaisedElementParent:SetFrameStrata(\"MEDIUM\")",
+	["do_custom"] = true,
 	},
 	["init"] = {
+	["custom"] = "ElvUF_Player.RaisedElementParent:SetFrameStrata(\"MEDIUM\")",
+	["do_custom"] = true,
 	},
 	["finish"] = {
 	},
@@ -42917,48 +50472,41 @@ NUI.WeakAurasData = {
 	["triggers"] = {
 	{
 	["trigger"] = {
+	["type"] = "unit",
+	["use_alwaystrue"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["use_absorbMode"] = true,
+	["event"] = "Conditions",
 	["unit"] = "player",
-	["type"] = "aura2",
 	["spellIds"] = {
 	},
-	["subeventSuffix"] = "_CAST_START",
 	["subeventPrefix"] = "SPELL",
-	["debuffType"] = "HELPFUL",
-	["event"] = "Health",
+	["use_absorbHealMode"] = true,
+	["use_unit"] = true,
 	["names"] = {
 	},
+	["debuffType"] = "HELPFUL",
 	},
 	["untrigger"] = {
 	},
 	},
+	["activeTriggerMode"] = -10,
 	},
-	["columnSpace"] = 4,
-	["radius"] = 200,
-	["xOffset"] = -394,
-	["useLimit"] = false,
-	["align"] = "CENTER",
-	["rotation"] = 0,
-	["yOffset"] = -221.80096435547,
-	["desc"] = "",
-	["stagger"] = 0,
-	["gridType"] = "RD",
-	["version"] = 16,
+	["displayText_format_p_time_mod_rate"] = true,
+	["displayText_format_p_time_legacy_floor"] = false,
+	["selfPoint"] = "BOTTOM",
+	["font"] = "Friz Quadrata TT",
+	["version"] = 20,
 	["subRegions"] = {
+	{
+	["type"] = "subbackground",
 	},
-	["alpha"] = 1,
-	["borderColor"] = {
-	0,
-	0,
-	0,
-	1,
 	},
 	["load"] = {
-	["use_class"] = false,
 	["talent"] = {
 	["multi"] = {
 	},
 	},
-	["zoneIds"] = "",
 	["spec"] = {
 	["multi"] = {
 	},
@@ -42972,24 +50520,507 @@ NUI.WeakAurasData = {
 	},
 	},
 	},
-	["space"] = 4,
-	["backdropColor"] = {
-	1,
-	1,
-	1,
-	0.5,
+	["fontSize"] = 12,
+	["source"] = "import",
+	["uid"] = "fACwZAwnBq1",
+	["shadowXOffset"] = 1,
+	["preferToUpdate"] = false,
+	["regionType"] = "text",
+	["parent"] = "All-round",
+	["displayText_format_p_format"] = "timed",
+	["conditions"] = {
 	},
-	["background"] = "None",
-	["animate"] = false,
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["displayText_format_p_time_precision"] = 1,
+	["justify"] = "LEFT",
+	["displayText"] = "",
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "ElvUI Player Name Strata",
+	["shadowYOffset"] = -1,
+	["frameStrata"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["xOffset"] = 0,
+	["config"] = {
+	},
+	["automaticWidth"] = "Auto",
+	["wordWrap"] = "WordWrap",
+	["shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["fixedWidth"] = 200,
+	["information"] = {
+	["forceEvents"] = true,
+	},
 	["internalVersion"] = 73,
-	["scale"] = 1,
-	["centerType"] = "LR",
-	["border"] = false,
-	["borderEdge"] = "Square Full White",
-	["stepAngle"] = 15,
-	["borderSize"] = 2,
-	["limit"] = 5,
+	},
+	["Guardian Elixir: Elixir of Deep Earth (+900 Armor)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79480",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58093,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58093,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "464028",
+	["uid"] = "UwdojxLbKxO",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Guardian Elixir: Elixir of Deep Earth (+900 Armor)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
 	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
 	},
 	["animation"] = {
 	["start"] = {
@@ -43011,28 +51042,927 @@ NUI.WeakAurasData = {
 	["easeType"] = "none",
 	},
 	},
-	["uid"] = "XVcGb4)FnUw",
-	["constantFactor"] = "RADIUS",
-	["source"] = "import",
-	["borderOffset"] = 4,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Potions Tracker - Naowh",
-	["backgroundInset"] = 0,
-	["gridWidth"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["regionType"] = "dynamicgroup",
-	["borderInset"] = 1,
-	["sort"] = "none",
-	["selfPoint"] = "TOPLEFT",
-	["frameStrata"] = 2,
-	["conditions"] = {
 	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
+	["Flask: Flask of Steelskin (+450 Stamina)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79469",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58085,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58085,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463926",
+	["uid"] = "52p5NhXB9oM",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Flask: Flask of Steelskin (+450 Stamina)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
 	},
 	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	},
+	},
+	["Flask. Flask of the Winds (+300 Agility)"] = {
+	["iconSource"] = 0,
+	["wagoID"] = "fFdRT46Na",
+	["xOffset"] = 0,
+	["preferToUpdate"] = false,
+	["yOffset"] = 0,
+	["anchorPoint"] = "CENTER",
+	["cooldownSwipe"] = true,
+	["cooldownEdge"] = false,
+	["icon"] = true,
+	["triggers"] = {
+	{
+	["trigger"] = {
+	["type"] = "aura2",
+	["auranames"] = {
+	"79471",
+	},
+	["event"] = "Health",
+	["unit"] = "player",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["useName"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["names"] = {
+	},
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["itemName"] = 58087,
+	["subeventSuffix"] = "_CAST_START",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["type"] = "item",
+	["spellIds"] = {
+	},
+	["genericShowOn"] = "showAlways",
+	["names"] = {
+	},
+	["event"] = "Cooldown Progress (Item)",
+	["subeventPrefix"] = "SPELL",
+	["debuffType"] = "HELPFUL",
+	},
+	["untrigger"] = {
+	},
+	},
+	{
+	["trigger"] = {
+	["type"] = "item",
+	["use_count"] = true,
+	["subeventSuffix"] = "_CAST_START",
+	["debuffType"] = "HELPFUL",
+	["use_genericShowOn"] = true,
+	["use_itemName"] = true,
+	["unit"] = "player",
+	["itemName"] = 58087,
+	["genericShowOn"] = "showOnCooldown",
+	["spellIds"] = {
+	},
+	["subeventPrefix"] = "SPELL",
+	["event"] = "Item Count",
+	["count"] = "0",
+	["names"] = {
+	},
+	["count_operator"] = ">",
+	},
+	["untrigger"] = {
+	},
+	},
+	["disjunctive"] = "custom",
+	["customTriggerLogic"] = "function(t) return (t[1] or t[2]) and t[3] end",
+	["activeTriggerMode"] = -10,
+	},
+	["internalVersion"] = 73,
+	["keepAspectRatio"] = false,
+	["selfPoint"] = "CENTER",
+	["desaturate"] = false,
+	["version"] = 20,
+	["subRegions"] = {
+	{
+	["type"] = "subbackground",
+	},
+	{
+	["border_size"] = 1,
+	["border_offset"] = 1,
+	["border_color"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["border_visible"] = true,
+	["border_edge"] = "Square Full White",
+	["type"] = "subborder",
+	},
+	{
+	["text_text_format_p_time_format"] = 0,
+	["text_text_format_s_format"] = "none",
+	["text_text"] = "%3.p",
+	["text_text_format_2.p_time_format"] = 0,
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_text_format_2.p_time_legacy_floor"] = false,
+	["text_fixedWidth"] = 64,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["rotateText"] = "NONE",
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_shadowYOffset"] = 0,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_fontSize"] = 12,
+	["anchorXOffset"] = 0,
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_selfPoint"] = "AUTO",
+	["text_automaticWidth"] = "Auto",
+	["text_fontType"] = "OUTLINE",
+	["text_text_format_p_time_dynamic_threshold"] = 60,
+	["anchorYOffset"] = 0,
+	["text_justify"] = "CENTER",
+	["text_text_format_3.p_time_precision"] = 1,
+	["text_text_format_2.p_time_dynamic_threshold"] = 60,
+	["text_text_format_2.p_format"] = "timed",
+	["text_anchorYOffset"] = 2,
+	["type"] = "subtext",
+	["text_anchorXOffset"] = 2,
+	["text_text_format_p_time_precision"] = 1,
+	["text_font"] = "Naowh",
+	["text_text_format_3.p_format"] = "timed",
+	["text_text_format_3.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_dynamic_threshold"] = 0,
+	["text_text_format_3.p_time_legacy_floor"] = false,
+	["text_shadowXOffset"] = 0,
+	["text_anchorPoint"] = "BOTTOM",
+	["text_text_format_2.s_format"] = "none",
+	["text_text_format_2.p_time_mod_rate"] = true,
+	["text_text_format_3.p_time_format"] = 0,
+	["text_text_format_2.p_time_precision"] = 1,
+	["text_text_format_p_format"] = "timed",
+	},
+	{
+	["text_text_format_p_time_format"] = 1,
+	["text_text_format_1.p_time_legacy_floor"] = false,
+	["text_fontType"] = "OUTLINE",
+	["anchorXOffset"] = 0,
+	["text_text_format_p_format"] = "timed",
+	["text_shadowColor"] = {
+	0,
+	0,
+	0,
+	1,
+	},
+	["text_selfPoint"] = "CENTER",
+	["text_automaticWidth"] = "Auto",
+	["text_fixedWidth"] = 64,
+	["text_text_format_1.p_time_format"] = 0,
+	["text_text_format_p_time_legacy_floor"] = false,
+	["text_justify"] = "CENTER",
+	["rotateText"] = "NONE",
+	["text_text_format_p_time_mod_rate"] = true,
+	["text_text_format_p_time_precision"] = 1,
+	["text_text_format_1.p_format"] = "timed",
+	["type"] = "subtext",
+	["anchorYOffset"] = 0,
+	["text_color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["text_font"] = "Naowh",
+	["text_text_format_1.p_time_precision"] = 1,
+	["text_shadowYOffset"] = 0,
+	["text_text_format_1.p_time_dynamic_threshold"] = 3,
+	["text_wordWrap"] = "WordWrap",
+	["text_visible"] = true,
+	["text_anchorPoint"] = "CENTER",
+	["text_shadowXOffset"] = 0,
+	["text_text"] = "%p",
+	["text_fontSize"] = 15,
+	["text_text_format_p_time_dynamic_threshold"] = 3,
+	["text_text_format_1.p_time_mod_rate"] = true,
+	},
+	},
+	["height"] = 26,
+	["width"] = 32,
+	["load"] = {
+	["talent"] = {
+	["multi"] = {
+	},
+	},
+	["spec"] = {
+	["multi"] = {
+	},
+	},
+	["class"] = {
+	["multi"] = {
+	},
+	},
+	["size"] = {
+	["multi"] = {
+	},
+	},
+	},
+	["url"] = "NaowhUI",
+	["useAdjustededMax"] = false,
+	["desc"] = "https://discord.gg/merfin",
+	["source"] = "import",
+	["cooldown"] = true,
+	["progressSource"] = {
+	-1,
+	"",
+	},
+	["useAdjustededMin"] = false,
+	["regionType"] = "icon",
+	["displayIcon"] = "463927",
+	["uid"] = "IfZjqilol0W",
+	["color"] = {
+	1,
+	1,
+	1,
+	1,
+	},
+	["parent"] = "!MerfinUI: Consumables - Cataclysm Classic",
+	["useCooldownModRate"] = true,
+	["zoom"] = 0.3,
+	["cooldownTextDisabled"] = true,
+	["semver"] = "2.0.10",
+	["tocversion"] = 40400,
+	["id"] = "Flask. Flask of the Winds (+300 Agility)",
+	["frameStrata"] = 1,
+	["alpha"] = 1,
+	["anchorFrameType"] = "SCREEN",
+	["authorOptions"] = {
+	},
+	["config"] = {
+	},
+	["inverse"] = false,
+	["actions"] = {
+	["start"] = {
+	},
+	["init"] = {
+	},
+	["finish"] = {
+	},
+	},
+	["conditions"] = {
+	{
+	["check"] = {
+	["trigger"] = 3,
+	["op"] = "==",
+	["variable"] = "stacks",
+	["value"] = "0",
+	},
+	["changes"] = {
+	{
+	["value"] = {
+	0.40000003576279,
+	0.40000003576279,
+	0.40000003576279,
+	1,
+	},
+	["property"] = "color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = -2,
+	["variable"] = "AND",
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = true,
+	["property"] = "desaturate",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	["checks"] = {
+	{
+	["trigger"] = 1,
+	["variable"] = "show",
+	["value"] = 0,
+	},
+	{
+	["trigger"] = 2,
+	["variable"] = "onCooldown",
+	["value"] = 1,
+	},
+	},
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = 0.8,
+	["property"] = "alpha",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 1,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "10",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "3",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	1,
+	0,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	{
+	["check"] = {
+	["trigger"] = 2,
+	["op"] = ">",
+	["variable"] = "expirationTime",
+	["value"] = "0",
+	},
+	["linked"] = true,
+	["changes"] = {
+	{
+	["value"] = {
+	1,
+	0.25098040699959,
+	0.25098040699959,
+	1,
+	},
+	["property"] = "sub.4.text_color",
+	},
+	},
+	},
+	},
+	["information"] = {
+	},
+	["animation"] = {
+	["start"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["main"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
+	["finish"] = {
+	["type"] = "none",
+	["easeStrength"] = 3,
+	["duration_type"] = "seconds",
+	["easeType"] = "none",
+	},
 	},
 	},
 	["Absorb Potion (Active)"] = {
@@ -43056,6 +51986,30 @@ NUI.WeakAurasData = {
 	{
 	["trigger"] = {
 	["spellId"] = "229206",
+	["useGroup_count"] = false,
+	["matchesShowOn"] = "showOnActive",
+	["subeventPrefix"] = "SPELL",
+	["use_tooltip"] = false,
+	["custom_hide"] = "timed",
+	["names"] = {
+	"Potion of Prolonged Power",
+	},
+	["debuffType"] = "HELPFUL",
+	["showClones"] = true,
+	["type"] = "aura2",
+	["use_debuffClass"] = false,
+	["auraspellids"] = {
+	"53910",
+	"53915",
+	"53762",
+	"53914",
+	"53913",
+	"53911",
+	"28714",
+	},
+	["subeventSuffix"] = "_CAST_START",
+	["fetchTooltip"] = true,
+	["event"] = "Health",
 	["auranames"] = {
 	"53910",
 	"53915",
@@ -43066,33 +52020,16 @@ NUI.WeakAurasData = {
 	"28714",
 	"53762",
 	},
-	["matchesShowOn"] = "showOnActive",
-	["subeventPrefix"] = "SPELL",
-	["use_tooltip"] = false,
-	["buffShowOn"] = "showOnActive",
-	["debuffType"] = "HELPFUL",
-	["showClones"] = true,
-	["type"] = "aura2",
-	["use_debuffClass"] = false,
-	["auraspellids"] = {
-	"229206",
-	},
-	["names"] = {
-	"Potion of Prolonged Power",
-	},
-	["fetchTooltip"] = true,
-	["event"] = "Health",
-	["custom_hide"] = "timed",
-	["useGroup_count"] = false,
+	["useExactSpellId"] = true,
 	["use_spellId"] = true,
 	["name"] = "Potion of Prolonged Power",
-	["useName"] = true,
 	["spellIds"] = {
 	229206,
 	},
+	["useName"] = false,
 	["combineMatches"] = "showLowest",
+	["buffShowOn"] = "showOnActive",
 	["unit"] = "player",
-	["subeventSuffix"] = "_CAST_START",
 	},
 	["untrigger"] = {
 	},
@@ -43107,7 +52044,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -43260,7 +52197,7 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
@@ -43292,7 +52229,7 @@ NUI.WeakAurasData = {
 	["cooldown"] = false,
 	["xOffset"] = 0,
 	},
-	["Power Infusion (Active)"] = {
+	["Unholy Frenzy (Active)"] = {
 	["iconSource"] = -1,
 	["wagoID"] = "fFdRT46Na",
 	["color"] = {
@@ -43320,7 +52257,8 @@ NUI.WeakAurasData = {
 	["type"] = "aura2",
 	["use_debuffClass"] = false,
 	["auraspellids"] = {
-	"10060",
+	"49016",
+	"55213",
 	},
 	["auranames"] = {
 	"Pain Suppression",
@@ -43352,7 +52290,7 @@ NUI.WeakAurasData = {
 	["selfPoint"] = "CENTER",
 	["stickyDuration"] = false,
 	["useCooldownModRate"] = true,
-	["version"] = 16,
+	["version"] = 20,
 	["subRegions"] = {
 	{
 	["type"] = "subbackground",
@@ -43523,16 +52461,16 @@ NUI.WeakAurasData = {
 	},
 	["url"] = "NaowhUI",
 	["desaturate"] = false,
-	["semver"] = "2.0.6",
+	["semver"] = "2.0.10",
 	["cooldownTextDisabled"] = false,
 	["auto"] = true,
 	["tocversion"] = 40400,
-	["id"] = "Power Infusion (Active)",
+	["id"] = "Unholy Frenzy (Active)",
 	["zoom"] = 0.3,
 	["frameStrata"] = 3,
 	["anchorFrameType"] = "SCREEN",
 	["keepAspectRatio"] = true,
-	["uid"] = "5ZRhUOrz7OL",
+	["uid"] = "OEBHl1A43(f",
 	["inverse"] = false,
 	["actions"] = {
 	["start"] = {
@@ -43558,714 +52496,14 @@ NUI.WeakAurasData = {
 	["cooldown"] = false,
 	["xOffset"] = 0,
 	},
-	["Hand of Freedom (Active)"] = {
-	["iconSource"] = -1,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["preferToUpdate"] = false,
-	["customText"] = "",
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["cooldownEdge"] = false,
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["spellId"] = {
-	"1044",
-	},
-	["auranames"] = {
-	"1044",
-	},
-	["duration"] = "8",
-	["subeventPrefix"] = "SPELL",
-	["use_tooltip"] = false,
-	["useExactSpellId"] = true,
-	["custom_hide"] = "timed",
-	["names"] = {
-	"Blessing of Freedom",
-	},
-	["unit"] = "player",
-	["subeventSuffix"] = "_CAST_SUCCESS",
-	["buffShowOn"] = "showOnActive",
-	["spellIds"] = {
-	1044,
-	},
-	["type"] = "aura2",
-	["use_debuffClass"] = false,
-	["unevent"] = "timed",
-	["use_spellName"] = false,
-	["auraspellids"] = {
-	"1044",
-	},
-	["event"] = "Combat Log",
-	["useGroup_count"] = false,
-	["spellName"] = {
-	"Demoralizing Shout",
-	},
-	["use_spellId"] = true,
-	["name"] = "Blessing of Freedom",
-	["use_sourceUnit"] = true,
-	["matchesShowOn"] = "showOnActive",
-	["combineMatches"] = "showLowest",
-	["sourceUnit"] = "player",
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "any",
-	["activeTriggerMode"] = 1,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
-	["useCooldownModRate"] = true,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["type"] = "subtext",
-	["text_text_format_p_time_precision"] = 1,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
-	},
-	},
-	["height"] = 26,
-	["width"] = 34,
-	["load"] = {
-	["talent2"] = {
-	["multi"] = {
-	},
-	},
-	["talent"] = {
-	["single"] = 9,
-	["multi"] = {
-	[9] = true,
-	},
-	},
-	["class"] = {
-	["single"] = "WARRIOR",
-	["multi"] = {
-	["WARRIOR"] = true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	["ingroup"] = {
-	["multi"] = {
-	},
-	},
-	["difficulty"] = {
-	["multi"] = {
-	},
-	},
-	["race"] = {
-	["multi"] = {
-	},
-	},
-	["use_itemequiped"] = false,
-	["pvptalent"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["single"] = 3,
-	["multi"] = {
-	[2] = true,
-	[3] = true,
-	},
-	},
-	["role"] = {
-	["multi"] = {
-	},
-	},
-	["faction"] = {
-	["multi"] = {
-	},
-	},
-	["zoneIds"] = "",
-	},
-	["alpha"] = 1,
-	["useAdjustededMax"] = false,
-	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 253400,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeType"] = "none",
-	["easeStrength"] = 3,
-	["preset"] = "slidebottom",
-	["duration_type"] = "seconds",
-	},
-	},
-	["authorOptions"] = {
-	},
-	["config"] = {
-	},
-	["url"] = "NaowhUI",
-	["desaturate"] = false,
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = false,
-	["auto"] = true,
-	["tocversion"] = 40400,
-	["id"] = "Hand of Freedom (Active)",
-	["zoom"] = 0.3,
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["keepAspectRatio"] = true,
-	["uid"] = "vct(N6Ypff8",
-	["inverse"] = false,
-	["actions"] = {
-	["start"] = {
-	["do_glow"] = false,
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["init"] = {
-	["custom"] = "",
-	["do_custom"] = false,
-	},
-	["finish"] = {
-	},
-	},
-	["conditions"] = {
-	},
-	["cooldown"] = false,
-	["xOffset"] = 0,
-	},
-	["Power Word: Barrier (Active)"] = {
-	["iconSource"] = 0,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["customTextUpdate"] = "update",
-	["url"] = "NaowhUI",
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["auranames"] = {
-	"209426",
-	},
-	["matchesShowOn"] = "showAlways",
-	["subeventPrefix"] = "SPELL",
-	["use_tooltipValue"] = true,
-	["debuffType"] = "HELPFUL",
-	["type"] = "aura2",
-	["namePattern_operator"] = "==",
-	["useExactSpellId"] = true,
-	["names"] = {
-	},
-	["tooltipValue_operator"] = "==",
-	["event"] = "Health",
-	["tooltip"] = "20%",
-	["auraspellids"] = {
-	"81782",
-	},
-	["tooltip_operator"] = "==",
-	["spellIds"] = {
-	},
-	["useName"] = false,
-	["subeventSuffix"] = "_CAST_START",
-	["tooltipValueNumber"] = 1,
-	["unit"] = "player",
-	["tooltipValue"] = "20",
-	},
-	["untrigger"] = {
-	},
-	},
-	{
-	["trigger"] = {
-	["spellId"] = {
-	"62618",
-	},
-	["duration"] = "8",
-	["unit"] = "player",
-	["use_sourceFlags"] = true,
-	["debuffType"] = "HELPFUL",
-	["type"] = "combatlog",
-	["subeventSuffix"] = "_CAST_SUCCESS",
-	["subeventPrefix"] = "SPELL",
-	["event"] = "Combat Log",
-	["use_sourceFlags2"] = false,
-	["use_sourceFlags3"] = false,
-	["use_spellId"] = true,
-	["spellIds"] = {
-	},
-	["use_sourceUnit"] = false,
-	["unevent"] = "timed",
-	["use_destUnit"] = false,
-	["names"] = {
-	},
-	["sourceFlags"] = "InGroup",
-	},
-	["untrigger"] = {
-	},
-	},
-	["disjunctive"] = "all",
-	["activeTriggerMode"] = 2,
-	},
-	["internalVersion"] = 73,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["selfPoint"] = "CENTER",
-	["stickyDuration"] = false,
-	["useCooldownModRate"] = true,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	{
-	["glowFrequency"] = 0.25,
-	["type"] = "subglow",
-	["glowDuration"] = 1,
-	["glowType"] = "Pixel",
-	["glowThickness"] = 1,
-	["glowYOffset"] = 1,
-	["glowColor"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["useGlowColor"] = false,
-	["glowXOffset"] = 1,
-	["glowLength"] = 10,
-	["glow"] = true,
-	["glowScale"] = 1,
-	["glowLines"] = 8,
-	["glowBorder"] = false,
-	},
-	{
-	["text_shadowXOffset"] = 0,
-	["text_text"] = "%p",
-	["text_shadowColor"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["text_selfPoint"] = "AUTO",
-	["text_automaticWidth"] = "Auto",
-	["text_fixedWidth"] = 64,
-	["text_text_format_p_time_legacy_floor"] = true,
-	["text_justify"] = "CENTER",
-	["rotateText"] = "NONE",
-	["anchorXOffset"] = 0,
-	["text_text_format_p_time_mod_rate"] = true,
-	["type"] = "subtext",
-	["text_text_format_p_time_precision"] = 1,
-	["text_color"] = {
-	1,
-	1,
-	1,
-	1,
-	},
-	["text_font"] = "Naowh",
-	["text_text_format_p_format"] = "timed",
-	["text_anchorYOffset"] = 0,
-	["text_visible"] = true,
-	["text_wordWrap"] = "WordWrap",
-	["text_fontType"] = "OUTLINE",
-	["text_anchorPoint"] = "TOP",
-	["anchorYOffset"] = 0,
-	["text_shadowYOffset"] = 0,
-	["text_fontSize"] = 14,
-	["text_text_format_p_time_dynamic_threshold"] = 0,
-	["text_text_format_p_time_format"] = 0,
-	},
-	},
-	["height"] = 26,
-	["width"] = 34,
-	["load"] = {
-	["zoneIds"] = "",
-	["use_never"] = false,
-	["talent"] = {
-	["single"] = 10,
-	["multi"] = {
-	[10] = true,
-	},
-	},
-	["class_and_spec"] = {
-	["single"] = 253,
-	["multi"] = {
-	[253] = true,
-	},
-	},
-	["class"] = {
-	["single"] = "HUNTER",
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["single"] = 1,
-	["multi"] = {
-	true,
-	},
-	},
-	["size"] = {
-	["multi"] = {
-	},
-	},
-	},
-	["cooldownEdge"] = false,
-	["useAdjustededMax"] = false,
-	["source"] = "import",
-	["parent"] = "Aura bar (Player buffs)",
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["displayIcon"] = 253400,
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	["desaturate"] = false,
-	["config"] = {
-	},
-	["keepAspectRatio"] = true,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["semver"] = "2.0.6",
-	["cooldownTextDisabled"] = true,
-	["auto"] = false,
-	["tocversion"] = 40400,
-	["id"] = "Power Word: Barrier (Active)",
-	["zoom"] = 0.3,
-	["frameStrata"] = 3,
-	["anchorFrameType"] = "SCREEN",
-	["xOffset"] = 0,
-	["uid"] = "5B2yJeGoh6B",
-	["inverse"] = true,
-	["authorOptions"] = {
-	},
-	["conditions"] = {
-	{
-	["check"] = {
-	["trigger"] = 1,
-	["variable"] = "buffed",
-	["value"] = 0,
-	},
-	["changes"] = {
-	{
-	["value"] = true,
-	["property"] = "desaturate",
-	},
-	},
-	},
-	},
-	["cooldown"] = false,
-	["alpha"] = 1,
-	},
-	["Fortitude"] = {
-	["iconSource"] = 0,
-	["wagoID"] = "fFdRT46Na",
-	["color"] = {
-	0.4,
-	0.4,
-	0.4,
-	1,
-	},
-	["preferToUpdate"] = false,
-	["yOffset"] = 0,
-	["anchorPoint"] = "CENTER",
-	["cooldownSwipe"] = true,
-	["cooldownEdge"] = false,
-	["icon"] = true,
-	["triggers"] = {
-	{
-	["trigger"] = {
-	["type"] = "aura2",
-	["subeventSuffix"] = "_CAST_START",
-	["matchesShowOn"] = "showOnMissing",
-	["event"] = "Health",
-	["unit"] = "player",
-	["auranames"] = {
-	"48162",
-	"48161",
-	"72590",
-	"79105",
-	},
-	["useExactSpellId"] = false,
-	["spellIds"] = {
-	},
-	["useName"] = true,
-	["auraspellids"] = {
-	},
-	["subeventPrefix"] = "SPELL",
-	["names"] = {
-	},
-	["debuffType"] = "HELPFUL",
-	},
-	["untrigger"] = {
-	},
-	},
-	["activeTriggerMode"] = -10,
-	},
-	["internalVersion"] = 73,
-	["keepAspectRatio"] = true,
-	["selfPoint"] = "CENTER",
-	["desaturate"] = false,
-	["version"] = 16,
-	["subRegions"] = {
-	{
-	["type"] = "subbackground",
-	},
-	{
-	["border_size"] = 1,
-	["border_offset"] = 1,
-	["border_color"] = {
-	0,
-	0,
-	0,
-	1,
-	},
-	["border_visible"] = true,
-	["border_edge"] = "Square Full White",
-	["type"] = "subborder",
-	},
-	},
-	["height"] = 36,
-	["width"] = 42,
-	["load"] = {
-	["size"] = {
-	["multi"] = {
-	["ten"] = true,
-	["twentyfive"] = true,
-	["fortyman"] = true,
-	["twenty"] = true,
-	},
-	},
-	["instance_type"] = {
-	["multi"] = {
-	[176] = true,
-	[4] = true,
-	[194] = true,
-	[9] = true,
-	[5] = true,
-	[193] = true,
-	[3] = true,
-	[6] = true,
-	[175] = true,
-	[148] = true,
-	},
-	},
-	["class"] = {
-	["multi"] = {
-	},
-	},
-	["spec"] = {
-	["multi"] = {
-	},
-	},
-	["talent"] = {
-	["multi"] = {
-	},
-	},
-	["use_instance_type"] = false,
-	},
-	["url"] = "NaowhUI",
-	["useAdjustededMax"] = false,
-	["actions"] = {
-	["start"] = {
-	},
-	["init"] = {
-	},
-	["finish"] = {
-	},
-	},
-	["source"] = "import",
-	["cooldown"] = false,
-	["progressSource"] = {
-	-1,
-	"",
-	},
-	["useAdjustededMin"] = false,
-	["regionType"] = "icon",
-	["displayIcon"] = "Interface\\Icons\\Spell_Holy_WordFortitude",
-	["zoom"] = 0.3,
-	["parent"] = "Reminder: buffs",
-	["config"] = {
-	},
-	["useCooldownModRate"] = true,
-	["auto"] = true,
-	["cooldownTextDisabled"] = false,
-	["semver"] = "2.0.6",
-	["tocversion"] = 40400,
-	["id"] = "Fortitude",
-	["frameStrata"] = 1,
-	["alpha"] = 1,
-	["anchorFrameType"] = "SCREEN",
-	["authorOptions"] = {
-	},
-	["uid"] = "TxqBRgwJreA",
-	["inverse"] = false,
-	["xOffset"] = 0,
-	["conditions"] = {
-	},
-	["information"] = {
-	["forceEvents"] = true,
-	["ignoreOptionsEventErrors"] = true,
-	},
-	["animation"] = {
-	["start"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["main"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	["finish"] = {
-	["type"] = "none",
-	["easeStrength"] = 3,
-	["duration_type"] = "seconds",
-	["easeType"] = "none",
-	},
-	},
-	},
 }
-NUI.WeakAurasDeathKnightData = "!WA:2!T3xd8XXv19MzxBsSscXwo2X2jHm4ums2YYAx9HLnjXSR0QpS1xExjllNp0o7UJ2zS2DMjZmRKwbHsmPbxOpGNGhWRLqsvbmqlLGkjeiqsWT0sBH2RvPHPLstFU8cTK8iTcknqlL35CVZS7SR2vwsrghvR5Nx5zM7337)Z5EUN5CVhUrQmDLjQ0iwJ16R(A9vzItVl9S9oYigIMC6JjQBiRQCdZiRmIQEAbt4HkMtqjUKQEB6cPf7pRMySiTeouOEMsqrMfJMcMwqwPTGMqGbvuveNnrgDAidJVs3qmUQscJtjkyqZasfNfVnIPUOsstPRmSHPGUzBKnqQGC1KRHCTW))AVYyJiRiBinVxBOMrpUym50AQ6M(ZONsRojttnJdUV9nUqs1ALv3xpcQJlnqN7TvrbtPJOiNuYCVTiykepvwJ07ZNpTkHkKPUAQuIjArsovcOICyTnrJopl(8DdnjTTwWRclYkBdTnwW7dKzcTTu0B0f4dkOptmv9eI6TOMsv)WCCCENM9IqjskQTPi3BgbDr(2YKkf)GsYMIXmetddbX8vBD16RUPnYelSysOB0OcDH4y)PrtbHofZkixxfKnwX0MQXThXUQhIyN1rKNuC9tLuxnJwNqRmw9n4ZVFFZgti(Oj0v1yvfVE92N36QTX5Kvmf1vesDmw28(JXYePZZ()G2PsBJbtjp5Kc6j47xvnLPS2zzrGbC2G(e2iOy4qqNTo1KMgQJNoztsZmccBGHAO73R)mYjMzGo7Y)ytkEGMpAxXGk4iYjRyAeFitBGvy3L1PcKDENHb96tfQNXAjup9hk8oLtODRf0z3skbdd((GQk)E5ZnmpRqgtiP9QXY2GPufs0wmtHuIkMBnC6mqJOIWXXKUvYBQIGgq3g7gnX40BsiAext58V9P5xeLwfy86FCzZ4s1AogdasFxRYgXHguTjt6(LIgYjvetWhllFetGGPnH4IDPgF0tzQlNmjmwSJDnvgf7hQq3(Mh8uqLlvQotyubzdHfamM)Gza4qmTuczf1dlog02I1HOqktPPtiglZiJGKB6DeQR(ABGUopGNOrjceG8eZmClbI0)Wr6pq4(ZfuF6IqqHJ0xOU6kScmYzuX06umiMtHPWQWgXHErVHfsPjj4DkdXuJqhGinv5yR7(Qm(JChN(2iEsDTZzaeODKnMUCI(fILs80BtBZHfKneXo0e8vnGIKAQSvlPT5wHHzzLK8HZOiYpOOGMQI0uDjhxcWckIsABAaLy6IcJI5cFa90Q6sZYsnFBaP7KzLMcgFvbWPGM0SDOoEkm3ccJuMsABSfvDnOqdnHwkveKlnnBafgdnDUVDDznPZFmH0AY6YX5P5M0SSW2fuFJlKv6u0QhweZ0TSscSOfNuuA2Uf0hLxDe7entqy8KpIKSyQesAv2jWQsndgBOZq2mtcrP5cOyk3TqsOCIibJNSxWZEZjuXg8gHgzwmpnLy9wsNLvxacj5rHSisM0Pvv4BxqpPA2uqk2CiGF44I6f0hYACXboCPKMoUisRJdJ7SRWX0aopWq2(JbdPJ3RIECjbLKIjixztKRQywUKRBEVzJf)MWPKtlBUjYaKMiBMC9tjOhVlk39hyRthpJHPA62HcAIn8rgjJcLvwvkIJ3hmEqjpRHh5VnMOn7UQRGhU27EBtw3WKhsh)yc6Y4OVbnKuQacKFem0WQJ3fwY83oFZqk4PvdSNtg4PyWlRWIgMjUs64Tfgsq9nHPyC5eqhlKICrKLwxrxIgD)0cqsKYgOmX3UIhHoJxzR5SjeDv1pqPR6g5Yg319i06U)cQ75J58R8047VPcR8Lmb21EKUPS1DmWlCNUtw4UE3fTE3qb17Cf18Q1DvQADjIU7UvnbkBKBNNwiopgt0CCrrL5veaFzDrkwCO8PCV(S7ek1vXf4eTaK2yVqDZle28H5cI92SL8TMQWSsW7U1cObYNJGKy8Y1WZyd3kmJd2blRjaWVQkKSHpHknf5ZBwIGmpFQRLDBUio)BStQ649BxZ8vU4q)7G0bt3XYvGDWg7MFOXZOJCGaOuUUJckazanXFB3Eru5a)W818CzMtnaiRNFG5QbsffAbpafhBC4cxK4LRohAYkicIPmexOuuq(xykvsu6QiMLo9ifX9yplTUOilyxurHwWGKVLtV3EkU6UO6obrRwGoPlq3BHfyz7FNx2uy)uxly)uxlq)K)kwknn45YuHDxzZDdJ49Grenze906Bv5R6vx2yYQ8v5QHu9cWdWfdmOgwflZQLX3EpoSwRMFF8(53neSDJCV(QgcTkB(I7USPR6ssV7UxeGBZhQKTGkfoRCEU87Te8ZlM8PWcW)cvaSMnwe7bPkQ2vjTBiLlCPvQbUCZvyFZEkfxvOoAh8DC75roZRAw08oLTmDlI1DkF3qcEl2JR140uVVkCsn8JSLh5gj3nz05IehwOBsrEB5n12yBIgGWJyRN9MP7nwkybRWQ6ejXirj3fjbrICpefYjiP02uhGC7481dsxFjFlTsstojzeIajo54KKK7Kitejdrg(uzmePO(OKA4i7LulX7nq2bDPYKBKCtK6MjJ)wcFYrAnulT3gPbV6mLoikrAUcYoHv9sULkMcQAAbusMs8wa6kbCLsCNkjUQduw3WTs8xryCisCdKBD9KnrQewcjzRX0fsiNX4bUgYntEDbrPGJ1Yar6V3UNEey94TiRhpLyusvsKiEpfeyemd8sQMSB4jtQYn4i7zdtHLdLW7Qjh9SjYclzsooDvsbXv)aIgVVRK0VxYB89tQVcY626mWK5XfdHl1YikHVjYR3ET8KgjnntC1uzsRyxuhOnYbXfIsUn6FVD6FVd8VWkVGLpccAhyh7IeScslpiPvyfHKqK2iTt6G0j5WKJq6I0nPhsVK(Q48OGpMckMWYmnv1JfoqRDoqeY6jVgYUYPkaYVc5nC6AjE4GvoAiyIkWb6Lx3U02guwQ6I2lKMw1dPRRQd1)3DuIgzRKJgefTAzV0H5gveg)W1DBgg7yJIJrNnUQAQeQJRGQkrAASaIqv(YnDfisbgZaeWPCIu0ymzepamwJOOWXDuZHxTncqSajojSgeXeIj6wycPZRPRMux0WGLJ7(MUcpAxVtw1V4eMWI2rXEtefg3coPQAAShQ(WuUyDIiuyWsRsiFBXorDRMaQ6IrlUWKvKWvdfuiJj0SQBM(Ii1zJX6U6gtOs2NxYurNjHSbU6DuvnA7PtKAzey0)UWNnURaXKbQSSd3cS4xyerCyOIHAoB468tQ)G7kCCjX4J2ePfVNYrs9PvvCQtHhtivgrV2RSZy376uqZwtu3ml59rot0Dr(uAvcl7V2gQ1eAYdpMSHmKb0q(yyEs(4Zqv3Wa0(cYz4iFsaU9PStmgL1t(4bnKuhNCgVSWqnwvB91Mmf(UcG3Z609gzCznGUcjDb2jO2RGNoWZpf0VnSIi8SedPJmgggXerj32UGNJziJu4Z0AOa93Xr6PZ27OFg5X00k5OkqEFvpdV(KW6N7mHHhYDaPARxzuYmRNM3un9eDw82XeLKbI7bKLoVDHyN(OAxp(cXjaYexVw680epSGsIHD0oenJ0enJjyAcl)MClhERKnml08r9SH0)kjgXwfzdhpN2)S1T1WIaMgyUTHPWeqFLT(2CgfIoR9ZQuM05siQLkVp)uyhCof559SqDPDN3eLgyxYkIgBkiERezd6qXG3Ek8pu940N8eIPML(i0xmkezdVZGpoeBwbVttZf6c43c9(Gm9csZ9iu9)qJ)XTJ)zXhA1wRVEP5CB6I3BgrL4z7BD1vR)gp9U0E9uGg9pmTlpS2WMYPHosyMuzu1mE12EjId7MWyutOTzAyibfQ854uEVbdaponLVSis)gSNE7j0SmDhAxd50258Yz)1QnCY4jgwsoH4WtkQRkP9RuUQykXKcXZo8iPuv1LktErJyA1edJ8oJoLDWG8gun)nl95XH(Xb1f0o1G23CE6RDPenTxx5QdSN4Mkx478nOPTRswvsaDOPfsLVNLt7wkzePqvQA6dtBBAvxUs3EYTHnLawNsa1mN2EkF3qjInFzhaqwukIPS7IWUmQEl7DG(7QZEcPvjRlssiroakhdvJbmhlraIMnr89Fw38ZKkrXw8ivz6dN34E081pul73SDfJHZCQyA3yjZm2TKVL2nv2Eb4NeRUJZFipswstZwuEVrx9e5)Oc2V2LUYjnnn9vmwpDCOx6HXRVK3oo0p8EWRX9QDRLVn7ICKV8XYgnwWOtoITBU8J1Oszjb(Omjxo9Mqzv02eYonPOciIz8isOcjJodL3mCp2TOT5Iym3JqArPzZX(gFmkv6hqqO(ajcDEjmLWSfKVtJzzGuJlK1ywyw1urCIji3lkTuhAB3zcu((SftGVkASQMSHW0mgfTkSPoWPN8i0jxO3hL1IgzkuX8uvNVJWnEG6A0pTEbsNnhe1qytictl(s6Wly1CSpOsMAs7NPR)Uutkh3J2Myk4X(LGygI)ExbkZWjPArDmr)ckzb5lrjAVBQUxbH6OsXrEFOWBK)N5fsJm1YwcnY7Nktg5dir(FXLx8lYhmk5d5iYf5dtNmI8)wI8BIsur(TqPNiFeQOtKhYrSjYhnk5HPcfrEeuIOuHNy8URFI2NuCCMerKP3M3h(BsQ)e5edH8jOcyS78cFyl5s9LvYfYVBPKxbc4SSVGIsyuMO8X5dtoZHbIJ)bn86xTJd9Cu6LOEH0Tli3(9YjHdzAYzG63FBPdWtL3zbY0)7Ze0H8zbrC(jKh1w0gYxqI85SfRHmd5pGCquuLhdev5XOcvoCHIBeL8yULMH84rjpPe5jIs(IsKVelp(EBJ85VQ)WEysHq(Ypp5pKnw8hjr(ABI8hdIaq(tiF9zJLX0uvPxqilqItYFMxYFoh5BSfY3uI8x4L8xYriEjNZzYAYSEj)vKVf5VM8SKVnXI83Wr(BLiFhjYFxuY3L83tEoY)a5)dmCEEoY)imne57Xr()sEEY3NJ8pXr(NLi)aYlqErGln5)h5hE)KxsI8VeL8VgLm3nt(rCKFmKX)BsKFcK()DoYlZwU3pfE6NvsEvK)dVK)toYpNJ8Fjnc5RWI(tHcqrEAYZeL8v9soRxsG3JBwkKFrulURa(XjzX5XfVbloVqxLf36S4wVf3RHmkJS3I7kjBWI7QqABlUnqEelUkGuFDES424V3vyXTjlUkTj0g9xoeAUxOZkbL2rL1Q(Ehy06AOVKouAEUaKzwCx)IIQYIBlV6JwYIBRlcsN1TDG05B7)cq6yXDdxotV8T9NJE58oQgIPhOLmXZ4RojEQR9aX8fxVAPdRVgXtbepBJR3V8Aupla1d2bLF6MjwYumtS6KIPd5H6nrItmAAPmRrXKJI5hJsQ90V11iywOPBE63AE6LSlz6LSRoPxA7i1py9z7RPEQRHCleYZMjOEExasgYNUakMlyekIKQSq(NppKVq8o9vF(R6tXnFS(xihwNgPNuYbLxwqrE4Fu3WFYFkf971f637Qc0)sbK)P4YbYNJzBxWc(ywA2sgYhB1jK3F3P6iSsBhBGQB1bYt(Di1V7xbZruwa9ZEba0F1p58b0pbftxmA(YjE29aW5TYWPaO(6ZbQPOrojerJi7t5yV3v6da8sachW5i37O6zuO2vkgFAUaqBupydNwWmUKyc0AfLkgR7fgnyGDeJtH72a9ORob6hOQQA0iBKbBtS3l5a9p3FZAa9Lnq3I7wkgIFxwC8Ur3wCV(saO)C)nLgqFxRob0zmfpCWoBmMVUB6soG(lUgN7vuaDIffG(lwgo0jwDcOBnTsOXpSsN9CKJCjhq)uTSgGEfeqRTrC7vSxxB4Iffa)PAP0aCPvNa869DIj6P9oesT)0x0b4LDXJ5uwcGYFMxZsyfKRPNKsTeYN51KBjKy35sDvJ3ZQtK8ab7)4TPihVdd1lDizBw1N9bwdeVybXsLgeF2hipig6oxQGyLvNG40twDN9k4R6Gv1ZRoyh)1BFnK8Rq2XF92ZRrV(KtLsqhnb(20vnmxYW6tS6ewpUp)7FYbgTPyDK8sUy0pttRjg9RyXOJMFDHloXMFMMkTyZPwDcOhluFdn6a1jDcFx6xx4Zn3Aa6vqa95lCtkTOq3p3CLgDp5Qt0DaZEKRVZ268WnkDPxnEK1q3RKQXl9ItnEKsdOtVk1Ot694n6RQjRA8QsFjhq)j(nxdqVsk)Xjxua6pXVzPb0NCv6NiFKHgBWE0h9OAN0LvuD4C7)UlSfFWSZPdMpGpf5ZsoJ0wXeKpBkHPwfJU7cn2D(8HlFzYrAPMRG8X9hONwTt2NzzVe0)AG64VgfyVTf1sqpXLqBkjyGb6V3FPtoD6BPOkxj3Jrgo7XOkW6ouPEPOLyh3zoVT4ZRRCXXEd(y3SkXgdZSmB1RSLyx8zMBhqb9nLi881(suP9xBCjb9KIUAI4qYCBNnQyX53EmXWDFBSG92F)92n0btXd4WYpI2JIJb52asBb3(KdlBkMo3wXHYq61qgXI71g9uoHWr3qs21JOZYSFbd2Mk6Sg0)laDl5q35Q4XYvuKrgDpkLq2(OcaE16oplYo7Yi6IMAZI7Q3r4goGF)(z6tWMXgjePlpKE8GSfx0AudZnhZNBKLSMhgz1jJs9M7VXJ25OPmJn0L8z()2F11M5FLuuwHf1m)F7VAPN5xy1jG2xIiXhDW0ITNQNl5a6N(yRbOxjb0Xxua6N(yLgqhFv63TR9MBTLgRl9jB)sVUHF6hyna9k5AZo(Idq)aLgqF8vNa6d3EO0sNm0(7xR)l92m0hEna9kjh6KloBe6dxAaDYvNaAdHgpCpJgq(O92(LEo0tSgGELeqFNloo0tuAa9DUkDrH6jfgP6SAhi7LEzO)tsTgGEfuKJ5CzuN4zM9IcE)NKQ0WB5vPgTCZXg0F)TlKrzWl98RtVg8EfeEd9Nlog2PlnIwC1jIoy3YtoYKTO1GXRcKa59UgIELCnIdT4a0V3sdOhA1jGwTHKrUxZWcHuR)s)AetUgGELeqp8IBnIjlnGE4Ca6DHaAa(SUDnd9KdMDg6jXG27NEm9USH2iUgbJB5emVxsqb9P6J6NqG7kYPf1c6CfWxVX(chksOEAjeF3DgjsN90(m9fQFN7DF6mJ0j3sffaiPOXBD94PjS7dxyGuPkj80tMSNnGuyaTasuv3m3B6ShZOVd01OX6fpHKbITg8Iesyx0nSaNbYi95I84pgyoeMeXlEmmdD5NUJPWdt4HnKtigom9CKfyMObfg2rd9xN3Wuo(OzDomtL0XVezgDXWDlMkLm5qAsbfmetWRQWxSFNY3bAqu5KT0Wj3NVkgqlHGjen07nmOQzxhH55GaXvJLfDnntozc9mYj43N9dJY3TSUqsr(WcXfhxilFObMXqtqFu416Q6205puFRVrKuBwAqHTpjQFSZtFmykrLe4zeO)aT2klXDiNiHOsWG92FhABQG0GXlw3b6zGaDDQyc2UOQoo0p4lHxFToo0SHXRM64qFB61d7Dk8CVSTucjniVWuoPWpmedGbGx3usK6)ZaMwTTtvTDE73oL1vyzLeItK7Gwzo7dF8WIPeWVuk5m31vvukS4gHCM1ZIUfxsYzUM1xQyC1UIXxMRuX4ADfJ(wN)MQTXsfRR0vS(Tlve2GRi0)vLJNCyDrHezZFcY8PjNrQjNOgNCgOJ8f)pHRF(n3XH(MpeE9cDCOV(hgVEoVXsjRmQycPclUtHBvEQ3r7mElkR(R2mCv5zZn441RfNSuX12tcDCfLW)2DaxB)FhQm3gET)Czv5YGRSGmajDBUJd9ShdVoDzl1n46G5rk)CvFwyUQ5CC7yDQ0MoaFKiFwjYbE(PtipYiYXZKYmBE6A8GVgbMm6DNzVWZCEKPi1LCPdKg0GX5XO384rdQRMI9YhfivPU3l)0hPmoMsBmnBF(f(ok3EGJXpbzvmd7a3KE8)s(wZXE6yoU8Mj8(ZElSZg)j0KzSc6xoTi6gh0ZiwdniNJ9GcEjfAGh1(5og(TpJVH3Ttkt4Wym2zn5pN(XJFxm0yQQP2jlxUVAY7ayS9in35DIhhKLlNJaHjlKsEsAnYoxCN5gIPeJB6ka65dUrb5hEDN(qhfWoPEZk3vsAy(PHr3tdZlS6PHX8lx7mxq3Nt75UV78ngkFHfSpQNmPJjQ)kVzqZmFLPDqd0FzAi0aR3vbrdRH8H1W8syJ5dSX5fyt5dSjx569n)X79Ux((LKn4nKuZKkbFmObajngoGudVF42m0(4A4RhDMm4yrn8na3MaNnVg(yzmPZ6yOcWvanAaautm)G)noqfMSgEbdEb(Xv1hvGE(pZ35BCmrEJXf00WzSWCKEA0WkhEtv(0cJkYlBsttTmyUn7QfCuK6bgwPGIlasCbaILC8Jk3t5heUpQeeBigJLGJOewCJnX6FHC(VmHA4PhTj1q7ky41A4RT2AR2foFeEfvOVK6cpGXcqocf0zBWxS)Ic7wWZn4HfvgZTlQcETyT2EjX8VoTa1h1G)xHmiGYJwNq3BYo7RRadfk8Wr6lulDgORoprG(7S3EgULoc0t7HALrGcOK8XVZE6S)DYQP5DRi1A7ZuIWy90UOzHmAQQAhhiIB6BQlRcDzq10eFc1I9Auu39zn54EwtowMqUJWghtJQk5Ql2NuLh0zhx8P5hV5XZMwKyRSokWUoSLNJ79Eyb7QrtlhCAaBVMsHorOIZ8cFrHaoxtrKV9wOdcYUXt))ctSRMRZT5HSv42TVG(unrEnD1yqToRnNdL3Ojp6fs4fsLYapB8nYfxb(0uz(tkIu6j1Z6gcfVwmvyVRb)BRahXJj2NqdTkxDs1W7IOiw1f16OyE3zj117GJcc1wux5TXhR4xbJtfL26lDAVJ5LwNoOQRybrNfbDOnrkzNBqW8Xxu8Rn0Tg3JuS(OIWe2VnpeG9SDQTFO4HyHsH(SDuJfiYHZfAzHLmahhEIdyIc5WUXDI4c547e7N3j1bluedZsb2xie(feaxyeC89D(kIOGoHa99f6NXSLBqUMflj0E3RTqtfWjRmur2GvS)J6oKATcMxr1qRQWd0tOH7R3bbgQd0xRb6pun030)q9fY5f1GmqPR)SVkCKTeNXBgkTxg66bPAl4qKpgQNaBnc4DA66YY7ppiEEXRoN2Tolnq26MoohQBjuxaNEhXOhT)b8w5eCZAFe0RyKc9zpvMLBkAGyV90AzsHUPg4XPOUT12akvThMsf4qZ6aoQHXg842))qW)JP442))qoe229sSiJU7lNmaD4xSKGEllAWvxTtUvYioKtehQ6QDnsWACT7L9)HT))GENI6YzX21PmGgmYblgnFMWl9C4NEV0S56lWg7eCDSiBTjetzkCC7)pxRLrWJPQchF0v(2XTXJlgV6c9qxyOaGZvJTHkC7gYCN8A3Fzsn6IXC3F1q1vuc3wNDKZhX9Y7RA3fyoVcwjh0GyYA0ZBuYjKHCpSqETxjZx6GJgs0BPdisSbHSOnwxr(EFQNMXqcKCKb9WNN1zCJ6dzyJNui5Gl0GK9ysPaGfbRCfp76C)CXyoggoh9IXOoyyJOLPy1bgsjHFXGFcWpD)WZWVyWpb)fIneqhtubJc7M6v8qXZQvtgDDCvzFp6V8kmXOlAZjzqwWIOHmmtkMRO30Zx17ZF1VPcB66(W2T70I(ApeZO7di5CZbmzPIAsmQjloQXkvuJHrnwXrvOurvaJQGVciLjx3Pb(CVnKpLf3VkYCcgrS4EaVwC)AWVhe(9Rd)E3AVWYKcfKxXrW5APmAzIhuWRQLnVrb0zZJGOKjbPN2Dvdkkmk6s3nIimMyI7CN2lZXyN39DMlvYjU77CNupe2oVBi7YNB2U8Wc8ZEV2R0I79cn7piNBf2AX9(G1yucT4w3mnV)adm4jNOQJ1r9Z64G0T1OcQEx7VBHT67hZT2UFMOOcVD8NumFeJ)yc6m9F3eZRvbsejY8AvKxUcYpRItVdYSLYxmPKFdy4sf))GG9OQisErOsGk))7efvE))suu)9FxTTeiEC5eWKOayVpyyfVpEwQw8l(RbuSw9ZTTn((CKFUx8Ra4FRtLtwW1t(qBqBZjr34hK79QJ)LkiY0D0B4oprV90FGUCp75qo(xWW0xkL)t5SlSq52PCclUENlVd8kNd2PJd99(gFJ)YFXVWI0V3ZlQGcR1UDXkrQw7wY5B8BfwxeW7myUSGVvOKS9)1OJPANvuXC0sVvx(ypu957cxCjN)9UeUQaKJVOluKe(Gbcx87lrK7wiHiQj6orxJ(8J8YPA0gidzBHdfc1cGPUCSmuPc7TNUgAzMZvuI1g7sSCu047BQeQdZ6FJsUoSxe6IT4(msKnIp4HE7hH9f923gO(TVnMF4GPJ(ymrZMrnpeYI7JrD5GdN3pcIFcJpCf2AvN6SbR)uQmxPIXooChh6h(6GRB(h2XH((u9L)tHuCuDSAJ0AnVBGMEMeIgX1LP(rrYdT(t54hPIbsDlNjDqKqtRJ(LGXfXuGG8aM1e94MjuHf(OOAkHpiBRlh0Z5HDV2(i(bdWxf7RmeN9vgQ(bjhs7TqvJKkTeXfbQoUbFw1mOcDyQGHxGUarmJtlAkPY(CfypmW9vugYz9CraEinQBO0uXSrhmheNmk5Eaxcbvzh01Bwl5H8gJPwNdAX9itfWioW4dYNPbOV9T(hvmRf30KneJvBq)HegA0GO7tsBZuvifXU47Mw)aMyJiKjL56pVrAvOlXz6hjMq0mxGlJQVF2NTr7MZ7vfdsDaog31HZKwBaTa66Qu3rXPdzXnGf3XWpcNRpeKf3GswCh3IBik8b)(lZiy7Bh7ww5bUgYd9hTzlU7cMo7UT4UhlUHd3tOJfkSfNGfNFlU445s)SvIxxz(pJIfxcYlyXjwWhozh2F7HkVn2NxG6k)jNPsFKp5oWDQ5N2IBuBDNBXLkVoZT4sNtD5BL8hef1yUfNcli1IvvUfNM9h61I7EZRJClo98khFR0pIwlN(gihwVJaH7UTb6I8lIgeHeEP7VS3Cuuxyt74DU6vjkDdVHrW2NDX8UvSVykMBNcDOQGeGkSndhTTHRlkkBXq0VIkSulD7egZ3b81yZ7FQCX7AjDeM(nlH5cAdvg3ui8aDExPN7yY6zqT7Z3xkHKzGLxzq(wWkR8lGNYF0T22B1EnvDDn5wtLf39LBLulRVQADZu9Obow9QduvOXBWI73Y1KWD80vDf0RfyYylUpIf3dXMaER4hl(JE6BcMV1I7HlCEvCc1VFw6hfhM(7LIMFMvCA2VR2MAhOaes3JacKhifiznzUQlElrwW0QNTZE6bwbBlH6P)qHDndBbEYoBN426j)OAUc680FO1t8dJ8FC6eO0Pj7Z9KNoFKxlUZWMT8FS(6FZxXvaKgpkWhLAve9dnUpT2MZjuem4rlQQQ2I7tcZHcCiqU0oZeY4Hxkg6opSpOx7tiroQf3N3I7pcgr)ComPN198RIasFMB3I733I7ZAX97GvNMHm4pwRQ8mfWp7nWGjOG(DnqN7n)t7ncMrwCFTTq)s9VpPt3kWMiyxHAR4VyCjyumpwdwC)P55lGsuyIxJ5Te8dIsQVIC07)KssV)Ks5)czxy69hDbO3XTu6MZz0dFdhACkHe1oh(lG7pNKT5pKZEhS4(wVb2wlni2J5qzAX9nJYSycqOFRIPa30khfimIuiDhNZgdpp9gSijQFoT8uDBVe2Rc1euGCmVuSmtxjNaRLH0AggPfZIcCl7AwMSRN(6Nh9TtrbLZ8kbi7vCN9tZYEk6ZvUdvoMKXoKomjEklHdJiOaA5JUyOLbclgveJwfPNb6wK022cO8JE66CKH20LqXbZC9Dbsvye)VhPf70MPWhYhJq0I75akSnbCupwRDRmuYgh1u5iW8WN(2iE(yxhidTzkq4cOFYLbFP58zM6VSUi1GOSvwC)25mEMJftdetq0CAQgh6dvkgcJauW)Coy1I0uXqMbFajKMpN1FfaXGNYX1UcdHiCChu4iktbas12t5RZZF)ZJg3sDZeovJXoIU8qjAwM8bL0UXsKdUwpgLRZhQryGq7wlFzLFF)txmeZzOBXfE2c8UQ30vmBb(ZtVeGudK)f55HC4GH3Nah81TDuPwC)dZuStjDzkQce6oGW8wwXv26BjQddShjQnMCFxjY1SeKaSB3yfmjSkWI7YzpDag1dAhD97L8zJE(cDSWKNTKD75DNRmMO7kgtuikJr8SXgyQU98NKathwqgwLvRGKYiV1ZItdsf2roHX7kS)97RHdG)TX6c77a7VHMO37J(x)0)wF46973F9H9xNFFntzqFTsSpijAxAx9bd3qZ(BQr6FRN(3MWtUalU7yww1QBzd07zZymtzHtLsAD2v3h7NIsFPoUsVkPYAl2w(JFagt9ISHTzC1Pm3U3Dp9Y7yYy7E32wk5059iVpW1yX94DIK0W8HpFHeZwCFF4L)tfqRceLwC)GvA6tlUxOuuMwCVOn9g(zrBQQUAQ3ajb6nlUFybuvwCVuH0mrS4(xWC9FTCuhwCZbegwC)iB6HtxjoVnfd)zI62Drrb8oO9NikAoMZSUTBd6xQerpEuYN)QESx(IinIf3pM8SwC)Bi6)Eq0Vf3pXnY)MYH8r5iEnwC)7oGvBvglpgk7)l)US4(PwC)mlU)dlU)tlUFUf3)Lf3VWYZvydXrOTfaz84XYJx6sla(JOWzs2Oykg3YZ6qGnDbjDiy0hSmXsHVT8SEhO90TOcl)extSHB5wqiotGOhNUgOcme01ndJuIA6o0m9LZBQNm6qSHMJmXw2hpVgG6WLXtMJ6WYZvrPk8D6ds88I3a5yhZMjrGuPYknteuj6jZq)EobBxryCPZIAsIVf10PfusiPT1Wc4hHhv4VBB4eOR26kIDJAC1u6iu8kZhyRKT8UidQDt5zJXxf1MmOQALAcgGub1y5zZwEUElpBYYtLwE2i5TiHuBijJltgfi6QBMGTFabvLJFSo7SoY9jHuF)A2234Tub5TDlK3(od3kkrXVkhAkP3)gqJbDBuBz9OKFDY7afGGzqPi5weVu7k9b9IMw6PVAY7KJ8UGgX(8sofSe9FdVOzL62cvrHwAGAnOlG1L()apIywKMx67H8El2Cxv3zxHlLHQVTx9EYPnIEIKJl0D3kJyZQGAO6hC57BXYF4s5Yv79zwUN22fXYS4tiQNSqh6kqDE5NVh7EwUwYoLX1IWu2XzvC4rocJAWYZ1ILdLvVNRb7dBB(M6(Gl0E34vVKeJ5pwGuzIC8UK6ALJKyxRO0dsxa6HD992w0F82IE5mvrp)YHQyEOElpBzXb7DlURlS9sb8hDP7w(5knUxc310JDCPQN8KM6(97SNLI5R(g87Vz3BCPyXYmYiIjOa8cOa(mf4Qw9CJmAe7ZBqgbsHiEP8i(prEeFHhsG763n6ZbW4NJEmitLfCmrj54PeLYPTl79Y0Rae(6xaeEzvvehIYZ)9oxeAkA(FBtoeOh41Y4S(SOqTaGJYwffX9ATbPx9Hd34(RV(6c2ut7V(Gnx3(Bm8bQVH6BeLnbeNEhqOn5VEQekOKjOek2y58GsUAwDYlE0joAvMrAkwt(ZEjFF09D(ORTp6wb3hD4Ygwm8z)oF0YWNDZ5G077IhKMQpHIG1sVY3VZboUAwL26uoJITigWYsyRd3IRUhztUW2UoVxHBVY83UH83E15V9AZF71L)2nL)2nN)2TK)2Bi)TBp)T3y(BV583El5V91N)2B1HwKEaXUZEd7MKJsJb0A3YbxyM0li72LOI5ld7wQJ9UKkx5lW(4kBvFWaHd3zVHxEQQeN0Alr3oeHT7Olg3mCc8eBYdqX0ef1hmNgu2MNFXFoEOKMx5HNpGECbCRuOsTEvTRNECLMurvxmcQdXJOOoUI9jb6B2(JVqjXqAnVxLWZsPYOkeXHilOZkxlIglNoqUW1klpVblp7Q8fR2bVKuSFTh7IsXoDqrDdr9rLvsUGf)iFXlsfpvzlTLrp7cw89DxxK60RAbl23XV9Lvf7N4IsXo1Gc68rmvtRTWdXHUOu6Z0IGIICmCx9iUWLVWfLYF2qgXf0e5dOBkByUW1G0xuQbZnOCQuOHrfjJ(yYJTW9cGewxmQdABQD5rmDmPREee0ZSGvJ)PFRloSBIq)uEPftLybl(N)ItVWuavGIi(b2wyCG(fNXGRNceShdAtv3qyurLfSM86EZxuQjBBD)X31cvUy4l1c2L0ZSpleva6RF15AcRsuslwi10chq2T(5U049AmxBnHRORjCtlo3xJzzwt4MwDcPNSZouKATLW5xp4Aq6)BdKUYfhKoBzG0vU6es3NOVQNSP(oEJcN8soKEU9TgKEf8qL1YZgxuq652xzG0BmhK(GepDTbYXECTBOyN1opZRQiPT52Xn1oFB6IktMn3B3uRIgQPyBa5CV7ycP14zlA25DBVZ4IXOBjN2WnuGzMeI5cBhTkOG7rlE6goyqrbT8z2zzzdZ8YL02sK4O1MdIhwy2V1Jasns3MccXLKvYL3ZqToc(2ehtuhIf7mPawNh0isAk5eRlwwTXJuP21ZmpKDX3QyCbNUnlp3MLN30mS9xHPU8OWBoWmrYGNvu8TQclcDZuZnPFCRCYm1nO)vBRUfnUhX46QAQPKnoBl6YP5JexnJEsX5ylEGVtLrYG2zOLN7WYtJwEUDlph0YtZwEAWYZ(T800cyDitOoyIHoEdk(h8KlARdz7lvRd5kFvO1HS9x96Oit0DZ(RF0UpQzo)Q328Szc7JHxbWAUc7pTD5)I476cXhxAX721)uClbNv9R2)w3rx5(w32(QAyjL)Li76D6RoGXTe7WSzQ4QPJjyMs12oq9I(BQduFZtBa0TXfhqr2K0(5PBGNCVikZe)NUfAs57cslGO7A2HBjqK(hoYaT0sOirS4MDh4icoLqjCOuwEo0c99zYJ5p9wS3NWvMLZI7uwCVJc3MWVtlUXyBwy0k(C2bTVlyTXVhOXoLf37hjiS4(autD)dMB7Et6NBrB6O693BFutS)duQp2tJoer2KlZJwIAgOpuiKiciGq6iBIiyXQh44De2)qnjFS2qsQC75ZRkWE37E57Tp8S5jcpURhZVJIPBarGjl)TZxxT(A0(GHsKxGnrgWiUtik8tcmS5RIgr4vYMg8Sn7Rr18TiOWNg3r0zTprnO7FV6q9C5JEorLwvxeyNdrdAq8sc6jGPNWd7jd(0zIlXBiQexS2IQtQuJcF4JtRxSQvhQ6YtQs3KVAQguJR0zIc0Wjv4Tpef5RQo8iFqc3jIyGPehXmnodPgDB(7Zvq6ObnMlSQlDDyix1HJjctShFPwdmv1ktfiMQPPAAx1aCKQ1E75n2pFOw7SF(GH6Q3bPdz5RByDkUk09JNmxoBO9QDo2DipmWe6ZdmYEQZDk4UziFjYJYtEcEYtFU3o88xM8yKh)CVdmSZ9ojFLZ9UjpgpeWJEU7hE8Xo3Po3721za1XDTRyRvxmjuq1s3(50c6RaP6xJwypb5lZFUttEciJEcipFhq5bf7tbX4lrEcx53qLi)KO7Z1sKHKzo37(C3p2mkFgMIkIdfLuLp8GbyE4A8KQOQJZVp2jLqAHjQ641mu1vtlVpPtng7HEkYNJ8K0(Htr7TGc((Hx8ySoUhddh7NiFbAN6Jcj6jo37LF(1LHUa1LHkDDzkNg7sTUuIAIWeYgS(KsqNVNCDAy1bX17HVmKE7UCne4L5ZKCGUNe(94qTdQpiO6bXBHbpSI(KN73aE9tr(I80McRn5cYaXVQZD)8aUKccrCkpT1)OypacuHxbqAEYxIIIFAYJwDXn4HUqn4HUan4Hwmn4HQE53EZJOx2TxSS)OqE8vOOWle5lEK(zdgYpIz3jG50dvibhuhbi1taTKN4CVh(Z)aFqFZFCYD27pF2VNLt27FbZ(HYv7hYv3)sV27Ux3D27pF2VNLt27VmzVn1mm8aPLNsV(fo37aHe2JVWihnIfZjerB1gr0SFXjAXM9UICQYg1d6kQvDCF1aJh1aDAWp)v70aGAmYu9DMdLs(dO4tKLXdYJvzaGD)ih2Z92bOdE0HuQ5zWTqlUvoOcrZuWcvoACpK(PbrHOMBXsus4OlojHVXsij8lYStJFo1d0YmvdMeUuh26nxOLA4NFbmvdlU)oqcSF03GThKl)EH1Efc7AMwd1DV90Xa4wBoQEFb6kqRD2Zcy7gvWw4WfytYIROYzJY(8SnrYRnkZ28UwPPrBGmI9w)6q2wP3oc3OpF(3pDnHuvI8Yvq6BhA3qejzXujCKjjmoZQOAgd6AfX1n26o2MN1xVRDpci)m9OQUtfy0ME8K452wDigTLNEw5LG2mO5qd1uJdD8H6XTe0wE67vobWRCOSLNJU4qY0T6FjkQVFUsZzJ(BX1m0LwEshJlubU9fjLJLNWrT8e5IlTILN(lGgPUg87RiAelphBbPgS8miJm4nDzmzqYj1Rw7eT0s9bgFnYaO8gAXtfC6nzRbjxO68B7YfA)wUiOuE8OOsR(8x139LkGC4ESpJfUE3wy0BopGpN5Dtjx8qjzyKkOMZ)UVuocHCFB)oMnaDzL8dyGNcsU00(vdz4jYVfDG8(Q3TLhGSHJQCsQzI7qqws6Q38LX0vTPmwRtuDl7F)ADS0PRo4RAORUWaDPviGo6nxx689B4a15V5LlF)dCzm(SZ4kzRBOW9e(yjxdFEXdF2SV6BOULl(mWLX4ZmjhmSVEczmQudRHpxm4ZxUJLe(0VMOjfH2u9n20YgHg8YyeQwpI(B74vnwxPQAne6fbeQZk787V5gwU4ZwUmgFgr9iT0FqHMVxjL1WNx8WNn7ZxdlBnp06LX4ZwgPJgRwWqlJ5eR84ZFPPoGFjds3gxI)ILek1Ytmkm9a4wUF5ctdDzmmnrO2Bj5KT0y9zcTQNn6Rc1BB913uJlxy5DqHL1rHLrxTclTHKi6eaGLgzYGLpm7eYKblth(ezn17n(OHLkdM8rSbK2wj928So7dCdxNm0NVq)Xd5mv2SRtsM8wmT9rmd9u3y5)DaL(L03bCjkBXgPh2Bm36O0ftkKT(xfTukZ9cX7(SUTu5liTs5opLop7WYBCHSgOdjk68pBLYrx1y52waxSSOu3SOxylknqzSOu)NS(H8pWq9RNPkhlk1dP(tu4bhZ8poXkoK8OEOc(XpLScZkhzrar)FghV66Tz7Xs9KgiAQFEjVWZPmTnAKjwTnul9uXM6daO(t1)E613YBhhY6441NZBP3kcaiDmBtf(2THvO8afziRAvYGWddfIUqV0tPFV)3jRw1I7GiHChh6V7UWREC1TnVdUmkzf9GVzoe3Nqe)06upMSe5WwC4XGtusBXmf0tkAoDgfzZqtiByAe128Rzhaonw3bASOdahKw1(G15SSC2WKABR2gjlmlcsW55iaJIdtA)uoHB5zmhsYUi9C(i9fQRUgUVqH7S3w7Sfsx6d3AGUd0EiYgS80bAcSwEMOe7WHBFH20oV6L68EhRV(7RTb7nEDXCMo6vo1PLh9xP0LwEmUiqiA5XCn6U1B5jJBsna)B5z8IjV2FZLN8YYt2Yquz5zYcjNS88wiDz55T6I65TvcQNdU6XYXVOSuMt0TEQqXhS)wZgCTLYSIVuMgAE)hyzVc7MVmgwwL4b6Qd9EmuBBG1GLxmGL1T)LlSSHlJHL3BvhPQtCVvPoUwVRblx5v8tJ(RV(LlSC)xgdlfLNO9XvgSJdpH5IdwwKZaJjzCJUKm()UPqNx9b2BQPMRBzd2PsSIOL))p"
-NUI.WeakAurasDruidData = "!WA:2!S37c8XXv5Dd7zwBCSsirw2wXw52gLehjfBzPvsRKmXXOvxSKTU5DxjFjjOD2DNvZyTANXZmRUy(Xn18L6sbkvCTTFnKxrH2cPTP6neQl3snbAPCPhmqEN2sbQjnnTWlu8xBakqZ3ZZ5mZSZEtALTSDe4n)I8UZCMZ5mNZZ)NBNNZZHlrftwr8k0J2s9n2u9nwr8tVtTzhkrcDrdoTPe10LvsDllkNkHI2KcgWpk7ccPIjPO1JMWKIHNvvmAOod2D3doVqkzwj8hysb5u9eWaUzGukPepx80A07mgEjnDXykPIRpNOGoTciLDw8RHm0etnUH0gdQBiOz0dztKYixp5giVA4FVXngnHCkzDP8USUsATyIrLNuvrZWxATKQ1jzyOQV39SNPfgxPEzL9mOGY0sJ03U7slTC8D3PGHqSKZQp5EASj1kGUIHMsYKIX7usozCOlCWfOLZ7aWlXfyFnOiRv0NN97ospZ5T)MMG3acAlgvrlUOwNkjv0oihhNNfyxO74JlQU5qNmTGMO3EsNmP3JijBigvxCsyWnAJ13q9n6Bb90rdkoomaPxMMqmCKs3Fa411OmYnvgP8YwWqjM1CX197tSQ6qYNsCdZpUMsA1(G3IO(91s7T3(5IkeBI4AkQSUIhpEg2td13YfKtziQLsi5OSQ5DfLvjsNN9VbSEk1YdKu(uNsqlU3WkkjnKvplRamsInPnJfTruCWTVUMFIM78G(hnXqtUycKGaMeHHxp(GXMf93rhDQFa9ofoE)rHoyc5XlBbCMxM(cwM1qwFPGQZZImIQHvG(z0o7EWWDhSA54Q3kBuUZKc66Ehg6JE3TxN5VZjK2aEMHuz1xGKkcX7jQHqsXugvgCY0qVVSGXWhTsYRPSa6W4f7lQIXOFjUOEm1Xp)BEbVlvZugwGWtlBetQEJPyet0R1LSEm4vO(Xh39ff1LhpLyCVrN1BidG4VhHyI9ReBI5m0KhFCy0VQDoF6uw)OmnRV8OZb9QKj7lUEzKnfuaOQ8finqaevnPWSIAbfNcEPI2ROqsdPfIlgnDIei0rR3U7F4EgP)Zduq0IecUH8mlowNDek8yHc3rWWo3Aynr4wbdnC393FWuWCLEzlOrP6WAkiLqkOEmy4ZtqHKQscEMxxmzc6ucXFftT(3qfXE8h603pH)HE1xqhaB9oBun54HfIMu80vRbvIKIskPZfwstqxYBnbef0Qv6c9OaahVkj8oOGrAnrjFbLvLMRFyubOueLceuycrjaIKwtEkHKEbYbd5uXm0LuRmKHWKQIXLtnU3GkcA2vPAf9apBsVDkjOnUiBQsA((sLsuBkSkNp00YjmMumvCj1YHcbG7uJBxjsxO7yjLv1XNR)0PGlC2WAI0oy)YjeLMdaZtOpHm8ICeGFG3dOPmTHKxVsbXVLeQCG5KEAOHLcaCiMukA3P0eGFPULC6vyNvAXEee1KbOVm8QRwfBm4E19s7IPebYTDZi(KIoGqQXtkcDhzGEakspP1Mv68opXbGrvvj1T1dWI6uYIitPXftjYySkPfa5RQnH0IH1esDY0YjLnMvAXqctb9n2l(CyppbmAiTqiLKWWzafLjDpCqVQ057gy(k5vifWbeNpxiMiY6aPrQU)Grvbgza9qRrb6LPhkLwmjOBlgNSr)KRlxEZKBkVRuEUxjys5jLn2mzeIFYwiBDEbTy9tfd8ivUqS06gktIJ7ZSPhpr6uuoJ1KsC6Hv0zmr2LxKD5uIwCpRTmVWNDVBy0w3Wl8CENsqtgjq1P3jPcqE7nbE3Gkt3p2YE3N32GNWlTBGubYalkDVYPyfdRexp609eeEGM8JpX0YXHXj4jCki7zDvCjAX9rBajr5XLmkw5T64HOIglApNj50vxV9c311DQg399q0(EZz13ZuY8780Y7ZF2D(c(aw9EG9zXh1XBU8d62vH7(D)fOF70u51R7Vq96cuC3dRQcXq(d7ZlTrS)zurJPfftLxtam91eP0IhlZtU7gTgek0NCBWz6ubebapvd5DhM4vNBXU6Sf8QgkGSo4A3vwyGm1iOYMx5D5LXJVlqCgoalRkaKF1KnSXBCf6tKPUzpeu5zE66zF1PG5)fRhvz6Ww9SglwzO)9i0jt3LY1n7Ln3L)DJLwd5abKsodhz1aYa1K37FF5GYnKeZ0ZDQm7EaaRZ)Mo9aPCUBw)aAo28WY3K4hxdo0hlRciMuxCPEISQ)SFYuXlCxeRs7rKC4ECFRSHOql5quo3nRjPgVyg9UVC7UL0WjifBjgKwMH3SBWIo(Mx1K94u)l54u)lX4KVYwjVAWVlsh2DN15lmW7EdjAWa90(Bnz661w0sY68146fP2LGhGlgyqpSgwLvpJV99zZATwV7XRpV1b326LC3nwlC3AS4lwxrFUAliE39OiqULpPYSz1PqPYz4YV7cWppx4t2nGVLQbyV2ytCFiQOwxTuDWtU0TwHM4CKvy9L7RqCvH(O1TFG9LHYjVUzoYDkAB6wfRhu(HHh41BnVUl7x13qz2pn()WhY2E8DDoMoSwkQd6hNozqqtxvrBJcyAftEqY4KtqMMeJKMiro28OM3rtcQJseijiXjts0jriN8SwvhvdFYdrooXGOq0aJfMaTKoqMAuT8SUew8JqMImdzcYyKKGQ5z0chUnvrDs08nWWQY2w(xhRrzIiZMGbsRlPH92hoAyWa0u6e15sRlsrHri7IJSBs9ep3cPkQNai3c5wjnSyVJFOdf(K9R1r4jin7rJ5TerjsBLrQgmQNChLnVUHOAh4B8Da4Cb0SqU5ghnXc19oyxeFLfejze3e5U2azZKkalKjvgvtiUCA9h5gi3g52dGALhTZrcfEObwibmI0PSwSKIri1irc5zo4MHWkWdPwsDWVmOgpWrUVnnp2ougbxp5WNn(SG9HYXOMegan1duvFpEiH9qU33fPPYiRVYftGM11nAxPEeIx)K70YvfKwi(xmMsY0tMYQPAVhYErZTj3p9V7J(3ha)lyMjyRmO4FhvTtsGYiD(OKUaZFjDt6HCasVK(ihKCis)KbidsgImCzNhveZqiLbytTHIw0GD0vFJeISbYRISthpDqUBY9C69q45aZK1rJNOJYRFNQBhAlfnrl3fq76DRPPOb9)hlc5uKkjhoaQQ3fTPmxycry(d9UGrqCGncAuZzJPOKmUY0PqpbjTa2aHO(sIdjuGPmGayo7YejktLvbyQgjIcCkGkdFRAkymB354rTCGwRJ4NamosmUy8beMr68QAkJRbwtYQ66U11XRUv7knS4mgDjRJ6JhpcmbgKYuvaiqvRaQPoTk2akXHEnqQeoVwamggTndiIpzRnutlJ6FKPNslGqAd4veidrsJpuKfJlRJoRa9f125x)9sA6e7mymjXyt4N05gMZ2KGfusz3Ibb79tlYzzcPEDvoh8AOkQzml6qS6BQ(XtQm9ojFIZN5xu3fEMZfnTHHsQHMsudAWDsEAOfU11r(4ZjNkMYKrbO6z4i)Lvvj5tq(KS7UbYhN8xqoJh4Qqfs(GKZeX5gQBtoLo62KyYipEBx9rlDDyPFcYzoyV7)B96Wpt37()oQ4N3Khp5vtNL5dNubX3hAFW1Z)9(zWNF(117()g4NN7(GVSn4Zw)E5upEiF8a6skttB)tG37tsV3NG8PiNH8PXxQpi8hn5uOhbfXF)e4D)dHsr5KCo7jEkN3iK74Gvs205GXq0ZGiKov8ewo1BSyo(R0YBCJjcKPa)Qnnp(a0lz5HWXMswxgMaJCoRFRqLd48GO7188cZJZsoUE0ZzbcPdyFfj6n7xoLO(MdGFvISjnOzWVoNZS7N(C0VkjhBc0)iEwe)5XS864c0AG6FGTr)EaMxmP1CiQVROL)OwL)S4p6YY7ZEO1CpAINmTyQyZo86BOEFTC6DOENgaczm6FyE5Em1XmKNuCmvqqTm6TupQ7OaLH9LGyrJRUf69qmb6e8yuwPb6a(5cu2SIikmWGdny3NJ5Pt7E45SQZugu)5n0iH7VVb7wTc6L1LeIN5Lx9UlwhnP44cXMDSeGiunPlWkG8mImg6VfvVf75Muj(yi)XiNLEt7z45D6tbPo2KDxKDGCIzj(zD5PHr(JOjOo3rS(Y5zDzBxggOJrcpK6TxSMM9lU5DUF13JQ1qJZ7B5UgeY4zDRl7YHXe)lqVugEKmcl8IQ1wSEGLqUXmKaoNsaKHlRr98NGqhUFBKpBes7V08aD9yPebeOetG25WlOkAamFmskkHQdmgkjic5(3jC7O6YOC9GDfCK(6ISx4sv(6Jq(fV(fOCmMifGwVUhzuTtPKsSV468KhaFiYVWdTDOUWosanLKI4dQ1vhd0Xb6oi88MCEoVvlzvlrO80zpcmefN1joF2)UsYV45RpGgiDUm1n7A1CgM6Bpjsh)PmXXpnOVqQHsLC2iOGynOIhekvK5r3ttDGCvbBVj)(8rfxJITrr2OOAuKnijF4Yy1ZPRaFE1nJ9mQplLJfsc9EyKfP9E47JhlEe1TG)sCgq4o7nI2ANZ5fK(t6il6z8i0wL2kZ7CByq8Cz1clGvEhjNwyw9ZPjkKmKRss7Q9QUdB5rEh2skQ3AOfRwYMcsRz89jObmEnb5POZi0VhH9YLWK76Rkqln3wRMCBkcomyYvgRZHV0vWCIzyMB(7xzC5yQ3HJVmTmLste0tjLxJhSPhgvNgMuOUNX6HajZIpX6q5RNG(CtjgLvP5Q3fQp4BbvhIQ)d5dIQ9q(dYOEd5dDrRBd5dt1MH8hkr(JarToQUq(JJq(iTBPUc5Js1vH8emm4FIe5pfvfH8NHQDqEY(qDI)ZrfmilARqrIJ174hw9eZ2PyNKNYL2eKpgpPP96ir0s4DDzev(juRavlO56DZ5YTquYZSsLGJp0F1kxSnt99N1sql5ZLG85z69)xJYrj)nKVqeYFRhYx0Zlq(sSbMVSe5RSzYFhi(JqiFvYNMCopKVgh5RVnY3qI8CEi)F4iMEi)92cOi)dEi)JKVj5FI8TiFBY3H8pZrop57sEEoY)Ie5fElK)1iKxmc5FJ8Vt(EWm03N8)L8di)qY)bh5hb8ujxGJ8)hR)8Fc39)YI9i5Li)yoYpHJ8tzC0EbY)TfNmYp3INf5xq(FyAUBYTHiMCRJXwQYncmE2GjhxeYptYKB9ru3AoWwkJi4wVkwT881tE5RRQ3Nj31bCwEma0uPj3wm52kWxyRieXK7vd1(2jpLj3njH4gtUYJmN9sgxrJMC3OeaYbOUj32iZPLofD5SWYtRgafFbShaS2b1nJheUVePxtoyYWK7MrSRjxf0oWoCdzn5QYMVf(4DJ9)qS1GtIIGPDTBH3K72EI1zYD7(eagbfaWn3AlaN(H0I1y0wNO)2dNpGRULcWzYDNxS4RxrarKU6brm5QoB8Wt1qjbhIydhm5UlkqiIdqaRH72ngWK7EYNShlvXO6n52zbj0n5U3crN)RrPZ3DHOZrdWVuOZrIWSPZxRsNKf4SWOslilaoHbwlakGobSicq3ZgqSydlQnYKNyYjABedTtTmYbZfwYKGvLnS0JdCS39)T)a4NiECk8Iu(1Jq9nqMhJIybEgpRfUfj(pD5aPSdaGQt2uIGnAjfhrwQa4bYlVDU98PDqeOUSiEWKJhXhGERmTxzGde68QOkLAYTXYYI4JIqaI3xc10ZcmKbLCtW)xbRHOWaKYhWg4vyqbBLrhUS8XbfsDnahyYDRUrcTvgs8)iuE5a)4tVRRqaGJFzbaSTcyiRU1xGEt(WcatGObG02gmaQAaGbD3GHObgkC4HgWfIWYsQSTNdXiaS60vvCu4poFDAC10lho0KRE7gbrIUPJOeYfhucaqen6iX0cK6grMirxsJk3T6ecZqAQkhiuumuCeJxq0dWh4ZkrA)rPscEaxE)8)MkviFmZ19R9vr(hDC7mk1N7CmDA0z2YGu4huR3ocoqpJ0pJQnQbgSjglGge19mY6g6rqQ7Gn1uRn3c1KmqEHlRYO08DvwgGqDaqiq7(BQ5cJgaCGfc4bDqaxteWvgraQhQXqQdoA3Y9n6LrraMC1T0C(xs1Eqn7)nlrU83NevBOIWG)fSnN3H5oQ1tf0Q3nVDY4lnN96OC29VsyUp(RCjTJ4M0o4WYZiMKsE7Xf5TNROglUQrEFIJKSMeD0rtd1BJKMoygN4t(mf079fYAJ386w3rP02Wx2sb8hFbGkKpBwiLZslWbT9Yo1z6upSJx5Jsod(M06kfrS1jV0qewEF7fm5A8S6uo)Dq96JTY62RqMjxZryoFYNV2rOd1FwaZEGNVfVEQ7V6mPskrDjwT(HZGgE1uag2BPamhBhqu2jy4VlsK1DyHSoXR0qwlLUhaYGcrm52f0cxkYakc(1KRTLe8wkylebLlWYcV1WIsX93VVtfB2(J3Qfm7JTD(T0dPPJV8osRPI7iT)Ql2LYAJoim8HxG5VoCnyCVGwyrJsxNq966PAf1Q33(yllx5ISitTlzR4LGCgF6PtLPE5iDUlGHHVogSR8wxp3CsOsi3p5ms5cKFuei7wVmebx5UJq1xZbxZSnz97bTtjBG6BmlR33swwVJGqkgLA4oILUXiml3dEenbdjxwVtrHTLX(DBrBmSOneCQ5vvMgxCuvXwyRpEWHXlGTkB1hSVn0wBgHO9WEWrPAe2CBT0yRzm9NXjj3c0wUfG63RuZ6wrWPVYGP5UgKgH0hB027y0gMQrLeTNbsxrFldK2K7bUCGGPOOSrUMCV2SqTMCDqotGjvuYhNAY15AjyklC5bEpzJux)tVSavtUUTqOMC9WATduimPjxFlbG0KR3cGgn5oOBWySR4(Ly5qJ3sbqJ)4SaKrq1qFrjgMCfAHFw(v4Oz7xHIyqyParxD9uqBho5W12Ehr7sBQSmC7zYeakmu43PC8t7oFXJNscuVthq5EDaLOsRFwQMRU89aGDEUGjfNsmzvv7VHmATMVkRFQzPRRjTSwynMARUDp363Z5PfymmiDemu0QQ6hyFu)vmO168U5mylQRQziQnzHOiPrjDFQzTXsi8JQYQBNwZqJ7is(06P)vmADtUbFfhP9rhTRUgunzI2Av7QpPTj3WldD925AkOj3HxckAtUGRuQyjQpNXk(IImw6vAKXldXvr9K2Lc1V)sH63ZLpF529a1eQ5wovR(ZYxUf11ARycVR7rU3vD6UJHCpX69IIS7yoKD1Bt2v5Q16utP5ISuRt9Y5OiyMcgIz6(ItupfoljimOq0d2O0ro2PSwJA3ub2AaVbBLmzSF(KGcKlHZKq9vZ47ho3QUUa1z70iKNCMkAGP0A1dfmhLwZUg8G1qfpGLUVJMZdEqRhuIYdZoknTczZS9bvD5ePNi8BnFGLirA)LYGs(zfyHcR8MLWL947UcxPWNLUsHzwdDh4ZI0jXXIHZIv0Gj39lHiihFvz7zSMLSxMe)nzYbA(Vx0)zwlucgsDdKPAWrZUv3IRkEil9FQ4bYg5EK8AXG50IMChL2CB1vZzYDmjMw(hVIhi7fI)G2l(()p0ybbxa(6VCeOj5l04IaaJmDZbbF00NiCpcbt3yTtBB96YhLjzz6A(lpHBEaLSxzls4zGUGLUsC)SmHNXZIHRuVZrUJ9UmA)TZ8HpQvN3QR6RE1Xgpw8XKKJlo2Pe1uKaWvrkx2XKlf4LdOtDNf8bJlgtEsHKzcyzo17OGfKg930SWrqAWcdyv17R49LceISEl6Bigg)PqZhS4HGScOY)b(ifPFNxWlhbyBGRIR6TuWYBTq1Ft1BTO9c4)LOSRYL9uV7)hsx7R)sp9U)FalsL8OExfVB5k4V9w8szfgZadp1BR4Jmc6yu1(oS4wuovGE5wb3Znkzl23YpcvauFUeYJI(fk0AELlRIWEqofcRn5u05GNORudCIJgp1mLoNI78vaCk(u(VCjEUa8xm5EiK9Hj3dxqUdMCVoOiJzYfbW1MCcW)hTGWrtUy2intU4KVPjNyPdAm5sa))4inVjNuXPRJKhD9NYF201l6kdBu6u4jwBsH3YjMOPP06p4u1g6Yof(ZTmRq5JeRGK4R3Im)vzRU21OSlrkBCanlo2XlD654RnPNNPRHB8ih6utEQyZEzx3ULJEoW3SePNVi0PBnfLz(6sGdnUPmvRi)CquPtRo5AtA1w7TPrNiWmZEOEM4QQ2fv(EISc1VOR6)vEMWpwjsQ3v95WdwFPJuS9opUz)92dOR(5XymWRZpNRtbd6xaB1phlcCgqwh3cFfiWxYkU5zOeDhuYvkx8U3xPSsfR((Qn0HIL(ajRDKPLA4sv8Yk2lUN8huqV4AjszNpB9rw)EIuax5wSGzeRVScMXifM1BUoVnY1c(2RWrNyFh)ydn4btm441m6LQGIxzfpThBV5qcEYv94P9K5VudxrusqO0M4fk8QnOin5Wjetmr4JE4Ly1gSObWOPXAnfCfmmfnawP0fnKnDX12OQR6RNGZ2QhnXn8f1MpITKcVolvo2gbyd7lRDKhghpiiGHNAKQVHvidXu(yB0MUc6FPlXqBT6hxfGmRvhPB2s1zY1uo7kjFT6VTcJ0q4ftIG1kc8Oo6yCLvKWf5QfxCvtw7eX6(t02qhQ5AgTXrdYKj0toRMOFRvtmZkbweGpDzhV)9rV)5fNrvMTxNdlpPi8CnXkmnEz9zhVSzjgrk3nKhvAqHeN88NCvyp496Yeq6usCmA0aCblo0PuXwbIEJT5ZxHdeDCDXYA73n9YrNZKL8qxL085xHjZ7Qf)Dfn9jJFIjxnjZn5MndPTj3PU4jPn68kkjDdT2(Qlj9XxJOmF2rxwK1Y71iFhA8zRz6btpt6tUQts3sMapzLtrJuThbOzpcOXYxEUvp66NZkkdOeGLz5YeRGEOfF(BSbkHExzT3qPQ(BtspfnELHhlaUwMqJTrRDEupKEvlpKHqQyI7bDrYEWtabAs5blyK8j3nwJrU)lbgVEm12B6GXh9qjNQMvs4TvKn7FriBTv0ERcREKTygWWrH7TruSijTiMz8Ll3s9BKbmAD6uuvSBJXW2z70iqjUZk04OHAtojbGsKLTYvjlAVeD7THq7JOFIop0GTe9QNBVrkHHa6GHwbE(MMYGE2hdGYfffVuAPP1rNHKKtjEv2CvQ3axbB8ejRa9ulN9g2Z(yfFlN42xHmNpRTgD5Xtp0qT4)qJCe5rSPvJ6Rj)T3S)1muSBN7(7(ILK1K7rVAtT(6wH5IOmjLl4fVRsjBeXkNnl4rZlFe5AxoDVUjP)1xBssRL0xNDE4O(sm1PSjPn5o91iNxdqo3Djso3DEKZtV8KZN(Alp4Q3YdEOrhP)(0Infi4yvD5bF6sy5b)CHl0YdM)g7yzdFiSIYAPRpsPTUGh5k(Ej6xIPKg)Or7v5utP35STDLMsA7CnfA1HuIvtUPLSpSVefMS0iQMYHOQXlFj1YZRBihBIzTtn3fv6R18eoXcZD5m3QwUvY1vCgJruJlyignn9FWzChJJBHDYIbZWtm0XgFCXy9g6ak20o7CU4kJPJrfVuq6)O51k36c0upLL4vlH3(ASvFxU8ik19rlK51H)syD6UK8KrKvRfQdS3HgYtnLrNJBmcQ0HhtoEgz(6rfoktJDIn6ZkZOXWiAjyNdM5PpJMCk6XsbRg2OnEzbAAzMwrslexgZM)PtAmldE91V75vNs16GHeVcYyRKDbCq)n0CtnTC(aEkmIIOouWE5YDsxpokeaTJw2QdaCNqi3mR9uUT32hO5r8FKuIbCcN5TV(pu6Rg7UNkfxMOQtkpFl8m)Z)suSG(yfy)JkXwR6YDLL0PrdAOmltnmXL3(h1sOHToTU9zbvbzBVcBvUYJy5MT3Ij3CoUFBBKjy6m)MReq7uFgBLeMXMp3ql1oO5MyTPrEIAYJ4Z3S9fAMUUgoyndo4z(ozWbpZ35kboyJLkoySRsb2XAUObAvB5sMUTM6QH(vM6uTpiB5sU4uV7IC5SV7gwHRFcM8awUL9JUik4kAKrpM681ARneSr)T1sRL8I)XiD5YS0Fou45Ucjj)vPiu9veuTboAnTfY3ODLiAlwlYhs1UZIrYUQrVEDD83V6TGFlrA9M2oUJuv4cfpuvFUmlEND85nN1ceIQKZoDAOuVmk6m1b1G6CjN)nwBUGF92wWb7lAxsd3)Kx23twV0YrQScpseUUTESLj4R(LKD0srzzLRpRl5fmmAUjtYJvc5Oo3C49SKC4z6LeDTP(5NirSw7QRwpvBrp8v3uqb9er4VAjw)flero792RHfUiw)gCCUuw)gSCR8LJ8TU2ejmXH6)eZEkj9aj74AiHFLbj8SLis4zVywjZFZ1MiHdMmyOUIoqIoRvYfs4ezL345St5TNIMqXyhcT(CDi0AVLF2WYUm(5SPGGQCPtR9l3XmBU79NcF(oK7ggILMXoUt0xNxQjZoD3ttpzx2tEkuv(oAD5dUxr5x5lX4T)sjAnDoKmPHqOTf30fmWNVwATbQT3f9uXCLNpIjY5OL3rRB50YR4a5Ctx)m4S81cmHvVLtwquUvL2dv7mT1Xv8at4y36QuGjGvuwbMGyPTgYIo2pVM5Gru6WNsQPJPjE00TEjCWiMt2O8Ah(H5yP)63dQ93X)ZYSplroHNNLKfSpiEXDEj9CnwiQUIwu88VnsENuOzSGnpdIvVzAILAG06sAkktUxVDjAOKsWqmhDHOhow5Pke25OCqHE2DOUBNZQ3SoQEXJa5Xetnv9YPIloJ39TpVnGNCVqp3lZduBkY5zRMVDioO(gZPMKtKPw0ne0mWT)NxdjXu0BxOgZ(qrDxf6jVV8lhTIGUf21ONregkgItsphLZEFHVnUfyh79JKs2aewaJRrPNYQ6QBz4(74yDhCSWdfU7bgBKH7QJWDBn4Ti7nKMpbJcDeJ06MCpreYtJJQLzD4oZosvrLtRUPwOta4W9DmVtxjOVwBZx70zLpkmbWbZHSd1ANoe8W3Xm8T5m(r7zWyG24n6musVgopuDb6Vv7vivCA5ZE8nPsmHKELeMsmm2B2Lx8uTExEDgt3L3mJ4YXus5DFEpGObTS9LkHsnz6bw9cNQI2GShzFzMxWKdyATCMKXpoLWvFX5ASov(Z47AjjmS6VL(lxH7qw030bVSkH9zwTwArNRlMux0nzTd4i)H(c2inu4BVuVXWtLso5UW)KPBau8UO8PyCnlcXGn3UVg8t6)CJ1zhHcpwOr6SZUdfcuukpjzO6a7ezbSJ8M)2N3M93Ctn348XvgJHbIK9HL6B7AArT6OfL)PthRL26A4wprnxXZ(l)W3)sLdVXv1OKt8lyv5ETmuRiuATPKNc4(0xkDdzGXMEPPz1dFfFLjQ6fwetETbfv0IlQfHSVTrEspAah6Ue1JjHm57ujzsbvDXiZfZ(BZtdsRWubdYtQMuulLYaIAJlk5BcXz1sBiNu2ywClUpKkcJ1Rdmw5laA8evsuaAgOjqribqe3CbebUyYkAtbxnkmMLwuVo1YXdftVadaBTgwKDm)7fVUj3F7CrTEkOo1ftkgZWK7zLcGmbvlVlzD1KcZ61UMH3SecPtAGe0bNpP8KYguR8lBbS8HOsI4m5(gNBewh3BFadtDBvobff(IW)dwPErNRZp(uhRJgcAO0(HhSqzFKdwiFtyLRZlLeqsgNuu1s5zGCsa50dDHSsD5)sXzDFPFES28TX0t1Yu)txXzrftKZwhQYImN9vUUTZohvy5nClnt3mZaEmjJBhsH(A2FRo5eKf6d1xGL35TYnim1Kawjf(m7d7w5FK992Z(i7Rip0hTipKj3TO()2rdlJ8vrfi4tipE9wi36TrxO0DMODV7E3uSN3HsLCw3aZCvN14bB8H9cpPXd20dxMTAd5xiFpmwJDXaM71Rl0TBH7U9IHLW33(AtVsgSPWs1g8KDMQxLReji2il9MfcxO)gl1Se7f1Ee6QUDTxS7pt1CCehoov67ptvhQZDs4tUoKyW(K4O1lnLdrctKAABFK56MD0jQRU1ovMmQI3HvKbB58cWjT0YXv32acPe8gqqdUspIAGwi4w5xTCxxMvWk6ofi0Ew3x7Sbfgx0PaL3PGUrw3EGHcFeVd0xOq9n4bGFm0GhQVb92Zqbh4c1v3aD3F3DxxDSssQIn9Clandvn2YYx3X7AdK7MCpKDIZEi8PfeivJePwsDK7Bti(BpmHUnSOKKX0NmD)Tjv7rjnvgcfB2JnhHBM0Epw80VFxS9zIaa0BhvX4z(OOQBwNUQu32IllU1EhhjiomjijKhu8nQa29t4FIYiJUZZ1F6uWaG1yU05yB4c7F6m7EZKxpiQ9IE29n8QjJ4l8qdtNIFJpsLK3u1LvgzB1fK26bPnk5DiHJj4acqw5A8THfdpKS4PMovFH6VtCG5DkHV30XyyC)3(oiZZrExvhSlCC7DVbCChOMGHotUVl8w))lDc69UqVdfSVJp0GH7OFY7pcmpOwUUKGMy8E0aHF9JNnyrWXhC253Xdob97D9KFxoYVp8gSNnsEppYnGdDWKdmj6EQgzg(b8SuZrpEG(7UNWL880)lYcuOKl6MzRU)GNU75rdDhthuN1K7LGXOZQRkOnryMzDQ10xkdrCNhi(qizTCQXbc7hAK(2DMFT7q4dqRCyasZYGWGda2wkthKWH0ffIFcWQqX4diNQIgip5xFtNJ2obvmO2SYDE6pdKeKFHo3YxhD11I0l1RC84IPcoy3J2Dq1nN1dHfK8dNlQGgOUTI2b7D)F9TU174LF5NS39)Ih9OVPx(L)X9U)FWB8n(4RBD3SN5TlLpyaaiba5lFijMwK0ZRM7NkUii9edLgDyurgSdc2wkWbbRZXKJhRt4rtUaUFg)5(m(TsHvmJJJHD9ZqDN2RZrFcnXXH3kqTcOBgcEfrRQRojslpw00YjJdJ3vx2refMatWi61hkMqQUPEKQMQ7)iDy5yNXc0rWQZ4vGAJMuo1eIXLSpzkZ64PmtNV)8UgqH25UwNDqZv9qbD7lx7JVsR3kt(RZ6TzKs4TzL)syYxwe6rH2ccuDEqxSq1ShJsV8tf2vgT7rh6qDhmsMabF7EE)DMDSGZ26n2sWLY4t2k)YrOELf9vBwQ6IykQ6U0JqAfDJiZ7CkZkXwQl2(zb92zhWykEkxc4s1TIfl3ZUxPmXIh94XK551ECKxYwHQEYSxAWthZIUlA2BMY5uPfFd3yTyxEyAjUafvXWquDcaveT1pCrLPe1a7cXopOCwek36tVTO0P1o8uXmCvmlhjm3cAiOuShqDz1JGkJ6O4SQMY4AI66w(zBxEJlM0qW2hHw62sVL37ZRtP9wN7YXCFfRrd6H9Vb8mVqsvjb0Qu4LiQEmHKIZaVs3LpuPYBCJSRmRh6gHI19KOty0hdZXjLXQPd4XQ3Jv1CaXLG84sgrzxdeRyjYH1C4BiFjjEQHfhjHupgtD8WhRzPZRpPIIH0WwVE0axDHmydEBLNVJtqvqe(Z5a2ijuaue9eQzk36t(fWo)FZ5IsD)G1r)PpGbhtdZxc1Q8lzRDhHPG5I4Y0Bvut(AkHTe3TdkBQUJ8obxIzFKZuM7t5N8lxkNYvGdEN4IjKJjBKPQErPcCE40y9QIAXaEduewMctv59wxN6DN3tu4Y7OBmQ6CHvooMBLJpBFdoy3bhRZUhmC3bZsp5zj)epGEYNUst(7lRbaAFcUh0oqpJ5VW70PnaDY)rv8aUBIGb77a9goBxgwRjx9BG23(i7qDlJRjexgExgsd)lvENj3)jt6m7uE9yu1AcsVIe5pjILPv377YK79O2urwKMO6142jYgI1thSQfnC8crfInbJCJXma6R9U)VXp9Z9Ax36QHCyn8brQmu5KWEoVykbq02bS6NsuvJ(r0DOkNJNI5n5EgjYnvj9Fa9A2JNfvY8cPwrg1NgRVbbj8H6MCkqbRfzMwFa0JzNngQVoWLf1xFbQ2kXCyvzY9oi9QUzz9H1KNuqB2GIS1irYs5brejVV5SyIPxf7v6BTTraTd(RDpyEuUmQOimtGD3ydnaQdY4mEe54gsBJmIj3)by68PbUO)yt(gaDLm5(jQpqgnK6iE8HsP)qoc3EObeJll8qw6sP)qapUXfngtovC5y4HLw9gJlyR3Kj3)Tj3pZrFjtUFotnjtUFXZxUj3)Jj3lBYVotEotE(Od0XGJ0r)M8EWWO6Z8z(2V8l))07()3)h(hx36wN3E3)Z8oFNFGx(LpNht(1xyDDEaMqE(nKrrht(xvr1RPF7ISXmQXKrG)YO(IoQe(LG6lGK)Lt1LaxzuDH(MCjO6Ij)nSuQSyY)QxDvxHz8o)ngXK)MKCw8rloVs5OQsalvvm5lxc1gX1(eOu0lP3ll6LyYV580hXKVcxQHyYVLmQGyYVvtE4svcu(3m8)BNwf7a1iWKVkqISj)Tax(wLm5VnQ0Ft(Bh(nugVM83zg58M8vxQc47VRAp00bLMo5jhYK)UPc1n5VNcim3KFNfqcUj)9IYIlUuBt(AlnH14j(FbLjHsJqXERq)dzYVNvnbF3FwvmyKzws96NZLyptEGoaACFurBM8nLRCnEt(wYrSKjVFljsM8TYKcDHclfQmMeit(2GgHkNXKFVM8Vgt(7pJWet(9bd7pamUVFBPfFMF(ZSU1DpM8V23g08D4JjAWKVZxJJiHDs4942Tv38QKBRo(IDoCJ2(rc(UpxFVjxFVzxFVf7VxQEtA78RFlLK)KgmuT6tCWzhTL2Bpx)jzY98xwCOuxwYA)Gs481ZNrA5BxkhjMKNCwqwjxoIkj)qukPNE3)3)tIFE3CCZNqjLrpjfgxN8DZvczv2caFG95sezJ2ckAHfzP2vLhQ(sX1uu7lvpAk4XIQZMgZK73nZGGj37JXQxkJFLn5E)zLVgS4YxxeGz(MS2azoleZ7L(nQNO3mC)nBY97rVItsISYZZu5nRJHElF3gqlDkrpOqa7DPR1gmJFdvvrJ08ukwIiOea7WxbxDtm4TD5u3U3K9EcUh79T7c22cpukwKw7K(iGVt33m5SOVC2H0YCU2Pn0TbSvtTnohpeZIQ6mIaEBxVlzaVwoCDcUOXxaLLLXtoZCiCJY1(gUo7OhyzyyZ4QNlpg8Rvxwzm9DD9JS5SHig(dLz5qYG(C4V9DBQjG)2wOS9a2sKAdmOskrlUCugEadoFOxeTzFrzfIIHq9))(5O)FzzcUhvqBMAWGiAyKMPMQXL9vud0zPHA9UhVo3audoR7vlysoW6ltT5y6oMasQNzTvnvFp1NakUATERVEVvFpWxXl1yIjGQM(Vvx7ETkAr7cqR0WUkEhXQe1(AyDfCfVabfm)j2LOo9S8czHVplg9FKnHSR5(jMC)uGP92Wd78t2y6tL0)XL7e3mPRiMmV(sIjJj)HlvUl(YH7Y)Y)f(5f5G55GxfzOyYhYntet(WfLfIj)iuMhM8JU88mm5pYAoEfM8h1ndI1FLIbr)RmgeM8hRuypat)Vht(JJygt(hCPbkdi3AOwcESwpv3DEvhO0uoaLVn9ZV11akVsfOWDLcNmWvDCYHgVTOT0XXpKr)N6QooP5CWjF9W4NXUgo5vQ4K3YvkCYGxwWjrwb4KAgoy0ah4WPKoqQvkoz2vBCsl5Gt(lRc(ClxdN8kwCY6VIzz2qx1bk9PnYjgk6i9knsBiqjZso44CPIHt(FvuCc01)M3k(XBV7)79jWpOpdlaEPUCslNN19YQrot1n5SObEyqN)U7a)aF5lFB4N3HNS25x2HyBy4RzWwvGXjhfi81aGWxlBCZglq6ZXb9KjjR8(YEr)hoyFDhkCKcbkT3XT)USFMdOBl09OJL7Yv3wwRIOJlvQ4(PyqRayfWyCmSNqvM8hKfEQDvMJNSSHEQLtdrax1OefFT3mXY6OUC2EH2F5hmhq2x6gDdY(zxsGmq1L012MyTNirnt1la3OUW(c2lxM1kxvfsHrHG9(mN4L)Fw36w3tAhTZLKRTpD1fW70M87o6GPNmkqr9VPU5dOyijm5GcAAktpssdnb0fYQ3zElWl8FYtcJNAIXK1Lvs5r92lwzy)IJ8JUW9K9cjRExfALMX7G7ARmlBDTfRMJpBkHjLJnMHKMOUKsY4Z6SK01TClInD1vPBpmmzkGE9(fElKFIhmHjO24Y9WXH36jfsM51Ng0M)4zPE43Yt(f1j(0DYsbwOENvH)BIUR3LhIZNXi3)sXym27()m28aY)lN)F(ap56w3nWyyAY9BzXXKlxoMEkONS61LNSkMlN8L4EUNQ9Ul0LrHWn1uVc6gIoonQ2AFn2EjkxgVBiBgVyCOM1k8USSBF2TS6ZVf4PaCz9TY5YIBmHWxozXAYh9sL9QjFSlswPM8XliVZm5y4sI95386xnzF2vIzo6qT3s44h3Vn7tt(ez4yYTY4uExfMtPj)42PLftEzOeNa4RzYpHjFsC9kNKXbWAP4ErB(katLBDDMCd6HU0C)0BZKpfY0XHrHjVYsSIFu(fM8QqfV0mfEHLuBPxircLx(L)NZf87PKa)M8NS0rT7lJ1eU2Dd3mBfcVONIHUhvtu2Q7IKpwZVwScaEeataCYM1JWPCGKcgsAyXJhiz0AprFnpIwF27kIoUDR08hJYhHa82zzaacaaflTS7EJ2R0E2l)onr2yTFwy5zd8rPz2p2P3fwTuv2POaQc(wl3glM7zr48kHOSqBwsKIYIEdK)yTBjJGlW8YVxjZvU0GEOuQivlD(eMF9vwMfbgNZPeA)Rm2SmAngZwKSkhknltc)3Ah)eU39)vEm8Zh2JfFzgRxktBWcfKQczdh2dDpMjrxYz3hqCz0FLTZsCOsrbcuSaWRLUwX9UFs5WNB6B37()hPF(r9U)x0e)8uEYSZzhm3GmjQGw9jgFVHenSJKQAQoturv9UAS(gAyxnuFRTa)Pr)2)STMG)0KVATcVQfIRm2KI66cJlkrbPmSLdtVceWjzTRUwFdlX(AHAe8Vxz0nOXR8WytFQdm0rAtUwHtmUdg71vQymplnglZoHXvcuEBBN)hC4mN312TanQwSZ0Xm0gkhZ(8T2kvQHPtb6JNLb0RHXKVyjJj7D))RtJFowV7)zSbk)5Bg)u7kbBw2LkcSVvkc0Bd17V9D1a(F13EJWF81kIfDaFM8PlmO7ZV0zielaxvmLXC8tuUqoQtY4EjQtYUKug95nWpt5PakHgHoUUCU9I2Zws)ELrBWS1T0TVVYsfXbZlBIZdt3mFDrDRfnM0OU5YEZJ62nx3dtbXa4UrXTJUy4Vc4GQVF5xExWJJx6(NQ47MpOUwHh6ilYIy5CdQ4mXT1wlAWHbntUnau7PCx7lWQD6(nYvLdDnALFX7OnU)Ts3rBfu1r2(hT42oUfxyDwSVxtTfsHYgZZr1JpuFX1pYrMTXJH(F7(j8)b3ey6Urs8m0876w8NQ34SDoFy3XHEwUGiagYrQBRJyXKJJH(CsVdRjI74QuXM1jqXgnkyvVUOXc0DzWWPtQlIezaLYBXHOBfLlOqoeo7W2oqk05Mwrl(r0euH5zKyTkkXkkDfiHvVVI)EuahEaIzByX(KJ2YmhSTd0w0aK)yj1BPa1qMTbaJh1hPfy6s9UkEBLX1o0OoZEp39VFoDjH4ktFmw4AFRRZ63hL9BpK)mjmW1qoKi)qqc7xbjr0Wq6wobymZlTi7bCISDGb9luqN7tT0DXU6UJW9EObrevKLWn)vfjtc)2A3)6MtxLV(i286EQiwuX7zJ2jZGCan82rjpWmM79qpVJaMHF2iNxiTHcmejhJgj6KVvbhPvZ4hhQcq7mkl0SS2sUN5pcyZUDxQXSqqbzDrVDjke)SimHMnyKJR)wd6R1gBUD8VT0qWgBV1M9t)EJ0)6J(3Mc2KpF(AkOVg81yBu217KL9POPttwc(4J9tTJQxRtBB2QuW4CtzIF97nyRT3G)gPvtRbBVHM83eDdfBTYev6S5)PRDrEzQzsVl0PsQ4Y0SLb(MrJWzGef3zI2B1h5PeJWw8chXbl6A0BU6Qd3EU1vN1wuFHeYZigNoo)i3WCiWnK8Pe7d5aeFlM8VHSb)M8Vrqe7BYK)nNbhdawt(5wTXUM8)Afc1AY)iwyXW915X7r9Kjd6teWIM8pAwiot(F9SXtFpt(tJ16VrXqoM8Vva0yY)BAHvoDfNtoLo9uoN6(s6(CNsIFZrYfn46WS69Y(QfmdkspKYIeuqtmLqKf0emeJZ(Up1PurCw2Oqt(3wr83enUf1HPgOn(DKU0XyM8VDY3YK)D4GEm5)TkgYXK)DAY)B)wn5N3Khu19DBY)Em5FVM8Vpt(3Vj)VZfpEOQG(AUTwAReWajy0)M8)(oz4F(htkh6Ct(hxTCK(oZoo3Ho3KFHh5gm5)G9HNofFjpmkBmcMldPPZkeMVuOOhXKB3ufKYKxiChdYUimT7wazoBz1aAYgwu)Gtv7W9Q1y3dOa4mqpfkjD(KN2OcQnbaHnvHGhFEN9xpLqh1XfMGTMQFKzvRU4IHMuj(yi5zes7jCNyuwGLmtMmQGrbuPhedGJRoE55ZZs5PwtruosAcPgxexh3Zt)MZ6lHR5l1q0fdIx3BNsIXMW2I0G0YwrlSmLQDwvIsHrDR6tY2rfm7m3R9bU20M8)5y1spiE4x0UYm5)FtRjknI6ol(yqsXXfIn7yjsQOOXcS(VpL9aq2CBNEVe(ByhKr7rlOyuzndjPleuiMSqsNuQGuWH1uMoPuGac6ssRwz0H3W1tzrAVJ)32Xn5FAt(pUj)FrGUG2XK)J5Ah)7ka4bs7gwS1ULo(m1mD6A8ByTD)F)rCVJ)T3U)ZZHbg)7EtyIsy70OXh3W)VxuvrwWXJKYfBx97HUR()a0D1FUBP)MPb2(sTR(HcTs2s)5KkiOBP)cKFr3(QukEHkxAvpnVe9WAhEIzpuJXtpRvMEILteCYSslx2C7Y)P3iE6ESKMexP2r6iyW(gk4fRYIWT352ISdOe7WwAwEhpm(TcndBrtBN)L)IyMb1LSP5pIGM3qG6IQSDDU84Pu0ePlk2HsPmnURZlyIcTIRB4UP2ANDOKu4CcAgrrLqpAHqu9UNumzCt(pDXB)xqAL2(UxEhQyFAWB80lvUoA7VInxh53Vy)H1RP2XBOBxzz3Qw(873sLrJwkF(ED9oxHD6RuUjZOFP54W7Du4K8SuEj55Tow2j5zqctHZfHUpU6oilDgHLDjsA4B)AP7Yvu6Um8ePpYX6rpQEWMkn4qwj1YpFjKul36dwOKA5gzLlAyW2yXuxuPkCSIZMk6VOKYOLy5wItX8RrbTYOGs7pqxd1tOJkDYXVAqbzYF2lgQN)a9CjEotjs8CMRr8CPq80CwepnmqOPoKuFIhQB9ltepdV(Ir8ujq6ePyeqflV6IvN78QlAruPr38XCOBaB7EInrg90BrDBds3oD3RU3dOjet0BhXmKNsusDRdnDYjKt5ThG34PM15Yvo0KIP8QKWBNjf0WKcR1nweTnZPu7i)m9R99UqidbTecjt6u4YdiQPlQnH3AyxPwj1BL2QYIX9guCCXuIwP9A7N4oD6ZHMwoHrkmBcXUNJPPQBTZKIcAXyjXmNlFwQfRov0wclpUOgup9KwlZ742GoTymdOYf0MmtV6cbe0MqhhtSl4TmSMyC00(c0tGQjKKIcT1Xx5mxFZdOG5(enrxVWznlORMPSzuT2(AxUSZ(XbIXVHj)x1Khm)NOwEVWlVsQzHHowdddwAII4uF)YjSPtm5)IQvmC6KtjQjFQmVqM8FDt(VSj)xZK)lyY)Lm5)Rn5)Bn5)Bm5)7m5))yYFot(pVj)ZzY)5wcB5Nj1ONC8bde0FFdxY2YVJ1C2Yxaty2XQMjmCUTGrI5O4sWcMokIfmtfir)IDekupNWW2cMTZVLh3jvn76ec2nFtRmSmnfPWnlwmw4I)jl2PffndoNv8scpMZgPL(Cf2Mijs7V3IXjUYgPPBf3SHzNSWQvyiKumLXyIZyOjWsn3Ewbj75v0H3uPBkL)vKPurkrtPqV1(FzLlmYX2j7G5S8lWsJmrtNibWLxxptMVBROBVPN7tms9mN0YvfOT291Oj)Vn9SxIUM9agy4Yyz25nfXjK2oD5M8FRSYLE7uY6K40ke2A21zyluHLv4AlVdMnG71s5xGxXcQgDKaNyGq(p(qJi6cunzPcQyXhCwh0XxwWvpkUkm5LaX5Y784)MIyY)p9R0WNSOVxketlT0AdREiMmbj9kc08vxkxzSJRQhI5mkJiLiLXTwO4LZXkeW6Hx0YkeMjiLumZLNviaXXxADxc2H0DbmIDJm7qKAp0bo2X1fnAWWDgqNISrdrQ0oXZ6RER0cjn7LzDufKdNISpbqKOwRaG4p8szTIRTSyowRi5yDslowN80SK)L9XbaDTnB0FB4zaile9Z5K23M6lBls(klLLS74QHLSR1jJ6V9GD0)HoWXMwR5IrgzY)DVAr185ZMQHX(66RkAJn0wl(9tjBW1cidLJBgxzt6qUOjD()V9oBcUTjIcatDMYW0dCGla90chk2KMull)JCVLe7MgAQTj2TXkxi2ooyLAB5ylNeNtnTqlZugyMEGBqNHtCmKsAn9N0l8)pdsfMIHJmmCIJmWWVdV3kzBfhf)tQsNyWhYyhPvp92D)06N2992xp0Xy0P4qhlqrpHhn2zMRRcDS71JNocDQ0dDmz0zzR(ShkyibooPUh0zcwwoVmDe58D9ihtMCMC5Xx2rE7l655TThKC(PQ5WOdOTeIhA66HGiqqUSZY6KAdVLFUjMCVzi6Z7brMmefW1cJYpCP8LcDS9Gq0920WpPQcr0agcWgKLacAco7EDX0wwn)99aitgGCoEHroHFN(otwxDVaKxwN2T3wa038ahGMYWmE)03Nz8()VoxbrMAY0fZfAKeEMbx4Ih02nX4HHPZEzTVShW1D)dSNEk)CZuO4eZLE3e4AL5wU9Y62RQ5w)sBBU1x37xlnzAybHtemc7cmEzNTl6T9CZWY2zJA9P9ihtMCcpEKItkKXpN1UOzNCcho4C6OJiNVOg5CKMTuK6ZVfxMMmROPxRR0S0RvuTp5HpXRiQ2N8gLWTI2qg3YQ6Lqgq702SvvAgwq(QfK3M(00LAA1WGSWXJXOLeoObcdve0CXHADdt(w3TAY3kmEe1C0XtJHpSLNAF1E8iY(A7GPlFKGHOHTSHESDTLMvdfnMBRbSi9QT0S2x7KZLnGNtvQWsdncUqTvJ0SLEKHgyGbibdfzSGbctGVFG6P0FAQlkViU)RBFqgxemz(gjvssS44Mcg67myo0MSSOygIvAbHdjivGOUIofSrgjwwsg4cYwIqt63KzZdL1orsKWqIxuIKrmFsIukOyqfIKkw(zsxIKj2zswGKPyIuKcjZMi5GnOtI0qO9fIs1lv164I5fwwKgRY5elqJWsuzKaTfJQ0SKQ59FR2riaoub6jtNCwPmIfKi5OP6ngDNkp2Vw7C2mwh41PdNozEjHeDQgijMBBuG4IssIz0PbypLVGbEMie)(glczy)JhCsAxwDDd1PeIqZpOxnSJ6dxS8vK3q(9KVQ8gkNd(2AY3qEvICzI8Duol8)3sED5RPCE8Ckxu(2kxsEDcCIvvwb(31voNYL0TR8JT(nUZuSiggQ0B0THR6LP3SYY3IO8kYLbbvgK55H7hCB3akXnKlRtE8giVu00HLbcuEnLlPScwn2EbMoz2xukfLsSI5KKTY1ygcWAuYraGtk1GzITK1OhggAGE)ENQAm2cTH87cdwJTdNJ2Ab34vGdSUAd3645X2j5RtBuxfUOYkVozR6cFl0fEJ1LlxTY2P6IbAsSLekO2MyWZ59xRrdvhKR7NSnp69SBxfboyDHud6Uj831aTd0heQUa(vOZdv0BQ8QWH3q(9j0QIADshYaL3QYkeGlPqiYPeATFvSfabv4qastKVbLIVJ8Q2AScZ3QkmFlQW8TtfM32oV(wNO3X1x8E)wGmUnLcB1JVm4ZBQWq9EmTgbusV5MFGd0r0lIHAszLxJ8dV0BWS1(j9I3rDX3)or8oAQ45RP986A(7CTxFRUEX7OU47FNiEhBJ41EAg6EGRLqFE96kNhrcT(xONJwWghjePTbdNuksYLgrB49ScP32IEuDf1AuMdd9hhgA0G)CyRAfa0yCq1lwJsLVkLpXHmUabvzaWwbhHv5Sa6G2kz0VZy1M(Kvf1WyQH104vhZV1FqQDMd3)J1ElGFRA6IVD3COAY7aG2y)RgVhzR68xhAnF(pzWah)uyY0C68HgA8H8nwGMfLKhOwOOTL9nB97Dq47hPBMbQNu5qpG6Tr3tmS2(FXrRp1uU5C7KAQogy(OJqf6G5E8WPeqpOwZ6IjWFJmPyXc05ifTN33bFcl7NDZEhfnTzJEcU0(OM0)XuNKQTnNVILFVIL)O1wkxXYFsnrUIL)QIL)((3G4kw(hZ3w4sZukmF0jhxY7j0BlCL(EO)JHYv6dOY(SSBdVvq)hSg0kxSbGTsF7VPOzL(EyvM8Z2l54ET3KtKYSMCIDOhKUl44EjgMXhV75ZoMNTm3OZ2GhZA0gkbDgiEuTn8t60DsPeyWmNSSmEOCJp15DqBNcbNgc6(oIUzC4tEGpxv9WbdXHSJkYojh38lkmV5Idd7YbJR2Kg(QE0WEdAW9Xdk4YF(CccXn5bhCX5LZzBIdFBpCyVbo4Q4cdB13ZL2F8KMmo4WbhJJ2ehUBpCyVboyB04tKBEbjNJjA2MoWX6LPnXHpQ7ehmTL5YSUDfA1T7j3DwuTzMlFWPehDS4ZY2fTOAmUDZ5TJwuT71B5ynzYXUK3ebgDiNjozCZNCM24WWf3o1VVWgoUoBv8)WQyd2w9Vp"
+NUI.WeakAurasDeathKnightData = "!WA:2!T33c8XXv1DNz34ylLaXwoXXXjHmOums2YYAx9Wpib3DLw9WwV8URKSCsq7S7oANXA3zMmZSsAfnar4gCHw4dXxHafYd1s(muGMOudj8ij4V2cLcTxlkKbOFqRBBAAjqPQuk0x8Do37S7o7QDvKvKXryT)ICMzUVp3)NZ9Cp3hhUrRkvvXRYiAZ17PX69uv8tTt9m9n6OgIMC6JlQBiRQCtZjRmQQEkbt4LkxqqjMKQE76cPedNrtmAOwdgiqVZiOiZIrl(tjiR0UFtiq)kQkIZhpTonKrWpPBigtvjUX0Icg0mGu5zXhdzQlQKWuAJbnmf0nBNubPsYvtUgYRc()V6ngDuzfzdPf9zd106XeJkNstv30BA9KAnizAQzCW9U3jesOwVS6E7vqDcPb6ApTjkykDef5esM7PvbtHyjZyKAVEAuRkOczQRMmPy8wLKtghQihwBl0OZZIpFpqtsBBf8PGISY2qBZf8DFPNu76l6l6c8(f0NlQQECr9wvtQQFyooo3ZY(qG4je12sO7jTGUiF7PtMKFijztXOgIPGUGOEQVH694DwJ0rdkMaiJgvQledPNgT4hikMvsU2kjBUYznvJz3JTPpcXoRdjpL4gMjHUAATUGwz0gBYJxVEMpQqSXIRRQXQkUD7UF3nuFZliRykQRiKCqw28(IYYePZZ()(TtL2M9NuEQPe0JZhwvnPPS2zzrGbCQqFsBeuuSlOR2Mzktd1jsLOfP5gfHnqxnq(D7nTC85gORU9o(uIhy)hT7OqfCu5evolIpKPnWkTjzDPazN75yqV(vH6z0wd0B4abRwoU2TvaXU1Kcgg89dvv(9WNRBEEH0Mqs7tJLT(tQkeV9OMcjfvm3wWuPHgrLbJHjDBK3qL(naYg7bnXy0hIlAett58VTz5xgLwLy8cpHSzmP6nhNbaPFRnzJyqdQ(ejC(rrd5ekIX5JMHpKjWW0UqmXUvJn20M6Yjsa9f7yNZKwX(Lk1TF4(NgQCjt2vCJkjveuaWyE9NgGdr1skKrupO44qBlANIcjnLMnUy00JokYUP3zGU7V9b6(8aEIgLqqaYto3iT6lu4rcf2xWW5cQFDriOGH6pq3Dhub65mQCwDkgeZPGuyvqJyav0DqHKAscUNXqm5O0oislvn(vEVvf7H9DQBN4k5RAbdGbTZmr1LJhwiAsXtDlABnOGSHisqJZxZaksQjZuRK2wBd6MLvsWhmTIi)qIcAQksZ0TCmjalOikPTLbuIQlkmgMl8(0tPQlnpl18TdSUtLrAgO)vfaNcAsNFqHuAY6YX4PFtA(ovNijM7(HEoGWq7nJbC9jLMVhb9X4vh1oMNVZ0kazgJlWMexsBZTQQRb13atQLuf5pKMnFdqsB7oBnTRRAyUxAgvRDHW3HUSM009L2Kw7LMN91DcPiMqgPPPnxSkpxpYkXXMI4uqRTQUaXBQPXVaeqzZ0XfLMZpGs4djjlMeRNazbR2drzFLwWNIPCpcjGMCijaGKT4bqQj0iacwgm2Ms2v8ZYcgykLhtuAHqPtLsvHVdb9eQzskYYoEw(DCvK(V1aGW2je1lOdA2yIyPJ4IQ7oyunqugGb2xuaJmrFk6XKeaIzCYgBHSPILHtU2f9Lnx8xcMuoLS5widqAHSvY1nJGESUPdxCYTnBS0gMQP6akOjR4dpAAfQSXAueNOFOxIYVxhpkWCCrB5N1wjp8Bp7PDzDdtEiD8JlOlJWjdAijvbin)OyObvNOBSK5Vd(9dPGNwnqYNmiKYGxwHfnmtCK0jApiKGgBbtXeYXbQlKICrKLwhrxIgDV0cqsKkxPmX3UIhIoeAzR5SryDu1pqPR6g5YgN19q06U3cQ75J5IR8047TLcR8Lmb21EKXRS1DmWxAIE2SWz9UBA9UPcQ35kQfvR7Uu16seDNKvnbQCP7GNwizFnQO5eIIklQiab96IuS4W5t5E8Atek1VIlWjBf47rQqdlke2aS5cI91mL8RMQWWCW3UTc4bYNJGQD8Y1XZKR3gmegsGL1ea4xnfY2WhxLMI85nlrqMNp11ZEmxex8d2jvDIW21mpLlo0)DiANPZy5iWoz9Dlo0yP1rjqaukh5OGcqgqt83(DuexoiumFnpxMLTgaS1loWC1aPIcTGxGIJ1p8sxK4phehAYkicIjnexQuuq(xykvIx6QiMLzPifj9y3xyKOqljjQOqlOtYZkH6T7IRUllYjOR2sqKEjiVfwGLL(UOSPq6u3ljDQ7LGo5TYlKMg8EzQWoRS5EGX8EWqIMmMEA9TM8v9AlBmzv(AC0qQDjKb4qagudRHLz1ZKBV7SIwRLFV8E53feSDJCpEQfcTgB5I7QSPR2sYV7KkcWTfdvYuqLchvoVu(9uc55fZ(uyb4DPkawZglIDJCf16OK2fKYLU0kvhxUXkSFy3LsQkuhTd(nEh5rolQAw04oLTmDQI1DkF3qcEZ29R1LTPEVvMn1WFKR)HVfYBIOrsqgLisUlYqK4ezssYyKuKOKrihNCpedYDtKihJCcYDs0jridtuiQKyeHPtBisrWri1Xr2dPEI7BISd68Oj3e5MjnmxAVTg8eJ2wGw7ODstU1zwKquIS)kjvdtjMCRvoJHPOMpLejfVvGhraNgf30jWPKG6TgSnI3kdIKBXki32giBHufm)sY2IQlexoTXjVgYTqEn(rnAJ26aHc3xpZokmz9wL1JLumcPgjsi3tdbgcZa3KAj7cEZKA5doYURygSCOmrxn5ONnEgy(uYXOtHYpo1iqn39Ursy3Kx)7J0yLKRCBZbdmhtmaopmJie(wiVw7j6tAM0YCXutMoLIDrDG2jheNLk52P)7Dq)33i(VW0YG5wckn7Bh7K4VssR3pPny6IKaK2jDq6K0f5WKJq6M0dPxsFK(R88OsmMckMWCqnv1Jg0xBDnqiYgixfzN5Sta5xH86ov9exCW0knemrR7au5RCNABhklvDr7zztR6b01v1H6)VzesAY2ih1pQM0kEAalmMi0)Htk3misyJG9rNnMkm)m1juq7OinlwaHOwM5MVcePa9zacy6SrksuM(Eha6RruuWyzTbIBTndqmFXpbmFcX4IX7rysPZRPRMqx0WGLJ76MVcxAxx2SkS4KMWm6rvyJhb638pLQAkKc1yqQePUqek0zPvfKVTANOEuJdvDXifxyYks4mB8lK2eAwnmx)HK6Q5O9uBZXvj71n59fzU4Yg4u7r74OT7UWzBnk07Fx47g3LVOYjLnZmsRWClHEeXrGkgAwTrAWlPXdUZGXKeJnwlKwDpDwTUNvvjBDk44cjtl62EwAg7ANtdnBnrDZmK3l50r2j5JRvLr6O13u9MqtEKXLnKHmGgYhfZtYJoh1wedqPfKtZr(yaC7JBNymkBG8O(nKuNGCA3SWqZzvFJ1Nij(TcG3ZNL8gAcznGVczDHzHJM2cE7ap)maDBefr4DjgshfmmcIjIqU9DcVh1qg5WNRTa(c35r6TRo6mmJ9ywALCmfiV30ZYRpfmB2UIB4I8gHuTTngH8eBGM3uZafzE8XXfLKbM7bKLoVDHyN(iAxh(bXjb2ehFw680epIGs8rYA6iAgPjAgvW0eMpn5wp82ivmp08rJWH8)kXh12(zJelNPbTn81iIaMgeUvXmycOFY2yCz7fImV97QubU5siAcl3p)miboNv(CFwOU0r2VeHgy3YkIgBXp(OePcDOyWhNg)hQrE6xEsXKZtFfOfJbr2W9C4RdZKW7EwAUqNm(1tF2pZOH0Cpe14q04Fm74Fw8L2SnjSBAo3UU49KwujwM(VYgQ3BZNANAVwkqJ(pmtppI2iMYPacjmQOmA8f3A3yjId7HGyuJRTvAyidfAz6yuzV(9bVolvUSiY)6V3(6nW8mdlAxd50QEr5S361gjrS4JijhxCKPe1vL0(vkxvmPycHyzgz0KQQ6sLjVOrmLA8rqzNrMXoyq3bQzbNN((eaDCiDbTPhY(HZt)SdlSP9AkxDG9g3m5cV6xNM2olzvjoqqtjKmpLLt7wlzePqvQn8dsBBA1wUs3EWTrmLarNsa3mN2UlpzOeXMVSDaOikfXK2KiKKrnQzFdeU7U6nGwvmsKKq8CauogQgdybwIaenBG477SoLNjvIIT4EQYqdxu)EK81p0e83IDfJHZYwX0UPsMzShjFdTBUSub4pjwDhh)qE0mKwMVO8EZoOe5xXb7p7Wq6KwML(jMONop0)8dH)(SU78q)W3e(Bc3A3w5BZoyh5lFSSrJf07KJz7wkFFnAHwIVhKP5YP2cQRI2wqXPjeve1LJfscnUyK5OYMHNrYI2wlsWCVcPeLMpN4B81iuTFafH6h0im7hHHeMVG8Dwml9LCcHmgZdJQMmu2yc6WIAl1P2nMDau((TvtGVgASQLurqAgJQwf0uhK0tEe6Gl0NJWArJodA1EQD13rWMpqdn7LwVaTZwaIAaSjeIzIFjD4dSAosdQIzYZWSfcOB1eYXCPTfMXAS)iOMH4N4kqDgob1IOJl6vqjdOFjQr7BIAhvqPoQwCK3lQ8gzM8kPrEFRyn0i)VP6Kr(TLiVFU8QFr(aripqwvUiFq6GrKpKe53b1OI8HrTNiFeQQtKhmRAtKhkc5HPkfrEeuJOKbNCIEACYoMsCcMgrKF3T7(H(AKgpEo1qi)FOkySR8kFyR5sJLvZfYNOu6RabCw2YROee1jkFC(GKtFyG54Vwd)9w78qFpk)se350ZH8jZPKd53LCAOk(TzHTXfhMRQUZc0S)pGPUd5XqfDipUTcoK5S1SH8eK)qYbrTvodOTYziNztp(hG8PDQad5ZeH8KsKNkc5Zkr(C0e)5Tv5G8fEEYFeJW)hlr(t2c5lbJ3t(YK)05JM20uvPpqJkq9sYFMBYxLJ81UEYFUe5VWnHWroNBY8zhzM81Dt(ljFdY3K8CelY3I8T5iFhjYFLe5)xeY3L89i)1K)gY5H(U)woYFhmMd5VNJ88K)bYlWr(h5i)tsKVp5fj)aqKm5hs(NVpYpsI8VeHSqeY)6Tq(XCK)niJ)jsK)Di9)uoYpJn3U)d4T)ZskyI8F5M8FZr(F4i)CPrjpnl6pdQTe5zjFXiKZ6M8)1nX3NYP8dlURiIfhh8Nljlo3oKeyXDLa50IBdwCxLf3grslLl3IBtKkS4QazLT4QK8iwCxTnd84uvpXfDJLpDE2W0vuK)iOYGyXnlLNN(XiOsOpX3aQCTBNAlUTBNolUBKv52blwdJXYIBZUS42YN4kS4QYIBR28UA)IH315CNwnyEB)inouJz6VLEBOPCmVU2kbNBc5JwjWsu5sXet(9xkw2lCwi6NoZM(yCxaCpLfHLNTkIt2kYxHYk52bRK71eSseFV7LphZhJlhhZcSfseM7dBjnxc2NsdTtS2eAhwvFqHyXBFYeVYbAVDU9UX1X2V8W2inmh4Mm6fmCE01MWzV9KSZGkTp4a12ww4m53J04UwkqSf31VIqXFZxcb0FXtVyq8trXXltDBS4UHF5tHMEbi82yitaiFD5bYu4OljefJO5PZUX7QYdaYLaunGTrSSOEAf6g8bJpnBaSnoNJrGPFftsmoUZoKkgSFLq3bdTJGCkE3gPlU2ePFGAQPzJmHgQDX(UKJ0F8V16i9vos3I7wlgJFxwC8oH3wCV2sGOF8VvPr031AteDNJQhpXec90JYO4QjLfrFWvUciLCATFQvQMjB7tgbW6N5NwgvtG5)CzTUjVPlq4EK8W9yll4(z(P5N86OSPEoBR52TTSYB7rOtATtbJ(fnLyteTy2JHwBYE07uXse0)GhXxdsRQSh2PKB5WE8tYZEay(sWHivAoekVXL9AV37Vy4qwmIp(AteFAtXd7VRMJ6PNwUKRIZtTUY8RUQ4iVSq0pvzuAxETjIwUMbAEyFT1)uEMYjIErYW3rHYUlHgmL0Q8ldvBqamPsabtwklZ)9wyD7Vukj4xawJ)7TqEZVK8L0y8VFV6IPQ2tZy(gf0GjOykiFVMDeS591yJnmheyFAIW8Hv1R62T4UwiSxTu2DcflhEulUATZalUDjHj2IB3wC1XsagzmrZZMKSbBvcN3G()6r2a32jmU1sznOKRrTg0Odp(q9Qp2r1obzVvqz3CrA8WlhnM2zooRdM)RFCYJroT02WyVKkvfLUHLm2LDMW5ulRwR7kipQxF922lRPJGCMFJi4kYCMn9ST)kEMv)(giCFVcXEPsLMF9zBpp)6yxWMlDS1MmiTLsjWehwPREpYrUKRH1t366AyTAQHL2MXd)2ECCy6wwAC90TwAnUsT2eH3ONJpzVD0PqY9L6IocFzTPhE2R6L)ME4xkr6xaRB7ZEv53Pdp7vDblSo6AtO8a(dFS2vKJ1PH6LoOSTW6ZEY1rXlBuCz044SNmpkgONxOO4rwBIItnvTD1NGNA9xtVVYqG8xUJ1HYVCfi)L7i)gPPF5Kjf0XtKm9Ee4cgxF81M46j84DFtnWyTeTZexYvL(zBzDvPF5RkTdZVFpllvNF2wkTQZ3ZAteTpZELBSR276WnlDP387K1r0RQMF3y5z(DsPr0gRnr067pCZhTRXsAgD4l5i6N7lUoIEvfrF3lle9Z9flnI(UxBIO9epuSXgkLyhj79soI(zgCDe9QkIwAzHOFMblnIwAnQvo6y)T1AZnK6eDCPxp6N5KRJOxv1J(ylpe9jlnI(yRnr0hUJaPKorG9fwl8L(fz5bwhrVQkJ(elVfv5bknI(eRnr0gcnF4EhZN8r7RJl9YONCDe9QkI(oxEYONS0i67Cn6md1timATz0oqMl96r)LsUoIE1uRJfCSo44La7YcF)LswA8T(A0n6X(JoK3WDiKwzOl9sStTo(E1eFde0LNi7uLgshzTjK2FpYtn6uTQ1KXRauc59SoKEvDIIdV8q0VNsJOhETjIwTPeHUhZGcbuB8s)eftSoIEvfrRS8MOyIsJOvwJEKo77yn7PMPQzIAsDjhr)OFO1r0RQiA1LfI(r)qLgrRU2er3s)rdo6HpYWEo(GxYr0L6OiVoI(LHPpE5DklJT2erp2jcprOqhTMJp4bU0VXLACDe9QQmAHL3gxQXsJOfYHO3jIOb8ZvUZ5O363S7)sjg2EF0Ry7vm2gb2iA86poZnc5xqFM(P(Oh4PI8gzTIo5e8ZBU)GbcfO3wdW3txHc1vVDmx)bcN9zN3S6iJYTwzbiskC822aEtG78Ibh4vQrcV5Zj7UcKfdygqUQgM7EsLzqJ(pq3JfTp82nh42AYnYjHKOByjU)Yrg0L5vxoiDiijKB8kuhi5NQZzWlc8rmKJlgmi9oGgKMKgkmKqd0RZBykhBSmzViIL0XliY06Ib7rmzszYH0K8lyigNxvHVyhkNNd0KOYjATPtSxpvoGwCbtiAOxuzivZUpcZLGjhd9Mx(tkm1uX1tlhNFV2VmgFpY6cje5dketCcHm8bgyodnb9XGpRRQBZO)G9VHMrET5Pbf0(wK)mNN(Q)KIkXX73tV(ARnwI7uoECrf)(7lCNABPG0GXlAp(6DaFDpDubBFpxNh6F6ZI)(J78qZhe)1sNh65O)Ei3ZG3zTTNuiHb5fNjBk8cDXayae29(Kin(vaPwTxTQw13XDqLDfuwjU4K5odTly7eackMuaV4rjN(U2urPWcyWo9gyr3ItGC6RzdLkgxTJy855kvmEvoIr)xP3wQV5sfRn6iwpsPIqfoIq4nLtOCqDrH4zk44el1s2OE3KtdeYx8)c(9FFlDEOV2hb)9978qF5ha)99ChnPSYyIXLkS4MgV6LOU9Wt7UOS6RVv4xvNnxNJB3wCXKkU2ghiCfLWV9oGF34)ouzUD83(YLvLld2ybzaY6U)op03Cq83PkBPwroYIfx08dw9yWGvlK1Fc2Ls76a8rI8ysKd88ZgxE0rLJLoPzM8814Lwpcmz87zh(cDZAOqrQV2thynObJdKrF4ZeXVUAs2hFCGvLEHA6L(kvWXmAJRz7m)WVrf3dsm(jOOI5yxwU0RUBY3yb2BdM11tnP7)J3mZhvmPMmtuqy5uIO7urpTyD0GYEnAvWhPqd0LxKZDyyF)8dFRAQq4GymQUU8(ld8QZgdnQQAYQz5Y9wxEhXKTNH6oVt8MJVC5CiimzHKYtrRr25IZm3qmPymthbqVB)nki)WF3Ph0HDun1f15SssdZlnm6MpFrH1inmMd3R6CbDVzBp39DNVXqLlSK0OEtNkQO(l)MbnZ8uM2bnqVLPHqdSrhfenSMYhwtlkHnNpWMxuGTKpWwCKR37I7V3ZE4dljBWBiPMozC(OqdasAuSdPoEVWJPP0464BeDQtyFrD8nbpghhnVo(OPnPJ6yOcWvanAaautm)G)BcGlmrD8cg8c8tOQpMa9UBNVRx)4I8gtiOPHJyH5i926Kvo8MQ8PegtKx2KMM6zWCBXvlzVi17PSAbfxcK4saelz)hvVNY3jCVuniQiktKqwvjS40MCdF)C(rqH64PxvE1rjfm8AD81xF916aNpkVIkqlPUshOVa0JqbD6n8f732qYcENFpIOY4oDvCWNfR329NM)ZPeO(kk8)vOacO8O1j0ndvD)D7B4abhju)bATlFD31X9fUR(6DKw70xVDeOngdkGsYh)U6TRWvZQP5DVp1B77IcXe90HOzHcAQP2SoYhN83uxhh66UQRf(4Qf792O(X36Yj9SUCImHChHnzV80RrU2I9nC5bD2XfFBXXBrYSPfj2kBGcSBaB55KEVBwWoA00YbhgW27fvOZ8Q4mVWpuiGZXqe5BVf6OUSB80)FHj2rZn7J5HSv609lH(2qrEnD1OqToJTKdLxVjp6bH4fsM0a9Rfg5IRaFkQo)jero9e6zCcHIvpMkK6AW)wkWHyzI0eAO14GivhVdMIO1wuRJI5DMLuxGf2liuFrKYBNpAXFc6NkkTnw60(gxuAZsGQTYLeDwe0H2ePSDobblgFrXV2q36C2tXOrfHjS)AEia7D7uB)sXDXcLc9z7WulqLJS)WBCKsgqwNvuwWefYHKXQrCHCSQr6C1uNJsrcmlfyFPq4VKa4cJqwFqPNIykOdiq)EH(7pB9gKRB5YcTN9yR0ubsYkdxKnyfPFu3swBvYC3XgA1eCGEdms)9neiqDG(BZx4a1r)s4H7pq2puhkaLo)Z(RmRUL4iEZr59stNpOf3gol7EHXh13lq(OOfdSTnG7zPZqlVx5H46fV6Cg66S0azZG6yCOzMqRcCQDeL6Go85UQj5M32rsOyKe98wvLHBgAGiDFwT0jrNnf86mupZC7apR2dr5hYY9MfMuhtG4XS))dd)FmfhZ()pCwwCB6flYOd4lBgGUGpwsq)xhn4ARnBUvYioC2ioCT16OpH146Wn7)h0()739muVkn2UM2aAWOSSO08zs3uVPb9zP5ZrlWg7KCDUmBTXftAkCm7)FUwlJ1htvLz9AE5Bh3opoT8Al0N5HHcqphn2MQ0PJb0zYRFFLj1Ot)Zj9QPARSeoss7iNpI7H3tTolWC(PVs2PbXK1OxuVu2qg2z3c5vVrMhXc7nKOps7qKyDczCJ2Hkp1N6VOmKaDizqp895Z2Vr9euS(tkKCOLQtYUpPuaWIGvoINDDomxuM7DIlRfYyChmSrKYuS6GOPeWFrH)eG)09cVd)ff(tWBHydb09IvqVWUO(PsurT61KrN5yn2pJEWYctm60eZMmilyr0qggtfZv0)w6P296T23qHnDDpy72zArVFjIz09aSCoLfMOurnbg1efh1OLkQrXOgT4OkuQOkGrvWtbSYKR9uBXIldkNYIBku4e0JyX9wDBX92G)Up4Vtc)D)AF)vihkO5swvORNkYLPOqbFQE2iifWNTigIsMeKFAx1mKOWy(GGncjmUy87SA7j8yu9DFN5sLC87(oRM6N)Q(UHSlFUz7eslWZx(Q3Of37eA2VxoNMU1I7DbZ2Oe2ZTH52)(8nWqNyYAgSZgTDWB5STcAOx7LWW2s(J70W3Fr8Ik7zZ6v4yE6jVrf0zMcVfMVNd0nsK575i)Skj)NvEQDq(6LYJQPK1BuvPtR9)993RQIi5havcCDa(RIG2X)FjcAk)VR217lwm54WWPayVFOBfFowgQb9lEHbk2a)0bdXLf4f4i)pUXfeW72MjNwHBG8avOT1eOZ4eY9(0X)LQsYSD2xWUoEF9g2x3oh9C4SEj0G0pkLFvD2jwOCvlh3IRRfY7g(Y5MS68q)DF1V6FXp)NBrc7(8IkOABDyxSsKA1Uv)W0IMsqpoFBWmKazN(ZLf8TbLKThPhDVCvxzLlql92C4PmrdPVtCAMCE3ZfWVkbn6l6hQCcVFFbl(7LiY9iexeTjDxAgILiYRKQr7G2KThmqa0EaM6Yrtt1pSVE7E4vyoxzjMLSdf0rLKV3zIRocJ(gHCTiveiXwCNwISz8fx0h)iSf3BVvq9(MBoF3bZA9rzkPnNAEiKf3drDCOJK3BGIlMXhSsB7RtDzOnoTkZhjzSJd35H(HVg43T8d78q)dulN)ZGuCuDSAJ8A7Fxap9CXfnIPlt9gQKhCdtN1BWff0)woDk)iJMwNHLG(fXKGk9aM1e9aWXvHPaPOAkHViBBvh0)xIKx1rrXA8d5JVg26neJTEd1E)KdP9MPgusLwI40bvNWGpJAA00omJXWlqNQiMXPenLuzlCbsHbPVIYqoRNlcWlPqReLIQWn6MiH4Kwj3l4KjOM9GoZZ6jpO7Omd8CqlUFNz8zede8b5ZSa03(rVJjMXI7JqQikR2GE1mm0i(rNGM2wPgtkKDX3dT(bcXgviDsZnCEJuQajj7WpsmLOzoLAgxFy2c4ODl59nQ(PE2kJ76WPtPnGMpDD1jOloualU(S46hxoohljKf3rLS4cAXfIcFWvIzobBp0ApYkN8Aip4FeOa)GWWzdzXDmlUHd2BGbdaj4oT48AXD3OJbB(QWFBm)cQyX9MiVOf3ifSek7WEviQ62zl0GgUyDKtxLhYhBh4LJ4VVfNOTv0T4gnV1ZT4sKZW5BJ8hIxcP)HwCsSGKl2O5wCNWEnFT4glV1YT4sM3m5BJUCATEQBGCy9o9fSN2hOBCLr9Jyc307MKThbnl2SzDYE9PeH62RWiy769yoPo2INIz30OFrgubuH5fvPnoCksrORI640fufM1LUDcJ65aEAE)7BMCX7vr6miD5lXBFC0UCZG4d0h8LAHbL1tt9Xw9NuirAyMwPiFdyQvEfWlNn6fHYe2tQQ7Rj3KQS4Mm3uPwrlWAdZv7y(gSr1bQjWenzX9(DmkCNptnxb93smASf3hWI7byJaVnCDJ)GN6MHbCT4(qfoWkoI6lKHUa5W4F)Oi5hAfhN97QTLoawaHu9kGi5bscQwt(xRLnSkGal14QNTRE7fMmBRb6nCGGogITahsPTVyCdKFCDxbDG6hydeVqp)dthbLoo5HDo6z2171IBw2WL)Tn24V6vCfaVbGBFi6oKim04(OABnNwrqNhTOQPwlUFxyquqebkMo7qHmH4LsIE2x2lq1EejYrT4(dS4EgOh9tKvk98ohGveG6FY7WI7JzX9XT4EqS6SFid(IA1KxQaUc4Geg)c631aDTN8VTNqygzX9SxpDr7FVsNQnqoH)Ud0EXlECjKuSizdwC)r5fmGQuyI)g3DjeieH0yL5y4)jLKH)ZlLFXYEPz4F8LGHhVpI2A(naXxkltoLtIUNh(tHN)Qs2BfIC79blU)Ixh7MiYpsYYYAAX9LJW29eav5Rxml4ww9ybHUKcz8a1FpErmCW0KO(R4YZ2DJLyZRq3pkqoMxpw2(yjNkRLH3AogVfB3f4u71mmTxp11Tig8SffuolQeGSxXz2pll7PWph5ou5y6gNL3HPZtz5CyCbfWmFKLdZmWzXyJymRidnW4I822BhkVOhRphFOnJjuCFulolGxf6X)wiZyx2sfEapmorlUVnWITfqK6GT1JYWjAEmtLJaJeFQBN4637AbTOntcQxa0jh7(lTSl5u4Y6QJ9JAxzX9HZTrAgmQgOOGO5SuBo0pAwmegbOG)UCWQL5(gdLg8BlHm952ky(qm40zDrZqxich3bfoIAvaGuTDx(68IC5XzWn6sdZfmzZrpIU8WX3Vm5diPDtLihCmJmQyNhOzOJq72kFzL3f9sNoei9IIb6E(c8sY38vmFb(Lx3KpSeQbmk0dfXbDVpb25RB7WHT4(oZvSZfEfQSce6oGWCxwfw22BoswjyiQIIjzUVJsWcWECZvY0XAXxj84MRdWOUWnvxy3KhlY5l0bHtEUss2Z7wMzsr3zuMUqubJ4LSpiv9gZlvLUri3EKZIJ)r1YroUX7mO395PPdG)BZne0Zb2xtTqF2d9F9s)3gd2OxVEBmO3g86z)ubZVAj2IsI7nTR5GbBA)EBPz6)2i9FBHDvMVhlU6zsHPYRP6eTb762z(zOUwQtO0NsYm2kPX2)AKazLGx0MxBohuGf21U6Tp(S7vSDTl79i5S5DJ2N8AS4E8Uq(xy0V)Mc5CT4op8X)2cymboqlU)(vBMrlUNVuSHwC)d2mx46H2snD3sF(samxwC)JfWczX9pvidcqx((yU(ILJvWI7haCbwC)qBWFjh4M62wEzZa8jVyYayX9ptEolUFecTrpqeKj)loH17yrWAgICH3Pf3)Qf3p2I7FZIdA8)7wC)ulUFMf3)HnWnlO1I7)0I7)YI7)2gDwiG91jvk8Qf3)tEO6VItLnYFJ))PPtDPWTY5gMJXxs38nSTAC(nRjRcrBe2W9SkS8ZbuUJD)youULlok62ZPoiX1lEdKbh3Fhkctinxi0Q3jstxaMZIg9HVv1uPeuIlPTLELn1v59RQAyAWxtBhPwPzdkiBiY7lzYmsABoOASXen5XjLYcwBBbfWfBhnNVZ9QjWgTTvL9h6KxnLTbvDkZj3g56NYY1gTCD1wUUklxBWYvfwU2KLRkj)Asi)dYe4y3FcSrnmN)ooGGQYXgSRUAG8wKq(P73ERkERvsER3k5(QoyBOcbVnoCxHoDf4(6C70TL6rjVtYjXX)z7nuKbkKB6we9D4g3LO)gxn5uCK3fup3RBYBhMJ9VLBChI6CZMI6C0eDJDUeBu03nePL7of99q(Fv8ox1S6UdwQnD(2FL7MoFYJwJzOwI2I3mxY305FNhC9nD(Q5XOazpxo768VZdwYDDoK8CB789EXdtthdUiCT0l)dLSVJPMrP9UKtRypihW4ZglZIRHhEloa32(1h7h3y(hRi)JxD(hFv5F8AZ)4wY)4wZ)41N)XBi)J3y(hVP8pEl5F8wZ)4Rn)J3wwMrQNlP6(c6KNJYKbmB36bxAVls5N6k3f8mxx8QTWHCcu)txjvH)jTvIrFiFbd2vFbxzQYaHUZRpYncr4gZQpJtjo(EYT4cyzGU5nCE2O4z3Iy50iz7U(5)zaV017qLKZ7tpMaUjevP77dTRdn5OCcfvDXqOM3uFXV99h(2TnvbLFdz8UYnj8nPSCunqS54CT5SduuedxoLpAHfTLQAz5AlwUQQ8LR2bV0uU)XN5It5oRFrDdr9XKvsSKL)Op1fRYh3(O8TNwpZsw(9FxxSO7x3swUV9h5YSY9rV4uUZmKGoFiyg7AlD3CGlof)CTkOOihf3ySIlDfq4Itfy(agXe0G5sOBkByU0vHuxCQclmKCYK4AkgkT(4YJV00H)rPlovcTT0H8OMzxo0Efe0tVK1Jx435IKCNquRGLsmz8LS8F(ls0HzaEbfr04ulnwq)Iu3W1rbd2DdTRQBimMOYswvEn)QxCQkB)k)tURLQGXWVqlzhQwZS7cv76REPoMYVYDgJ1ikPfnGAkHdi709hFP52O3C9zmU6oJXRA5DD0BwMzmEvRnX0t1vNksT1AW8ZwCDm9V8GP3WYdtNPmy6nS2et3VONANQL(pwZcN4soMEH9UoME1ftxXYctVWEldMUI1My6XNWBJJ1txhFIU7DDm9Aam92pl1mAMIP6viLyKcq4ayE6SHWrFkusvZxfdWJUQVxRndadg7ITvIO4)cq(5kcm5riDQvDw79XN7ugutG7jTSwkCd)HXQwsf(XuWytyCtLKnztRnztY0Wjo(as1g(iTDX)g58NKNnbG(l3lti2E)uigGjEkjKv5ZLZgWpr0ouXB9I15EUqUGHMZXYbVCgAy7CVQ)8Ya6RmhO)GexDxbzWtvL2T4l(4ckM4vod7SiYVh(WY4ndKQsAdjTT0MOHAs2r7KfbjTBMUrSH503kEOy0tKuigMc7GxGzXd(UugnnUVIK0ETSdHpFp0dB8IlgfOC2rBck45IHNM3djkO5Oa3kDf0dJhKm22SHMT3qXEF58XVd8KpZ3UUOYuzY91TmOqknEMDGT)2C0Boa(2fhxuxs7g7kMyu6X0ODCtMBMoEwII0zzjJTPIL0U(qXqroajOGSBHw1LtHx0cHIPMwpbeXTDe5KjPBxDHysYk5YV5OTOqPJftfk4TztGczc14eMszJ1fR13)HVolxESCvVwva5xeiEYIjZ2iSCDqTBXPrB6vmMUQMAszJCX4awUEdwU2VLRgSCD7wU2JLRgTCTBlx71Y1(SC1SLRwSC51YvtwUQBj20atQou8HpwtkEh6el7nnWnEHUPb24L6nnqjwG1Bm34lN66TplCvLHZI7ET4ElfEu4M2ItJDG4WriZEkX(1Hrm)nag8FllU3n2vBX9EOBMZ3BUJ0ijm3YE)sPhUV(PBI0F7sTATnNDal7HMw04w09(0dga7sHbRqYQ9awnmx6edf0tVbmgtQjC4RCNRPn5Bp7zp891pEtueIhpzp5p1C0dzdG34Vd(gQ3tZ2xdkI8cmgtat2fef(PuvtXxdnIWNKnn4zhOnJA5BvqHpfEQ)YyF(XPNrLgqds7HEROKsvxeq2q0GgeVKGECG1dVAtm4tLoMeVHOsmX6lQoPs32JJCmA9IvT6uvxEkv6bztt1q20XXVbxEsfE7Rmm(AAapwZs4PTbdmP4OMPqXoA0JYQhhbPJsiZfwTLUomSJ6WGIGGQyxO1atvTYubIQAAQMYrna7PARVEF9H5d0wxH59hO7(gI2LLVUH1PyQa5hVhAYEOnRn7Lmb5HipnOYWtqE6Znn80CKpl5X4jpjp5zo3BdE)Ztod5tFU3og25EhKVW5ExKZWdb8yN7(GxpZ5M(CVlh34jhZXj)QEDXeqbvp9iwslOVaKQFDAH9KKpp)5of5jHm6jH88TdLhuSpneJpl5jDKFdxI8tIEwUkrgsM7CVRZDFyZO8zysQ4BkkPgp4HFDr4A80yxZX43l70aNsyYAowDdxBT0Y70zRXif6Pjpo5ZrPdttPwqbFFWhodJWDgmCKor(muI6Jbj6jp37HFX1LHFjQldx66YmzBSxO1LsuteMu2GrtkbF(UZr0WQdIR3nFzy92v5AiWhZNj5aDFo4Vpnu7G6dcQUF8rOZdROFUZ9BcF(PjpfpTPWAtoGmq8R5C3hpGlPGqeNYtB9pgsbqGk8jasZt(Suu8ZqESAlUbp8lvdE4xIg8WlNg8W1UYBV5r0R42lw2piKhFbkk8LI9fVaRSbd57XSjcyo9rkKHdQJaK6jHwYtEU3n)5p573ZI7NCM9EZN97ELK9ExYSF4C1(HDq(VWR9oP6oZEV5Z(DVsYEVLj7T5MHUhiT8u(1pZ5E7iKWU)f65OrSyjHiAR(qIMHfNSvBX7kYjlBupOJOwZX8uh0Fuhq0G)8wB2gauJrHQVJCOuYtqXNOiJ7NhRYaa7(qjSN7Tbqh84XxQXzWtjgUFMPAYXmxevVr8ys9rbvHww7xQBQetJ8hW2YuWS5EHS7AQFueC6H40kH5hwWMMYl)sSRPS4EoqxQF8xLDG5WdU1P2ITEM2tzgMk9gYUjOEQSBcQsU7QSN79oNRTa90xVDoaEw9IO3VVU91wx9wQTA1Njco39ZSPFANz3hvOwZzpExppBZtFT2wT5vlnB00JoAi7ZRW4K29QjAAXDn7iyln2Clnqv6LTJURK0)o0Ub7PlyROrqC4sr10guLHrfJBBhB31gA0X(Ng0YMEBR2Lc0fspx9U8uUnF4RS0n2Y1V6QVAXToANnxRGHwAZjDQwSLl)RcO6BU0O6xihWo7PgTe3Mdg5p7qLhYB8luiVLR2Iy5kWsaY3ox8)8Lfk3Yv7u0TLRoOG7d4PXM8we42Yvxljm2Y1Hz436Vmg)k2Zj6SPJOFK2fo2Lq8RLRUlpo1YvpR1HPegkTPd417kgLEhxgJsR5ahRZGEhUf5bB)chLE4LgLM3Y1rOwUocZY1KVc1W1UDy4A3onC9lBnokABAh1FFHd3xpfIT5qJyNfz)twPOwhCcV0NB8le8CZE84DFRu88bVmgph0xgVJESbgsFsZl64zPln4zlxbxBHL96D)nTsXYVrkwUH1kyzUsbLTHXiIgaTLgnZGYpm7QbGbLBO)ehR7UAAGO9hVm44hXgeBVva2U7h6pDTOa61Aa697XttEwPa6dS2cqxAHZRqe9bQDGE23OTxR09KADe9RGq0r90GNMBz)Rui9B4Yy9nm9Bo8WT08WhB4Ex1134xCWYvP5twDHM9WB4(6FTLMkn0K3vSG99Fzmxq7kJ32K126(2NwNR(264xScNxsRCez1XkhB6zo5kZihn4DflKUHlJHNXd0rRjMQ1MBmDG16WZxbk0SXgBP5vkQ82Vmgvk1CGdyE8jsn4r9V8qLoUjI(K5UjIoBIKQtioPPOUIqsYPBFo89ryEhmYNCg6B4TbQUVwdHBTUzPFzuD8QI9wZDdDFWsUxfxiFCP5X8Th0xpbcfO7aTgUVGxa8i3sj4rWRpZBArlUI36DS8kapdBtOs16qB3Li2ML5QGJd55EHmLSemZFlKvMR5bJcziVtBgsTBR81G8xqCA8Lpw2xZEzVPi(fld9BAzZqV)wEjzOTV8OOxDTXKe0ta09cVjPUYnrEN2ho0cU7OoFUB72wvtRykHhh7cGDfUNCZjRypoM5CKlZM5CQGhpJPEFXglO0YCMZUUY9Z2X7oUGKpFHoOgYPRA)2BX9pvb79DBPl4vO879xYmp6P2mExYDXKNBBF9ixqCD2l06zDUzSxMCFJY2LT4v7gnt3oJ3si5eczmqhZdA(J2ld7uJxoRq4adEphDsZyNi5rxxHWvBfc3xdT08kETR29LXOsbVhjtnT7ZFJEgCDu5QnQSL95XZkgvU3YDg4UXlsNboNiPL(mW5RmNbU7z8(d3F7d1xSgIMvNaxKgpEUb5JI7MnX4fEk3Y7CID9RLpK8khavYhDAzLyQPIcQptJaQKWNkR3G(2T90XUGaRQXfL8nuWmx02Sr6O13u9ufLPEmeQFy(7s)9x6UZdzDm83J7U0N9oaLnU9bq5oSbjO9vk643PvfZJgpcui6c9r9PhUVyPkZQ9rUlYY4i3zZh25H(RUl8xVoiBooZDovdzpwCx1cOEcXfrma1tRlroSf3Xb2MiK2JAIAZBoBAfzZatkByAeX(q9aSnW0dAUH9TFkldEKEq2N(P3ZSS8)BEwwoByoaKCGH8RyFb0cCLmf)vtRhtKg4S5FM0X0ztJLR7JPwZSTsHz8DRMG075d1FGU7EK(deSR(ARRwjDRpsB(6XxhbivmddoMunHf3xd4PF7L4m9TVL6GS(kxMyVNOXH9oWWH1txt2dYAbmXfWMUCzGTCDVVCzDTC9wUiWRA56TUoR5vz56T5KBeyhSCnDXCGhO5YZbA56KfY3z56xhgU9(HbcD9oYXDz56uKETC9Bq62Y17eMBUR3fJ753QeCpnVu3dQxgOy2X7rpzGydfUTm(xxXSvBfZAA)77aR4TU5LZOYAepq3DQ3RHA7dSoQ8IaQSHv80f8EzmQ8EQ5i1C87Pg1j06BDu5Q(AT1S3gBCLIkB6Y5dJH8KDmHYqDE4L72cUixlitT4MDOw86BB4l2gSPL93WkgRxh9Mabal)))d"
+NUI.WeakAurasDruidData = "!WA:2!S33c8XXv596zwhSTscXw2wXwXjzrjXiPyllTsALKjo(QvpSKTE5Dxj)ip0o7UZQzSwTZ4zMvVcKaIuQlqbQak0BBtt1LYJwOLiO(cLMsWneAlq5uZJ7qHBjyGuAjfU4cP8QK7335mZSZ(sALTSDm4n)I8UZCMZ5mNZ3)VxNVZ3Hlr5tuE8Y1J2CDn0yDnuE8tTtTzgmrcDrdoTjf10LvsD7lkNkHI2ecgWpk78cPIjPO1TMWeIHNrvmAOoc2vxdmVqkzwj8hycb5uDhWaUzGukPepB80A07mkEjnDXykPIRpNOGoTciLDg8RHm0etnMH06cQBiOz0nzdKYixp5gi3i8VV81fnHCkzDP8USUsATyIrLNqvrZWxATKQ1kzyOQV39SNPegtPozL9mGGYusd37U7ulTC8D3HGHqSKZOpXEAOz1YHUIHMsYKIX7qsozCOlCWfOLZB)WlX5zFnOiRv0NN972tp95S)MMG3acAlgvrlUOwhkjv0oihhNNfyxOR4JjQUPqNmTGMO3UtNmP3JijBigvxCcyWnAd1vFDn00c6PJguCmyasVmnHy4iLU)aWRRrzKBQmYglBbdLywZfR)pKyv1HKNv86MFmnL0Q9cVfr97R52ARTZgvi24X1uuzDfpE8mKN6RR5ZlNYqulLqYryvZBpkRsKoh7Fdy9uQBmqs5zNvqlU3WkkjnKvpdRamsInOnTfTruCWT3oNF8M64G(hjXGtSycKGaMeHHxp(GXMf93E7DOFa9oeoEFrHoyc5XkBbCMxM(cwM1qwVPGQZZImIQHuG(z0o6AGWDfSk54Q7Gnk3rsbDDVdb9rV72RZ83zfsBapZGQS6lqsfH4Dh1qiPykJkcorAO3xwWy4Jwb5vvwaDy8I9fvXy0VexupM6yN71UG3LQzkdlq4PKnIjvNXKmIj616uwpg8ku3yJ5(II6YJLsmU3OZ4nKbq83TqmX(uIn(CgAYJngm6x5oNpDkRFuMM1xEdZb9QKj7nUEzKneuaOQ8finqaevnPWmIAbfNeEPI2JOqsdPfIlgnDIei0rRNU6BOUhUVZbuq0IecUH80loAhThk8OHc3EWWo3Ainr4wbdnux91xWuWCLEzlOrP6WAkiLqkOEmy4ZtqHKQscEMxxmzc6ucXF5tU2xt5XE87)u3dH)(VXZRdGTEMjQMC8WcrtkEQDPbvIKIskPZ3TcGu8QKW7acgP1eLoB)cPglPO3QdikOvJKVGYQsZ1hmQaukIsbckmUOearsRjpPqsVa5GHCQyg6sAbqwfAJlDgRkGoNiPU1qgctOkgxo1yEdQiOzF9Y7gQXKE7qsqBm7cpFVPsjQnj2qZ3NCcXOjvuMqsDZDliQjdasznSK0husDJWJcmcsnMDnlD2WsAc6sqrW(U057kwszvD8r6lDk4cQBm04iMoaRqylgayBmH0zpcWlX7b0uMYqYRxPZewtKoKG9bSiPtcxtgM3FL6axbTzKuRi)3kABohWCzC9XLtjfnmqSNsxkyOPKvH3h4b00tdVRWxNsoHXeIPIlfTRuAcWLcITDsPfD9IkPwjBgbAt6dKseO23nJ2hhtYE4J26lgsysO6yJgNZ5XpamQO6E4iKssC4yRDd8pNvwe5yoMykrgxFPfdRjK6KPLtkBmJ1qt)PHjyCUyo81ibmUlTaTs8gGodTPSgyP9LZ1fivqYRqk4PrcTfIjI80qI3Q6lyuvGdlqO2suGqEQbtPftcOAeJtwNFY6ZvOb5MY7kBm3RemP8eYgBImmXpzZKTmVGwS(OYNE0kwiwADdLjWH4P3WJNiDkkl7Qtjo1qk6mUB7YlYhFsrl261uMx4ZU3nmpOB4fEoVtkOjJihD6DsQa4oVjW7guzQ(Ww27(82k8eEPDdK2rg4DQ7vofRyyL46rNQ7GWd0OF8jMsoomobpHtbzpRRIlrlUpAdijkpMKrXkVvhpevMDr75mr6U66Tv4UUUt14UVhI23BkR(EMsMFNNwEF(ZUZxWhWQ3d81l(OoEZLFq3UkC3V7Ra9BNMkVEDFfQxxGI7EyvvigYqyFEPnI9pJkAmLOyQ8AcqAKMiLw8yzEYD3G1GqH(KBdoDhkGSj4PQpV7WK77Cl2vNPGx1qbecdx7oYcdKPgbDj9kVlVmHpDcYzXbyzvbG8R6SHnEJRqFIm1n7HGkpZtxh7Rofm)Vy9Oktf2QN1qXkd9VhHoz6UuUUzpS5U8VBS0AihiGuYz4iRgqgOM8Ep7lhuUHKyMEUtLz3dayD(30PhiLZDZ6hqZXMhw(Me)4AWH(yzvaXK6Il1tKv9N9tMkEH7IyvApIKd3J7ELnefAjhIY5Uznj1WfYO3DNB3TKgobHylXG0Ym8MDdw0X38QMShN6BjhN6BjgN8v2k5vd(Dr6WU7SoFHbE3BirdgON2FRotxVMIwswNVAxVi1Se8aCXad6HvZQS6y8TVBBwR14DpE95Tw42wVK7UHAG7wTfFXAl6ZvtbX7UhfbYT8jvMjRofkvodx(Dxa(55cFYUb8Tuna71gBI7grf14QLQfEYLU1k0eNJScRVC3fIRk0hTU99UVmuo51nZrUtrBt3QyDFYpa8apK186USFvFnLz)04)dFiB9X3f5yKKKtssqUpsAIb5HiJrEeIg5OKyeDYjiJtMI8AirjVAYOK7NCCYmKjipi51rKihH8AjZrMMiqMKeNissrIqKjkKhM8aevYSZLwxKsJhHSloYUj1r8C7KkPoaGClKDqQFXEg7qhk8j7tR9WJtAYJgZjjIsKwlJufylp52lBEDdr12rlCUDafjGwdYn3yOLvOMTb7K4RSG4eI4gi3X1r2ePCWWysfr1eIlNw)rVbYTsUTaOoVr7y4qHhS)fsako3HSwSKIrivlrc5zo4MHWkWdPgsTWVmOQLZrU7nmp2ouy21to8zIpdywOCmQLGbql8afH3JhsypKx5BN0yzK1wXIjqJ76cnNupcXRFYRWYdfKMj(xmMsY0tKYQPARBYErRSj3d9V7J(37f)lyDjyImOwD7vUtsGYiD8giDcw9s6I0n5aKEi9soi5qK(i9tgGmizOYohQMJHqkdWuAdfTObBVZEhoe56iVmYoDCWb5oj31P2dHNdSowhTtHokV2DQUnOTu0eT8saTR3LMMIg0))9JqEusfKdhavK6c2qHZpUim)HovWiioWgbnz4mXuusgxzQuOdGKwaBGquxiXHekWugqamNDzIeLPqOamvJerbMfSbcFRAmymBV44rDJaTw7Xpby6HyCX49lmT05u1ugtdSIJv11UJ1WRUf7knS40gDkRJA7gpcmbgKYYsaiqvlhQPoSkw)kXHEnqQeoVwaS5eT8biIpzl1xDZJ4F4PMulGqAd4veidrsJfISyCzD0hfOlO2g)AFLKgpXodgtsm24(jDCDZzRW9ckPSBXGGz(Pf5SmqtV2kMdEnuf1mMb9dwDnw3yjvMANKp25Y8lQxcp9zJM2Wqj1GtkQbn4ojFeOf2XAiF05KtftzIOcgKtZr(FxzfKpg5JZU71r(OK)sYP9axfQqYJtoDeNBOUv5u6O3sIjJCqT9WhT01IL(dqo9b7z))lpi(zQE2)ZQIFEepEYRModZ1nPcIVp0(GRN)79ZHp)I13Z()Y4NVYDdFzRWNT89YPE8q(Ob0LuMI2(NaV3hNEVpg5VICAYNaFPEC4pAYPqhbkI)(dG399aLIYj5S2t8u3deHC7hScYgolmgIoeeH0PINWYxEJgZXnLwoHBurGmf4xTH5XhGEjlhdo6KY6YWeyKZA9BfkxwNhe9QMNNBECwYXJJEodqiDa7RirVzFYPe13ua8RsKnObnd(15CMD)eNL(vj5yJJ(LWZI4ppMLZgxGwduRV3k97byoVKwZHOUSIw(JAv(ZG)OtlNo7HwZDRjEY0IPInZqRT(6818P2U6RWaqiJs)dZ52JQoQH8eIJQcIbLrNK6rD7fOmSVeelAC1ntVhIjqFFhJYknq7WpxGYMverHbgyWb66SmhCA3dpRvDMYG6gVbhoCF9oqxQLtVSUKq8mV8Q3zX6Ojfhti2mJMiPcmkFEwbKNwKXq)1P6Typ3ekXhf5pg5m0BApdpVtFki1FMS7ISdKtmdXpRlpfmYFenb15oI1xohRlB7PWaTpC4bvVTI10SFXnVZ9R6UuTgACEF3ORbHmou36YU8tmX)c0lLHhjJWcVOAnfRhyjKBudjGZPeaz4YAup)ji0p73k5PIqA7fMhORhnLiGaLyc0olEbvrdG5JrsrjuDGrrjbri3ZoHBhvxgLRhSZGd3BNK9cxQIhkc5N9qlq5ymEkaTU(hDeTzvsj2BCDEY9Ipe5N5H2oupxhjGMssr8b16S9(B)aDfeEEtU1CoRwYQwIq5PZEeyikoRtCUS)DfKF23UUaAG05Yu3KRfXziQNZKiT)NZehFAqFHudMk5mrqbXAqfpauQiZJELM634kd2wJ(95JkUgfBJISrr1OiBqs(qLXQNtvo(8QBc7zuVbkhlKe6BUils79W3hlw8iQBg)L40GWD2BeT1oRZli9N0rw0H4rOTkTvM352WG4zZQfwaR82toLWm6NvtuizixLK2v7rD72YJ8oKLuuVvtlwnKneKwZ47tqdy8ACYtqNrOFpc7LlHj36RmqZn1AlMCVSi4WGj36yDo8LUCMlcdZ8UFFkJjht92D8uOLHkAIGEkP8ACFn(aOYQWKc15hwpeizw8dUgu(6jOp3KIrzvAU6DH6dEmuDiQ(pKhhv7H8hNr9gYcxW62q(Fr1MH8EKi)jGOwhvxiV3iK3xBwQRqE)uDviFagg8pvI8NHQIq(GOAhKpuVOoX)5OcgK)cBfksCSEg7WQNyMoe7G8eU0MGSipPX96ir0s4DTzev(XulhvlOP6CZ5YTquYtUsLGJp0FZkxSnt99pLLGwYzsq(Bz69)0OCuYNM8mriFgpK)opph5VNnW8pir(SBI85aXFKpp5FK8jiFbpech5FARKZkr(IEiFjoYx2d5RylGI8)XdXK8vj)ZKVg5Rt()s(x4iFdYZs(MCKZjr(wVoY3oc57eH8CK)vY3fMH(3i)7KVh55j)hCKVpWtL8d4i))y9NFiC3ZBXEK8Fs(rCKFmh5fyC0EoY)LfNmYp1INf5Nr(5mn3n54Jq(VzCLQaOT)zxh5xgH8tKm54IOULCaTu2qWT8WQJVDDKFX6R8DzYDDaFLhdGmvyYTrtUnbCf2ccqm5klIj3wjpHj3niHOgtUBmYC2RtC5nyYD9saeha6MCLtsQLofDnSWYtRgadFESham2bLnJheUVePhtUnt2Gj3wqKRj3nr7av4gWAYDZ2CTWhVlS)hITWBsu8lTRTnEtUk)GRXK7w8jaSbkaCl5vxWn9dPfRHOTmEFTfoF4wTlfCZK72UqrxVKaGiDLcGyYD7zJg(O1xsGHi2GbtoVuyqehyawdVc3iatUQYNOhlvXO5n5UJcsMBYDNfIk)KuQ8DxiQC047lgQCKemBQ8RwPsYcAwymPfGfGMWaRf8eWMaseHN756qKy9lQn8eNyIXBDydTzxgzG5ckzsVQ0gu6Xbm2Z()g)r4NiECk8IuU1dt9lqMhJIxbogFkluls6FQncKYoK)u9XMueSplP4WYsfanq(fBJBp)n24bunwen8Ii2auyLP2kdzWd)VhQ2OMCRTSSO8OWdGY9fqv8SqczGi3a8)3e2kwyaKShag02LIdS1cDOYYheui90aqGj32DddATmKYpbLnoWk(u76Ye1)XVKq9V1cybRU1xGEt(ycaqGqbGU2gja6yaibD3iHObgmC4b73fCWYeQSnKdbiaM6uvwCi4pkFLzC10lhi0K7UTBeeg6MoIsfxCejG(qOOJWsleQB4yIeDknICxQJlmnPXkDWprXqVrmEbHoatGNsI02BaP7VxxE98)IkriF8Y6F9)tiVJ2VngH6x5SmTz0z2WGe4huRN2d2F3d3hJOnQbgCgglGgc110Y6g6rqI7Gn2yln1m1umqwHlRXOK8DwwgCqTaoiqB(BSPcdgayGfa4(CaaxJ9)Lh2)QhQHqQdmsxY9oYLq2)MCVYLMR)sQWdQt)BQu4WxTevnOIWC)5STH3HXoQUdOU(BkB(6K0lnx9APC1BCLWyp9lDPRJ4MUo4qYtlMKsB7XfTTNlRwiUQrBFIJKS6eT3EJd2tdKgpygp3t(RlOl7lKrgV21SMJsjSHVS5c4e(cGtipvwWKpjTah0216upOtDRoEL3p504BslRu4WwM4Iaoy5VTNZKRUZOt553o1pp2QOBVMyMCneH5UjF(AdXnupybS5bU9wC5Po8QJKkPe1Ly167nduOmk6AltyHUCSyaHygmW3fiSAhwWkJxQbRwkLoaybfFyYvd0cxmC)lc41KR5Le5wkale(KlQYcSv)IsX93NVzJntFXBXcJT4243C3Kgp(Y76SglURZ(BUqx8Q15aVWhEbMh6WvDX9syHfnkDLb1RT7QuuRAF7JTqCBuKfhPDkBf)bKt7tpDQm1lhPJDbCl81(aDM3k55Mncv249qoTuUO43aIIDRrgcFRy3rq8QdMMztYA3d1Q(SWPpCwMSV5SmzhXGuik1ADekD9ryMRh8iAcgsUmzNccBnJr72I1yqrBe4KZRQmfUAOQInZwq8GdHxaBv2YnyFBOTE5icTB2docvvWMAT5gAjJ9(mgj5wGwZTauxDLAg3Aa(qxEG0CxdrJi6JnsBTps9t2GsI2YGOlV3LbrBY9QUuaGPGOSbUMC7llqRj39soDGjuuYhMAY9)4Qiukl(Zbopzdux7PxwCQjxalaQjxhSwRZcbjn56EjWJMCDvaWOj3bCJfh7YU7iwoW4TuaW4pkl8yeud0VJedsUcnSpl3jC0SDNqrmeSuqORUoiO1dNCOAAR9ODQnzwgS9Kzc4egi8z3i(PnNV4XtjHP3PdMCVoysuF1NIQ0QlxoaqNVsWKItkMSYQ8xFgfwZxB1NCg66yslRnu7xgjBNYT29Co69hfJjhbdfTkR6E3h1nfdyTSUBkd0I6DAgG6LzbOipckN7jNXgkHOpQ(QU9tndmwrK8j1FKFnJu3K7qVKJY(OJ0zNdOMmrRTODLNY2KR)LHSEBCng0KBGItqBYn4kLiwJ6OzSEVGOI1EPgv8YqBvu)NDXq87Vui(9CPZbUD1F1HAQ5zBXFwoWTOouBft3T(h9vUAt2DuK3jwTxquDh1HQRoBQUkwTwwAkjxKLAzPxohebtuWimtVxCE6jWjjbHbeIEWgKoYXM1AjPDteyR971zRGjJ5ZhhuECjCIeQRAgF(W5wT1fOEyNgS5KtxE9mfwRAWG5OWA21GhSgk)ET07nuop4bTEqjkhm7qY0k(mZ23t1MtyDIOVR6JIejsBVqgqYpPaRmyf3SeUwhFRvYsd(00LgmZkM7GDwKodoAmCkS86n5AtcHpo(OY2JynizVWi(B0KdQSwq)MzT0iyWZ1FMQbhk7sDZUQ4bTu9P87nByB48AXG50IMCdtBUn5Q5m5grIPF)rk)EZEz3pG9sThJg3h4YTx3LIGkjFbgxaOxKHBoW3JM(eH7wiy6gQzkBZwx(ikjlBwZFbjCZaOKDfBbdfd0XR0vE7NKjumEAmWK6zoYTV3LrTVDMpYrTQ8wmvF1Po6yXIpQKCCXrNvutrcWvfPCzh7Tumxo4n1DwWhmUym5jesMjWK5uV9cwqAuEttYgbPbfmatvV7I3xkqOW6TOVHy46NcnBWI9bYfGk5hyHuK(DEbPCeGJbUOTQ3sblV16s)vv3rr7fW)lr5uLlNPE2)pGUwx)vE6z)FFwmj5r9okE3YvqE7T4LYkCLbEDQ3AXhze0XON9TyXRyJuz53OvG8C9s2s8T8FWnbuFUKVJs91l0YCLlJIWEq(e6xDYNOJborNP6)ehnEQPlD(e32vC(epP)lvYLla3ftUJHmpm5oEb5nyYDFqrUFtUhaq1MCpi8)JwqWOjxeBCMjNa5RAYfT0HmMCXG)posXBYjwCQ6i5rv)K(ZMQErxPaJsN((exDsF38jgVXj16l4K1e6so99xzzwsYhnwbiW5SiY9yRL21ORlr66hnwoCRhV0PMh)QtQ5P7COgoYHMDIzJnZLCT6woQ5aF9sIA(cqBURQOlZxlIaF9SPlvlp)S7tPtPo1vNuQT0tJJmEGPN5qDp(vu9kQ4DgzfPzrN19R9mGFSsKqVZ6YH)7RzPdkS9opMTO82nOJ(5WikWRZpNRdbd6xal0pllEB6xwh3IEfimxYk24zyKxJdg5YLtD37lvwAIvFVZg6qXsFGK1m8us1FXkAzf732t(9lKFBTKNSZNUUiRDprkGZBlwylIvxwHTy0cZ3nx31g9AXy7L54qS3JFSbh4GjgySQh5IvkXlHcB2JT3CO)E1R6Hn7Ro)vw4YI6bcL2SUqHxCbfPjgkHyIXdF0dVelUGfbag4mwlHGR4EPOXPkLOy3ztuCTnH6Q(Yh4SL5rdBdVY3CrSvq4bT01yRKdAYTNS2UDya7GiagyQoQIgwXgetRJYH2LAhyyRvuO1w8Jo9pZ6Yr6ITSCMC5U1781I)wlmmdXwmzbwlaWOokxC5vyWf4cdxCDsU6jQ09NO1bputvpsdJeKjnO7Cw5q)wRCyMv9RiOE6smEp7JE)ZjoTQmBBmhwEcr45AKvyAyX6ZoSyZsaIuU72oQOGcji5BFYl2ny3dMjOZP03ymNbGcwSMtjHTc28gA1NVchS54AGL1ERZy5iYzsrU)Rqk88RX04D2S)oJM(KXpXeRM04MCtMHU2K7IGE2OJlF0Z13sBRU0Zh)Qef4ZocYIC18ojY3HgBMQNAG0tN(KR60ZnNj8sw5KZiv7raA2JakQ85NBvIO(RyflbuQV1z5IeRqBOzF(BOEkvENzTNpPQ7BtppjnEKHhlaUMLqJToR9vu3KEu3yidHuXe3d6sK9GhKb0KSdwWi5tRpZvz06)kG1QhtTTgpy8rouYjRELeaBfzd8xeAwBLR3IWQenlMslCuYUCYew0JwuYmoY3OLk3iRx0CuDQA1TYyv7SvzeOu2zf6B0OPjNn2FjYSEIRqMWEr6HBdH2gw)eDCObAo6vopCJucdc0bdwYo5MM)FE6hdqXffaVuQMP1EhHKKtjEf26uQN)wb7PejRW48bZzxF90pwX3njU9liZpZp4vPRbE6bhSz)hA4JipSnLAuFn6VTM8Fvc9624UNUUqjyn5E9xPPvFWvyIfkt(1cEX7SusTqSYzZ(DK8sUqU2(s3PBc6x3vNe0Aj91rhhoQVetoRnbTj3VX1iMFjpXCxLiXCx5rmBS8eZsxBvax9wfWdnYW91RwSjbHgRQRc4PlHvb8thUaRcy(7yJLnaHW6jRfO(iL2Y)DKl77rOFfMqASJgThLzNuVJzA9YnH024Am0QcLeRICtkzFKyjkmrPrt9ADOPA4sxUP8C6gYXgFg78RDrL8AnnHZRWuxotTQB0kd5koTXWQXfmeJMM(p4eUJfXnZo8TGj4Xh8yJnMySEcDafBsNDoxCLr1XqExki9F08ALGCbsQNWs0QLGBFn0IVlvoaL6WOfY86WFrSGCxuUViYQ1kYbw6qJQPgD034Lhbv4Wd5fzUsGdv2Omn2zTOpRKCgdGOLGDcwMNMmAYPONSeSAyTwGLfOjwzA9iTqCzmF8NoPXmmO1x6oNxDsvRt0r8kitTs2JVb9xFtn24Y5Y3jXygI6fb7ff3j974Ola0okzRjaWzcXBZD1NwT90w)nnS)JKsmGtOkVT1(NK(kXU2PcXLmQ5KYZHcp138xHI0ZhRaBjuj2ssFJUYY50y9muMvJgM2YBlHAjVWwzw3oQGQzSTxGTk3ngXYZApSj3J44XTYjtZuw(1ubI0rFeBLgLXMp3ah1oO4M(QtB7e1Kh2NVz6n00DEnuWvjOGN6zZGcEQN9YbkyDLkkq4ku0BCvx8(SQT4it1AJDwFFktoBBdWwCKlm96Uax267S(vYQLGPcGLBf(OlzcU(fzuGPwFT0s9bBWFRn3sjVoFm6wUmRYNd5DURhYK)6u0N(scs2ahT6wd5BKoteTzR1Zdjz3zXOxx1iwxF7F1vP12BjYk3qJKDuOITArdd1VsM1PZo87EeR1ceveNDQYqjDzKZzQdQn05slh)QZ12RNwdoqVr7uAO(M4s((S6fwo6Kv0HzW63YXwMGR6xr2NkfLBvUUOUKxBqXCZiKhReY0CUzU7zjzUZ0hr8QtTYprIyT0zNTmBRrp8v20jb9Sm4tv0fBXcpKZEP9AiHlGfRzpFQsBXAWYTYx5XuxDIdg)q9DIzMvspqY2Vgo4xtWbpDjIdE6lKfTmYvN4GdMmyOoJ2FIoQrYfo4ezL035SZzTtrZkySJnwFUo2yT3ipx3YUE95SvFGQCPZj9l3bdBU7ONcFYmK72aILRWoUtKvNx(fZox1tZXyxItdkuL9oAT5dTxrPh5lYiP)IjAmDoulPrjOTz20LhWNVMBPEQb3f9uSCLNpHjY5OF3rRD50VR4W4Ct2(mWS81IaHvVfowquUfL2cvZ0T2(L9iq4y7y1jceW6jRiqqP0wTyfhZMVQ5Kmu6WZk14X0epA6wUiojdZjFsETtRWSmWFT7bv774)fz27KiBWZXYyc2NAU4UPKEielevxrlkEy1gjVd2ZmgUMNDWQ3mn)q1FADjnfLj2R3ofnusjyiMJAq0t0Q80cc7Cu2NqpBhQ725G1nRZvx88kEuXutwNCQ4It7DF7ZB94XSl0Z9YC70llY5yRAVDOmO(W5utYjYul6gcAg4w6ZRHKyk6TluJzFgMURc9K3D(LJwrq3c7A0Z3bdfdXjOh6XzVrVlNBb2zu)WPKnajfW4Au6HIQU6MhQV2pwxbhn8GH7Q)rhEOoBpCxwdElYEdPjfWOqhXiTUj3hic5JGJQRZ6KyMDcOI6LwvJntNaWH7DmVtxjOVwA1xB0zL3pmbWbZHStGANoe8W7yA(wDg)O9mymqBSgCgkPxdNhQQa93Q8kKkoT8zp(MujMqsVsctkgg7n7YlEeuVlVoJP7YBMrC5ykP8UpVhq0Gw2EtLqP6m9aREHtvrBq2JSVmZlyg(lTwotY4hNs4QV4CnwNk)z8DTKegw93s)LRWDil6B6GxwLW(aMwlTOZ1ftQl6MS2bCK)qFbBK6l8TxQ3y4PsjNCx4FY0nakExu(umUMfHyWMAZx9(j9D2r7O9qHhn0WD0rxHcbAjLNCmuxGDISa2EEZF7ZBt(BQXMAy(4kJYWarY(0n9HVMkuRoQq5FQ0XAU1ohQLtu9L9u5Yp4DVePGBCLmk5S4cwtUx)c1YdLwBs5jbMp9Ms3qg4RPxAQv9ax2xnIkFUfXeqBqrfT4IAri7BRKpKh8G7Vtr9ysip(ousMuqvxmYCXS)280OXkmvUG8eQjf1sP0VO2yIs(gxCgT0gYjLnMb316dQIOy9AbdvEgqDNOsIcqZanbkbjac4MlGiWetwrBs4QrHXS0I61QUr8GS0lG)TvAyr2rYVx86MCFM5IA9uqDQlMumMHj3NskaYduDJDkRRMuygV21m8MLqiDsdKEo48jLNq2GAFFzlGLpevqeNj3zp7WSoU3Eb(L626Bc6j83b)pyH6fCQk)4tES2RpOHsBhEGcLnroyH8kHvQkVusOizCprLlLpbYj)HtpXeYkZJ)ReNl9L8rOAt3ktlvlR8pv5NbvlroBnOwxK5SVY63g7iqHL4VT0l9LZSDhZs42XoOVM83Itw(yHErTfyznERS9btjjGtsHpS9WUv(N1EQzFw7vKh69xKhYKBBQFeh9RmYxbvGEpH8y1zbCRZgCHY2zc29U7DtHEEhmvYzCJlZvzwJ7RHhWl8Kg3xJpqz2knKFH89ayn2jdxUxVUa3UfT72bgwIEvV60DKbBmSunbpzhP6r5YrwEnYsVDGWf2VHslvVEbTlGUIBr7f6UVC2C8ax7nSs29LZ6qBUtcFY1GKc2NIgTCXPyiswI0sB9pDUUyN4H6QBPdLjIQ4DifzWooVayslTCC1T2VqkbVbe0GR0TOgOccUh9v3ORlZky5DLcKypJ7RDMGcJj6uGn2HGUrw3U)bdFeV93BOq9oWbGFm4ahQ3b829Gb7)81wB)D1xxDvBTSssQKn9Clandvf2YYxVX746i3j5Ui7eN9qWtZimQAjsnKAj39gq03EysCRFrjjJPoz6(AvQMJsASmei2KhB(b3mPTUT4OFpUy6Zeaay32RKXX8nG6TzDOOs9xlUs4w7lCKG4WKGKqEqz3O2x3dH)dwgzKDgKUlkKc2x6uW)4mBEZKFdqU6f8S5V5nsg2x4bhIoLEQhTcYVvvLvgzR1AY98MCFpYBscF7XxDGaY1iz9lgEqzXzNkvVH6RdCi43wcFdPJMWi8B52jVvoYBRQGDIJq)oxhocd0nWGKj3ZcVF)E0PI3(c9myWEp(GdeU9(iVZiWiU6g1Le0eJ3TgiKRp887kcosGZd)UEWPI391tExCK)NqFFpRJm)JEd4GemnatxUNurME)bEwQzJ)Wa91v3Hl5zKhJ8hrbnUOqE9v1xWt118O5SJQdATAY9dHXOZORkOnEyMXBQv3BkdrCNeiE)ibSCQXas47F4E3DMFT7q4dqRCyasZYSVG9dwqkthKWH0ffIFcW2pX49lNQ86jFOV0golTDcQyqTmL7C0FgijiNcDHLV27SZfPxQh54XftfCGUgPRGQBkRhcli55NlQGgOvTI2b7z)FPTSLB)fFXpCp7)7E0J(iV4l(F1Z()(p8d)4Rzn3SN5TlLpyaaiba5iliXuwKEQYCpuXcbPNPN0O(IkAGDsT2CboPwDomB8yDgmAYTF3pJ)CFg)wjFkMjWXWU(PPon7bD0BqtCm4TcuFa6MHGxr025QsIGLrJMwozCy8UQYoIOW4yocrVUqXes1f1VtvxvFhPDl33mAG2dwvgB)RjAs5uJlgxY(SJmRdqYmD(EZ7AafAh7An2bdxvdg0T)ATpGjTERm59y92mCj82SYFjm5VUi0JRSfeO62GosHQapg9D5N5QRiAxJm4H6kyKmX29288U7iRW7MTrASKulLXVRv85Jq98k6p2SuOfruuLAPNWZk6grM35uGvITwwSTNc6rZ7fgrXJHsavQUfSy5E06kLji7ONFLmVR2HJCr2sq1DMTgdE8vw0nftlzkNtLw89pJ1Qz5HPl4cumfdbrL9dkcARf4IktkQbg)HDEqfSiuU0NARrPtQT7P8P5kFgosyUf0qiPy3GsXQhbv50r9yvnLX0e11T8L2U8gxmPHGTFaT0GLElV3TxNs7Tw3LJ5IkwJg0d7Fd4zEHKQscOPNWlru9ycjfNgEL86dvD8LVo2vMXdDFnX6Es0jm6JH5PKYy10b8y17XQAoG0sqEmjJOSRbItSe1WAo8nKVKelv)IdNqQBJjpE4J1K050NqrXqAiRxpA4OUqgKbVTkY3(jOkcc)5SatKekagIEuYmPB9gFgSZ)PpBuQpgSoBo9bS3yAs(cO2J)92AX95zksUiUk8wf1K)okHT32TbkvQU98oQvIzF2WuM7JJN8lxkNYvGtiN4IjKJjBKPQ(osf4GRPH6uf1IbCgOiSmfMQA7owJ6DM3tu4Y7OdmQICHvcoMBLGptVdmqxbhTJUgiCxbZsF4zi)ypG(WNQct(DM1aaTpb3dAhONX8j4RWPnaDV)(LFVUBIGb79a9eoB3cwJj3DFD0(27B7QBEmnH4YW7YGA4FPs7m5(bmzZSJH1JrvQji9ksK)0iwgq9kF7MCZR2yrwiMO6v72rXgI1rhSQbnp88rfInoJCJXma6R9S)V8p9t))ynRPAYH1WhePYqvtc75CIPeabBhWQFkrvm65P72uohVbZBY9KsKBQc6)aA1ShplQK5fsT8mkpnAVdaY3d1f5rb1RwKza9bq3IDMyOE5axwuV8fO6QeZHvLj3BI0J6MK1hstEcbTzckYwhejlvherK8(MZIjMELSxP)LTomOBWNX9G5r5YOGIW0b2Dd1xpOmiJZ4rKJBiTvYWMC)hGbYNc4IEEt(7g0uYK7)u9EZOFu7XJpyk973r0293VyCzH73stk97h4XnMOXOYPIlhdptZQZymbBTMm5(XMCVGJ2sMC)xmLKm5(jFBW6PFQj3pZK7NBY9lm5(VJ2F7dmC79zY9lXOK6t(j)gV4l(l7z))7)ZFT1SM14TN9)uVT32F0l(INfgBEXcRPZ9YeXZVMmQ5ycS8lMwn9Axe(mkXKrC)YO8IoQW)fHYlGC)LtXL9F5rXf6BYfHIlM8RBPuyXKF9RMkRWmrNFdrm5ltYz5fT47kLJIk73srftECdFfOzxH)FPOvsxxs0kXK)gYtBet(B0LsiM8V8mkGyYFtM8B0KFtEm5lh()ntRITG6dyYVvqESjFfWLVzjt(TrL9BYVD43vAYFlM87iJuEt(BTufV3xN1COPcknvYtoOj)TtfPBY7TaIYn5Fffq(TjFvOK4IlZ2K)olnr145XFbLiHYIqHERqVazYx7QMyV7jRkgmWmlzE9X5sONj)UarCM87MkyZKVUCLQXBYxFocLm5BWsEKjVpMmOVxHLbvgt(JjFJqJqLYyY3SjVFt(wYikXKVvyyVna1UxBzfFYFXtTM1CxM8VQ3m083JpMGbt(79v5iqyNeGhIlNtDZRsoN64l2Xqny7Ti47(C99gD99MC99MT)EP6ZOTXV2nxsEnAGq1Op(bNzKMBRTC9AKj338sIBJ60ss7JlHZxFZmYkFJs5iVK8HMbKuYLJGsYZJYi90Z(F()A8Z7GJB(ekPm6oPWy6KNnx5JvAl(7E3NlbKnylMOEwyJAxvEOAlfxtrT3uDRPGNDPoBemtU3vMbbtU3bJrVugFhBY9oDN7fS4XxBeGx(gOBkmNvA5Tt)g1vZBcU7Mm5E30R4KJhR4CmTDZ6mI3Y9Sb0sNs0dkbWEp3ATPX4xtLL3anhJILicY(3o6uWvVedlBx(TnWgS3HVDyVlCxW2m4btXIHANebb8D6UHjNf1LZoIvEex7Fg6M61QPkNZXjWS4Lod))3817saWRIdxiGlyWfqwzz3KZ0gI1OSSVH1BhCald3Agl9CzWGFTQYkJPQRRFKnBneUW3DM17id0ZH523QXgbMBBMYZd4jrQjWakPeTyXr52bC38HUp0M3fLpikdcv9)5Zr1)YYe7oQGImvJXi0qint1vHlRROgOUs914DpEDUbObCw3RgWACGVxMAZXQDmtIuhZqRQR6UQlbuC1A8wxDER6UGVIxQHeJdvn9FRQM9Av0I2fGwP(Dv8oIvjQ5vX6k4sAbsjyosStrD6PUfY)EFwC5FFBa5vZbsA(rah7TIhf5NSH0ZM0)XL7a3DORiompujXHXKVVsL1IVCyT8D(X4NVlhmp3)vkUjM8d4MdIj)GfL)Hj)quohM8hE5zyyYh8QogfM8HCZDyTxU4oCGvg3bt(WLcVby6FEt(HraJj)ilnkPF5wc1CWJ1YSD1XvCusJ5Gs(g0pV1RHsEjjkH7YfiPNR4GKdnwRrBU9JFiJ(M9koiPPCajFPW4NrVgi5LKGKx3LlqsVxsajrwbGKQhky0ah4WPKoqQvkizMvBqsZ5as(RQe(ClxdK8stqYAVSzn2bVIJs6vB4tmy0H7rA4wrusMvyWXBsfdK8hxuqc01)67a)4TN9)9(e4N)zpfeSuBozuZZ4Ev0iNUQgTxJaUFjd38fUD8d8Lp)TIFElEYARCzh2SHHVMbyvog(BuGWxeacFXSanRl)KGJd2jtQs5DK967puWE7ku4ifapAV9zFxSlMdIBZ09CJLZXv3AwRyOJpuk)EOaqRqsfayCmG39xPjplLwJitB)wzJ7u3inCaCvJsuWvlzIo1rC5A9cTvXpqoiSp3l3nc7NFrHWanwsxtRI1CIevpzpawJ6W6ZBV0ywRsvLi5ff)1ZtDIx8xUM1SMpSD4lxsoY(uvvaFrBYxD0bspruGC65u30bumKeMyabnnLPgoPHMa6Wy1xrElMl8FYtaJNAIXK1Lvs5r92kwzy)IJ89p)DL9IgREhfAvLX7G7cRmlrDnfRMJptkHjKJnQHKMOUKsY4Z4S8Z1UClynDLuPB3lmViG(4(B96i)ypyUpqTHL7HJdV1tiKmZRpnqm)rZq9NVLF7lQl7P7mLcSO8oR4(xfDoVl)bNpxrUZvmUI9S)pPndG8)Y5(Mh4dVM1CdmULMCVzl2LC5YU0tbDDvpUCDvX8XKVe31DvL3DH(ikeUjL6rq3q0Xlr1uZRY2Tq5Y196YMRlgBPzTAUllV2NEZR(mBbEkalwFRCwS4oni8Lo(RM8pWfjVvt(h8cKpQj)OfKXzMCdCjX78RF9RM8o7mX0hDW2AoC8J73M3PjVqg2LCRm2K3rHztAYh1o9QyYhhkHiWuZKpHj)y4stkXG)wR623jIftfGJYoGz1d5HUkCVWTAYlJCCC4syYFILyX9Omlm5hhQ4LMJW3Aj1t65sKq5fFXVzUiFpLeY3KpzPdz3xgJiCTzfUz2IbEbpfdDpQoOSfYfjFSMFT4damiaoa4KnRhHt5ajfmKu)IhpqYO1CIEBAyTET3KdTFBwjQpgLpcbaqbJyfGaaqXs)6aRZEr1ZEL2PjKgRTNclJzGpkn38XoQTWQLQSoffqvT3AL1ybrplqMxjeLfANpIuuw0BGWhRT(yeCTKx(n(yUcLoKhkLks1sNpH5xFLLz9EX5CkH23MXJLrRX40IKv5qPzzj4)wB4NW9S))Xhd)8E9yXuMX3LYXgSnbPQqEWH9q3Xys0vx29r5wgnxzBuehQuuAaflamAPllCp7NSr4Zn9n6z)Fn6NFyp7)7AIF(OEYSnyhi3OjjQGwDjgBVHenSdzQQRkt4pv1UAOU6RFx1xxlnd)Pb)2)S1gH)0OVASIJQfIRm6eI66cJjkrbPmSLdtVcezjzTjTwB9fDBQqT89DxgD)w8spe2uZEGbpsRY1iCIXCqypyPIW8S0iSmBSfxP(4Y3g)3)WzooQTBbA4RyNJIzynukM9XpTv6qdZmc0hpldNVkgr(Dkzezp7)FDk8ZX6z)pLnm5j2e(PMvcYSSlw8xVRu8N36RZFB7QE8)QRTgG)4Rfej6a9m5vlmK7zwsiNfCRsQEy2ohkx8g1TyC)qQBXUOuc9BBGFM0tbu(mcDqD5C0fTNTuE6YsnWCuP0T3UYs1WbYldGZpOhlVBrDKfnSZOo2YEpG62Xw3ftXWa4MnXTRTyiVc4sQNFJxAxCJJx6EKQ4BlpOUwHNqilYcj5CJA4mHM1wkA8FbntUnau7PCx7lWQD62jYvLdDnALFH7AnUNR0DTwbvzKTnqlUbJB2fkNfC7vxtHuKSH88l9yd2BC9JCKzA4yOh3Uhc)75Ma71nsIh1LpRBbFQEJZ2)7HDhO5z53HayufPU12JftoogBZj9oKMiUHQsfBgNybBKOGP86Iglq3gbdLoPUisKbukVAhIUvu6Cczp4SrzBhPqNBkfT4hrtqfMNrI1kPeROCvGew9Ul(7rb8YbiGT(f7voAZtFWwpqRrdqEVsQ3sbQHmX5pJb17Rzy6s9okEBLXFo0alZEl19VEwDjH4ktDmw8yVJ1y97JY(ThYhucJnnK9iYmeKT(zrsenmMTLtagX8dxK9aoHUoWA(5kOV8Pg4UyND1E4Eo0aiIksX9QFLrSZt3w7Hx3S5Q4HIyZO7jIyrcVN1zNpcYbXWBhd8aByU5PNmrGiVNkY5esBOaJpYXOXzo5RvWHz1mEUHQ3ZoJYI(kRnw7h)9d8y3MlTxwiOGSUO3offIFgeJqZNlYX1FJb91sdn1g(3MRpydT1st(PFVb6F9r)BJbB0NpFng0x9(AOvkV67GL)OO5ctwo64V8NAh1Uwhg2SfLGX2MYbF97nylTvV)gOvtlbBR(g93iDBbBTqeB2zd8txQI8sXYKEwOdLuXLPj8c8nJgbZa9jURdT3ipYtkgHTwfoYcw01O3C1wlUjBRTwRTz(cjKNwmoDC(rVH5quBi5zf7fH)X3Sj)0zJ8n5Nb0ozwt(hkdigqRM8VMvBGRj)dxiiRj)Jybed3BhhVB1tMmOpraiAY)6YcUzYpx2GPVRj)RhR1hTyWgt(FdaXyY)gSakNQ8ZkNsNEiKtDyjD3QtjXV5izdfCDSt92zF1cHbLOBszrckOjMsiYcAcgIXzF3N6KQielBaOj)VzH9WenUe1H5fOj(DLU4byM8NI81m5)TCGoM8VXIbBm5FtM8V53Oj)VTj)BXK)TAY)2m5)Dm5N3Kh029DCHdgQmOVMAT5wlbaqcgXVj)72jR8Z)7jLdrUj)VV6grI7mBAChICt()Wh9gm5FSEXJtIpNhgzngEYLHe0zfFYxmKZdBYvlv1Omj2b3bySlQs7UfqJZwcnGGS(f1p4K1mupAn0v)kaid0qHspNpTPnKGAhaqvtvf43FENTipLkhvTfMGTMQFKzuRQ4cGMqj(Oi1zesBjCNztwGLnsMiQGr(QXd2jJdRoU15zyzRuRzik3inHuJjIlz75OFZz1KWL3LA75IbXR7TdjXyJBBeAqAzlVzwso1oPirjWO(r9pJTBjyMwUx7tgndt(piwT0tnh(pKDLzY)NtRjkjI6ol(qqsXXeInZOjsQOOXcA()nkRbGQ5wp1Ej83W2jJmsGof0LKoFqHyYcjDYicsAbfJkRzijfCinLPskfiawSvRmZWV51tzsAVt(36Xn5Fct(pIj)h1K)dBYVORDZVRaChOURFXw6s64tx9uPR2VH1w5)DgX9U53ER8)w5WaF)3zdy6oyB0OTh3m)VDuprwWVJuZfBh77HUJ9)dO7y)C3U(nrdC9LAh7dfALSD9ZjHoq3U(fi)GUTvP00cvU0QEQAj6H1o84ZCOgINEgRK1elFh4KCKwU8X2L(Zzr8q5yjngUcTJ0EWG9oyWlinfHBUZTgz7W93UT0S8osx8Bfgg2IM2g)l(zXe7PlztZFebnVHaDfvzBOC5XsPOjsxdSdLszkCdLxW885nT(H6IALD2HnsHtPNzefvc9Ofcr14EcXKXn5)4fV9FoPvA77EbDOI9PbQXtSujROT9s2KvKF)I9fwV6AgR(UCLICRC5tpFlvkjAP8Y767zUc5MxPCZgr)kZrx3BPW5NzP8YpZBz0SZpZGOLcNjbDF0YDaw(icl7sKUV321YvLROCvz4XtFKJ1TEu9GnwAGHSYiLptjKrk3Y9vGms5AzflAyWQyXuxqj5BSEZMi6JwsPJsSClXbn(1iGwzeqP9hOZb7o0rLo5yxbiGm5FYleIN3JEU0oF4sK25dFnANlgANMYI2P((dn5HK6v8qDPFjI2zO1weANkakNifJ(PyPexS2CNsCrlHknYMfDiBa76(GBGmYPQqDRdq3PCVsDVha9mO32JzipPOK6wgCQKJlNYB3aNXzNX5Yvm4eIP8QKWBhjf0W85Q1nwenq0PuBShbTjusndyOO1LoFidbTecjtMPmbe10f1g3B1SRuJK6oOnMSyCVbfhtmLOvEQ2(j2E(P(xN79kCEncnLCcJuyAdIDphJvv3Cy5Xe1GI0DATmVrBPJKIcAXyzWm3fwtueFr7toHODHpd1mxNhDtz0515ABf6BIXmGUbmeK5D78be0gxhhqTl4TmKMyC0NafOpdvtijffApch4CDD3txXeZ0v6xbttkAIUgolFO0jNuutEwxx8sLT5poqk)Lm5)cM8Fwt()bt(N2K)ZzY)mM8Fzt(ZAY)3BY)pzY)3zY)zm5pJj)N2K)V1K)ZBY)pAYtm5)uM8pLj)xCjSNF6uJCYXgiqq)9oujBp)2VQZE(cyjZ2VezjJeZBXLGLmTxelzMmqI(eBpuOUpHHTLmBJFZpUtkx2156RBEOwzkzAwqHBsSySqe)JxSZ7jAMyoRWKeEmNnml95kSTrsK2(Dlgx5kAGLrvYWsMMavw7EOzqf1YneskMYyuXPn0ey5zBpRGm38k6uyQ0TSY)kYYQiLOLvORBpVvwVihtPSJLZnEEwcJjA6eja((66zYWDBc9bo9aCIrW76CsoqRT5RHGT1yt17ZK)ntpkLOlGpGhgQmw2A(LfXjU2o1gn5)QzL58UdjRJutR4yRbxhfTqfwwHRT8oL1a(slLRcw9ayCRU4RrgoWj6pK)Jp4WIUWxtuQ4lwecN1Hv8Lei2BaxyMCsk4ONVYbVDtrm5n)1AmuwK3fh2uzGMBUL6x9amzcu6veM5lSuU3y7xrphYzugrkrkJDuOOMZX2eWMIVJLTjmdtkPiNlpBtaIJp3AUiSoPRcyz76ywNi1wOdCSJRlAuVH7KAofyJMNuHDoM1xDw5asAQkZ6WhihgfzFKEirTHbWWV3LYggxByXSTHrYXMLMDSz50Su9LDc(NUyNn4Vv8a9JfL(5Cw5Bt8LTDkF2LY82TFLW82R2PI6RTGT33HoWXMsRPIrfzY)nUcr08mzt0WyET(kJ2q9T2SF)uQgCTbYq44MTv2uo)d)QbLZ))27Sj22O4laUIRqG6bKGl)HkqAKqI)2KMuVE9hR5wsSBAOP2My3gV5cX2XbVP2EDSxNgNl00cTivei1d)VbvItCmKsOM(rkLVrcq7weiFfoG(loXbO8H4R3B212BD24ps3uzd(GLT3D23(Mz(nZ(2zM386IiNIJCWaf9eE8yhFHEjYXUxpE6iY5d6toMm5SIvF2dfmKahNupd5mfllNxMocC(S(GJjdotVYKR4iV9t45PT19boFx1is09QnJIp2S19araGCzNL1j18Dl))MyT9TZqFuFgYKzOaUwAC(rlLVuOd29XqFDJwjdV5w1oG4S71fTdivg67BldM)Q(8JjZpoNSWyh2VtFhpRRUD(jv1(GOoCg0RJg8qh6n7Tf)CZ768Zmgg46N9omW1)V1bjiYmtNUyUqJLWZC4KxCx2MjgpmmD2RP9P95TE7NUESz8ZnxHItTq6DrERvMA52lRBVQpM8hABtTu6)Ostggws4WbJWUeJx257DEpp3mSSDwFwFsFWXKbNWtgP40cz8ZzT3zqjNYHdoNo6iW5JRbohOzt)O(yyX5PHRkAa06cnlaAfv7BE4B8kIQ9nVrHuROnetTSQEjKH0oTnBvLMHjKVAc5TPpqCPg6mmisB8GmAbAdQdXqfbnEBOM3WWR1nRgETcJhrnoC8OO)dB5rgOwRJid02oux(ibdr9Bzdx421Mowns0ySTgVIWR20XAF9JSq2aEoAPclpYy4KZw1HZw((gzOHgIemuKjcgimb(9ERhy(PbNO8I42SU9HzCrWGYBKujjXIJBfy4klcdf2KvefZqSstiCibPce1PXPGnYyXYsYaxq2seAS7MmFEiT2jsIegs8IsKmI5tsKsbjdYqKuXYpx6sKmXoEYcKmftKIuiz2ejhUbDsK6dTptuQEPQwhsmVWkIuNvoNybQxwIkJeOTONLMLun69B1ocbWHkqpz6KZlLrSGejhnyUXO7u5X61ANZMX6aVoD4yjZljKOt1ajXCBJcexussmJonaRP8fmW)ncXVVjIqg1)KbNMwLvx3qDkHiu8d6vdBC(WflFb5nLFl5lkVPYPGFTU8LLxJixMiFDLtc))Q4cgu5045uoR81uoN8ge4eRPSk83nuoLY50T57JL(nUPuCc0vuP3ORbx1lqVzLLVkr5fLldcQmiZttOHy8nHuCz5Y6KhVbYlfnGxzGaLxx5CkRIzJTxGPtM9zLsrPeRyChzRCngiaSgLCaa4KsnCMylBn6(HUgO3V3OQgJLqBk)MYxHwoCkAPfCJxfoWgQfCBGNhlNKVeTqDn4IkR8kKTQl8Tqx4nwxoF1mBNQlgOjXwwOGAzIbTZhSwHgQoixpizBA69eBxgboyDHud6Uc85TbTd0heQod(tOYdv0RO8sWH3u(Di0SIAEshYaP3QYQeGlPqiYPeAUFnSeabv4qastKVmLIVU8A2AmdZ3QmmFlYW8TtgM32op)wNO3X5x8E)AGmUgLcBvZxgS9MkmuVgtRqaL0RE7n4aDeqQYqoPSYlt(2N))XS16j9I3rDXp4or8oAQ45RP986k(7CTxFPUEX7OU4hCNiEhBJ41AndvpW1sOTxVKYPrKqR(fQ5OjSXEcrAB4WjLIKC5X06EpRq6TnPpPUKAnkZ(H6J9dfAWhh2QMbang7u9S1Ou5ls5tSlJZqqvgaSvXEyvojGoOTsg9CgR20hqQO2ftTRM626yKR(gP2zR9(VP2lb8Jvd87T7(cvtEfa0e7Bz8EIT6k(6Xx3N)JemWHokgUmNnFOrMCeFteOjEk5Ev9iTTUpzRFNdcF3iDdkq9OghoY5VoUQedRTby4P(Gs5MZTtQD6OZ5Jl9Pq7l3)jCkbCXARzAXu4ditkwSaDWrrJ59TVhYY9WE7RhkAmXgxv3sdqTN)9OllQ22w(kw(PkwUvRntUILFMAFCfl)sfl)6DU1WvS8BMVHWLMRuy(OtpPK3dR3q4kw(9)HXXvS8hqnXFURsUvS8x6iw5NRbATYEgOPCzL9yrfi)WUP1Px7nQePmRrLyhUGr3fwNEjgLXhV7fZoHNTmKOZ346JDR7Oe0HE4(12IpPJYjfsGoYCYYY4HIn(uhWbTDkeC8hO77i6gQH3)U(yu1NgmKgYoUi70CClEcHfnvAyuxoyC1MWWN3hg6oGb3hkOGl)5Zjie3C7AWfNxoNTjn8f9PHUdAWvXLg1QVNkT)4jnxAWHdoghTjni3Ng6oObBJhFQClki5Ccrt2SbowVmTjnCJEtAW0MAlZ62vOv3UhE3zI0MBH8bNrC8jIppBVZePX42nN3oAI0E3(ZaRjdo2L8MiW4J4mXrIB(GZSg75TpWS3zudhxNnV9FzvQblQ(7"
 NUI.WeakAurasHunterData = "!WA:2!T33c4XXvvAQsD8gBLeITST8JqiDCsms2X2D3sQLKjog1sQTKTE2Tu8dsI6Q7UKQYQ7Qkxv16HzzxgrMGhgyyrm8ycb(mAHqymWoiESa7oWoE5XSqg4ocitXmjaJacqi8sdeydmR3Z5ERQRQFjjljNebwFFUD96(OU3)Z)5Cp379uCdvz6ktwPE863V)A3V)ktEUDRnrpdnKUGbN2OcA6skY7ygj5Hu0sZBaNuX88Yjev0cRXNwO)jufIhTLiT1w3tXllXEIGHsZljhoKbCZqYkYcZMmJg9odIxstxiHICs9jf41PzaPIlIhg1qtqEydXRnIUbVMryYgivqUoY1tUb4)FjxB8HKKL0fl4Y6kz0siexkTQIMrGmAPu3ROHHQ(bpWbgJFyL9lPCGU5vgtCGo2x7zKne02xl8g8jsnHE6d4pGALqDXqtjvkHKTikLkjuho6mSh0BxWRH6gTojIaRK0N26cnNz85ZEOgV3q8AZexrlPGwlkPu0okhhNNPzxOTKdlOUPONjdVMG3WzsLY7XfLmeIRlKgAIJ7F)(2VF)tRNjEeHHHMj9k04tGTx6bdbV0gvqUXkiBSIPnusy1JS(3nXkRJkDwH1n1WAkzu7aEvIhmqqF(8nBC(eJKutrLvv84XtVE8T)6NxcRUY8PUhw28wJZYeX5y)FiRuPUXqPKo7z51s6TFfLugsQxK9amGXg0g3cHehBI7O1PosQgnoDy5XtoZqiSa6kH2ypbYiLCMQJCwPt0Zj7vPxJ4qfCiPHRyAS)xI(cwHvtwhYq25zgg0QxfOEgVL26U)2ISlPKQ3SvZClP41192luj9UpVz7fNLpJbKOEuzzyOuk8jdh3GpLGSrvrsNbQ(vejbM0QiVIkcPdnySdufsqpiPGEc1mZ9AN27cwovGpr)JjzKqC)gJYav0R1QKEc4Ly)dpS7lkOlnSSqsVXNW7PMGxgYjeoza)JDXOgGKXKgAsdpm0zSZDpfu2StQqZ6GhCsOoMkvhj1RGSHi8ailqOmaEiUAk(je0Iimk8kgVDb(ugItNuiEMHgcLN0AVTo7n8aDohaOOpsu4gsJpZGT0C0(hmA)nhP)S3Qxnb4wrI2BBD2zezORtVIP1OGqmNIqXvr0tanMEIWNsvK3Zu6cPgI2drcw5OxZRPYeNVUZDxKYtDdZRdsGTprCnPK9ZhpLW522uhtcW6rfvmeNnQGMkuGW7TK8WIt3cFALHsXNzybX5BrrorgDDPrfyp7fJMG3a7iyNbYLPfabm2zS(iDO1uBeX5ABC1ukoPuTY(1KKhrWWBaVvZEYACDr)oxC2i8QgkqraT1JiioBlk0BaLl0TlonCxPKEdlPjioxiGDYqIheAHBlkQEZ9RXR6Tt(mayvq7GEDQd4neNlQea9saVLS600a(ai24hwWR4mHsHOQM10aCI6M7sspjueuzDwvRgXPooMYwsjPcPuaQsaJucbXPBgAesA1wsBwBrjDAE5KEfNoHaw1XoSD1zK4Qajd050qCOZBSEK1siYlpSqsY1gKS(8zpj3ybxzJ5FLiPKslzCDKbibjBMSLP41s0jLO(bQAAOBZqj9rGcA8nC(HGge8nPAzHX6fAqOYJ3PxKkBublMTAQWl83(2h0YQB4fsN3r51Kq0Io9oPuaSM3HW7grzSoXs27H82iKcV0QHxLH8kb0h6ELKzpgMjUs6yHJajO2GykgtkPHiMISpilTUECr6JhGwaIcsdlAuQN3QIhLQ8QK1CMUnxv9MkEvxpB24UUhLw3RlN6UZtwyLN(8bcMBLVOjWQ2deBLUvhV5I3OBNfUR3DwK6D2IQGADNfRwxKh3DZQkpvG6qEPfI9PXfmgtqqUGIaOJTKQoPtk3NFRgHI9x(f44u(aiv(k4omvFzVf7Qtu0RAOaQHGRDB5id4KJGrvELUtVmc3wbfnydSKkpa)QoxXgVjvOPWjVzjcYCNuVF2HzFWcpWkPkJ1VvnZFPEg6VhN2z6(PCDZ2z9DfE3ezqolekLT5iNcqcqtEVRdLNuUHOGtnpBMzxdaX6cVz2AGyE3nNtGIJ1pS4fj(NRghAYY5besPlSqPiN8p3ukNS4vrmlTBrYJ9yVxEnrrxWMO8UBoDs(xoTE7n)Q7sQ5eSdAbAKwKM3ClWs2(wq2KB7uNly7uNlq7uGkUCE1GZlrf2DLn7bmH3dgvWGj0tRVv7u1RPKpjRYxTRxKAwaoaxeyqnSAwMTFgV9ETPwRX7batO2dCBRxY95Vg4UvBXlUNsMUAkQ8U7wraUviuzICQuOwzhw(9ve(88fFYTacSqfa71glI9Isf14QK2dKYfU0kwhxwDfwhS3IXQc1rRBF3hYb5uq1mp9oLSmDBI1Rs6(Ge8QT6xVt7x1xtf2Pg)h8hzRNFBKuK7LKKisoojnjX0DHJoIAuj5(Nlx7yjNGirgI8QiNKWtItgMmc50KtrIrgCYm6cu8Si5o5i7JSFINDq2jD8UKBI8sj(M50(tutDbtEc9(Li15rJ5zabrsJvq2fm0vYTuXu6gcQnlpCkHBbKy4Xr7Wn5W4ihqRyJ0kjqfrWgFH1rUT1r2ePsyCGKQIRXNukJ(dC9KBM8YcH23gVLbI2FpDn9qWGQBrslrkHyKQfjr9mjCZOyg4HudzpWzgupqWr27gMclhQi11r67IjNag2Juc6iDcHJGbm69aEi97H8YFRKARGCnvndOMoHqB4WL0Jr8gKCRwdiNupj4mjusLjTSvr1uyYbXXusUl6VhI(7DJ)cJEcgpiycDZ7C3KqvqA5bjTcJQJ0gjm5iK2jDqok5yKojDr6M0dP3kMdnPXGx2imyiGIw8in3AhdeLSoY)bYUZoEEYTtUJZ5Juohm6pDEd0llqR81SB1TdLLIMG1yIPv92GXCOb1)ZfJOqQI0xi0OPL9GcMFebO)dhcTreSHngo8GlMqrjvsLXKr)DiohmOPeJmrRw((rCASaJs9HYlTme5a9HaIys7efloZAWMG(Eevf6SkkPXxZAJKW2lgEu3ia(Ao5PHXDiKuizx8JloNQMYWAc66S8EpV0YkxDJSbM0VW4gdOMeAvINH(FqFAekJvhaMvTsiVAXQ07sjj8IaOhOpn)crsweh5daSpwWt0t)D1WOTQDQq8zmuyWHDhNvC7QIkMkPYGStej349qEVLtMwC6HtPm2GuhJOULJlWpc6Ui9dgkLIssVHuKsnjKiDqUpPOgCe(0Ii66axl5nhJjWu7r3DeyWMjgjCC6)PVNW7srDxh6qKw8mPTT84i90gwqpYO8PYiuPVGWnjFq1TkjRJoaiHesqA7flYf8qA5olZkx(G7QNiwduuFN7EsOfvvqZycYBICHy7M8by500kY2TwyQ)Waq(JOwPEM47VU9BaT0doQKUeupCNMlY8GHCemRjxGJ8H3dKkY7GCHJ2(H)j)o4VF)6B)WFt8VhFVWbBf(Bl)ep4ZKtzt(VrlY94CJpc5Vb()PD6OHw)zTXsrhtsf6lVLJwfzdZc1q0DyOeUCYHS8K1GjY6KolxqnOaGAb6RnmfMa6LSClM9lwSzToxHsWMnHOlL8CUTQUdARa9hM7shu36asfQBMEDe0GEjnbL)juZWPtt5MeWxHqD3t3TnlZjyNWYfBZALFYguF70Za93zhD3MAL0lRlYdVUN06rNN9OsJlWO3(tMkBAJq9mLtEHUn8MzNog8sCCGWFYJBDWCSS22npHAEG(75IU7GJnv2x0DDh6w1x7kH6gDvZC8eQ1LD5GpsWPPxYr4MSbnOPhVO1Rxo58ZuwoV02TpSAgkRkn0eKGNBhQ3AbDdQdAiLwyqvqTUe63tpfPRs16Gi4JMK8)K83s(SKph5)fh5VJCrY)Bo1BVuzBkHH5tmXGdbYZAXiF()evVL6jtRKCqnklZJjs(cKVi5Bcke(7j)FiFzYxr9LvQuXoJJ8pSR7qL8v5iFnMQwcK2)rR2nYSQ1uQKBPGBqdrGKueKp4iFdoYx6M1KKrVjdvMMo3MjhC3KxrvRlwCDjuP86MbyahCubrjqJQi5UHBUZyKV96cPPKI6905W7tLThrg5U1y(BnaEVPtkH0nGPft4OfuBiMlTXJN0kXjIrUliN39mT2wZ93(X6UJJ0E)XI3(aOFFHsJ8dHQivVm1nTAGgw8GPWut9NBmTZQil0rs9YN1v1Dajr6JilaVEIt7ujxFFp6uQJQA5zySMb2vqAUBqF8UJdTmJ1J804)1CQX4NqFkAc7giTx)x8HiTCUQqf0QBcZ5HfKf0KseLMKyrmGA2iKZRUz8EcJdVNdMnTI03v0PTXM0EwqQ0)SzB9WNjgTXgl5HtKmgApWSAc8PIAFFWMTwRyggr3GIsjfiMK5x)XEATmYuF4so)S5uJi)sW(bQzeTRUdBgBV9APL0B10mUgYgIqRbOnhtBxbGxhABh9vk2mjL0pn1PEJkeGpvk1nXCkr)m3tdQmf(qLbwkPUfBExKeRvjDuBuYyOjBPqlwOMOqEtOLjK)chlqiV5LT5hK)ludoiVfrYuIK3QB7ji)LXiVnBBiiVDQbeK3bto5Dks(Rq7dipe5DHM39WOzaK3nvPp59yRKNV3udDe9ZgoO24KZBPHN8Eb1lGU8Sk1j)xjVpY7xK8ifrvn5deM8OU0qdQV(RjxWwHm5dvOUxMY0IQYBN2Q6CUXh9kGIuYm4l4hZsNj5Jpe5tWOz(KOkrY)DYNkg5t7H8za9CK)hqFqb8JaXhLs7lDZ2mAKhlgYzPxsolYx)zkd5I(MiTn5X9q(NaKDHz83cjvj)ZfJ0K8VSi0IKNWITJ8Kip3MS55aUmY3XfXg57sjeMJ(73J(7Zis((0d(bw0uKNkg5hs5Li)i6n(X0FF6yKFs5wM6)tfj)88ywi)cqECExCiK)TyKFf58KFTi5zJr(nv6N8BJr()sL7jphm6myyb)oQe(x7Br(9WZ9V7sEM8)dEPUekYAYvwmtoo4FLBY5XK7AOsIMCRJk2DVRbf7gzOgBU9MLAvUBjxIDuzTB0(G8e12jtuBNUH2LaKZmuT28nuLmt5ljq)vA45tnfA2F2zR1Zfbw4JyFfr6n7uswqFtHydpGAPeE4K4pOLHZgpJHHICpGsVu8tml9YG(WrGeP7zg8uBl0OJhHnfoBLECi2KatlLO056J(8zTWcpXEyCEO5CynHZKrqoXe9En(2FG6zcxBUecxESeU(xJLJ8ftI5Yqedeib5RF267C0sjK939OljHSzdj4Ac9Ce4GmEjjWfGxEI8L4s(IBjU2kMexnP0v7qr)erpvKIjXzPXdL5wxUYCLuvIj36DjuDWxGfQCdl39neBhaWAh2aZxsSRDjcnfPqZkwyq577hukm5N9DU0i(DWHqETe593r(OqrkkCFfdfIEoA5JcfPVyVLCGG3YPw4(3NYKBd0oftUken5UUnzYD9aZLj3nyY9s0AULOIaJMj3gH7VjotUk3Qj3MHNBlW5BfoVk4)3gJF5C7S0ifaJ8TerWcAvYkbTCUBQifYtmrbLdyvdwu5zRdRyYXwN4H6P)(7PRCm4HZYEhYFPyoEsKkBHYX5jadDSIOamiZcAnbPx0uDR1KJOLmTLOpktZuo6Bg1UsEMoozT1vB3hJu7PPsSp6EysTZqT6FaQn6G8RJOmhAtk5dgO5UBLz150mnMiF)cB(5t)C)UB5sx6B3(H)cBDRElRSmTF4VYnDtVYYk7c5A(PDnWK7wGCihD2ybtndUa7szf76iFWq44tYs4yYDRWnRcEON0jVVwmV3v2xkA5yL5MCEzVuSeMt9HAqEbTdztH1l5t8Wp8N7sx6t0(HFYN8jV0LU0Z2(HFQN93uwzLTlQVIb6oGi(jfjn9jr(akbcDuEQcgX5nmWrrZ8m8pB9KHPKq2Kia3ZZ4MJb40BwM5JyG7YH34I4caI25jLuFNXd4VHa(8bKjZdftB4OoJYwSq2ekh3IEzESarYeGFb4tCXLGClixcRWUhmDMC3(oJxBG68xFqSOn52Dm0j1f8en2ytn1O7NWnFuJvGCrhNQ4duEDU9FLqRyH8r5RsSqrPyOOKL4cZiuuFiiczPs88IGSJVUv73Nqg1rJ3btEchgmUIRW1x32l)A6Lu7Ew62DUYh6wo8eFml1Wis7XZI0SmE6hglsKEoYaTXmGIc3O(4M5TKb5Lts96IyoWpqhgfboxUpeMHgbI9XdazMraa1(ap9IALSBcFqb11DdUj8n5UrGRV3RX)(BOElc)E9u)(RVeK((R)kV5bu90Oy2MSfZaXfq78VLjcXKxMhFZrXNN7IUx2v5RxgLqluVmkhKMAahQx(oTLdQA1rPCXecw0rYSiQsJTAOkDb18ZaclUsFuyEjQImMLksuAo7GllIArL(p1P7yIZ2D31v9sZqwhMDWsYhjx5TQShPIfVE)F2IqRJK5VKLckdsnfKrsuAKLd3AISCRxft9cmMkuYbYeUwTKIcNYYHe7srTY7YLR(C8T3LfEQU3FjWtljwli1u8eBk(3hDk(xcuwm41Op)O6MBvwZDRNPRjQotFd3RrpSUhtU9SDpp0uKAp4IlR78e51PDLr59NCH78xp8(LxVpBWMVWpOAk(Rkk6QfO0CnWwRr1cWVSwEwpGm1atqOZZbIpNgNlK2gxshxlfqEmBAEJeIc62tDXuOvU0fI(oNPzTe8YSv2nDeXTshnmAV7GSuLmsgzWWA3y6NJC)fxn89Nvn8AlZr93zQEotRIsQAPYcQlFTiIU(F9FiGOH3IFnOBP2ySXcvhfeBYvp(tWDAY1GlKQjxJ5dohR4GZXE(bCUAt4wBJ(6VM(muRT1gDiCl)Asznjy4eCDxSjaBoHXvLyEqUFP0cKluzTUCYqD54Kbh)eSlMFcwNRjnlF)eurwheSIMwmMFdSs9tsUGOJnG5G3fTW7XkaVJd)YKBV5G5FFV6sa5FbF6gwOrQfPxPXfsD5nynsZ3VlzOTtoQw7nhPRWd0jkj9CZ3r60kPO9(01wOj3TF0ibAWN)GrcuFGMQpsDn5ZNp6VOWMj3UPUifTx53gJkSbsHuHnCJDPnSGbiXDr2ew3mDkPPf8VhTNj4oJ0yJ1vFTGmOMYyY9iNAIywcHTrfcbz4VNJxpECQrtwI8ZdDy)klxVYe4TLEb7REoYjYr41JLS7jYk7(8R3)fxHE))4k1C0G9gnADzKxeV)7Ag3oOTC9DFOcMK63KB315wGYK7Uy6LMZryNUXpVGj3nvS57o3PryXewkIFBvVPcwnmb2VZIXQGbNaYs2(09kXGtUPL2GtYD6kUvGk5wTNUI9eZ1SuVINTI1)GFy3txX97E6kAzjnDfx09wxZzg0G8DXN6cMG3qMChjg6mXi1wxDn0qwFjIzFE(t0z(nKwdolBnCYQtpGr7PtpXzU6SSTsXTFMv60SnKlW6NzzppBdTgeh28aQNmO8y9nMAlxfhUcXHDEGvko8v5AzhCGLno8vTgeh2vMMB9y11w3J0z3xfhUcXHF5AwH4q6(WpZqP4hwWbqc56YfqEY1GaY(t1Jyd1prWr0cV0ne(QaYIbi)gF6vkViFwyiKxlxui)AquiVVwBP16A80XBUPRIcxH0Ih70RuyyCh2qiZwU4W4RbXHh70DMwRn9EpPF))bV65QUda2Dh2OWDVokm09OSXNbDP3El9AwDXye9TcHItLn8X4Wm6BzJihEniIS1ZOgEKoZKiydQxfrUYrKR)yhELYooIl2XdVSXIJSgCtkCQqHhoElrR(iXdC1bVSY0s)9xX2kE6SWWV)Y3wXtVgef2VwdJ3YrpB1DeD4L6wLzplP5lMU2vUBRze7vqUWUc6ZAFEVzxBFg7nqm5c3SZ2g7fhi3kzi3Rl2MbO6MTrUw7jL8aUzN(UVF2jXBbGSFpRPXEZ)(8HTbj)7ZXMlQSBp(FHj3jjZVDUh5dS0qYNYHqfY)L7U(6uRbvUl3sFA1WF8tKjDh)bmH6MwceQfFVhUWuPl2UoKYKUDCZKnOKHqA2QWXcn(CQBemT0GgQrTIvHaIBs7NJZcNY2wZgc6gHv0Sb4XSxTzi(SvwIIMsX4MOGyB878Rx6nMTSXBhJ0U6UkYosUTZKrsnnn6qcpvnKnectXIZDhBT44RICS(6yGXNq5i6xfWFfcWBY9QCG5MC3lDnfCF2iAtU7pp8Rj3G3CbixtUyaE1KJhNh34loyCqkyC3iye62TxpUnSYwpU4liIB26Pu3uVcG8rM0PZgRqNZkE1MGx3ioV2uHvsKrhJdXQBKfAEarl2YJOgNReriTKCsbn3rSj6I8TIcxzS326WimK7aoeaRRweJOsK9UbuQ4aEOcc(Mjtpd0FJjQTU4tKaJAsGasDEqGp2YSTfiUiHYulXqIeithHeLUDBWLM6EiL)(UrnLmgPKKfaam2OBXamBoXffq(1Up4EIRcmocgttJLT9MjLUa2kdDWPY2QF50TyVaP3jvOJ82A)vgQSYELLvwiOby2CItjECVoRyeetAh5varShU9x549wM3Yk7wXgnTSHZKzYpoQan1buADKJFKMB4S(7pBe16aES3LkyiyqDJ7zp7XcQaOg4eYaMCVuSJbyjYHYHgyPDczmpW1pxUHOgGKGAvfTVY9M6LgNi4tbGRy5ipNNvvl1D2lJgGkvhcTVuDthrXqKhufHXk3bsb6Pylub6kFMg(r4JRROfhJcfmH9VJinqAKMgjFtABNfn2w0oVo0oq3ILurCtU2YAD10TKnAuttVgU5GLhwKI82aGfb0Of(CUucJkKAqm4iXBOOTtCvW8SmIK2v3YaYsgEBrKh1OkOjHH)kDSIrBPOPe3PuHJqpCN7YVpxwXbIjMCjb(ITr6leAK9K2gz3X5ADkmYznOUusHqD2w4(rDD4dIGAeioLOgMImAcr6c3Dyuijfv8WF(npRUkV2irSd)zZrpnukb5KydxGMBT1zOxQDPKjfKJ0DB3tBru3uojcFqYxzsGHHbdB)W)GmzETLvwfTF4N(HEOp3LU0pV9d)epXtCPlDPNYZuy1oCk(H1jxCk7ueaq9aYf02bk0QTI5Tdo5DihwdECr6Yh9CBercfoysR9gxvfd94EX19DTrFmy4bDWtoRyE7Ttxim0P4braqVhY73klM0GxogBB7PmggaSufeP2QBPxyQSx(oyyNqTauVuqIL6b2QcnB3600gsNT1pP87CtzzPUi9Mm6HtWHwiSSvta8HZAhi1TAtr6jltxS2OUwXcRHu0eyXcRrZAKGMFV0f9hAMayTGDCUIf)Lca9JlMXdqb5y9qSLI1dZ0r3D3wKbJGb9NCSJycY3WdUDC3srcstYolHRIudSIajUlyOuLDxQtZkvQyKRcfQY0c1MBu9oWowGfauMs)qhCWbKXaEPoiy3CQuSyby11qMowogTHP8LxXskPqcIPU5HXaAiCHE0WFPsBt3Epr64u90D)n3PBaYjPrArknHGJLMoAMN3jeNLvzr7h(7vBTG2OnJQTrDo1eQBfqxz)EMtqg3)VhXQ4z7YflRzdGooGgS(ChAU6tdxy(asyo90kaZSTX7IKzu3mERbfKhD)Acmit11eHw3fz0pTYIoHcIwCn048xhZO48wBY9(jVTAa1zS35(z8zQv3bAGZq8jeUxNw17DGo2NZz7lkMaMGgvJ1Mqxg3uJzotxNz8Mo5iGDbNlKj3FAegsRaUttUxVj35YHZ0K7pJZK7nyY9NBYbMb(Mm5(liFftU38r90(H)UBCJGw6BV9dtyhaY5Vfh6nrGEZKBkgJ2BFbxq85ThmbAo6gfRkQ2Kwa2WNn2fTdltTOOByz66zJXwPCVTytJX7F22MavNrx8RV91zT(5ctApsVizfLNc1KbKDOHUaPKj370ImQZRplzKj3F1kMcYK7HO8oZRWccj6wDJ7eBGT5IoTnxKj37YHaYK7HT4Em5E3MCVhl(MBUilTt)fWk4F)Gczmi4tPNhmPqcP08PCc3BlH0exA4bLZKooCi7bu3uZXJRjmQeVHq30BORU7flxyxno75Zsl9yXYYnQUNfllOsW0VtkrObuoYxWKBIc4sN)oYnzUP4UiJIJ95ZOimR1CUTyYD(8yqn5E0SuOZa0wYjuK07b4kwiYutU3BoKOI08FhNBlfeHOCN9MCF(8Zv9Cvm0spDxKQVD2tEBRZK79begMCpIdP4qfJu0K7dKlpioATpOiLlKY4XrQbRAWOyCp2hGbSptUlyY9xBTME)qG4Xhbyk(BoeWKAY9rPf(mMCFmGWYK7JVvCB6enZPd3Py4rBfdld4244nEdMCN2ACj4Gbv96Yc9seI)SPMw(sHMCpiBKjp22SDzrUVAQ3wPRgobirxJwXKtb6P8ntBbAT2gAQAXHg94qdy70wIXb1TSi6R1iGQhzbuHkHj3zy9NalRj3iVuG1bY1da5MoGIuVPIujCPChzrhnsyCyjf9rTdwJet19w6xNcI8HtOURs)0obNXMEqh25dzBe6p1TJjoOfZTjxMh46ZUdF)I27LaCllGBIbtUGNksJbcg0FO697VXi(R1FW6XFRVPib85RUAzR05B)8BHElGEhKP(hJ4VUAXhg(Tj83a(O)6N(Ba6oMii95R1KBwtUVoKv(BYxKARZxd1fjO)gRli93gWDyrD1r)LUdlAaY)VgDC1fQtqD3LUHXD8TuKkSnmkF86m5EGTIa9pFL5c0n5(s5IKVhy41MCPxwJ0MoUvxd1Ua8Sj3FVnAfgyYa4F6Watol(37Gg2oG)EnzrXkbINmSu1Q1Eph1bfJuSx2Wy1TbJRUBfVmhR4L5OLBfUMj3x2gct(Bn5EmIPj3)WeMCF1LbY6LzTlvm5QFw2Cm0LKogJoDdZyd6i4PHUxgcYcxula8CGyMCFd77(nn5GC8FYKdQzFltU)ztU)fwsm5EctUN0K7BBY9Dm5(UMC)RMCZvuuJ1I4Nn2xtUxdDKvpluDgJoixldn(Em8IOnEPJZ1ePCGz6E(IZegmcu2BRc0pPoBQFqLZzYKs6Sz)S5ebgfjyXO6gJWNqIpLU39z95zsCQicGzRyCnt8IG9HsPLsYIW0ZgwtqGMd0pepMChwC6OY8Jy9H55IhFcWUezRVarMC3R40WyL0ny31T7JxHoTtl7hlhI(dufzRFztUFcuCMC)ytUFPj3pZK7Nd1ntUN2K7xyY9Jm5(PMCpdzCA4u32RCObrwHw9ZsdC6(MjH)6tCSbQxmqJXjtA5z4x9TqEnSWLo5)ih6VU)tBa9422Pg32h5bjVw0YAMx7qXNO0WHo515HS3BL8NEDKhGJ86j0zk8)ma3(Z8GUikViCoPoo0LBn94fzW5242NkNHLdMZAzABidTmc54Ei3Jl)nGHdDRXM)ioCNFk0C2wzHywEASyfZfrgmZAS2wEVX98G9NtEJ57Ts5D1zKZDGcNEGTVATJkx4DL1YyxvIruGEQRHHQEOE47nqARPWfA(TMcGh98BY18ayTXhTo8ADoCdohEDohEdohEJohUjNd3SZHB15WT5C4oCo8MCo8MDo8wCo8wDo82kmqp5eteO44vTzUi2kDMl2Oj3TjUa(Hs74nddLSNif6nke2NnKhwepsHUbDRwtictaWTKwZFQklNnzY4ChtNnJTx(L(kWqb3A2PYyoRDeF)k0V2fQBHo5A0q9pn4pDmmmhlAnhZO8K18mp)65FC7zy2Y)NN02P6fFdATGvdtUFJj3VTOLJ6bF(PC(cFIvXYz6qyCWwBeqTqPkVH(0RQLhn0)hoJ2eLQ869ExvBhFUsvoVU37FGvopYQy5m1X5XpqGkPvlz3uBRIf3mTWlllfNhScsOKfi)QyboBB6j4vf82SMHKUrjlY0RIf58hhJHwgkEJMrBuWE5svO)yXvXcvDthrAi6xzodrbVDZZRLPuL7p6DTAkNhLo5DPfsLSuL3tTA(Eof9Bkko4Ts2xQTA2SUfANPvZAyfnDWuB5sv0VSx5QPOseLe4h0ZJMPKYMBN7g(QRIL4CwLyiEnn(HfkDH(rVmku3lKGhI8UOJv6NSqHtGT)I31Ky7dhz8Ut0x8wB)ixDLXUc3)k9v2cU(w2wPxqHIS17IZsBXAvfc5OZQkm)4sZcUUwWSBThAu44NvTPJuBeTuTU03nvRW1iRj3jEX7kI9wIDdae9wwGDwWkynX21jlYAILYLYwhSEU72x41bRiBDWIFPMr)aj5YrqoyyOuwMlYBtUFCUbg7QSbWxbIk2lC3(6EEjyjUKIUtOKclOsBjbbspwYA(MXiAFJ4prOMQpEn40Jyh2Xw6bnZSXjP8cZHvKBqb7xwKGCyodlUWONPyrIrRq(qd3Ht2rcRpFHlEu00K7xMnohEvKXsgzK601F6ZiklKYyIRGiJp(9TQamGSHIlm5(zljeXp7QiIlFerZPg9uzMqEmFhpYvsUIxF1RoCfq(yHj(5ljmXp)QyIlFmXiNP6MgsF8rRwORRGyITZ1k3sfuSreaybfaqHfcb74NNMniMaTmbWfhMIjCMVRcGeholKyTLzXDoC)hV6AYeUXjoYLZ3yPfDiA)r2MaZi2cAV76)xEpU9DqbM7sT11K7PZAAlKFlZ98fMlR9gDwRYrpw0aT06jVNQVkmCfmURJ9zwnWH)cx7M7pZYhi(lwdcepsnh5eNOV0NWxFh7YoORSU1moTQYI60QdglwXCA1YdjU11NFaLeu5(jXq8y2a7iaYSITJ5TAsWGazO6RTX6YZhSmNDTOW3FKd8fQfz966LTlc(rRbXVNPPt0Xq8JPuxY6UQtxxPX0VjwqNUUO4WFQRi63elFpv9txdcdBSRKI9owqHQhp4vHHRqy499jwzWWNXbgcz1Ygg(muyytKY7CdK7z0z6lJuIrO(JvxuDZTkyiGRaLecz3GPIQv224QPuKmes694c80V7OIQv1VwgCT3A4T5mA8UE6nhHxvkP3WsAUZJTfsG31NMtx3PQovGkaVCsVDQWN05gxbx2EVbY9zw(2nlFlMLxLz5B1S8Tzw(MnlFhl(k1BG6snqBHhpD7(fxSvQ3oUCxPEEw8vQ3qoRaVIpU5N2K7FJT67S25TV9SrbDC9a)Rk6ATRKlWUI8jlyhVO9twGwW(QnKM2jJgjJ7pzbgU5JIJ7SgHK0pNa78Y97Err)oaeET43batUdD5(raWAXC(fPFqmih1K7UzRr56IHbM)q(9xRpCTb3ArScKI8Y)7IX9LDYWpWLhidxY5Zexjdqr1Qqc(jOR9CxpZL9I6S(sJ7eDJ7ARelQt1e9QAK8y91zGEy(dJUOoRyPV6hxa3(9efUail4lt6cag(6pM9xHDkE2L)2YjGIrdpzOUUR1w1xfwl0rgy293j)y578TTs3A1gwF4sT3gB0pLpjfqXTwWV(GI04bV)MQVH6yFgiaTAbufmaTC4Qb(iAkzuhmbU)Ufz7gUpv2D(wWDoPTQgkWQ1kMlHs64sYcDX(adnnU857uzmb6g2TnNV)LaEUTCwcgLV9vcQZS8x2l4GTtQxtYHQj5XesM8pkbBML7nlgZS8B1gwfiyTzHvMLFB42vO8BViijZYVdlmKz572S8x(IHx2YAD8sO(fgq5iJ3rJDnXFmIxQQO4Lan4lyqxFnAOBYMAlbKbjT8f8Yc1u1ADutJJnMV26tvR5(tFvwgButTnuxJbUIWYS1164LQvAlCtrgxp0Pp7vXlw4Lq16RU6ZcxGXGTAHw22AD0YyhT7r7L3FtT2GVRIwSrlb9xVVReOLnVwhT0(rpBO4QIn2ytrkoA5OViaTuSVuzyuzW1Q3qK(1ilw2Vgzfuq6lqbTJxG05vFq87T3vay5oSHLi04))p"
 NUI.WeakAurasMageData = "!WA:2!S37c4TX11bcRzGvLfKDJeLeTS8dbtBjrsrrra(w2YoaKGIuIVeaOEAhIbadXmMGygnZa(qPPTHXPLT)Tjn0ToBZ28In1nP1U1HTB(tY62KQ0M8VBB3El)tBN)UnB(lB2830K2UrBE)8)CU35fErrkjNyjlOpioyUVV3Z5CpNZ9CphUjQzQAYuJEQ2BoyRnhSMmlCaT5gzIj0fn40Mwutxwj)9SSC(ju0MsWa(H)RiKpTKIwFActjMyovXuX7jw0OdVOqEzwo6iYucY57lIbKyK8k5fxjtbnAkJJVstxmTs(m6ZlkOtRaI)lJpg3qtmFwdPTet3qqZOpYwj(jBJCxK7g(7p5wsnHCEzDPYETUsbT0IPKNsvrZiubTCQnizyOQF0JCKzeYQ0SSYrgwqzgPXg4WdjKv8W9iyiKo3C6tDKGbvRb6jgAk5YjMPhj5CzGEWjweZwGHGHWQ0NIjYAc95P)mCHzxX6bnHare0woLIwgrTEuYPODcoooFlXEr0mzfv3r8lwqqtmqFfYLlWzKKnetPlofmVMkyZT0CWwwsVqQyIzH5gD)AcPXjj9oIaJud)KxNFY29VKHsARLH78DtSQ64YxsCZlMvtPG6aWiivhH6OLwcUskH0tMrtrL1v85Z3O(AP52VICEdrT8c5onRAE2uSkrAv2FJyvk1ThjN8LUKGwMajuuYziREzwgyqdBvBwlWIu486a9U4u6X1M5WXA)WlpbclaRFWuRVqfKZSCWZP3sQ41RpyOtKc6GtiN1)s4IUmDa63AkBG8q15Bzg80Okq)mvprhor0y1jNr9(OtY9KtqxpWOqxmWHd4S0TIqbdOiJOYQUi5ueY0xkdHCI5nQn2ufGoV)yPXIwl5r9hrhMUypOkMM(qgr90QtS6p7sbwJwXpMEIzKnsl1SX0mOi676vwpnmaAoBwVVuuxoBEXmbsnxG4gauFFcPfhuj9KZBOjNnlm3V3dSyH8w)WVM1d)CZdDQC5giJUFYwJjaWuHIuaw(tPMtyorTyItdJPu9lkKZqAPmIPkmXeioJw)rhC0(gBWvb4hAwIdjip7YJ3t44jgpEIWXs4K0OAIqsXIpA0bhmwEyLs3)sAuyoSMIrbJIPNgM98ftiNQKGVf1fZnbDbH0rntFhVPAs)(gAHhJWFx39v0bSS(NlLMCMecPYjUWEJmQOraPv7rPacMrhmbciD5(KbO(iW8Qb8lnaYk)KWdRetoF2akteOpnfDdPvcRLwiVyGrvMrulG0YrqIdAtI5r6kNrgQjdLaXlOnT80IsQ7I(gOWgsacLIMUWKI5XwgQb4TauFgOjwk60kPPuBciPUDySRlMpnnddjNpJ0Lha(bG1QjJT4LhuEAS1IOmvkO3ffMfubmBndzO3DzANmWWktlGJi2G5mctlIdKEffvHrHO4LWFcKgYle44ItjTmTBepVGkMRHK10u0cmWuauMo025NwwxoLCozJ5KwAG0ZfyAr586Weu77pqpAYgsls7E5aWgOZBn7G9wekfgBPfXjzCzRUbJLsfOSalrDMcwcNzK8APLeYNvmdzlDqUZsPtsEDL9MTx6BILtEkzJTrgJ0bzNKDTOGw6bPKKFMAxkDbDdLPoo0qZU133efYtjvvFEXzgvrNHv3uaK(10IwKZAWFa4ZHpmaiatBq5cmTGMmcZOttbgJc5cmbMAmLzgeB5ahlqxqjcq7g4kMmqZqpGCEw2WkXtrNPVyqbATdSeZiNXqclHtgzL1t2LOzpeTbKeLZkzuT8B1XJt3MQQ9C2UyE66Dx5UUUt14TVhN23BRO(UBolVZtZFOokUZxXcy17PaRvRVJjE1N0TRcV97bRq)2PPkRxpyL61vi7ENwvfsJyKhlaTrS)zkrJzefZxwta0H1ePWINZTKhoO1KqL(uAdolLYfuQwklf2(DojXE7Cv8TgkWUpW7E4IWbCRrG9PaYnfGr2TxyhgCcwwvaa)QVy0MazuOLWTUzfcQC3s3m7rNmw(dwfvzMew9SGvlp0))m0ftV5YtI9Zw7kp10f0qkqaOKZ0rrnGmanf4Xowjy5a5B3EUtLz3da06Yt0PhivsQf9dO5yRdx9Me)4zYHwSIYGyoDX1Qefv)fxY8zQCxeRs7zKsOECOn2uu81CkQKulArk41YS3HkT7UUMobwPwJjPRY0BXnyvNFlRAkEEAW1CEAW1yEkK)nYqd(Dv6WE7SopWqEpACrdgspT)wVBxVHQMtwNVEpdKgwdAaEiGb9W6zvwZm62hYM0AdbosGqbAes2AqE4GnaPwVfDXgRA5AOI47ENfbWTYbvMROofURSlv(dxb65LI(uCdeATAa2WgBIdHyfn4PLAek5A3AvAHZzVcRhouLOQc9rRKF8J5c5uw3SK9DQAB6LfRli)uqbEJwRRnzpuFt(Tln(f(q2977(jzwQhGRwGTnOKKZrYUyF5aE)dmIwQv7f4Ne3KpIMOGHezcssYzjNNOsKixGmorK8gipfrGKM8KKPiNHKIOqMK80KCe55lOlsHWLinXromPzIV7HSxQyVK7JC)Kww(sXe6SLmT11zugH0MpnMwbeLiD5NuhiblzF(xu3qunC(S5e3hGdjGsbXnFwuIcKV2y9sc5pgUCiUzYdVzYoi1aIdsQnLMqg5c6pZDrEaYdgb54nvpJfpXidT0eGS19iRLoNyss9sK4(Mhsmowb(inqAe(LbvEaoYH26Iy7qrY2g5uxoZCG4qYPPsafbLSbyd(i(ij8ro4ZsA1p5oQDzyJ70IrrXO0tsc0b5HSKlN0oPJLtRKRWu5TAQU7JCuu4sYJr))Jr))hh)FqQkq0qGP6W79aKi(j98Zr6fK2JeL0h54K(jdqob5KKbjdrgMmczu)RIm5yiK3aeH0qrlvSW9oWyXjBM8tqoGJy9KhHS)fAHWZbsfQlyGAybMLVJdOUhOTu0eTeoM21JIsHa9)FPKensTKtfbzJIkMWc7aKppNIwyF1mlxnZXTi9xu16W44NKGJLJJ7J93yw)nIVuuzgN1hvlm4JZ5dfMGvf9bIiWJYxSiaXmo9vsOygPORgICKx3PtPIcNzezcHmIO8iEfgz7NM8EjVVsE7vMee6kmkeVrmCfnjkPYLtRasCPmtEuFlsRcG7PNCUETu4K0s4inov)nCiela7aqIZBxMKPy8L2naZHqZrUKIYu40BRXsBRefFQBhgcHZ80W8HygXmdjmR0QQAkzHEVoRQB8(3eV6USR0eIZA0RSoY0DMKaKumkLZbamf1AGAQhRSnKsgyuaWSaKuPnHCEjucmaD6Itn9OZ0t62YK9srekyOizdeE6LZMtzMXz6mkIUKYmlMrzC2IM0s00OQLrDVNruysuzv6hnmamayBhupqCjzXCzMhkHoqgkJKg8ewgjY2RL8rKihzZKNn5YzK1r1qG6yAp(ExVmP1gpqS0sIPNSdsp(M3wYIuOsjeZeBAHCfe5SKcvFVhyEyssvuZyoY7G8Yjpa5J1xDkQ18yqrjF8vfNvvMTgLqEkrYlxtiYFeGD8hJkeR5wBg7lqHOKmwXEIn(mYQW81(orTKTUcKpuFxiUB(mtyPQkgGgLCKLoMgxealactBDrSa0xzP3RXPYIdenwX63kuIPofe1AKVV4IypXrHA(UmSoDC73KKM4GY5f13re2S3w1GMbFCE8)O6xzu5zfZTc9NsaSjKzDF01UZXOE7JUyXe0E30NJW0phT2Jt1ldn)N1k)xg)HneUpAn3NM4fliMp9CJEhT0CO2x4EvFidakCC6)XuD74QJBaZ0JdiDPLr9a6t9ERqEypedZAg1Dstdb7qn7MMs3msy4NlXWIri9idpYWrxHPdpREi3kw1zEdQUQgzSedoWWrvRH(ADjHmodEo1hPAD0CIzfsp34tKtbMPVcldWujJ69Bwnq1k3ukzghjgM8Y0eTxLx0PpfJQ0owQigN8eZr6G1LNbM5pJMG68NX6HvzDzB1Hfj8yjgr9bRwtZ(f3IoPx3(vTMACgVB3ZKGRoJTEThvHs6yj6RCPdXaUWxQ2q16bw7OnUHeqDscqB4kAwV8fiuvYpGMCEuhZW(hDVWEwbjyRkAKsWWih8QJEaYJw7BjzkDzCl7TqPHnov5Qq3nZ4i54KuI85eNwmNe5XpaUX33zlr0uYrv76QyIufdozEKM7Qfx4AjFN2AxJP82q0TlPv0ERR12wkJ8etiNUqoJ5C3tvBcgnp855TQ60jjpg0ShiwVXgBGEtgzOWhpAsY3XK7NagA0T3PQ9vd2OMwfxsjV4az05x0zSWgc5Hwgq8WhZMBovjPLC7335l(HwL2ZghPQjaBmV36E8JTO60QwkEg7Ha3kKW)KSD5)BxbwyaYL6XLq1ZTesJoCUzeMtNCcT(dhBO(gBqnOPggOsNKG6VwlROXsO2FJoRSoWWXIO(GPASDVXART2AVtktdJ6NYZaYRaWZaWRt(rYNBUKapfQ7GPlHemDld7Wi(cBcyNrD7S9fq81XuZaihPkq)dYzvgKXIfocWjb5DGmqqw0LrbYZEnRmrY7NU9mzjjYh4(3K7EVKFRKKN3E)wYVnDZwYhKbG)HKi)o4EPKFxCFtYlG7zsEXKidz)E2BiEQSYggNCM5oEN9sEPK0jCGLTNnj5JYtA98WUmWEtBM8XxsjV9gTKxMJ8h1iS3c5tsEzj4VR6Uhd98NE5vsvWWqj)iWIpSDhRoG(8hFE58PbEOfmOvXERfRcNwWK7biVSp2Uw27W1bDZnYY0eoVvtcj8hBY9GKxM8xzLvjSM(w4pwYPCBHvoopviJH5)eyhVZd74rU8eKpfJt7)uCdnYFg5tNK8z8r()Y3xK8FHnb(FvI8NVdYFbSpe5VK8FZKBFeIpYFnhzLDt()wI8z9r(B4i)T(i)D2Btqm9r()H83t(Vt(hiFoY)dYNNJ8)l5FKSkh5FsI8fEZK)NjjFXKK))i)ZKVeSu(Vq(YKVc5FL8VXr(3bkBK)xCKVkRdDfi1)3wePiFnYxNJ8n4iFZhyTAGV(CqduHTG0TEaaISA6V5dy1YDy1Y6EB5qjgzupTTf5UIj6I9gCa8Tss6(V1KBBsmkjMC3bJUHFkPcl23)Ujn52kpLmwTBbiISzto)jj)GKKVTe5hYYCBTBYD335HMdW3Cpl0rPAJxIeopd9)JyYTNKiN9MC7eQYA3BSGbdgQBkp)iAShCyuCGr9dfR2vYkMxutonJKHj3oi9SWoXkrDhuIsEtnzmdGG2KKxcPia1682hZAnbxXHKlL4YY0FcfkB6msqJTci3xU42jtMtRqE6jfrEjtUdan6IoffgKxblmJswMyqgLi9REV24wbg1Ir4a1tRVgCgsBngTsO0sP9ZKSPLtdtfnMQTGT2vBbn5UhsFMC7cNpWzjYjm5Qb568PPhWW0IHeYpNj39ceXqUEpa554j)bsUcGHKVMJs(QL1I81c7G8RAjFd5xJ8CGinK3PpY)bFKFDFK3fk(c5)ivYfYVbvIfY7MkPc59GcPubXqQSWjEO39BcK84U(O4bdoxsEIPpZ56485M88X6J8sUcaq(Wabdy64pK8Fczz))ZI4DN8r3dFn)mKwpQdvPQtV6YSJGmFmKXDkjOJI55dsE5t4R)N4VAF4h4H)Yha)828zxEpKdlP6vRbPW2wZEzaRi6zNy9splPx6zK)kc8WFTppKZ8TEjNL0MCM01o5mk9Jf2dsiazkQJhi5(sIui2cqZG89C58H89Pesasgi9IABR9KmsgBIr0HdzTXKJ3LLgtoFfrpcWb3mqY4NGXcJj3wyPENS)SvEKIesgZK7UGV39Z8wn5(jrMrm5EDUCHmmGVbiBncCUztmHYUeYFrsKEHjxZ35p1NaiWCpmQuheQZ6jVeL2HMiAdhaVtsaXftUJcj1qnbXAJslbKXtdprtw1Cii1MwY9eFbkmlZy4yCjzq2()EtUdBtAbA0N5Tsjs0VjxlKTAYfejxSKnfkGSMjxi4lmdbtz3lQngtU9AYDFiY(5E1jY(1l)nfHT3qqPPNBgPizl80BmS9p)6dB3KRZBe44MCD9Atu6AFLfz(opK8AInBY1nfn6ORfoSj3JwgIRj3Jve(QR9ma4RMCpEPOPqhPC8utUNyTWpZ(Aa8Zt39adKBYZCQXgl6TXpFT6wU7HRNd9Je0uYLQm2j2b2WONx61aONDCU4tfS7JFrzn5BJE(AWTpFJV4psWlVc7mupOZHOw59qFJV4ggj9nERVaTJ2qQgIoz99LrYyJHJ(bVno6pIWrnA9voC0V(pAyW118DRmY5xFdJAoXT(OMY9EXzIzmKs7Pe3yOMVWTrnVfa18R(JeuZl71M9RmY5xDdJCM8wFKZeHLMrV9qNmZKQBmKZx62iNxJiN1wbKZkGzk9kgkPf64DFN98Vves5B4vaKs3RWtLrk)dFRvhR06qVyvi2k0c2ys6P)lKsxrlfEE0jzvt)ltpUOaNepzD3ZmcQtRUxfrXp7T(O46JgR9PovSWxkZGBmu8UqRZA9GIFB80BUXtJrVmDvgbDxxAJJGAYDYKSIcfBW1nU45V1hxmvVnCr5toqIZot7BeCrFVRx824IRdCXKVYJl(I)cLXiBTmKfB7QWbZZYik8G1DOKuKSMwT47HzjA4bBIJiXq5kg3XdNQuRWYf3r9wFCNiJDY4YINk(0rcTXWD(ivIv1J6GHuzUpxMY0YyuBUUyBOYtvfZfn8tEdcxZ3TfE0RUx)9U)Qj(4gaRJPk1Mw2ZnSUeuoSz2OOCs36JY90YAdmrQtx)SP79hbOCu8PBJP9JhmT9Wf5RDJdvJCHspBrS23Oyyx41a6FP1cjAWqPE9HYSHeoBNF3BZq4RneoJmEvoiWh81Fnlzgw2nKOzJFRpM4m9Kstm4jAR7j3yNY)D83CBmXxJGjwnZAB0PU2XeHYUHWefV1htmx(joxKuYjcEYlTX2t8pH06ERoM4Rkq3sERJMq(ssVYDKEsi62BOkOBFjPn8j59gU1hRj(aZeTNeQZC(SDTXuZ)rU9(xV2y)RLCDgEvbZAIp21(gzqz3qBK9uxDuYRZlj61IHGY6FRbw2STKs9K91)u5cI3vuR7qwD(9tVfzUpUD)wyyuCK1ABPLCViTyzr0PJU2OtlS314oqw(Mnox2XRoQHj3dx0nBCHTdihRjOETRbyofh6aBMHtrVYJFFwsBZgzIH3fnzR08eTS9toGnOFZ7X3V8FeaZV7IG5v3jEsWIZkK2W9QjkvekadCTPfDCHJUq(nFNhzNEG)rLzSwBResixoBvuaeIrqyHBkbHhQRJl)0HmcNlDMBqGWMCx42GUBmqxtUNSIaQl7XzI6fuTPL2aGQMCVHsGutFtjKQ8fp3jshD6GNyMtCBi1xTbPEzVEA3IOQ6)6cu9jVPeuTRzMCi94jov0ElCBq1xTbQUi6xKpn6xK9cN2Yh96coDkkCAWFSaNAbJIGRa4yvbvzWPamA7m3VmaNEs1(7VZP6sQJzNTiFp3lzbrAjwipP1tuSBjXYHNqDMwHSCMwoE(KqE88jMC7Z1DNyYfWXrNyYnrzE6KgD9yjv2JNCcQ0Mty7YtYIU8e8udFhu)DYRgXr(IvWBG4IvW8ii0Bv0NPcofe6nLFArj505ehtwI8dsQURs4XL65GKWZdeWmarxDKveKoBHD5Ip0ehZlH0qDT1(YooVJbYaifHufna0dax5aRYUH82oFdQdgbWda8J9YX8WiD3ENTHyh96N0p1)pkyeyqLSKTUiZr2KdEEWvS8s8J1tprJhxZQP2BSwd2rxDAj94g)uevRnEHPMsjFGZiyiQfiAoXPeZBiKR0Be1Nz9E0IwOUN5MYTyMOLzoZzZoqgjXS3ElMxTTfdjvrSaTTRRTwsDt5wlHg686nmNYW9DEH1e4S8TAUniAfbrNk5p)nuqufVGOF4F6RlquLBkbr16P3HvoJu4SITDBq0xfcIEzVr3eVqRMnFDbTo5T(h)ZKd1(mDLEKCxYqzJD8pFSBF8pV648uB(J8k7vKCrN4iuvo9NM)iB4Zv9PVPCBGeDFXr7Q7rM9STp2T3g4vJCQ45Yc28B96IYFokaAZVsaGIJY12v0wz63wWTmY4iqjd8ebnbaUwwo7aZAen9GtLnJGTFODp8B7R5LmTLYrAevcYh0dP6(sr9L66xc9l61DSJr11c1hW68ITu6l2APVyBL(I7U0x86SEb0z2HTpMTNM2KvYF8qHhUxlv7qVXVwHxah7WXREN(tSqXqO1Fokm2J7fyDBOkqkZHQculnoYv1f2UW(kbnt9(kZ1WgSzpoh2ppxfYrOMlY9XAY9qWFbKtg(AflqRUfG5ZB)6ZPU3YYx6GUzRc(K2i7hAzVi6PImsIeJmuLX2x4HQajL)j2MJfxRTc16xFoBYnqNdPvaJNVbhwDMC)0ey69nt8xHrwREMkm5(zQsEc5oSGHKNbGj3BPOo)plwlpeDwT8LQ6QWsvPEJDCmY2jhOu6UKeO6f1YBQZwwQi4GT7QN83R(WvVEC949vK9Ji7hY5AXaI6HQEDxb)T(bQEU96s7LiH)OBLNPjWpngwbgx2qCklFbo54UKEbsP5iBncMk11FRUNk48DhasTbpUt45TRS7C(awABSgtU3g1FeZ8G7Y5tNRqgXEyEYZKu2rEhqUTIxhfYBytP)OwkzeiSd1CmAA10cRwyQ60TN3)sypja9QKJ08F7y)zvArCCB61844aS0ELj3I2DItF)MCpBLBDtUF1AAXK7xljURYZ50cMCVZIQ1DyxRw14(6)6Tg92pLSQ1D)lCdVFE8R3AC3SA0KRg7o5VOBnb7oHUBzlvnJTbToHAWKB3uFu98dm1uk5a8vAlwEJr3CF7WM7RXY3B)tCDoi(0mFga1v5BOvqmPlYqZCmecBgSPA52oUYc4R9XyLgvNEPQtgzWqMYOkYKX(rMmGT0VJoaMmwMgIayolCloo6KgUDUM54OLL7vzM(tf8uDoAxjOClS7332v39qIAtiN)ObgiBEaNjq)I5aCc1D2Ns6c6yOOvoDGeOVYgEPD0)CG8gI5YHH8MWAtPOXcSQXXiKmMP(vmcGbozHjdeddKnxUFrbdmaxnMAGyE)XGxXtwhuCcJRmKSUUCoNR1Q6oIOjiN3oMM2l8)l2NsFSQDE8jAP6bDAOqrcCyAOZ9k2Hs1Wup8qa1TtdOUSa6A9qInq2RBil6(ImSsErBUV8YzbLTIh(HWGAK3yCeWaw9syqCICOTHSxzfZPA1pY0wBmgYofjg1RUxoFZ2SISCVrhAKH7Fmm0cxjgNzp5pccRzZ1SfhZSFqzugHFUhgNYam6ZBtKEjm63WCi7xMD8mHPUUCk0(Vo9GoExiGjLWmJJyV8(gNgUPgBjg)cdgTVeiRQlCqcFUTsHp9daJ3Z1hWiY7lfeSr1MQieiSy2ln0chad1pbUqcAKO4Pu3x1YngZOfZNXBK)cxu3xLwu3m5r2dFn)ILVScJ7dTvst)f3jDnfwDBz5wAn8fhkQABb7VxYtOMjmnmpJGA0(HFRaVmg34ScX3zCdfZtXYJFwEhsmJSqaz9ayKXbqzYqdbNaEJrb9ua4Rq(mb6tjVHUnWKpkWecQv9a5fc1UoJHxa0Ij37McCIKCI7BHdBlwtTukmyQxxRQVFPkiuZvLn7Rf7Eh5f8QROMTqzV7HxiG6(RaB204MyVcOQcDy5Scr)H0U8JIDqSIrgmduHASeUeHXXxuchCFdopSmdJ0kY1VlNJiVL1v9Q3H)1kWxxOkZxxjZD1rN7wD)fnhuH5roFvGj2qLZeBfNmYuYm7HQEnvglRZrx1GPotUpAXZ7MCFm7jw2Skc4WMzn5(pd7V(XzZFpsLwWLtpzjR3MCVCvMDwz)ElqfNCm5(JHVFcSw(Kyp2w49AxkFHPsXck2BEneKhjacsXJi5okzYs4(wwUJUJlfBUSN)PpxulP4bItT(0UIW)F29UoJsjJLRn3)ZNDWn7Xz5(tqE56c2cZqku3olAZ4gmN6WwVS)zu5T58LcDOlySIR0kPMwloV9)eKTdFEDFENhGPKpDfkxlyp3K7NQrll7WYD8t13a5Lv72jaEZcINAIgf0YhaJ2qJlMF6MzHS)MDNyPXYtm6s6oD4dvIaQzT3Kx1mxs7AY9zUwBUqRDZXcXeTxAiMWvVEmfvir6EAVkPGgNbyXRjjYpqQuLvu7XssvRrj6zKUBw43JvyDIXamLhBAqlHXs9UTIXlH6QToQqyAIARg963YU8TmJCuMj1hUYZohx0aJmEWlH5bQ61UcRqN2oGERo4BKwagUpgyqDcAOwbUVah7GmmQd2Ktsg053ahKnBBLWBY)BIU)1Znl3)nNUJqtbeBkGo8fdzenfWd5l4hoyRSET8ebOlBh8mHhFOOX6BGHhhdcxhKUrRolPbo(WdKaEvrXcvOGy1tZalcyDWYdwQcx4Gh8PkAeA)bz5cdlVaRBnvwIwbe)QMUDuCmH1CIogOqtFWYZin0gIHp5YtYoYFxTK61E1X70x5z1z6eZPZpkoJVPIdkXm4eCKvweK1kwWgWV)u0a7J(QfVSyfeIEo7W0bcuSmo6fzXfmq4TqT0CqYhJ0VAnwx5bwmfBqfqif195aKyueqRXfc(um4vG3wGnxYZr6AVttEbFPOZG6nEzw0WLn6wobmqTEo0KIZzY9PiBnLUikTdgy06vupTuem(NTAVwa0dtHA1YioHqHCg(OCz9hqvomWLfLflqsodGEQiSlfL9zvBKHevnE9DdGzSXqEKWTyCvUSfnKz32FhlyPdi0dbcpjQbOLE(HFwQdOtDiEu)HhKU3F63klYmMWPfoolI9mHs90iPuRnyLNPM74JnqVqEgdYl(y91HJDrT6AWVFhcUzliNrhYujVayq(n(MSBnlRct3bR7cH6UTUEkBCjwa2pqCG770sS0d2ARfLmMokTAkHCSyR(fARToc2M38G5a9sVtqJDmk5mSQPGT2rhLKVrNttjfgYkyzP7qTgS9sYYdvsEcfmulL2HPbbzDdn5jzynh(W0aRNvnmO80O8YruMkLDv0AhLvfob6gwEAnyhDeSKUsjEhC7HfmWkjJUrHdwE6QTodfSQtrJOLYVZkKlmupkIGSBhlqj7KybsuCE8czvpSxvhD1aLgD9bXO(DOM7kqJEQ56BOHJeSLwAaHnc6ft3BTYc70oDQefr2ZPpHqJo7vKxXOeOVlGP)uus)2THn1mwnNzQSLbYYkuZUHVFwMaKAPMPCJxp8IIOqb)U0URxsV3W6TfrqVYDANC4VSDa8makDJwBkTUL2ZWjo8mI5x(4HTfEga03DKXktblkfwenyHEsA(zagousOVYVN9SPLcZIBvCmNMO4nXDIbXnhpTqEw80U(s5vOjhweSz5OyOP6D6(nv8cNBcnusOq3DAbjwIu7HjdVZlvBgHs3ZHJeONnbQJUdAThmQlHXzDYaY5dOkiRXMY0BiqgfNrDXlhvCnWPRAdJCHd2ZidfjCIXhCKJpE0thD4eJp2W9nWGjIglAVuMGC67qpaycMoz2e2D01sJvCtJt)Ntdz)Blk6wpG8EsZ1uzTYantP1KbqlHCSEN9QTvnh4N(y27WujiFmJw9hesOU4JgDWbhV3W4IBDLX1N9gmxW6HNIckz3(vGhWIrIShDpv54xUjX2rZBTyHDAX0w1kiJIcw8wcuHIxcj1sieBr9Tugez)9qba5fbsSiHQglMk66zW2Cr126SifXBjT8hbeVQc8swcEsjihuW1C6IURD4QmJ)JYxUGCv1LLYY86AiFvYWHP02lTwx3JmVSpx6Z(9o0lhcp8yXcpESOdnYPJ2ldopqfa0DMSc(k4KfmnLxo3n(zHkqMA0bdFUOXgpr4yhpAIX7P)WdF8sjqjWQ4sid6su1T9RuDNy8(gPNXIVHQAgv61OMhz0edmYWXRyLvAEJNiCIXQEwj)bjTunqi)QpC1LYWZ5p7QEQ5Td14KVSj3Ej9JQOQLLNEgJgoDNJK5CDCQiy05M8pZ0Jr7Ko0Scv5rWZiy5sJF4K9TxQIFrvcVsrry97FtKJ4Bzp9o(vkkwG7J0QF17RI9EBvKUAXraEY)G6HQ(OTC1lQwx1ZTR5b09efBmj)5vt5ml5gf4FM7YnyBtvrcvjgwY2svg)ZPEeNLoGD6MBU5gkv9txq8PQN(EMaZSdOzf1S9my0XoQ3TWS(XOrJnWi9oqpf)wV0aAkqfXnSEDjG1uLeHhC6NnLo90jWZvG6DgarOvpq1N6ksPZubH)djNkcQpS5TdS737cpkH)rUttUvbPHTp6btU)jotU)z1DhoDA5m0ROtGrH1k850Z5ig8PjV3LeYPkjmAbGWhZ0yFVoI861mAFVv0mADF77xY28arJgABsExNxMzkc0ZFvIQ6n3fD2r1Da8yjZKKeljdi4rtIQX9dC)BYK7ls(YO82umeqwFa03K7Rohk7nkj(VfAEwZ0LAcLzh5Szg5mMCFtjM5EzY9)KHkAJ0yPX4xeMB(ka(cvHXMC)B(iNYK7BrLNVDtU6m5(sMC)lMCFzgghESCufihcvZitRXEp9lMp102mRSmcmAmepHvc18ym11gQ1wAXs5YjGCzRd1d4A4wo3oVIudATO9zLWh5pjjLeIj3vGh(Fr(hm5(3bubNRz29estCktUFi90kLZMxrtSxrHmsSt9ECl75ifSsetCkPLHmpILLAu3JDSlJOj0DWG9z2BS2BRJ26aaxXGcDu02pIBDp1q9BIka1Khw32PeEc(dHXmAw1t)9XDBo8S7JHa6aYgguAPm5lrrfqvNcyUQ70tVZP)CSJPUZPCR2rCSOe7HQj)MSgPM8CsM881e0K3xst(7aglM8Bg7Fi2g)wkThBYFNW3T6TNzY7VO(Kj)2GEGj)DH2lHJPfyY9VELgB0Zr43yJuSX3Jj3)7N5Um5(2dHw04JC3mSquNuw21iIiw0H7cypMCF3Yq1wpQFYYAzD1(0Z3)RpYM20RFtBkIxaEgGodZ5f6)1xiWMcSPn9qUMFlSduRNl6PRpE3z7QaqKWK774SbujG)E2WHH1CKTaZeQ12yJnwQLlaVIIn1k0rUapfjPwmuEtXt8aX29c7MAF3iA(BXXZQ2yYKKVJpY3hT)vngn3yOrWYV9In07A6Qk2oRuz0uCp(F)jz24nAKS3DBxOyFQkDbKHhH2g7kSJ3NA3e5ZMAgrbvL8HuMycaWRjkHmGaQKaaTt9Yo8(KqWUhNc2flu7T1zOL9a7wtlaqO0vSn8Rik5lOtVVNOr12Tj)o0SQTLPQSYqjF2cIObWqVBNREgARhiklpmO17cGoP9ddfLCgYQsfF)sFIK0t)G1VtYmLx0izqJbQrQX7WxJj)oPDPmuZbONCc66WO5PTTMNlgPJo6S15NOqUC6WACs8Oq43bG2izzAq12ymGAwOUIeST2722uDEjipRI3)u58mIcI6lHZLdQmdWMMd2f3N)YremmYjgiUKsbdavouO2BHHzpb7y2rBPGoMokloudBBzqds1ul)XXQkOBdG0UPiIVxBCWpG)BoWbVy)JE8t0z7JMvC6RjCWTdiCuZWHAXqRFSVDDvW(auoBepPBKiERbohf6cHkbCSdBYVljKap)(lg5YKF3M81YqOm5Vhp4qM87XK)EDWAm53RlMIj)95IGW)asuKe(73dIrJwihx0K)bP2ToTNWCHwoOeWMi87RcicNiuWo6ksNaYqSwBPTUcfPJGb70lgHjFDM8pShOFt(hbqcRg8Uj)bwBW83hfmhy47RuK1ZJS6T9(0KVuGtvqidSDPqGej8cUht1Lbp)Bei(uP1uuhFo8ca1wW5bUNdNpBoXNPwlSGutrVEysKx4dCVuaFaTRLLpxKuTmrFZo8OgfyLFww5r2p0gFwo8y5Pq7mCi1DbsYbCfJYi0hW4cYuq(mslQNdO6HXtOudmC8b6n6vMWjrMqr(6)j(cFw8Zl3)t8N9RHF63hRnMJJ887ApOn)aSoTa3YkAYitWOicZF6OXsmqpHhers7)j(8Vx8tY(FIp5Vc(5XO2uaqSqdzYUGMOAh4wCAtiKw8jdNjJsE9N0rpNpj1e4OpsnfPNK9w8)dby5xjLq6j92FPggvj)Nn(9s6O5(rND5OgWaA3pa5MftLdM1XzHqH7T3L1HTjsW6zjjVNKilPNYK)X8ofgXPvLa6bxXACGIHI1I6U6zWWdnAIrImy4EojuLdKyGthvDhU91exxd8wlI)y8S5NOSlqqPY89MPY8npS7HkEsTsoc898UwjDT7nwBWNwPNgFV(9YYMJf3HctTD3bct23nRUdx4g7X2Jw0yBKIgBSrKvo1FsbaaFg9Xz6ZOzJScueX3pGiEVObM(vk9ASCp0fKRhRkTL4JeTR4rhDI(MbrZWL3Y7VdlOmJ0yd8K9aJTs7Y9psIXJNiw0WNS5u5ujn95yMnM1gjVhhryoa5JKmMooVO2(vDcjoMp9NmMskfJi5KvBwjBwhdaCbo6SYs4EBj8zY)6JfzWOd3l5f(Q229hqyaWgH9N471Kpk55VJxhL(ecLVoGqElmt2annVkdA0vWw66QaAyYhKDdnXnXzBqVWRxDhO1fQjAa8zOWiqW5DrvI8ljrfpkMtQn9(XnS5pSd91fUppxu1v0nazzZkzqr5PgApWfvorgFz02quIKaX97Cj2p7Rq(0QN0rfg2gSqtbOKeq9CLZqOOdgIMaEuE25fv2mlxO6Tyxs2fPs2JM9aYSZ7cjb3DNK3TeDpnasBrMbyd5jjvvk)hP5OlY703I0EmTB9fRw36Sw)9CWFXCFwR)EoVhYIasolWXkQFgIQsCdPMvLBiWHduV1ZO6QlFmEwCqwplpad51tRWgGxgSHJeQbOMQN14qffSHgS7sRVcDowHOZySrmDUIVz2ehD4)oxxRk3GgSxTUTNvylihSdpVnahEZNTPJ8BO(FQc9CTGnfil8nf8va(Qfc(n8nf8vO4oKwWsaVQxlema0OZYzllXSyIzPjMQSetHjMIMOqzjkGjkyVoqEDluJdYKj)fs6CLVn5pVjFkY7Yh6)CAoe76FBYpUj)5WBgocaBp4H5HTFJPAEHNYK)iuEx60KVflUEyS5qPMG0(m5BJtJYQIiSH7VhWC6j2msYUvhkQhHrr9i9qTXMJytM(iGeCgsJlKpZ4PZjmdLuDllpuVQTp4P7yOPmsH8UW4qYKVDOE7WKh6gDDI(FI)1JHFoz5padLUbwF(VG0AXTIwag9h1K)rlZEjT3m4GpRj)Jxrgtm5Fcok5zGK5Q6tH9v7RIe9Qade5n5HT6Ia8HibcLqo1vSxxTy5WKVhjhk(M89zYFCBdMr9B7C4guB5OudEbnjJgCTLLjsvAgc2AREtV8mqndfpzrDonLYQe0eu8KhDQHUuwFP726YtMK0lRPWnFkPPGPI0LMpQ5S0a9efGzVr0cWm6kYhrAj6MWJRcO(82Sn51Kg)0ZRNwmVGMSsY5NiN4SOHqcpPOzm3uGe6PmMb4UDUKe)jxI94eYtlMmKHy(KHuNwnzmbnO4jNhzpmd9fQa9M5sUe9fSen5KKwJ9En5Bfbl6Ie(THEokYZnRVhYvR70JNE8M0lKY(r4hkf0slADe0E)N3JM27)k(yPXdvZPgWZvdpci8zxRDQ8JB2Q9VANmTv2RVENUcwIsajPhvnAvio9RakALDQBvPkaas6r4vHQiW6UoyvY1vDqb7VHului6R7AYcfRS6OHkFeOvY(hxRJVS6Wb0ZUj8OJo4a453sny1k2bb0BAIBiqppDZaEpk1s8)Bx(KY5YfOhLPaK2mage)tFRngKxB9ydI8Cnx0RJYsXvUEkmff5ATc8GzCdcROiqr84oBOSJ7mGN34fdHDyLGKuuTS94KNZsrzsOxj5z(xazU8BDPLr5TwjmfioGvSz0(CzPcEH6y7VJ32wHXZtHVFGxMtAYpmvKXFtQG0aReXltUltEGJSMURnVwIBzYpMj)PHDNoJTqvM8NfzMZHBVkk7dLNWIf6XK)jn5b(9EdGeaugcHkva5v0lB1M8PVPIfvjhwun59YDQjViWRzWovt0z)hp3PUuxV6Hxtt(SvH)stEP1GLstEzhwRm5FAGRkt(jRm3uM85Gf3PGV5HVkiFtM8QW3lcF1GV6Wxd4Bb470ByoJm5NPec)M8ZIVEoaj0K)sBmKlt(34gdJ6d8kOQPY2Yz6k2yd3zIc1BPAkOvjn9v(jQIgM8xQgI(TC0qeS4(Jk1dzYh7QRBiPs1nuL0YUx6qNM8EvRLjhUvu1VNCkPNCg5RjfTBJfh0flUP(FIvhAt4hA37f(A72vf7NO(H6FItQpXCdRJWFwLSTsvTEXiZ0ZKII0APBCeUTdViU9)e)7Fc8ZFD)pXNN(5T7ZwH4016JTgiX2l)uKzpAW2lISJcRRgI8gtXXDBHa2F1uzC7T1wxDFvx7rsIa6ZXOqOpVn6t)V(b2e3p8h(d)CBuSON7QHfnw9cgDix)fNBY42k49yBif8gjw4bgE8(Ifn65JYuXB)FIV7uuqL1lI4Vnfr0I6ldzCx3t1WgFM7AJGn(xFvuwB7D2zhbVgqiFLHKw08dD2ud3Ae9Z3H9IXtSHwm6l2iNpkSAmWWhpAS4SLJm356DD4d6So0M96amBxL1HpBTBK1H)QYwh(BTxhqD)g3qi9K60J)eTkn4z8OoPNZs7T1AfUEJRYYLRb5qD)bvrZ6VcD0iNUJzm6lNQwRzD2)5Tcq)FYKFIF4pZp8h(tTEN1)q)OCw)t7c9VZK0ZVMUN0c4um1UrWj829otZ8U3vfrO3fLtRKFC0A(m5(xWjzBRBa7J)Maf)hl2qO1CrNoOJ7x4pDNRORkOnPZ5ySk9NrSpDrt(WltFt)YzYiMp2WrpD0yQ7OOYG5J8VoFkbn25z65Qk)p)TGpF79dmh(MWpxY3IO9j2xoHS6K)XfTlri6vHgDQApBs8SjXZQldi30a57ttbVTUiz)VyvDZhRTRXZ2MdQGpXZJh(WX5E46ZZJOviVOphF1iAIP96FE6X1ajW8a8Q4bEI3GsjltcWXd4TOts7N5j8IGUpfBVbcAsbm(8Cor)LOZPwNGnYOm)xz7oyjxMMi7KlplD38R9RRiPJvsPOLruZz6f5QWYrsy5ejM2XjsOfmWOYZkMdDJeBL8Nzv0XfYNwcw4GvqMZLak1k6fs5EKQv3Btan0gmmlU8adpC0yJhBGJ3FII87eZr(g(iFZhyHDvb3jr(IDNeL0dGMV0ggA18EB1LyTk1VS4PrHUmTrTfWGVu3rPZJODmkKbTWGrCTZGL6FKydC(rgor4b9UOEoQ3THse63Xvejx)McYDf0T6)j(NAT1x)M20oPwPk1SHAWK7fbwNxvmpkL9XTArgXblNCaq26i(wIsCiTl81P0qLmaRGGOva47fu3PJsh0ezRV13qmAFuIrKOxMXeikzrsqepFPJr5s83M88bbIBSHK9XPxV7gMiWVC(Sre0EYXg4WU)6WXXcWG9P219UbY5INtV78ZK(STmuEGQ7clAY)lfJT4BrtdONPnfq1jhA1iaXSfrRIwJA2ZlZ2nYdEeqJJ1fn5F7a5myM7YiCsOO0jmq83xkP629yR1uVEuD7pnP7N7QeHiWFQd)q3XjC632bC(dCz9CH9HMBKj)MQlyluYh5PUlnQDQ(auRJfv6ZOcgWCvEjQ5nr3qGzItBL6zyrk)W2cQBpVBwP1Jjxs7Diu3L3evCTBwQtl4dJONuRpKkvIpKwM9BsIwLe3h(YtiAKwkHLbesnOVwBTTwApwWwc2DhRG1U3QvD7w2AyrTf1YMqZIY2YM4SS2wGe3I48U7kZs4pd6(BKdBx(cqe2ktKBd4gNPYzacorB5GOt)bfvZYVVEaYNcMvn5xAAVUmhgDot(3Nj)7NrBZwsjucPnditwGy0DXaKVvPqt95UVMTVhrcL8AEDXlwqmFArFR4KpeqniGZgbTckBH0q2nw1PBAvvXOLbihsNRc5zUIVp1MC41KEysuFpfLgZitlQbaZ6pz005KvbiU4fYppwbumet(L3nGwfsqvwITemQICEJLzUHkkEMj)lP(GhxqtJAWRazJO5tZKL1bLLYxX7xIXwHj)VmkUe5Vq6kEqKqNggqtff2CfNbMfskwfdzzKyuorIddP3ghJMMj)VgLJGLOMhodCCzk((a6OYQHUnIVBVaqEwpkakg1oMIrZqs60xW62VoWbHfbJlbs1(HKqTjzY)BCcoFaRjFo8ZNKzHMnb7nW)cBJ1AJRBmU2L4yuxSbE8qtM7BH3ZGoJeV7PAPh5jp5PTufaQpnq2tuaAhP3FpSTzzSQTedcYA5GXjNBtAmhhUDSvhgvdOJK8)owl(lc7xHe(n5FXKUfSG(P8YARNAeh1D5I0fIUIJ4grGPHNhOnsrqCMqb(X)Dx0bCfgsaUod(d2ftopgCxamcyFk2cHhuAwtINyPAd9G3)Da(8iH1mKe0ZjNwcdPPhrOOF28uH8mBp7xy7wB1rNITMOS6f0Th)DrfjyY)b5UI39KqZNHcIBVm9BZH8AFKnd7honSzgWGg)VIj)7WK)DdazxywUF)kEH5fNvvgqOk58tW)jWCYDhlaZhvuFhnDMWJFCrdeEmsHjMW5WtAQKZsUTqD0qdEUsTSgknEApXfv9E)YM29U4z5hgOxAt0JfKpR3uTToKJQjongPyRVHJMfOLxFD1V)m4)AOUMQB)bBQUgkldVHMQRPa1vxdfDYyooXf2GNEwdwd3kDCwS(tZmURQVU93CWjQRjRYEyhxxtdbAU5a1fO(6W)ApARNvTS0AOoN7wzPnH99yepTcRBCNj)pFsQ6yiM8)((8aXG4hpN0YczWljNyMHeM9of(GM8pligY)19cFU3VjGJ)L)UWNV3D6JbhhSy4yk7abTyhWd6KXSClaI69lzY)hwrHPaQEfjjfLagLhdBynanf7jaBBFbd8Z0iU7Vk5F0MahvKhjMdJ2XPnJ(SC(3LRp8N)zT8)tJIFU7(FIp7UWpT4RsfAlfviOu)n7g(SRVSpCsIkh1c1yBQ3(lITLYJFYxZEoFBVMV3iLSZvsYnMsX)olv6kt()dWR)1ltykyOzjfvmwumSeXOyvDF2xbqlV0ekhThlMgi3Bjx12C1Dlqo46vAkhA7urOGVwHzHRcxf1sz9yHgbXKuBSs(nyCGoEk5SJZCxtwPOUJWPsbO1YafpMhXr3J8nv2delQLgG0zvi7TlgrolR0E880mzVsTFAgRGJDZUpLnDMXXREsEXCsv2jo7Kn4Bs0RAxv3citBtUoVUhATBvqUbj19v18W(Pj)paLXBnMvZiMwEkHCEVEUupgowsucXVHVkm8RW0ibGy)aaGWx4nR(aLN)I7sQ1xLCu2sSj)3RcnVEL61GyOFj8QH8WCQ1qZmtUnR737wTLB1JuTxMjvBprrpIALbxCMULKZio(Le1uWBFWxRI9Pk15PEEXGxnaXkwYRQm1mUvWT)DKx(fw)YldIkzjUmYeitezoQ4XB2M3kkVpu2dbjI)kLWKGNnWXDURh38NsqYD3)aT0qGJeWjby7OIsdnyZGT0IBTvTnvH9udOY2OC)WJS9zNeQA6FHT2TYAv7cqR0stvVJyLJgEu)U7W(IW0lY76VVJm9BLEyrVKj)hMk1qllhP3P75CDnYeD19COO5hLW)pSxYPRDrCt)aNrqt1XjNE96gLlSnNRv10ptTKDVxtF7G8tjz7hG94(zPN8vxDpChxm3fvUu4Hj)0siVF)CwocW95N8ZSpYBUUy9IR0)SCOBPD(TIU039q3l)uKFrYZGJwMRPf3rpUpQ3G9NN6LA)f2gWjp5)dcQefYB5zUlYVmEHQkshYiGuBuV57A4azFBqMwNEqwYBN8RuQ)q(I1nySkfax2ZRMdGlp9PZmxIoo9KD80DDlEaCPgNWtKNOSsjHMLYJrrxtb8fh2R2dx3)J3OcLli2LBSCHvZx7HZfS2qxT(Js9L1NEH9mFKCcxsmai7(YJoqGErb2aYQslFQcczXllMq(asu3sURxjpGue0LulDLscQOslfxqvvswtbkJ6ogjLUCgzO8dKxh1CxaPvOIFbcdiKlxaOAP)K5T1qp8M0sUUdDPRyDHLT8i66slBvy0lXjTKt8ioG0LhvzipDC0tWPZCf7y2qVcNs6jdifByXzlOlTQD9kKjpE3Lwo8OUfE1IhOWGOpOJbCYfqzcMhFlG0QdmLQMY0IzGkwo)Ksl1torbnKbOafH(FdMk77BVl2JMSb0V11n99iM(UFtFpKPV7103bn9TVuqNsiTHPVgn9TltF1z6B3M(oKPVh003dB67Em91GPV6n9DatF7X0xTM(2VPVaM(UptFpGPV96H4nqPWI(DBOR)2iSU(LcxF7N(uzPu(y0V9q8giABt)E(nJ0VbODKa(9sPhJKROeWbk(abCG49ppZJEdKTz0Vrs8weWbI3aPQsOFNGTrc1dGFA3JnYI89J5EArBeI4QBNXmwFActjs)Vlhn30J134Js3f2lTDKupL(EfI8D37pwJ8DB0yJ7Ag67ILzYSpTSYeXZpZgl039SfftL84qMTdNsmpQHJpqUnRK)K3GI(D(SJ(DjVgJ(DjVEI(DsEJ(D49Z(hBr(Ux8dv02n2hKn7agC8kYMC7MD6bHc1D7DhlyND1slupLmfzPYNNT3GvNPVMOBEeATqgUHZSJJlb)5BhbXFHO2uQQmeUBSalbscR)4nC2bhQVzgR)69szX03ru3PZvM8Oo0WDz4zlmyCFFot7BP)pU5R5Vytom2iv0zGvXZ)Ak4htHWgyCQTOZB)hKSiOKsUzMT3wRxTBMjZRh4au8i3yakqIEptz(POxXamMrtDqXbMiDWUM179R1KFK1)LRLYauVAk2xUwaQY0x7LcdLkyRT3zOU9cgDIxnagTWEW4lavpjL3mqdGTFvjqw0jYV4iJLaDTwJmAPwbaqO8(yek3v5A3S6SF7E6UvXAsWFJUFQVdjMd1r0QF)EjTiVIq(t)vP(MmwWZcJ0(jRevYf2j1IrOSLIAAoPJtOG)bKOHwFKcjGkq5F)dVi641sNtjpEYfBvIsYevq6NI5izQ)G7x)GnqD)eL6ljQPrlU4VxFLGbD)30rwnYmJD62MSVgINEUsiRwbeGBbiI2YhDJqenyO26m0gJi6dDthiq3sdR35uNCIWhVN1biaFnFKBYbbEJFM1ge4By5aAQRT2X1zl7hK55dn5uOgrOVoOHrn218cvbysBX3ZBYDrayqJmOjN6sUzakTnNyfdWCVuaMw)XdadaQWGz8XSbzGZ81fmt7NqO)CZoQOw)xQuUX2Tl3yuP2zXWSBEiLmDPIN6yTPEHOqloTbMfNwro1Tm6ugJ6iHKwAlKLZZSQCOxmCXbVzeUOV(go)z6)CDowldvgTKOxnyGnO4JjRG4Jvi4PFtoKtND3rxTUXGC23nJqostkDPtN(IT2VE33gY5gdnNGbBzdc5C4BgHCmKoVEeTcD3F7kBCiNBg335(wVWangRTo6URUJ1wNTGkiAJaj04nJqctn7isxsTJZOn1OV2asyG1p1Gwd2rBBqQb76MryGg6D4WZo8zAzIoZ(AdyGhyJXf6gegOUBgHb6UWj7yOrlelM8KLade70zc2FWBf0Rbt3zhWK77tDF7WR((EfR97zDygpeK0dT(bqAPLo2GBuS7B603XmTjCX0Ax64DODQsGowj(y9HYQZSINBfjwC3LtSWrJxuTFULK2x(uh)Y(MrchT3AhvtJxh6Qdb41XpVHUD(Vccgm4Chp9zZMsQd1WLTrXPlFT)D9XF15A)c7sTgwmxDCXzn0egrfTaIT4XBt7OM(hmzYTcadBDDAiYmiOdKIfB3tMkE)Hhk8WLEGMiqwSeAk5YHP47jzhS5Fo1XDOX6yT6VsQR)BW8l0iDiQ(1OkQFlsmRLz3w3v3yo3v32BVLUBF9rs6bV5eG8ScH7SNJF22p7ip9n1aK70035Ubc)z678jn9DHkb3bGBEb62MKPVN6Afwlw7T1zBbTb3m99gwFWAp8nDB)n6m9l3s(2p)OkzwpGzVMDpV2ARTwcwT98UNFmSSNCDVSlvHL9WZoBFJnL8fp1Szxxux(uBKL97Rcl7FDNvEybNTYtVcaWaTIR96VkATVZ2AT7QYVtdR31())hzg3Naff3J1(exqyj5NjP6NBUNl(I7zgPS8sHXEFQDel7RdLEo5xoWwBKAr5LyoxypGxFzlcKyiT73bp)yielHpbMDAGwLEGVrSNuO(5ziUfKJ(66KaldiXkYrNdoJmZlvIE5vq)s3HyiKZa51U2nyuEWJHmJingYmI0yidEPltnsUEdgfcpPxn2mdm2iCLEvJHCvrvsvz4BKwKu4vAKbeUSQGm2CGfvpYSsQBWC(4kwxTHIdCJjAMRFr6zKz6P)5GreFWdDABYYiWsra6GYG8Iqa(DvvQfwAMfKkO78n2HOZ)czWD2esskfhfTlIBqFn1qZiXb8tIHKtEyYv5sLzOrfgKsLJWs3CdMleJKk3G5IKIJCuM4sHySXMtIJ4NydftHeLrAywbMPz6AAzKJMcH0sHyIXgziPLcr1HIPqCYqhZ3IGYl488RKrtHajfsCNI4sHyKHgybPLcrHHIPqYkJ0Z1hFlpmJsp4rtHajfsWpKOsHyKzgAMzKwkePhY1Rfxknnn9ZTct0)qlCO8aRrO1rlVa5WlwsEak5qqhJKhQfJm1sdW5qTi7qUebEzAjP4uvAQrOU4(i1ebrXgPNiWcZn3sCLiqkWBaxGrca(d"
 NUI.WeakAurasPaladinData = "!WA:2!T33c8nYv1DVJu2MSojKD9MDZgNeIItYgBNSELKTLTtYMfj)u76xRKS9UgASgjnsZSwAMzNzKFLWl30W2cfko8OWxcK6MYxcnn06c0cT8AlFu4dOCXqHP8gtA4zjLnP0cTFFPNZDMrAKSKTxVozJc2)(j5rZ95CN)Nh3Z9CpxMKvNP6evRgRLg90uJEQoXP3VYmdMmPkNgJYKCkQcsI3WIcIjLuYWQb)OQZYkgNxsPBf2mCrMrMlw4oc1vxdmpROGro8fidRGy3b0GedikjYTuISk0ughVLIkxCjXeQZXXQsRasvNbVmSMcNykn(loKQgRIw3KDqQICPKlJC5W)FzxCSKcIcQ8R42QszvIZftiJSKIM3SkPLVnEnnz1B)GhCk2usnkiDWbyLMIF4Ghyi20SjeepqhSASXtpJAMd6XNC1qNrtrkDAUeDWlKob0joYYM501bC1p8OiV78)oeNrdQUu(75p70YvB)NkSUcWQSymjLeCkDiLws5immmoxW4gDLifN8UcFQSSkCU6oB60UgLxqJlMkxgyapMNgD3ONwwqnBSqCPGbn1QuyJJJEQ(cadbAvrUIQi7SQf0KIB((5sEiIzvhwywUTpFkfPSYbHNRyEBYNxFnVum24tKqrs2OR40PZHC6UXwoRGOgNIiB6rmQMhiMrLWVSX)dywk5DgiTWSZYQKWvejP0AcYNXidgWKDOmTjEjgoGhSZ5BVZGPs7DWop5Ijrqc8IfgWD6nRqIfdMmPiN3j7UVXMng0btkKQQfq0Ga9bSkZHSGIq15CrdG2qsq)mwhDnqKUcvRqc5xU1iDhPzvvDne0lHb9CVtxInRguQbLnQXaPLyt0Dmn20CIA7nuMSq)VQqXXIUxYDuvavyeZ4czU40lsWPgxo6YVUfCfMNndB5ANQWCezkbT48nQnPbgJEVofuJdpfnMkL9BYPkKsKlHRyZ4IE350uesLcg4Rz)ZNv08hvPyEX9ph0DsNoyc1Qi7ielaO8gil8UpMCA2z4ucXnj80eRxo20A8lKGlw2KjrkjLE7QVH6E4(wgap0Segsqy6fhVd)HJmE4i(dfjxsdPWbjfk8qD1xFHeHxtQvTGcfWH1uikgkKACyCZzi20Y8SoNxLlDs6BdIVQN8IE1vh)H7(03jXXLD5NvfO96DMykcjIWgln3P3R8v3daVtiadFsjD5xmUa0KUoQGykv(5os2ePYa)MxE3DkmPGiNRGPtNnJGiLjb)zOeq9ZQcOZz4LF59YMjdNcwpA8CUcjKIxJtkRQR6gsrsREE59gGJfWqyg6dt0vD9kLEgiH90Hswvwap5cGGctW5QUqCqbwYSrdZlWLob0agxGLpxLlYPMRbw2pmELc66UgfaY88lGvV51Y70QYyJRiKuiohClA(5uUf1CnXUOfjmVeGHm7DlAElAgoB(NrZ6DxM1l2f4OK)yTWkA0n5IpHKi0J4NRRPLuIlOMH)mDaWDU4gmA5LR2QFPbmUnFWx0QotZXYVqCoK8hFzxBFHIjdmJGxSTgdEXp1GIkX5zHNHeKl2h5skMNl5kwXD2zX3juAHmcAxkzyIpYUjx58SkX7JYE)(27cXZQQjLPhOHMEhpyYSI0hV6e5MAijvdgb3MlKL3KCMCaRVkxWFh4aDlOOQ5ckNRjzveqKMknL0sao1vsm1qst1h2YUoKR2Gs4I2nWXmbaIO6cyBK0QsSv0P6oeuGM8HLykHeA8yjYLrJYAl780S7L2a8CumxzYVzhpmvKxz75gseT11BV0DD1CvJ9(EyAF3Bb9985CLDEA(96RWoFjlGzVh4)v(rDmX1Eq3QkS3V7J2VBUG(DUMAf96(kvVUez3(WQmBCKS9qUOnI1pJXPnfhN4kAcGRTIbP2jYxYd4XCqOu)vCdoDhsaVCOuUxrkgIiZLKXDNPK3vtcKwb37glGgiFncQI5s42CzWSUtqEeoaliZcWV6kKSXvcjAjYx3gfcQ88LUrJlZLXvEHzrLMkIzpZt5Yd97rPVmTNlBj2RX7UvMA8SkihiakLB4OGgqaqtUUZdvevoiriFppxLz1daY6vMyUEaFrPwWpGMZ49WA3K4F2gCOfRGmWLwLB1krb1FHLumrP7IyvAnIue3JB9CBik8QoevuQf8sYZgz07wlU7UUgobfVwLbP1y4TWgSSJVROAkCCQVvDCQVvzCYBvNlpAWVlth2ENn3fgeV3EyondIEA)TU8D96lBon681z7bP(vHhGngyqpSoJkRrd(23QfR16DDqxED1aKS5d5b8upKADM8fBOSLR(ssVBFueGBReQmtbDkuQCEU8hOe8ZlM8PWgW7Q1agp2ytCRivr92APgGsU6TwPEXLtwH5f3AP4Qc9rZKVRdLh5SIUzrYDkBBAxfRxPWVnuG7X896Tz9O(QRYQ0WhYEE4RHe)SfPgT8vvgnYpJDDoxiVkVNTif0jhFUXGPUiPPmdHhMLBSStWT0OWCMWC0dmf1ziJkFvLrRCYjjjjcewchjk5eKXi3njfj2znBARzDqsFw)WmjHbLo5scpjCkZLvLJspXtUngYbinsCEdKAOZlNCnKRL4EXrtgREzF(G5kYrA2PIH9m44jTvfPwyk2KRVQ5HPKi7xmvAURhOyzXzQXmxkCwpOw0H6K4TQq4lFUTtUXTt2fPAy(QK9gtbMUAw177Yixh5Lha1VowhdhoYG9VqsyY)DiOepnxusD8KWoNdsmmwboj1tAa(LgvDEgYTUJ5X2HssFPKJDMeZatztioDwAbWzFbkDFWTtI4KClpaPPQix0Exeutioxx4u9uJsC5JCdMgoG0cX3IXLGjCjA2uT3n52XP(sUt63hI(9DHFdZ8dM2kOcV)A2pjqvKoUFsNWmsjDr6M0dPxsqYrihL0hPFYaKbjdv1YOkvASIADdkIiPelK)odoCyY2j)wK9NZUdKBICZN2nXbdmZvvwn02qWO8fTF59bTLKcN5u3PD9UuuKuG()FyuIizVKJfavABdpPKZobh8(dNPVwiCGnko9KZexskDcPPer7YWVSQMq8jMPttlwXVa2GHPM85A3gICG3HaIyoRcfnMH2OTdV7ruvGzLKYGpMnfkUL1wCkVta85pXjH59WLGlr)StZVSSIukfapBu3nCTBZH8onMyueUP1gwobmQell9FW70quoMbbmRC1qD1HzR3Vuc4bbqpW70IBebrECMxiWoBtdZ2(qNqSB2aSz1KmGd7pMrZvBvvnFcPXn(bp5k2p5XGBrE)8iwbWuVZOgW)MU99hkopmZtFKoCoN1ubwqs0QZeAs20z5CAo1r1g2)CWZOmNI2mYvRMnwJn1Og8Kn(KcQcqbjpr09t(liVD6))ZW6K84NXWQhIHWkG8emKpqdyEEVKN4io79WFPRh)dU4lED4FVzNRO8Y7rqufn5b1Cd5mvh5jCs(a1yL7fYpkdpNlz9Im8ucYWa51duc7yjO7I2mdjVetK00CxJhpNL8mTt14CaKb4DSJ5XcqVLPTZSEkJUK5VLOCxZvq0Stop9vlFd0He6xgwyDC5X1eYWnUmimraTkNt5RUe5X4IqywtiVBAA4Bw0aSXPmjc4h(5cugiC4JAGbgCGUwYWIAh30EDlzwNIAuJhn4Wr6l4aDjxn92Q8SWWYjmZQ8nvUoAAUuSXNz8KPLKuIEwJmimnNbRQxVSRYvUmsjghP8JEg7OIOZNRpfIANmJurqTqYzi(m6YtbdIJQWkp3OMxSSrx2Y(ub8pCKbLF5LRPn(fZ85sV2Bw2COj3Z7oTniK3cUM32MHjj(wGER8e7KDOaOb8MY1xUEGj77X14bwa8aaKPGr9v(ccnS71PiiIw8fqPTF6DTeqTpUmNwmwnT0a)tKd(EvJQmRKixWeQoi31(j3X(3E0loAmvbuK12dOiLMARZLXIsj1MqezHPyyDuVyAlKqaPFYMwBM8cdusAybA865mlCCEYDUFmhFpLH83hWNFaO7rLhrTIQcizbVyEm7uZTgDH8n5LCVFI5LNu20QSyTaclj(haeYS)yWaYudkUa(p)PNIDg15PfCa2mCxY9(MiDC6ReL6iVlSMtXjYPiepmTirxsbuRiSvMjXL3nMhUPHE)45QdE6taAn1OOuS5SwCIQ9SuUXfmFrjpn0nb5DlAWWyCEHeCKpHswrQ9tjp6sf04KFUPmqsVYxTflr08DuU8UQJ2TQNSJq0gaLzUaT5m650HjnyqBIOlMqq9KuJInjNx20PL3LXK6JyyAyGLp3JVnqsV8vAX6cPV7uqfzhNikQYrCuIlvel5TJswjVJ8sqjVZnS4tYFevGj5DXtE38K)x2LhsEWOKhYsgi59qfasEVg0dpmp5pgLVrwG8NGQN8iOymYFkvOf59zjK64IZc63C82ozZUjpQPekYJ5aLdDfwxScbswm(j)5uE8uPf)LLsYczXnG4eYFvHsoiFqhKpKPicYhoj5V2q7X)guca5Jq(Orj)Toj)DaBDYhZj5Jt(eKpj5trod5VN8Pzi)FiFgY)ad5ZgL85E9K)VrjFEEYxG8fj)JWqWxIqiFzYsKVcd5RcCIi)tmKVMrn)1Hu1nzQq(NjFdgY3KH8TUoY3g5aSBY3XKQ)ZfLQuGbzgWCkbL(mk57AWeairVyY3NsLTC0LlmtipcTMJQ1suY3tRfYpGMRN0MAG)l0VFQOwe7KFi5hrV1pM(9pjk5NEj)(Dq(zfse7J8Fc0d)RlBGUTOgip9nvhq(UxQsJ)BrdrX7KhLCwEYZeL8Sv7H8VhDrlIIuXtqPpj)cswuPZFjmE(0yt9FaLaRDGsdj46L8RGbNFnvj0)ROK)7OK)FK))KNJsIOZSnk9q2kq6Ho1etozZr8pvV9Sf9W6HEyx5OhUNsd93GO7V8RSmOBDMlQieToZ2lcoRZ8BzHINmpkgQYnakEYkquCY4hdugSNGIbcUfk(Cdf)L3urXKFVnhu8u5rXqvUbqXtvbIIJ4lJNeTMOLtD0KBHIp30n5QbWJJsJK1zCUxY37zBAdIOh8xT5GONopIgQYnaIEABi6Ovii6UYKk0aZgEeTHw3i6AYH9cG6NzaQ3lc)Sq2V4bdYxaN0dwgm45fa0g27Ulf27AnXElsNt84Xrl0xThdKyHWqaQbqRZgvbu91yIN)Il5lFha6mefwIis0IRq9JtCVN8vhod1V8Dmp6Equh4PMqT0ul(AcWZkG22dkMEMOuamcKbaS8UT1vguMdM2RKsTh6qaQ(CM4H3K4zgBk1ChRdIhVSIZue5ZmvGcecmXi1fE2oJ4EKaBjqy9RwdqlT3lfMP5LUzQzZGhCtroW8OxPXHULMn5bhCJip44vIZ20tYjpMANZY2UY5cGU7y0veqTbByq7G8oUTTvRKmYJ5XRDWq2qNftmutEIHnarWlgv(jhwFn0)zJA1L9XmWNCZrbOzZb4P15gaXpBfiIp9KUdfXN8G9i1YVrWcp65lSU6YaR3R5YmumUU5YIRxfM5N9XlbMgXZ2a1xPjOgGU8MyAeiBGRbU2qDycOTGYwgMFDaL5RaHY(6SLjI5p0ehJD4TGYBuTrkfmgZHwZr3GG59Xm1p8CcnFpLantRKnoC(EQaHZTomRYXhXxhjp1SBbNFXeCEGh7CcoFVLeodvYghoFVvGWzXEJ4Uo(aYjcFIZDtTyx94x8b82jc8wjg6hSkiPcWM)K8Wt74xaQn09Fob1gTKqTHU)ZdO2OuOMNliqntygI4amvzqBgqnaM1IXwSbGAjoEGz16XR0eT1AzXzpQjiJI3qFna3sz4MfCFoF3)yZz1zoNTsX575hgTwW6JCbEcCRAdWVgnqRTSknWm0g4Ql2843ZAzE8vHv9ASSLr3uMDOD)WTaN91MH)IUoMZOoZUlIa7vxbYlpw8GNit8E6V(jw3lNzdfrqHUhPsk0PeR296XGi)gJD8s9f3CmNXjZJmHQCdynJtwbcmps6yH9hRD5MtvxPaML2HEhRiOPoJRYHkxK61Adt9XmkB9vMfDMAZHCxWWFFtLgxNOZxDVZtqy4hXnxSFeBrIm2QtI8uZJ9NC7bENNbxnfR7WttSpbro1DfaVK3WpoXlNd)IUROhsyAU0lr)jVq8jW9JGZfXFA63OoxGwl0n66EOxhWyl1tR9W0Dtnn)ME4PZZG)WYzZDsR5Uv4ovwoX4Zm0f5UrVTCbvMhi26Z96lHdiRAEbaSn1IeyquylRw2w20vxlWHB)zBd7my)F1uSSSmqYZgA75uQK6sLOVAQWBYrYytouetM9t(xb2dux9SJtVNcyWa8mYXGbzUqzY8lijlwRYN(sU7VY6M7sYkqUlEgkIN(owNjD3Z6Ekmhz9ZBXgbUoZnD(XVy7ylDP2QVBC9RD5tPZCZ0rfDM9ZRZCl7sNPoGlGot96mnOZCR6m3gK0bGpnUhDMdczXnCTh4Jx4ttVarU(8TC4N13AU02RlXWc5edd14Ajf2yZf9lx2YZSfuZ5F2yLdn38OAtSX14u8kkh3W5Vvyfs0pRYebftWnTHBDJSLGEXvutOwAVLwBJ6r38sQAcPf0MHN8t4XnTKoZLhLMsU6K3WTyXa4GrqUHUI7LqPvHkqQ3mZ6z4e9oISVS9EoT2ENZuV2waVIOdxWqUTP(aVyz2ERtcEMIi4zkGG)5B6Xp9hyZHEKnh9iuJRp6XjjpM8K5Iph1BpefGtHb3WPddKPDOWH7IpASCQUAnsQ26ZhVcu4GufDvNvHoKRAhgOyztuRljfx2UBNCzKeHsYjMWig1OkVNH6Z)j6k04r8hQNUImEh96FGE6Qt6Je8mBTZmWWkvmvnOxOcphpg5pdEIkbXlBfiX7qJ0vc26MOPEg4u2iEn1NV8Q2VAwqelXlESHyEBHmEb2cXWcHG(CRF7HWVAtV8yFSYQ53BQqJjYvQfvek(g3wICvGaVJoz2rB9eD03GUh7LMaVC(hyvLfYTbHAaGADc1IwkOgKPnoulAfiutnZ0(o5iYDmqM(FjouBV1hDthSfBDc2SIodDZoPKsjXDXopWDNOce351t4w85B2WSkd(sDzRx86r26Q5j0RogS)1ldVXkjWR)ZdG3yvGRtN0GdRjEcVcDRnZQI6kyT60zUU95y3vxcNDOMv1gi2s5Ilrk)gJyzyQs2aPIRci9Ulbifk96eJAm3P3NXCuu61FO(7E4(OMKWBlT2Qh04dyvHbpf0idy5mMgMrbp9oj7y(4szIXQLwkfAJ6Xrh8hNCfmRUABYn2DW5(KBZQh0CJY(01qIoNvEdey4U72yJ(tdcg4e1IE2CLjCCEjP08KExOdAt5QpPug7tGLg3)WH8pU)HgQVGD1PIzlutOM80wBnVq(kdAWsmfR7UcKAm4K9NwZNsOiT12wuJVGrnE9RxQXuLIA863quJ6mdGeI6mdUwuH)sDMJva5MotO8uz6mH1zIOZmCu0Ardr6vNzudQhDMJRZCcOfgtN5vwAsKuvGAkn1XMrzIEf8lN8KVuxd9x)MUg6)6V46v7OyLs7iO4BCTJIvjA5HuJm7SNOLUMO5xYBYRdVQQKVE8xZvb6rJVmgHyhE0N62Z1UEXHVMs6oDq534aXxtfOIbD1shd20a(zdMDJOyqfiESQNpNK4x9bxVWV0LIniu81n6BLcDtxbc)oEpzd3rZsTCYM6zl435T9)V3tUEHFV2sAJItE(a)ETu43(r4h8I(I2Rb2RvAGXCdJ9WheePSN3VC1byvCHNZe0GU6qstXPy)ejPFwr6jsYs4jRGQRmcQyiHB58hLcDNvzg8y(GJMGR(nYqiA2ptyo20w3s(k7wsjghRcRyCox15NgzYQ)S5osoyv1IXQiVZgAO)U6RRUAObx1HPvV9iTksFC9vvqijLIFVXTJrgu7bkuGUOoEmsOsU1DGuwh8IPurUxuiCWURBi)H7PEbmANcezn7ePCWX6RAvINPiD56muMc8fcrc7edPQaf(PVDIJE)Kj)s)Sp9VEqxKr85T3H8WdF5f)QjGJsvW7ZR68795PYDAjquUV9s2ZTRZKrNruNrI86Yf0ATnocij3lgsOfP6gmH0Xo5aK5OXQ2F)OwHRwYVZ1t(DnclTK7JbhFV)lggH0zIrXohJ8MjNEHEhmuWXgCGi(7ZC4gF9eMg)zjVrN4a)FWLsEtmK3cgHzDsEd33LrERoXb9IcPS4BGiRwSKLm)6poYsEaYBJCtX80ulT72JDerMA7l0P7EEmOSoUQqcUqHc2tVrqE6I4Jfo(JpAVBEf0hZYQWfQFU0PfOpu4OYISMbi1(feR2n5rgA7EC3uJnTKQmRYeHSc3Ult)jqoiMad3EE93zNlsVvVcjsWjgAGUgPRqY7QGcHzKS0Ca63Wdd79WF0AQ5Wp3Z9uL6IF876D9WBBB7yEm0o2DA2uQKpZ8wL0l80cVHbU6VtEd24upX4Um8eJqYiXn5ja(sME40RH8eqJ9Z)4F8V7Z9C)8Ep83)T(wFVp3ZTCVh(ho6Or322Q25zTo9Fck2TIeQlin8yKB7CU)9X8h8(5he41UlB8E3b87DqdPSJNqHnLKOIqc8ahXqT0r(kr)sr12z0VC0ViQE6ox1Tt0Ed1zOHd2z0sWxM6fotYXlepn3WcqL7J3KFVbVAQ)oGgf76wM(CpUKzyROgC8WKJ9ZenagugDopnlOVaSBQVaH30iWksti6zqBJrTNLqcASYOnpTcyn0OyDHHiYWMgtBzvnyetnxeY4Uo0s5QenQz42baBnLoOZ86RbExacfWwkmTKGOQDfnMrTaPzi3yPmSAX55unIwKNXiY4zW)K0BiklBRa1bkhbKWyrP8mrP2XJLglm1uYYziAcnDN1bNeouyKPyQa)zelAgtanUbEsbrVjTRBjGAbkaoVdXIINSun6m00mCoZJZqEFr3481CVylz6V3rtm2aD4oYswNWtMyrKBNPEtM(dKz83nPKcNr83Ds76N8rXhHpIvu11Whs9cKoMASu9IzGhZ0JRQnUYSmEzLf4xY4oMUlmVTmm9tUZfm(LmRgV8nqXgQhKvjoRiNbEdDQe0pX4u1AmJ3ZyK7KcP5cMiwtEBRf3UxgA8XnUF80cY2QFTzyum(rUlMMXwZN7UZYamyTvo437yoyiGEhB3pxPnopMYNsw1Jvwx(o3Ly4FbesdZgCqf8BkxlDMtz)n9jOczcrVdp5HJAQJQngWER6S5JmYRFoDOWQfag91hyajrUL5erhjVhZ(JHsVG0N3ddnCBBpy6EqQuLhAhKJPGKV4B6pO8pRiNsYMNjj76qUQdTpnLIQUAnoWSQ92C5gpCcYLq)StxqA17QbxEC7EfoTeqVbC9A0WBNRR2BUXKq2LR3vJn6Q2BgUeVLNKtavn9)1w)TBM1Y2fGwX9Tv(oIzoQ)om6kGeOLvZijPXBfjz5nKv1PrOthWZgcMObH8drLUNzrPcEbNxMh70a7O2QYGUNgGM3JXB)igclLRliEMqLKno3RcvLdE0bTgFvdh8a5)1bcJfGQtu36mQ6mALq6RotwDMjZj1vNzkBcB1zMMrNzgDMz1zUhDM7vN5vtwcKJTUas6mVwYNrN51TQcjbMYGesVRxjK6mZDoiuuN53zdjfuN5(kLiqDMF3vtUNoZ9xOSoDM3a0Hp9U1z(9GR)9HpVXA0zEtGGmDM)a4xVzi36mVLvkKYlkKsN5pKkDsN5TMtYKoZ86mpaAe73wzLaPZ82nL6OZ8omShooxZ)OcfOOZ8UwHGeDM395R4do14ENoB8EtCsjDMhSmYm0zEOsiOqN59OZ8ETeoOZ8WaY7pggVxa(8N8K7uN5r0z(t1zEF6m)V1zEu4MpgKH3p85pd(84WN)CK3SoZtWGTWhqN5Va(XFj8cyX1bhxDM)kG8tN5ds5QQZ8HkhlvDMp85gxuDM)ADM)gB8n1z(ifZVuN5Js(G6m)T6m)Dqp5JbF(4g8haA1pbTF9jPCd0z(u7rN5m6m)9vce1nTfrTDI6MQyjQBAQJZZfrInv9tSfr95prT0Qsu3Ljrn0uwMPOC00W87FKp9Ull5mtVh(NC74FVm0T5xfY2QVtBuT4Kv3R1(3RLc2)E5OtFQYrJTyND5psVhDaCM(rlxafOQ8btGVtP2Vxul(TxkAVJtFv0LcM6X8VbNMBZlKi5)kQbbyid)NhpDaWJOhvy(arPKF)NinfAaWoHr4teZt7EAPTwbcxgdcnKSbi0MhJgJ4rrqMZoIGswCbyCneml)SCudiAU4i5PR(wxArew8Npewd7XRNE4ovYeDKDfewg7qY8KukECr3sJRfHv0sryf9CHWYGy(0xh5JvQd0eX87NqBMA(Fa61OnL)8rPwD(B6eT3SHHN)4Zhqi1azZedM183ygZDGyjpKsIjKACrAgnVN8U8hlMc3KcWm7mQb1Yz16ZeCGb6k04gN9WLBhmAUvo3UotlBNAgCGofP(nyqqjoJN3C)5zrG8hGMP3d)dAQPxX222UniGPu)aX(huE348DgNtCYgbOeTLQREk)bKrbWDyvwtG8xEWlMYHc5BaSmIMJJYT8awCpWfGWGNgLTbYYazEqnf5BN)03bXXnD5WK90sliYbVeST6jYUmJEerk7rSsa0axY7XF84c4HXfm)SHG5WGxhFMCglDKyYWn50wGoT2HYMwLdrYaE5FohY(CETymx0LhX)CwhwmaqcjbQHscGCcbcd5BT8pcR4mAzg06QUxKTUwdCYJNnExj6G8G8YxtjQbBWzQPyFiuEG8nw(2k)P9d1iViVzJ1jAPcogEU2TTubhqm46lWJYkqM6ip8JfabMigsX8iZjqFD1DKfl(CSH0(VSeCB)o8wk18peTCBXwZLLXzo2Tu1Cm53IfE70fTXGPlisaxERdEX4Q0xU9D2AhTBaYHVD0Ll88nI8Pk5iV1jJeWM1)B2uDRQPorNGgxgJORlvrNlp6Cw35s23mgNsnyCXLNY5)zIs5Wp)sgMPZCXpwa3uIDnTGQgAIVRySqEAVT294TzFTax1AZ(c0Q32BoutE96TPC7SQfccTIl65ZxohncfGaYwKR28KOY4GDPpPucXDqx4iu1RfT90Tudn4AGbDHoMNRgAGYsjXc5pLLUVlBoRZiOGib7N(s0z(NkKwvN5RbSI)66m65j7a6lDMVXMiPMoZ3Suez6mFltsNEg74QUt0AaTP0ashDMVtbei6mF3IH)6mFVRfeu(9xjqxNzzeMRZ8d0zEsDM)ftyTTnIhfiwIvu0P9G)8AejSknPaQFpa638X46mpf5tPZ8dla9QZ8JYHz1z(XaAvN5NuimvN5NQZ8ZIA5KPT5oh8tN5Sfd70zEM8OmDMNv(kb0vHlfOfiduo7xEFxMoZ)bfw9ixXlsHvYtMku3tpyOtMW)ZtWQkoULN)iPBNYtZDOwB3TVMc1IVw865CcvTldEwG8NWHdoqpwqQKfaPEtxE5GuGcDNxlMkcLGxHLbl9fUQYcMsoBVbpsFnjCkpsppbMEQZjMnLdjzBAoVqbKS70eFKhfqu7lNttSqiwbvoxDYXcVJFJWKgF6qEB1tlnHF3C70R9s)2JoZVGEHBdJByBZktXwutxC5gMLa9YIoRYWchxXy6m)R6m)COMHAqN5Fd6dFOFfA1dtpWORs4bgaoS2BwKI7szH72ZPVtGvwvxyyLHteBnzNnHOw3b7xsP92dVgiq6tg)lmaWA28rFuZeCxuxKFzUPLfmIcorafIjpHxpTzfUbOr(dNozkhS8LzWF7dBW(kpdoqbTMGAXtOM96UL2c51ThFnt)Uf87wAMIXqGd6)bw2idyXbqodSZIn0aWblCx(7RHgYrSBX9A1mPYIDLEYHd6kqAwXjk22kpuznTIZEp8xFu8Va9E4V27a)7dxAtSu1ABZKY(MCLXEX12CjVC6EnrtskTMGmLGnN5to9LtnHIHHtOgbXW0LdsgQM8hh0CCjq7ys3(jj4ILnzYoWWTbmu9Y4neEekk10i0Z5cDMhan2Ycy(mwTC7wDzEAYF2OlJ7rgO673yz1PhxK9jnfNQM17YaOzyw0M)kPZCcSNTsdB(Gx(MPbyguHVU41Zj1TApfAaM0xULPnZBbgDMVyjm(IP1sUMs4)DOrrmTgY3WYn8(8rrlJqncYvVAEH3cg2ZaNsOnRzOZ8vSz8ITxSXle2agVO2QQ6C3uf7480ufDsPiFs6kxSAg5CTSV5tQH)nzPSVzu7eFRIsHvT2MP0UMGft4HART7Cb1JCMOePqqsa0eLVfd92mDgrGq8MnunlaUsTwgIefhIKWRWIJ9TRnpa)WOaM1WoJRkkVSEzkuzNJUz6IgaCdNcROWVPtmwNbIz)hl0iJwTe0mf3aqTlAV21DuJ9kf6s0k9CDndOuvNC9qvHcZrzPuYi0BsnxDat9j8wf1(EM0jMeo846d8vbsPOMKnbnPnFip2PA2fgUyh23ujhyG2shicig70hG44l40qVi0jvRc1iQaVA88rFOHJfyWirgSFkmjVtsB3jcTPBJLWwutjCTrGXbO7oWqPz7Q7(g6OzmMGaLyEL63yPxfq8tvnICqOME25Z5sQOQsu64FiQRjvpIV1mY1wERZL7OQM0EstQykn)cgwnc3)K2JGp3EoJea6kKt9KpdP7ygX6gkH9Zy4zAk4jDoo3RLPxLZ)2WvhejI7Dr6zHURoWJzflbBHO5T6wq2cazT8(lFx3(PZnpf4nbvTqqfMRd9P1l7QjJ0TsiUyckA88NneBCb20QUoGRovYkKGp0qkstLMpqawvE(nl)wUy)CD2Z0h7mUKeD1lRycvLo5sYjQYjxn(tmSZc9bnoQ7(CwRB1TcOsHugV9o4rMpmBCfmWDXDgRudZMEYvXLzNk(r64ej9wVFTPxpUm7oqNkEF59ywKw6fBEkBHUnn1jzBCL71H9DEVxhWbH31QUHVkA7nGoapDXmnNbeDdFHJbgB2bedaYvHzDlMuXVxVPo1WZGJD09XGJsmh1gYVfAndpU2hC)qMVhXTvWxJkG9qRmaBzmO)tFB3I1mB2RX(maemVS5c370sw(AUdj2)kLDjx7kwfkVnkpEQ4jONG4JplNIep5ZYxM8vehhuMurc8K3FjlycU4czytNFTeyKV(sMrQR7rJzwHO8fa9iLV1Y3xkXzvVRY(egNNvuKlnV12ebLtIkOYdYWlt)Ef8PIcYub9rzKVMsMFld8lFTLTxaF4PsYlEhO07HF63l(3hfMR1p)UX)MYP8nw(Uv(1LPmpZ2xSlY3Kr(6k)idOxgFEJXTtKSoxyfL3Yqk4oj5PbOjvNomAU9l0DCa7hIFij))D0cS2gWmb5Sd5dzRIB0KklA)tj55ObobBxDnCDVar7Fj37bEEI4x3HpK2w3rRLK0v3rBqwAx3XTdeD6oUd4ZDwsAfDhhYImq3XDb6P44WRFeTUJxb8Xpci1DeyDc6WXK8Oo5DLFfbmfiVorHnwHIc7Di1jzBzK69pulVaHcFYdVfiSiqimKyNZ3bxNyUdwHI5u5hkU7mAdh8ON8fimxN(3cZveMdgsSJ5CVoXCURqXCTpttZ2s86ffK88ceMlslBH5kcZbdj2L12lBMmCk4uxpc61oXxVYA9uHIbhjzRbdFIqJ13rd)cLgFxZ1UfiSyn(GXKcrHwMpX0GkRtuO3kuu4XCpuKzYwVsWrKEHsJVxXwGWI147vugmy6jPRg86ed2uomy7ehp(oiJ8HL3R1YpAC(vzfRc4LVsAqsyf3(AnZFW0PZMrqK262sU6r4etXvqypGxUgZYK3eL2lriU4tijIbuH83CxbftMfTOa(u2hohl(f8ROH)AuwfE5RY)Kq7GLzufwnE7DBR2knhRTBVh7H11833on4MS9AF4DR7yy595xbDPxJzhMGlFtlV)EYYQKqGv06mdZVyCC)i66OWJLA(8TRX4ytlPPmt(BDvwzLU3iZDFxY7Rhfez0Hswv2efKYvISR4s4QZSA2QORmO4PYkOkuWReDh9R7yqDhJO74y6ocVS1aAwfzjvoDhr0DmGUJH0Des3XOMgq2Y4X4kyH8Aawjg2m29Iz6MpLVj4z7P9zYzb5Yy(4REDy(4BWU5JV0vZ8XmuZhNm)AkEOIoWfnxbIa4MfVaJj)oSIC(01re4ut35pwRwOP7DrTO8(C(U)rRWMYLi(5C1Rc)DC9IwunTqcUysAAszOlCKT8St6ck5iwX3F1cQo8gEbtbbvNUohcQonLEQz8n6X91YuDS2hrI7WmG648BRJViwNNeB1SkNNsRmW5SIdoPYh3Ca2YFH8NtsLzfOxRZiP1YrY2nK4Ulou5GCXVwDh7YG39)oiOz38gb4W)dCn0UcJaE4BSMyn1u7T3UBYq1qUB05UmCeNv6KhMUXHJ9O7yV6oUs0)oE6AKRgpaiuytlmlY)lmVuwnsN1Ct1rd0IpB1TzlolU04D4pCKXdpChD0v4W6oUkS9ornE91Sxt)7WPr43HUOxogUCH)P1c(wc05fcuBZdeCO6t3vFT7DQTqTBEOw0)WAXn1JLCKyJbA1DWvomQUJK5aM6osvkC5XRWXLNOBHXobN)uT2BITWLBI4Y2855ckU8ev44sXzyhXDIM8CSXo(w4YntCzl(A33fqC5yv44Y4P7t0)yDpJCVCBHl3u5x2Q7lK8lFLv44YyA15lOVG93wGX2cxUPYVSzpxi5x(QQWXLTp0GhjP)bv8LT)TWLBU4YMA6ciU83UchxEKotDKqhTUmUfoYw4YntCzZT77cjU8URWXLJ27OzoM4ad26XAFlC5MO1nDK6ciOS)kCqPI)jpUNJ0z2KnXVfOCZ14Ln79ciUCWkCC5KDjfEmV(BDIudSfUCtex2sZn7TTlG4YrQWXLEvB7eDjhrXZiX2cxU5Hl92C7xirLhRchvou3dkMyYt1Dq(z3OOYJS6OYNsN5Mn33N7hEZCl7sNPo6bSx96mnOZCR6m3gK0by0zACp6mheYIB43EGF7f(FtdDrUB0Bl)Mklxpn3(fqWD4kCWnBZ1n2X1o(Od08iBbUFXNXQ84P1lGG7XRWb3zMT1e13FRcNA64xyb3olcC7ClWToZHUaISJuHJS5BRTqUhnGweEHNNq2VWakxTdAVVXmqtOZ0mmuwUgrD1AKR(fPC196UDVTCbe7pqfo2FQa9x)PIiReV1M2c7xXH9D3YfYL5yOkD3H9ydpwKM1479OBy((J9sgnA(ntcipTEH0yoHQWjGeuhUVrNEeVhDu5TMsWl6wSXPVaIShLUxXaa1)d"
-NUI.WeakAurasPriestData = "!WA:2!T33c8XXD9D6rBsDKCcXwo2yRyhVwj2i5yllTR0kjNys1UA1dlzj5DLSSnHOD2DNDNXA3zgpZSsAnTqTjee3bCffE)mrfYLRKEaQqosOT06c9bpA)FI2WWJsbbnhCeEC(O0sOCC)(9))m7o7QvYsosOiq7NpwEM5)Z5)VV)EoZ87pxIktxz8k1J2uDn4TUgQm(KhulB)jsOlyWPnMGMUKI8wMrsoHIwAEd4KkUkVCmrfTo04tlmywvHOHdekyW(MIxwIvdF(tZlj3HFdOq)YkYcZgpJgTKrWlPPletroU(Lf41PDaPIRGhg2qtqoPH4MdPBWRz0bPCsfKTqUzYTa))lzZrtijlPloVlRRKrlMquP0QkAgEYOLs9qIggQ6h7OhDC(Kk1jPC0(4vgxCOUpYaAsc6ghjaVbFSuz1tF0MuReMkgAkPsjepGOuQ4Wu4eZWQN7tc3fQB16KqcSbsFARl0wMjUAUd14D7NxBMOkAXf0cOKsr7eCCCUMMDHGXtkOUTWxidVMG7oYKkL7HfLmeIQlKgwHd1qD1xxJtRNjAiHKWIKEfA8XWvlDF(HBzJki3AfKTwX0gkXSOh307Jy1ZHLUOWnovsnLmQDd3jr95Xx9134Sr5JnACnfv2mXLlxd4Q(6A6QsYgcAY8PonRBE4OSorCo2)73QvQB1FkPlErET4UhurjLHK6vyvGblkxBcl8ruCbU72N6mJ3uNbh8K(BDMeiOaiKWkSlpzKIpdV)rZu)ztNU(X7mkmbtiLSIPrQVe9gScRvSULHUZ1mmG1akW8mAGG9nyWqvlfxDVwRYbsXRR7Eays6(iUZrdNLpJb0O(vzDO)uk8X7iQbFkbzJDgkDgy6xrOyyt3j5EQWVoSGXoqvig9G4c6XufN73BA3l64ubwJbhxYiMyDgJXGu0R1UKEm4MOUKjDErbDPKYcXDhnR7Wgalqh8Xe6vj2Ox2qtkzsy9VQdovgzRtQqZ6Gh6YW0kvQUJRxbP8q8aSYJ)maeiQAk(Sasrym4UkAxc8PmeNoUq0mjsGmqADfS3b6yOENdWq0QegkqAIzgjqBHhCKWd2wObZv0aAcqrHcpqWE7nKmqT0RyAnkUd7PquOui9yW6NRq8Puf5DnLUqQeuIcXxLJDd)Uvg7r8n59sk7MVLRQdSCDLnQMu8b5JMsyY9QUv4ohMq8gcWYjoNfNUlLuzDpmSePlo3a6zJjkfZDxkAAkAIQvgwKpUY40IpgSQXBikgQd(4cUfbSnqdJjio3P5tRkPbTAqLmXefv3gRNDRKW9jfaOKCsrTbeK5XkdSzo7XbawyyuvghQE3YjYGWEXPOZOoK0GQVZtkjh3TFGKBauBSGJIeurGVhAQ7Wzuv1e0PnBMULLHUPdLyz0HzoRtzdtyrjHuXfNgAQkJ3sCg28iHemdfv3UZAdskaKMw(vJWX0e4tloD(5cCFeqslwkb8MeP34n5v6kBAz6fuufeNQdbEOhbUurCvFmq6euj3dKIpzgbXz7vGxfRBh8sWA6v7eK9exIhUJWLsdXzAxAmjzb3yxkovVsjfnghqEIthtafsGyHQ7nuuvqIfq3BokGlgVFzTyI8YjfIt2SpYnvSKyYToVRS1IVsOusPLm2gziIpY2j32u8AX6Lk0)b350WYQHs6oHbAIYFKezKPYaRrwy8bu0zIloSBuW4ycwYjRTc3WVJCeGscupODUhJxtcbI60ssPaWy3jWsdPmEV4i7(4UBbAHB60axEKaHr6UbkDc7oXrthVJqqd86dBX4sXneXwKRIS26O6I0Q7HoaIc4s6cvFRjEyQIWfCMZ0t6yQ3APN6656gNZ9W05EJfm3ZxZ5p5P13JVcN8LSbwZEkpZcn3XcV2l62DHZ5DVLyENBOM3SU3snRlr1DUSQYhd5uoUB6GyFAubGdqqEEdbiCxtGIfpB(wEKgSwek1VIhWjcOaI6Hwv)8kHPinxrSRMTKx1qbuQbx7olGhiFpcgO5w6WUzYYBhuBHlWsQ8a8RMczBChxH2I89nRrqNNV11XomxfN)bwnvz8bTMznSq1H(3HPetN1YrHDXODZV0yz0qjqauk3YrbdGeGMCFVhViUCdrH8Z8CDM9mayRNFH5MbIfvAbNadhJoCThs8NJfhAZkOccP0fwSwuq)xylLJx6Pi2L2Rifj94UxElrHx0LOIkTaIudxpRE3DXt3L0YjOXErwKUglVfoGl46786McxN6DrxN6DrwN8uXY5wdoFbMWoNS5oGX8ESWcgmME68TM8t9AxWAYM8144gP2frgGdbyWmSgwNvhtU9DBlATw3h1Th3hck26M8inuluAnwYfp0c2UAlj)UZvraUnFOs2cMuOw58s5psjKNxm7tHdGNfBay324qC3ixrTogPdbTCXhTsr4YPRW6G7UusvH5OvXV8JNh5mVPzr6DwWX0PjwVcPxj0GxLfD9W23Q)Uvy3A8FWpYoEK9sIqEaYRKOqgLKGmmrJirstgHCgsCsuskIi5cK7NKKitoh5vqujXi6eEIa58KZE5m6cuuCeYH5ihHuhX1wivrDzMC7K9qQFMwAHFaV9MA4rtiqA0Lgl2ccIKwQGun4(lzFvmLUHGABYjtjSpGpHhDFI7YjrxrqBxd1oXtfHWLCHYj35ns2gPsWxsYoJQXhxkJ(dEZK9sUd)OvTrdmu4b7)KtNa8lNzZDesnIKWUUmuyySdCrQLCi4mdAmm4i3D5tHJdLrAlKtDL4zb)OKIrDDYp6seyQ7r3mzqxKx2dt8wb5g25mGY5ycbr)V0JqC7JSFlN6jnr8ntmLuzslBnuT2b5yOFPK7L(3Jt)7lh)l4og4tjy4CBvDqI)kibEis7GBIKGKoiDs6I0n5eKEi9sojPps)KbQyo0qgdEzdW3tdfTOHAR9Uhkm5gj)wKdMlMaK7ICGjRJugh4oPoVbgNgyv(goO6UGXsrtWYVA6upi6Zgm)FJrizi7KCk)OPsx3UcC1rfa6h6gUriCHncsJUsmfLuGBtYyiteNghGW0WUSNnHifGMbiGlBxPirz281kqRruuOy2X7WL6wbiwBXpp4tHqCH4NKFcX5u1usIoZX6XdTNnvM6Tz3vdkmHb49gAgB8iaDZ)fvusJRqEdrLk1nIqbILALq)gWQrNujom1fIu8Gb(CIE34NpJbCBv)mnhl45hFu)bgSR(jh1f5HJmtCWrrWLEmMnLr8EOdgkMOqSr7ik9)0pKpsaxx22SA)6IkJhAm(uze48vTIA1h)4KhBAGDiMiLbN84vwpuFYJffJha4C2J7YYpn9dDWld30GlPgzjVfYJh5GKNqTs9mrRZBDgWn8iJjPlbJaTKpyhyFFVhN2vZjmb4NifVpOuAOcv6L8Hby3tGHPQop1LmLY4qRCcLN1EPm84sQapeYMcEKIHScquT(StbRrJilaNlYq1OqGrq6FeY9Eq48O6si3C0bc1DWWdY4cMMgpKrLHU9F4U0UOISq3X1lJ8YH6VZnhH8XVrAVsdVtKzXdhtaCOoLWqsIZz19wnpI6THxqycGzWXLfNJ24r4LJpIDiHODKQGruEdJuWCFFNyNKYNfUXXWQHC5YXF2PWvGCHxZ1vGM0P9vePf2l4ET(28JhkskxdAoE4LX)qJ0YastiKAw6PWuEuOY6UMbp9SwrxBAAVq9oEh0J9ZIwhT3dtJqdT(NXQ(xbpPDRiT6I2ZDOjCHmcYXYoWnuFDEAAYdQUFkDN(hweDhrDedGcpIkOMscJCHl1DxI6Woiew14QBNwgIUXa(gJki0FBWPttfskGmt(7R)(collIE2Zq1QNxp7Po1rsgl(iIsXfg5IcAkIQ31cnftjKKpw2rsKsbdDuP7lAftReFeuqwKPSkguMtJn3S0ZhhwhhwJx9YdBDWC0lNlmx(BBOb7x9owOPb7mUPYvE1hqv9GLC2ehwttZNk)IlN6(kzfPGkA0XdrV9uRDHgDlLnJyicIYebooo17EHxjkrTDVG0auOHSqkRvjCvJgCX(hAWE7UVGQvYwLOH1YgJYa2ybxL1iauZumEPR4ucJyjg2IjwlWA48i9rYp)WWFVxRjgdQzpXuV9s2zSdje19SGRcW)ezZDuEUuISeFZwuFVvhRe5d2V1LDeeBIVPPxIPwQR77h9bWFpTRUUVF4dG)g3L6DUW3Zo4iDVW1Ycnwa1jh)2ExyAngKXewX13AcI3ewbKFebq)lyiw5tHI9OxY6HeytrJmR15k0XkxdXaS7I02BMzIYKBvdKm2hFAHixfoiik9nmle3IZsvHjOhwedT40OwU2snoFwDMTmAD1wOt2Xq9sWO5RLuWan1zAmA4bNqshSJAkm(40iyxLNMAPvQvpTxXvWRsLVlfxVQOn0OVM92kyneAyeyqNC)YPYgHoybsbQtWi5Yc84GSqW3RssPyLPUnwitSUiOOx4j2eQ1(804soMGhE5SGfEOnLrOrZemRIAhf5TGMprMkVzsKh(62gjYBLAve5TjsE7oTaI8oIqEN2w9qExuvqK3Ti59Gg1qEVObmK3h16fY732YfYhic5rO2LqEu0OKZ08W8rJDw1t3qqMrjK)aQPiKpOpQjatRiBBNdyrb5ddL8efAerJLWicwBNHsagIAof5X5yMoqBCbg)(rzwjq(yriT(tjZyzxa5Pej)Xw2eq(4Kpb5yO2(mIKp(qKN8MUuJK)honaG8jJmnQVM9eFejpDeYNsK8Nq7O)ulD3K)SNL8Pzls)5IK)ITrUcOrM8xs(mZgnJHHIC)GrjG1yK)kxK)AoYFZoi)TIKpNlYNNJ8fCr(ImDNji)hm)t(fiBb5)h5xgXKBtUmHln5bj)DUi)9ec5)jzwYxI8pq(h5ipJi5llsmJq(kKVk5Rr(6K)jY3G8pZr(MG2cY3IJmh5Bt(oCK)foYZks(Fr(UKVhimL8)M89Ve55ej)GiKFyeYpAVKFmh5)d0XxvK8)fiH)eoY)kBw8tHZ(3kPifY)UlYpJJ88CKFUiPT(a(WDoBsbzbnPymontUBeym3o6TG62WLUcknsidnWmhYJI8mGJfx2(z3wzdZMZIkkd9m0tHgbYtIaCEZQjWNkSDXKhqlJm9jorEutUDdd6u5AkqerPbJWeaepeurrsxQ72gV5Eall1DxdT)QLYBJE2uEiANqT6JopbIW2m5Q0KBRpXMS4hFG1N8JPhyiLrt4xoPVZwe)yhKp0Hy8vK)Ra3uoFai)3Yz6p5pCE8OMC7y(21t(VN3uEYhzb5hr71ZZpoFMXpeW59HaMXjJopMrK7DzXds(S)6iFxo9FMCLbtyxIMC3aY4rvTzY9Br6WKBZOgntUBckV8Qc5TXwBOrlLyMCBPktUB2sTLj3Tav5LaDXTwgfOZW8wW9x56t4EnksbIwBJNPT(eFXaC)AO(5GV2iwy(B4topiVj3lDdm)1dM3VNwB86bYRS(eY7BS2hDGMc2OwtsL0IltUBBEWAYFKt7Qm525s0CQfu8nCPdMfbZp5nTV37ci9McOZdLpgfkVEhusXy7ncAtJj3Debn)XKRQiKYn5UltU9dRgmZum5UD0IL9rgL0Lj3DMZ0JbGMFGiLgqoAoa5HlfGed561pGuSeaYfx8IwBbclkjlCDlK5aZNEwcVZ9wYiCGu9sqYlHNUElHNU7RK1kF4r8htqkfGBkrqp8UGb9iBjCG2Brb9Wgccqoa79CrkruW0TdFqfi4cHJ)4sfNbV5IZGwNbAhdFAjIvL35f3lantjLfaXxGjUtp)rMMseodVocNbWtvIqb41zOaq5BoLLqfKSWI6aXAOaoMOoqmNLOpuuhtYw9Zesq8SNBiHt19PhG49ymryBoVqUQYlKZQe1DijRJV4AXKWN(M97BzErIVlYJdm8FdgBEx333uf)9AC5QWEYYUb7g9rCAEa(mzaPKGuCuN)BpVmYcfqUZ9bIhVt2tDbfkAjreK)3MmtCYFfOA7k6uhMAJgpaM4KYSeVuEvv3qZ0hndOodv)zjebvRbYHy9XPPQa91ClTqFaou9IqhGAkzv4XOx3sofiI6ozcOyILyIT2hjbkuJjzkVJqTubkvkbvtiizA9LAsVtCUw73BTEhDIZSKvtMZ6Vvs9Kva6i75UEH7HJj3U(12qlybjTINadOE75cEGj3EQSbga9oePkG3hzyto32Hea172daJRwSqDTmW9bkHZ9dV(00pJtKTVUUiF7DfSRvFm9I5ldkDRF04VFrpRa(XSbY2jYwRiK9VONLdYwB9jYU(wB9uD1wRnmEZ(x7Lw)tE3BiTELftlveM(N8UxoyAP1Ny6A7jTk)41mCZnMETht)lEDBGPxzX0Plwo9RB5GPtV(ethV(4dEkXbtpq)NB1ht)mxdm9t9XNpM(PPW6FZgqVKdw1t9XlkyvJS0dw1iRpbWbBj251YoAT9EHaR5a4DXDUuBGGlfcwUarY3wXIKPpc54swVs0rMVeA7hgGdb07tD75(ecpM7WcAcYsgzZlYg5jybxz)iDbb(Lo(jqPnuIqOuq3hqKx3qsxWoQklypLUu90T5CIYlhZidVw2sfGggN4zwFYj2DhT0WzLtkkel6A6ZXa1KCPNCjzD066hHXY0mNiwM5eViZCU0tUCmZj(6tS5f7348nFg9bo7PvwtXM78LHbz5y(34jSL3OLJ5ViJwIU0nAj660h5RG3lOCQWjmozBR5IkN8iBiQCbevMQirLtEKLJOYuRtJj9eNS7oZmHCq)nS2hLJh6sBeLJv2OCiweM(HU0YbtlU(et3V)S9OvBpTe)eEx7X0p9tSbMELvo9fkct)0pXYbtFH1NyALluZ49EYMvhVt91Em99(A2atVYkN((lctFVVMLdM((xFIP74K(gxTTZpA6XtU2JPFQV1gy6vwmDYIW0p13A5GPtU(et31ze8p6jvudpChR9y6D952atVYIPLlctVRp3YbtlV(etpr9bIFXjKcFXjAFT99wc)gmYy)nyCtV6x1gV8sRWMwFUIG3V6x1YbEFU1NW7W90rSENOMwIR1)QE45UwVvEVQiKN8dExlnC9kwm68TUr(RFmRGwig9dUSEZrFfRpHOnfpwNPgDyV904AEeK3f3DK(xTHqE9d8KOwi2exRwoOt11PpkyV90wREpx)x0ZzxBFCBdHpUTp1VS0WtXn(G2wMFqBXwFchZW3COSN8CHpVrO1CxWA)iB4b2kRiw9cfX2(Y6H0PV(erhv60X6YxFr7)S8R9bv4L17YasViyZRt0(Vg61fFrED9Y6D5GP5xFIPBvjt80TNvTLow7F963f3R8nTHC6vw50cfBk8R8nTCq1cRtJLqNT3UrlnhONWDU2lPEFp9gG6vwq95lss9(E6LdM(8RpX09EQ6p7OxOH2hRzFR9y6N)WBGPxzX0NTim9ZF4LdM(S5W0heX0ac6go4m0KGnl9tkYq3n)cl9NGqBepUJJPEByEL1nU9kzT36OOL2T6o9ZRrVO7tYlZ7Ug2U4uToUEaC7aX(6otZ40mPsfZpVxCN3iMwSDMLSbELAeX0ao5UlhzXo6MPCv1pZzZ2YyjJgkOqpzXu9nWT1OlKtcxGEPlsY8gzqxI5XBq6qisyxyURaZLd3dPSptLWQSrkmdV8DDklr1TvELEWfmR16htBQQBRtfdr(09XRPPm(qPm04ZrKoDuCdpsWiAuLmYXeqsaabIMJKSeLiHqJ3M4C6gsXgnRDsjwmNaN2USDs4f4zG1Z9vfLRfbraXw9Ux47J5NCxWLY6NHx2N05sCbVnhOEY7qu92lrpiNp)TqjZVZMa6L6DUWJv(8sdLAJqrMC0zlil4UNnnBb5DvxK3RiIyYaiaeIDk)yAxbrfAwPuw)9gSJbNP4eilP1jRefHrtXE3iveNLaVQGt2SFnLu09UmqKNglDx6HMJSJlHjnLmPmYMhLPLGThY5uC6oNP9GTnyx90x3D21GrqzR4ogfYWs3i004JjyNXtajXp5nDVxyk1XuT2k1WcE0iQB1kzPc3qdPgN3qiAg6)zPEazLoyuwDkBQ4kJWouKCRh0K7ILzY9QerUmVvnpvi50pmD(rOmu)aa7)yrMRWKnnz2ssGZNFFjT9aaV1bJQBNXlPVfcpoiCC35foUVPdXlPlGB7yXPjJCm5YcxFlhkQhVE81AlrBO1g90yR0iL5I(TjXeGwEvHAOPgB2llpNDdZYgLtkPJzWCMWwqU6mSBeAk(HqYlL9t8ZOIFXeCgis26dic4(bo(PTtPM9l74Rp6NcTIlN8B75pn9Bc8ag4wdMTG85yn2orAIPL8rKKJPKokVreAwZKpL0ycriDnDGC7cFWO3bBwVpolr9E4tLIkRFghlZQB9qhYPO3dDiqkNj35MoFwF(bV5lBNxMBBYGtH5V)r0H7)qHqmhYEJmfOSgGzYKlUOgYAKrti0jXm2lLDHYB(()mBFwDvETrdzVTlmh9u)aymoMoE90w7Tpd9sDjfpUGCO(cE6GHu3wbncRi5BC5O827jJDDFF99G)C31999)u4VVQRPWjChP4tQt(UtzxtpaBoWqcgb9WIm0QZ0k4vuf0W9jnvCtDJ84v7TEg(1K79sE8taAP)73h(do4lUx83B21vT3rg7wUdnfmp1IjGihS7FjGF8lzZUFOii)UjNkwIw7TDY26myi4sMCpkny2xGYnABTKjNEbC5KpbL32KldR0XSzQFkOPASRno9Au7gWyjVDAYYNpQUIwuCnJcYUInymGIUre1D48MEef6M8NIwvvEVu2dk48srMIwkMOU4yzrF7tbq1hOkpnuF9uKkQWZwbxxHO7nEiiKUpkmIZXrKY2Cpm0zodqMMsKZN99jL913soLGxHwits8z(5O5Sx32Eu)mnKyOAVG3bAoD6MN1ERQKsaJG6PUQclXbRpidexLj3BZ2iCl7qT25aa(fb2ohWyoTW8xgbnY0otAZYC4EamyoBoRgS5SezImhAYw0m0wd1varJD1O9LjDuyb)RyYXJ2SwI9eaJ5Lx2UJfQo2zHSV5vpqHJwjs4BqfSXd5UbkrMU3yb10tTGEpBs9qxR708jmoWaC0MAWG7N3fMV2A4A10sKr7al0)ozPM(BzEFXwOtbHGD9MCEG7ODxI7OCkMEUcCasD7jXnKgyW7xd)lvQ10D1FOUpx)9nyB96emFw6oLdvK7RiVJC5ns9Q53EkcyLW5)02YHM)bZ9T68JUPnDZGDkMCtyYLLuR)(uadkh01CcYyE7UtRjgltV9(4qBBpQl6wYYi53NviNsdt46aMDo90kGvL2PUzGH)3rTRCBJJ1wHMaWIi7w3an6Oo26rnvFG68K4ahOA3hEiq3lnzp3fyTUqnvZ2XtRU2AVhClhkeDDqKPsOD2ovJGOL8F6EaZXNrj)kOj3Fg5DwoyyiB9ZI9uTMUX92sWYiH7h9jaMhGpc3)qDFK8NDKWydycyOA02b1u23I4KTBYnLjNmAVDr6Wm5ERiJVtDxMCVDqv67WK7DAY9Um5E3MCVhY3aupK3xU5FaWX)(iFxtU3FEDprYzP0nwqwTlx(xhSUUG8VUvjnvCjMCpILkNTcQCSuduO6dWv6C(CxKUduTKLselLsGMil9rZKtF0Xkq1YdyRAX2Ef)y(a3fvzXLGU5HaEH2z7bmybWvEmrl1io8j9dDaMoc)ifIANc9d9(1tFQNSr4zk8BZg7B0AjO9VHPZLXX1R6MID3Zvq(lxpcA61SyNYSQlNXp2Qzm5(dTuV8CBnN6ftUpm3liLkaCYK7pIfKfBDfxKQROeQgm5(OMCFmB1b7eDf7Jm52OM(zz4K4vPKAGDjMqAC)LQQQ96Dw61YTJvD1c35J0R6qhEtLPU1C2upsk6UmtKRqBMvhBY9fMHEoRWJZk0ERbNDM9gb900ZS3Ml(AVc83BTR77kvI)(t66((2)X4VFFxQBVWjlU5FimvBgdWeaFfNOwr2ONwIUtbBTrJaxzo2K0EpZ5wy3)rr7cPDhWZXUKJn0QjbA6)iaVEMQQ2hS6)LbkTjDrWK7Rau0VkCVAY91oUj3xhk5Fc(33yrVnm5(Nn5(MMCFlOlNtejkFBtUVZTyY9Vqz4FwrWlJ5hRilLxKVCeuBenjJsdBeQEQ4qh5qbZmD3xFbdncZa68QAqnsGgTF0EN82m5MPadbYnsWWu8aa9USZEFAwVJ(J6SZHPgTZzo0LZ1nQxCvxrfm)4CCIj3FkiZ1K7tNxh19xkDuMC)54adlLE9(BVPnTDhQFm5(laLpMCxXsHdlsbuLoMC)LwkBm5(mMCFwru3Y2r9oJiipwDAcmlNQb6J)AOS)g4F)TaX8Zrvd0aOgWK7ZtjXFXDa20jEISzgnDYmd5zaWHKjpgy9yvKtNqDR52NPdMok6mSO6wdXhtIpLU7JyT5GlEvRnbAjnHJoSeUHjN3Hir1D4CBEUdfndjJmXfeN1AZw2AVxMCd7Cfj0ytSf79rzs2hCNKDCEtUFOj3pYK7hBY99n5(bMCph53r0Eh2ZrCVa3WQFMHhmUNuN2Zz7xkd5vt3y9EOi27TEKxZ(ixITh6r(94W4HD5YXiATlAmqof5)e5bX1wwuXq9EHP7rEKxVlm(yVHTqMKJ8Fg3f8CrETp4ntEtUWyJv02EhgOSbxS97oYBEPVx3r(Vq(9loMDgv3BOjpknC7rCgU9D9cmC7Ilq42fDeUDl078I6onUq5YAUWQa6XV1MSVyHjYG6fRjqNn0MumzhHEVIfmb2)mHsjmMqQQQ0lzMiKJJkP9OoMkvl9)kvZ(b9J(rgXY9W8FrxxGgxaARfDMZBb1(GDavmhTK8o8v9l)4lH3GQ8XFpcn(7rkiX37Yr43D5i87K2UdlL60uh)RZoR6sd)IvM11K7bz5k3TCrp(APzp(A1NNMR3N)gQVfFHAOHM96L(3gP)TjNzFxeNyN8DtWasMCVr2yGMnmPiZyGCH4g4NYfJ7xSdKm5UAHaOgt2txxS2MpvtEpZsdazY9tOOhrg6bGnobpMC)05bDg8yMC)BLcZyY9VVkJtEjxtCsipn0Kpp2qftUFMj3ZBY9Zn5(pm5(fMCGPv)Y5dokG4)Jw)s8prqXoptZ1p6Gbo9QfX)D5)fZeFVT6XBJVqi()41Ve)KEIwBJc9Ael4QgX)EEY1AI)ZYi(SuMocayeFgjNgGEpTw)ct8PEvcaG8B3ifda((RFbaTF(qbN4md3UV0cRsaGpZD9IxM)d5PPwAjeybqdEFHia4hue9xCLK(B)kBGHpAXWaxFV2gA90QNedgk5GJNcFs1pm9HOzfjPp0JSnNp4nwOLYD8MDCC5ooEloo(wCC8T644T544T744D444xQJJ3TJJVDhhVxhhVphhVFhhFN5EWHbo8Mipw19hY5Bycfyda8LWl6)c6Oo3Y1p9ccem(sF880ahJVzlxZGUTtTHBluOU7puKfi6BwpdyxSiWz94FYf4nKjDhr2nuHDBh)nNS6T9jRSmGPXhlOyMCVgR3lVY(LFEsGj3HJhi6CTPfJhCuDqf6oGpBltMTrGtJnBp0Tmz1Tx0oPmgonr0g6IErt2)nX)mu2QhcF(N2H17ny7ZwrzVXxV9J8CjmrnlBlMLDZIMLDlLECvp2AZ4(z)eRoJ70(XTrBTrLKtUOJFINA1A8tPOe3Dhz0YUOJ)a3)Q16(TUOJ7R9r)nSX9XwDg3PgMxZDydL0Qlozo4QZWptaEzzPO8PKUOWIpb4xDMaZgupgVQG720mK0nw8Pq6vNPWvXWk62qXD4mAJjn2IVo89exDMeQBRtPegUvs42quWDF88Azw05X399Skj3HfD10cPIVOJ)ZUkTomfWlilGb3DXXcARsKHBJcgSidDOOPZpQG8IovUJF7vjwZqkXgvWW9jYS4Yg2f3T83T6mdMZAg4NxtJpPW1ys8XwUtIcEWF4JKG6fWZLZlGJrklv5Kt)KQ7GTJFrF3sBxcmasdFlbev3MJRhqKFunEXcQBWX4LtkKsspTO6l1X1TEacscYXDlQEBokPdbqAmiroEHnOdLyGbyXDtF(dx1zb8Xfev3RJRqZh1buKXNUM17GP6oDuU1tZa7qr1D7Oa2dYOB5ez0NxJOPG74sQsgzx1EwgFoZYUtZY2tblGSfk39Rf1SS9Aw2DywMBZYQ2SSB3SSQmlB)MLbQnVRf5jECE5H81XzgOJ6vV4s(jES71DpXJsSduU7xG7aLL6dmyj4B1TxcFR(o5CVcCS6llsFr4JqFTzO(ybomTKDX6h)f2K9(Wi4Z8sBZlu05MxyWsS5fUz2MxyqVN9cz811OdfAaKqwW2g4PTiwLANdKgmK3z(Ou4iXXJXKQ(69vpnIvTZ2waTETprYj9Lln3E3hG(ZT599Rkc6jEXdbT0Ju2L3iPViJ0Ux1qod3xGG13JxFNV(ExbroT0GpFnSero7zdKZ6sKtTJ3vSGJ10jp359F9HCE)5EDXPVw6MC3dnQOOEdl9i52S5BTPMBTvelvCCWPBc34oV9sVVAU5gBP5fTVkohtybupqoG6rErJoR9xc4tP)cV8Fap1PA9XDHORNNIUqmcDNbgqKaU67X(WUaa3puS0Gk63Xfdl(CrOb)TPfm4VuKeczayeIMyqPhj3Nvt9ZCMosFbTgeBUHZuRfU6piAdE91aqSZbPYf2)RjOQGGiA9K5NCxSpQadH0yy)I4WaDUPmuSUCiVn2Ox63hXLTRjh7HSVNQBOj6RgEU6cwV7rvWanDN(9p0fV(acgrOdtubr(XKu0Iy7EW(X8AD5G5E1GioMT8Vr2lg4SJeOTWdos4Hceiy4WmXI2FcfV98st3FvyxSx2Nab(Dr4UxLKKYNI9rsKcoUxZYAL1CCYwGS19(RCzRRCMzj(IpZSoX5oNEWZND0Uc04kNYs)(82OVLOUY7yDm98fHMnlFIbtn4GnoE7H6BLJE6PPwwQKt3V4Z0NRVhZ56zqW49CUo9LOX09lkSsAbCRn2stlryq1Badw7Hb(pBJ1eO2MggSdyL0f6gBUPLQJq3(gc3xjjOt0BZ90CGXQp5e1Scsqb65sMVUQniORKe0ogWJARNQNUo)juwbjOEbkQ3LibD))kNGEULRGAXxKjOEDCaogpB2H6X4cb60ZfC8nvFC23uDuDd(yJQtE8k9YEvEMg)q28wxYukJJVtpRuIBAYtJEwIOZ9Tb683GqNnKiOxVNT2mn155Mp60SSUZJmnl7eRGisFEB27svb4DzJiXB1))d"
+NUI.WeakAurasPriestData = "!WA:2!T33c8XXv596rBstSscXwo2yRehVrowrsjww7UsRKm2KQvA1dRNE3v(fjr7S7oANXA3zgpZS6HPanMavq5rVckLWZWE5vU3qVubjqc9EBRlq7LhLdIwUZfOarusjqPaUa9cPPC)(oNz2D2vRKLCKqwG2F)S8mZ55C(()9CM58XnAfPRirf6XAQEp(Q3tfjMUATPgC0r1fm40gxqtxsr(MMvsEufT08gWjLFjE54IkADQXNwiYuQcXc3EOGbhygEzjwn8hinVKCNbmGcdiRilmxImA0sgbVKMUqCf5e6xqGxN2bKYViEyydnb5KgIxxiDdEnJojBLuo5gi3i5MG))fDDXgvswsxCbxwxjJwCHysPvv0m8MrlLADIggQ6h(qhAc(Kk1lPCOb4vMqC4Eo4qAsc6ghSDEd(4PMsp9H8Rwbmvm0usLsir7IsPsatHJnlREU7hUlu3M1jHeydKEwRl0wMjVuUd14DhGxB2ykAje0AxjLI2X444CLLDHGjskOU9WNldVMG7oZKkL7tkkzietxinSchYt9nuFtz1ZelKqsyrsVCn(44QLU)aWTSr5KBUCY2kpRHsCl6X1)Ujw9CyPZlCTZKutjJApWDsm)E93qdnoxm(4JLqtrLntC5Y1qUGH4ssYgcAY8PobRBElXyDI48S)pGvRu3wGusN)88AjChrrjLHK6fzvGbl2Q2Kw4Jy4cCpDmZPMOPUcgP)aTo7OiOaiKWkSlVzKsmlFGXY0WPtNUHj6kgmbhvkz5zrQVe9gSCRvSEKHUZ1SmG1qkW8mw7bhisWqvjLqDVwRYTNIxx39qWK09bDNJgohFgdOrdQY6WaPu4t0zmd(ucYg7ku6mW0V8qXXMUlYlP8a6Wcg7avH40dsiOhxvC(F)SUxYXPCSgrMqYiUy9gJZGu0R1HKEC4MO(KjDErbDPKYcjChBk3HnawGo5Jl0Ns8XUGHMuYKW6FLvptgzRtkxZ6Gx7fGPvQu9KqVCYwdXdWkVbYaqGyQP4NcqkcJd3vX6wGpLHy2ecXYm6OidKw3b7BOohUV5bmeTkHHcKMC2rAVTWrgjCK2cfjxrdPjaffk8qb7RVqYa1sV8SAuCh2tHOqPq6XH1pxH4tPkY7AgDHuJsjke)vm(18kQi(J0Y0hHu2nEtxshy56EQyAsjIWhlLW07vDBWDomH4neGLtColMTBLut5(KWsKU48dPpvCrP4U7wrttrtuTIWI8juMGw8HHvnEdrXqDYNqWTiGTbAyCbX5pbFAvjnOvruYexuuD7SE2TYOU7xaGsYjf1gsqMhRmWM5ShhcyHHrvzcO69ipAge2lodDg1PKgu9D1VKCc3basUbqTXcoesqfb(EOPUdNrvvtqN2Sz7rwg6MovINrhM5SoLnmHfLesLqml0uvgVL4SS5XOsWmuuDhoRniPaqAA5xnchxtGpTy28Zf4(ODjT4PeWBsKEJ3KxS7PsltVGIQG4mDkWd9iWLkIR6JdsNGk5EOu8jZiioxFc8QyD7KxcwtVuxGSNes8WDeUuAioBhsJljl4g7sXz6tkPOXeaYtmBCbuibIfQQVqXubjwaDV5yaUyIbL1IlYlNuib568tU(ILetU5fCLTv8vcLskTKX2jdt8t2b5wMHxlEFuH(p0UYclRgkP7cgOj36JmAgzQmWAKfMyifDM4I7XnkyCCbl5K1wUB43bpiqjbQh0o3JZRjHarDAjPuayS7rXsdPmrF4i7(OUBbAHB60axEKaHr6Ubk9O2DIJMorNHGg4Zp2IjKsyiITixfzT1r1fPv3lDaefWL0fR(wt8WufHl6mNPN0XuV1sp11Z1noN7HPZ9glyUNVMlCYtRVx)fo5lzdSM9uEMfBUJfE5x0T7cNZ7(kX8o3qTGzDFLAwxIQ7CzvLpoYPCu30bX(0ycahGG8cgcq4UMaflE68T8GESwek1VIhWjBxbe1dTQHfuctrAUIyxDQsEvdfqPgCT9xapq(EemqZT094MjlVdqTfUalPYdWVAkKTXDcfAlY33SgbDE(wxp7WCvCHhy1uLjIynZ8Sy1H(3tsjMoRLJc7Mr7wyPXZOHsGaOuULJcgajan5(ihTiUCdrH8Z8CDM9mayRxyH5MbIfvAbNadhJoC5hs8NJfhAZkOccP0fwQwuq)xylLtu6Pi2L2Rifj94UxzlrHxYLOIkTaIKNRKvV7U4P7YA5e0yVelsxML3chWfD9DbDtHRt9TKRt9TeRtElFLCRbNVityNt2ChWyEpCybdgtpD(wt(PETlAnzt(ACCJu7sidWHamygwdRZQNj3(UTfTwR7d52R76GITUjpONAHsRXsUyDlA7QTK87oxfb42cHktvWKc1kNxk)blH88IzFkCa8Uuda72ghI7g5kQ1Xivh0YLE0kfHlNUcRdU7sjvfMJwf)spAEKZcMMfP3zrhtNMy9YKUFObVCl669yFR(kk3U14)GFKD(i3ojk5bi3prHmgzuYjjAzD3MLbIPisK0KriNIKGeJKIisoh5(ijjYKZqEzevsCIoHNiqol50xiJUafqhLCpCKdsQN46Mivs9EMCRKBJ0WST0c)q(6l1jhBubsJU0yHzqqK0s5KQapHj7R8z0neuBtozkH9bSm8ONuCxij6vcAgBOoiElpeU6lSvY(VwY2jvaUvs2vmn(esz0FOBKSxYThanWnw7dhoYG9NDuWfDM53rj1isc76cqHHXoWfPwsDWzg0WzWrU7TodoouEQBGC8lMykWLkP4uVOcGEhbw9EORJeXf5UEleFLtUMDnlONoUqq0vm9Oe3(j3HL)9KMi(NnUsQmPLTgQw7KCy0fvYrO)9O0)(sX)cEMbUxc2q3wLvtcuoP9xlPdWJrsqsNKUiDt6HCmsVK(i9tgGmizOYNhTPXGx2aCd1qrlwO26ONHdtUwYVdP6CHhGCNKdmD9KY4apl15nWq2aRYxt1Q7gglfnblxSPt9GO7BW8)ngLKHSlYXdGwnDf7vWLgtaOFOh5gHWf2Oin6IXvusbEqjJrprmloaHPrG522cIuaAgGaUGDLIgJz(xRaTgrrHIBh6dxQBdGyTL4SG7fcjes0p)KIZRQPKe9RJ1J1DBBPm1BXURIimPb4ihArBIOaDlW5vusJRq(crfq1dIqbILAfq)2UvJ6xjbm1fIw8GbUFIo6eGpJbCB1WSnhp4zNySaThP7bjhYf5TgD2eGpJG39y4BkJ4RUQdfxui(yDgJ(F615N0URlyBHDaDrLjcnoFQmcC(RsrTQJEuYhklWoexKYRtE0kAaQp5dfddna4N2J6YIJuVUQVaCtdENAmfzgYJgTAYhrTc9mXQ3x9gWn8iJlPlbJaTKpqNyFFKJs7Q5fMeCzKI3JiLgQqf(ipga7(iyeRQ3B9jtPmb0kNq55SxkdpHKkWdHSPGZPy0RaevRpZmWA0iYcW5ImunkeyeK(hLCKQHZJPlHCZXgkupbdhHXfKLgAKXKHU9V)o1oVISqpj0lJ8sH6VRRlk5XVwAVsJ0t05Wdhxa8ToLWWsIZB19wnpQ6TGxqysGzWXLfNN24r4LtmID0HODKQGrmEdJuWCFFhBxKTohCJJryd5YLt8mZGRa5I0MRlcnPl7RislSpWtB9ThapuKSvnO54Hxa)dnOldjnPqQ5ONct5XGkR7Aw80tBfOTS0EH6O8oPhhGf4oAVhMgSgA9pLv9ViEshwbD1fTN7ut4CzeKJp1qxtd17TPPRw9oO0D6Fyb3De1rmak8iQGgljmigUu3tjQd7GqyvtOUdAzi6gJ9BCQGWaTbNMLkKuazMcmWGdeCowW9SNHQvTGE2B9QJKmEIreLsimY5f0uevVZfBkMsijF8Pgz0ukyuKkDFrRyALeJGcYIoJvXGEDAy6MJE(eW64j14vVWjToyE6LZfXRaTnCKbvV9fBAWoJBMCLx1buvRUKZMeWAAA(u5xC5u3xjRifurduEi6TNATl2OBPSzedrquMiWXXPE3l(krjQT7fLgGcnKfszTkHRA04mo4Wr6RNbcQwbBvIgHlBmkdyJfCjwJaqntX4dErNsyelXWwmXArwdxaPpA(5hgj89AnXyqn7jM6TwYoJDi5lREBl6Qa8pr2ChLNln6ue)ZvuFVnhRe5J7V1LDepBI)S0lXul199(JEV4VNYv337)6dG)MWL6(x87zhCKUx8AzHglG6KJFBVloTgJ34OwH43AcI3ewXMFebq)lyi2wNbf7rVK1ZlWMIgDoRZvOJvUgIXA3fPT3eZeLP3MgizCa(0crVeCqqu6Byw0UfNJQctqpSigLXSOwU2snb)u6mBz06UTq935W9rWa7RLuWan1jlgy8GtkPd2rndgQCAWSR0BtT0k1QNok)I4vPY3LsOxzmpn6VzFTcwdHggbg0jpOCQPIshS2tbQtWG6YIbzew047tjPu8Yu3ol6jwxeu0l8yBb1AFwAikhxWlV8uGfEOnLrPb2emRIAhfzg08jYBjVzsK36vSnsK)yQvrK3Mi5pXPfqK3EuYdBB1d5DqvbrENIK3fAud5DJgWqEpuRxiVxBlxipsuY7JAxcjlAuYPA(K8XIFA1t4jiZOeY7NAkc5d4NAcqwfzB7CalkipguYhPqJiASegrWA7SucWWuZPipkhZ0bAJlW43)mMvcKzJsA9Nt(yw2fqEkrYh3YMaYJtEcYHrT9zejp(WKpX1)Gns(KonaG8KrZI6Rzp8hrYNkk5pxK8)K2r)VS0Dt(lEgYFjBr6VsKCXTt(RbnYKpn5ZmxSmggkYdcgLawJr(BCr(B5i)V3j5Zjs(8UiFboYx0f5VJP7CuYZZ8p5)ezli)ktUTe1eo3KRmxtxn5l5IqiFzYCKVc5VN8pq(QCK)pIetrY)3OKVg5Rt(gK)rY3K8TiFBoYtdQliZZr(oK)jY3LJ8mCK)zrY3J8SKVpinL8di)lpi5hks(xJs(rrj)49s(jCKlbD8)Mi5Nc0WFgh5NZMg)7Wz))kPmfYVWf5xYrEooY)HiPTbagXDnxsbzbnP4mwntUFhGZChO7cQBhx7kO0OHm0a7CizrMgWZIly)CCRWZC5mPIYrpl9uOrGaLOaR3CAc8PcBxm5b0YitF6tKSMCvcd6m5AkqfrXbJWKaKieurrs3Q7XgW5Eilt1DxdT)QLYCJU2S1q0oHA2hDEceHkm52Hj32FSTyXq(aBmzitp0WkJnAa5K(pDrmKDs(G1XySiFyGDkNtaK)B5S9N8FFbmPMC7AHg2t(FK3wEYhDrzird2ZZqUqUXpaW69baUXPJTaUrK9DfXes(S)gjJxonGMCUGj81iAYDTiNhv5Mj31r60K76rDAMCBfkV8kd5RXw90OLAmtUBeyzUjlfxMCViOk3m0fBRmksNb6TW73)gt8EnksThR2gpvBdiE1aE)YOaQ6xDulq)18jxaM3KB3Bc6VIa9b82AJxjyELnMyE)J3Xyd1uWg1AsQKgDzYTZfGRj)PonTYK7fVmTOArfGdxQ6Pq08N46337ArKFtr05XYhMIL3WJkPGSBpkAwJj3(IIwazYDRrjB1K7aMCvblhmlvm5Un0Of3KXiDBYDN5S(yiO5vhT0iYXYHiVNsHiXWUELJiflbICPfWO1w7HfLKfUYfZCGfsqlHl6(kzyoqYEjO5LWDxFLWD39vYALpgjbIliLcaoLiYh(w0iFmvj8I2xrr(Wgdcyoa89dJwIqHPBhdHYr0fIh)jLkyd(YfSbTUAVdmgQLiGv(wqWVa4mLwwagFrM4oD)h5Akrmn85iMgatvjIhGpNXdaLW5uAcvuYIlSdeSHI4yc7abDwc)qHDmzBnmBibXtFMHfoEpNyiIVdZeIDD5fZvzEXCwLOUtjzD8fzlUe(04SF)lZlu8DqEuGJ)BY4Z7(E)2Q4VxLlxf2twMoy3OpQtleWhmdiNeKJJQ9FB5LswOiYDbYh(e7N9OxqXIwYebnaTjZKN8zbLBxuN60uB0GcWKN4Ys(s5vwLNMPpFgqHgQa0skcQydeeX6Jtqvc6V5wAH(uCOAgHoa1vYQWhKEDlbvGmQ9ZKqXKlXKB5MmkkvJjAkVZqTuokwAuQUqq00glfL(M8mToOVA9n2KNAzROmNbGRMAklh0s27D(c3lhtU98BUXxWctAfubgs92YfbbtU9wHhgcDFIuvWUjN0K7oSJlaQ5T370KB)IfQTLHURUeE4FYnMw)zCSPgO7ZZ3r3b7E9fuVRbrJ)E(E3ewVkdR1kcw)89UsG1ABmH1j7jvN9CkpdfQ7(VkawVBUikBIRxDX1ZK7D8Pq8nUwVsa4)EBmb4n0ARhV72A1Zenhy93yKF67yt09QSuBPIKA)tFhReqT0gtqDT9MwLFIAozZnME9hu)8VMnb1RYG60fBkYRzLaQtVXeuNOHeroUyK0dn4zw7b1F1ldO(j)4leu)PO46FlhrVSJh7t(XlkESJS8Jh7iBmrWbBj(z1MASA77CTVUJG3n3zsTjeUKqy5cekFlfluM(MsKqY6Rai6cLrB)eVCiI2T6oY9vZEy3Hf0eKLmMkVqBKPGf)WQqcdI8lDicHs9uIOewq33UiVUHKUGDGdx0EkDP6PBX5eLxoUrgETPkvmizSINAJjRypD2INtlNuuiES11hwhQl5bFILLbsBSFoDRqlDIAzPtIIS05bFIvILoj2ycop)GgNT5tPp0PpHY6k4Cx3fgkXdhyZNJSd7woCGISBj2Y3ULyBqFZge8DoLJhEuJ(BBDxy50hCtHLlMWYIIGhSwTsewMAd6dEzY(7PRmtkhmGN1)yD8AFWnJ1XQCSoelcu)AFWvcOwCJjOEWat1RwT92sIJ5B9hu)up2MG6vzj1NRiq9t9yReq952ycQvoxnt0x)nRorx6R)G6J8Q2euVklP((kcuFKx1kbuFFBmb1D2V)juB7SJLEIKR)G6N8P3euVkdQtweO(jF6vcOo5gtqD3NsiWy9ROg(KDU(dQ39NBtq9QmOwUiq9U)CReqT8gtq9Kn0EIZpPu4ZpzhR9G6l3xCug7V4OR)v(Yxf(KJ2eFxG51NPi89R8LVsW3NzJj(oCVDgVVjRPLeAdUMhLULcEJbo(LhL8jE)35YdyV6fQo)ByKaha3sCleK((xrVL0VSnMy0MseVRuJDsF9246EKK3n3TN(xZHsEJd(KOw8ld6TNELapv3G(uH91BBT67mdEEVNE99bVnm(G3(u)QsJpf38d4CL(bCgFJjEmdFZHMQ)Ze(SgHw39dRJdUPByRYcz1luiBhROhxN(gtiDmPteVB)deBWtZV(hAH7QVvaMEPaNxH49Fd01l(IC96U6BLaQ53ycQBvjtI0DmLAlDU()(2VBU7)nUPK6vzj1cfBo89)gxjWAHnOruORo6WOLMBV3WDT(lREFp1MO6vzu9zlsw9(EQvcO(SBmb19D8go9yNZthJ3S)1Fq9V8E2euVkdQpDrG6F59Ssa1NohOUAeudqORP6zP7(7S9Dvrg8U5xy75pi2gbK78WQ3cUHk7gtXyw5xkfT0Uv3vaEn6fD3pVmV7AyzYSADC92XuIJ91DU)6t3(GkFH71l7)AX9dENBp8aZsnI4(Fp5U3kYJDORJYw1WSNEQwgpzSqbf6DkCpUhy3A0fYkHlqV4LyxSh5qxMBG9G4HqKWUW9RfC)l5Lqk7txbSkBKc3wJEwNctuDBTHQhzr3UMdG7xWQBVlfdr(0dWRPPmXWPm04ZrKormmPFjyelMsg54cijaGac5ijltrsi04TjoVUHu8XMYE34wmNeN2UG9UpnWZaRN7RskBlcIaIT6DV43hlCdncxkBywEz)sNz0Z5R52BG82fvV1s0dY53ZIOK5hUjGEPU)fFSYVxmrP2iuKjiDUc2(NVTTmxbB4WUiVBreXKbqaie74bWTAievOzTxkhOVGDgz2I35KjToDfOmm6wl51sLXzjXRs4KRlGMskA(7dK5PX2Nx9s3C4tiHBuqzszmvEuM2OS8OOt5P7A2oc2wKU7DGE6Q7irrHRywtdzyPjdqn(4c27YpGO4pX1FKZnJ64QwPtqSGSrv3M1UemCdnSAcEdHyzO)NL(bKvQ6yS6u2mjugHDOi5MR2K7vuMj3Rue5Y8v5c0HKtbr28JqzOcca2pB05lCxwN8vkjbo)gBnPTha4TQoMU9o9k99r4ddch3tEHJUZgIxsxat9EjO7c)4UQmC9BSUyE951FRTeZtRn6TXwPHl7AOFSsmbOLxzipn1yZ(y7UFx7CSrPFjDCR7NjSfKRol7gHUTwr(Y5LY(4)cQ4xCB9dejB9ffbC)ahFw7Ts2bLD85i9ZHwXLt(T98NUTZc8agy6XZwq(8SgBVbYI7h)JijhxjDmEJO0Dlw(usJleL0D22ZLjkHrVt2S2nNLOEV8PsrL1pRJLz1TvxDof9wxDGuotU7pB(T78h6gVG9gsEBthCgmXvmIoC)hkeI5q2BKPaL1amtMCjf1qwJmAcH6h3QQPSluEZ37NEhZPRYRnwi78nY80tdaGXe4(qT326OJzPxQBPejeKdnqWtemK62lOryfjFRleJ3oVK299(nUn8N7UV3FWNc)91CndoH7mfFsDYZoJDn9cS5adjyf0BvKHwDUBAErvbnmxbQIj2qYJwLVgy4xtU3l5rpgOL(lTp8hCWxCV4V3KRlzNvs7rUtnfCdAg30TCWU)va(XVIn7EDrr(DtoDSeToAR)26kyi4sMCVFAiTzCJ2MlzYnEbC5KNGYBBYnjR0PSzQFkOPzyx780RrTBadO8oOzjc(y6kAXW1mki7I2GX2v0nIQUtN30JOqt0LkAvwXrOShuW5dfDgAP4Mthhl9ryFkaQYwPxpn0afPIk8SvW1DiA(HebH0eiYiohhrkBZryOZCgGKLsKZN2jiL9nUHCkbViTqMK4t9CO9SxX2E0WSEgD4ApNVHAoD6MNZoDTsjGrr9uxsHTJzRhHbIHP6B32kCldrTszga)IalLzmUdtmrZlrZmT3d5z7z(EbqyoJoRcm6SeB)EouLTKBlHEQVaQg7QXgit6yWk(xZKlbA0AjYggglyZi82xS6yV1790x6afoALyxoeQGnGi3nqjYXdglQQEQj032wuR7YDNMFxseSahnQgS4(5CHBsHEUCnTeBJJGj6F3PO2(BzFFXMOtrHGH9MC(G7O9uI7OCAM(Hf4cK6osIPIjyWhud)lvSv2UhmupNzWbI0wForZNMMJOOYCFG8UYL3k1lLpXS0UvQw4VWwq0cpy(NURp6w2YncgQyY9Yn5(9i1gyafWIYiUMxqg3X67YAIX2EdFpCOXThYfnzens(mme54AyQgaWSZRNwbmR0Eplh44FvQDNlxMwB5AcapISBDd0QJ6zRh1u1bQ37Oh4av5(Eggu(s3LZ7gmxxOMQyP93QQT2xcM3Tcrxhez6e6GLJMeeTuaqZ(rhDwL8RGMC)vKhERGLHS1pl(t1A6btWRGPrc3h6uampaNeUVH75G5p7GHXgWKWqvPTtQTSZioDhMC)XMCNdn4UiLyMC)jiNVtLxMCpmOl9DyY9on5ExMCVBtU3d5Bb6hY7m3cpa44FeYZAY9(YR8jAotLU2c2khZL5baZRliZdyvstfxIj3)vlDoBd05yPhOq9hGZ0586UiLhOEjlTiwALavrwkK(y5uiD4c0T8a26wSnyjaUr47IQT4HGU51b8cDWY(rybWvEurl9ioCk9dFaMsIaifIAOc9t)(1tF2NSr4Rw4xRn23O5sq7FdzZTv7RxhAYwdnhQXwAOXMMVGDWF9OOry)dyVZSVlNzq2kCm5(iwkA(x2wofnMC)PCVGuVa4ktUpklEl2AnopvRrPusyY9Xm5(42kg2f6v2StVDQvGw2qjEjkrhyCIlKgZXAvwLpFZrVwUS22Lkm7FPxzD3ZwktDB5mVEKu0mTu0lsBMvhBY9LMLEoRWJYk0ot5ZoZoVONLEMDQE5R)YWFV1UV3lwb(7pV77978XWF)rUu3rHtwmb4imtBgdXefFrN4xr2ONwIM4STs2oWvMNnjTZBu3e7(pgAIiT7aUp2LCKu3ME7MCFnaO91RSk)WY)3ai1)J0fbtUVjqsbE0VKj33(OMCpnuY8W)(ol5THj3)Kj331K7zGU8FwejkFptUN9Mm5((uw)FGi4WXcdBKLAmIzuuVeDp2LgbjurvXrrYHQMz7zGbcgAeMT05v6G6MaDB)49o9TyY94fysqUrcgMIhaO3LD27zz9o6AQZohMA0oN5BxoV4Oo0vv5LZCPZXjMC)LG0xtUlMxB1iLsBLj3FnoWWsPpF)UBzl7WHIitUpnOgYK7ZyP6Hf0aQ6htUpRLAhtU)gtU)wrulZoqnqJiipE9AcmBOQb6Jphu2Nh(3xaiMFrQcbpGcbtU)okjMStW8oXJnvMXsNmZWEhc8nz6ddgswj5eJQUTCPD9GPJH(flQUTq8XL4tP7(Gw5kFXlzLt0L0eo0jLW8hEEFJev3PZSEENkAgsgzsiioNvUh3kvKtUMDTQeLSjVb70kozQhAxKDEwtU)ntUFQj3pZK7hBYDjtUFc5viANLjDecmWJSgM9Krs4n1j8E6bLYqEv0Kl5Fqu78lj53FFKlWYJKKhKddn2RERyWT2nnCihN8hsEn4AllazOgWW08ejzAxyOYE93a51XrEdyMG0f5HEOBK8MCHHjROu)igZSilvoFK8Mx(57rYFe5)sXHVZOQ(cn9HOHEpQZqVV7xGHExCrc9UOJqVBHExqe4PHik3MgnSkGo)hbCC3qsvSW94GgeRP9U80MuCzhHHV8fnfo8vdLsyCHuvwHpYhlk5OO6AVQJRs1x)lP64Roa6szulpfZ)HEDoAicOTw05w(myaayrq5ZtljVVFv9sp6Y5vQkFW4JsdgF0cY9dUCelExoIfpPTB3s)on5jmT9Uknnumw7S0MC)bS9k6B88E93sZE93QFVn3G)aEAOf)H84PzF(O)Tr6FBY5UpncuS38PhLHKm5EZSXaTG4puKzoqUWDdmu5I39v7ijtU)9crqnMS3UpFTnF8M8DQLhcYK7xqHpIm4dGBCIEm5EUfGDICytU)JsbAm5E(1AGYl6Ycuc51tt(9AJvm5(pn5(vMLTfZY4mlRmZYCzw21Sq0rbu)F6gxQ)Xck21PAUHXI0(jwRO(pCGRQP((A1RVgFHq9)zBCP(j9gR2gf6ZiEW1mQ)l5jw3P(pdJ6ZYAaicGr9z0CA8692Adlo1N6JjGaYNZDkgb8J34Ia64SHco5Pozh(tlSgHa(035vXS)15TPwAjeyfGhFVqebCPIaaIRMaa73HdmAslfi4k794qR3w9oAKqjJmrk8jx)wPpunRal9bFKT78bXXI0uUJVohhVvhhFdoo(MCC8n744T744D444D644xSJJ3JJJVvhhVxhhVphhFhooE)5EqITFpBH8HQAWqoFLtOiBaHVCE9)xu315wPERxqGHX3cKNJgiz8DD5YgeUDPDY2cfQNbdfDrIgN1df2flICwppOCbIdzt3z09avyp2XJZjZEBFYkkd4A8ZcsMj3fSEv9k7x95jTp9oD8esNVnT48G7Qru00WaKttE4SuIpnwT9stE4Q7OOCkogvnr0q6IEZtQ665)Qu(Qxh(arTdZ3BW2ZTI2FhF92pd0LXe1SSTzw22fnlRIspUQhE9zC)mp(AZ4MnaMq51gtso5so(J(KRvJFkfLeU7mJ2ul54p09TwTUFll54(QFF)w24(bxBg3zojVM7WgkPvxAYCW1MHF225LLLIXNs68cl9eGFTzcmxq948QcUBtZqs3yPNcPxBMcxcdUOBdf3HZOnU04l96WZkU2mju3ExsJA4wzu3gIcUhGNxlZsop(EVZ1i5oSySMwivILC8FM1O1HzaEbzbmeVlnwqBnImCluWGfzOtfnD(XeKxYPYT)7UgXAgsj(ycgUpwMLw2WU5UP)U1MzW8wZGa8AA8jfUmtI)Sv6KOGN)h(GjOUb8tY5gWHjLLARKt8eQ7KL27OVSPDibgaPHV1aIQB3X1BxKFmnEXcQBWXP5sgj90IQVyhx36XiijiNWTO6T4OKofaPXGe5ef2GovIdgGLWn9PqCjNfWNqquDVoUcDhRUDfz8zSz9szQUlhLB9mnWouuDpokG94m6rE0m6lOr0nP7esQsgtTM9en(AMLvtbRf5ZfpLDhfSSYw(CpOwmZYQYSS9Bw2bml7Umld0HUpZYQ2SS70SSAxINgYzLh2FNNAOoBq98l7NgYE2W90qkr2zDpVaZoRL6dry54Y1TwcxU(U586c83YuK(cZhL(21qD9c8JAz751p5lSf7Cuk4l9YlXEk6mXEgSej2ZRJLypd670NlJ)UhB4qdHuYcsPMNWIAvQSQjnkjpC(Ox4yhNhdwvdn4VbAOS6GLYmTE9qr6j9LqnxETeykYLyl3KIUAqrBU3(shRt1UoV3tTksrBPzpn5zzsrR7x7u0JDvefT0J0uRSrsFjgP9SMbDo5aThSHE95)Sn03Qg0PUqT4XVFpiaYtllta0DSjaAJjaQ2j6oEWXBQ)ZC2axzaO3tUpya6hMGj3rOXbhnjWYebtUTY(agATPMBTvemv8J(4gbdJVjtUBwC53xn3CJT08s2xfVvJyHuV7Ci1dE1JYR7Oe4Ns)r(f4aERx1677dHxphfEHGeAcrhGKaW67Z(2(ae3psS0Ok6NYhdm(dJsJ3FtlA8(PqjeZa4ieoXWsVVCFzvnm7P6m9508i2SNtvRfW69hZJp)EaQDomvUh1ZLfvvqyJTEHmME3SVRedH0yGEJ6WLmUzmuSUCiFn2Op6NiZfSRjh7DRyVv5Pj6xhqU6c(R5vvWaDwJ(jW0nV(qcgrPdtmbr(XLu0IA7qyv4(CE5vAww9iKJ592BM9QHo3iT3w4iJeE42Bpy4WmbJ2FfnVT8svRQsSlUD2xbd(PX4UpLKKTod77KjfCCFMLfG1CCYwG01Q2iBWL4vFgCDSZCg9GNDQX6U9gx9m4kGFFn6FzQUC)BAb9Qkbv(yrsfjsJt0rObw9iOEBQLLl98axfA(Zv2d3EJmkyIEptx(hTX0dkkSA6hvRn2stltCWDTjo4QaCqGt3ynTxBtNeSfy1mcjn28Y2FA3BkFFvLIozFn3BZTpEdjNSMvrkkqqx2C27Btk6QkfTZH8Q26X7T7ZEmLvrkQpGK6BzsrR(x7u0ZSILvlEvMS6nWb6yIPMA4Enox7D59Co(66pk7RRpMUbF8X0jpAf(yVexzXVOrF1NmLYe4BZ1QLaNM82O3Lj88o3eE(BtWtpJg0NVtxBMM66mleEAwwO8qtZYcVkcj97RzFlxDG1AdjXB1))d"
 NUI.WeakAurasRogueData = "!WA:2!T3xd8XXv19Mz3KxSLti2YXk2kj4jojgj)HI2D1xoft6U6BB9L3vYYYqq7S7o7oJ1UZmEMzL0kkTeftWuOqROqBHcjv99GMcLgeesiaHwxOFaT0RvP0Hw6hprlFu4bTMwET9fkVZ5ENz3zL2vwwznocR93pPD27NN5C)Fo3Z5CVZC5swDMQtuTrSMBWxGg8vDIZVF9CdMmPHOjN(KI6gYQkBBbzLKQ6zemHFu1LeuIlPQ3LUqgXHZPjgls7H7SZbMtqrMvIwcLrqwPRqMqMHuuvexmrwDAoJJjPBigxvjHXSIcg0gGu1fWlJyQlQKYu6MdBykOB2fzRKQiBJClKBf((LDZXskRiBiTIKnuZQhxmMCgnvDt)z1tRvVKPPMXd(apWucPuBqw9bgqqDkPr69WHvtLv8WTlykepDoJmpqZAvduIPUA60IjAxsoDcGco280IX3pCpCj2LHfzDIXCSFhm70l5CLUaFib9fIPQNquVD10Q6hJJJZ78Se6mrkrTDe5Szf0f57kB608JkjBkgZqmdWBd7RHgBOP5nYglSykG9yuLUqCKpz0si4M1SkYTvfz7vnVPAC7rIT8Ej2TCe5zeVP5sPRMvRx4Miwl(BPXgBEXycXNiHUQgJs8617qEBSHMVKSIPOUIq6tYAM3rmwJiTe77q21sB7HslpZmc6j4hwvnTPS2fyfGbi2Q(02iJyiRT3oM7Wh)e92LqFDn(cjr4amecmxV(ZkNyH2g8ybpvOaNO90XIbeys5uvnpoUltVbRYMJ1Rc0CExGbPgsfOZyT35ad3z49jNq7Uym52tlyyWpeqJ8hMp)O3IcznH6mOgR9cLwvirxXmfslQywt4mzbQVQWXXQwd5NQQqga)IDHMyC6fjenIRLAP3W88Rw3ufwGHNs2mUudMtYGs006q2ioCl0qQuUtu0qoLIyc(y54Jycq)UeIl2NA8jM1uxovkG7x7(NlRI9pQs3(IhBwGQsNU3egvr2Aybau5puwaaetlTqoaNiojCtfRhrH0MsZNqmw2Kjrbh9E6SVH6AK(wcqq0IebYqE6fgV9GrgE8idhm8W5ZAiDriRWrgQZ(6lScmwzu186uuh2sHPaPWgXb2N3WcP1Ke8oNHy6K0Heslvp5n(6Ro(t055FLep3YTEjdquRNCX0LtmSqS0IN)U1dNvZmRUOKEyznvdtrPqhxo(esl1Te8R0iZqxEcrPLIKwoUiVGscG)fxukCxIq7lTWXLtOicLss1usB7TdJLtWRMe(Tqc1PmKMhGZj4HHy1esZcmEtuork2jfqncsH7wnBkrjTDoSo0NgyfnLe5hwxibqqrmPSnP5JKrDcr(qQzIjDHoNgOsq8vpJQoKdRBmf1KcdcakjKUalj(oaGj0YBVNSkWWeFxQ62uHENtkGsssZgwmHSUiqolaSynbMIoPfHFKbYX0(Nhxon0WP4JOPlkkDHqPbAJVR0z11ZjDPGOEhbiFqvtw4gc4aavkyckEesaPAyinhCxNrqXmTO08XfrPzCyBF9fog0LWVjTgdgcNAqf94scaTMGCZTq2YYvwsUTvKY2xEkHtlNr2ChKriTq2j52NtqpEFu9YNRM5JN1Wunt3qhn9wFIKzvOkRQtrCQHunyY1hIh1GnPOTcT6RIh(C4d3LSUHjpup(jf0LrmJbnN0QaIJpjMBy1P6d7z(JY3gudEkzGJLYGwddEzfwXWgXvvNQRWqfc0cwJPKtykH1iFbz11vXLOf3pTdKeLtjzwUYBt4rOZvvwkNnvMls)iLM0nY3mUP9iuAVPIO9cLCLepT8(BPyIVKvWM6bnALNRJzE5z6onHB6UVsq357Qvq19vkQUef3nBvtiokTCuEAN48ZyIMtjkQSIUa0dJsGaGBSc18W(SzcL6ZY7WPBxf0kd1QXvKdBgV8zXsnxjt1ufM(bs7ElsgOqlc2qXlFiEMA3oGzyqgSSMaa)QRyXg(eQ0AuOTzvcA8c1Ub2L5l4kVWUQQtnSnL5RCLH()rPdMUlLRm7Hn2TYCJdkXanqaukp7OOoqgqt8VYJUmPCqdDbkpFJ5qbGy9kZmpfiTSCl6hq3XghU8Dj(XfZHwTIkGyAdXvRgf1(fxtLeLMeXM0HJSmThh8kJffzvzrll3IgK8TE4EhC5K7AIDcMsTkmPld7T4oSS83v0mfZN6Bv5t9Tk8j)vDLCRb)UmeSBIn)fmH3hmIOjtONsV1vG0RVSLKr8156gP(vrhGlfyafwhRXAGP3(GoQwRN)b49ZFaiB7BYd7REi36S1lEGYwV6lP8UBUia3wjujxrefoRCbT8hUe6ZxU4tXDG)vRdy32yxCquQOEx90bGAU69wPg4YpxH9fhSuAvbA0o7x1rlGCwbzUS5DkBF62eRxT8ddv41zpUEiNB1xFvo1g)d(q21tSxYRMCgYOefc4Ah6fHaZiuQX4KtrujND2tcfx00uGKKmo5HjYeDsAsmYyK4erskYPjzitqKiVgYRLeLyqeijMnRHifGhLCioYHjnq8UnsTu3Ej3j5UinUGzpDOhw54gt3uFKM8QZImGOePTQi7dCHLS3QMdT2oOsQ0I7feHeqNG4Mnf6qbAwB4oi(RkmoAiUvY9EtKDqQg8hKutmWKE5SgN7wi3n5Lhcn4nw7Jez4b7F(KGV1TlRhpTyusDsKiENfYmc2aEj1toa8lML4CKdU15W(HkJTnYjUqICG3qYXPoafcDSbSc(bUzYWEjVI3bjqvKBSMfG5TJl2j6fLrucFlK7X2XCsZKwwiUA6SzuS7QJ0f5brNljVs6)pk9)Vk8)GtvGNHGn1bRD)KqvrA)XiDao7r6K0fPBspKEjhJCCsFK(jdqgKmuvlH24ycw8dEqAQQhlCWo6DKiKBI8)GS)8(1tUpY9F(giE4aNcnemXOSaC5BC)A7g6lvDrBNJPKEN66Q6a9)2IsYsQHCIqOvuRBVeU0eIW4h6lTzyKXgfhJUqCvWpn1PuWWEinp2brObo5UUbePaJzacywNcfngZCWJaJ1ikkCCNyw4vB7aelyIZaUBiMqmr)ctlTKMUAkDWviwlEG76g8OD7on1WItBcoiHw4MikmUfAgv1mihkqyQcRErekmyPvn0UTBxP(vtaKUy0L3zYksOJpHeYAc3wnUGVo6On1op2zdnwhKhWl5DgDHeYgOJ5yCx8qcCG9hoUKy8jAH0U3zDm0og6JUyIWtkKoRiNTtzghy)Zc3gGJ7M5iVdYtgD)Kpig9Ngc0qQ0Qtrt49Jnd5dq(TipPxYV9dcLG8HyLCPcLKg1SNupy7rKa3dH80QgZSPgmbgX4tkBidKaul3G1fDywrMswdKsqbrDzfmWsaM5ip2CaxyCA8sIYqSm0lnzfq1HU0s4L0avmHco(rEL7hkqmdzumoC4b7EKozO)5luOTSN9r27XQHS1fbcedofkNPKiPDCLgpE(iMzhqOXfbSdOezRZHvGMKDqQCUVIUO9VvP69YxrmcpE)6ZH8N8r)Y7faAUBNuKOz2h6r9ocHxkr2Qo0n4LZ6WxdpK80IPxK(tj54tGUF7Db8NJzh8R5PTc1N4DrVoelyA0wpcnek0YFk7YFb8hDyhcuV0wUlDXZMvujEUHUXgBWFZNF)A3dDOJ(pwOwhxBCt5mIJRbtojJHAWR2EkrzyxeglAcTDsZdbUyKyJt1Xfki8Z5P6)er5Kqdm4aDUilGBouO2(wrl7VbTXtfpX4sYjehFgrDvjT7RCKyAXucXZnEY0QapUmTfTGzutmoQJk6C2zdtHtdE2I0FpfWhhvxqB2rTVyjAYUIdL2lVC0a7xCZLp)9D)AA7VKKscGHMriDbolN2ElzbPqvAmRdtV30QVC9U9KiJBkbQOKa5moTdwE2qjknFzhaqvhkIPTzrilJg6Vbhz4(6DGo1QMXIOHRYbGYq1ygxIvjarZMW7rUGBnesLOBx(ivz4HRyCpAb6ddn9DBtymCMdHPDNLSXyxsiA3vz5cWFsmAh1tlNmhPLfxwBVDxCIcbI3ozxbyM0Y80KyQE65H(Epo(5582Zd9DFT4NP8QDVL)E2L4iF5lLnASOrN8cB3D5hRfmmLibFzmleo)2VeQXLfVxA0PL0HegqidOdeQgmRJrejmOFZdOOPcMEkHCgyv6CAWMHiSiklrTRW2oJ5XGk350YgGHmZHHzMgi4Ad1stbA6c4VPkULtGj1ARnrnfbnnzOQqltalQugujDUOGLlA7GfWIHzbWgMlv8dDdGrtOzAVAASdblvOMMqEhOfjKF5cwEqENRBZoiVlQHgKFfjYVQBJki)ArjVBhdjiVhQQFYVUe59I2jqEFOnbKhNAqa5jCmgG8BeLmpDQEYVjop)Odj21qbg70GfLS55j)VOZUtNs(MytjZr(TpaoLS9K32tn7QaETlG9C2KFhYts(WfzZ4tXM6L8rGjD)6KpQeBA2zTNBnU9SQKNM8XTnL8z2Y3Eh6ZOQi2BcdpKxfKBn3CuYtFtKfIUiwRjfHPPsloISe5Jfv72XKeraGRPQLwIoXoifKyCN1)GwxnrZycMyuLzZstE2KKpbZs(NdNeM8jjFQOKpTxYZ79Rt(mm26VNe53FhKlaZDs(diFwYNJ8h6L8hXr(J3f5prI859s(cCK)uVK)mNz2iFrVK)CcHCrYIK)cYxI8xYr(YsK)kjIvuYxH8xt(BiFvYFlmA83Xr(7dD)GKa5FGJ8)MSe5RXr(h5i)tsKVo5Bq(MGsnY3I8p)iKVDuY3jk5)tuY39UjFpoY)c00)RsKlbTW3NJ8VXO9)D4x)GskAt()6L8FWr(p5i)xGG27Zrqdq0lM36gQagkUSanjq0cKnJIYrA7atjLOIOUCCMOxuYwdtR1C5RlmETyrLH8FhgxXIji)MlQdUGfXPGGVz9OThh7r5hY2cx(6OLOEQ4h6rWqmRWOTrugjN0IJR2WT0OVwBL8dj)3ub8xGs0u6SAwK6TLo7tnLCCpwC)p(q3aA76zObUFsr)ck5SfzpZgtr26ceBcXtA4V1teYLil4G17VRyuBYnoat0meokcIVTSpvT9D0Js(aZt1Fs9(M8Kv3iTqwC7LkHxRJeEzLB)b5LBT4QsYIBlfj1cxT)Cr)9bz0CKNXmNf3wzITq2EbH2q6QPfrPy9oc2FWU7mmuqlU9bcVwC3QuiyqwSkD26y6hl2xbY)RSEfpxmwwttvLbb73bpwQGIQG5v)yuq95Tfu3b5y69emC)DnsFu32OZygk3q0Ljfgi8wBmFn1sRbockm8JKOZl2EAq3PHe5hEbdQ0yqk43I7Ma(9niHYrH8fiqJO74W8C40DOWKJN44skRNs0mVMcAdt(HwChG51Uf3(jDzXDiSwfAWJ0uaA17OkKOS4QZEouw3wV0vuZ5V1gxlT273r83IBhqY7eHE3oOBOhlU7GSvlUQT4QHmQf3TbzUB4VAzQeS4UtlU7YwrWOBmveesR7KbMOB16np(kN7gCNEEvfh1SfMJ2zs8Fx3oEVavn(i0yjSw0ge19S4lxtG983TMkVoG8tDJkoOI8BdgIVfwLV18ZcxgPzlU7FvfHlR2HkUSTuLt2(T5AsyeCIOylUTh1bjBdD3jLnc4zlUDr(nrOScdzxywYYdRv2ycRd3FU45AouetFsLewBX14LboBX5RsHIBP5nrXvaumYgDJI1w7OyTnMOy920Jps8GsNTxFx1rXRULzy60yapEX(dfTui7B1fYM1edVnYZSBUJ9M3eFxE8nYFkgG)ZS2b4)mBmb4D2UH6yHQtivOMDbWFWxmaCmhlUx(bC1aCUkQxs7h6giFa)bhOdwLOlJGFNLr4fHPkFWkKs(ltCb2qldSJcgzV9OA7CzrCb9SxYreH5vb16LpOTyrnKtXcSMJz5ml5PslLtW4uBmfm06lxlh50JD6Wrg4AV9l)j)ZBA)sfW(fKn6w9U6Ax9U6gtuC7Az1pXjBpzKKVeaf38hFtuCfafJSr3O4ZU2rXNDJjkUJt1(eJMBWaTDYjFjGv4wCnTgn6ob1O7MVVnHZRMr3nFFfJNF9RD88RFJjEoW0jf6mO)j7DO(l5Y1vstQTXX7LI0R1zH6wdRpxz0gFp)rlp6(wC3dIOT42NRW6JYa3k839w16Ez2(WRES7Ffvqq83okGJlXMnXWzH6RQIVcC)amo40GG)JKyXaNUI1wChYog4hJKCUGXLtWhrt28crYQKquN947Sy)zXT2cKd4sVeAVDXRATDeZlFyYPdIRio5jx94KNCJPqtpd7Z)mJMm2mg1FT3uMwf20uMkryXfkw1)4RDv)JVb1uMJLAatfLW6gjlJQ)vffFtRzummfWx(YGIp3EwjioVo)1CWs(W)Kh(91YWVFCCnkzQ0FHO0fZSPgBl)kCs1t7GuPHkbQvnm1XTF(DwqlnGTr95GmWSopm5v7JPIE7rPsi1qEy9Sk0N1vuoGkrSZZTh6wOITzPsegYxQyPdMqekFGIfujeBzJhEd6wIONwYDMZuFZjpJ51En8FEUn1Wxb0WJSr3A4Lx7A4L3yII9fSL(d0(yje6mW1Cu8U5UNDSjmUs4KkYhDJJ1x74y9nO7P0tfSNr6vSLSJ28lbWX8)WnXXvcCmYhDJJtV2XXP3yIJZm5y9pXmdBmGPOlC8zk2IB7nhTfxRKNuY5bwYVRhyja2ScB0xw4zac)dmRSsC67)cgWVgAtMVIA7swXaFpNexgFcqDE18uqm69qEsy0(VJng3Zd9pOHF(586T4ocAPlWEPROegF2SkS3Uz1)B))d(8cBPNh6Ve)8LpiCXUGp3(32BzJN0zCU5JsV44KNK85SlSeCtq(i4pECYtI86wRH2tLtw(Y51XnQwb864NiLIlNBhH81ART8IXVdlUowHhhXS46SGZg4GsxRz)lITb13BjZ491YmbtfmX18z0sOS58zLxsyG1fKESIG0ihETdPhBJjKEQoAU3Sn2VPO5Gx7DzEP(3etxbCzgzJUnrl(A3eT4BmrXjgPZPovQ2cCC10VeWvJdEpBcJReUAG8r34yX1oowCJjoE4yHhYSlLgdOL7AV2432NFtyCfqBmYgDJItT2rXP2yIIBA42oUWKDelqNDCThfNRHnrXvaumYgDJIp9AhfF6nMO4zIFQudgWSh16M5LaBxa5nrXvITlGCXO4mRDuCMnO7c9b1KnoUI6r6(QFq4VCbUBlVRFHFIkYDrVkfVIBVO4vyX1MedqJXQGg0ITlHbXGfZIjkeZcehxiKffE6k2jLXxQGwmXg0DYvtZmy3doHIVUo71Cq9)4SBIPR0yAP1aMg57LcslTXesF8wh449LvCWSI9EThspZMq6knK(1SwG0ZuAi9RzJjKwAuTrN6KTmCGocFT30JC)hBIPR0y6x7AX0dKXxkq9RDJjOEKjMuQP(pB6(AkYYERlvmO(fpK9lnXMi2k5I7fTOf3d5UR9f3l6g0f3tzk9Ju)XuAlP81EnWF(Q2epxP1aBSw0a)5RQ0GAJnMG6t57KNP1tnYuD0E8R5G6B0CtmDLgtlSgW0iFVuqAHnMq6H6UZUoExADf5uDCnhsFo1nH0vsZosuKzhN7kABYLipCE)iCgap3ynmSCR0ddH1nwgbYi6BxNw7UcjOZJhFF4XUMkp9TeTbFD0JfW612j(wtNMnF)9GzAOQOvD(ehmFA3HtZW3PIOEQC5BHDLpJ2XJ9k7KDFKzGYr7TQIaSu069Et4r8G7t8bquQoj8iTGCWTIsGpWwPcDGv5Dnq9jM5S(NSD)4Xwbim2KxuqdzI3XQCWuGYVRXZKcq5ryseV4zJbmOGdiV1T5Ee5oQuJil0(q(4pm7CzeU2VRRd466MCDDZoxxHyRETzR(nNm8jmB8mHc17YzRwCV2Rk81oMdp5mg3qoHy4W92DpdJkXZI9gYEbU0sgMYXNiNZrkGKo(uANvxmC)4BVB6Dn928jYTOHMG(eHDo8twI(ZqPfvsGVXU9hSJowGMupYjsiQeEGopzNH12rrvclyOGJm8GZgtW(aofup8D(u4NFzoU5W347DLwiLb5BmNtj8dmwyiauS)oLSFF8IV4DFvhLQOoSM6uI6KNSAFmL1xQW5cbT2KN0Dp49soNPP9Q0Lo0zs0NlZZVDuh88jKXDcE20M5kW)1tYofvTvWlvqbVUSc9CEHLZ9Y(Ywt)bIcA63k7j4N2wFuqz)9rVcFJ(wZoGS3XCAtQzFeJIzq1hIR6wnlrVNghpBpemv1RfVxT1ogcFSe9sFdotleopp919n(YyhvrYuBMR2Q9rtglo7n7nT44Xpq0fyVpNPNgdesb1PZLViBL9yVhEikVDRqBc4R5DEbwpOIJzg3PFH0PPkyNNomx4OYavV6yQWfO5XEH1FkoCI61TunGOx05SE1E8dfYPgqClBHS3hKoj6KUNneMjeMq05y(G9Q73pGTyZpAFyIKuvxKbAOY37pgJf5zUeQJZUuICB73I7xAFvbdYZjr2URFOTZu4rjemooOo(FksF(EgmCVNEWbgoyFUV)hJEghrL3tuWQMc6oS4Mbj9EEOVwGa)03WnStqxI22TF)BdYLJOLqWueK6Rp0aQkIGq(sIk4Bx2UTPajQ5qpohQB5bUz6PMZ4fokCiNqhFX8d39lzKrv1uY5TeE05l0hAFN8hgN1V8dWqn(JYx3iauJImQBFSJu29Di(gXd9R8z0VW0fLx98hG3xJUooe1fbvmk8gMOqudS3ee1TV7VHKqX1QNVHg4339dxIj5l5eqtt)EF1)G2fTSKa0lnEOYti2LO(FkgPaQUcthCKy626GDWhjkzRiJEKcD0fulmSAX9ltE3BfuhZguhMPRuRUEXtrvqvH4RbNvgUPGzPFnJ07Hl8RdhbRatoHE8zSl8STkTGVjZEst9UYcZ9D(oS4oJf3elxfTfxAq9rglofxQJFDwCQCwCAwCN1It3IdCDfmIhQ2KfPs1IBkY3WIB6vvjkOWa0G6NPbfGGmLM)t)74NVjNxlUxNB9KwC)mf0pAX96xPQrlUF21TwrlUFULPo0I7n4wfOf3Jau0Ss0DxWJwSoplUZb5)gH)Em3A2S4EtB151K35D0NzX9MZRhZI7N3Ehk8wwH6llU36lALwwC)cU1uDJRIMklU3Mf3BpV2jlUFrMkjqFJhQQNYQhYI7DaWtlU3zbDmIRrDmwCVluPIf3VcOsXI7xTy1iwC)A2QpS4E3wCVhON(1T4EVwCVp4Qhh(7joQf3VrErdlU5T4ag))teHprZThS(Wggt34ix7r4bwgc)VN(5TVjcVsJW5(Xfap51Ca(j93)j1Alq9TpQ01EaEtldG)Lgg)m(Ma8kna)r(Xfap1vfaE0RaaElTLiOutdmZq9g5kfGNRIdWBEza8NRw4ZDUjaVIdWVXT8JleU01EeUCMCdQmYKd1RjIWBJ45(UlWzqZ0YGlwFd3r9wJ3(46C4YEObgcJHH2o6g8UsiZac66QtnsAtDH8HZ6KX0axUenNxiTMKWqztBiIJaax8dNFeznf)C2oZQq8Zprim0nZ6CWhs(QKN4OAhS8e8ko5aZHHzQXfs3D3JQvxWU7v4KyW49UnkQ4DFuGrRDVLV5kCy2HdTA3zjlPZPZhgy)EEOV7ZJF(098q)1Ng)C)ETprFRLc8iVpjmuAGYLfl6ij8UUHfl6qWJgcnD7JYVq91zxdVWYp4(O6KaOcgwr2ccCKpE40ItkMU295VX8rWNQDOMyr6jy)bhiA(dGPAEDW1VoYZSL9EcAKxOv05GnfJMV0s0KkoInbQA5RzWWEbnulv8jQjzrgUo)Xh29tpOWevWJQrtj8ihDCztXm0ZrmAiyMsuqtfdbJ3Ad3CJT0Ctunm)iPzXIfjTQ5DhJfLMfzF1VSbEQQQB3Kl2HOqI05SJZmUEMFRVpQFQNLgL2W8DYkhBTI2D0cQ0QzXqQiCwmb)WWa(8SxwcOV2KUXWq5qMCXyKizlSxN5MIgMDPQ7CM5eDH8hoA9MaA2BtI(41Zc3)(81SUDwHd0utbcyXXDAlU)4L6LDagBt2xyumwnoXkFhbvGUqse4PojT921L10Ohq1o3OGow2HoBEYoAEUlY2OVZi)djBneMaPVfhV9GrgE8iJ0E7DgjcQiM8coNxASqVoF7QkjyhJ2mM0JYU1aPj0NFCPB6YIRwT(Yhpft2rOw9UJbIDAVAFpmVaCl5uMxT)hMxvpFUbE46zhf3f2i9)8Zx4O48C3YcUe30Q5ah4a9liRW3JqEUeKevD74Z6CSAge101rTwC)2fRKZI7dctj)HS4(DkOZcuozX97wH0tzX9uwCFeQ(jlUfS160tKoZP7Z8mYhrF5ADS4(yuDkwCp9vQMdlUp(DbSRNHQJWI7zT4(ewCpxz1jyX9jlHcblUpvjvgyX9PlslGf3ZVAs(wCFMvkTBX97bz87dm9leL92f9pWwE2I7ZE3wCFoatAX9hbIaUevT4(tkH4Pf3N3I7lqLfT4(tHHW)m)QjtAX9fHm)ZlHGMfhy(XfTfWS4as7VWI7lzX9xABpYxgQZFLJuHfNfPplUVsPeeS4(RDeaS4(BCW9wCFvxGvlU)2ZDlwC)DA7caIGE7sbnHA)pe88hTGbMUwS57GoX(63ahyGMAJZ7jkfx557STlPYoh7mSdIhqWk2wWcGVN4ZUteVYStarTZtTtPXfoJIC8Ut2DxQ9ECNvS25mw9hW4aG5AxWjw5TRAyApg9gJsv)ieZqvpgUqioBGQ30ntzJOjFuB)k80ZqxYtC5lzGB2seZm46Yyv25RTeR7lDPCbzWVwoYFf(A5fxk3VTe5RGs6F37MTsWG555xkyxlP7f6DGb6m84T35ad3zyYpGzQfUMWFpoY)PxCbGP2s9UVjQ4kZ6oM9w0rwbMtamZ8yUcqTOBMJ1Zd9fUt4tTFKvEHxB)e(whb)mCpp0x89HFE)ED8IG5WaZhJ3khAIh68aiRHIZsOPFfVtcD9MAgxS)8Mms1tG2LccPZ6GkQfinY2Hp32FFpp0Fd9Z)App030c)aQJCS3vBamI6W81t2GUykqjFdXe0BizQhmIOPtq5RBFfwmG9DiFn0yJhQXgATz4F(AX5NTfa(xa)1ZmFUM5tOoEgrddHuIGb0v5yUBEB)V87KMgl12oqQWRp6FUQOleoZDUpb1Do71CTCEZ9z35Q6o3kujVs36IcQgxtoQv1LXrnBDUR49JTlN1yfEz(PTt3oOz7Cg1pmQKg1VmjB)TC5x29Z8llegmF3EMXuLwchZ(oB)QBS1o9A3XSZVNvrrqbTaS9ccUpownTalW0cWwhzxkbafkGsGV7DF(BVeVPVvk8M(UeKa0)RONHUvXD3opRBrl7D3Rart71xe(EgBT77zSSS1EBfoGY2lsOtOElvCe12PlfeSLFSU6lLBP(wUBPzZK4KJo2qTO3Cq0T0hK45Rwl5K7)sHfIllK2WzpkiflIMUmU0FvOnZY0BJAWgc4YDUAi76awCFFlU)nYpRec(WDYGRDfbmvzJlm2ytFe9mthpzIqK3GeoL45T3Hu7TkYJSxYJUVWDGCOz5WDlX52kUns2nDlACcYBL8y4TpBptGkBI4LU1jEZEXDpXBzBKFEoYVabDXN8gp3TqE7ExU5v4Gqt097WQS)j(fHcTw3af)sK5w(o6WCF9f(8pWk3cC7UcTf4q9TlFBWj9IEBW1w6(d07X9j7ltkK99oPZnYMr0I7L)e7W9MHZ9lsp46B211B111BZ113QRRVnxxVdxxVtxxVlxxFhUUEpUU(oDD9D76696667X113B(nZh9mmBFdg29E2JcbbZVTJKv53LCLvjj3vSos6MFRGMr6UDd0rHBvW1WmE1OpAWWH7DWWrxLyuwB08hpeLieL7Fxr3duG94m5NBzLGpB1EaHay4)2xIfDahVYbpnOBOUD75h9fGjk3Ll)kwkOECbfr(HbV)bRzyNk8YPuu1fPNT4hNEQWJ7cvQNlfVV925we(Y0jxDfStlU)dhzTLTruFZ0tjbBkek2QqvwC)NwC)xLVB1EWRjD7N7PVQ0TZhsu3quFczLuRA3N8tCvQ7tRQMGVRS65w1UFOxZvjM(lSQD7J(BCDv3((VQ0TZnQGoFet1mAR(qCNxv69fAxqrroMqA5zex9(x4Qs)VyNgXf0e5dQBkByU6uqMRkuWLgvoDAEtv(iz1NKEOYVk0W3s6QcnOTJULtAYRMK3usKFabb9SRkz8nFpxDu3eHg)(mIPtSQD)x)Qdxyoqkqre9Az1Xb6xDgdUDkqWEmOlvDdHjevwvk5L)tF1rMmSA8jen5pw2vxNWU5U1V4vfcyjBciKGUUqkXldn8rUsPbxpGaGdEwC)luFc)(R2Z8YUVw8mViTMm2p5OnhOBvZZo21(3HhMp3MpZlv4hJlWb81WZXfY4lXd(c69UdO(bjEsVvYjpF1A7kyCtyEg7hwL0j4Pg5jPvTR07CsbCjDL0Q1vIbta(biGRooF4SgssA7WvM2bJqBNUsBWjrtxtNwsB3Us94qk4c0b1quS4UnIPOqAtOLRXvIHfZakdftlAyiPDNUj(0QctGkmztBa5EhUBlAI8DiOexSys9KckYi57U0HslKa06MoRUEULXkuMuurnJK2ECLy3sQgMPZbeSU8eqZFxUYRFbdtrDkDLnwArtO92BruTOa4yfDTcDEmEK0E5UlHeuc(oefmLkuGDTIBnOx0UQf8NNOglp7SOonSy8S015w0YtvfnmFsrLeIMMcfn4ewCsrb24mLhve7lKaUcQVcd(UZkNgAVxMLNB1YZoS8ShlpqhVllp3ILNTy552T8SDlpB1Yt1wE2MLNBZYZUT8ChRseP6CqJE7mNwUwgmWAoIu75NeIi1EYpb153vm6o)pO3QNMR6CCZbg4MwSRSkX1ECC9NZVQ0A2peahI3Wuq38u2Fpg8nwJtz)9ySLT21M3hlm)b5Z3a8hGVowv4pSD21xVtRvYcoMtbhREwRJRXnppJW72l77W2FhY7C0TmdE(pyX9lfJ2ct7LQReGUSFNJ9WXqVwIEjTorz39yvx0Wuxa3y)rWuq8pRzroZ(QQQy64ZQKixEHIH5wRtTpI(Wdoenk1)kLkAEn7mbV9u5LEE(NOtebdtUJOi7j4BCHE66KNi0jeK0mNaNU3jI3tVLGh(WhMFWHgU3bhicpCDv5J2m7z)qxfFMnASbFnZdzZpmysPqm6MNa0l1lue(zuvZWxhTGqsYMg8SNvgJ65bFY4Zavqjh)KcPZkYNuhkBJOtk(4JL1KhuilcMPcfdUH4Le0XDwsgWEvd(mzJlXBickDByz0KkDx7m(PO0fJS6rvxEgvft8rmr1GUNkCmagdtLcV9dLgFDnIigijdAMPftAMb0aZRbyOdbevHS0XH485vFPPHXCrdNueC9l(vkfyQQvgciMQj4mTlkahP6yWbEfdZ3zh9omFOo7BWrPdzfOnKMIRcSFGUw2tHduzYJtEEYhJ8rjp)fNfUAbWYNNIN8S8KpZfFdWV)uOjyx8rX8U4BI8PV4BH808qgp1fFe4Np9fN9IVfxpjpi3F5RC5u4wjH2rFAOwVrAN9SKpf)fpp5zHg6zH28rH(d62NhkXZrEwxT3yLO9KOp)mLObjlCX3YfFe82O8nyArLuMsuusD4ZV5kX14tvuDNI)baaNPudzeMUUtDiqpcT)(TCOyKd98KpcyEiYhMLYTGo(rGeEAgJ7PX8r(e5zOm1NcQ0ZEX3o)kPLXUm0YyLMwMZ5M9kLwkbLimTSbJNuc58dMNPHKdIRpiFze9oq5UrGel0i5bDFs4VpoqDa9GGQhdVeg8qc9tEX3kK8Zt(e80Bf29Klidu(6U4JWd4skieXP807(Nc5aiqfscG08KNJII)mKNQ(LFdp2L7gESlZn8yRLB4XQF9F)warVUVFX((9bTXNMIcVCIV(q5ngyOWiMntaBP3BXcCancqQNfUtE2l(24x6CVlFRCCYDZ7VqZFW1tZ7FvB(XYt9J5I9FLt9U56UBE)fA(dUEAE)LP5TLMHHhOU8u51N5IpkcjShFHroAbxUMqeT1qerZHfNUDB17kYPlBrFqxfTUt57qW4XHaMg8N)6DUbakgvQ(MYJsjFuk(evz8y8ijdaShb1WEX3aaDOBEWsmptD274eQHRS4gqntg3Og)6G5qRPLp7olHd3Ft2kOb(9(1CwenMJ0Od4o72iBFW9ZVkRHMw10DtaBPZpLZwaM89(tVbQp44wj5huMT7pl0e7FHo6S)bhONrW9Uuu9Hc2xWo6DGvBb2QY5fc9kwFn37Qe0BbNDwYxNU16Eb6w9I8JKMpw2KjJqxGn8CiN6vpxTH9fOTwBLAOp1bEVvrgQwT7iIKSy6eowBegNZuunRb1ba0zGoQD3EUPaU2OjGNf0NQ)Evawbh6FVNDs9T)Y4pGLN9A7lGLhElp3JLN951YZ9c)DFWF3pypPLN9N3EAlpVci16KS8uFulphWYZbrtET8CiC7u45WRldKT80qL32yJSPNPR(B7mdEYZ422ylpn(saOTLhFLfzB5X)vgq2YtayOOPRQqxlpn7gY2AGwA23YGSwEADvbNwEAJHkR96yu5y91yiZG(hnuGWBIkR0OsFbAT5gxVOYQUogvcEMFAJrAS9uTESnrLVyqL4HbzbyPf3HyAlpIVMw34Y786yCzxPsfSXotw3Pcm9M4YkpUSTMAXxRRxC5DDDmUS3m5I1thTFKgNOXnXLv2zXFqav2Atnt)Fl0)VUrO391Xiu)NEGgZ1tpgPAVLn6i0ZVdhKKlaNdA7J5G2wVWyCpi8rLyVqoVcT3mKVwBRP1l48LDDm4StFT3A9tNUNHeZUP6ZkTtqn7RLJSUn28wVogvo5ynFMS935qboI(MOYkpQSvFbwVOYDCDmQ8iNy0UQpYqb6AWtTjQSsJkd0sZnVUNbFpxhJkJf3iytDCYj9pXKBIkR4OsFT0sZRxuznxhJkBz04z6i(X8NmB9BIkR8OYg97F9Ik311XOYZQeV9b1INjs)52evwXTRSTM8VUdq0TCDmQukK2WY1LP(H6yDeGOJ9sfu5YFirIYEiriFUv9ze5LQlFzt(ADDJL3Y1ZHJVUgdF6ENPX2vhytnSv85993stRBRrV9RJrLn22ytuVVJDKEMzZ59VkynQF)RBp33(1XOYoQtCYq5Kv77KtTjQ8khv(LPpmwiK8fIAdjX3jJC1gQz)2tEdWpkGm)lSpkWCvbKB96yazWZgQ3bL8j3sy5nbKvy1KH81wZTSE1sw91XGYCPQVLbYnQYuTUPwYkoO0)rABDVuqB76yq5ONUZJ01utn0Wzm2euEvW57Mw3OYB76yuP5PdpzQPAl5Pm6CtuzLgv2uZ(ABDh09DFDmQmvMoKBmWjgOPtn4MOYknQSLw97BDVfJyVnPHH1))d"
 NUI.WeakAurasShamanData = "!WA:2!T33c8XXv596z34AlfGylBRyReJNOqms(HI2vVnXXOvVD0lV7klzZdTZU7SAgRD3z8mZQhMcL4Kl1fOCbbeijKhvnaPHxbrsieGa1TaL2s5yd3W0w6nTcixGgifxGceUn3VVZzMzNvAx51VuIUX63pjnpoVMZ5))VVVZRVdxIYsvw8Y0J2qn(QRgFLf)eBxB6bsKqx0GtBcrnDzL0BAo50ju0sjya3u6zeshtsrRtnHuIHNwvmAO2c2rh9pJqAzwiAmqkb50DgWaEzG0kPfpD8mA03mk(inDXykPJRFCrbDAcqk9K4LHm0etpMH0AcQBiOz0jPesPKRK8kiVs4)VQ1enHCAzDPf9yDLmAXeJkNsvrZWFgTKQ7uYWqvFp34noPWyk1iRCJ9lOmP0q9S7qscPesV72emeILCA9u3OVAvldklgAkjtkgVnj5KXHYW(NJfq((Gpd11zDtqrwoPpR1dAnZuNX5snb(acAZfvrlUOwBkjv02phhN3zzpOJ4JjQU(qhnJGMiFNzsMKFyjzdXO6IPGQ4G(QP2AAzw9mrdkogulPxQMqmS6sVXaW3SrPKRQuY6kDwdLywniR9EiwPCi5JjU6zgttjJApWxs0g93yT124PJkeB84AkQSsIxVEh0BT10WzKtBiQLwi5bzjZ7pklrKMN9)awXsDDbskFSJjOfNpSIssdz1tYcadxuI2uwaKOynCpTpZK3YKsPQDYdMzUeiQaAjHQyV(ZihFo9e3s4unoTq8M0JcfWeYJv6SyZVm9dSuRASEsdjN35yiRbvGYz026O)WDeSs54QB1QwUTKc668dcfs(DZ70iEAHmgqKgqLLGbsQieVZOgcjftBuEWuzGIFPbJHrTCYRR0a6qfg7cvXy0lIlQhtvA(3(S8lz(ukgIWtkBetQgJjyyk6ZAxwpg8ruZyJ5(HI6YJLwmoF0P5dzaCGofIj2RsSXpUHM8yJb1)vS9zYK26Ms1SU4DCCOyLmzpX1lLusqbaw5pqgacevnPW0asrCc4RkA3IcjnKMnUy0mjsGmiTU7O3b7COENhWq0GecEH8uZnABTgk8OHc3AWWoVAqnr4vbdnyh92BW0qRLEPZQrXDykfKcLcQhdQ)8guiPQKG3z0ftMG2OqASSjUI3AzXU)2oXnr88kELNrh4CDpDun54HfIMu8ex7CDMessOMe(uLMPxHje47vqxssD9DKumfK9cjbALoadNwAMwL1aaMHykPzhwoDCiwIcAsNe)8KtpgFqG(jn3WcqGTcM)UfNsYMrkRBihdc0yIsQLnu6KGmejOc3kF0LMPtzGT1VYecsZfwooKXDQa8xPZ0NqAbE4jI2zoTygiJMUHK610VGrgnXxRoFOjLtyKweGc72cziDYWszsdWvDdqAi8nfsvwt2GVx50JBLwQBK9SjfsoUOgKkDbCzrjTGYa(mUO0Cwrzy49Wny6OdT9JlkD6b1a5Njb0c9256aKbkzvrol9gq8b8IZ0MeuVa55ysgPHQjPzPFNSS)KDkQHPbntStdRVYyIi7hBKRS3GrvbrrqdAtrHg8jhiTwmjH0JjgNSMgjRDHYyjx1IEY6w4tcMuoLSX6jdrAKSbYgNrqlwVuX53E5ZglduHLQliJMQK7prM0uHBvLwCYbv0zYb2fpkXBcrlbGvxkp8ZU3n8LPBWdXJFcbnzeHPtFtsfaFYNaFBqLj7fZz(9Y3medEAXGxjbVmiLrNhQPsyNiUI6KDgeIqDnIXys54qLeedNaYIRRGlrdUFAgijI18fk8wf8quvCfSKZ0a6QO3s(l66ojJ7YEiAzV(Ck7zd5Il80W7VXCl85ncwLEq(xHR1XxE2R0Ttc3L7EZt52jRwuPU38vQZtWDxTQkedfCSxEAMyFBurJjfftVOSaKARjsXIhkBm3TpRkH89ZcZWPAtbKHdXQ2f9gMgsNxXE6059PgkOuX9YF95WbYMIGPx8Y7INjKUDqFewblRkaWVQYL2WhxHgJSPnlsqINn21WU0jGl(cROQmzyRsMVcfg6FhM2y6ouUEz3S2Uf)2yz0qjqauYP6iNmqgqt830Exal3qsmBj3jXSlbaTEXV0PeiTG3MZnq2XAho7zj(JRkhA0YjaIj1fxQyKt6NBmthp)frmjTRrwG0JDEUvffAjRIwWBZPrY35tT3oxyXTOQobvUlrL0zP6n3mSG1VlkzYTEQ3LSEQ3LOEYFPNlFAW9fOa7UW6CbJ8UNqIgmspT8wv2IE1fmKScFvU(qQEjKb4sagucRILy1WKBVtBrRvZFJ8(53b8ARpYD7RA4TvzjxChfmEvNx(U7AraUTyOY05uOqTYzLYV78ipFH0NCZa)lvgW(SXSyNiROAx50oGyU05w(A4C0vyDXoZNuvOmA96BEVzrolQyUa9ofmpDBI1Bq(nbr4Ty1UUl7p13AP2Xg)f(HSP7FRKHjPal2ZAbkFvGz1vtstssgNmcjorM8gjJrejXirjcefYHihLKGirEdKiKJqEZKrjAevYBIC4JNrxKcRJq2fhz3KAiE3ePcANJjxd5Aj1oxSm17ltx3sD(sgKuVxn2WiikrAUusLqhDjBR0zG(lO2A6XskUnG4iGDuI74JHD6anMny7e)LgeBdelHC9RMSEszqVgjLhvtiUCg9B)vq2k5vhanZnABdfk8a9nBcOh4TjRflPyesvsKqEpo8Yqyc4LunzhWDg0HRGJSZsMbZhkZ6kjh4KXNg6XKCmANKcGD(bS99gxdjSxYR99tQRuYvu(CjWoz0b2tl9ie(gjxNv33jnqACUykjZKkTvw1sNK9G9aLCt0)Ux6FVz8VqhVGEpcws3AfBNeOusBVds7qhcjDq6K0fPBspK9tUfsVK(i9tgGmyPZJw2yiK2a6Lj0LIObBT9Egkez1K)aY2D69p51qUHt4J4Hd64Oo2jhAT8vSD1nd5LIMOvpOPf9o00u0GY)7ocXGuo5abqBNoV7BWzgxeA)WoCBeeRyJG9s4KXuusgxzY04GJinp2zUXNUDRbksAwmddrhWLRDviYbAdbeXXTJuKOmJcBbA7dCmfLu4NyDi(kivwtpbJzp0hEvxhGbBn(rGEHigxmEFctjnVQMYyAqF7yzXoU2v5rDDSUPewCkJHuJdvorZq)h206DtQLbjsBw5EFkXHpeXilmLH(RInZyhGaGTyxhkSwJhmy6JuRBGqaHmgqvafBdyN3FK5IlRJ9VNoao(QRHM9vhPUdV9GXKeJnENvQOw5nTxsBR(42wJpV4uq)7O1tHLtjgCcHKze93qn1B1jo9k2(XHVpvrnJPXrvQM6QzSKktsEOiBN8XBmknz13bMWLDZq6sEqYFb5HiFIgPxhqxcdQxsB7AvKh0FR93o5tcGWpf59zfFsBRH8GNKnmfPdI5h5H4ScZhH8q73B377Fvf)5pQ79903h(teVS4H50dtd8oWa)PPj4NA(SLq6Gb(qbhuEkXKSOaT9p4XLthtjvubdw(uog1zZ2wvzPLEABub0LDvGtVT9xoPKtdPlomyixnD8ewJG1OXCgBoRHEAura)bcIkzgmc0hznCyJoHSUmuFh50w3RqLy6erCOK8(mZGLCNXzZ7jberx2pjc9L9kNwuF9bWlLiLObzdE5XD(IFKttVucia4Wn4Do82dXep7DwAkq7j9MOxhGnKD0uoeDyAOHFeRWFs8gBAKxAk3PM4rZiMo20dEf1wJ)gorfQxNbuXnk9pSX1Du1rnaO0OQGknzCOb9QUL8eg2fbXGgxDd03HGzCyFJrLrgOv42zPYpfXgNa9pq)DCA2W6zvc5oTvAM2Go0vdmu4E7P)oulJ(yDjH4oF8CQvxOcQLG4rnKawSe06ZP(AkuytkoMqSPhnrsfOf5mSaaqmMu9BvLVqXlLs8rrHKroj9L2OHzCk)bPJ3x2VhCWy3k72jHwPH1eup(Wwxmp7ZZEK0c06qHhq9vxOSMDh3moVVYBq1QA0PUzDUQWYoIZwp21iPEYE6V)ocokB8uNL(2SYgz4r8HwnalitC3Qy3aYQoqHEYjMM0OMCACyPbExlpdiFguFakI2o51vEz1gjQUmQ2MBgGvmAAriCsm9COzbJIAeIqUjmSrd1DR91A)ri)cYVKPvCwQiMXtd061UnnTJPKwSN46Ei3me8Debc4QPjkDKDJeqtjPiMoATdjtxDeetOF78wzIvYe5049ticeTKIdjlrVvv0aeTyKeufcgoqAnntH7tDAO(hKuQdM)m5aPpTo9F9jRJFqK9R1DRb7RZH6vdsI(fsbF74qoRnMOXS4W12XuY6G6)zWbWLoeRveO5ABOwQg8blLQahvCdkWbdpspq6KthbuWBPQ3KZBfMCxX8wj9GqPtulTKj3QJyYTQi0ez)KxG0PjhNjNhjiALF6XetlQjhJvANflTTMCsHP1jT9RNHwdGjfupEC7PIPmFN2P2H9faMuOUE8z5KwrMJgm46XIfpsqdnqKk5bm5wJj3Av3a(oXPaJoYMqsmBuu3ITYs(bT01Yxvimqvtkjin0AzsthrAYdCAnrHKHStbYW0wwAwrvoEe6qgoHOFH0tRUE2qEeMnG5GMyXvd2FPUrBDaOyN2L1rfLXJGgcomAh0jQfm8H8(q7DiZK1UgY7)82OgYhGAgd5dkrUdjYhYTvkKpCeYDIwMqT39UyMM8ry8T7rICVO5gK7JC)OLf3DpObX)zrO2nmRKLPdToytT3XujfgjrsYdKRzK3OxWKbM1d1ThMwsVKhCwL0213OYBMgwMk7pLAzmvSULI5OmhIlzUIvdoey1njNwhNDHyYypPSNumAM6yNa5XaTYKppOjgOYLqE8eKVaZI)Nav0s(IKVueYx2l5j9EIkiFlVK)bY3MqiNICAY3H8D5i)Vipf57Xrm5i)Jri)t3k5Foc57lr(xi)Vjp9wj)RK)nY8KFa5hYr(rGqrYZWr()Ws7Fm5Nq(Pwc1i)7KNLJ8Z4i)COw95ajt)AY)HLijYVGZYu7NxI8FAj(H8lDj5H8Rw72oc5xZe1u(QrrnK)RiKFdnG)wQKfYVlc53lnpv4diYmovug8(ThEDrmwheeJ1rnyC0CdreMmMxfszzuisBNytuXucrHUtefHZuMOj3Ray7VkKPDvsuHLOCLii3YKR0Y8zYDLW7FLOydtUnqszYvMnR0QpbKUn5whPetU1JYzm5kb(Om52ieRR(tUkGXyYTzk9i1kq6ryHEMAOjoCZtpyVlf9y)oOwtUkweTWK7AoVzbMCxBUiE4nul1V59sTZnk0BmWiBYdvwtSarTdVEB7WZYp2)l(8JNH8vyp9RgH8xUEYjbBuj)vK)AYJq(AEjFDVKVXMi)nsKVPxYFRxYFNxYFpZkYlDSktUT6MjfEDMCVAlIZBoxIJj32wmzXKJ)IbnHPmEcuzS)68xplfzAFrTtHOTVy3wX)payhRa0XBS5NwEGIw5lKO9wwbs0KBoKCir)v3ZiPlo9qxYjAV0t1YtLhsWfcdaiq)EP8QO4CgVNUyW7)INiFQfsVceT2Es5Upy3sX7kqtx0qRZrnvDiQ9KzXTVp3bzfag9eLHykefw(DkrTUojy6DYiUHIlahoFAfdxDEATT9DlcC(VAZC8FceudO8NxkintQOSwMNEXOkwIjROYBAVmZJYnpUiH6tweOESCMpyFYvGW(qhqyCD1Jf)OdM6IgS3KR6vUO9ZfjYaSE5uI84fJe52(U5dAo(kqO5qnxFYGtgyIbNU5LcAUJliO5kBa4p9BSScahPyaG)0Vr(aGJSceaEK2c2QGstdekZuxILn(z2HReGZAUlipQZuPq(SSyyYD9RG6b4QV42dWVPVZHEagFDrc70dWlsW)4fd8)B6lFW)4ReTiURj6SX0j6T)bYCz5V5hs(CklRYFLlga4ZPKpaO8kqayQrc384Tj2yTbg(YaW8caHEI8vxwrGVXIR7rF18bbFJRaHG9PNAKed6VPKzIFziybGGVnZLvi4yffe8TzMpi4yRaHGhDKjo6qtpzBh23YIA4xszsPuEMuboxMuYTqtkpxuEVVBA5e3Qw2I3CqfJ689Dt5dilsbY(ErbiFxolxoeXwaSmdipR7L0MwTIhQkPJ1(4JjKdk(bSxpBu08hDZEk7rpBDQInR01N)zL2APIzpmtF6loa)ZVz66LwsSXB(oW1Fhe9FZNtO)l0zplwrH1V5SZE2DmNZsmPN40KfZpnRhurqFn6RLAjDpBB0L3hFVkJrkzg2A9ljCDVN2A)louBT1rOqywcfRk95p)ZVwSvGkgQsrAs1EdvD3hi2LTnj)I4)E37YQPjrlgq(37EZNa9ORabGt2ZqPACYX02F4LCHgvXzba28)FKy4tSUCqNNr6SoSw)YrppwxdgUwxd9FbcAfkgql)9WaT5t2PWkqO749ns7Ps1B1HBV5ZTH2nFZPvENTRCTczL1a3EXDP7eUIIeHxUdcp7y2EHA3HsXGU)XV1S2D8y2MAyYDdqcvzznGlJNGnuxZ(AIMrDhCqLjf1Wf0dBraJ3H(Mei0BVY9UxCv(KFIIYkqIYWtoWrYuNEhTex8Y9(8S17ZNj)c)lyhq3(5K1jVNlqQWHkktW3osfulZApYWwO0GX1YXu3PJ3xWYHJW2iMAIq3AtZB9S3GV3eUzaPqFglWfb4qRaja1j16qD3CRY9CW2USv2fyI56Bz1k7JwutdxF5Zk7JUceaMS1eToK0(7V2UtCzaybaGvUScatuuaWkZhamXkqayNJe9iDoCO6sv3ixgawG5aPHelRiqPIAoqAir(GGsRaHGXY47q(64yJ0xWOxEPKFrqG58VZLv46BOyeyo)7mFO13Wkq0A1IQzAAYWbseA8lJwVyiDDBKL1zQBDwoeqh3byrjTDBK8HFJSce)QmI)9RpvNT0tIdEzf(5xa6p65xwfGEKIra6p65Zha8iRabGdi1LExdovDXB1)LbGfOlp7zzfa(MlQU8SN8baFZRabGb85V6UpAxhRVJQEzay(bGtn2YkaC0Ibao1y5daokfawZLcai(PbaWpK3cb(waQdlsiQZctYaFiYJTwzqW3dib4V0Qj7kJs71NUL6YUSy2WSoiUStU0oS3F4(Z6NMyUfj)UClsAT2wij50I5SzdO(tj3UwPC2QbmikI83Eu2Gb7zM4kJYUuYIm85TycpNePLFTj3UQOS6x0WExQlyZVgQb2H1ghCnamzniQbqj)ojN54S8BhNGZBFDMC7UcClrBnLafyu5pD0mggkPhycrTKctVKJqFHPxBPW0R)rjBUvek3czklf5Qr3Kltk56P3cP1Nmh0)1G(5PrLnetrDEk5HlWZMAjnr0z4lNESiaC)42rGBgd0PmJTSRgPc0G68OimIdLb9kTOtaZrTmNeZzRuw2nJKMnvgqXMX5TLvRv5S7GuF)Slc2gu3OT71g93(cPyEh6SZD2hl7CN5DhbAU2M8J)Pr6EFVDMRRbDanOVNdOVqr3jAbvf0mM2oQMCcMCrpBr7zm5gjs2CeR84JW8hgu3xJHwgS2ynZZ8)ooU4KsG4GspMTnhxjpPFpKE9qf1CyotUo9K78xGsr0OABwXjjzSQQ(wgsmS4r6TfxlWU3xbKKyYf0w3viYdzYf(8tGHj3qqb8GfukrL(QD5vmHj3WRuKnGG68krWK7qOyagc9n4LTI2EJfGUBY9MCXUn5EZzP1MCJ6MtBYfPGeyFn7pyD12uTnxemytUyzPVqJK85f91KlEeAbv0HMAYLOiONQRmPNA1hBOJnwImtmTl65v99ErME6)Y0Zlq65AUKtp3tGgRRjFbAOXMAcjQnCorrHoQnUjxstUulVS030ktwAOwcD0d2t7zowuxS0nm2lYS06Uml9cKLwYLCw6XaUztnhO5MRRXG(QTHwG)2GVABoG)MBPHG(BOLABjqJ13Y5g59yMCkMCQMCh1KtZKt3KZWKlZYlr(Woe5TJezG2CfLZyXnr9C0N3SyKcJ8Un9qQBb9gJ84bIKZ5vdp0lwXKXv3KZRyNWpwpUcNhJN(w8DlKooFhPrhBSHRuBGejY9vL78kBVwoMA8QBkGGg9XTHNCivXohFQwDZ2pUpbXKqVmusXpSOGQs6SrGEkb5eHYY9XDKwQA1Y7EO2PpZ1zEeFBT727MJcW2wP5m4tujax)QrVXTBNZnicRkj07Jt2zjOOpqgfkTR25syesvS9QJElqFJRRuuky9ErbCyt4vVe(qCuWzr6(WbH2bjH8IUXCasGY1FnxRMsgdOBIIafhrgwI4v5T8v1HlOpRfWpxTd(5Grv1e1fnMLEssnyMK6IicbOD3MdIPyGuwNQqU0jCND)6dSQv96x1QcavjQxFHlwzDPXwQp46EFF)Rf)HV799V)fXF(N8ECB)1li26U7(1NHFv8RAvxN9amw7C1ps9DfDKjt2xpnha90VQRVlfdaA0VGMMYKdL0qtG1WcnmAwEg3a92rNHNBH(NxY2QGkGgzjNohVD81UkYnUM5C9HOw(o2XowiVbE0PZXD86frfpMhkgRCuHddNnFUoMzYPuVM8whXUaKR3YjUAhFe1Trx9UGUhPSUBxVlCObZz1(QXoW18Jip6Gi18SXLrVeAMKgtNfAQLGDY2Xu4jLvHNg8fIovF6jYgEKzrdbZrsbAi)vTVrlfCZOoHQ1H7g6KGZ6iNV9xbBLgV9OSXkG8FhDskL2VsIeGcLDt3msIm5fs(1et53Fd1gfEyqXusZb37Yl(Ds0Z9s3NsYX1RaKYxFt(NJ6rGhngE0luwTNbIyhONVneB3mjDg7bekGs6m6w73jtU7I8FRzLPSZgndL0JLreujXrf1pptUJTGmKrQUbx5KtHAV7Do2Gerpq(KSvbqZw2jbh9CRdA12a3S4dzF9w6i2OL(Xvb)cMD2yt1nRTF9Damm3Tj3hb12AY1ITw0vh544bLGEmH0ri)FT9aYmVImoenDHTxScP9Azb734Rjyd(95VjMkPzXYviR2J5XT2fisXknOEP4EvMuu3WwBxa0zjFYau)XmkpnJbiDIjclbt2fQAJ(LZZCmXG0fd8qqd19bA38lKmjvtN6olSeHf57WNMCGauNSTCCtUjoUTR8UvMKqtUBnxHGMChFbs5aXzMC3(LcjBMC)pwk5wMCVJciXAkLrmInCZ1fOQHn5oHj3FIJ8jtU3Pj37YK7DVi5rMC)PuHqMCVh1YabnUvmd3AY9ElGWgtU3h5uMCZKpXirkgXi)I4GbSV)Scpm5(azfAyY9bxK8ctU7G9Qp0ceuS2)U7ZssHj3hMfK70r0aLoYa7OebtU7bqU3RjheL7hU6pJgRzRWK7p3K7bqlf)OWt)yzzYMCFCtUh0H7AY9xWS(8Ha2Pj3NqkRDzFskp0K7tLp(Nj3N2K7ZuiwNj3dd8ntUpRj3C5qSm5(CmwLj3JGLLh1K7XSzoMCFEtUhFjylMCFbBsIj3tyzn4xeq(MCFjkUFstUVCRNOzIN2RGH4D1ZoeXBHIUyG5)as2t7N1C(HfclO8EPLkGgu7CPNSXj3F)HA)W(tHDbeyGir5o3RlAbdZTaUX)m(da0yNEmm4n0nrjKyyJYPy5ftgqk4DXi3Soj2Y7aXw3SlJRaq2VlFBk33cC9BbDXNha5iUT4d62hyz1ZjrzjadTBsR3lRz6eVAgee7PZNYvpDqKJhkYHHVUsRo8S2npn1K(7MSwekXCa(ubWiGzTUWPuuZh3dcvXUB4V(gBiqt(BP(G(APP6HEW0sZnr)BZnJ)TfFbRZVF)1zHbPDMGIUljaQrJbW(mrYXV4YMNpxySVaZXskKuEcXimOwNvwAPz74XtqPIOWLRgKMW3tQOzeDzLp8mkqCkBGy8n)seGyMELgAGwpq4b6AGx8aIjwikSqqqaVE2bGF6lqaivWfkm7V8Sb9m5oPj3FLj3FTj3xZK7RBY9nm5(BwmqZK7BwSWmtU)wk(ArB2luk3qQpQZECPAxhYIioUN253lFxIg9Kgp2bu0MUh6dRQs2PRBL7I3xtS4Gh1ESiKZzVL1(KrxmPymJQ85Fx0uddy6ekvXIr1vJNTy92XO9eUJ(gTTEBnuOrhUJwhCG(l1950LvsLqapf6GhI1adXoHE1v36q93t4r7P)d2r)Hhi4HgTTUBT)U6O99WkNyLXnX6G)CS5YLEUAJ(CCJm6Kpo((cX8kplZZPp02eVPPepWMNBV8xQyZJ3U33Zmb(Z9XTe26mC)bd2Ev(c37(R(82wh3dBqXBRZMyNygY0tFRyI02bjB7Fk19a3TiRESS2jF25ejh7CWnnm0LizOhf0J1KG2g988sZXYCApNIGYe(VIC6Cklq4ECpLgjYvfz9r2AKTf56IC9rUXi(I0weJsJq(v)WBkxJK63sQW1olnjhfpvvceU1(VfKFn3yzn4ND6H0d9CdJEOFWQhWZ4azOtF0dRaAPR1ejaQIyC6ndbpLgA0il)GIiYGvCs3v8mdUwfDgG7lBFGOED9tA3LJGqHIEAOmd2BHrPhn9mIHoib6KS(P0k9qcbeneKzffynhvWL3kanDn0s9ZYoZZcjMmHK7ZJf1n46R0UVxLDt2M4vaBNogL50(m4Hw2O6YXbl0ExOAlBcdoIy3HKg2hJmAIb7d7xjf6tXP39F9goTUQG24bTp35MNEBaOxUXXtec)T2E7ZrFu3YXJlMoy)DCWocQU(CIegqYp44rfSp(5Zt3fMb7Ad0l0X0jp1m2H0)(96f4gpqeuntDLEg7Zo(Es3PMcAAboC1NyD0rCopO1NVWwLJlUiBZZZb)Fgjl8pJNybcZI)2GTMOa4zeJxQUhOdFwc7KGkyG91o7qecdbqNAxYsNIZsmAgND17nqBD7oaogG0bj1srdtPLtB6S06ZShLxepp76CeaEs6lzd5YiC4ulCEp(OG4VtBFS3BvfJsdTmbzBhMkJAc3Je)xczaFr7JHm2r0KFO9Jn28wh2zanqKDyNv4bRhYISl1SIA06NJD6rfSNU6oCoJB)0KFMxYtV1tSX8CsHL2EyLknFLai7xygd5AA356SSCfhbn3zkuKPz6cNDf8sQcp4M156gKnlehpOAgqd)lLOmB3deSNdpq)HBTx3nQhIE6usPZVLSlXWSJq7zYEyY5mAEDVVFqD1bAT2aQhcvhvDG(vslcwBnVyA0JX3Lv2Z8HswZrLFCfispGdDFqCDanCmNGg151tPOyizFQjjrEm1nGVAuX0tuJMiR1VQQdsl7smjhTZorhfLSetqpBe37Ckz)Qn98hqUtFGUw23CyMOi1Q6bpu4tiet8nISdqxsabT34q9S7S3T7qyeyKd6iTTjuL7bASEFneQTEKJcMjCI9q88UVsYbp4m9nCd0HeVrPzTV0xTsopUPSx2C2lBbmWV0CSU48Ixn5v6yzXu3E5KnDytpxTPNTy6PctpxJPNnt(dLSpdsDne9EXpN(6k0id22(7U)M6K82Oh9OVJi2N(OK)OTrUv2Pmk5TZHdD)XxdfM8hsLRFaY7KC7yTlBe8rP6HOhJOK)yV4y5)NCLKtWrExe6Yo92aTS)PExO95i2OE6WVVedN)7P4poqj)pjVxYRjQ)6AQHMR39KmOxzVbpb0VSFAqgFgvrHFhz1rzY9VBY9So6MMtW6WTSp50Gg07EWROXARPztUFgyA)p3K75m5(pm5(fMCNH8dm5(p3F377jQOI99cVWZKVl(j35DE)RAvGXI)sYtzY9RYQ1rInjSoNFo0fABLKhQmF2tg7)j5HG0(N)Kp5t)cVWpV799vFVV377fEHt39((AFWpiCHIx0DITbM7elfOgmzw)jMKDcVx3jCd5MW)4FZVfmOCZDVVN6oUdOiwNxmbn9Wdr3K7xBPaCJuZ6qJX2m3F6djnaOjB9up4I1sOD7RosjWZkHEMGoACnHXusRjhhhCs2m1253oYPI8TI8DS89lVF7(XLJ2uAN6c2EWH6P9i5FCUEEj6i3YgdChvY)MC0J(MT0JU15P6aDDWlyFa1yp3H)xGz1)oOn53YgmbAWLyJbwaQA3pk1LyGJlw7rSHCunTbPHTchvUON2y1uVTHpQLw)gq9d0ZWNb7nsB2MxX6EhQD25WUJndMlOtEBlc78HGDQyHRyr2jJL9ayvULry)Elf1CU6OY)xq7CKZFPiOpd3x7Iv3t1cnaL3)7CvoZMDD4pME4YJkAtUxW0ZQSMY8YMJbg1ngv7yC(fuLLoDoWtjxbyQF46MLDNQGHK61rN8b9BuqlMqArwRi2)oXrXHo3OMu(pjl0jKtk2t8O15V5gQT25b1hJYEESKYQUsFJP50y34CXuCUYENNEmoqCLR4b3xYXbQf9jUEUtSPZSN3SVjJ(bkw1ZMEwni400ZAOcLn9CvsK7jYIu8I9i0ZAlkzlOWCC4nQ20d0avktRlU4q4m9CLmOYnsLZENLagV75vaQwF2fmAbUgYav(9Yxf2NfQZIX1OeulEUN78I(eMkN3vn)oaDE1Mn1Sh1adCsUQHzzuvvEd1KacUA181udFL3aCj(iFjghsA6)RS69yf0cweGCP2Dv4cIviQ(1XkkOl9WZReQ0xh8763lQcd1pwg0eKvmVWuLHgjy6ztBY0Zgm9Sr6mcJQmm98Qp76lm9STLF1e(phutWKQVSRuW0Z1DoRfW0tLfufGPNR)Sj630ZRzPe3B65gko58ME2E(eY7)IHqEtpV2Ljz6hS3b1hC4rQnW0bVWKPB6PAqyYoGwGDc)URF46m9SBtpGWRB00tTME8bp0peG6GFRh(Tb43grrQMEAIdZHMn90cCZE8A651TssqPPNBArsp2ct6HPN9UYtOrDxwOXYVqJ6wzj0OZKhR1Eoq3AcTo2LfACXsOrfRGfAu)LfAS8l0O(vwcn2VAFd0uuJudnM)ll04ILqJRzfHqJkUmBVaS99w0S9gwzX2p84hEsPHt0yDrdFz2(fl2(Mxs2EhwSDiRYD(vxazhNx1cYXZ)IPCP403eJtFsvrTyIPnOdjh5HWDWJL3HMrVFUNg)5N09((oBa(PStcxG)8D94nl7Ed2S7YhqcpjhSi101h5cxPasfIlB7uhIoyWE6iu4IHsV45z1Ed2Cs7fdCBk6gru3K7pYSJECz3eLstNMvK5974qwTPNav43xT1sPY4etypreuUlWczJiU7KuIsJFgN5FDHu0V)v6MJ(8xqZ2ATZPhTH0bsfZiX0naC0iih9mkmVnGU18GvbcCoF4Tvs(waJZBot0P62x0eI6RMCQrzpnA)zsffar)l4kw5FL8VPEDlkEglCpmO(QluyS3(f)OZCd5MBQxF(ko2ZnUZm1QwDHs58SEPTMkx1DC2(sPZxkDPOemrsffn6S((pDR404(SCQ(oBrpo8DNsiz2kaoC2FnNMo52wZyDH2Az5zEP1Z(1UL8816Sxi((54VyYvkjDQ)ER5BgIzcj)kBd)XB(Uy()TUE4vTQxHZKfdcjrFCITCY7IJn1WoIkrjKGWXiKhtTBxdtDHgpz)jUHBOs(DHJhmDtj0TGUHOZicxD1Vo2qaFvocBzIzrzXOqwualkQLojQVpPxKLZcsvUWLUg5cw6QPN2UWKSA6bLq2Xsi700tNfu0PPNUoBYkF2lQYk7FSqrNqkKuNhlPTSstp9Crv8OPN9B65wCK6z6Pxii9bcUm90VPNbiauCqhjmMEasqWCKAy6j05GuatpHXuCOIHv)2wMz1MEoy(OJRoV0XaU6KdshNluh92rBH7myR91rHiM9uqEjuU)22FaFRTI)8EYLxQUo2cnPtnHuI0)OUPHffgVvCJrThx74rBcCPlS3lolbmGhvb19sL)1aPBhwvXSEixepKTVp2MwoKqCVEq3QeLSzpp9pY9AkdDfvdNxFvfTRhLqtj7vrMybCuvFMiohMkpXcnEzvlOdgxylvmBAOd)Bp5L)P5JFq5PetMhwiiGppG9)OCa7G05Nh(53Vwqgldx4fb(qAZ6cq1QveiP8XoMGwC(2LfsQmgFaN1dLBSEyQf((ZDbUWG8m8pTxgarbr8aNXc0NdIV25s77yh8wAriwi)TzT8I((vqo4eNexVMwRvuDj1R2AVZXwpZvzVGMRwsDDbfIbLsD(DZZ2bVsQxBaW(J4jZOBapSBrnfz9uUED5S1HQL7cvizsMJrssDZ5Mjo7xbix2yNYAIzJIvmUyTnQx4Yz6yMEGA6OMEem9akoIz6zu11TWTh6sSgNMUV0z83uWH6uYFXSgNkb3GXB(CDjoTML1L4uUBHA6QBkpoPWn)sxNuyZdk3vOG(9FGjU8jtr(DsH)Whz50hfIuSZUtk8h(i5XhfcrTqEjZxcdapOwWbcFq5XB5WbVqo)3UMv8WS3(YcmtYY9uVPfOTX2l8D2HEV98c9yh9G7oFqVliDqUCipzXDxiTVqZkT9LAwEExc6ElohgZwph9kqiQ35aT9bywuXq41oxVTignD9nFOJElhiFq9Scsb1xo(WhaFDhwqI9KDB(4UZMErqKllx3QT2o3SmxNoAIauQSCHsByghRwODF8kJ4SJ4qGKdCbqgFGh2UNJUbmuON92P7PO3Nn1lzTV1hlNebtEW6SSPbf(UbnlZLw45hyZLsbFcuXB4qZEJxkK9zbaxSSpPlmVcf2YxFYoJnCx9uvt13jA7Y7N2eBbb(m3)6DJdy(7jNRxJRRlX11xPRRFLUU(QCD96DD9gCD9MCD9v766T466RX11B111BZ11xNRRVEhCm1jvv5abDdOPq5IrK9s5(NICH7(N2Q9jV5sVjJkxB4wdgSNbcgPa72iRUAszE)gRb2XzRgHZB2MISf49BXURI5WeF8Y8a8KgT3J93fJxTzpVWFhkJ3fPC(wPRkxqOTMgouLBKUn8yBOmCG3UL0ktMwQa6akzTcpL9CCvS9ZS4kwMEum9Ow48vDpV4KVFTh9st(oBarnDrTXHE)SK5FIVWLQ8hLnZ3zgTPxY8FW34LQ6DTLmFVT)SxMLVFSln57mdlOXhYqjL6s3m3XLMSFU2esNwoQqs5JjU0faHlnfGt3HEmbvr(w1mK1nw6IqQlnfHZmSCYK8gk8HYOnH8elD9Wpr6stHqD9DjNWGxjb6ua47xqqlZswo(X39Li5oHO()Ru4gMEPY)N5su9WmaxiTioVtlnwq7suZWgPGbRMHov00fgxm9swuE1V(lruZGkXgx0GF)zwAzdBM7v(pCPPemVvjiGGMMWyINLcXN9CTq42A)7JC)uZ9JSuoa2lAM7VeJZXIT1xIzR)va26Veg7xT)bBCYbAFm1bIB7cyJ6RUgA2x9U71hZJUUap5AP5XdUEhKZeXQdDl0VT6SR3)Dswghc9UhNeCXJMrwvvmUK66w4JGOmXg5JeMpYvWhPD(ipaFKVlFKFjFKxY5sxl6EOFrYnhTqNmJj3ZCr1lZ8XWsg9OziusfJRlB5d7uSZ58a(UiKUvR0(qiG3EhAZxvhyBioso8yOQMMpOJxLvGZJZx10tSvQSOgBrUNOJprRJp8HTzrMEEBNxmOjY1LgH0f3ujSdFzGERLbzsRCjbxIC1sxsybMEU1Rpx8VPNJdOEtp3woGAh3Z0qMCFltU)btUVDw3We8TFkQ7mYYvePUTSN645EEJ)gQBbN04dztpg9LE0JIAaLMoDBvLQ6d3(aDnIn7WJBUru0HykgNsqYDi0dUumLVoZTiM1zHVanowUR1iU18WwxWw(Nv2QcUyCr4NLdj)cZKETlMjPw5IwLv(RrD0XIfN6exg9yIAksapRaHJU6ZsPeFunbdrghm3bwsppl1omIlEzJPUT8gWSlpnCvMyYPUZcxqw0YGJtLVGFEOZCnTysjBzjwEVe7b((Fosbk50CkP4ycXMEu6cMlc5PVbCPYDn5n42Ryn1RTGLe4xjQORfkQQ799C0dD0NWB377N)MXFM0BEwRGoLkxlcr(chk7LH4pJtDRfU2rq3qInlkGyKVotSgv2XQSmBL5jz9xFDT0mDwGhSu3EPjCXItfoYMgeQedrhjg7H4jzjKd(XuVAMxGI6JrAv3qtijol5jmKuVwxVj7KW0hUG50MwsDlUEDNI04PkRjBOZlPUDxVRFQtx51QZhAsizttTfWYJHlPEnUci7HqVNLJXheStxsTCxVnSCCilgwycaxPUjxVOxHje47mPYKWZRiVf5ovILbE52CNx0I6KcjhxudkADHEt5CJENjZOPnD2I6LQvSWFRPNpIPN720Zh00ZDLZxCNzsMsoTLJP5En98HY5ZUljfDd(HvsMW0Zh20ZDA65om9CplXsBOA1OT1H)m93HpJIEPnSLvClTH8m7kBXrt4j2uuQZeQvVLnfxztZnJEmHKIDckEvVpuLRJkyvlRw3fVUHGMXiw))qW)XymI1)pu1LMRppKgy(DY7Ka87GVkwu43T1RRUA7ulVb8q2b8qvxTlNHiRG3Lx2)dA9)aENH6AjWden01istHP8YMcRx1Ay3pTxQBlHETT7hfIte2xpg1tJ8ECrYecFcIyzjlwZuzPLgvdDFAICoW4WCf9CYRfEGbPEOQpy(MAQgw6PL32E77UJ8nT8n0tGM6juNn08reTNwECBBm1ABD37E38dmy4EgO)q8W1L64zOy(tknf0RvuBn(AGhEnFyjrEHOOsoC8s6bcc)XuusXxfnGkOxUuNN5wX0RMVnH08PGiKEA(jesMrKpbEWiuloUB(4JMXGpLIMiVbOAdYH64Le0INCA(ucJlQZNktmjEDX0XeRzbLjfQ71A0rOLlwXQBfn5JPqfGPQOtp)2ShphCtiKM3Yt5XxvTiKbEKo9LjftyKcLnGh1C7ckuzFLg2g78UQZFz4qUkdhuudKgFUwcmuulqbiQIHHskxLaSLQ9b6)1gMVJ27jmFGo6DGHPnzzlByzkgOKpouUwGFibIm5(ipjyn2NJ8KN64WvZbMC9W8KhNN8vo1BhU)lrEuYJDQBdF3P(JjF5t9Uipkp8Ih(u3kC7JEQJFQ3LlFzcw77YjIngKr1mj6mVOz0xgI1)dAM94KVe)Pob5XHe6XH082G8dY2NecXtqECxP3HYt6jr96y5jbjZDQ31PUv8ZOWjysX0Jzirrjv5dQYxmUg9Rkvnc)ncaodPAsjmvvJSlqqcn)Eq7smwd9KKplyxkwpCCATfKX3k8GhLvX9O47X6jYNNwP(WqKE8t9)KFXLLdDwklhk)LLzS)ypxll5PKimLSoRojp88D6uPHfhexVt(cq92rH(qGhMnrCaDFr43hdkDq5bbvVd8sOXdlOFXt9UHh)KKVap9tH9n5cYaHVQtDR8aUKccrCkp9R)HXAaeOcpcG08KNGII)kKhU6f(bFOZ2h8HolFWhQy(Gpu1N)FVzr0N3FVyEFVqA8LPOWZg91hY3yGHSTywvcykDp5s4GYiaPEC4l5Xp17HF(B)o8T42j3jV)Sj)opFsE)lzYFiNs)HCv9FUx6DxR7o59Nn5355tY7VajVfBgAEG4Yt5RF(tDBiKWQ9fA5ObCHscr0wnHenclovBwI3tlNSGbDpUcAvJ4Bxq7XUGkn4x)vB)baLyuO6FSdkL85O4tuKX7GhlYaa7wrjSN6Tdqh0YQ8PNPQQDDEK5Ef(vA2LV3Hx61cs2XnicDCdIKZ4g4114g4114gC2w0FlyS2oll6VCgQTN9VFvwR6VtCn5jtmN29IpJMpF)iSUHN3CsFjYPT4S8czhHBfE3kS95AVJ(gO)UhQ)WDemI2GT2BRT3t)lX6wPu7vD4cx2kU3Fr0fFy)oNgyRMEIsW65m65KFeNnkK3De0xJ(rp9FJ(ASEAVnOJU4SLsgSc1R264XYYINGOEBrLm60EHG9iP9k2SNvxNRT3a09gQ3nUN0awIJ2H7pcTZ2NLoLy6zwRoKy65p30Zdy65J610Zhd(9Jd)(G4ai65VWXOEtppe80pHKPNpj0c9Pm98Pr7Un98zW9RSNh(8YkDtpF2lbgOpy46g6iTmHpjFHDBGUPNp3zNFT)Zn(L0lD4xfbS30ZJanDp6YhqVIGn4R(MRDbqCtpp(scMn98fyO47(LZO4EN2xSmhrt5acPVmk(fFuCt1F(II)GVCgflyeD)XhsvRTJEKl2O4x2z1YfgWV8tf58d63qJ1D(c9VRcTRBEPj0NlFiFlupsaaiEba)o7EHgSgJ9ANtnM8eDnSwQX8DWca7FalmF217sJ(857scfq6YuGctboX6q8D2536JADwXHo(OhHov(vww9izGEoVnBPS9YbG9DycmNM2sZfUVxoRgq3xJDo5iH3)H6v7YQbEXLdm05LAaOdRn185RAG7DLLAG8d9pF1de8yk63siL67qnvXPhyZEV)sYHaSNxcqaEXXU8tSotURuY6e4eD4mLyYr9UD2NH8FBtUsQGC0z1vYOfJEgwr6AE6So68Gi2B9o0jVq61K7Mn52d1UM6yU82SRIwxq2p0lNHSJjMPJEd1B1sJm(LHSNRq2YyEwOVgPl6AfKbDRVbeiZ8HjaEfrGME(gwiyVveWFJqi881DHvPNDSayLH0xvKcGtV)xoJtpq62oqp91ZuhtsO4nXU2MA8czSsI8Y9Xk5eL72z9C0Si9sdwFd1uBdSD0qlw2sxcc2xvKSBNbhmVjxJueF72BVblapEgmJuJnwii)h(LZgspqZDF0(YOAio15UH0V8vO8zZ626QTz)N3dYXD(Yz84TKqnGKyZnhEGgUmE8IgESX6BQwFUWJayKCUajVJxodj9lifTXHt1HVQ75YqYlAqYMAXFTnMlK80NlqY7HU8LH20)Fp"
 NUI.WeakAurasWarlockData = "!WA:2!T33c8XXv1D7z34phlNGTLJFjNaBCIfwY2Y7U6TXooA1dlzljlVRKFeiOD2DNDNXA3zgpZS6H7hTnIqW0huQG2gcVcQT0sQlfuluAPuADtOpPCr0MVHMuGQstlbOaUTukbWFNZ9oZSZUAx9Ysjrns)(51ZJ7R5E)))Co3ZCM7Llz5zkpr56XQVMa1wtGYtCLk1g70jtQlyWPnSGMUKI8MNssoPIwgEd4KkNkLMswvwseNcUECH2hwq2qp615LJlQO1HgFgH(htviwKwd3E79obVSelVnekdVKChHmGBgswrwy6ez1O3zq8sA6cXvKtOpUaVoTai321WdJyOjiNYqCdH1n41m6GSjYTrUDYRISz4)3YgILuswsxCwxwxjl02IjLrvrZiywT0Qhq0Wqv)ih(WJWNsPgjLd3lVYiId01HohVwAL4dDOw5n4JNEm9mhUr1YH2IHMs60cjAvukDcOnCYRzLqF9aphQB1(SWcS6sFk7R0s2rv3sUt049fIxBQykAje0AvjTI2j5448oj7cTNiLG6wJCPS8Ac(6iB60(oNOKHqmDHmWiq4a14VMgMupBSWcPGUk9Y04JJ9z6necEWnkJS1YiLx2KgkXTgVU13hXQKJiDzH1pbDaRl4XjwdbBWV)gNogF8HsOPOYAjE96TpV(RP(RljBiOjZN(SSI5DgJviIZW()qw5sDlHslD5lZRLWx)kkPnKuVglbmmXg1g1c)ed7M7QTjg5YH6tASl0DIPsIqdy4e6M9gmRuIP668DpqpkPgq7Sxmg0atkLQSjrmGe9bSmRESUKHIZ7um4vFkq7mwRT3B)ThEVsjuF12DZTMMxx3xFqR03H85msonFwdixNwLvIHsRWNOJyg8Pbi7ocNjl0(llCCmR7GCSYcPd9ySdufItpiHGECvPz(PN03CxrLHjP)rKmIlwJXWmOf9ATjPhhEmQjvk3xuqxkLSqcFXgZxedGk0bFCHUHsFCdnPuPGrGkQCISYwNuMM1bpY4q7kD6UsOxgztH5bGvWqzbqqm108JbyfbKjgRtb(0gItMqiw2KjrIKwNT3DFDmq3ZaOiAsIa3qA0PgS1wI0)Gr6VLW97CR(0eGBfosFT3D3HLHXl9YMuJI8Wskmfmfwpo0b6nmFAvrEVtOlKojDyH0u5dFlVPYJ)4h7khL452U9RRduVohlMMuI(5JLw4k7zQikztRlYBaqnXjBvrtllDKr86DYlNWNssFNiB6xBcEzr1D0vMmkPPIhyuOd5RhbdEXPAfakP5tbOibr1D1MqgfzP4(AvslEAHJ4RFH0ciJxCY2e4ne91QIuAr1TnGmi8aAc(AjzY0sucKO6wIKfQdzFTPOKjfq)siQU1(em0HQkc2p7dhreb8xsGyOiEnSX7RtEqWOoT8X82TaVQ4e07ekRMS40yJmJIMQOIoiwsDl2fiMIULKhsCQiI8jugbEgYiigR1SGCpD7lIGSe2NelRguGtAL8SAJjgUtEauioUvxJGDJalC4H0UVODqM3icAzGHtOtwKxr3xiGPkotNkJKg7K7xqttbgaIlGCECGDVDhoMkiacgeBogmipYPL1IlYlNsibzJnqkRqXRKToRRuEHxjCAPmsgBLCostKTt2Xe8AX7Mkj)H3XKXZQBOK5eqfn6gF8KzLPJi7xwyK(GUnkx9G(q5Cdlyj2RQY8b)DOd1HKMUHpiF(gMxtchs1P3bOM8P9LeVByLr6gRzFhZxtqo8rBg4JTeiBr3NKmlzyH4kRJ0ryid12aMJrKsaqhihojKLxxjxKM8G0kquqkLOrPsVvdpcv7wjB5mLFUA6nx8MUUtX4UThH22RlV2EUuo7gpn9bBi)gFrZGvRhK5v6ED8MZFNUDr4UD3DrA3ov1SA1DxSwDrsU7Uvv(4sYPG8rRe7tJjymIGG8SQcqsTMaflEHC58qbS6ek2FfwHJ2QcqrHC5Fw3HPx05wSRowrVQHcOIcU29Khhixjc2D5t6G(ycMBd0bHDWsQ8a8B)5tB8LqHMJCLnltqHNl31Wo0jHZ(aRSQms)wTSaLkn0FphDW0DQCDZozJDZ(UXbbEGeiak50DKxfibOjFh9yfWYnefY1YDkm7waqRN9nDAbIfC38obQo24W8xL4FU6COzlVeiKwxyUYrELF(5uorXBIyrA3JuG0JdS46IImNDrfC38gKcSu69oqHn3fu3jOdDo6KMNU38RWs2)oRIj)(PUNZ(PUNJ(PGLTyE0GZlrd2DJ15ag59iremyKEA7D)5A6vvYuYA8731dsvZHmaxcWGw4(zfwnm52hWw0Av(oSVG(QgUT1d5HcufC39BjxS6sMVQkkF3DVia3MnuzS8AuOw5Cs5purKNxi9j)ki4CvbShBSkoaYkQYvnvnKZ5U2k2aNJUcRdoqXKQcTrRBFFhlhYzwnZc07uY60TjwVEPheYWpH146bTFuFtLzNB8FWFKD(47HCrYdqIsuiYenYRNKMKKKG8GKlrsreiVbsmIirLeNWtKidrgKOtYqUa5noEwDbkcokPgoYHj(jE3m5oPZ(LCxKxnj4uAxovB1pQuRdK0pPbVAmNfiisoszK7fMjl5UlBcDdb1wKtLw41aCeECEqCJNcNtbA3A42i1vwyS7wyJK9TEY2i3bmTqYUIPXNqkR(dFBKxdXxi0I2yToqK(pDptMeMInB2crjvlsgW74WnJGfGxYbiheoZGoRdoYH24ey9qjrBIe5AjgdMqKuC6CGcHZTbmZnWgiN1lPQ3jP(Yi3Yoi)FIs2BdK7XAw5KgjnnvCL0zZiBvbVUoihfNxj5(O)EC6V3p(lmBkykHGPYTwrLK2kJ0(Jq6aMLh5eKojDroj5uKUj9q6LCAsFKZqcx2mOPlg8YgWuhnu0IfUL26AGiKnqUvY(DMupPsYR9kbiE4GzdQZBKLoPjYTuP6UG6srtWAEXup40ooNa9O4JqwYUircHghTKn()6djaJA40OncJDNrXPbCT4kkPHjZiJ(8qCgDdP4dnwBwobsCsScJqDLYDUoeVaJCaoyC7mfngZQVMHr8qxgMZg(iwlIQctfM0v442E0WR6waKxljUimndHecj6HFuXzu1usPjORZQIQVZ15rDlS5H0VWOgdOMa6CILL(F4aQ3nRwouiTAv79OKaEqeIwyjljlIdZ4mCa48fdP0BTXtLiMMInqOYXtOmOoWotigM(FA(y1kaqcXN1a6AOi9aEjteDQes64K5r)1emqJbj1FKkdhxui(qDSxf19E0JrAF9JBBd(mcJQkX686xkJq4H5tNviy91uN1u30ROYXHhAvbnJXqpivtT1KkTYiKRgTsYhUHy0IvVASGl)(GYL8eKFlYvj)2nqpoKUiMuVK2p46iprWw6TnYhbqM)oK3Hv(jTVbYtCnMdjKdJ1h5QCwP59qU6j925X)QQ4F)uDE8VYha)lQ3jZ1F7zA7X1iJiPcCX7(K7GSPPHMj6FkKJjNiPLRLgmUJtZS8j0GcacceGSPjWmqVKLFQgCyjDjOZj60wNRqfQ5Kr0fpEFUjWochhG59AWy6jSVIi9MWC1f03Ai8qrYM0GQbpCC8hQNq6tAuH0ttpveGXqI19ofE6fS8)1K0sHoH3TtpoeZFA0spc1dk00FER0Fn8eBYGxAj3HMWLYkihFS(Uf)1eS(RSB172a66gK(dZNSdQoObm2pOkO5rc9BNx1DxK0WoimM0eQBJEpe6HoMnov(wOwGtNKk7tahEc17P7T9Pz(CZUfoTvzkBq9Q0PhO)U7Q32vlNEzDQBkSF4vV3s1qtlKIp(ydMmTIIw0RZsa0vYKY(qQ(kv(YOKyqu8v0RrVP9O8eoTPWu3RXUlYoLsogPjwtEeON)CA8QJFoRdMH1KTDCvOwgO)tR(QlvvZoJBcN7V39PA11488UfxDc5CXR1LD56ssttsVuorvmWfEr1QkvlWsZZGgIGamrG2WLxV(ShGqx)ExAsYOpHbj(VURSvMEhTlRil0vcDpK7VsYXEvr3q0y6sOUvVH0ust995maxyqkTEizuQRgZBPbX7nzcPKjLINnTXy50FPLK5rA84XTYC8OK7RsmfFBTZ1s4UpDRNcAmufNuVQQbkdXdMato19RrPhklmm6yWC1EBhBc1HvT8xlwEG(DsRYmnKp90qxeiftpIi6WQP1P)xps64JePBToBjCpDmq3Aqj3lFgqetNXm41sjymj6002hvs3aQx0nQuhDwrWMBYpvJB4YOkCrfTGcxW8a5tlNESOGczwfpSjN3lAYDlHR1FZb8hoqGgd0mES)MdhSXGbBkCDnuxT1zYT(OZyv39rD5jOQakEtU1bnftooqJ(nGcChtNsqwqtko7Xys8XOL0JWpMoP9NBC73rs5bMG2TGLwBhdngqDRyxwE5n60odE0N4Wgqp9qKpKj3TzYD7trVjKWuXtiYmRqD326381NL6rF7N68ZQiBkmTG0Ykt9mm5dnTMaF6i2f(0H4LfqpW0skf5XOdF0AJQd7Iux6nSqqE5Xu3kZLe9ZCInOivy9GrtQ3HTcauEtBs6OkTerrR3UiAgd1UfY7anxH8lMZSeYelzBsiVtQviK3Li5xsK8l72idYVsuYJIgwqE3owvqESUiVhgf99ksEFObdK3p5dWSnG84rjFq3A(hPXZDY4ADD5mxkIJMFYVQi5xJ8RJwc(HCRLN8Bq(nrn7KpCoT6mTVbRRMGw6q)O26z)yfQI2K71W0rtMYrbn53TyQNj)EZVozYh3d5tyP(L87NK8jzMN)hGAxj)HKpvuYFKxYN27Zr(Jz9fFgrYFYwj)Piu(AK)mYtsEkVKplh5pF7K)crYFPxYFfh5V2l5VXwLf5Z5L83s(8ec5lqMM8fj)DCK)EYtt()XrmJs(spe5Fik5zIsEwY)i5ld9LFfYxL8prMH8pZr(AGuwY)ch55yTN)v4U)BwcmjFDYZZr(gCKV5Dr(wO0TYPs3QCJrV9OK)9CY2iFBVKVdvSX3n6muXmGO4eu5tLrUo9g)arlJW)pP)(F5i3I89i)30l99P)()eL8Fqp4fEYYi)WzlkI8Ji)yKp7qUn58efetubmspBrkOOH8KMajdVMj3MkUicgbM0(3ZKBZpzzMCVQYdyYT1OOyatUTa5BBW)k3MORUnKnkmkW7YjmWIXBYDhKnzYTDtUDGjFNKhWKB3qMRWKBpMC3jYmn5Ulkn8bO0Wdztd3bsdroiohJBgoi2X9UYJaUcb(2traFpVf(dQCa6XWGpJyrmAs36aOzJOtaQTqbNw6MZ3cbeUIiChbnOeMceVGD8O4flzqG8hu(IJWgqgckRHjcj4urYQ395BQQMcLQdMWeGZ7L8eXWx7NqcuYWhP6Cse(DulhNcqD1428jMSchHqETNcqUCkMNOiQqNfImfyoXFcljEib95YXZYJHXMl8lCRzFVu9hPbfnPfP03YqUlq6(oWX7qRTw6PLt0EyGqBYTFGmdKCQMovbJyGM10a4(7xwEZ8U13pJCDLTGCPRdjUDKoeH9(tfj)iKoXMv9nymnkTJXzbD5b83eLS2rzxdnqGYIKsOxrSa11qJ12mYNT4Xu91TMgSRsxKvNFiktZHAU5BD4NYI)6I9Tt6v3AuK9PwU18IyAi7wjLuCamCNxDDmEjOGc5JrPA)anyVYGtAYT3fp3ZK7EwbOAD2VuhgYNE0gdO7MQzYTVzrZm5Q8flw1tp3SQNC726cZJmbmihEKjxvZM58gzO4NJYrOAIqoc1tuU0RfS26Ac9qfssqEuocHjxnLGi8KBVi8aIInnaa7b5tNMc8TG8koqE)VKyniICSGiLWuqa5Wqni(bqomRbp7zcn25dRFUEnojILW(3kJXi57TSYMiHYGStebRen5QdUMjx9Iy3pdYrhJRVAhK2KkY2gQxAehlPlmB(GACf0QVkkTvF2eCg7(zexgm9dq1vEpr3hGQVhBeFLRVaZ)uVJcmjIo9srY1rkby143(2lHPG7iwFH7Q9i9hDomj8w)JQ3TnH9cO)kJXMnkLcT5D59OgGUOTNJla2Qbug60LXjJgnNjDaLHzo3ojYabBkgqzqrPecKpVLvB3gRyX6LY)SPtifCs7z5bth0X0UGmsvoB7KP22T6Iu1qGg63VOwJpqW6DivUipZftYTm7gkHPr1wetJw4ukNepffEnaD6S5Ygwt5yDhzUzDVyXFIUW5pMCnUqilMCnnxeLDXT5)IzXum5AEUzjMChP48dnGFyY96kKwqRLzXlm5o6CWh0wfYhoxdPp1aT1T6qcbwE5dMC33sg(BYD81q9fI63j)YiQ)1xkupullsu)RFviQV7ogq6szemICQiRH6FzmQ)wB)VF5d0pPtiXkxC0pwBlsWF6vHG)W8z7SQu9LSPGHwd8)YAr(79AlFO)XXa8U0yFALTib)jxfc(17lr6opBDn0ABdSg4)L1G)6)1wgT3jrPq9qTSir9jwfI6hOXmT0v3TKOzXKRH6F5S9oDu98c63rEGEtU7wmpupI4zi)DsEWCO(ndfTlSp6Q1fjU)bxnANFWrLs0Dh1M6CklwCF1ZdUpp)Lohq5LMZr1AP1iIsYcVSWfPV4td(Kxyzu2)LkH1(qLSiPaxAvifq5cxmTAGix2iCQLBkW9TaPaVIvA(N8TTmcJtvky8BBXcJtTkegx7fvvQR(lMS7tgzny8lYW4NMZnm(nEZbJfkbmgQKscJzVj4ZsdRI6AmyDbOVty7yCIwZfdNlSkmeapF2bA(mJ2C80J208cYliEa9umJ1liE(Cc4VcIpWveJym56C5Y(LORUymp17B5JXC9cwedkb)bQY5H)Ke5pMCNI8JUg7v72cnKAZfRG2XzrX4sVbkxQMvcU0SdBOcvymVXDdqKqkeJmHePpegXnJ0zi(gApyIlfCixCKt6WeOCeol1bFuwe1mtUVXf66hZvNowwddf5tpSGwA(XScMwx53RRaRfg(ixT8G5IMw3kAiFchYg8K(eJljhxjtmEdgNBhyti38OzC0hihhf0t1h5QKN0o4FW0)TWtE3KRIDdn6iTWdtwbnoCCI0NOZBK(u3bSjf7aPeRhHZFxwSGpSGOu80cdibZ00hMAAi)C3NSKYdOslkPqHZS0J2xXLJO9T1pcJp89yiFmyJyXNegO99GFnadgh)qirgXXWO(Bq2YGcDrBrKQekqZbRRoxrU0uzYLTY9t)c7cxM62CD1tRkOXBOOv(9zftH5Z)zHwc7dQJgFHNIgAjS1tfDwGkQjGR9rsYPeXj9Bhth4YE0u64NCJ1ND2hgLbaYhUolbN1EXwWdtMYMV1U)m2sn2knOghK9fqKiCwzbr3Hv12ePV1eNLXKCIs(SSYcfyHECa4BxZkukPbUquMxj28TEQdso5uScG(azh7Ywvavy3HvRYzX7W6BhwtWiRMSpJxFWh0hUMUy86R9b9HFjP5INX6aztOCPyuvXR(Kn1zKS(Rvjth6zVSlztvxOw6QlucaqFYjdXKlSlPh5fbElcM)TEY(lg13Kls(89JSIW3Dc)9pHv4V3dshPSSG1hmyt2M65o03rVxzh57FV81BsZpFuAam1jVEFcg0ONTMBbzRuqlmaqo5KT6SerLdtc3pSvP(zPLiR0osulvTEpz4an1yZ(P)cvNeEqtn7O8eBHylflm8zbk48vMIawrha7QRjGn2(dQP1EGo2FVzxD5kTLrRqxT9kuo8xF50BYQU8Mmw23CUtwD1yWdMySlxfFvT1YykRXbwvWbU3owgzax3ATEJTyUXN2fF4E74MJneFviByKydP3DRNxmYLYSgBy1HFj6m9YPcbE3VEXotFZXa4xf6SU2pt8iINONZko6fwcoRBnsWlnKGp1UxgFRmsLWDCqLSijasRg9W2zdmAvHAWOX0(l6SyNpG96lgWEPon2DnWcAASN8Mz2QL(T)SY72Q34S(G48wrOgcgKnb0oklV5FYea7(Z((kBRqqndhNtWUiflVtYqfGL31aMCdA5zO8DGJRp6BNj4o0Q0j4wFdbhqPHtRFXZ0(YDmsv5krmsTMy)fNy)kEllJI9hSeI9Hkzrk2FWvH290DKHQV7S7VTHAFO1S7zvdby7Pxgja6LGaavYIKaOVkKaW39P7PLZD29pAOUxJaSQHam8Pwgjazkbby4tTyjazwfA4VWLffZ8aNQRrAn0IaypprA1s1WFJjxyV)Q5j(TwqwWFZa5PqULG94xOaiMXKlg7XVGJ94RUKXEMuNsl0ipqDJKQU1KX(ktNR8glLZvExlwzSVrkbOsKaaqnGaSErgbO5BUv9i8PeHR78bu3wiEnF4gZdDBAjIiVwcD17axxcPxTnETH81LSHGSX1CUyFcgQ7WoF9WlZ7B)wBrqvL76TI7ofox39sFnDjwk)vEhknyFRhx0MDVgoduSQfXLMAYH2issbIcsido15pXjoF390vtD3AyC5Ng4Rn4fjHyN2UNJLAAKIVaxLPbrm9tgGUYdHlcphH458RpqtbHw15BiyKibeHFQf)jiiAQmymz33CJjJUj7TlgYypmm0CetU3Kj3pLj3pj5)RO9AiUREraqak0cKmKuGlgSJMLj)K0Lo8hjQ9Qho5N61qEi2Qeo5NMd7DhFdq)Jj3i0X)iKFgYdpzNNoCxpWP7T)w62QZghCgGUCGtEREXU932MixHJ8ZIl43EjV5h(2i)CEXU8cwRVX()ZoxlY3KF(f(c8n5Tt(fivglqT15VX6DJhm2B3HVshtGRw2dQlLqiC4UorN9JkhYIpwy)p(O9ljQHRNjz1ec3dU4LrFOWELP4Tw9Q7rsUCqWEF)Fc4VwqW206QaopS9YF(m0tdLwqobUKDgSL2ABk6L6ukrcb5W92(zBpS6wZltycjZmEmERT5Sop(FyfvC8BCJNRyh81F3V7hFDRBJtGRxTDKMpLo5PNWoNbHhxyig0nmHiP(kSxoTUp2YPvy6(Be5QLhGPAWK7TtUkuzp)J9yFMBCJVDNh)R2xFdEJB8cE9IlUlBJTU3LbABPZT6UiED79bTUK7qdAcIwRNqudoqXU7yxC)8pHi5BVvxYD3iiaDJ0La8btOXNsrwtkblQU8bj4SFXOF(OgBj6xi6NdsNXwSwJj)pCbdysKPIJd3w4b6QTIjrgn)bfIZKVZKjB7cXRCxZqF6huXkQ0Qa7vCKkFKOHWfSvVtqtegGzBMUidHxKTg7sVb0GpyfXQTU6c0yZuP4vhDgDdOdr3oy3GsDANKJLtuAq2KZmNFXkWFbz7yPgHM3Oye5fJvoWyJLcaCDeRxYjd3hDqZzfWef5JkfSidytNU0dZtx6Bn0Yke1EfRmf(8XUzmDfTyimlkD1z36c4wEg9IyB0LzutsrN5wNVrDi2wqDn69yRoJNNJ8bJU0LAfCkd(hqt9C11GWPV4027ADwOkuwML5vwwKyToNNurtGToNpSBtu(u4dXFO9QxoBrKmiWlSS0T8PyazDJb1UmxqEvjXPZdAl6kbJ(12YKSZu5nevVBAe(PFyET48Ycmyen8dhexfLnQjtWRXsDsP0cDLiwTbBQE)(NbQ8bzxpEAjvxLVXyCAStCoyuoxvVZvVmhi(0v(GZ304qxa9kUUUtUzBTC5Utw9ZuyqYMNzKUorDBPW9(bqx9P1WFPcMm5Ei3J3xGQijm9kIK3BuldADjKTUYUEU1H(fUWmuH07heMFGq9QilmJGmg(MNWQ9WSqgNHghDVoW9IaEaQMJhDJKiA46njoE)Xv)MobxzvfUBsP67y(2)aYsguw1(3lBhaCVh0NFChyX5g9WpAE3RkFv7lGFx7nvwHRjW3aXy1WwXt3)E3xnjHKRwLVAQX3E3hCiEPajhckA6)V3QoIvslztaQf)hS0neRuu1RJ1uaLmZONrrXq0EzOwKPoQn2(wbGQz6EO7aehJQb)nnLsEdW50RXpki95iLXy)0fw(TZg97NPquD)OXC46wUWBaTqdE0bd2Edd01HYD2HIGzGA1thMCVztUhUiAyn5ElMCpIJMvtU3QBfQMCxHZK7TzY9ZyY9ZAY9ZzY9ZtMb0vTGqsMC)cKN2K7DmNkcbPW0GwF(1cAYnbOZZK7DUWvZzY9Uws61m5(Lw8k1m5(LlurMj3VcmhGhDZMCVB44hJQYYK79yPUYK79cP3K79vs9sMCV)OSqe)dmlLrMCp(CQjYK7dMV2htUjHl(RwOcgtUFTzPyXK7x)MvDs2(UuxdFQtDQwIDktUFJsOdXK73Sikom5(WMCpHTYctUFlacId8)2W)(iFTTyYbqHpQj3hZKBktUFx4I)Eqc(4W)(eW)(9H)9jrz1MC)bCynaf3Nco5pcgi(0lyjWMC)XaD0K7ZqLYAY9NukrSMC)PloPQMCxZK7pZLCutUNSq5NMCpf5JBY9zn5(ZHwYFb8V)sM8cywe)v021Fnv6Gj3FZ2n5(CMC)TRki51Ugj))LrYdej8L55BVZ(B)IRrYxUi5)KZjjVgIN2QamPZinU(m80w(tIoGQ6ZARxQ)sUbWKN7noBmvWmfbJjPMQ2x206c4Wk0D(fDgMxi4aB3DKZ7RpAN3FO1TU7FDRle07PEpLUzLBp)X61basd(oF31TU1Thxh8T(0F6VYnUXx2742BcoKVk5X68(Z6BD(w36UBBF4gCQlmu7NjGsNNVXZ3yiCg5QB9eG1y8z6LxttzKbsBOXZ8PcmSOzT)6eQ727O)PkCtVHC3vqrVO4ZPZBBbca3b2WuUEGu3A1vxTlVRbNnDEBPnuVS8X9qbL7abLmNTmt(BErKVG6EkA3K1k4)NhKfUDMSqqI0oEZa791YwM5RokZrQfUWyZe(fMUG0xr5nvePG)xILENIaKXcYaFHDXDKx1m0Ii)jRtflozUD9Oh(2Y9DMs(XXgrGxvroOsYKGmZdr30weKXD0ldXGAczcgSE)XGlgwiJ4uW5UMWok8mCW6RRXGMCNRCGuwTi9JetYqitif5S6DLWYhTq9OzvOt1bUtuBOiNkRGj3M5OrJ0mNJ2i81olnSphMZV3JDmAZXGTXVlMtq(a4NBgh9l3H18TeUVBRVYS1fvZARlpudn0yTmXXpNj3)kkYDkNnTgO9zjGF9rhh3O(0HjQgL8JS3AFyB3pONaobUxcX(88eT)eFQiCt(RT5Ma58ZWsV9sM9K4NaiBhYH8JNb)0nb6VvHrx((7gMIIUHDayfc3oGUwi6glGpiBznC(2IswG(IJWA8GKaCAdIokoyoXw9aLM8oRT0PXircr3CPqXyJoU9U4ulOqR79on5(c5lVYKB6ceibsEm5(7wjeczY93VqeXyY90Lq4IWO1DQEQpE3XuAZKZ0K7l5ikXK7FWK7zm5E2zj6WK7FKkVWK7lRUfqWGva83NakLWK7RwcrdMC)tKVGj3mlEsViJ0BY9pFtX4n5(A5y5MC)li7Uxh2nd1de7dBY9Vbi3VUj3ZBY9nGJ(MweytUVLd71K7FphH1KdANFhhkkIbDOLMCxxKz9Y)r08nVANC5yH)NMC)xmQ36IA6HtKXBz0WKWrFVCSptU)7OOzuFFtU)NCemtUFa1kQxWK7hIniib)yQLzutSUHPN1rnCZHay6XdaRn94LcQhZ0ZT0YvA3YqBalBdFlQD2Kh7j3wjnUMRZJ)S3j(NVop(34tH)9p4DUnM2ANy4AG0sCBV3YdY7Tw)SxDiZUAVDE8p)Rb)do4ZDx4FVDV5mNER5mN(lcGMVOTT0u80gkep5Y8zQvXlS3f3XT3vISSDUxlBN3go6IJSxZE5DVvfDJOQB39Zto1mLFu6abDWerbpkhAeTPNnurWa(9Z(qk7OmN32a1uzyCK5zB3fPiD8UxgiSiwe)SBYTjXVa(AGVjmjU3ZKmw)NB)J19qTcMet3doUUc7R3x3Y3nvGyKLIzY7L85k2EJOCUT5NCVpx1kNv6cutE90SRgR3SzIb4ONffP9viF1IS)mAmR9NXxDPsJTzMFTRVV8Rn17PynhBhZ78auK9pqJsQSXAdxrT657jL6bu6NQEy6M2i99z)LEiY3WlUxROgy(YFc4bpdF6C9a0xV9Zpg9vOB9oXl9U5YEHhRDxKhlhl7EM8I9K8NvcvQZLZfWc5MxcBsjFgBU(SpyM)Pt8rx36Unu9fQfdNuc9vsBnVK3nh(cfd41zQj4msGjJeL8Xv70LxBlL7vdMCF7BV(oi6Eu6NyFN86gcooiTQQEDSVy()eNj3WMwdo3hCsn4eAWP2qvC)oeVsBuzQpd15flzzQOgD8VN11bGQD4VpCrKTgLjBn3kQb9RE3ABNl3(s3EpDyYh5Ko7Xc1xdUN)M3ESG1DAOK3PXsENMk8o5KvVfQS6zPeNkjU4AXrH52sHlqu(pWY0aRxRRLOzzBrZ5u4(R41jKiq3qGUJaDRX7t0suSRiH4r3htYBi0LZ50HEuQ(E7nvU82(CWsDZCm9Vt6STUPxXTEXZmtEB7J6rbb6EEnmJr3QJna272CE8bzPFldzHKz)HY75UlTJp(MBPapFCtiM)COvFf4VJhJkiFEeHZKZx6y9ckRf5Ek4uD1BVThEq2lq3Du4mgiEdetDLTYMVdt1J41PWnGKgxidU2EuXEd6FA61C20WVE(7Y06vu9bX9zAN5RoyA6ocC0RrZMvbdS5PONZU5Xy3Cm7ngy6zJAVTctplU1BK6P2o83D8nCDW0tG)j4vDB53yPVbVjAXOpMS5R5M5iYQ9ms4waU1UDmELzyns79341ZE(JHHeaT4aziSl5A3fhSsYZ9iA65ERyV1530Z(4m9ujTtW0ZRfWy7hLC5PQJz6PA4oha(3bNZhdtphY0tnMEomuK(HMMPNaMEcUEtp1IcW8uN76RHxKRVMErP(UdtpVQ8moXbSdi9cX4aax2naFsgah9tJB8nWoO47LMZ(OQv)jkLAvOI784)Z1wlm3XTvs1NS4kSOQqfbvOBdFhOdkipCnAcS3a((RQyAddKV2WGtLrU(4rs3i)ajggMGbgVspBfKZNKTq4OBOiliQU1W8XL4tRNlUSeNcdGadrwcMadcm2HxpSKrw(04UCl9IIQBpIqA4erjH0jCvaw79)30XKwHX)0fn9CetpVotpaGQztpnz65OZrGqD(qnKQLaxwPr12wibc1gXafRICXbf2Lo)X)0gErn(NYpu4OH(urI26kw2I2AUfEWwlYc26BbqYZr0w3T85pvO4TRDj(K2H46U8SL7ZAMPKp2JxoD6PhZAJc8QKRwU)gSUsXp1j9RF(sWgM1v24ISk20cl9lWs72N1v28cReqBjTMe)SwB2MeTemiDvFBwbIUyUnlXHTqGh32gVVBr)ouBEE(itNND(UshH67Q0rn88UsjQphXl8y04fEFKw)Kv4XA9p6A2(81Axp3TrK04xFtHW7s3tIv3vr2aW7cUBvoHNEhLnUDHDRB)ko(JWtlrT3WJn90gCh2M5ULhzT88G1EOQ1wjP1oIScUaRvEU9JVCn1tojw1(AfleuxyiMrXO3kW9Es713jpTlMBrmdTPgBlyYn90b123t48E)Gw2jpkT5yTsvrtR9IjfTjw6mESLyg3(BDPwJ33snJhFPMXwwQpJVLLAnE)l1A8rwQ1yOLAgBDjMX79ZTuRX2xQzSTLygp75wQz88l1mEHLygFh7EPMXkwQzCpl1mENl1mExl1m(QDLXzTduVRMz(na90Bm7DExoxB8U5)HhbwD68LhDOIzU1k22n9YTA3v8L2HfPrIZ1UmDtDg4sroDW2Bj9ySpcQZMZYWRYr(yhXDubXC3M1fyMjfOGtPjk)VDkp3FElNbUwoP)wKRkM3gmD0fOnt9FG83(O)KBWJ7TEDtU(PbOdGi7NAHpyX)uPY92Br7eOVTlCrJ0FJ(B02KHCBQ0ye96K(8ED3N3Ejz9rSCRMfFbzhTsX)aZ4ourwaL5m)jULF4IjX)OftIVXIiXHw3IiXNnHtIDZKP7G2WKhlyxJp6lsm5f83Dx0f2Ek9sLj7DHXK39cKjVq2U4pBcHAd2rOtK8SxcNLCbBB7ZMvjoBw1)z15ZQE7wCQYTS7UhB7U31yO5W5m4gn2gF1SuBTRoydn1y4GnfOXgYTSEb6nSc0bllRr9lh2tU1N39ydDoMd05WRGZ5E2F(PI38FKZzg7YnCIeNT2ePoP1Wcmky)glE8D6(ZlTYzDG7faj2B0W54noN5Atf7I3URJ3SRJ3QRJ3MRJ3URJ3PRJ3DPR6I2y2ZSUORxjtUpxwkUCHShzmxeWOlhQsrvoFV54D2SdTZ1s4WDD6Wrl6lVbsrf0a7aFbooF64wV4gmKx3E0Dd33(JCnFLw3oQ0Qb7GBW(JE1Zn(RZ)JEDNZ0c9BNXx)kAAcYgMCxq0ED2RGpb8nFR8p9S)gyFbBVBvQf7)fqByYqcA6cAdjjNAoR)K)bRu1FAfLe(6iR2yZz933ByLP(n9ezoR338hCLPEN4C8A(IyOKrDUFSBFLP6NQvEzzPy8PLUSWC3a4xzAat3UECEvbFTOziPp3q)(YSY0eU(5KsN2NHIViz1gwA45UF4RlUY0iu36jKsAGVuadrbF9YZRLDoBh)BVNviEiBtroJq6eZz9)CRq9dtebFjjyqnm3ybTvOHH7GcgSgg6qrtNFib55SP8QV)vMMYUULp7ByUQy8(l2A2TP8VFYhGAqwZoZk)WfZw(BodYel(lbrCExB(Sno29AZhgkW9BhMWUnmZFObAP2bA4ugbg2(9HGFJ7bQnqHVqj32m)zPrLzT0v2c0sGGQdRIbNHNbPwguzOEA5eTh1jO6okt9pgVNUmY(F3JDSz(Fx28AUZsBwkKwFvwgQVd0q98dhZdEztp9eSHMBiyJ(Biua)n1q4abAS2AP)wh936zF4lyuzsORPmSq8Kg9NRlQfq0tBCuWK3kMSlzzbnFDiHXqW6rNcX9DD538JgLnxax(1PP5Ap3OIx(UOfD(2AiKswTAVC66EzWIw0t9)Qx0Im9C0cx1IEQfXQwe(oQTbzhH4j9gjN)kBrDxSDSk2QLIGbFgfnvrjDjDr1T56w2705IQ7W9vPk68b2FLqu9oCDJq01Wb(KgIQ721L7qiTV2uYijtdkhr1D66ETjKrrwkoTMevVtx3PxbqrIg(EWmeIZY4UYlJdlPKv3xpsYj0fl(dKc9bA3ZUP3dgGFAJLFRpcFCnPKsXfY)Y9IFJZj5tNo)oHEaPPcY(Avrti)(mStinVUOO62ZR5IXDj7XWDX0o(1OhNDJvQWw4X3IPhdtp6MEUOPNSMEKm9KX0ZqME0m9mQPNlz6zytpJy6rX0tAtpYMEuNJOAOHr6V2lx1ONXFxPwWr1WEw1fvdhC2IJ3ZlPoNlAr8)UxxQ98625C7PiIYE(8wwSOc0EMOS30nksdKpTqLOzYDp)nRdLPHIbbdsM1IM0C4XoR1LShRDlBtSu042DDX6v6cHJdSO(BZ2frf6DCCBCYYpEasdTi5S55fVc1rakeE0Cgd8jOkNZT9iDKWbAS56ceoqt(BUE6V1v0TkjajHMd4YzUgoEKBn8Ylz4fHeD8abpDd8Dh4CRm4L8xMWBSPabl9YeEEWd91GhV0dpc1ZLgU5tFQaAPQ7fhXjveUX6QR2fQiKlwW7dALhJ8aloms0fgg5UlcgXmQ6EN1hlsWAS(KlZOKyqmgLz(OUWqS653G6bkDEN1xqddn(nOOr0O7Vmgv73ZUrCi(z1SNIwuoF1kFPhQiFIrovwAHu8XhBq6NBJyrHXf5lcYj3U(uJ8v6uz9Xgzh5zfV7u00Z4fR3sLsHm98M3WS7fulNwFSW216Z4MoBKV0dz65HjFEtpVLO0WxUypxMEEe4FVvkB)zIsD(q9ZZRKdPEaDmV3hNfRm4uYx(SY8TDb(EAPtNOV07752lYBLlzEeWFqHVsUkRn6LII8Wz9w52HLVCYB(v7KiZiN4oriDwwB1A27S1McQGBRpcpKFU5B9F9oTCdK9RMZBft5YIF2mToS69uY9BZapi9JgQSYkRiVjVSRPy4LEfdAd3s)nnqhNVRMvZbaxoK)JBm0lmH)sRHdEPhh04PAOJlmuZP06RULxCaUNM6VPfiuiZAqHx6HcD3EVJ0yhnl0sS0l3IeU0cehm0l64Gvg7bFXdhu8QASfxvPpxv1UxbrCN6Kc1T)UoJYq1USI4QoCGgBYV)Wbd2C9nVaHEARjc6LErqNP7t04a69k5xkYYS2OgQR2gdSaHcJUgu4LEOGF(mJOMT121v75MckKN)RaJtxGEV6sRHbEPhdC6l1VrNJEYQ6DS6xEfhmU9RPAbkry4xUJgI(ka0q7kzVuR6dxxQ6oZYlAyYCVEYfiEyK1St9vs2PMTPM7vw)Sd3NYY8mJcxpywYc1z5kRb6ELeO7cJPpuVDFw)NQUlVSd6c2yJlqqx61aDVsc0jN(Kx8cQ6kNX)YnORHa13C9lqqN8AGUxjb6gULag1ougTHu6zzg01O)MQZ)ce0PAd6WNM))p"
-NUI.WeakAurasWarriorData = "!WA:2!T33c8XXrzE6EMyCSscrwo2X2jqACios(HS0OxwEJjOrJKNrwV8mJSSmjOPNz6z62QNUB1Dp6H5Xsezd(w4aobhWUzdjRwULD5chjkeYdGWEA5XDhSSL1UKRz5TacW(GDJVdwy54277R6EMPNrZipw26wj8i)Zs9JQR6RQ6))V677RRQlMe1KQM41OhTL6BSP6BSM4NFFAtpqIe68gmAtWRPlQiFdZlkNqrlfNbCsvxKtoMGIw3ACP4dpTkF0qDgSRU6FwozrRu0Q3uCIYD71aUPxzfz(fJNwJENrXlPPZhtroU(m8C60mGu1c4HHm04LtAiSLG6gCAgDt2kPkYnqUrYnb)9vULOjeLf1fw2L1vsRfJpQykvfndpP1KupGGHHQ(rp8HNKlPs9IkhUFoLjfgkWHgMtttur7qDYzWftAA9uhUf1AazXqtrsIpENcIsXbzONfTtiBFq9GvTMmNgK3QW0zxiZL6i9uSQBl3zACSE50yNpQIwCETovKu06HHHX9CwxOR4j5v3wOXtZPXZ2DAjj2Hfen4JQZNcARd2y9nuFZZPNoAq(KqZLEvACXW2n9w9cvEJQi3CvKQRAodLy29mx)JqSZ5qINJFZZMutjTAaOkfTvpT2qdhzXOCXglUMIQLK42T7bD3q9TCrrzdEnzoPtzLnVVOwzIWsw)1R9tPwTxjXZDooT4SHvuKmevxWkbwaKTQnLnsjk2uhW3ShVJdftTHKJeD(ei8a6sHMA3EslgF(HpT)wBTTJ0tiXXJccycXKvnhIdePvWQSBXcidzN75TGydQaYz0o7Q)WDfCVIXvF1zAN7uItxNDqqkzpeB2EZf5sBap1aQw5OxjfU4Dh1GtIx2yNbtLgK)QcgdF0Ds(TQYRo0IzDGkFm6bX51JPkU0BBo2vUGQcts4jfnIjuVXewWl618jQhdQg1NmPZlYRlMuMpoB0Pzdza0HU5IX3RsSXMXqtmzsOhyp7B20Y2NuLM9bp0mGCjjfiUEvKTgKdqwE8MgabrvL4MgWk8tavRO(55KmeMloF00jsGKjn)D17GDpuVlbOiAscb3qCQ5hTZocfE0qH7iy4S3AqnE4wbdnyx92BqzO)sVQ50OipmNcsbtb1JbnGUdYjPkW5EwDEPe0UfsR1mX19wQj2J5783dXL0nDrDG(5F6OAIXdZfvI)81Ua0bOe3qqut3GvyXqcI8sXzHlcnMcQBpGSHykX4GEb5KSHeusdjAE)8AkIXy7LNtvygAvmjpRWf9Ikn0gJhOGC4fwiip0Tks1PazDq(yJjXRRld)hYe7skKexkHfSpzyoGRjSyFGqYjbDdAIJXlenmh0UZkmNxjoOV3auXjSeYu01tRZgkfNUGWCdaunvLjHYwiyqE54qb4JNZqGDyqBe8SbKLTLlb1DhAsEEvAfIwc6aQXlNHHeVG2GPtLIhLHUK1Gehh0MKKxwqT6qcqk41WNkSGgGAu3ryH0YazaHFQ5Yc1DxW1bOvcEzDXj4Z2Y1DATPfUyNkYXsRJmBS9gYXBVycwMgvH5aLqAstkIvUfdHOoq4siXhZqqTMofGMoOFWr30cNsmg0ynnBW0ql0c2fTLWR11u8XsBWNTL3lh2mTaaGKMgZJobbudYunSJe6qIngEvumHgZE5aSsido54ydl0QeJxfkWzHco2ytYbv05IXJxhbO7T3GrvbfPaySTOayDYbK1IjWbqM4KT0k56lCOcYnVSRuDHxjOeakn2gzisRKTtULz50I1lDuPhCNZbnPgkPoouqtT1hlrAzQQ5AL5NCqfDlTyhKf1xpbVT676QIf(5qhQBkfaEo2j40er2Ho9oavaaJjW7guzYEXsM9yShbEcwQyWQKGve0rQZcddLitM44rNS7GWd0uR4tmPiW1WNiBcTEwhjxGMCp0cqGxmPGrPsVTGhIosDjLCRbYDi6TxCrxpB24u2drL9MZt2ZLYLl8007P18f(I(a2sVe3k0QJ38s3ONjlCk39we5oBrTmPU3Ij1fj5oBwv5IHCIJXslKmNgL3aiXYlRiGrC04PyXrY9KhQr7gHI9tHf4uDQG6bpgBdl7owJVN9wwxD6IEvdfu16XyVZ84a5YrWcswXdYAnaJpySuSbwuLdGF1MpTHnUc9jYL3wpeK55E66TomBcx(b2pQYKHTLSglvAO)EyANPZu54M(T67w(DJLwd1abqPSnh5vaIaAI9EowbSCdb(CsE2mlJea06LFZSsGqb3nVtGIZQF4sxK4poACOpwEjGxsNFLEI8Y)8Fs54fxeXSmtlsbApoWLxtuOvSjQG7MxNuJRMwVduO4wwnNWOSRqJ0LO5n)cSKTVllBYVDQ3vSDQ3vODYtvxovn48siWof2ShyrEpAiEdlspvERnNOxxjtPLWxRJksDRGoahkWajSwRmREl92hiJQ16ypmRh29d32UsEOgRdUBT26f3FjFU6kkF3zRia3wouz68ekCu5CA5pur0Nxi9j)cWZkvawvBSioaYkQZrjTF4jx5sRyDCzhRW(GdumTQGmAF7x3XYHCwMywW4oLSmDAI1Bq8(Hh4nz3VEWmv13svzEA8)WpKD8y3nzuY5iVfscchHNmjjgjfrM8gidtMGOs0iXjjxamHMlU00GVDsPiVrseYPjVvsAsuY0ebYzi3p5(iserY4KZsMIyqEtK3mrHm2mP15PG8iKdYqoePEI7BGShQJ(KBJC7KgMpr3rv5hUR(sE6ZsA2TMvSr4fihPkYEbN2j3rvZQBWR2HCsj(7aOrCOlFmZKeDFcnTnOpINQcI9i8BLCNBMSnsnGhWKDgvJlUyA9h8gjVkYR2lA0B0ohku4b6BUePLK6uulMeFesTcKqUNbUzimdCtQJSF4mdQ)smKdS1zXYHYZUbYjxi(0GVFIXOU75fDJdSe(WBHe2n5UFFKMQICD7CEyS7y8DH(mQhHW2k51yhkcslKwNpMIu6uY2fv7Dtok6mn5EO)(y0F)6WFdEaa(bd2v3XE2hXBvKoFiIpW1wsxKUjhN4NeG0d5eKEj9r6NmazWQwcTZbCfWa8xg82iAWo8fyOqKntEfK9LnsgKxl5UoF9exmGlW6CgyCMGw5RBFQ7cklfnE7Gbqf9U00u0a5)dfH82i7KCsVOLuRApfU4yGhvDGXoWii2Wgb7JwiMIIuCLjLXa9imhwaHOHm623eIuG(mabmtMefjQLjHTd91ikkySmrPXTA1aeRJ4NfC5GpoF8(4MsyjvnLKAGlUw54(V9n5s9wYKvH5NYWNOoALB8iq)M3ZPOKcBHAkivPvaeHcDwQ1a5BN2puFkXbrNpsHfMOSa68JxU0gq1QH5hxorWa8HMA8GTtoSBYJgz(4I6yyiWin5I00(3xWycGp4Ts609mzm2Eof5mLtWj4KsZ7225m99VVzGQIkVMX0KhH8ur2h5PvRrpD06BUEdOAm6eI6IqgqVZtG5j5jNNglKHO1pYtXq(Kae6PPpSt04IzAncnPOkqdqMg4xngRm4S2FPzHQ5OY8W5cwaZffPiSy80atIxbz2JIDQri3Z(GZJQlIuuTH7iyWadeKCu4I78jJq(Sp5CurAmzO4U(7xt7CkY8bIR7I86WuSfifBMwC04nfzj7S1(bISiEo4nRiqxhsuyjAQgfC7D0mbJIMcvEJOw((tUJE2jzRlcTsye9qQQC8xA2KGxZzJSN7fGh54zUIa9M9kkZRVnV4HcKTQbpoE4m4Vq1mlgnTHHImgIdO3Cr6LbzAmmqkUNhpDe7a8nhn3OEcVd6XETcyiTucrdren9N2o9lGN4ZoSVUP5C3A8JNMxo20dEDnuVNwsyhkXrJLniP2XaCuEG8aAr36Sy1LEj74sMbAezr7ZvOLw2hedPN7ZVp1xdfhr)LvCRhvDudXuqdkmwNigxe3Q7UiPX6GGysJRUD69qoagw7yu1LE7aoDoQQuEKY5T)b6VRfTIwzMQU6Exwo7PE1rtgl(OcIX5h9C8AkcQV2sjIs8j5In9OjKuGoXsKx0eMsj(OO6UiZAFBWIaAuhxKE(KqtYWACQZmS9blrVSJa4P(QlLmyDgZSzV)EVlv19vurjo0GMItkxllJ6Du0esHSuEwqADtTUsv62JhnQHaOTtay0mQhO0ndfj1SLSda1ajZlz3eHnz0yMoWqH7nq)DPwJvtKax8CiFlAdEJlA9qItXBn25dSGt1vcfPylSNQeTHlRFpso5dJR)RYwWSWzzem1BROzM1HKVT6TxYwb4)cwYoQYxmX0KwxSG8UAhTe5Elg2x2r05jToh9swKy)37)4JI)88U9FV)03i(ZKUvVZsxNDqhzlDQSrJ517KLS9QkDFnNUHaPJpSLXgNFBO5fQBdvRMKxMxtmwibmKHrMNQBgogEOiQBhpJFkWKdl919ZLIxyXSQVXtJqnybSDzqWiUmxegdyX8Y35WSSdPj5MwFrnEoPqzsjyvkAGJF1DNz8r2bThzNTwAQQJS1G0mgTgkOHgOXN8XPJMqpoIvnAc6yv4ReGkqEXQ)oHHDOMrTv4s(vRoeD0Td3nCRdJVCk6JGjmIAnwHZmS1BBOxLKIXCPUnRaXyFrW(a(hFt4G9NLgTZj49Wbcvy3OPOJsJrkyng18lYJGwDr(W5SUI8ORAtRipg1ykYFOazoNgor(JIq(izmwI8FIoOh5pwG8rrBHi)jODpK)uQrpKpwgdEi)NJqECQ5mKpoAlZzJ6BYOdl5T3wh2YwgYNGAbtglniZtEk3Kp5(ZyFb(3pLttriptPnaH8SwgDqEo0CdYZBBMb5tt)9NX2McYNL8c2gj)5U(4FlYFMtJgi)xJqwic5pxG85PP4lyp0p5l(sKVKvn()Ma5)(2i)pGb0jFzYxH8xq(QUj)LmeYoixqGSOBYFfd5V2n5Rzpml5fT8l5)joIkXK81Jq(BCt(gWWKKVPBY3I8TjFhY3L89ilr((mKFGa5hkqEPiKFe5ht(jK)wYFh0c(3Zq(hGbai)ugY)i5FI8YmKlYq(Fjq(Ft(zKFoOFK8pt(fpa5xkq(xIq(vri)FEvKFnd5)lKX)RcMmBI0Qju(MmUOIHjijWfUUIQQWKzZW)FfqI3c8)R3b5TAGUzYCJuGUjtvrqmUjZwJq2QjtnMm3e0mAY8knzUztMTt(4Mmvh16nmq8BYSnkDd9RyqipULmShtMDyND7eynUZXAmzUvtMDfXKz3Umz2ZJVjtMBZK52Tr9NBJjQ3x0ahFeF8DnwxjxxG6h42RG6lnQ)ncq0DAHNbS)TKbSBJTVbbly7ngzMmZRIAAKskgSkknP6zZ(QZ0sltFtV4ZrZoGkCrCmayGsWLT4bH7lyrsqMeYsq20a3EjjkBPiefKFqPk2KK3YgtssJEAn20bBjz7D2srjjrX3XoF88jcWD7EVkQ79EognnlXpLQOvNsyW2fYtvttw0kCwDuVN6rhHS4xlL7c0jbZtfCqWYsPItSektILVg(nfEvK1Urt(IlAH(1TmudPf9O5VJG919q9QbKdQnEZHgw11uI6g6rMfN9f05hXEc2CtT3uJeCALadVyqdFfg6QCdXauWROrysSXK80NwdTCspNSojvX1fJW0WROYimLMj8UD6uK1ylvfbhAjJrwwU3GJf0WRiJLvvt4S8Cj)HlOdkDl5HM9WjpTnCMBdQBcnfTUqstnCTT3Vd48rx9W58UHBRByYC3x5a9B3Scq)QGde3Uz(oqmB2591vDFi43ysjoZj7WxVJ3KVoMsWbLONcPefhXVsuH9NLkqpOwYtr(lSsZMjpPxmmkLmzLK78ZxzUdC0(sgz3aF5aaf65uwofc4pliGKhklsZAwKcTFv4sxAU0T8zYNlrMS0COeMm1VNGT4P5MAttzs5bKLMocAvLjZbTgiIM5oPrESPrtUXKg1Uhp(vgFSjhQZORlmu6z6TY4hxAdLUKy(NP3cW8XkgMV4i5yBmrYDKGl4r6iAqTPtVUaj383Scs(sR9Umm5V5Vzwt(xW5uoFfS()kYGOuBmX)CQT3F4EgVPwoz81f4)D9LQG)VQG)31xkl(3K5EUCr9BUmr9YBmr9cnPfUXJxBJ9LW36cu)UF8kO(RkO(D)4zr9A2l9Q1kO)ByJj0pHOxLbc4XB46ABDb0)(dub6FvW097pq(MUpVJfUy5Be)WBmX090w6rMmQFV(1p36cm937HRGPVkGP)EpCbUJor5JKNyJjsovNc(nepPEWgoZ6cKSNTwbjFvaj7zRfGKvlFKS6gtK8P9E60PN8SPu6U91di5RtScq(kpQ4xNybVGPSl6(Y(fmTLY08ATnMW(jo10jc3tp(7DQAxpa73fZj7PcW)kh4JTJfOcFfG8pefYJy889QKolTZUwEwz8F8nM4)JpuhTNiW5K06Q71htHMRRc8)QGbmnCD5J(Nl3NpMY3sMKBmH0Jmrlb95nGq6UdS(qLE)lvbtFLJPX2XcIzIZ1rDzJQFhBmr1J3CSyHuo7jBk4A9Ai5NFjr177arsfH85mgRetHf1BPGf0eDbOwbUV85z)2ZBE2JZKxk6NfNC93inU5wZU(fC(5gZKzVzMB9aVWymtM7SaT6wuMmM34mq8vZafcDPLfx0(BWqeRIAhwffAFZRCjD6SuoZAfJA6dM5zCjanvYAA7ZyjWfoB8FJBmjznPoWKbe47TNqgRhg6WO1kdCC141mz0A23Y08o(28Tw9MMISXe8pDlNAQecNR9(AS51dG)WpwfW)vUJWHFS8TzAbNFsml7GavUi)tVXe53QNb7QDUtKQPXxF4e8ZmvfO)vL1rYZmvU1rYBTmxhj58u4TUXenpMNXJ6ZxQtOmEOLJM3m5jnzAn7KMNUcbBk3ke0zsUkcOFO3CXa0Mm95erFukIgXMqLMzzyZCq9ioH6Mm1rX6UDG1D7aRBzXnGxEPmqJSOg0Q3BcKnBRXT0ywnjDPvlE(B1HL0K05(c7q)OIjSaUM9ONlgxFpb90EJn1izW9mxNGz0S(550mW1bBxOFrHS(olhzERVic0VslKVTLm1offRU9C58O4xUiodfTAUhQyohUQqTwjHlyzQEh0pvcw1hIV9SRRRNPPvRbXP6UjZBG4FXoOw7ZA)bnYU6nxUczVEAWIlGuaNgZNEd66p)KEJDMO1nU0KRlMLbnVZkk1VYx(52(g7yHNhK(b12HpXwoQENlFjM38oDSeqS(aWH(1slkR4)NDPLNh(p6gt8)utR2OwFItm04(wFeh038NQcdO0mG(x1maY0Ld6hB)lU(9P3GoZih4mJxNVUQRHWRlMzK)GURGUxtq3cLd6(h0DXX2cBmX2dL6uHA841o(4AtV(ycV)ERaUxta3NPCa3qZFXr3NzdQLjj9EYeJCUK1Yx36JVmuv(UDSMyA(8o2YCklC(aVIlR11xHV1P7Fd6KiU2UKeBm8qjRB9XQZ2FNvOdRfk7xk)TuQYIr4VZIR5)(2yc1Bov8AhU)HvvpEQ1fq9F1BTcu)QNMFHC21ivwO7F1B9ksFV0gtsqWanEcp8nEkTJNy9XCUS2kKG1csGA1fUd4vwKIgQ9kIuiUXKuifU34kT2ACo9(Qqk(nysHjJ8vklOC(CWo(g0pbGEBPVXInr)dCMwwFe3NpufwWAbliQ1oZA5f8NpuoMWloF2x5CG4o(wLHf6nXK5n(Ud7xUD2jRPfhPAgBctHKLZUXKSihDKwot)NR3P6ry9Xl4ApUQWwwlylZ7yB9T8Evx7XLdoJjJwzrv2CzqvMAJjvXBYMA(iD1zDPL89V5REGD(xgH85E)(lXAhyo6woc9lFzfAZvw8Mu32Y2hTlh2Z73FXd5KXgtOFOX7XJ3wcmwD96FDHjvbRUYGeRfdsSGZT19YYWQGvFznHNlKp8M2yYh0hsOH(I1KxP(l7v8U1oLytLCNs8Q9hXKpXAldzdarOKK4lNpIjFIcwb8V5YFrs(M3OU(Tsn(abhC4KJv2FDynzEtRHq5F6(RaLVkaL)P7VaOSs5dLv2ycL7FSH56VnDTWnTUyPiE9F93DfZwwtms)w6swJljFC2G809YXYF2s81F3f3q9XYI43hI4b811Ttl4EB0DY6vnChX6iaDh9OwTx6EeSo6ublUR0U0PetkkH78J0tvRbFf3Gh7AShIDyonnrfn1A6Kt3i)R5Chmhjp3rv5HtPG07CZ4oUTZnGBG)uRaUdJtoWwrAhqqqMgySFWANQRXtRme3jWDrCGb2SBKDHnl36kSpHJK2YClch0yeKeYnUvLdnZOsLFWo0GwbjrzEaOHT226xuzT3YQdxYD7wOp5wZ2NCQOQA868gZXjPkWnyAjDESvh6YFOS9cLt30qr9oq4Wd0hTVkNsPpI)xV3nTPx)M2KxODr9olTSLBhs1w)L)79h)lGF(L3L)797)(WFM2)9(nEy8NfCptM98xGe(X8)6tZUj2nTPxJA1270NqUpKACod(OPP)b76Ay(KNu94NTRjBWxVsEXnCw1TDCfdbUu9dGcLjhsYqJZQRh660S3Vy92BxDhE(c3Dyj3XEOkDqS5I5Tj6ckKpS75DulvRz)7F)wWwlNHHtxmVD2v3aMzUCcUlkuCNrTUIlli5s5V5mt(UQ3wrBjZSL4sA)8B3wVkOIKUvE)La9N5)zZElE1uK4XZ081rFDC8Uccx0K5pWKPn8jNlUyIeIXslzmDoGRwco6c6zzQS1aNGWTvF8gE14Ir3JXTJVYZBfFLykPIYzezw1juTc1cTuYTld)G3yUvyAnlq)kizWNYAFOLQA7GrMjZvU(DnT1MooDjqzRGZ(Jja2(IRoP(e1X90CtMdbQRQ)ObBQTwAQ1Gn2EBn3G3wBTTMqAfD15nxaixzPlhjkfKQPdufICX8w4gZ1PICCr6(SFMfWbn04abYakjbRq5L3Auv9aLgYVSn05PjN0lDtOwmUjZV9mz2vKpgY3)8GdHpy(uDtMFNc4YaP1K5DS64VMmNFL4UMm)7khMPjZVBECstM3PjZ7YMaMOHtCY2pBDnna4QmmmY7jlDZK59AY8FWKz2LrVmzEFuoLjZ7)Ia1jR(E4ytMpaYDmz(G2CgtMpKnFXK53J8Dnz(9PmHD4GjGrc8lejFAGjZdJhdiFl8pDrcsPazTrXK5dVmeVjZJADia3X(RhdtH9hVlkvaX(MmpITPmFrwGnyYmNv29hHGDmSd7lQU9EZ3hn6K8CQkYEusKayahGMv8Y4g5THaDr)XfvxrlkUxfhHU1wgNhxrEDI7O(qbncU5Y0ON2MNUN)zXmQPbtM7t4Iz4sEvKtRB9kCcAYaEH8r1SlG57wcyvgkYjtZt)aBaJg5FPHPceBxwPbjlOC0xU8pI62DuAdyVEb37Xogv4nuuKmevfC(HarZ(1izY8XOkfSQZrSIj(bJyzBbAYYNYK5zMlZgw9ayk0Yyit7rMjrAjj9yC4LbCWhffRJJT5zviqTKb3VDAOnCfgAf39rXKIQHGrn7ZANrKU5v3RYKadod33lUbiUGtD2GMIcwaxpEg(VjZh3M2NnO9Mm)xaISjZNGsJFBMmpXXo)XMvmMI8O6IX5dgmWX9hUaxcUvYj1W1XzuoTvVLs)PmOXblPNsbgxlZoTDekP2vV34fvMGxduePJAIsRXVNG9HRzundRtnz(RqDlFSp)2r3kwqxLtBm7uQwlDBwfu9ZFFOXua(gmN6(gkWHYD2HcHpaQ8a8Na86OH51gONEpPCtCJp84zuOqTyfAg)5wTCqN5cz6H7ur3GQMN(zIHUDKH7G(qQEUi0EZzZEn30obAyYcoiDFllV9KsNV(eQ(fBpeGFTOE6OGky(K0TO)jCA8)xhxkEMlgfSRGxZEFF3d2By5oWEkI7aul8bLtV80KFye0iFWcFWo)FeQydmZN6GG3ogk8az8rOat9xiq)93vWr7SR(d3vq0QFQ)lOdd)A0iF3u3dMJ2rqhFChKpYMbfXwDnw2omcdQsEEfnry4uQn8Z5FGGboZa9hUJEPWVhyjAY9cJ3gh1C4PdF(SCjCE6n8lgpoVCW(76uDfe0sFXOCXgZQ5Pt7n6(V8Tb)SNNC5h4EgO9jtQ(rtI)mI)79pRA4NB(74)EFYTH)uNB1TrlOGkwcikeMmFNzZ8SEGQnJ7fZlnmoRJNMXws5ftkyCm0rvWky07uHG0BiqAApzDa156mN6A6CuIN1U2pTbggurD7j14IJTzdKRLZK5hqEoHzYWs2duPizQlFd6pVmmWNj(ZN0nDaN9bd4OgaPTGE6jQhWvq2upuXQprYJgI3442fsT71rNYbzBO(wB)GnG)R(2Be(LN2GF1ON6MnUYOww9jqU5DohCwkG)co0iGwaYlJRG6mzPaoQPf2OZCvT2FXYWRA7X(2do0hDiPhME5)CCpGdgFQkQpC(mz(QWiYOwQmgyaTBlbS9yJnTp7nJzi5)1OAdKDtzAGYdtM)ba8(dnzEjtgGj8Jnz(7GEBtM)2v0QHzrtDGHGsQt(zMm)9uib2r)OrGb4PyY4AkQbK7wtbR74Ue853w(dRBvXSgDn)XZThmpZqX4GYwJM7COCRu8yzSA9y2d)BpGDwnx5(2z5f3XPDtdceQl7(bDd(QAgQ1GWnGR81ZywQJVBw)n3LLfNErfN5(Gw9fJuWh0ktMFHvpQRVsnom37Ns1UUQhFagCWwbx2wsCSb7OiDhNHQMSiAfnz(wMmFBlnH7eTS8BE(DVc6dZPmKgPeQAmlTHasOe6cN3sxiDOX8uf(YtJQcb9PN)wu3n9vby4WqA5mE8uvXeeqkwE5dfUCbf(Cwfo6QxEL9VmIDzNLTdw2)ZaYjE4ERQk6jv74etMlcArmzwIQwMQ)DMCHGlxOemz(jyzdeHMAcmVE7GIxB7KRZB)kGh9HbX6FMYXZeYopvrnc(LTKoW6cIjZfGc8dQUDhkGSg3Q26mz(NeSuP6JxNdhdhs6)4Xmz((OwUpsDWGXMmFntMx0K57TdySAXad2sGbMkCDPgamc48hL46g3n5uTQUTGCXe5K0Zf6ebnFI6CAPyfS271NGh3x1VkfQN3(nqdIeckFWhCNKDCwYieDtxBX011pBybWjD87cNPRTsoVaIyrVrCejhW6LgMFeFNDWoJNo(j7Wl53van6yw7OoEhvrEN3b5F)Ed6dBmFxmyeEE3BfJrZUOXy6KKpa59InpwX5bvQfYnnCpVp3yeF(pEdK3pd5dcs6H3c59a2V)7HEFKxGJW(RMPbPzfc6ZVpKOYnQppm5pOWOq9BV3EdwSGkVR1Vlz6Z4lCVn3(zsXp26IGkFlvw(fRnbvUgqJGykX4Cgxwt9dOdP4HuEKv6LOS(fV3D)sD3uZNBqPowFSslUF1k491OvAbgld2G8jKS(OMwwO97x9kAcGONLuC41osHjZVCzedHRyIH)ub0hkyWr8DKHXXqFuQJCw(UfnMaFSX0FST5GIy9vblZHBj3HBn3H3qUdVPChEZ5oCB5oC75oCh5o8wZD4UZD4TL7WxvUdVJCh(AYD4DMHs35b3e5j37abDsDPCvGZ64dnwX5kL0IAMvLb1wuGCMrtr8iXb1BC(QP(69i5SnjJlrGsbubYojVqKI4yKdxhD7W1r0njR4Ls3UX3bD7gF3zCDYPYRoE2ACbi)wZeqUN26Rj8UC9V(LbY3oCeOWL6qlgNmpByfnnWFxRpUZIjLv04PSUtq)4oB9b4ldfk7hW4B665Erkh9(XVUzz4KdMXQQcOKFXi2eYYqSmDvJPRTx6Yv9O)Bt5(fE61MYDo7vpm(EuwPYpXZTwv(4ouhB3P1MEfl)bVV1Q29DSIL7B)p8ASY9pETPCNfCVKnKHsk1vUBUR1MIF(o5KLfJYjjEo(vwa4wBeGf7spgNkpBhAgI6gRSiKATreU4WIGXmgkSHsRnb(zDCLeIFIWAJqOUTJlMWGvjbRHapB)CCAPxr54h)WRr6DcrFf9P4LIVIL)lTg1omlWfK5XGBTYybT1OUHBHcgS7g6wrtNBmE5vuuE1V(1iQzqLyJXBW2t6vw3WUyUPV6AJeSKTe4LtdNZuxcH4jVCfchM4BfeqmUHU2YgtFFd31P1f7PxFA89UEW3xF7VIRVx9c1JJvsQvqGlh)D9T)IgChtxx)gteEphpGONebcoYjKwFS(p77DvbJVwGXnDvv5TSp77DvceEvBmr4(Kd32z7vSwzUowx8jS(RvbFV2GV3Az99R(Rvc09wZIUpkXvVBLCQxsDBEL4IZRBaMTYA9THxqDB9KozsEnzU0gzV22DUFGK9Q7mmNUbply0lRLx)ztUZ9HkhzsACQRWATjdAF1fTMx7ztunH4JPihNDyr5C532OzVEAnhj8wl8RMJJSi3M3t2lwnTuNuuxWP8ihNxdCHlfudYwPcHtvzwoO49QWPLviwRELP)lMUUBtxhW0vDMUUl1ACSz1zxYMUoKPRgmD9AnDvRPRdA66WMUA001(nDvVPR9TcVz1t094NorDTg2OB(Y(nRU7nCVz1Ieu9DNvt953ru6ejQd31mftntZml40UeF3PLJP(OSWpjGJW3dqTQ2t(UdYQBWPzCA7)oc8x8joT9FhPUQyP)OXBKwt2oXShGnBgWUF2ATEe2dzF76QltUv0eosMeosDw5oVCC4Vwc(XDB93G2)1R7zPt7)WtRYBY8HIsZHPCtvwaOlRZN2nDQwtpwGEi9zIyv7XhDrDdnoC2zfcVccrTYwSLzVvvvunCEDXZKf3gMPChJBiTWdmioXmkYiDcKpslzgPZEmTLnGNaI5(yDHiyyuoefzpsxdZNQ9(p3KTgi2PAEkCCVmtXJPU(oo0Hoe7adgoWa9hIfoUQStWcRPsMMIk7XyBO(gBHfUnByWdzUO4mMd9xoaKe2ZPOKITwAcHljAOZAnTB0RdyIYSPGhqEA2j4KsdQ70G02ag3LgzJc6ibLh8Gx3qYGkeRaOYa4VP4qnsPshtGvNxogF9fitk0zk3ONMkxwILFfnXZPiBWjXQQOtN06z8NhNVLYS2Z7t2ABarmWL0P3uIpHrkfDdwvadDqqOYDlnSlo79QR4YWioKHtXRzig7YvcmuulHaevXWqjLdja7P8nq)3Dy2U8fimR3U6DGHPDz5KnuMIPG6Gpwo(PfZaEyGy)cKpj5PiVWfMboAEYZtEcwYZYs(Cx4TbN)zqtBUWBhV3fEhKp7fENKNMfUXtCHhao9PVWmx4DsZiyymOsIT(fozaNeN4M0c6Zcp1VdTWEwYNH9cNN8Sqg9SqE(2HYdk2xasXZtEwh53ifj)eOtcYIKHK5VW78cpawnkDgIFugmeOOKABeAYxoUUounYPzpma4meQpf3u1E6dc6rOL3FsgjgBHEbWkVpnTDygARfuWpaCHN2QH7PX7JTtGLGyJ6tap0ZEH3d7YLLrUeYYifxwMntL9YvwkIKWnLOUvBsr45hiBJgkoiU(aSLG6T)svrGlMltYc6(0W))uG0bYdcQEi8qOZdf0p9fExudGFowAvXQo5aYaPV2l8aSaUKccrCklT2)eylacuHlbqAwYZtrXFoYtuxHv4rUuv4rUev4rkNk8i1T6RV5q0R66lw2Fyip(Suu4LI(2iY3Sad56XSBeWC6rYNWbYiaPEwOM8Sx4DZU0d(bAC59toZEp5Y(dSAYEpRy2pswPFehn)x(sVZwDNzVNCz)bwnzVNsK92SzO7bEwwkF9zUWBhHe29VqphnHfQjerB1hI3im)uDARExwuQKj9OosATNUXdc9hheA0G)7PUmvaqIrLQVJSOuYtrXNOkJhIffzaG9aOg2l82aOdAyvXgNbN(L4SeLA4QLd0uZKPlvjWCOYA6aCBfX3ZFoDgbqFr(VCMzfWVmc6uj6mAMLCqM5eGh2lXKcqTg6uP1AoJAVyep4Mi)6VYMSMHb0zzD103UFrMPa2UQVV591vFd0V)HWfXqeTb7O3o8fO)vyYduLLl82ZDGStCGCbbiZ8ga9CiZ0U(LWf9dU(GS8V9(eORLh7WVx)Ec2AdT0qtuZ9PUXosvKb3d4sNLJB22Ceeh5KxjTo1na0LaF7zxU2Ct5)52IUoDcidnfmuVCV7snvBC6vGPRMT9iW0vlMUA10vBUnDDe4)Td))OGvLMU(TYAvTPR7bU6XemD96Iy66EnD96rdFnD1bolID5DvzMSPRoV6BHSAdb93w6H8pspNYPfYMU6ADba30v3Ri(201XV8HZMU8dDkb()3aypTFKMBSaaSPRtSIqvtx9AHrpW1Wy0KhVT(9eU3tf8KsvWORPyutMJSAbO1DnmaD64Yd3ES2dmMW4vaORXwb0sJT06QfJExxdJr5eN2R)UB4utEs(FtbJwJ9Bu6OfI6YmPvVKlY)vcfJi3hjZlGT)Lkgy9fZ9XFfxw7iq1cYca1J0sBn1afOcWskqn7kyMcyxrGQNRHbQt5FOOICNA8r879YhO2Z6mGArlWxE6mV1qOm(HcwLxrw5J65w5Jfts27DPVYti8F9UTEhIR7vQ3ONM8SQn84qxdZvoDRTZnCxXoLuRJCTexX01q)MeNWK5aojfMmnGScVT10rw1w60W1WKIaNAQjAl24T5)mERyn(ARI7MBTDpnVAXOV2RHXO1oS4q1E6yPc0CGkkU)nkJz82yBn2(QLsu71WuIMhmPNEgV1rQtTZkQTxZvB34Q20IdEnmgTVMMSPMKM8SDmuTvWOR1(e6PDpRwm6HVggJoYjoH8j5s3rJN5CvWORTy0wAWJN2wTy0gVw2fnovLK9hFGoA9evWORXy02Az1Bp6(VggJ67mdgnD8tEKA7SUky01umQNJ02QEEru)1Wi0GNEiJ(69eEIhWtfe6ARt9EAP1wwTq09rx9pqF8)V"
+NUI.WeakAurasWarriorData = "!WA:2!T33c8XXv596zx7yBLqJL8Jy7KGhCigj)qwAx9WYetqR2vAxz9YZUYsYjbTZU7S7mw7oZOzMvsRbstusdUfkTvqPqdesfT9cT52MOqibiek6YJ79cLESAjmuGsrKgG(aO(w4cx4E797CoZU7Ss7kVwo6hs4v(NLM5mN5C(oNZ)VNZ5bt8AsvtSA0J0C9n6U(gRj2fpKwM(JhxxWGrBcbnDjf5QNtsoUIwkEd4MQUmVCurfTo14tjekJQqKGDW5ZxFZWllrZrlEsXlj3Phd4HEKvKfwiwAnYtgfNKMUquf5y6tlWRtkauvZJVmOHMGCcdXTYPBWRz0jA7OQq3i6MqVk4V)ABnsCjzjDXLLSUsATOcrKsPQOz4kTws1JiAyOQFYJF8j5tOuVKYX7JxzsXbdCSH410Ku0owh8g8rtMrp1XpHAnaTyOPKmPqSoeLsgdOHUxWkJS9cTdw1AYElNaTY0zNpBsTNEkw1QZFNgpRhEn25IOOftqRdLKkADZWW4CwAc(ILqqT6GJNMxtGTZ0jtYoKOKHqeDHuqFnxJ13q9ToRE6iCcjGUl9Q04JI730BXd04nQcDZvH2rvZAOe1AKzBFaKvjhu6ccBzMeAkPvdanPiT4QLgA4eleHp6yX0uuPuItNohWzd138LLKne0K5tEwAX8UIqleXfP)1J1BPUdpjLUWf41IXgsrjPHK680mqbiBxBklKseCxDaVZ0v7hlQAdjgjYCXXWdyif6QD6kTuS5gAy)T0sRNO7GsJhbiW4sjQAwmoqI0aRYQhlGmuCoNJcXgqbOZiD4RVq(4oOum1xD2(5osYRRZoaqLShJn3O5c8PnG3QFvAj6jPcFSoJyWNuq2ypCPsd0FvCrXV6EqV(Q8Od9y0lufIsUiMGEuvPfFGzzx5kQkCwcnPKruX6nMGcViP5vspk0mQprc7jkOlLqwigBKmSbna2Ho5Jk0Js0XM2qtkrcyey)hAM0Yw3uLM1fpY0aDLmzGy6vH2ohpGSC5jnacIOMKpdGveMaAwr8lWN0qC2ycrshpoMzsZVVEgOZb7zrafrYsq4bstn3OD0EWqJgmu7CHY9Ob0eGhXfCaF90dNmmEPx1SAeKhUK4iGjo9OqhOto(KQI8oNrxizCYWcQLAMyZV1AI(4(V4DHCK8vDzDG9ZFMiAsXcXhjPWfRDEyaqjMHOKMUbR4cbfLesgJfse6mfNZVGMIuu2Ee4vfNM0ysiWkEzpyXdAJjamB84eMNtagaLispGcHti6yjf01LH)dfIvzgmjFkX5TUziEGRsCHEbYHpj0HRjnMGyKq8qpmR4SEsYdJYgGWmXfX8e66P1zdMIxxuuZ3ucrtBiiopmKXhlzgyapjuUqtpzgj5eSDOLrCo4rgISdbsIGslaMnkQGkuYQ7oKyAzabJXmQaAXdVHrsbrTbsNkLaqrQ7BjzaQL4cY6stiiQUJGIq2f0Wvtirna6OEBbNuqqfNaTnOJlZS9oqPvShtRYS9TDMgi45PjYguub4oY2j5HNq)GWhTKtkjhdiVD0HsQu8a)iUijzwTMoeH2omYKlnya5SsrHUVmSCPH(Sl3HIC006yzi4r2jXDjYwdEICCc4sEElYH2U0GYudpYcJqrhdxW43dOLE4bysqdGcexWNSguaXabUjeKfNbQ6OJnjp0rnBubCxogEEWE4IOcIrbOyRraO6K9lRfvKhGrXqBTf02wQIc0nVSu2XstHlPukjJQrdIAbTt0UMHxlApeDsp8EMfAMgkP6cQOP2(JhpTmrWCTYctoGIovg2rzXsRNqWs4DDvXc)CSJ1jHbaEp2j41KW8g6KNamcaano(PCkt2dUMzpf7jG3GLqgSkXzLajK6SGsO4zleBV6KDYbVG7wWVXKsaNg(nYLr67Al7IKS7IubIcsjenkv(Ti8Ge90LKYPQXTr6TvCsxpxXyN2dsO9MkG2ZNZLt8K87QLcj(I(cwuFs(vOxh)WRCNE2IWoD3trO7Cv1YO6EkgvxKSBVBvLpkMT4uSKkj7TremagE5LvfG(gnbcwCK8V5XA0QtOy)S0kCQouWYgpfBdl7juT75Een1mfnvdfS42tXEhfWdKVeb7hzLoklv9IxqtkUdwsLhGF1wiBdBmfYBKVSPVeu45F76PxMlJl)cRxvzYqwuwJLkpKFpezW0EUS9q)0XUL)0OP1WsGaOuUUJcQajanXExNAjC5gIc5P8CfwwkayRx(dZrbIl5PfCduD0XHRCvI)XwNd51kidcj1fwP3OGYVW3uowXjrCrMThzjspoYvxxuWvSlAjpTGbPgxn9EhzPKBz1DcAKxHoPRq3BHvyj7FxwXuy)upRy)upRq)KRQUAAAW9LGGTtS5UGY8EYGcguMEc9wBEsVUsMtkXxRTgsDRGmaBcWakSwAHvpvU9rYkATo2JZ6I9WWJTAKhRX6GNwRLCXdxY3RUIYVBVxeGBlhQKPaIcRvoVu(Jve55lL9PWkW1kvb0MnUkocMROoB10HH3CLRTInWLtxH1fhPysvbA06XVHtLh5SmYCj6DkzDA3eR7r6(Gx4nBnUE0Sn13AvzFB8)HFq7(XRf9MqxajIMcfgfdfbjHgdDo0qOmOjqAOOOeib09Hgfnm6(rPr8O4OjrJGUx09GsIKrPqNhnoYaPI0rVz0BbPGERtNwxGGTdJokd6yO6roRgTFI39OBfDBOgMlENrufgYxVjg(8OMCQrdiIGi6evHoi4Po6avnJUHGA7YjskCaG7Hh7NhZ0jW(mHTOLZlYvvC4bcHTJUJTGQgvd42lApr04JjLw)HVj0TJE1EW26gPJbdgQ)ENnE6Kj7qslAsHWOAfrbDon8WG4cWjQo0HH7miUoXGoY2Nbxpe2RBeDM5JLbC4tkkXhppyF3adGp(wrHCIEDVlK7QqBEpZbQSJk4d7OOEyeBlOxJv8hqnJAzUOkjtNs2QQARt0jXEqJUlYVpf53Vb8VbNNaNFbZPBF)hc5PkuhpcYl4plYhQtuxi)OaOUrNg1dQxuFO(rdu1IyZBaNamaNKb3mIW1U3adgeTf0nGouUWxGETO78I1JCWa(9QZBGdUe0lV5dPUxOUu0eSIaaH09PPPOb0)Fqy0dG2d6mEWgqTQDq4YJboD1ooGbgC4o2W4XO5JQOKmMYKY4O7iolUccsIt0TTjmsbgZaeW0zZu4iulbBdgRXOiUOzdnJt1DaqS2JDEWtdHycX6LFkXfv1usObE7slXdFBBYH6UYwuHeMYWRKo242yHHXnpxqrjfUhYnhrwvamcfgSuRbk3oSEPEvIbKUq4LwzsYIyFE8WN2aAwnm34YX5cieCQX5AdDCNOhl8CXK0XXEahEjhi3h(qCrfb3XBb1HZPZAJ9SkYzRhUj4tMwWPLpz6h(qtdnfvbnJmO3pAUWhc9rvRrpDK6BQEdOzm6es6sqbqEYFjUmrp5CKaGmiP9HMJb90ae6JsEz7OXfY2BeCsjvGnaZPb(rJdqgCxBV8mqZCuzb4ErkWCbjcclQajAK4uWC2JIhudJURdb3hrxcZIQnu7CCb6NdDsiX98uHrp)tnlHKgtgQUTDFAAxqrwiqmDhO3aohBfYXwivhjitHx0QyTEHWlGVhCIvcyxhusCrsUgfC4D0SrGIKdvbJiuh5rhO79G2(cqVeomEywv5yV8mja)LZfopNZdVsxztrK8WEKKf0R2d(sr021GxhF504FHfZSqK0ggkY9d9iWO5cKKbAAmCmvCoh(2rSIQ3SKsJ4a8Ujx7HgLqsTeKexis(h2k)ZJVXRvSEDsk5o1egpTGC0mdS5gQ3vZXTIF4OrZfzuRa)nQaW8asr3(m4MljjRGrMfAeEbR7vi1wUxehhpNx8qQVgcoI8lAWQhvDudPuqhkOItchIcNQ7Ri5HEbhoRXu3j5zyEaCSSJsex6PD42zjIsfWSCE6R)(8TaneLzB6QhCzLSR6vhnr0yJkkfty0liOPiQ(AlfjMuibF0mJgpPcmiwIYIKXukXgflUl8mwpgmeGeQXfi3pj0LmKgV60dzDXIKKTf1o1xDPOb6DmZK75h8ovvpurjLyqhAk(K57zzupqrZibYs4Z4iTn16kvTBPpAudrqANiWrZOEKs3nuKCZwYbaSeizHKwDr4UmsGs7FWq9eOpFQ1q7Ie5JLh5tzBWp4Y0xsAkbQUZhCE7IRels1U0rQs0hUSX9W5PpCW8VDlcJIZYsyQ3Arlm6LOVP6TvYEb4)IuAhlYxkEgullSKYEh26jY)PlSs2wi5rTmljjktS)7(h(bX)8jC6)U)bVj8pt6u9okDB2g7iBPZLfASGrNCmB3EPhR51nerT)yuJnUy1yZluRglwnHGSGMu0GI4ifgEoISz4A4LcRUt8DctbMCqLx3hFkbXfYj(gFByIblGTldagXLnrqhWcfuUZIlY2tojFg9f0e4tgmBobJrXg44xDFz1pYoGLMD2Aj5Qo025ifm2AiodnqIp6jiAtixhM2IMGORc)DaieKhCZFpGAhIzuBhsYV6ocs0UD8oHhDC8xKI8k4mgwTgAumdr)ed9OKqkQd1QPXFXkrW(aHNytyL9NNeKZjeCXdeviNytrFtKqJcwJrm)c9(XwDH(a5TUc9yRAtRqFqIXuOhxe9hz3Wj0SHrFOSglH(Jjk9q)jIO)uSTqO)ly7EqFyIrpOpswdEq)zHr)5eZzqpb2wMZhX7KrgkPNEAziQTmO)cIfmzT0a9uO5CIE6dN1(c8FFg7MIG(yL2ae0Zsn6a9CyZnqFClZmqFcYV)Kw2uGEE0NYYi5xyBX(MOpTDJgq)vHrFMWO5fr)3i54ZAP6h95Ez0NN2I)cIO)7vJ(Fak0r)prFr0xc9x7e9Lzq)n7gb(4CjNOfyq)Tor)DwQzrFfQFjViwJk6RImdJ(Aor)9GAs0x3j6BG(MO)b03c9pI(2OfzqFhr0ljI(NcJEz03f99qFF0)m0d(VWG(xbfaO)ng0pa9dr)ig0)od6YIO)xO)d0pgKpI(jO)3pi6NkI(zHr)FcJ(53o6xWG()cf8)pr0)jQftMnXyYWqOctgh4eCwujfMmBg()wGmFdW)3kW7(oT4D3bWTzYCJeCUjZ2dJH4MmBlmA7MmvBYCtqVOjZRYK5xZKPg0tyYCZrOFAbKFtMDq42WUvmaug7mSjZEDyYSVNytMm73K5wTqZxyJjA2BKaDnIxbFJ5lX6c0C)3wf0CjrZVjanVhkofW07kli2cZwLifDFJHNo7CKOMgjG9bQIa)V5zY9ng1slt(QT43JuCae)Yyr7G(pWtSyCWZfPGFmhcg9J5s6)2WmawApmz2Lf)0UbTgBnVwdtgGiVLWu2dcNIfpI4gtEKgD1s0mCnNOToAUO8irWFVCHyfYhapTZdQOEW76uK8SOWuQs0bLqGjjO5QXnLRcpdnQ3v9y)BOSxlMpbYeAzoUbadgtwC(kXYKVYBd)QcBv4x5zRSmW7ZVaf8Rtn)cZv0TM)256TZb7rd4niwUnl2CjFtjPBOhEg8ePGmvh2pxtUBZDJi8meb0AyqckfoGu51CaCGfLVXzr4BkM(LP2yY70RwdnFgxNPUKQsRl0V0Wnur)Yv0APQZRzz7HXkwYA6e1NfSMGgUHS2lDZOWu3rkuzbrLuHgl5IxoJfAo8gt085ot7E7zC3EBFkrBO5UxkA2UsGIJIl4bw4FtMdrzamzEDO5qFjAE2c6j9GDeSKzRKme)KvMHaU6qjcVpGj4iaFXhxz58fatXNreZrqyn0Ot(nO)76xgKhRCDNyxpFHUtGIvmpjOLwCtMJTFUMD1K7w1aF57xozMWyfiMmhHY0rkC76eA0Ilk2gtUO2C5YVY4Jn5GDezDHoHNTNk6eU29G(z7zjq(ixzNNZcKJSXei3ECEUt0EeoTmPxxaKB6BubiFfLDxgg3003iNXnZBFI2Uc25CnzBV0gt4pVAB9fQ7XD38zITUa(V3Vqf4)ReW)9(fYb)nzA7Qf0VLYe0p2gtqVOBTqn2vTn2BCVRla977jQa6FLa0VVNihOxZAjKSwH8p3gtKFCjpk9hWLNq1166cK)9fOcY)A3S97lqHMTpNTvAv5Ba)qBmH0D3A6rMmIFp(1VW6ci93(rRaPV2H0F7hDjEIMP8bYz2ycKt1HOFdPZOZ1W5wxaKDT9ka5RDGSRTVeG8eLpqEInMa5H9mC60tE(ukD226bG8MLQGJVMJg(MLkegptULkCPdkEzm7ckMP1ABmr9tC2mXd1D3(7zQAxpG63lZz6UcU)Ag3J7gxIa8OLgX)ieepgIxOdLKzxAU1GWkd)JUXe(31GT3w8axiPMVoxFmjb2Cf0)1U1lnS5cb)ZMF7UO8nJjXgte9it0mNxpbet3zG1hc07BXkq6RzinUBCjrlX2U7s5dQf2ycQhVPOrdQC(Z4MBTEMV)tUIG6dDKWPcJEbJXkX0wrDxlzzyqw2Cvq7aAVVcMfX7SGzrmEIksa)hap1HVrs8YPZD45TVDjzY8Aq5Ix(nzmMjZbxImDkhZolYKa((2yc(DR2)Kbef6P7GgRhKOB0sf55Vc8zFmAj3x9zoB75xRvF5Nr3yI9Z08zNkU4fAR3gBA9a2p0Jxb7Fn7CAOhVqlzM3(EQxzhxMYf4p8gtGFlUgWxB8NoL7XxF4y6ZovfK)ReZE9NDQ8ZE97VmN965nF)(3ycMhZ14r86n1Pvgp4YbZBb9KMmUZn71jRkj35xvs2ZYRG45h5Tum8Sjt32b0NKaOXqtOrZSmOzEKEy7iDtMAjqDN2G6oTb1PRMoaV8YzHg5qnyZEVjG2SSrMkW8MrPlTuXlEl5FBiJ53SoiBlrIZJxOqK7LIPVFoxT1O7grdS)z7qbe46xGxZaV278HDwjiDFAn8C0fxnzdFa9nP0uleuS6oZxYJI3eu4nu0Q5UiK5S4vIgD5lnVo5pTtw1102dY7(37M7od0SwK(WSlFC8eq3K5Si)l0oz)BI1AFsXQPoB(k8GUAiNv9nA3Q(0Bqx(RNXt0ZfPUXto56Ijaqt7PI89R5v)QLZR2w3RCKDSxBoTIr259z12kCTP9yBDzq3wPa7AOvfn685wzRfa)53yc)NkJAJA9knXGJ7D9rykFlFSkmaLzGBUAyaqXlhWpU7V4s3JVbDgl2)5gVoV(QRHqRlMXIVuNva3RfG7jlhW9l1zXH2tUXeApyQZgSXUQD8X1YS(yAO)7wbBVwGThPCW2qVFXb3JSb1SKeEot8rUqIAfQB9XMstLnnG1cW9C2opoklyE)3qX)Ks37g0jTBT(sk1yObtu36J1bT)oQaZxdG5lw45qtzH093rXfOFpBmr6nLkwTd13qQQDLADbs)NF)vq6VIfNfX8wRKSSa3)87)QAftVuP9j3yYdWfOXt7sOXZQ1v81htYXARWdSgWdOUJLEyAvw8enu71epH8gtEIKH6jMslTeJxV3k8e)QlpHjZ5VwzckNTxYuBq3qH90CVJfDI(6)CnV(iuoV3kmbVI5gqEMGi0dVXYlEoV3I7O753yIWLJmsZNRVl0ZuDlU(4ZmTFhvG4RbY5NZ2jcA59bN2VJ8s8FX5YnTjceZ2oFhUQVjgsrDVyLc06Mo7ZY9bzVzglfdlLLz8nMSmEs4UPt4RJ6sN07V0NR975Vjm6fE3(lXmTFwYXkazVHSc7Z1uGIuREzNrULdx072FXJvKXg05C5y9Q3G3udp05oZV0vwqq(BB)vxrBXAX32sTSSfA)vxC4T6gt4Dm5rCv75t6Q2ynV(aEh62RGUxlq3LvCFcD7fhCRVXeChC8UD5P5aJvxp(xx4kl3oQGTxdSZFE7h3(LLqCUDCvTeswk7WBEJj7G(GIn0Bu3Es2xzVTEqphlDxYZXYxP3NM(lxBzqw)Zhusw4RM9PP)YLSnF8wk)1c(BzJ6YHn149ZnWqjgRS36RnzYSgIK)bhUcs(Ahj)do8sqYkLpswzJjsUVXgIVVw11c5EDXc7EBFT3zfBwwlcUYU8jRXNqiglNa5y2S8N2zFT3zXns)TMdWFimGhGxBEpu0ERKdz8vnAhd1X4ZD3T6o8qo(M1XbdIfFGbV4zLsiLeFOCsUvTg8CkI1dVg7XyhIxttsrtTMo41nkmn7hU8yENduvbWucg9o2c(Wq3(zJoW(uRi(WFhDKTJ56a(dmJgyOpxTt5B80kdYFA8b8oWa2KtmZfUB5wwHJWDmpBzE6Tdcm4qbDIpf5HUzSmLxA3AqVqsjzbaNH7TTeVOYADAIhQKheXWyYTKBm5Sru1e0fmMLpPQi)aPtQlG71HH8ho3Oq5mmnyep9hku)9sgRYlt6d5)n6ztB6nUPn5b6xuVJstB5p8ATeF5)U)E)u4NF2D6)U)oVl8pz8F3F9hf)Z8oNo7XXmWd(r8)gtZUj2nTPxJ6oSoewHsFq1y8gcrst(dEORH5sCg1UoVVjBWBpj9GplGvRUlfdr(u9bGcLjhmPHgpDOhg60SokF90JVodn3sp4Erhy)ezoyS5cfC(gdYJpUZ5S1kvR5Wh(WuylniMWTluWHURtaZmBEc3bbkUNi0uCqHKlw45Mn6BPERfTNm7PvmQTlUtlXQGesYPS(xaeFw4rcWw9OPKuaFNM327T9U8XbjAY8hAY0e(nNnMu84srtN0itEGRwCEYIICzsS1apGaaPk(bE04Jso(3Tcl(hNgw8OkPIWBeEg1juPriNul5paOF4Bk)c2VM5jB0BgcPOhrWerBhj80ztzB7nd98GNSKsTeWTl6UZsDlqxqN9kPJpU5nzokiU6yNKZDRn7UfUgBR1MAWtlT0QBmBfz1opBaOuzjlPtclirshikeZlwWQFB2ouKJjHB)6zxfCKptdWaza1Ki9lWuWs(x9iLgYVSZA7mOZ4HC(GlfZK5ToD2dS6tH53)S3IjZ0fYQBY8qlHxgyAnz(nwD8VMmpYkX7AY82khottMlwapPjZVPjZVLfdy8go9zA7815UFWp53HjZVDo2ntgqRYVJjZV7YyVmz(9i8uMmZCzG1jN8E4AtM3nM3XK533INXK59yXVyY8hG(wMmVxcNWUTXjGJZ3NlCHSbMmVp81aYNI)jl6AclqotumzE)ldXBY8bOxcWD841JHZH1(tiHvaJ9nzEullz(8Sa3GjZJtlU)imyhhZHdfr36aw8pjYKc8QkYUuIhh4aocPOeKXNX6gIKfrnFeDfTi4Jr6WKJN0yc4v4Chj51XFHXq4JnRgD16CKdUrkNrnnyYmK4LZYl5rroTo9ZjYzY80qDQzvbZ1zsGRYqrorA86JMbRnY)IdriiwF08GzwW0rV5l)WQ70wT1V16V(GN6ueI3qrjPHKQOTLdoJM1N00K5dtekqBZHPFkZJeMABb2KfWdPNz2SNL49JZHAwdzAj80XtNmPEuECY1bndmz1fUppNabILm4tsSgAfVkTPFU0ZHZkwmeO1Sx6XBj5CfVhLjbo4S8(EWNILivq8Wsw6R)zzz6nz(ZT41Z9bwnzEcG71K5)kH39(nz(lo1fp1msrvKhvxkMahxGU8hAjUbClOZOHxm8r41w9Mh9HzWweSOEkfqzw2t(8Weozh9Ctxwzcbnq6Jow8tAnH9Z1lEH3RzqV1KbHfO8r(S7e7kX86Q8AJzLt1AjNpUG8EH7fBbfaQbBOU3bdCS83DSG4xalXa6papnAyoT(7UNZi7MF8HgpRueIzQq34pH2ZbJGZNDyTdfDdISDYjcVkmkOzKrvaY1ZgMmeotU0CsgeibgJBaCIfEAIA)tDteQy5va8Rf0thbK7kG5jLJnHDd(nXlI5V6craJje0Soh(DHhnOUaS)I4caXQEqI0pkd6LcJnShSQhST)LXsZat7jof4P9bd1Fw)cwI99ZhOV(8XnAh(6lKpoSP(eFwWoj8lWw27e7sWSKXbIoXDJ(qBbe(shzO2lmcdwm8CkAsGkuID7Z6VFUaNR)(c1Epe03V(IKS7b0XgdlTWv7E9s9cCoYd8lflMGmxF(oRpoqY8LJWhDmAVd1eh)39x8wHF2)tT8lCon09KnxF3jX)mI)7(VAhWp383Y)D)uvJ)PoNQvtQiofkbIjctMVXmzFxxqRMX5cfKhg7TXHzSOubPeIgNc7Bky5l2HuroYderU3FoFoTVxDq8gDwcFxuczs6FbfjQ7mHgFmCFw)575mz(2ONtC6Smj7hAuOSTLVo5N)DqzNj(NpQtIsMdbkzudG5AbzZtupaRGIPEOHvF8eNmOGrxwvsTh02GYrzBO(wA7OnG)x9T1i8lxTc)Qrx1ntmLrPw6jIU59mlCxkG9fCIreB1NGmENNiBrkI1usXgDKVP12lwgosBPVB)y1De1qVpsYZJpqlbDsvr8BZRjZxe0cJfsL1OcOFBrGzp6yz8ADiAdz)syPgyMBcJgi7WK5FgWUlAY8DmzEjtM)jtMVhmABY8DxrlfMbBEdO2jHo6)WK57tGe4b6hlmOuNGjJPPOgqUtnfCBhF6oFXQluvoTHr1OwOoClf4zv)Ivet1GBx9nnhpwwlvpLLkFlL05eCLFxb0d(Kc3jjUpyrzddIg8w10elaHhaP8Iznf12oc4x9oPwz6bl3KibJyF5N1kUt20G8JPJOo(s1yZeV)fIW1vT6bq3GL8TC9Kyvdwbo6aNJiLSicfnz(7nz(6ubH7bBn5x7I7BfehMxwin4iGumQSqaiucjHZrLesumwGGWFugIGWF(TFXDPUpsO)nSz7SCwNCQQy0bqelR6H6wEj19S06g7Cxbv9pnSvvNJxhSL)YaRj(YdwvvKB2HTBmz(HGmetMVfrOmr67dKpMB5dEGjZlJRBGnWTBWG6DcIDTSmUop9Pa(WhciR)dchE2y05QkIzV)ak1bMw8xBY8LHk83xDN2e)qvAvlye0)MivGQxbDEScCiR)RNYK5FelJ7dvhOj2KzbtM)wtM)HDdkQLcmqZb6FQq1LQFWcGlEsKJBAFOZgNEO4pHGSG4cKDFhwoH4jfIAiQUt4rsPKa)PZnHCyfNjKi47mEBZruZRKoVwkwr1Q54JkXNupFaxeFLkyqp0nscZegc)Wp8Eq7(8MoUbthBX0X2nDSnthB10XMrVnrm0g7QITW8aw50WCJ498d0rS0Xot7Eq)MIyJt(9SIi5bQc9BDa074GCEX97VDgC4F(T3ooao7LeaQZG(9r)o4EsAqGWs)c6KelOzCIdh07(grVlg07biYJVv07emU)9IDnPGOkHhABIebNviIqVpitLBiH(drp6sdr1V(b7HRybCEVRF3vkoN3q90uBNlLWyRlc48UQSy4wtc4Cnlx6rzfU5DD)fnCZaB)k9bww)I37SVKD6UPlmqY2xFSW3Up1k491Mf(MDTNL7hx5(uVwMziGIWCmfhFTJPWK5NSmgdXRzgd)PcOpih3iEpXqyDOpgXJpQtErIkkeDm9hVABSi0TGXSxU18xU98xEJ5V8vL)YBo)LvN)YDM)YDN)YBj)L7l)L3A(lV98xEG8x(AYF5DKLLUJJUj0tEW(5SZ6s4vbEwB7QJfNxPKMEZSAS8MYcK3EBcIhZ3GfBCXDq8j8rZBAswxNazcy5h7b9PcxehOS5IPtBUyIDNIglv8xH4q7o8(GmSVSUyzx2v7pxnoaKFlzdw3tt3p13RJ)ZViW8TBBbrCX21IYllWgsrtd8lMU72lLqwrtGW1DAYUBpDZonlluUTW9BAB8ViHhDy8ojzwEY7nRrvlHL8Zg2IHSmilthvB6OMsxVQN8xo17N7zwBQ3zT2khWFJLvQ(J)XxRQF8HZjBNP1YSI1)a37Av)(UwX69H(JUoRE)txBQ3zaNizdAOKsDLhM9T2u9Z1bVSSue(KsxqyLja(1gcybF6r5vfyBxZqs3yLjHuRnKWLhscmMXqHnyATjWBHURer89fxBic1Q7skUbRsCwdrb2(451sVI0X37rxJK7eK857tjKm2kw)V8Au)WmaVGSaokyRmwqBnAyyxeWG1WqNkA68JjiVIKYR(nUgXAYPeDmbd2UtVYYg2lZR6lV2qblArbE41WZNQRar8uxTeHnt8PHlKyL)23y66BiFdRl1DpE1e6z9GRVEpCfpFxlwz)0WaxoU769WLi2oBBJjaV7Uci5kEaUroDY1hRS)EFhvG4RbqC83zOSwq)9(okbaFRBmb4ELd1657rQwz(2xxCab8vQaVxtG3BUSoDa(kLaCV5CG7tIC0Z2rN9IvRUNq86gcSGrRSuV2PhfhIQvtUvpTwcHCPDllDtdl3t2zW0YXe0axHsbLKTYGpMGUbyrC(0cilBThtM)TTFQ9LpNDNorcbnz(0g5sRMGcrvKJXoKKCosDb6uM3gTy7mIk)BA7mWmxI7UWn9sBvt(tzn7Tr80ZHLEaXMn1DqUDsj98jTNG4zbnlpqIEu41YrORvFR1hVg1DrRc2fFGzz7FcbnY0ZY0XDy64iMoA00XXnDCyth1B64onDCithVoth1A6OothVwthUmD420XrnD0GPJJTcFJ2t354dhVUwcz0Pqz)nA33gUVrBJlxS)(Yj2)I7oczUl1UZAMIPMmmZOhLpPqNPLJQ(bzHFIdxH)Kc1QAnD)okRUbVMXWw)De4V43yyR)osDvXs(rtWiTMSvMzpcBUcG9WS1sFf2Jz946QlBPv0mos2mosD0sxqog8xkH3Lt6F5S(RhNZqwDbHYOkyY8EIqkHPCse9ain69zCsMr3KRfjxsENW0wp(vxq3qJhpHWcItbdxPflUN5Gvvven8ujtGjhgoet5QWCqTq9paE2GquBYu4x2WsR4hQzmS7J4JGAbO6YuHkIbE51ycGOgMRbT(u61FVd3BdtKBkLm12A)yh7yS9pqOa93xqw46QYnHoOtCnnfv2tX2q9n2ml8y2qGF28rWZppSx3bGSWEbfLuS1sYiKKKHolDs(Oxhi5rMnf8cYzyNGpzAqORgK3gWrVPr2iGqoq0Pa47oKnOzXkcsoa5vP4XYztLoQiRUGCuH6xcnPqMxEJomHUOKLFfnPlOiBWNKvvrNmT4Zgva8K7uM1AsMYwBdyWcKKo5HjfIBKsr3GvfGphfiQ8psdp6M7z1vCAyeB0Wzf0mKIE1sbgkQLGaIOyyOKYgfGhP82FFVUqS(8gieRhF90)qKHS80gMMIQGffFQ8SMuMc4LrFq0law780Ox4stdxnh6tGEsw0ZXI(0x6bG7FEWaPp2LEi8ZU0Bd9PU0Bh9mSWdEYl9GWTpZLM(sVDsbb6yGgjU3FPt9WjXttusf9PG363Guzph65zV0frphuqphuMpeuFq1(cqo(eONZw5nsrkprYuUSifiAUl92V0dIBgLUaXBxpgIeusTncD5lhxxhwcYWShhaCgI1NIFQAh(OGies99HZsX4EOxamM8ts6hMM0Bbv8dcj8m0oUNb)CC)e6zjDQpj8sp3L(DyxoTmYvGwgP40YmzBSxT0srOe(PK0P9jfHp)i560WKdgxFe2sW6D4s1qGeZxi5aDFs4)FmG6a6bdQEe8LWGhMq)Kx6Daj)cOpolPPqBt2Gmq(R9spilGljGqmoLL06FsCpagOcjbqAw0NGGI)0ONSUL2Gh5k1Gh5k0GhPCAWJu3QV9MhrVQBV46(XGY4trqHxj23gX8BuWq(rmRobCj9bkKHdOras9Cql55U07KDXh(904YhNSx8UYx8hz1u8UwXIFKCu)i26(V6PE7962lEx5l(JSAkExLO4T4MHHh4Dzj8Rp7LEimKWA8fg5izCPscXOT6dkyesyQoSeVllLSKz9K2YATd34rHXJJcDAW)Dvx2gaqXyHQVTCOu0ttWNyrgpclMKba2dILWEPhaGoyBQkMEg809KmRuNoMYO6yddcZr(J6XZVOnApwmfz971RGbVus97L8CR)m65fIj1y9kjsKB5Uc(3BnzGlPxVl9SLmC5D2sw6Lrbd2FyWN5cM)czxefL90x4x8L2ez(laUlFXBTiv1pkt2AdQeAT9tflYelwp)elU40H(vGo2xwYGSSFcidJxmKyKePr3UC5YnDTQbgQIJ0b2HfYuAFNu)muRHSCgXRLRrbp6W78JrfZgEJQqp)wYoHk(mHjr34q)X1h(VRPR0cvRZ586R3(7Z)G4vBsyoU(7AqFHJe0F792EFH1gO9EA3BG(cx0PdF(vU2TzAnDnuRMoBJ7uJpLWa8AK1Kq7VWkFYHIF7x1C0fXfh4BCMShHOZKZbYsFuI(YKLkukjD9q01f0bQPz68GAg6QjnPscAGmEnOV5Sa2wlQWGYsgOUON6O5si80zleoV97TlFK1YjUay7bkH(4couG(6c1J2O9giyqFEPXcXIgmDCw71SPJHYvLMoggUYXiHnDCoth3d0qCq)Go9y64nzVqolDXO1slUBXAHm5dVC3ODw7vDKC2nAaMaNqqJQDXYFnR0UNgVpIZ(zZZ946(yv0Y9u3fCxt3xDVES8J8lf13dX72JtJrttLAsIz3luthTy5bQPJwnDCcthT500XjH))6H)FxqrA64u58IZ0XBas9UfnD8gHUJ2nD4b7OLPJoWtvEhExvULz6WxrcKPOLVyyhXSCoR4oJboRboQbUKHB5wUL1WCPARVlmzlbIE2MMcl2lRBzMo6IkvLejaA4njIgTZ2EfNPwftc0pMiVJiD4hLDcBbs7(zfxGNl2RGep1AiITO8IwlI8JUjSCqYK)IivzhKjEvrMexwcgoKPJ(HrjUvyMCvfnIQwYDYnlUYht2StIlSOSSRvMxgV6mZJShsKSOlVhkddWb0sdn3GBsatiHvmuvOb2V6Tyfgmlx34WoGiOKwNioahufV7FVo2I7c3oBnD0ddbkFhxhdLvBGZFRPh0)iDF21JqzthrwrKSPJOBuaUUA7en14saUMoekpi6rUogIMORw7ZvOEol3zswbIUwcrnzAE1IpB86y8z)ADnKB3TfmqYlubFUMkcTXt0uBTTAHOh)6yiAMyYd1w02cmM44vGORTMN2CJn3YQfIE4RJHO8sz84VZgo7KNr4xrGO1ynXto5sbD5deZvi4lRei2w8v2ltFlwmS6lM)q)aVV4GXPuelGtprZT6UbcofqLeCAUONqWRRioT(RJXPt5FWis8ND8r875QhN296lCAzhTtyi50x7r1CDUXfUC76eRwj3351XCed3sB8d5l6zt2Yiv4i2GYryYCy7SeMmhhZt4Pv3NyvBmZHUoMLiWzNAIwJoER(pNNk2BVMk1UPwAZvtRwi6R76yiAu3JfW95KRL)8TvbIUwcr90yJUx1i0AVogHw7qsdw7WrtfOPavSR4xHS02tJT24QokE1DDmdrtdKWv3J3Yi1P2rfr2R1wv04Q2W3x71Xq0EDpPB3jN88TpyTvGORXHRWvBUwTquxxhdrh50Nw(m8PBVXZv5Z1T2crBUbxUAD1crDF9C4d4vvs0xS(BVLtxbIU2crBT5vVTOh96yiQ3ZnqK0XoZjQTJ6QarxlHOUorRR6znwdxhdq5gEqJE750UIfWvfa6AQ78UAULv98g7yKfyome)))d"

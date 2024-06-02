@@ -1,9 +1,9 @@
 
 BigWigs:AddColors("Halfus Wyrmbreaker", {
-	[83603] = "yellow",
-	[83707] = "yellow",
-	[83710] = "red",
-	[83908] = {"blue","orange"},
+	[83707] = "red",
+	[83710] = "orange",
+	[83908] = {"blue","purple"},
+	[84030] = "yellow",
 })
 
 BigWigs:AddColors("Valiona and Theralion", {

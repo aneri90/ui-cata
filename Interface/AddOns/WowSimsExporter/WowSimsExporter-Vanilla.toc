@@ -1,0 +1,20 @@
+## Title: WowSimsExporter vv2.11.0 |cffff8000Classic SoD|r
+## Version: v2.11.0
+## Author: generalwrex(Natop of Old Blanchy), namreeb, coolmodi(FelixPflaum), riotdog
+## Interface: 11500
+## Notes: This is an exporter written to quickly export your character to https://wowsims.github.io/sod/ for simulations.
+## SavedVariables: WSEDB
+## OptionalDeps: Ace3
+## X-Curse-Project-ID: 590920
+
+embeds.xml
+
+extras.lua
+Shared.lua
+Conditional_Vanilla.lua
+ExportStructures/ItemSpec.lua
+ExportStructures/EquipmentSpec.lua
+ExportStructures/Misc.lua
+ExportStructures/Character.lua
+UI.lua
+WowSimsExporter.lua
