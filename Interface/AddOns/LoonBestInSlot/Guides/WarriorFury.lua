@@ -32,8 +32,7 @@ LBIS:AddEnchant(spec1, "74253", LBIS.L["Feet"]) --Enchant Boots - Lavawalker
 LBIS:AddEnchant(spec1, "74238", LBIS.L["Feet"]) --Enchant Boots - Mastery
 LBIS:AddEnchant(spec1, "74199", LBIS.L["Feet"]) --Enchant Boots - Haste
 LBIS:AddEnchant(spec1, "74215", LBIS.L["Ring"]) --Enchant Ring - Strength
-LBIS:AddEnchant(spec1, "74246", LBIS.L["Main Hand"]) --Enchant Weapon - Landslide
-LBIS:AddEnchant(spec1, "74246", LBIS.L["Two Hand"]) --Enchant Weapon - Landslide
+LBIS:AddEnchant(spec1, "74246", LBIS.L["Main Hand~Two Hand"]) --Enchant Weapon - Landslide
 
 LBIS:AddItem(spec0, "59359", LBIS.L["Head"], "BIS") --Reinforced Bio-Optic Killshades
 LBIS:AddItem(spec0, "56278", LBIS.L["Head"], "BIS") --Anomuran Helm
@@ -93,9 +92,9 @@ LBIS:AddItem(spec1, "65266", LBIS.L["Head"], "BIS") --Earthen Helmet
 LBIS:AddItem(spec1, "60325", LBIS.L["Head"], "Alt") --Earthen Helmet
 LBIS:AddItem(spec1, "65130", LBIS.L["Head"], "Alt") --Helm of Maddening Whispers
 LBIS:AddItem(spec1, "59359", LBIS.L["Head"], "Alt") --Reinforced Bio-Optic Killshades
-LBIS:AddItem(spec1, "65273", LBIS.L["Shoulder"], "BIS") --Earthen Shoulderguards
+LBIS:AddItem(spec1, "65268", LBIS.L["Shoulder"], "BIS") --Earthen Pauldrons
+LBIS:AddItem(spec1, "60327", LBIS.L["Shoulder"], "Alt") --Earthen Pauldrons
 LBIS:AddItem(spec1, "65142", LBIS.L["Shoulder"], "Alt") --Pauldrons of the Great Ettin
-LBIS:AddItem(spec1, "60331", LBIS.L["Shoulder"], "Alt") --Earthen Shoulderguards
 LBIS:AddItem(spec1, "65117", LBIS.L["Back"], "BIS") --Glittering Epidermis
 LBIS:AddItem(spec1, "69834", LBIS.L["Back"], "Alt") --Cloudburst Cloak
 LBIS:AddItem(spec1, "67140", LBIS.L["Back"], "Alt") --Drape of Inimitable Fate
@@ -112,9 +111,9 @@ LBIS:AddItem(spec1, "65040", LBIS.L["Waist"], "BIS") --Belt of Absolute Zero
 LBIS:AddItem(spec1, "65369", LBIS.L["Waist"], "BIS") --Sky Strider Belt
 LBIS:AddItem(spec1, "55061", LBIS.L["Waist"], "Alt") --Elementium Girdle of Pain
 LBIS:AddItem(spec1, "65267", LBIS.L["Legs"], "BIS") --Earthen Legplates
+LBIS:AddItem(spec1, "60324", LBIS.L["Legs"], "Alt") --Earthen Legplates
 LBIS:AddItem(spec1, "65379", LBIS.L["Legs"], "Alt") --Sky Strider Greaves
 LBIS:AddItem(spec1, "65121", LBIS.L["Legs"], "Alt") --Terrastra's Legguards
-LBIS:AddItem(spec1, "60324", LBIS.L["Legs"], "Alt") --Earthen Legplates
 LBIS:AddItem(spec1, "65075", LBIS.L["Feet"], "BIS") --Massacre Treads
 LBIS:AddItem(spec1, "58195", LBIS.L["Feet"], "Alt") --Woe Breeder's Boots
 LBIS:AddItem(spec1, "69885", LBIS.L["Neck"], "BIS") --Cloudburst Necklace

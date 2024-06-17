@@ -25,3 +25,4 @@ ElvUI_Options: enabled
 Blizzard_CombatText: enabled
 LittleWigs_Cataclysm: enabled
 ZygorGuidesViewerClassicTBC: disabled
+BigWigs_Cataclysm: enabled

@@ -3,8 +3,7 @@ local L = BigWigs:NewBossLocale("Halfus Wyrmbreaker", "zhCN")
 if not L then return end
 if L then
 	L.strikes_message = "致伤打击"
-
-	L.engage_yell_trigger = "古加尔想要你们全部的脑袋！"
+	--L.freed_message = "%s freed %s"
 end
 
 L = BigWigs:NewBossLocale("Cho'gall", "zhCN")

@@ -22,7 +22,6 @@ local magmaMysticCount = 1
 local blazingFocusCount = 0
 local myFlamingCudgelStacks = 0
 local tempBlockBigAddMsg = false
-local hasFixate, hasBeam = false, false
 
 --------------------------------------------------------------------------------
 -- Localization
@@ -145,7 +144,6 @@ function mod:OnEngage()
 	blazingFocusCount = 0
 	myFlamingCudgelStacks = 0
 	tempBlockBigAddMsg = false
-	hasFixate, hasBeam = false, false
 
 	self:Bar(401258, 12) -- Heavy Cudgel
 	self:Bar(397383, self:Easy() and 26.5 or 28, L.add_bartext:format(L.molten_barrier, L.both, magmaMysticCount)) -- Molten Barrier
@@ -160,10 +158,13 @@ end
 --
 
 function mod:UNIT_HEALTH(event, unit)
-	if self:GetHealth(unit) < 28 then -- Stage 2 at 25% hp
+	local hp = self:GetHealth(unit)
+	if hp < 28 then -- Stage 2 at 25% hp
 		self:UnregisterUnitEvent(event, unit)
-		self:Message("stages", "cyan", CL.soon:format(CL.stage:format(2)), false)
-		self:PlaySound("stages", "info")
+		if hp > 25 then
+			self:Message("stages", "cyan", CL.soon:format(CL.stage:format(2)), false)
+			self:PlaySound("stages", "info")
+		end
 	end
 end
 

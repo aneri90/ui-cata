@@ -4,7 +4,7 @@
 
 local mod, CL = BigWigs:NewBoss("Magmaw", 669, 170)
 if not mod then return end
-mod:RegisterEnableMob(41570)
+mod:RegisterEnableMob(41570, 42347) -- Magmaw, Exposed Head of Magmaw
 mod:SetEncounterID(1024)
 mod:SetRespawnTime(32)
 mod:SetStage(1)
@@ -14,6 +14,10 @@ mod:SetStage(1)
 --
 
 local isHeadPhase = false
+local isNewHeadPhase = false
+local lavaSpewCount = 1
+local massiveCrashCount = 1
+local headGUID = nil
 
 --------------------------------------------------------------------------------
 -- Localization
@@ -29,7 +33,6 @@ if L then
 	L.slump_desc = "Warn for when Magmaw slumps forward and exposes himself, allowing the riding rodeo to start."
 	L.slump_bar = "Rodeo"
 	L.slump_message = "Yeehaw, ride on!"
-	L.slump_emote_trigger = "%s slumps forward, exposing his pincers!"
 
 	L.expose_emote_trigger = "head"
 end
@@ -42,16 +45,18 @@ function mod:GetOptions()
 	return {
 		-- Normal
 		"slump",
+		88253, -- Massive Crash
 		{79011, "EMPHASIZE"}, -- Point of Vulnerability
 		78006, -- Pillar of Flame
 		{78941, "SAY", "SAY_COUNTDOWN", "ME_ONLY_EMPHASIZE"}, -- Parasitic Infection
 		77690, -- Lava Spew
+		92134, -- Ignition
 		89773, -- Mangle
 		{78199, "TANK"}, -- Sweltering Armor
 		78403, -- Molten Tantrum
 		-- Heroic
 		"adds",
-		92177, -- Armageddon
+		{92177, "CASTBAR"}, -- Armageddon
 		-- General
 		"stages",
 		"berserk",
@@ -63,11 +68,14 @@ function mod:GetOptions()
 		["slump"] = L.slump_bar, -- Slump (Rodeo)
 		[79011] = CL.weakened, -- Point of Vulnerability (Weakened)
 		[78941] = CL.parasite, -- Parasitic Infection (Parasite)
+		[92134] = CL.fire, -- Ignition (Fire)
 	}
 end
 
 function mod:OnBossEnable()
 	self:RegisterEvent("CHAT_MSG_RAID_BOSS_EMOTE")
+	self:Log("SPELL_AURA_REFRESH", "PointOfVulnerabilityRefresh", 79010)
+	self:Log("SPELL_CAST_START", "MassiveCrash", 88253)
 	self:Log("SPELL_AURA_APPLIED", "ParasiticInfection", 78097, 78941)
 	self:Log("SPELL_AURA_APPLIED", "PillarOfFlame", 78006)
 	self:Log("SPELL_CAST_SUCCESS", "LavaSpew", 77690)
@@ -79,6 +87,9 @@ function mod:OnBossEnable()
 	self:Log("SPELL_AURA_APPLIED", "MoltenTantrumApplied", 78403)
 	self:Log("SPELL_AURA_APPLIED_DOSE", "MoltenTantrumApplied", 78403)
 
+	self:Log("SPELL_DAMAGE", "IgnitionDamage", 92134)
+	self:Log("SPELL_MISSED", "IgnitionDamage", 92134)
+
 	-- Heroic
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 	self:Log("SPELL_SUMMON", "BlazingInferno", 92154)
@@ -86,15 +97,21 @@ end
 
 function mod:OnEngage()
 	isHeadPhase = false
+	isNewHeadPhase = false
+	lavaSpewCount = 1
+	massiveCrashCount = 1
+	headGUID = nil
 	self:SetStage(1)
 	self:Berserk(600)
-	self:Bar("slump", 100, L.slump_bar, 36702)
-	self:Bar(78006, 30) -- Pillar of Flame
-	self:CDBar(77690, 24) -- Lava Spew
+	self:Bar("slump", 100, CL.count:format(L.slump_bar, massiveCrashCount), 36702) -- Slump/Rodeo/Massive Crash
+	self:CDBar(78006, 30) -- Pillar of Flame
+	self:CDBar(77690, 24, CL.count:format(self:SpellName(77690), lavaSpewCount)) -- Lava Spew
 	self:CDBar(89773, 90) -- Mangle
 	if self:Heroic() then
-		self:Bar("adds", 30, CL.add, "SPELL_SHADOW_RAISEDEAD")
+		self:Bar("adds", 30, CL.add, L.adds_icon)
+		self:RegisterUnitEvent("UNIT_HEALTH", nil, "boss1")
 	end
+	self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT")
 end
 
 --------------------------------------------------------------------------------
@@ -105,44 +122,73 @@ function mod:CHAT_MSG_MONSTER_YELL(_, msg)
 	if msg:find(L.stage2_yell_trigger, nil, true) then
 		self:SetStage(2)
 		self:StopBar(CL.add)
-		self:Message("stages", "cyan", CL.stage:format(2), false)
+		self:Message("stages", "cyan", CL.percent:format(30, CL.stage:format(2)), false)
 	end
+end
+
+function mod:INSTANCE_ENCOUNTER_ENGAGE_UNIT()
+	if headGUID then
+		local headUnit = self:GetBossId(headGUID)
+		if not isNewHeadPhase and headUnit then
+			isNewHeadPhase = true
+			self:Message(79011, "green", self:SpellName(79011), false, true) -- XXX TEST
+		elseif isNewHeadPhase and not headUnit then
+			isNewHeadPhase = false
+			self:Message(79011, "green", CL.removed:format(self:SpellName(79011)), false, true) -- XXX TEST
+		end
+	end
+end
+
+function mod:PointOfVulnerabilityRefresh(args)
+	headGUID = args.destGUID
 end
 
 do
 	local function rebootTimers()
 		isHeadPhase = false
 		mod:CDBar(78006, 9.5) -- Pillar of Flame
-		mod:CDBar(77690, 4.5) -- Lava Spew
+		mod:CDBar(77690, 4.5, CL.count:format(mod:SpellName(77690), lavaSpewCount)) -- Lava Spew
 	end
 	function mod:CHAT_MSG_RAID_BOSS_EMOTE(_, msg)
-		if msg:find(L.slump_emote_trigger, nil, true) then
-			self:StopBar(78006) -- Pillar of Flame
-			self:Bar("slump", 95, L.slump_bar, 36702)
-			self:Message("slump", "green", L.slump_message, 36702)
-			self:PlaySound("slump", "info")
-		elseif msg:find(L.expose_emote_trigger, nil, true) then
+		if msg:find(L.expose_emote_trigger, nil, true) then
 			isHeadPhase = true
 			self:Message(79011, "green", CL.weakened)
 			self:Bar(79011, 30, CL.weakened)
 			self:StopBar(78006) -- Pillar of Flame
-			self:StopBar(77690) -- Lava Spew
+			self:StopBar(CL.count:format(self:SpellName(77690), lavaSpewCount)) -- Lava Spew
 			self:ScheduleTimer(rebootTimers, 30)
 			self:PlaySound(79011, "long")
 		end
 	end
 end
 
+do
+	local function Rodeo()
+		if mod:IsEngaged() then
+			mod:StopBar(CL.count:format(L.slump_bar, massiveCrashCount))
+			mod:Message("slump", "green", CL.count:format(L.slump_message, massiveCrashCount), 36702)
+			massiveCrashCount = massiveCrashCount + 1
+			mod:Bar("slump", 95, CL.count:format(L.slump_bar, massiveCrashCount), 36702)
+		end
+	end
+	function mod:MassiveCrash(args)
+		self:StopBar(78006) -- Pillar of Flame
+		self:SimpleTimer(Rodeo, 2)
+		self:Message(args.spellId, "red", CL.count:format(args.spellName, massiveCrashCount))
+		self:PlaySound(args.spellId, "info")
+	end
+end
+
 function mod:ArmageddonApplied(args)
 	self:Message(args.spellId, "red", CL.other:format(CL.add, args.spellName))
-	self:Bar(args.spellId, 8)
+	self:CastBar(args.spellId, 8)
 	if isHeadPhase then
 		self:PlaySound(args.spellId, "alarm")
 	end
 end
 
 function mod:ArmageddonRemoved(args)
-	self:StopBar(args.spellName)
+	self:StopBar(CL.cast:format(args.spellName))
 end
 
 do
@@ -150,15 +196,20 @@ do
 	function mod:LavaSpew(args)
 		if args.time - prev > 10 then
 			prev = args.time
-			self:Message(args.spellId, "yellow")
-			self:CDBar(args.spellId, 26)
+			local msg = CL.count:format(args.spellName, lavaSpewCount)
+			self:StopBar(msg)
+			self:Message(args.spellId, "yellow", msg)
+			lavaSpewCount = lavaSpewCount + 1
+			self:CDBar(args.spellId, 26, CL.count:format(args.spellName, lavaSpewCount))
 		end
 	end
 end
 
 function mod:BlazingInferno()
-	self:Message("adds", "cyan", CL.add_spawned, "SPELL_SHADOW_RAISEDEAD")
-	self:Bar("adds", 35, CL.add, "SPELL_SHADOW_RAISEDEAD")
+	self:Message("adds", "cyan", CL.add_spawned, L.adds_icon)
+	if self:GetStage() == 1 then -- Add can sometimes spawn just as stage 2 begins
+		self:Bar("adds", 35, CL.add, L.adds_icon)
+	end
 	self:PlaySound("adds", "info")
 end
 
@@ -181,6 +232,7 @@ do
 	local prevMangle = 0
 	function mod:MangleApplied(args)
 		prevMangle = args.time
+		self:StopBar(args.spellName)
 		self:TargetMessage(args.spellId, "purple", args.destName)
 		self:TargetBar(args.spellId, 30, args.destName)
 		self:PlaySound(args.spellId, "info", nil, args.destName)
@@ -198,4 +250,25 @@ end
 
 function mod:MoltenTantrumApplied(args)
 	self:StackMessage(args.spellId, "purple", args.destName, args.amount, 1)
+end
+
+do
+	local prev = 0
+	function mod:IgnitionDamage(args)
+		if self:Me(args.destGUID) and args.time - prev > 2 then
+			prev = args.time
+			self:PersonalMessage(args.spellId, "underyou", CL.fire)
+			self:PlaySound(args.spellId, "underyou")
+		end
+	end
+end
+
+function mod:UNIT_HEALTH(event, unit)
+	local hp = self:GetHealth(unit)
+	if hp < 36 then
+		self:UnregisterUnitEvent(event, unit)
+		if hp > 30 then
+			self:Message("stages", "cyan", CL.soon:format(CL.stage:format(2)), false)
+		end
+	end
 end

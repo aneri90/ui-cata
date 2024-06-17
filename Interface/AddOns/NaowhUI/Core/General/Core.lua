@@ -45,13 +45,23 @@ function NUI:IsAddOnEnabled(addon)
 	end
 end
 
+function NUI:OpenToCategory()
+	local InterfaceOptionsFrame_OpenToCategory = InterfaceOptionsFrame_OpenToCategory
+
+	if InterfaceOptionsFrame_OpenToCategory then
+		InterfaceOptionsFrame_OpenToCategory("NaowhUI")
+	else
+		Settings.OpenToCategory("NaowhUI")
+	end
+end
+
 function NUI:RunInstaller()
 	if self:IsAddOnEnabled("ElvUI") then
 		local E = unpack(ElvUI)
 
 		E:GetModule("PluginInstaller"):Queue(self.InstallerData)
 	else
-		InterfaceOptionsFrame_OpenToCategory("NaowhUI")
+		self:OpenToCategory()
 	end
 end
 
@@ -112,7 +122,7 @@ function NUI:Initialize()
 		end
 	end
 
-	if self.db.global.version and self.db.global.profiles and not self.db.char.installed then
+	if self.db.global.profiles and not self.db.char.installed then
 		StaticPopupDialogs["LoadProfiles"] = {
 			text = "Do you want to load your selected NaowhUI profiles onto this character?",
 			button1 = "Yes",

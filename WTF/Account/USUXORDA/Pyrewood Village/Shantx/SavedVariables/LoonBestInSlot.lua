@@ -1,7 +1,7 @@
 
 LBISSettings = {
 	["SelectedZoneNumber"] = "All",
-	["SelectedZone"] = "Halls of Origination",
+	["SelectedZone"] = "Blackwing Descent",
 	["OpenTab"] = "ItemList",
 	["Tooltip"] = {
 		["BloodDeath Knight"] = true,
@@ -53,5 +53,5 @@ LBISSettings = {
 	["SelectedSourceType"] = "All",
 	["SelectedSlot"] = "All",
 	["ShowCustom"] = true,
-	["SelectedPhase"] = "PreRaid",
+	["SelectedPhase"] = "All",
 }

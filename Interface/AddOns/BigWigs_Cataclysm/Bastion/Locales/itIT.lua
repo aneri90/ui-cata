@@ -3,8 +3,7 @@ local L = BigWigs:NewBossLocale("Halfus Wyrmbreaker", "itIT")
 if not L then return end
 if L then
 	L.strikes_message = "Assalti"
-
-	L.engage_yell_trigger = "Cho'gall avrà le vostre teste tutte"
+	--L.freed_message = "%s freed %s"
 end
 
 L = BigWigs:NewBossLocale("Cho'gall", "itIT")

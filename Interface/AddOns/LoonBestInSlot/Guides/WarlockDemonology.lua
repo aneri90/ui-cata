@@ -25,6 +25,7 @@ LBIS:AddEnchant(spec1, "96262", LBIS.L["Wrist"]) --Enchant Bracer - Mighty Intel
 LBIS:AddEnchant(spec1, "85010", LBIS.L["Wrist"]) --Draconic Embossment - Intellect
 LBIS:AddEnchant(spec1, "82175", LBIS.L["Hands"]) --Synapse Springs
 LBIS:AddEnchant(spec1, "74255", LBIS.L["Hands"]) --Enchant Gloves - Greater Mastery
+LBIS:AddEnchant(spec1, "74198", LBIS.L["Hands"]) --Enchant Gloves - Haste
 LBIS:AddEnchant(spec1, "84427", LBIS.L["Waist"]) --Grounded Plasma Shield
 LBIS:AddEnchant(spec1, "76168", LBIS.L["Waist"]) --Ebonsteel Belt Buckle
 LBIS:AddEnchant(spec1, "75154", LBIS.L["Legs"]) --Master's Spellthread
@@ -32,9 +33,8 @@ LBIS:AddEnchant(spec1, "75152", LBIS.L["Legs"]) --Powerful Enchanted Spellthread
 LBIS:AddEnchant(spec1, "74253", LBIS.L["Feet"]) --Enchant Boots - Lavawalker
 LBIS:AddEnchant(spec1, "74236", LBIS.L["Feet"]) --Enchant Boots - Precision
 LBIS:AddEnchant(spec1, "74217", LBIS.L["Ring"]) --Enchant Ring - Intellect
-LBIS:AddEnchant(spec1, "74242", LBIS.L["Main Hand"]) --Enchant Weapon - Power Torrent
+LBIS:AddEnchant(spec1, "74242", LBIS.L["Main Hand~Two Hand"]) --Enchant Weapon - Power Torrent
 LBIS:AddEnchant(spec1, "74235", LBIS.L["Off Hand"]) --Enchant Off-Hand - Superior Intellect
-LBIS:AddEnchant(spec1, "74242", LBIS.L["Two Hand"]) --Enchant Weapon - Power Torrent
 
 LBIS:AddItem(spec0, "59449", LBIS.L["Head"], "BIS") --Lightweight Bio-Optic Killshades
 LBIS:AddItem(spec0, "57871", LBIS.L["Head"], "Alt") --Helm of the Typhonic Beast
@@ -225,9 +225,9 @@ LBIS:AddItem(spec1, "59336", LBIS.L["Legs"], "Alt") --Flame Pillar Leggings
 LBIS:AddItem(spec1, "60250", LBIS.L["Legs"], "Alt") --Shadowflame Leggings
 LBIS:AddItem(spec1, "54506", LBIS.L["Legs"], "Alt") --Flame-Ascended Pantaloons
 LBIS:AddItem(spec1, "54505", LBIS.L["Legs"], "Alt") --Breeches of Mended Nightmares
-LBIS:AddItem(spec1, "65069", LBIS.L["Feet"], "BIS") --Einhorn's Galoshes
+LBIS:AddItem(spec1, "65069", LBIS.L["Feet"], "BIS") --Quickstep Galoshes
 LBIS:AddItem(spec1, "62450", LBIS.L["Feet"], "Alt") --Desert Walker Sandals
-LBIS:AddItem(spec1, "59234", LBIS.L["Feet"], "Alt") --Einhorn's Galoshes
+LBIS:AddItem(spec1, "59234", LBIS.L["Feet"], "Alt") --Quickstep Galoshes
 LBIS:AddItem(spec1, "58485", LBIS.L["Feet"], "Alt") --Melodious Slippers
 LBIS:AddItem(spec1, "69882", LBIS.L["Neck"], "BIS") --Planetary Amulet
 LBIS:AddItem(spec1, "65112", LBIS.L["Neck"], "BIS") --Valiona's Medallion
@@ -277,7 +277,7 @@ LBIS:AddItem(spec1, "64489", LBIS.L["Two Hand"], "BIS") --Staff of Sorcerer-Than
 LBIS:AddItem(spec1, "59525", LBIS.L["Two Hand"], "Alt") --Chelley's Staff of Dark Mending
 LBIS:AddItem(spec1, "56271", LBIS.L["Two Hand"], "Alt") --Cerith Spire Staff
 LBIS:AddItem(spec1, "59460", LBIS.L["Ranged/Relic"], "BIS") --Theresa's Booklight
-LBIS:AddItem(spec1, "65064", LBIS.L["Ranged/Relic"], "Alt") --Finkle's Mixer Upper
+LBIS:AddItem(spec1, "65064", LBIS.L["Ranged/Relic"], "Alt") --Pip's Solution Agitator
 LBIS:AddItem(spec1, "56296", LBIS.L["Ranged/Relic"], "Alt") --Corla's Baton
 LBIS:AddItem(spec1, "65172", LBIS.L["Ranged/Relic"], "Alt") --Cookie's Stirring Rod
-LBIS:AddItem(spec1, "59314", LBIS.L["Ranged/Relic"], "Alt") --Finkle's Mixer Upper
+LBIS:AddItem(spec1, "59314", LBIS.L["Ranged/Relic"], "Alt") --Pip's Solution Agitator

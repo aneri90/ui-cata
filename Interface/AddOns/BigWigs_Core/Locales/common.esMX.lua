@@ -46,6 +46,7 @@ L.health_percent = "%d%% Salud" -- "10% Health" The health percentage of an NPC
 L.door_open = "Puerta abierta" -- When a door is open, usually after a speech from an NPC
 L.gate_open = "Puerta abierta" -- When a gate is open, usually after a speech from an NPC
 
+--L.remaining = "%d remaining" -- 5 remaining
 L.duration = "%s durante %s seg" -- Spell for 10 seconds
 L.over = "%s terminado" -- Spell Over
 L.removed = "%s eliminado" -- Spell Removed
@@ -140,6 +141,11 @@ L.shadow = "Sombras"
 L.nature = "Naturaleza"
 L.arcane = "Arcano"
 
+-- Autotalk
+--L.autotalk = "Automatic NPC interaction"
+--L.autotalk_boss_desc = "Automatically select the NPC dialog options that cause the boss encounter to begin."
+--L.autotalk_generic_desc = "Automatically select the NPC dialog options that cause you to progress to the next stage of the dungeon."
+
 -- Common ability name replacements
 L.absorb = "Absorber" -- Used for shield-like abilities that absorb damage or healing
 L.heal_absorb = "Absorción de sanación" -- Used for shield-like abilities that absorb healing only
@@ -195,3 +201,4 @@ L.soak = "Soak" -- Abilities you have to stand in on purpose to soak the damage,
 L.soaks = "Soaks" -- Plural of L.soak
 L.spell_reflection = "Reflejo de hechizos" -- Any ability that reflects spells
 L.parasite = "Parásito" -- Any ability where a parasite is involved e.g. "Parasitic Infection", "Parasitic Growth", etc
+L.rooted = "Enraizado" -- Any ability that roots you in place, preventing you from moving

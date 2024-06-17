@@ -60,7 +60,10 @@ L.expansionNames = {
 	"巨龍崛起", -- Dragonflight
 	"地心之戰", -- The War Within
 }
-L.currentSeason = "當前賽季"
+L.littleWigsExtras = {
+	["LittleWigs_Delves"] = "Delves",
+	["LittleWigs_CurrentSeason"] = "當前賽季",
+}
 
 -- Media.lua (These are the names of the sounds in the dropdown list in the "sounds" section)
 L.Beware = "當心（艾爾加隆）"

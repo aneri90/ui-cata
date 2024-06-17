@@ -47,6 +47,7 @@ L.general = "Général" -- General settings, i.e. things that apply to normal, h
 --L.door_open = "Door open" -- When a door is open, usually after a speech from an NPC
 --L.gate_open = "Gate open" -- When a gate is open, usually after a speech from an NPC
 
+--L.remaining = "%d remaining" -- 5 remaining
 L.duration = "%s pendant %s sec." -- Spell for 10 seconds
 L.over = "%s terminé" -- Spell Over
 L.removed = "%s enlevé" -- Spell Removed
@@ -141,6 +142,11 @@ L.shadow = "Ombre"
 L.nature = "Nature"
 L.arcane = "Arcanes"
 
+-- Autotalk
+--L.autotalk = "Automatic NPC interaction"
+--L.autotalk_boss_desc = "Automatically select the NPC dialog options that cause the boss encounter to begin."
+--L.autotalk_generic_desc = "Automatically select the NPC dialog options that cause you to progress to the next stage of the dungeon."
+
 -- Common ability name replacements
 L.absorb = "Absorbe" -- Used for shield-like abilities that absorb damage or healing
 --L.heal_absorb = "Heal Absorb" -- Used for shield-like abilities that absorb healing only
@@ -196,3 +202,4 @@ L.soak = "Soak" -- Abilities you have to stand in on purpose to soak the damage,
 L.soaks = "Soaks" -- Plural of L.soak
 L.spell_reflection = "Renvoi de sort" -- Any ability that reflects spells
 L.parasite = "Parasite" -- Any ability where a parasite is involved e.g. "Parasitic Infection", "Parasitic Growth", etc
+L.rooted = "Immobilisé" -- Any ability that roots you in place, preventing you from moving

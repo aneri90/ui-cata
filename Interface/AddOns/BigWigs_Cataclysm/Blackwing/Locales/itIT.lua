@@ -8,7 +8,6 @@ if L then
 	L.slump_desc = "Avvisa il crollo di Magmaw ed espone la sua testa, permettendo ai cavalcatori del rodeo di iniziare."
 	L.slump_bar = "Rodeo"
 	L.slump_message = "Oh Sììì, cavalchiamo!!!"
-	L.slump_emote_trigger = "%s crolla a terra, mostrando le sue chele!"
 
 	L.expose_emote_trigger = "testa"
 end
@@ -18,36 +17,17 @@ if L then
 	L.nef = "Ser Victor Nefarius"
 	L.nef_desc = "Avvisi per le abilità di Ser Victor Nefarius."
 
-	L.pool = "Esplosione Pozza"
-
-	L.switch = "Cambio"
-	L.switch_desc = "Avviso per i Cambi."
-	L.switch_message = "%s %s"
-
-	L.next_switch = "Prossima Attivazione"
-
-	L.nef_next = "Beneficio Abilità"
-
-	L.bomb_message = "La Bomba sta seguendo TE!!!"
-	L.cloud_message = "Nuvola su di TE!!!"
-	L.protocol_message = "Bombe in arrivo!"
-
-	L.custom_on_iconomnotron = "Icona sul boss attivo"
-	L.custom_on_iconomnotron_desc = "Metti l'icona primaria dell'incursione sul boss attivo (richiede promozione o capogruppo)."
+	L.pool_explosion = "Esplosione Pozza"
+	L.incinerate = "Incenerimento"
+	L.flamethrower = "Lanciafiamme"
+	L.lightning = "Elettro"
+	L.infusion = "Infusione"
 end
 
 L = BigWigs:NewBossLocale("Atramedes", "itIT")
 if L then
-	L.ground_phase = "Fase a Terra"
-	L.ground_phase_desc = "Avviso per quando Atramedes atterra."
-	L.air_phase = "Fase Aerea"
-	L.air_phase_desc = "Avviso per quando Atramedes si alza in volo."
-
+	L.obnoxious_fiend = "Demonio Ripugnante" -- NPC ID 49740
 	L.air_phase_trigger = "Sì, correte! Con ogni passo il cuore batte più forte."
-
-	L.obnoxious_soon = "Demone Ripugnante tra poco!"
-
-	L.searing_soon = "Fiamme Ustionanti in 10 secondi!"
 end
 
 L = BigWigs:NewBossLocale("Chimaeron", "itIT")

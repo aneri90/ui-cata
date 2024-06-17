@@ -8,7 +8,6 @@ if L then
 	L.slump_desc = "슬럼프 상태를 알립니다."
 	L.slump_bar = "로데오"
 	L.slump_message = "올라타세요~!"
-	L.slump_emote_trigger = "%s|1이;가; 집게를 드러내며 앞으로 몸을 기울입니다!"
 
 	L.expose_emote_trigger = "%s|1이;가; 창에 꽂혀 머리가 노출되었습니다!"
 end
@@ -18,22 +17,11 @@ if L then
 	L.nef = "군주 빅터 네파리우스"
 	L.nef_desc = "군주 빅터 네파리우스의 기술을 알립니다."
 
-	L.pool = "바닥 웅덩이 폭발"
-
-	L.switch = "전환"
-	L.switch_desc = "전환을 알립니다."
-	L.switch_message = "%s %s"
-
-	L.next_switch = "다음 활성화"
-
-	L.nef_next = "기술 버프"
-
-	L.bomb_message = "슬라임이 당신을 추적!"
-	L.cloud_message = "당신은 화학 구름!"
-	L.protocol_message = "독 폭탄!"
-
-	L.custom_on_iconomnotron = "활성화 보스 전술"
-	L.custom_on_iconomnotron_desc = "활성화된 보스에 공격대 전술을 지정합니다. (공격대장이나 승급된 사람만이 가능합니다)."
+	L.pool_explosion = "바닥 웅덩이 폭발"
+	L.incinerate = "소각"
+	L.flamethrower = "화염방사기"
+	L.lightning = "번개"
+	L.infusion = "주입"
 end
 
 L = BigWigs:NewBossLocale("Chimaeron", "koKR")
@@ -47,16 +35,8 @@ end
 
 L = BigWigs:NewBossLocale("Atramedes", "koKR")
 if L then
-	L.ground_phase = "지상 단계"
-	L.ground_phase_desc = "아트라메데스의 착지를 알립니다."
-	L.air_phase = "공중 단계"
-	L.air_phase_desc = "아트라메데스의 이륙을 알립니다."
-
+	L.obnoxious_fiend = "불쾌한 마귀" -- NPC ID 49740
 	L.air_phase_trigger = "그래, 도망가라! 발을 디딜 때마다 맥박은 빨라지지. 점점 더 크게 울리는구나... 귀청이 터질 것만 같군! 넌 달아날 수 없다!"
-
-	L.obnoxious_soon = "곧 불쾌한 마귀!"
-
-	L.searing_soon = "10초 후 이글거리는 불길!"
 end
 
 L = BigWigs:NewBossLocale("Maloriak", "koKR")

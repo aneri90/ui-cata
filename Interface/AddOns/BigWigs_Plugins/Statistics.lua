@@ -14,24 +14,28 @@ local activeDurations = {}
 local healthPools = {}
 local units = {"boss1", "boss2", "boss3", "boss4", "boss5"}
 local difficultyTable = BigWigsLoader.isRetail and {
-	--[9] = "normal", -- raid40 (molten core/BWL/AQ40)
-	[14] = "normal",
-	[15] = "heroic",
-	[16] = "mythic",
-	[17] = "LFR",
-	[7] = "LFR", -- Old LFR (Dragon Soul)
+	[3] = "10N", -- 10 Player
+	[4] = "25N", -- 25 Player
+	[5] = "10H", -- 10 Player (Heroic)
+	[6] = "25H", -- 25 Player (Heroic)
+	[7] = "LFR", -- Looking For Raid [old] (Dragon Soul)
+	--[9] = "normal", -- 40 Player (MC/BWL/AQ40)
+	[14] = "normal", -- Normal
+	[15] = "heroic", -- Heroic
+	[16] = "mythic", -- Mythic
+	[17] = "LFR", -- Looking For Raid
 } or {
-	[3] = "10N", -- 10N
-	[4] = "25N", -- 25N
-	[5] = "10H", -- 10H
-	[6] = "25H", -- 25H
-	[7] = "LFR", -- Old LFR (Dragon Soul)
-	[9] = "normal", -- raid40 (molten core/BWL/AQ40)
-	[175] = "normal", -- raid10 (karazhan) -- move from 3 (fake) to 175 (guessed)
-	[148] = "normal", -- raid20
-	[176] = "normal", -- raid 25 (sunwell)
-	[198] = "normal", -- raid10 (Blackfathom Deeps/Gnomeregan - Classic Season of Discovery)
-	[215] = "normal", -- raid20 (Sunken Temple - Classic Season of Discovery)
+	[3] = "10N", -- 10 Player
+	[4] = "25N", -- 25 Player
+	[5] = "10H", -- 10 Player (Heroic)
+	[6] = "25H", -- 25 Player (Heroic)
+	[7] = "LFR", -- Looking For Raid [old] (Dragon Soul)
+	[9] = "normal", -- 40 Player (MC/BWL/AQ40)
+	[148] = "normal", -- 20 Player (AQ20)
+	--[175] = "normal", -- 10 Player (karazhan) -- move from 3 (fake) to 175 (guessed)
+	--[176] = "normal", -- 25 Player (sunwell)
+	[198] = "normal", -- Normal [10] (Blackfathom Deeps/Gnomeregan - Classic Season of Discovery)
+	[215] = "normal", -- Normal [20] (Sunken Temple - Classic Season of Discovery)
 }
 local SPELL_DURATION_SEC = SPELL_DURATION_SEC -- "%.2f sec"
 local GetTime = GetTime
@@ -41,10 +45,11 @@ local dontPrint = { -- Don't print a warning message for these difficulties
 	[8] = true, -- Mythic+ Dungeon
 	[23] = true, -- Mythic Dungeon
 	[24] = true, -- Timewalking
+	[208] = true, -- Delves
 }
 
 --[[
-10.2.6
+11.0.0
 1. Normal
 2. Heroic
 3. 10 Player
@@ -89,6 +94,9 @@ local dontPrint = { -- Don't print a warning message for these difficulties
 172. World Boss
 192. Challenge Level 1
 205. Follower
+208. Delves
+216. Quest
+220. Story
 
 4.4.0
 1. Normal
@@ -123,6 +131,7 @@ local dontPrint = { -- Don't print a warning message for these difficulties
 213. Infinite
 214. DNT - Internal only
 215. Normal
+
 /run for i=1, 1000 do local n = GetDifficultyInfo(i) if n then print(i..".", n) end end
 ]]--
 

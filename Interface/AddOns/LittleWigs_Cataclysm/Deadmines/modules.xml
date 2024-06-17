@@ -4,11 +4,10 @@
 <Script file="Glubtok.lua"/>
 <Script file="HelixGearbreaker.lua"/>
 <Script file="FoeReaper5000.lua"/>
+<Script file="AdmiralRipsnarl.lua"/>
 <Script file="Cookie.lua"/>
 <Script file="VanessaVanCleef.lua"/>
 
-<!-- <Include file="Locales\locales.xml"/> -->
 <Include file="Options\options.xml"/>
 
 </Ui>
-

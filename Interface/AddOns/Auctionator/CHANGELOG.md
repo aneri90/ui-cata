@@ -1,6 +1,6 @@
 # Auctionator
 
-## [10.2.46](https://github.com/Auctionator/Auctionator/tree/10.2.46) (2024-05-28)
-[Full Changelog](https://github.com/Auctionator/Auctionator/compare/10.2.45...10.2.46) 
+## [10.2.48](https://github.com/Auctionator/Auctionator/tree/10.2.48) (2024-06-10)
+[Full Changelog](https://github.com/Auctionator/Auctionator/compare/10.2.47...10.2.48) 
 
-- Vanilla: Fix selling bag not populating  
+- Classic: Fix Shift+Click on shopping result including ilvl in search name  

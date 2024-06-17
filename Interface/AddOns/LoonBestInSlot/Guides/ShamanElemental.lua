@@ -27,10 +27,9 @@ LBIS:AddEnchant(spec1, "75150", LBIS.L["Legs"]) --Powerful Ghostly Spellthread
 LBIS:AddEnchant(spec1, "74253", LBIS.L["Feet"]) --Enchant Boots - Lavawalker
 LBIS:AddEnchant(spec1, "74199", LBIS.L["Feet"]) --Enchant Boots - Haste
 LBIS:AddEnchant(spec1, "74217", LBIS.L["Ring"]) --Enchant Ring - Intellect
-LBIS:AddEnchant(spec1, "74242", LBIS.L["Main Hand"]) --Enchant Weapon - Power Torrent
+LBIS:AddEnchant(spec1, "74242", LBIS.L["Main Hand~Two Hand"]) --Enchant Weapon - Power Torrent
 LBIS:AddEnchant(spec1, "74223", LBIS.L["Main Hand"]) --Enchant Weapon - Hurricane
 LBIS:AddEnchant(spec1, "74235", LBIS.L["Off Hand"]) --Enchant Off-Hand - Superior Intellect
-LBIS:AddEnchant(spec1, "74242", LBIS.L["Two Hand"]) --Enchant Weapon - Power Torrent
 
 LBIS:AddItem(spec0, "59458", LBIS.L["Head"], "BIS") --Energized Bio-Optic Killshades
 LBIS:AddItem(spec0, "58128", LBIS.L["Head"], "Alt") --Helm of the Inward Eye
@@ -114,7 +113,7 @@ LBIS:AddItem(spec0, "62244", LBIS.L["Ranged/Relic"], "Alt") --Tattooed Eyeball
 
 LBIS:AddItem(spec1, "65256", LBIS.L["Head"], "BIS") --Headpiece of the Raging Elements
 LBIS:AddItem(spec1, "65136", LBIS.L["Head"], "Alt") --Helm of the Nether Scion
-LBIS:AddItem(spec1, "59456", LBIS.L["Head"], "Alt") --Deadly Bio-Optic Killshades
+LBIS:AddItem(spec1, "59458", LBIS.L["Head"], "Alt") --Energized Bio-Optic Killshades
 LBIS:AddItem(spec1, "65258", LBIS.L["Shoulder"], "BIS") --Shoulderwraps of the Raging Elements
 LBIS:AddItem(spec1, "65114", LBIS.L["Shoulder"], "Alt") --Feludius' Mantle
 LBIS:AddItem(spec1, "60317", LBIS.L["Shoulder"], "Alt") --Shoulderwraps of the Raging Elements

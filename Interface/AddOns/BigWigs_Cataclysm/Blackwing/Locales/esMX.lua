@@ -8,7 +8,6 @@ if L then
 	L.slump_desc = "Cae hacia delante exponiendose a sí mismo, permitiendo que el rodeo empiece."
 	L.slump_bar = "Rodeo"
 	L.slump_message = "¡Yeepah, móntalo!"
-	L.slump_emote_trigger = "¡%s cae hacia delante y deja expuestas sus tenazas!"
 
 	L.expose_emote_trigger = "cabeza"
 end
@@ -18,22 +17,11 @@ if L then
 	L.nef = "Lord Victor Nefarius"
 	L.nef_desc = "Avisos para las abilidades de Lord Victor Nefarius"
 
-	L.pool = "Generador de poder sobrecargado"
-
-	L.switch = "Cambio"
-	L.switch_desc = "Avisa los cambios"
-	L.switch_message = "%s %s"
-
-	L.next_switch = "Siguiente activación"
-
-	L.nef_next = "Bufo de habilidad"
-
-	L.bomb_message = "¡Un moco TE persigue!"
-	L.cloud_message = "¡Nube en TI!"
-	L.protocol_message = "¡Bomba de veneno inminente!"
-
-	L.custom_on_iconomnotron = "Icono en el jefe activo"
-	L.custom_on_iconomnotron_desc = "Coloca el icono principal de raid en el jefe activo (requiere ayudante o lider)."
+	L.pool_explosion = "Generador de poder sobrecargado"
+	L.incinerate = "Incinerar"
+	L.flamethrower = "Lanzallamas"
+	L.lightning = "Relámpago"
+	L.infusion = "Infusión"
 end
 
 L = BigWigs:NewBossLocale("Chimaeron", "esMX")
@@ -47,16 +35,8 @@ end
 
 L = BigWigs:NewBossLocale("Atramedes", "esMX")
 if L then
-	L.ground_phase = "Fase en tierra"
-	L.ground_phase_desc = "Avisa cuando Atramedes aterriza."
-	L.air_phase = "Fase aérea"
-	L.air_phase_desc = "Avisa cuando Atramedes despega."
-
+	L.obnoxious_fiend = "Maligno execrable" -- NPC ID 49740
 	L.air_phase_trigger = "¡Sí, corred! Con cada paso, vuestros corazones se aceleran. El latido, fuerte y clamoroso... Casi ensordecedor. ¡No podéis escapar!"
-
-	L.obnoxious_soon = "¡Maligno Execrable inminente!"
-
-	L.searing_soon = "¡Llamas abrasadoras en 10 seg!"
 end
 
 L = BigWigs:NewBossLocale("Maloriak", "esMX")

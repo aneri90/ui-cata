@@ -8,7 +8,6 @@ if L then
 	L.slump_desc = "当熔喉扑倒并暴露后脑时发出警报。需要骑乘。"
 	L.slump_bar = "骑乘"
 	L.slump_message = "嘿，快骑上它！"
-	L.slump_emote_trigger = "%s向前倒下，暴露出他的钳子！"
 
 	L.expose_emote_trigger = "将自己钉在刺上，露出了他的头"
 end
@@ -18,22 +17,11 @@ if L then
 	L.nef = "维克多·奈法里奥斯勋爵"
 	L.nef_desc = "当维克多·奈法里奥斯勋爵施放技能时发出警报。"
 
-	L.pool = "奥术反冲"
-
-	L.switch = "转换"
-	L.switch_desc = "当转换时发出警报。"
-	L.switch_message = ">%s< %s！"
-
-	L.next_switch = "下一转换"
-
-	L.nef_next = "暗影灌注"
-
-	L.bomb_message = ">你< 毒液炸弹追击！"
-	L.cloud_message = ">你< 化学云雾！"
-	L.protocol_message = "自动毒弹！"
-
-	L.custom_on_iconomnotron = "标记激活首领"
-	L.custom_on_iconomnotron_desc = "为激活的首领打上主团队标记。（需要权限）"
+	L.pool_explosion = "奥术反冲"
+	L.incinerate = "烧尽"
+	L.flamethrower = "火焰喷射器"
+	L.lightning = "闪电"
+	L.infusion = "灌注"
 end
 
 L = BigWigs:NewBossLocale("Chimaeron", "zhCN")
@@ -47,16 +35,8 @@ end
 
 L = BigWigs:NewBossLocale("Atramedes", "zhCN")
 if L then
-	L.ground_phase = "地面阶段"
-	L.ground_phase_desc = "当艾卓曼德斯着陆时发出警报。"
-	L.air_phase = "空中阶段"
-	L.air_phase_desc = "当艾卓曼德斯起飞时发出警报。"
-
+	L.obnoxious_fiend = "喧闹恶鬼" -- NPC ID 49740
 	L.air_phase_trigger = "对，跑吧！每跑一步你的心跳都会加快。这心跳声，洪亮如雷，震耳欲聋。你逃不掉的！"
-
-	L.obnoxious_soon = "即将 喧闹恶鬼！"
-
-	L.searing_soon = "10秒后，灼热烈焰！"
 end
 
 L = BigWigs:NewBossLocale("Maloriak", "zhCN")

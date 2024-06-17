@@ -21,24 +21,17 @@ VER 3 0000000000000001 "ToggleBars" "INV_MISC_QUESTIONMARK"
 /run local a,b={3,4,5,6,7},unpack(ElvUI);for c,d in pairs(a)do local e=b.db.actionbar["bar"..d].visibility;b.db.actionbar["bar"..d].visibility=e=="hide"and"[petbattle]hide;show"or"hide"b.ActionBars:PositionAndSizeBar("bar"..d)end
 END
 VER 3 0000000000000006 "ZygorAction1" "134327"
-#showtooltip Kill Shaman of the Black
-/run ZGV:MCM(8)
+#showtooltip Talk to Colin Thundermar
+/run ZGV:MCM(4)
 /cleartarget
-/target Shaman of the Black
+/target Colin Thundermar
 /run ZGV:MRM()
-/cleartarget [dead]
 END
 VER 3 0000000000000007 "ZygorAction2" "134327"
-#showtooltip Kill Obsidian Stoneslave
-/run ZGV:MCM(8)
-/cleartarget
-/target Obsidian Stoneslave
-/run ZGV:MRM()
-/cleartarget [dead]
-END
-VER 3 0000000000000008 "ZygorAction3" "134327"
 #showtooltip Shift click to destroy:|n|cff9d9d9d1 Evidence Against Samuelson|r worth |cffffaa990c|r|nRight click to skip this item|n
 /run ZGV.Inventory:HandleTrashMacro()
+END
+VER 3 0000000000000008 "ZygorAction3" "134400"
 END
 VER 3 0000000000000009 "ZygorAction4" "134400"
 END

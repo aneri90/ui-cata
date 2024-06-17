@@ -46,6 +46,7 @@ L.general = "Общее" -- General settings, i.e. things that apply to normal, 
 L.door_open = "Дверь открыта" -- When a door is open, usually after a speech from an NPC
 L.gate_open = "Врата открыты" -- When a gate is open, usually after a speech from an NPC
 
+--L.remaining = "%d remaining" -- 5 remaining
 L.duration = "%s для %s сек" -- Spell for 10 seconds
 L.over = "%s завершается" -- Spell Over
 L.removed = "%s снято" -- Spell Removed
@@ -140,6 +141,11 @@ L.shadow = "Тень"
 L.nature = "Природа"
 L.arcane = "Тайная магия"
 
+-- Autotalk
+--L.autotalk = "Automatic NPC interaction"
+--L.autotalk_boss_desc = "Automatically select the NPC dialog options that cause the boss encounter to begin."
+--L.autotalk_generic_desc = "Automatically select the NPC dialog options that cause you to progress to the next stage of the dungeon."
+
 -- Common ability name replacements
 L.absorb = "Поглoщ." -- Used for shield-like abilities that absorb damage or healing
 L.heal_absorb = "Поглощение лечения" -- Used for shield-like abilities that absorb healing only
@@ -195,3 +201,4 @@ L.soak = "Сока" -- Abilities you have to stand in on purpose to soak the dam
 L.soaks = "Соки" -- Plural of L.soak
 L.spell_reflection = "Отражение заклинаний" -- Any ability that reflects spells
 L.parasite = "Паразит" -- Any ability where a parasite is involved e.g. "Parasitic Infection", "Parasitic Growth", etc
+L.rooted = "Обездвиживание" -- Any ability that roots you in place, preventing you from moving

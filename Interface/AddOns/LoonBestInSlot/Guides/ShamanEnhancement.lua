@@ -17,6 +17,7 @@ LBIS:AddEnchant(spec1, "75178", LBIS.L["Back"]) --Swordguard Embroidery
 LBIS:AddEnchant(spec1, "60663", LBIS.L["Back"]) --Enchant Cloak - Major Agility
 LBIS:AddEnchant(spec1, "55002", LBIS.L["Back"]) --Flexweave Underlay
 LBIS:AddEnchant(spec1, "74250", LBIS.L["Chest"]) --Enchant Chest - Peerless Stats
+LBIS:AddEnchant(spec1, "74191", LBIS.L["Chest"]) --Enchant Chest - Mighty Stats
 LBIS:AddEnchant(spec1, "96264", LBIS.L["Wrist"]) --Enchant Bracer - Agility
 LBIS:AddEnchant(spec1, "85008", LBIS.L["Wrist"]) --Draconic Embossment - Agility
 LBIS:AddEnchant(spec1, "55628", LBIS.L["Wrist"]) --Socket Bracer
@@ -119,8 +120,8 @@ LBIS:AddItem(spec1, "65141", LBIS.L["Hands"], "Alt") --Proto-Handler's Gauntlets
 LBIS:AddItem(spec1, "65132", LBIS.L["Waist"], "BIS") --Coil of Ten-Thousand Screams
 LBIS:AddItem(spec1, "65368", LBIS.L["Waist"], "Alt") --Star Chaser Belt
 LBIS:AddItem(spec1, "56539", LBIS.L["Waist"], "Alt") --Corded Viper Belt
-LBIS:AddItem(spec1, "60230", LBIS.L["Legs"], "BIS") --Twilight Scale Leggings
 LBIS:AddItem(spec1, "65252", LBIS.L["Legs"], "BIS") --Legguards of the Raging Elements
+LBIS:AddItem(spec1, "60230", LBIS.L["Legs"], "BIS") --Twilight Scale Leggings
 LBIS:AddItem(spec1, "65049", LBIS.L["Legs"], "Alt") --Leggings of Lethal Force
 LBIS:AddItem(spec1, "65063", LBIS.L["Feet"], "BIS") --Boots of Vertigo
 LBIS:AddItem(spec1, "62385", LBIS.L["Feet"], "Alt") --Treads of Malorne
@@ -135,6 +136,7 @@ LBIS:AddItem(spec1, "52348", LBIS.L["Ring"], "Alt") --Elementium Destroyer's Rin
 LBIS:AddItem(spec1, "65140", LBIS.L["Trinket"], "BIS") --Essence of the Cyclone
 LBIS:AddItem(spec1, "58181", LBIS.L["Trinket"], "BIS") --Fluid Death
 LBIS:AddItem(spec1, "65026", LBIS.L["Trinket"], "Alt") --Prestor's Talisman of Machination
+LBIS:AddItem(spec1, "59520", LBIS.L["Trinket"], "Alt") --Unheeded Warning
 LBIS:AddItem(spec1, "56427", LBIS.L["Trinket"], "Alt") --Left Eye of Rajh
 LBIS:AddItem(spec1, "56394", LBIS.L["Trinket"], "Alt") --Tia's Grace
 LBIS:AddItem(spec1, "62463", LBIS.L["Trinket"], "Alt") --Unsolvable Riddle
@@ -144,6 +146,7 @@ LBIS:AddItem(spec1, "62051", LBIS.L["Trinket"], "Alt") --Darkmoon Card: Hurrican
 LBIS:AddItem(spec1, "65024", LBIS.L["Main Hand"], "BIS") --Crul'korak, the Lightning's Arc
 LBIS:AddItem(spec1, "59443", LBIS.L["Main Hand"], "Alt") --Crul'korak, the Lightning's Arc
 LBIS:AddItem(spec1, "63537", LBIS.L["Main Hand"], "Alt") --Claws of Torment
+LBIS:AddItem(spec1, "59462", LBIS.L["Main Hand"], "Alt") --Maimgor's Bite
 LBIS:AddItem(spec1, "64671", LBIS.L["Ranged/Relic"], "BIS") --Relic of Golganneth
 LBIS:AddItem(spec1, "56316", LBIS.L["Ranged/Relic"], "Alt") --Sandshift Relic
 LBIS:AddItem(spec1, "63460", LBIS.L["Ranged/Relic"], "Alt") --Relic of Arathor

@@ -12,7 +12,7 @@ local strfind = string.find
 -- Generate our version variables
 --
 
-local BIGWIGS_VERSION = 332
+local BIGWIGS_VERSION = 336
 local BIGWIGS_RELEASE_STRING, BIGWIGS_VERSION_STRING
 local versionQueryString, versionResponseString = "Q^%d^%s^%d^%s", "V^%d^%s^%d^%s"
 local customGuildName = false
@@ -37,7 +37,7 @@ do
 	local ALPHA = "ALPHA"
 
 	local releaseType
-	local myGitHash = "4ab50c6" -- The ZIP packager will replace this with the Git hash.
+	local myGitHash = "6d76cf0" -- The ZIP packager will replace this with the Git hash.
 	local releaseString
 	--[=[@alpha@
 	-- The following code will only be present in alpha ZIPs.
@@ -174,51 +174,78 @@ do
 	local lw_s = "LittleWigs_Shadowlands"
 	local lw_df = "LittleWigs_Dragonflight"
 	local lw_tww = "LittleWigs_TheWarWithin"
+	local lw_delves = "LittleWigs_Delves"
 	local lw_cs = "LittleWigs_CurrentSeason"
 	local cap = "Capping"
 
 	if public.isVanilla then
 		public.currentExpansion = {
 			name = c,
-			littlewigsName = lw_c,
+			bigWigsBundled = {},
 			littlewigsDefault = lw_c,
+			littleWigsBundled = {},
 			zones = {},
 		}
 	elseif public.isTBC then
 		public.currentExpansion = {
 			name = bc,
-			littlewigsName = lw_bc,
+			bigWigsBundled = {},
 			littlewigsDefault = lw_bc,
+			littleWigsBundled = {},
 			zones = {},
 		}
 	elseif public.isWrath then
 		public.currentExpansion = {
 			name = wotlk,
-			littlewigsName = lw_wotlk,
+			bigWigsBundled = {},
 			littlewigsDefault = lw_wotlk,
+			littleWigsBundled = {},
 			zones = {},
 		}
 	elseif public.isCata then
 		public.currentExpansion = {
 			name = cata,
-			littlewigsName = lw_cata,
+			bigWigsBundled = {},
 			littlewigsDefault = lw_cata,
+			littleWigsBundled = {},
 			zones = {},
 		}
-	elseif public.isBeta then -- TWW Alpha/Beta
+	elseif public.isBeta then -- TWW Beta
 		public.currentExpansion = { -- Change on new expansion releases
 			name = tww,
-			littlewigsName = lw_tww,
-			littlewigsDefault = lw_tww,
+			bigWigsBundled = {
+				[df] = true,
+				[tww] = true,
+			},
+			littlewigsDefault = lw_cs,
+			littleWigsBundled = {
+				[lw_df] = true,
+				[lw_tww] = true,
+				[lw_delves] = true,
+				[lw_cs] = true,
+			},
+			littleWigsExtras = {
+				lw_delves,
+				lw_cs,
+			},
 			zones = {
 				[2657] = "BigWigs_NerubarPalace",
 			}
 		}
-	else
+	else -- Dragonflight
 		public.currentExpansion = { -- Change on new expansion releases
 			name = df,
-			littlewigsName = lw_df,
+			bigWigsBundled = {
+				[df] = true,
+			},
 			littlewigsDefault = lw_cs,
+			littleWigsBundled = {
+				[lw_df] = true,
+				[lw_cs] = true,
+			},
+			littleWigsExtras = {
+				lw_cs,
+			},
 			zones = {
 				[2522] = "BigWigs_VaultOfTheIncarnates",
 				[2569] = "BigWigs_Aberrus",
@@ -308,9 +335,9 @@ do
 		[2657] = tww, -- Nerub'ar Palace
 
 		--[[ LittleWigs: Classic ]]--
-		[33] = (public.isVanilla or public.isTBC or public.isWrath) and nil or lw_cata, -- Shadowfang Keep
+		[33] = not (public.isVanilla or public.isTBC or public.isWrath) and lw_cata or nil, -- Shadowfang Keep
 		--[34] = lw_c, -- The Stockade
-		[36] = (public.isVanilla or public.isTBC or public.isWrath) and nil or lw_cata, -- Deadmines
+		[36] = not (public.isVanilla or public.isTBC or public.isWrath) and lw_cata or nil, -- Deadmines
 		--[43] = lw_c, -- Wailing Caverns
 		--[47] = lw_c, -- Razorfen Kraul
 		--[48] = lw_c, -- Blackfathom Deeps
@@ -372,7 +399,7 @@ do
 		[939] = lw_cata, -- Well of Eternity
 		[940] = lw_cata, -- Hour of Twilight
 		[657] = lw_cata, -- The Vortex Pinnacle
-		[670] = lw_cata, -- Grim Batol
+		[670] = public.isBeta and {lw_cata, lw_cs} or lw_cata, -- Grim Batol
 		--[[ LittleWigs: Mists of Pandaria ]]--
 		[959] = lw_mop, -- Shado-Pan Monastery
 		[960] = lw_mop, -- Temple of the Jade Serpent
@@ -413,7 +440,7 @@ do
 		[1754] = lw_bfa, -- Freehold
 		[1762] = lw_bfa, -- King's Rest
 		[1864] = lw_bfa, -- Shrine of the Storm
-		[1822] = lw_bfa, -- Siege of Boralus
+		[1822] = public.isBeta and {lw_bfa, lw_cs} or lw_bfa, -- Siege of Boralus
 		[1877] = lw_bfa, -- Temple of Sethraliss
 		[1594] = lw_bfa, -- The Undermine
 		[1771] = lw_bfa, -- Tol Dagor
@@ -425,32 +452,46 @@ do
 		--[[ LittleWigs: Shadowlands ]]--
 		[2284] = lw_s, -- Sanguine Depths
 		[2285] = lw_s, -- Spires of Ascension
-		[2286] = lw_s, -- The Necrotic Wake
+		[2286] = public.isBeta and {lw_s, lw_cs} or lw_s, -- The Necrotic Wake
 		[2287] = lw_s, -- Halls of Atonement
 		[2289] = lw_s, -- Plaguefall
-		[2290] = lw_s, -- Mists of Tirna Scithe
+		[2290] = public.isBeta and {lw_s, lw_cs} or lw_s, -- Mists of Tirna Scithe
 		[2291] = lw_s, -- De Other Side
 		[2293] = lw_s, -- Theater of Pain
 		[2441] = lw_s, -- Tazavesh, the Veiled Market
 		--[[ LittleWigs: Dragonflight ]]--
-		[2451] = {lw_df, lw_cs}, -- Uldaman: Legacy of Tyr
-		[2515] = {lw_df, lw_cs}, -- The Azure Vault
-		[2516] = {lw_df, lw_cs}, -- The Nokhud Offensive
-		[2519] = {lw_df, lw_cs}, -- Neltharus
-		[2520] = {lw_df, lw_cs}, -- Brackenhide Hollow
-		[2521] = {lw_df, lw_cs}, -- Ruby Life Pools
-		[2526] = {lw_df, lw_cs}, -- Algeth'ar Academy
-		[2527] = {lw_df, lw_cs}, -- Halls of Infusion
+		[2451] = not public.isBeta and {lw_df, lw_cs} or lw_df, -- Uldaman: Legacy of Tyr
+		[2515] = not public.isBeta and {lw_df, lw_cs} or lw_df, -- The Azure Vault
+		[2516] = not public.isBeta and {lw_df, lw_cs} or lw_df, -- The Nokhud Offensive
+		[2519] = not public.isBeta and {lw_df, lw_cs} or lw_df, -- Neltharus
+		[2520] = not public.isBeta and {lw_df, lw_cs} or lw_df, -- Brackenhide Hollow
+		[2521] = not public.isBeta and {lw_df, lw_cs} or lw_df, -- Ruby Life Pools
+		[2526] = not public.isBeta and {lw_df, lw_cs} or lw_df, -- Algeth'ar Academy
+		[2527] = not public.isBeta and {lw_df, lw_cs} or lw_df, -- Halls of Infusion
 		[2579] = lw_df, -- Dawn of the Infinite
 		--[[ LittleWigs: The War Within ]]--
 		[2648] = lw_tww, -- The Rookery
 		[2649] = lw_tww, -- Priory of the Sacred Flame
 		[2651] = lw_tww, -- Darkflame Cleft
-		[2652] = lw_tww, -- The Stonevault
-		[2660] = lw_tww, -- Ara-Kara, City of Echoes
+		[2652] = public.isBeta and {lw_tww, lw_cs} or lw_tww, -- The Stonevault
+		[2660] = public.isBeta and {lw_tww, lw_cs} or lw_tww, -- Ara-Kara, City of Echoes
 		[2661] = lw_tww, -- Cinderbrew Meadery
-		[2662] = lw_tww, -- The Dawnbreaker
-		[2669] = lw_tww, -- City of Threads
+		[2662] = public.isBeta and {lw_tww, lw_cs} or lw_tww, -- The Dawnbreaker
+		[2669] = public.isBeta and {lw_tww, lw_cs} or lw_tww, -- City of Threads
+		--[[ LittleWigs: Delves ]]--
+		[2664] = lw_delves, -- Fungal Folly
+		[2679] = lw_delves, -- Mycomancer Cavern
+		[2680] = lw_delves, -- Earthcrawl Mines
+		[2681] = lw_delves, -- Kriegval's Rest
+		[2682] = lw_delves, -- Zekvir's Lair
+		[2683] = lw_delves, -- The Waterworks
+		[2684] = lw_delves, -- The Dread Pit
+		[2685] = lw_delves, -- Skittering Breach
+		[2686] = lw_delves, -- Nightfall Sanctum
+		[2687] = lw_delves, -- The Sinkhole
+		[2688] = lw_delves, -- The Spiral Weave
+		[2689] = lw_delves, -- Tak-Rethan Abyss
+		[2690] = lw_delves, -- The Underkeep
 
 		--[[ Capping ]]--
 		[30] = cap, -- Alterac Valley
@@ -902,9 +943,13 @@ function mod:ADDON_LOADED(addon)
 	--bwFrame:RegisterEvent("GLOBAL_MOUSE_DOWN")
 	--bwFrame:RegisterEvent("GLOBAL_MOUSE_UP")
 
+	if C_EventUtils.IsEventValid("ACTIVE_DELVE_DATA_UPDATE") then -- Temporary workaround until the new event for delves is implemented
+		bwFrame:RegisterEvent("ACTIVE_DELVE_DATA_UPDATE")
+	end
 	bwFrame:RegisterEvent("ZONE_CHANGED")
 	bwFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
-	bwFrame:RegisterEvent("GROUP_ROSTER_UPDATE")
+	bwFrame:RegisterEvent("GROUP_FORMED")
+	bwFrame:RegisterEvent("GROUP_LEFT")
 	if C_EventUtils.IsEventValid("START_PLAYER_COUNTDOWN") then
 		bwFrame:RegisterEvent("START_PLAYER_COUNTDOWN")
 		bwFrame:RegisterEvent("CANCEL_PLAYER_COUNTDOWN")
@@ -1042,7 +1087,7 @@ function mod:UPDATE_FLOATING_CHAT_WINDOWS()
 	bwFrame:UnregisterEvent("UPDATE_FLOATING_CHAT_WINDOWS")
 	self.UPDATE_FLOATING_CHAT_WINDOWS = nil
 
-	self:GROUP_ROSTER_UPDATE()
+	self:GROUP_FORMED()
 	self:PLAYER_ENTERING_WORLD()
 	self:ZONE_CHANGED()
 end
@@ -1353,12 +1398,12 @@ end
 --
 
 do
-	local DBMdotRevision = "20240529003752" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
-	local DBMdotDisplayVersion = "10.2.45" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
-	local DBMdotReleaseRevision = "20240528000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
+	local DBMdotRevision = "20240614081714" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
+	local DBMdotDisplayVersion = "10.2.48" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
+	local DBMdotReleaseRevision = "20240614000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
 	local protocol = 3
 	local versionPrefix = "V"
-	local PForceDisable = public.isCata and 11 or 10
+	local PForceDisable = 12
 
 	local timer = nil
 	local function sendDBMMsg()
@@ -1626,13 +1671,13 @@ do
 			zoneAddon = zoneAddon[1]
 		end
 		if zoneAddon and id > 0 and not fakeZones[id] and not warnedThisZone[id] then
-			if zoneAddon == public.currentExpansion.name and public.isRetail and public.usingBigWigsRepo then return end -- If we are a BW Git user, then current content can't be missing, so return
+			if public.usingBigWigsRepo and public.currentExpansion.bigWigsBundled[zoneAddon] then return end -- If we are a BW Git user, then bundled content can't be missing, so return
 			if strfind(zoneAddon, "LittleWigs", nil, true) and public.usingLittleWigsRepo then return end -- If we are a LW Git user, then nothing can be missing, so return
 			if public.currentExpansion.zones[id] then
 				if guildDisableContentWarnings then return end
 				zoneAddon = public.currentExpansion.zones[id] -- Current BigWigs content has individual zone specific addons
-			elseif zoneAddon == public.currentExpansion.littlewigsName and public.isRetail then
-				zoneAddon = "LittleWigs" -- Current LittleWigs content is stored in the main addon
+			elseif public.currentExpansion.littleWigsBundled[zoneAddon] then
+				zoneAddon = "LittleWigs" -- Bundled LittleWigs content is stored in the main addon
 			end
 			if public:GetAddOnState(zoneAddon) == "MISSING" then
 				warnedThisZone[id] = true
@@ -1642,6 +1687,9 @@ do
 				RaidNotice_AddMessage(RaidWarningFrame, msg, {r=1,g=1,b=1}, 15)
 			end
 		end
+	end
+	if public.isBeta then
+		mod.ACTIVE_DELVE_DATA_UPDATE = mod.PLAYER_ENTERING_WORLD
 	end
 end
 
@@ -1677,7 +1725,7 @@ end
 
 do
 	local grouped = nil
-	function mod:GROUP_ROSTER_UPDATE()
+	function mod:GROUP_FORMED()
 		local groupType = (IsInGroup(2) and 3) or (IsInRaid() and 2) or (IsInGroup() and 1) -- LE_PARTY_CATEGORY_INSTANCE = 2
 		if (not grouped and groupType) or (grouped and groupType and grouped ~= groupType) then
 			grouped = groupType
@@ -1701,6 +1749,7 @@ do
 			usersHash = {}
 		end
 	end
+	mod.GROUP_LEFT = mod.GROUP_FORMED
 end
 
 function mod:BigWigs_BossModuleRegistered(_, _, module)
@@ -1708,13 +1757,25 @@ function mod:BigWigs_BossModuleRegistered(_, _, module)
 		local id = -(module.mapId)
 		enableZones[id] = "world"
 		worldBosses[module.worldBoss] = id
+	elseif type(module.instanceId) == "table" then
+		for i = 1, #module.instanceId do
+			enableZones[module.instanceId[i]] = true
+		end
 	else
 		enableZones[module.instanceId] = true
 	end
 
 	local id = module.otherMenu or module.instanceId or -(module.mapId)
-	if type(menus[id]) ~= "table" then menus[id] = {} end
-	menus[id][#menus[id]+1] = module
+	if type(id) == "table" then
+		-- for multi-zone modules, create a menu for each zone
+		for i = 1, #id do
+			if type(menus[id[i]]) ~= "table" then menus[id[i]] = {} end
+			menus[id[i]][#menus[id[i]]+1] = module
+		end
+	else
+		if type(menus[id]) ~= "table" then menus[id] = {} end
+		menus[id][#menus[id]+1] = module
+	end
 end
 public.RegisterMessage(mod, "BigWigs_BossModuleRegistered")
 

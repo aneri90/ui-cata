@@ -46,6 +46,7 @@ L.general = "일반" -- General settings, i.e. things that apply to normal, hero
 --L.door_open = "Door open" -- When a door is open, usually after a speech from an NPC
 --L.gate_open = "Gate open" -- When a gate is open, usually after a speech from an NPC
 
+--L.remaining = "%d remaining" -- 5 remaining
 L.duration = "%s %s초 남음" -- Spell for 10 seconds
 L.over = "%s 종료" -- Spell Over
 L.removed = "%s 제거됨" -- Spell Removed
@@ -140,6 +141,11 @@ L.shadow = "암흑"
 L.nature = "자연"
 L.arcane = "비전"
 
+-- Autotalk
+--L.autotalk = "Automatic NPC interaction"
+--L.autotalk_boss_desc = "Automatically select the NPC dialog options that cause the boss encounter to begin."
+--L.autotalk_generic_desc = "Automatically select the NPC dialog options that cause you to progress to the next stage of the dungeon."
+
 -- Common ability name replacements
 L.absorb = "흡수" -- Used for shield-like abilities that absorb damage or healing
 L.heal_absorb = "치유 흡수" -- Used for shield-like abilities that absorb healing only
@@ -195,3 +201,4 @@ L.mind_control_short = "정신 지배" -- Short version of Mind Control, mainly 
 --L.soaks = "Soaks" -- Plural of L.soak
 L.spell_reflection = "주문 반사" -- Any ability that reflects spells
 L.parasite = "기생충" -- Any ability where a parasite is involved e.g. "Parasitic Infection", "Parasitic Growth", etc
+L.rooted = "묶임" -- Any ability that roots you in place, preventing you from moving

@@ -3,5 +3,6 @@
 
 <Include file="Dragonflight\modules.xml"/>
 <Include file="WarWithin\modules.xml"/>
+<Include file="Delves\modules.xml"/>
 
 </Ui>

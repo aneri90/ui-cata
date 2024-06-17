@@ -1,8 +1,8 @@
---	09.05.2024
+--	11.06.2024
 
 local GlobalAddonName, MRT = ...
 
-MRT.V = 4860
+MRT.V = 4870
 MRT.T = "R"
 
 MRT.Slash = {}			--> функции вызова из коммандной строки
@@ -757,6 +757,16 @@ MRT.frame:SetScript("OnEvent",function (self, event, ...)
 		self:UnregisterEvent("ADDON_LOADED")
 
 		MRT.AddonLoaded = true
+
+		if not MRT.isClassic then
+			if not VMRT.Addon.EJ_CHECK_VER or VMRT.Addon.EJ_CHECK_VER ~= MRT.clientUIinterface then
+				C_Timer.After(10,function()
+					MRT.F.EJ_AutoScan()
+				end)
+			else
+				MRT.F.EJ_LoadData()
+			end
+		end
 
 		return true	
 	end

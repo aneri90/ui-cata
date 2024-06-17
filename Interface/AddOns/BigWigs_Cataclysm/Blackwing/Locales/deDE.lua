@@ -8,7 +8,6 @@ if L then
 	L.slump_desc = "Warnt vor dem nach vorne Schlittern, das das Rodeo erlaubt zu starten."
 	L.slump_bar = "Rodeo"
 	L.slump_message = "Yeehaa, Rodeo!"
-	L.slump_emote_trigger = "%s schlittert nach vorne und entblößt seine Zangen!" -- check
 
 	L.expose_emote_trigger = "Kopf" -- check
 end
@@ -18,22 +17,11 @@ if L then
 	L.nef = "Lord Victor Nefarius"
 	L.nef_desc = "Warnungen für Nefarians Fähigkeiten."
 
-	L.pool = "Pool-Explosion"
-
-	L.switch = "Wechsel"
-	L.switch_desc = "Warnt vor dem Wechseln der Bosse."
-	L.switch_message = "%s %s"
-
-	L.next_switch = "Nächster Wechsel"
-
-	L.nef_next = "Fähigkeiten Buff"
-
-	L.bomb_message = "Blob verfolgt DICH!"
-	L.cloud_message = "Wolke unter DIR!"
-	L.protocol_message = "Blobs kommen!"
-
-	L.custom_on_iconomnotron = "Symbol auf aktivem Boss"
-	L.custom_on_iconomnotron_desc = "Plaziert das primäre Schlachtzugssymbol auf dem aktiven Boss (benötigt Assistent oder höher)."
+	L.pool_explosion = "Pool-Explosion"
+	L.incinerate = "Verbrennen"
+	L.flamethrower = "Flammenwerfer"
+	L.lightning = "Blitzableiter"
+	L.infusion = "Schattenmacht"
 end
 
 L = BigWigs:NewBossLocale("Chimaeron", "deDE")
@@ -47,16 +35,8 @@ end
 
 L = BigWigs:NewBossLocale("Atramedes", "deDE")
 if L then
-	L.ground_phase = "Bodenphase"
-	L.ground_phase_desc = "Warnt, wenn Atramedes landet."
-	L.air_phase = "Luftphase"
-	L.air_phase_desc = "Warnt, wenn Atramedes abhebt."
-
+	L.obnoxious_fiend = "Nerviges Scheusal" -- NPC ID 49740
 	L.air_phase_trigger = "Ja, lauft! Jeder Schritt lässt Euer Herz stärker klopfen. Laut und heftig... ohrenbetäubend. Es gibt kein Entkommen!" -- check
-
-	L.obnoxious_soon = "Nerviges Scheusal bald!"
-
-	L.searing_soon = "Sengende Flamme in 10 sek!"
 end
 
 L = BigWigs:NewBossLocale("Maloriak", "deDE")

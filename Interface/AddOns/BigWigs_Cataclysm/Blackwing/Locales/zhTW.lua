@@ -8,7 +8,6 @@ if L then
 	L.slump_desc = "當熔喉撲倒並暴露時發出警報。"
 	L.slump_bar = "騎乘"
 	L.slump_message = "嘿，快騎上它！"
-	L.slump_emote_trigger = "%s往前撲倒，露出他的鉗子!"
 
 	L.expose_emote_trigger = "露出了他的頭"
 end
@@ -18,22 +17,11 @@ if L then
 	L.nef = "維克多·奈法利斯領主"
 	L.nef_desc = "當維克多·奈法利斯領主施放技能時發出警報。"
 
-	L.pool = "秘法逆爆"
-
-	L.switch = "轉換"
-	L.switch_desc = "當轉換時發出警報。"
-	L.switch_message = ">%s< %s！"
-
-	L.next_switch = "下一轉換"
-
-	L.nef_next = "闇能灌注"
-
-	L.bomb_message = ">你< 毒泥炸彈追擊！"
-	L.cloud_message = ">你< 化學毒霧！"
-	L.protocol_message = "毒殺計畫！"
-
-	L.custom_on_iconomnotron = "標記啟動首領"
-	L.custom_on_iconomnotron_desc = "為啟動的首領打上主團隊標記。（需要權限）"
+	L.pool_explosion = "秘法逆爆"
+	L.incinerate = "燒盡"
+	L.flamethrower = "火焰噴射器"
+	L.lightning = "閃電"
+	L.infusion = "注入"
 end
 
 L = BigWigs:NewBossLocale("Chimaeron", "zhTW")
@@ -47,16 +35,8 @@ end
 
 L = BigWigs:NewBossLocale("Atramedes", "zhTW")
 if L then
-	L.ground_phase = "地面階段"
-	L.ground_phase_desc = "當亞特拉米德著陸時發出警報。"
-	L.air_phase = "空中階段"
-	L.air_phase_desc = "當亞特拉米德起飛時發出警報。"
-
+	--L.obnoxious_fiend = "Obnoxious Fiend" -- NPC ID 49740
 	L.air_phase_trigger = "沒錯，逃吧!每一步都會讓你的心跳加速。跳得轟隆作響...震耳欲聾。你逃不掉的!"
-
-	L.obnoxious_soon = "即將 討人厭的惡魔！"
-
-	L.searing_soon = "10秒後，灼熱烈焰！"
 end
 
 L = BigWigs:NewBossLocale("Maloriak", "zhTW")

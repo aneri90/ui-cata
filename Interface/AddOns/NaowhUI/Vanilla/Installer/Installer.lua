@@ -7,7 +7,7 @@ NUI.InstallerData = {
 	tutorialImage = "Interface\\AddOns\\NaowhUI\\Core\\Media\\Textures\\NaowhUILogoVanilla.tga",
 	Pages = {
 		[1] = function()
-			if NUI.db.global.version and NUI.db.global.version >= NUI.version and NUI.db.global.profiles then
+			if NUI.db.global.profiles then
 				PluginInstallFrame.SubTitle:SetFormattedText("Welcome to %s", NUI.title)
 				PluginInstallFrame.Desc1:SetText("To load your selected NaowhUI profiles onto this character, click on 'Load Profiles'.")
 				PluginInstallFrame.Desc2:SetText("To run the installation process again in order to update your profiles to their latest versions or to reinstall NaowhUI, click on 'Continue'.\nTo skip the installation process and hide this frame, click on 'Skip Process'.")
@@ -105,7 +105,7 @@ NUI.InstallerData = {
 				PluginInstallFrame.Desc1:SetText("Click on the button below to select your Class WeakAuras.")
 				PluginInstallFrame.Option1:Show()
 				PluginInstallFrame.Option1:SetScript("OnClick", function()
-					InterfaceOptionsFrame_OpenToCategory("NaowhUI")
+					NUI:OpenToCategory()
 					PluginInstallFrame:SetFrameLevel(279)
 					PluginInstallFrame:SetFrameStrata("MEDIUM")
 				end)

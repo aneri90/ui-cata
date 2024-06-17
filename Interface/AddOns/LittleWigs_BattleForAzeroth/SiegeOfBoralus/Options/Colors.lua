@@ -1,6 +1,6 @@
 
 BigWigs:AddColors("Chopper Redhook", {
-	[257288] = "orange",
+	[257288] = "purple",
 	[257326] = "orange",
 	[257348] = {"blue","red"},
 	[257459] = {"blue","yellow"},
@@ -31,7 +31,7 @@ BigWigs:AddColors("Dread Captain Lockwood", {
 
 BigWigs:AddColors("Hadal Darkfathom", {
 	[257882] = "orange",
-	[261563] = "yellow",
+	[261563] = "purple",
 	[276068] = "red",
 })
 

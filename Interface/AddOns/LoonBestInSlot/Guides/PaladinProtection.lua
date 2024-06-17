@@ -2,12 +2,18 @@ local spec0 = LBIS:RegisterSpec(LBIS.L["Paladin"], LBIS.L["Protection"], "0")
 local spec1 = LBIS:RegisterSpec(LBIS.L["Paladin"], LBIS.L["Protection"], "1")
 
 LBIS:AddGem(spec0, "52293", "3", "True") --Eternal Shadowspirit Diamond
+LBIS:AddGem(spec1, "52294", "3", "True") --Austere Shadowspirit Diamond
+LBIS:AddGem(spec1, "52295", "3", "True") --Effulgent Shadowspirit Diamond
+LBIS:AddGem(spec1, "52289", "3", "True") --Fleet Shadowspirit Diamond
 LBIS:AddGem(spec0, "59480", "3", "False") --Fractured Cogwheel
 LBIS:AddGem(spec0, "59489", "3", "False") --Precise Cogwheel
 LBIS:AddGem(spec0, "52219", "3", "False") --Fractured Amberjewel
 LBIS:AddGem(spec0, "52224", "3", "False") --Keen Ember Topaz
 LBIS:AddGem(spec0, "52231", "3", "False") --Puissant Dream Emerald
 LBIS:AddGem(spec0, "52221", "3", "False") --Guardian's Demonseye
+LBIS:AddGem(spec1, "52242", "3", "False") --Solid Ocean Sapphire
+LBIS:AddGem(spec1, "52237", "3", "False") --Sensei's Dream Emerald
+LBIS:AddGem(spec1, "52230", "3", "False") --Precise Inferno Ruby
 
 LBIS:AddEnchant(spec1, "86931", LBIS.L["Head"]) --Arcanum of the Earthen Ring
 LBIS:AddEnchant(spec1, "86854", LBIS.L["Shoulder"]) --Greater Inscription of Unbreakable Quartz
@@ -15,11 +21,14 @@ LBIS:AddEnchant(spec1, "86402", LBIS.L["Shoulder"]) --Inscription of the Earth P
 LBIS:AddEnchant(spec1, "74234", LBIS.L["Back"]) --Enchant Cloak - Protection
 LBIS:AddEnchant(spec1, "74251", LBIS.L["Chest"]) --Enchant Chest - Greater Stamina
 LBIS:AddEnchant(spec1, "74250", LBIS.L["Chest"]) --Enchant Chest - Peerless Stats
+LBIS:AddEnchant(spec1, "74200", LBIS.L["Chest"]) --Enchant Chest - Stamina
+LBIS:AddEnchant(spec1, "85007", LBIS.L["Wrist"]) --Draconic Embossment - Stamina
 LBIS:AddEnchant(spec1, "74239", LBIS.L["Wrist"]) --Enchant Bracer - Greater Expertise
 LBIS:AddEnchant(spec1, "74232", LBIS.L["Wrist"]) --Enchant Bracer - Precision
 LBIS:AddEnchant(spec1, "74229", LBIS.L["Wrist"]) --Enchant Bracer - Superior Dodge
 LBIS:AddEnchant(spec1, "82177", LBIS.L["Hands"]) --Quickflip Deflection Plates
 LBIS:AddEnchant(spec1, "74255", LBIS.L["Hands"]) --Enchant Gloves - Greater Mastery
+LBIS:AddEnchant(spec1, "74132", LBIS.L["Hands"]) --Enchant Gloves - Mastery
 LBIS:AddEnchant(spec1, "76168", LBIS.L["Waist"]) --Ebonsteel Belt Buckle
 LBIS:AddEnchant(spec1, "55016", LBIS.L["Waist"]) --Nitro Boosts
 LBIS:AddEnchant(spec1, "101600", LBIS.L["Legs"]) --Drakehide Leg Reinforcements
@@ -105,6 +114,7 @@ LBIS:AddItem(spec1, "62383", LBIS.L["Back"], "Alt") --Wrap of the Great Turtle
 LBIS:AddItem(spec1, "65224", LBIS.L["Chest"], "BIS") --Reinforced Sapphirium Chestguard
 LBIS:AddItem(spec1, "60354", LBIS.L["Chest"], "Alt") --Reinforced Sapphirium Chestguard
 LBIS:AddItem(spec1, "65143", LBIS.L["Wrist"], "BIS") --Bracers of Impossible Strength
+LBIS:AddItem(spec1, "59470", LBIS.L["Wrist"], "Alt") --Bracers of Impossible Strength
 LBIS:AddItem(spec1, "57870", LBIS.L["Wrist"], "Alt") --Alpha Bracers
 LBIS:AddItem(spec1, "65119", LBIS.L["Hands"], "BIS") --Gravitational Pull
 LBIS:AddItem(spec1, "59505", LBIS.L["Hands"], "Alt") --Gravitational Pull
@@ -136,12 +146,12 @@ LBIS:AddItem(spec1, "62440", LBIS.L["Ring"], "Alt") --Red Rock Band
 LBIS:AddItem(spec1, "58483", LBIS.L["Trinket"], "BIS Stam") --Lifebound Alchemist Stone
 LBIS:AddItem(spec1, "62466", LBIS.L["Trinket"], "Alt") --Mirror of Broken Images
 LBIS:AddItem(spec1, "62471", LBIS.L["Trinket"], "Alt") --Mirror of Broken Images
-LBIS:AddItem(spec1, "62464", LBIS.L["Trinket"], "Alt") --Impatience of Youth
-LBIS:AddItem(spec1, "62469", LBIS.L["Trinket"], "Alt") --Impatience of Youth
 LBIS:AddItem(spec1, "65048", LBIS.L["Trinket"], "Alt Stam") --Symbiotic Worm
 LBIS:AddItem(spec1, "65109", LBIS.L["Trinket"], "Alt Stam") --Vial of Stolen Memories
 LBIS:AddItem(spec1, "59332", LBIS.L["Trinket"], "Alt Stam") --Symbiotic Worm
 LBIS:AddItem(spec1, "59515", LBIS.L["Trinket"], "Alt Stam") --Vial of Stolen Memories
+LBIS:AddItem(spec1, "62464", LBIS.L["Trinket"], "Alt") --Impatience of Youth
+LBIS:AddItem(spec1, "62469", LBIS.L["Trinket"], "Alt") --Impatience of Youth
 LBIS:AddItem(spec1, "52352", LBIS.L["Trinket"], "Alt Stam") --Figurine - Earthen Guardian
 LBIS:AddItem(spec1, "56347", LBIS.L["Trinket"], "Alt Stam") --Leaden Despair
 LBIS:AddItem(spec1, "65036", LBIS.L["Main Hand"], "BIS") --Mace of Acrid Death

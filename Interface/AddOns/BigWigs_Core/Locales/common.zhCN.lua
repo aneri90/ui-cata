@@ -46,6 +46,7 @@ L.health_percent = "%d%% 血量" -- "10% Health" The health percentage of an NPC
 L.door_open = "门开了" -- When a door is open, usually after a speech from an NPC
 L.gate_open = "门开了" -- When a gate is open, usually after a speech from an NPC
 
+--L.remaining = "%d remaining" -- 5 remaining
 L.duration = "%s持续%s秒" -- Spell for 10 seconds
 L.over = "%s结束" -- Spell Over
 L.removed = "%s移除" -- Spell Removed
@@ -140,6 +141,11 @@ L.shadow = "暗影"
 L.nature = "自然"
 L.arcane = "奥术"
 
+-- Autotalk
+L.autotalk = "自动与NPC对话"
+L.autotalk_boss_desc = "自动选择NPC对话选项，使首领战开始。"
+L.autotalk_generic_desc = "自动选择使你进入地下城下一阶段的NPC对话选项。"
+
 -- Common ability name replacements
 L.absorb = "吸收" -- Used for shield-like abilities that absorb damage or healing
 L.heal_absorb = "治疗吸收盾" -- Used for shield-like abilities that absorb healing only
@@ -195,3 +201,4 @@ L.soak = "分摊" -- Abilities you have to stand in on purpose to soak the damag
 L.soaks = "分摊" -- Plural of L.soak
 L.spell_reflection = "法术反射" -- Any ability that reflects spells
 L.parasite = "寄生" -- Any ability where a parasite is involved e.g. "Parasitic Infection", "Parasitic Growth", etc
+L.rooted = "定身" -- Any ability that roots you in place, preventing you from moving

@@ -3,13 +3,16 @@ VER 3 0000000001000007 " Immolate" "INV_MISC_QUESTIONMARK"
 /cleartarget [dead]
 /targetenemy [noexists][dead][noharm]
 /cast Immolate
+/cast [@pettarget, exists] Legion Strike
+/cast [@pettarget, exists] !Firebolt
+/cast [@pettarget, exists] Shadow Bite
 END
 VER 3 0000000001000008 "Burst" "INV_MISC_QUESTIONMARK"
-#showtooltip [form:1] Immolation Aura; Metamorphosis
+#showtooltip Metamorphosis
 /use 10
 /use 13
 /use 14
-/cast [form:1] Immolation Aura; Metamorphosis
+/cast Metamorphosis
 END
 VER 3 0000000001000010 "CB" "134400"
 #showtooltip
@@ -34,7 +37,14 @@ VER 3 0000000001000006 "Corruption" "INV_MISC_QUESTIONMARK"
 /targetenemy [noexists][dead][noharm]
 /cast Corruption
 END
-VER 3 0000000001000013 "DS" "134400"
+VER 3 0000000001000014 "DS Aff/Destro" "134400"
+#showtooltip Demon Soul
+/use Demon Soul
+/use 10
+/use 13
+/use 14
+END
+VER 3 0000000001000013 "DS Demo" "463284"
 #showtooltip Demon Soul
 /use [nopet:Felguard] Summon Felguard 
 /stopmacro [nopet:Felguard]
@@ -60,9 +70,10 @@ VER 3 0000000001000001 "Incinerate" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cleartarget [dead]
 /targetenemy [noexists][dead][noharm]
-/petdefensive
-/petattack
 /cast Incinerate
+/cast [@pettarget, exists] Legion Strike
+/cast [@pettarget, exists] !Firebolt
+/cast [@pettarget, exists] Shadow Bite
 END
 VER 3 0000000001000002 "Kick focus" "INV_MISC_QUESTIONMARK"
 /cast [@focus, pet:felhunter]Spell Lock;[@focus, pet:felguard]Axe Toss;[@focus, pet:succubus]Seduction;
@@ -79,6 +90,9 @@ VER 3 0000000001000009 "SB" "INV_MISC_QUESTIONMARK"
 /cleartarget [dead]
 /targetenemy [noexists][dead][noharm]
 /cast Shadow Bolt
+/cast [@pettarget, exists] Legion Strike
+/cast [@pettarget, exists] !Firebolt
+/cast [@pettarget, exists] Shadow Bite
 END
 VER 3 000000000100000A "SF" "INV_MISC_QUESTIONMARK"
 #showtooltip

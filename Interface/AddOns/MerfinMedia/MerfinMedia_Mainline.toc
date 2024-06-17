@@ -1,0 +1,21 @@
+## Interface: 100105
+## Title: Merfin Media
+## Notes: Inserts Merfin media into LibSharedMedia's storage.
+## Dependencies: WeakAuras
+## Version: 1.14
+
+## OptionalDeps: LibStub, LibSharedMedia-3.0
+
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+libs\LibSharedMedia-3.0\lib.xml
+
+MerfinMedia.lua
+MerfinMediaFunctions.lua
+MerinMediaSettings.lua
+
+localizations\localizations.xml
+
+font\font.lua
+statusbar\statusbar.lua
+sound\sound.lua 

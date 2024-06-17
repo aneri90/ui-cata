@@ -8,7 +8,6 @@ if L then
 	L.slump_desc = "Prévient quand le boss s'affale vers l'avant et s'expose, permettant ainsi au rodéo de commencer."
 	L.slump_bar = "Rodéo"
 	L.slump_message = "Yeehaw, chevauchez !"
-	L.slump_emote_trigger = "%s s'affale vers l'avant et expose ses pinces !"
 
 	L.expose_emote_trigger = "expose sa tête"
 end
@@ -18,22 +17,11 @@ if L then
 	L.nef = "Seigneur Victor Nefarius"
 	L.nef_desc = "Prévient quand le Seigneur Victor Nefarius utilise une technique."
 
-	L.pool = "Générateur instable"
-
-	L.switch = "Changement"
-	L.switch_desc = "Prévient de l'arrivée des changements."
-	L.switch_message = "%s %s"
-
-	L.next_switch = "Prochaine activation"
-
-	L.nef_next = "Buff de technique"
-
-	L.bomb_message = "Une Bombe de poison VOUS poursuit !"
-	L.cloud_message = "Nuage chimique sur VOUS !"
-	L.protocol_message = "Arrivée de Bombes de poison !"
-
-	L.custom_on_iconomnotron = "Icône sur le boss actif"
-	L.custom_on_iconomnotron_desc = "Place l'icône de raid primaire sur le boss actif (nécessite d'être assistant ou mieux)."
+	L.pool_explosion = "Générateur instable"
+	L.incinerate = "Incinérer"
+	L.flamethrower = "Lance-flammes"
+	L.lightning = "Foudre"
+	L.infusion = "Infusion"
 end
 
 L = BigWigs:NewBossLocale("Chimaeron", "frFR")
@@ -47,16 +35,8 @@ end
 
 L = BigWigs:NewBossLocale("Atramedes", "frFR")
 if L then
-	L.ground_phase = "Phase au sol"
-	L.ground_phase_desc = "Prévient quand Atramédès atterrit."
-	L.air_phase = "Phase aérienne"
-	L.air_phase_desc = "Prévient quand Atramédès décolle."
-
+	L.obnoxious_fiend = "Démon odieux" -- NPC ID 49740
 	L.air_phase_trigger = "Oui, fuyez ! Chaque foulée accélère votre cœur. Les battements résonnent comme le tonnerre... Assourdissant. Vous ne vous échapperez pas !"
-
-	L.obnoxious_soon = "Démon odieux imminent !"
-
-	L.searing_soon = "Flamme incendiaire dans 10 sec. !"
 end
 
 L = BigWigs:NewBossLocale("Maloriak", "frFR")

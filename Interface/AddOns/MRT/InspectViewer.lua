@@ -9,6 +9,9 @@ end
 local module = ExRT:New("InspectViewer",ExRT.L.InspectViewer)
 local ELib,L = ExRT.lib,ExRT.L
 
+local GetSpellInfo = ExRT.F.GetSpellInfo or GetSpellInfo
+local GetSpellLink = C_Spell and C_Spell.GetSpellLink or GetSpellLink
+
 module.db.inspectDB = parentModule.db.inspectDB
 module.db.inspectDBAch = parentModule.db.inspectDBAch
 module.db.inspectQuery = parentModule.db.inspectQuery

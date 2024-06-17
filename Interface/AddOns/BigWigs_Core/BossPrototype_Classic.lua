@@ -122,13 +122,38 @@ local updateData = function(module)
 			end
 		end
 
-		if class == "DRUID" and talentTree == 2 then -- defaults to DAMAGER
-			-- Check for bear talents
-			local feralInstinct = select(5, GetTalentInfo(2, 3))
-			local thickHide = select(5, GetTalentInfo(2, 5))
-			local primalFury = select(5, GetTalentInfo(2, 12))
-			if feralInstinct == 5 and thickHide >= 2 and primalFury == 2 then
-				myRole = "TANK"
+		if class == "DEATHKNIGHT" and talentTree == 1 then -- defaults to TANK
+			-- Using the LFG tool?
+			local role = UnitGroupRolesAssigned("player")
+			if role == "TANK" or role == "DAMAGER" then
+				myRole = role
+			elseif spent == 51 then
+				-- Meta tank spec was 43/27/1 with Blood DPS pretty much dead at this point in Wrath
+				myRole = "DAMAGER"
+			end
+		elseif class == "DRUID" and talentTree == 2 then -- defaults to DAMAGER
+			if isClassicEra then
+				-- Check for bear talents
+				local feralInstinct = select(5, GetTalentInfo(2, 3))
+				local thickHide = select(5, GetTalentInfo(2, 5))
+				local primalFury = select(5, GetTalentInfo(2, 12))
+				if feralInstinct == 5 and thickHide >= 2 and primalFury == 2 then
+					myRole = "TANK"
+				end
+			else
+				-- Using the LFG tool?
+				local role = UnitGroupRolesAssigned("player")
+				if role == "TANK" or role == "DAMAGER" then
+					myRole = role
+				else
+					-- Check for bear talents
+					local thickHide = select(5, GetTalentInfo(2, 1))
+					local survivalInstincts = select(5, GetTalentInfo(2, 15))
+					local naturalReaction = select(5, GetTalentInfo(2, 29))
+					if thickHide == 5 and survivalInstincts == 1 and naturalReaction == 5 then
+						myRole = "TANK"
+					end
+				end
 			end
 		end
 
@@ -587,6 +612,34 @@ function boss:AddMarkerOption(state, markType, icon, id, ...)
 	end
 	if icon then
 		moduleLocale[option.."_icon"] = icon
+	end
+	return option
+end
+
+--- Create a custom auto talk option
+-- @bool state Boolean value to represent default state
+-- @string[opt] talkType The type of description to use ("boss" or nil for generic)
+-- @string[opt] name A unique name the option should have if you want to create multiple options in one module
+-- @return an option string to be used in conjuction with :GetOption
+function boss:AddAutoTalkOption(state, talkType, name)
+	if name and type(name) ~= "string" then
+		core:Error("Invalid auto talk name: ".. tostring(name))
+	elseif name then
+		name = "_".. name
+	end
+
+	local moduleLocale = self:GetLocale()
+	local option = format(state and "custom_on_autotalk%s" or "custom_off_autotalk%s", name or "")
+	if talkType == "boss" then
+		moduleLocale[option] = L.autotalk
+		moduleLocale[option.."_desc"] = L.autotalk_boss_desc
+		moduleLocale[option.."_icon"] = "ui_chat"
+	elseif not talkType then
+		moduleLocale[option] = L.autotalk
+		moduleLocale[option.."_desc"] = L.autotalk_generic_desc
+		moduleLocale[option.."_icon"] = "ui_chat"
+	else
+		core:Error("Invalid auto talk type: ".. tostring(talkType))
 	end
 	return option
 end
@@ -1153,11 +1206,11 @@ do
 			if not noEngage or noEngage ~= "NoEngage" then
 				updateData(self)
 
+				self:SendMessage("BigWigs_OnBossEngage", self, difficulty)
+
 				if self.OnEngage then
 					self:OnEngage(difficulty)
 				end
-
-				self:SendMessage("BigWigs_OnBossEngage", self, difficulty)
 			elseif noEngage == "NoEngage" then
 				self:SendMessage("BigWigs_OnBossEngageMidEncounter", self, difficulty)
 			end
@@ -1777,7 +1830,7 @@ function boss:Melee(playerName)
 	if playerName then
 		return myGroupRolePositions[playerName] == "MELEE"
 	else
-		return myRolePosition == "MELEE"
+		return myRolePosition == "MELEE" or myRole == "TANK"
 	end
 end
 
@@ -1788,7 +1841,7 @@ function boss:Ranged(playerName)
 	if playerName then
 		return myGroupRolePositions[playerName] == "RANGED"
 	else
-		return myRolePosition == "RANGED"
+		return myRolePosition == "RANGED" or myRole == "HEALER"
 	end
 end
 

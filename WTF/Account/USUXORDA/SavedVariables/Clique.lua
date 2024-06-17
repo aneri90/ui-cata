@@ -26,20 +26,29 @@ CliqueDB3 = {
 					["unit"] = "mouseover",
 				}, -- [1]
 				{
+					["type"] = "spell",
+					["key"] = "SHIFT-BUTTON3",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 136168,
+					["spell"] = "Health Funnel",
+				}, -- [2]
+				{
 					["macrotext"] = "/target [@mouseover, noharm] target\n/cast [@target] Soulstone\n/targetlasttarget",
 					["type"] = "macro",
 					["key"] = "BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-				}, -- [2]
+				}, -- [3]
 				{
 					["type"] = "menu",
 					["key"] = "CTRL-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-				}, -- [3]
+				}, -- [4]
 				{
 					["type"] = "spell",
 					["key"] = "ALT-BUTTON1",
@@ -48,15 +57,6 @@ CliqueDB3 = {
 					},
 					["icon"] = 136210,
 					["spell"] = "Create Soulstone",
-				}, -- [4]
-				{
-					["type"] = "spell",
-					["key"] = "SHIFT-BUTTON3",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 136168,
-					["spell"] = "Health Funnel",
 				}, -- [5]
 				{
 					["type"] = "spell",
@@ -67,6 +67,51 @@ CliqueDB3 = {
 					["icon"] = 463285,
 					["spell"] = "Dark Intent",
 				}, -- [6]
+				{
+					["type"] = "spell",
+					["key"] = "ALT-1",
+					["sets"] = {
+						["enemy"] = true,
+					},
+					["icon"] = 136139,
+					["spell"] = "Bane of Agony",
+				}, -- [7]
+				{
+					["type"] = "spell",
+					["key"] = "1",
+					["sets"] = {
+						["enemy"] = true,
+					},
+					["icon"] = 136197,
+					["spell"] = "Shadow Bolt",
+				}, -- [8]
+				{
+					["type"] = "spell",
+					["key"] = "ALT-3",
+					["sets"] = {
+						["enemy"] = true,
+					},
+					["icon"] = 136118,
+					["spell"] = "Corruption",
+				}, -- [9]
+				{
+					["type"] = "spell",
+					["key"] = "ALT-2",
+					["sets"] = {
+						["enemy"] = true,
+					},
+					["icon"] = 136122,
+					["spell"] = "Bane of Doom",
+				}, -- [10]
+				{
+					["type"] = "spell",
+					["key"] = "V",
+					["sets"] = {
+						["enemy"] = true,
+					},
+					["icon"] = 135817,
+					["spell"] = "Immolate",
+				}, -- [11]
 			},
 		},
 	},
