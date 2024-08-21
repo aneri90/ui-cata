@@ -6,12 +6,12 @@ local _G = _G
 local select, unpack = select, unpack
 local hooksecurefunc = hooksecurefunc
 
-local ContainerIDToInventoryID = C_Container.ContainerIDToInventoryID or ContainerIDToInventoryID
-local GetContainerNumFreeSlots = C_Container.GetContainerNumFreeSlots or GetContainerNumFreeSlots
-local GetContainerItemLink = C_Container.GetContainerItemLink or GetContainerItemLink
+local ContainerIDToInventoryID = C_Container.ContainerIDToInventoryID
+local GetContainerNumFreeSlots = C_Container.GetContainerNumFreeSlots
+local GetContainerItemLink = C_Container.GetContainerItemLink
 local GetInventoryItemLink = C_Container.GetInventoryItemLink or GetInventoryItemLink
-local GetItemQualityColor = C_Item.GetItemQualityColor or GetItemQualityColor
-local GetItemInfo = C_Item.GetItemInfo or GetItemInfo
+local GetItemQualityColor = C_Item.GetItemQualityColor
+local GetItemInfo = C_Item.GetItemInfo
 local GetItemQualityByID = C_Item.GetItemQualityByID
 local GetInventoryItemID = GetInventoryItemID
 
@@ -139,6 +139,10 @@ function S:ContainerFrame()
 			end
 		end
 	end)
+
+	if _G.BackpackTokenFrame then
+		_G.BackpackTokenFrame:StripTextures()
+	end
 
 	-- BankFrame
 	local BankFrame = _G.BankFrame

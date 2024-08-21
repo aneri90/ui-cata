@@ -3,7 +3,7 @@ if not WeakAuras.IsLibsOK() then return end
 ---@class OptionsPrivate
 local OptionsPrivate = select(2, ...)
 
-local Type, Version = "WeakAurasMultiLineEditBox", 37
+local Type, Version = "WeakAurasMultiLineEditBox", 39
 local AceGUI = LibStub and LibStub("AceGUI-3.0", true)
 if not AceGUI or (AceGUI:GetWidgetVersion(Type) or 0) >= Version then return end
 
@@ -77,10 +77,16 @@ local function OnCursorChanged(self, _, y, _, cursorHeight)                     
   end
 end
 
-local function OnEditFocusLost(self)                                             -- EditBox
-  self:HighlightText(0, 0)
-  self.obj:Fire("OnEditFocusLost")
-  self.obj.scrollFrame:EnableMouseWheel(false);
+local function OnEditFocusLost(frame)                                             -- EditBox
+  local self = frame.obj
+  frame:HighlightText(0, 0)
+  self:Fire("OnEditFocusLost")
+  self.scrollFrame:EnableMouseWheel(false);
+
+  local option = self.userdata.option
+  if option and option.callbacks and option.callbacks.OnEditFocusLost then
+    option.callbacks.OnEditFocusLost(self)
+  end
 end
 
 local function OnEnter(self)                                                     -- EditBox / ScrollFrame
@@ -172,6 +178,10 @@ local function OnFrameShow(frame)
     end
   end
 
+  if option and option.callbacks and option.callbacks.OnShow then
+    option.callbacks.OnShow(self)
+  end
+
   for i = numExtraButtons + 1, #self.extraButtons do
     self.extraButtons[i]:Hide();
   end
@@ -181,6 +191,11 @@ local function OnEditFocusGained(frame)
   AceGUI:SetFocus(frame.obj)
   frame.obj:Fire("OnEditFocusGained")
   frame.obj.scrollFrame:EnableMouseWheel(true);
+
+  local option = frame.obj.userdata.option
+  if option and option.callbacks and option.callbacks.OnEditFocusGained then
+    option.callbacks.OnEditFocusGained(frame.obj)
+  end
 end
 
 --[[-----------------------------------------------------------------------------
@@ -373,6 +388,7 @@ local function Constructor()
     button      = button,
     extraButtons = extraButtons,
     editBox     = editBox,
+    editbox     = editBox,
     frame       = frame,
     label       = label,
     labelHeight = 10,

@@ -17,6 +17,8 @@ local C_QuestLog_ShouldShowQuestRewards = C_QuestLog.ShouldShowQuestRewards
 local C_QuestLog_GetSelectedQuest = C_QuestLog.GetSelectedQuest
 local hooksecurefunc = hooksecurefunc
 
+local AutoHider
+
 --This changes the growth direction of the toast frame depending on position of the mover
 local function PostMove(mover)
 	local x, y = mover:GetCenter()
@@ -94,27 +96,49 @@ function BL:ObjectiveTracker_HasQuestTracker()
 	return E:IsAddOnEnabled('!KalielsTracker') or E:IsAddOnEnabled('DugisGuideViewerZ')
 end
 
+function BL:ObjectiveTracker_Collapse(frame)
+	frame.autoHidden = true
+	frame:SetParent(E.HiddenFrame)
+end
+
+function BL:ObjectiveTracker_Expand(frame)
+	frame.autoHidden = nil
+	frame:SetParent(_G.UIParent)
+end
+
+function BL:ObjectiveTracker_AutoHideOnShow()
+	local tracker = (E.Cata and _G.WatchFrame) or _G.ObjectiveTrackerFrame
+	if tracker and tracker.autoHidden then
+		BL:ObjectiveTracker_Expand(tracker)
+	end
+end
+
 function BL:ObjectiveTracker_AutoHide()
 	local tracker = (E.Cata and _G.WatchFrame) or _G.ObjectiveTrackerFrame
 	if not tracker then return end
 
-	if not tracker.AutoHider then
-		tracker.AutoHider = CreateFrame('Frame', nil, tracker, 'SecureHandlerStateTemplate')
-		tracker.AutoHider:SetAttribute('_onstate-objectiveHider', 'if newstate == 1 then self:Hide() else self:Show() end')
-		tracker.AutoHider:SetScript('OnHide', BL.ObjectiveTracker_AutoHideOnHide)
-		tracker.AutoHider:SetScript('OnShow', BL.ObjectiveTracker_AutoHideOnShow)
+	if not AutoHider then
+		AutoHider = CreateFrame('Frame', nil, UIParent, 'SecureHandlerStateTemplate')
+		AutoHider:SetAttribute('_onstate-objectiveHider', 'if newstate == 1 then self:Hide() else self:Show() end')
+		AutoHider:SetScript('OnHide', BL.ObjectiveTracker_AutoHideOnHide)
+		AutoHider:SetScript('OnShow', BL.ObjectiveTracker_AutoHideOnShow)
 	end
 
 	if E.db.general.objectiveFrameAutoHide then
-		RegisterStateDriver(tracker.AutoHider, 'objectiveHider', '[@arena1,exists][@arena2,exists][@arena3,exists][@arena4,exists][@arena5,exists][@boss1,exists][@boss2,exists][@boss3,exists][@boss4,exists][@boss5,exists] 1;0')
+		RegisterStateDriver(AutoHider, 'objectiveHider', '[@arena1,exists][@arena2,exists][@arena3,exists][@arena4,exists][@arena5,exists][@boss1,exists][@boss2,exists][@boss3,exists][@boss4,exists][@boss5,exists] 1;0')
 	else
-		UnregisterStateDriver(tracker.AutoHider, 'objectiveHider')
+		UnregisterStateDriver(AutoHider, 'objectiveHider')
+		BL:ObjectiveTracker_AutoHideOnShow() -- reshow it when needed
 	end
 end
 
 function BL:ADDON_LOADED(_, addon)
 	if addon == 'Blizzard_GuildBankUI' then
 		BL:ImproveGuildBank()
+	elseif addon == 'Blizzard_QuestTimer' then
+		if E.Classic then
+			BL:QuestWatch_CreateMover(_G.QuestTimerFrame, 'QuestTimerFrameMover')
+		end
 	elseif BL.TryDisableTutorials then
 		BL:ShutdownTutorials()
 	end
@@ -130,8 +154,10 @@ function BL:Initialize()
 
 	BL:RegisterEvent('ADDON_LOADED')
 
+	BL:SkinBlizzTimers()
+
 	if not E.Classic then
-		BL:SkinBlizzTimers()
+		BL:PositionVehicleFrame()
 
 		if not E:IsAddOnEnabled('SimplePowerBar') then
 			BL:PositionAltPowerBar()
@@ -153,13 +179,9 @@ function BL:Initialize()
 		BL:SecureHook('QuestInfo_Display', 'QuestXPPercent')
 	end
 
-	if E.Cata then
-		BL:PositionVehicleFrame()
-	end
-
 	if E.Classic then
 		if E.db.general.objectiveTracker then
-			BL:QuestWatch_MoveFrames()
+			BL:QuestWatch_CreateMover(_G.QuestWatchFrame, 'QuestWatchFrameMover')
 			hooksecurefunc('QuestWatch_Update', BL.QuestWatch_AddQuestClick)
 		end
 	elseif not BL:ObjectiveTracker_HasQuestTracker() then

@@ -1,4 +1,9 @@
-local addonName, addon = ...
+--[[-------------------------------------------------------------------
+--  Clique - Copyright 2006-2024 - James N. Whitehead II
+-------------------------------------------------------------------]] ---
+
+---@class addon
+local addon = select(2, ...)
 
 local LibSerialize = LibStub("LibSerialize")
 local LibDeflate = LibStub("LibDeflate")

@@ -6,6 +6,8 @@ if GetLocale() == "esES" then
   LBIS.L["Abyssal Depths"] = "Profundidades Abisales";
   LBIS.L["Admiral Ripsnarl"] = "Almirante Rasgagruñido";
   LBIS.L["Affliction"] = "Aflicción";
+  LBIS.L["Ahune"] = "Ahune";
+  LBIS.L["Akil'zon"] = "Akil'zon";
 --  LBIS.L["Akma'hat"] = "";
   LBIS.L["Al'Akir"] = "Al'Akir";
   LBIS.L["Alchemy (500)"] = "Alquimia (500)";
@@ -34,6 +36,7 @@ if GetLocale() == "esES" then
   LBIS.L["Baron Silverlaine"] = "Barón Filargenta";
 --  LBIS.L["Battle of Life and Death"] = "";
   LBIS.L["Bear"] = "Oso";
+--  LBIS.L["Bear Timed Chest"] = "";
   LBIS.L["Beast Mastery"] = "Dominio de bestias";
   LBIS.L["Beauty"] = "Bella";
   LBIS.L["BIS"] = "BIS";
@@ -57,6 +60,7 @@ if GetLocale() == "esES" then
   LBIS.L["Blackwing Descent (Heroic)"] = "Descenso de Alanegra (Heroico)";
 --  LBIS.L["Blazewing"] = "";
   LBIS.L["Blood"] = "Sangre";
+  LBIS.L["Bloodlord Mandokir"] = "Señor sangriento Mandokir";
   LBIS.L["Cat"] = "Gato";
   LBIS.L["Chest"] = "Torso";
   LBIS.L["Chimaeron"] = "Chimaeron";
@@ -72,6 +76,7 @@ if GetLocale() == "esES" then
 --  LBIS.L["Cult Alchemist"] = "";
 --  LBIS.L["Cultist Shard Watcher"] = "";
   LBIS.L["Custom"] = "Personalizado";
+  LBIS.L["Daakara"] = "Daakara";
   LBIS.L["Dalaran"] = "Dalaran";
 --  LBIS.L["Dark Assassins"] = "";
 --  LBIS.L["Darkmoon Earthquake Deck"] = "";
@@ -87,6 +92,7 @@ if GetLocale() == "esES" then
   LBIS.L["Discipline"] = "Disciplina";
 --  LBIS.L["Doing It Like a Dunwald"] = "";
 --  LBIS.L["Doing it the Hard Way"] = "";
+--  LBIS.L["Dragonhawk Timed Chest"] = "";
   LBIS.L["Dragonmaw/Wildhammer Clan (Revered)"] = "Clan Faucedraco/Martillo Salvaje (Venerada)";
   LBIS.L["Drahga Shadowburner"] = "Drahga Quemasombras";
 --  LBIS.L["Drahga Shadowburner<Twilight's Hammer Courier>"] = "";
@@ -134,22 +140,28 @@ if GetLocale() == "esES" then
   LBIS.L["General Umbriss"] = "General Umbriss";
   LBIS.L["Glubtok"] = "Glubtok";
   LBIS.L["Grand Vizier Ertan"] = "Gran visir Ertan";
+  LBIS.L["Gri'lek"] = "Gri'lek";
   LBIS.L["Grim Batol"] = "Grim Batol";
   LBIS.L["Grim Batol (Heroic)"] = "Grim Batol (Heroico)";
   LBIS.L["Grim Batol (Normal)"] = "Grim Batol (Normal)";
   LBIS.L["Guardians of Hyjal"] = "Guardianes de Hyjal";
   LBIS.L["Guardians of Hyjal (Revered)"] = "Guardianes de Hyjal (Venerada)";
+  LBIS.L["Halazzi"] = "Halazzi";
   LBIS.L["Halfus Wyrmbreaker"] = "Halfus Rompevermis";
   LBIS.L["Halls of Origination"] = "Cámaras de los Orígenes";
   LBIS.L["Halls of Origination (Heroic)"] = "Cámaras de los Orígenes (Heroico)";
   LBIS.L["Halls of Origination (Normal)"] = "Cámaras de los Orígenes (Normal)";
   LBIS.L["Hands"] = "Guantes";
 --  LBIS.L["Harrison Jones and the Temple of Uldum"] = "";
+  LBIS.L["Hazza'rah"] = "Hazza'rah";
   LBIS.L["Head"] = "Cabeza";
   LBIS.L["Helix Gearbreaker"] = "Helix Rompengranajes";
   LBIS.L["Hellscream's Reach"] = "Mando Grito Infernal";
+  LBIS.L["Hex Lord Malacrass"] = "Señor aojador Malacrass";
 --  LBIS.L["Hide Obsolete Items"] = "";
+  LBIS.L["High Priest Venoxis"] = "Sumo Sacerdote Venoxis";
   LBIS.L["High Priestess Azil"] = "Suma sacerdotisa Azil";
+  LBIS.L["High Priestess Kilnara"] = "Suma sacerdotisa Kilnara";
   LBIS.L["High Prophet Barim"] = "Sumo profeta Barim";
   LBIS.L["Holy"] = "Sagrado";
   LBIS.L["Honor Points"] = "Puntos de honor";
@@ -170,9 +182,11 @@ if GetLocale() == "esES" then
 --  LBIS.L["Inscription Trainer"] = "";
   LBIS.L["Isiset"] = "Isiset";
   LBIS.L["Items"] = "Objetos";
+  LBIS.L["Jan'alai"] = "Jan'alai";
   LBIS.L["Jewelcrafting (525)"] = "Joyería (525)";
 --  LBIS.L["Jewelcrafting Supplies"] = "";
 --  LBIS.L["Jewelcrafting Trainer"] = "";
+  LBIS.L["Jin'do the Godbreaker"] = "Jin'do el Sojuzgadioses";
 --  LBIS.L["Julak-Doom"] = "";
 --  LBIS.L["Justice Points"] = "";
   LBIS.L["Karsh Steelbender"] = "Karsh Doblacero";
@@ -208,11 +222,15 @@ if GetLocale() == "esES" then
   LBIS.L["Lost City of the Tol'vir (Normal)"] = "Ciudad Perdida de los Tol'vir (Normal)";
   LBIS.L["Magmaw"] = "Faucemagma";
   LBIS.L["Main Hand"] = "Mano Derecha";
-  LBIS.L["Main Hand/Off Hand"] = "Mano derecha/Mano izquierda";
+  LBIS.L["Main Hand~Off Hand"] = "Mano derecha~Mano izquierda";
+  LBIS.L["Main Hand~Two Hand"] = "Mano derecha~Dos Manos";
   LBIS.L["Maloriak"] = "Maloriak";
   LBIS.L["Marksmanship"] = "Puntería";
+  LBIS.L["Midsummer Festival"] = "Festival de Fuego del Solsticio de Verano";
   LBIS.L["Mindbender Ghur'sha"] = "Dominamente Ghur'sha";
+--  LBIS.L["Mobus"] = "";
   LBIS.L["Mount Hyjal"] = "Monte Hyjal";
+  LBIS.L["Nalorakk"] = "Nalorakk";
 --  LBIS.L["Narkrall, The Drake-Tamer"] = "";
   LBIS.L["Neck"] = "Cuello";
   LBIS.L["Nefarian"] = "Nefarian";
@@ -221,6 +239,7 @@ if GetLocale() == "esES" then
   LBIS.L["None"] = "Nada";
   LBIS.L["Occu'thar"] = "Occu'thar";
   LBIS.L["Off Hand"] = "Mano Izquierda";
+  LBIS.L["Off Hand~Two Hand"] = "Mano izquierda~Dos Manos";
 --  LBIS.L["Open Browser Window"] = "";
 --  LBIS.L["Open Settings"] = "";
   LBIS.L["Orgrimmar"] = "Orgrimmar";
@@ -242,6 +261,7 @@ if GetLocale() == "esES" then
   LBIS.L["Ramkahen"] = "Ramkahen";
   LBIS.L["Ramkahen (Revered)"] = "Ramkahen (Venerada)";
   LBIS.L["Ranged/Relic"] = "Rango/Reliquia";
+  LBIS.L["Renataki"] = "Renataki";
   LBIS.L["Reputation"] = "Reputación";
   LBIS.L["Restoration"] = "Recuperación";
   LBIS.L["Retribution"] = "Reprensión";
@@ -304,6 +324,7 @@ if GetLocale() == "esES" then
   LBIS.L["The Deadmines (Normal)"] = "Las Minas de la Muerte (Normal)";
 --  LBIS.L["The Dragonmaw Clan"] = "";
   LBIS.L["The Earthen Ring"] = "Anillo de la Tierra";
+--  LBIS.L["The Hex Lord's Fetish"] = "";
 --  LBIS.L["The Source of Their Power"] = "";
   LBIS.L["The Stonecore"] = "El Núcleo Pétreo";
   LBIS.L["The Stonecore (Heroic)"] = "El Núcleo Pétreo (Heroico)";
@@ -337,8 +358,12 @@ if GetLocale() == "esES" then
   LBIS.L["Vortex Pinnacle (Heroic)"] = "Cumbre del Vórtice (Heroico)";
   LBIS.L["Vortex Pinnacle (Normal)"] = "Cumbre del Vórtice (Normal)";
   LBIS.L["Waist"] = "Cintura";
+--  LBIS.L["Warlord of the Amani"] = "";
   LBIS.L["World Drop"] = "Gota mundial";
 --  LBIS.L["World Drop (Pickpocket)"] = "Gota mundial";
   LBIS.L["Wrist"] = "Brazales";
 --  LBIS.L["Xariona"] = "";
+  LBIS.L["Zanzil"] = "Zanzil";
+  LBIS.L["Zul'Aman"] = "Zul'Aman";
+  LBIS.L["Zul'Gurub"] = "Zul'Gurub";
 end

@@ -45,8 +45,10 @@ L.health = "Gesundheit" -- The health of an NPC
 L.health_percent = "%d%% Gesundheit" -- "10% Health" The health percentage of an NPC
 L.door_open = "Tür offen" -- When a door is open, usually after a speech from an NPC
 L.gate_open = "Tor offen" -- When a gate is open, usually after a speech from an NPC
+L.threat = "Bedrohung"
+L.energy = "Energie"
 
---L.remaining = "%d remaining" -- 5 remaining
+L.remaining = "%d übrig" -- 5 remaining
 L.duration = "%s für %s Sek" -- Spell for 10 seconds
 L.over = "%s vorbei" -- Spell Over
 L.removed = "%s entfernt" -- Spell Removed
@@ -64,10 +66,15 @@ L.cancelled = "%s abgebrochen" -- Spell Cancelled
 L.you_die = "Du stirbst" -- You will die
 L.you_die_sec = "Du stirbst in %d Sek" -- "You die in 15 sec" (sec = seconds)
 L.next_ability = "Nächste Fähigkeit" -- We don't know what ability will be next, we only know when it will happen (showing a bar)
+L.landing = "%s landet" -- "NPC_NAME is landing" Used when a flying NPC/dragon/boss is landing
+L.flying_available = "Du kannst jetzt fliegen"
 
 -- Add related
-L.add_spawned = "Add erschienen"
-L.adds_spawned = "Adds erschienen"
+L.add_spawned = "Add erschienen" -- singular
+L.adds_spawned = "Adds erschienen" -- plural
+L.adds_spawned_count = "%d |4Add:Adds; erschienen" -- 1 add spawned / 2 adds spawned
+L.add_spawning = "Add erscheint" -- singular
+L.adds_spawning = "Adds erscheinen" -- plural
 L.spawned = "%s erschienen"
 L.spawning = "%s entsteht"
 L.next_add = "Nächstes Add"
@@ -107,9 +114,12 @@ L.marker_npc_aura_desc = "Von '%s' betroffene NPCs mit %s markieren. Benötigt L
 L.link = "Verbindung"
 L.link_with = "Verbunden mit %s"
 L.link_with_icon = "Verbunden mit |T13700%d:0|t%s"
-L.link_short = "Verbunden: %s"
-L.link_both = "%s verbunden mit %s"
+L.link_with_rticon = "{rt%d}Verbunden mit %s"
+L.link_both = "%s + %s sind verbunden"
+L.link_both_icon = "|T13700%d:0|t%s + |T13700%d:0|t%s sind verbunden"
 L.link_removed = "Verbindung entfernt"
+L.link_say_option_name = "Wiederholte 'Verbunden' Chatnachrichten"
+L.link_say_option_desc = "Wiederholt Nachrichten im Sprechen-Chat um mitzuteilen mit wem Du verbunden bist."
 
 -- Abbreviated numbers
 L.amount_one = "%dB" -- Billions 1,000,000,000
@@ -173,6 +183,7 @@ L.charge = "Ansturm" -- When a boss select a new target and charges at it quickl
 L.full_energy = "Volle Energie" -- When a boss reaches full/maximum energy, usually the boss will cast something big and powerful when this happens
 L.weakened = "Geschwächt" -- When a boss becomes weakened and sometimes takes extra damage, usually the "hit all your cooldowns" part of the fight
 L.immune = "Immun" -- When a boss becomes immune to all damage and you can no longer hurt it
+L.stunned = "Betäubt" -- When a boss becomes stunned and cannot cast abilities or move
 L.pool = "Pfütze" -- A pool or puddle on the ground, usually something bad that you should avoid standing in
 L.pools = "Pfützen" -- Plural of L.pool
 L.totem = "Totem" -- A totem, usually summoned by a boss, the same thing that shamans summon

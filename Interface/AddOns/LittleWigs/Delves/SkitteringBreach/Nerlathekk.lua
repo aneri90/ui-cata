@@ -1,4 +1,3 @@
-if not BigWigsLoader.isBeta then return end
 --------------------------------------------------------------------------------
 -- Module Declaration
 --
@@ -35,8 +34,7 @@ function mod:GetOptions()
 end
 
 function mod:OnBossEnable()
-	self:RegisterEvent("ENCOUNTER_START")
-	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED") -- Dark Abatement
+	self:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", nil, "boss1") -- Dark Abatement
 	self:Log("SPELL_CAST_START", "DarkriftSmash", 440806)
 end
 
@@ -49,27 +47,16 @@ end
 -- Event Handlers
 --
 
--- XXX no boss frames
-function mod:ENCOUNTER_START(_, id)
-	if id == self.engageId then
-		self:Engage()
-	end
-end
-
-do
-	local prev
-	function mod:UNIT_SPELLCAST_SUCCEEDED(_, _, castGUID, spellId)
-		if castGUID ~= prev and spellId == 458183 then -- Dark Abatement
-			prev = castGUID
-			self:Message(454762, "red")
-			self:PlaySound(454762, "alert")
-			self:CDBar(454762, 20.7)
-		end
+function mod:UNIT_SPELLCAST_SUCCEEDED(_, _, _, spellId)
+	if spellId == 458183 then -- Dark Abatement
+		self:Message(454762, "red")
+		self:PlaySound(454762, "alert")
+		self:CDBar(454762, 20.1)
 	end
 end
 
 function mod:DarkriftSmash(args)
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "alarm")
-	self:CDBar(args.spellId, 13.3)
+	self:CDBar(args.spellId, 12.2)
 end

@@ -71,8 +71,6 @@ end
 
 L = BigWigs:NewBossLocale("Ascendant Council", "zhCN")
 if L then
-	L.static_overload_say = "静电过载"
-	L.gravity_core_say = "重力核心"
 	L.health_report = "%s生命值>%d%%<，即将阶段转换！"
 	L.switch = "转换"
 	L.switch_desc = "当首领转换时发出警报。"

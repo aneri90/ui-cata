@@ -3,8 +3,8 @@
 
 <Script file="EDNA.lua"/>
 <Script file="Skarmorak.lua"/>
-<Script file="ForgeSpeakers.lua"/>
-<Script file="HighSpeakerEirich.lua"/>
+<Script file="MasterMachinists.lua"/>
+<Script file="VoidSpeakerEirich.lua"/>
 <Script file="Trash.lua"/>
 
 <Include file="Locales\locales.xml"/>

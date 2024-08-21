@@ -14,10 +14,9 @@ mod:SetStage(1)
 --
 
 local isHeadPhase = false
-local isNewHeadPhase = false
 local lavaSpewCount = 1
 local massiveCrashCount = 1
-local headGUID = nil
+local mangleCount = 1
 
 --------------------------------------------------------------------------------
 -- Localization
@@ -33,8 +32,6 @@ if L then
 	L.slump_desc = "Warn for when Magmaw slumps forward and exposes himself, allowing the riding rodeo to start."
 	L.slump_bar = "Rodeo"
 	L.slump_message = "Yeehaw, ride on!"
-
-	L.expose_emote_trigger = "head"
 end
 
 --------------------------------------------------------------------------------
@@ -51,7 +48,7 @@ function mod:GetOptions()
 		{78941, "SAY", "SAY_COUNTDOWN", "ME_ONLY_EMPHASIZE"}, -- Parasitic Infection
 		77690, -- Lava Spew
 		92134, -- Ignition
-		89773, -- Mangle
+		{89773, "TANK_HEALER"}, -- Mangle
 		{78199, "TANK"}, -- Sweltering Armor
 		78403, -- Molten Tantrum
 		-- Heroic
@@ -68,13 +65,11 @@ function mod:GetOptions()
 		["slump"] = L.slump_bar, -- Slump (Rodeo)
 		[79011] = CL.weakened, -- Point of Vulnerability (Weakened)
 		[78941] = CL.parasite, -- Parasitic Infection (Parasite)
-		[92134] = CL.fire, -- Ignition (Fire)
+		[92134] = CL.underyou:format(CL.fire), -- Ignition (Fire under YOU)
 	}
 end
 
 function mod:OnBossEnable()
-	self:RegisterEvent("CHAT_MSG_RAID_BOSS_EMOTE")
-	self:Log("SPELL_AURA_REFRESH", "PointOfVulnerabilityRefresh", 79010)
 	self:Log("SPELL_CAST_START", "MassiveCrash", 88253)
 	self:Log("SPELL_AURA_APPLIED", "ParasiticInfection", 78097, 78941)
 	self:Log("SPELL_AURA_APPLIED", "PillarOfFlame", 78006)
@@ -97,16 +92,15 @@ end
 
 function mod:OnEngage()
 	isHeadPhase = false
-	isNewHeadPhase = false
 	lavaSpewCount = 1
 	massiveCrashCount = 1
-	headGUID = nil
+	mangleCount = 1
 	self:SetStage(1)
 	self:Berserk(600)
 	self:Bar("slump", 100, CL.count:format(L.slump_bar, massiveCrashCount), 36702) -- Slump/Rodeo/Massive Crash
 	self:CDBar(78006, 30) -- Pillar of Flame
 	self:CDBar(77690, 24, CL.count:format(self:SpellName(77690), lavaSpewCount)) -- Lava Spew
-	self:CDBar(89773, 90) -- Mangle
+	self:CDBar(89773, 90, CL.count:format(self:SpellName(89773), mangleCount)) -- Mangle
 	if self:Heroic() then
 		self:Bar("adds", 30, CL.add, L.adds_icon)
 		self:RegisterUnitEvent("UNIT_HEALTH", nil, "boss1")
@@ -127,38 +121,21 @@ function mod:CHAT_MSG_MONSTER_YELL(_, msg)
 end
 
 function mod:INSTANCE_ENCOUNTER_ENGAGE_UNIT()
-	if headGUID then
-		local headUnit = self:GetBossId(headGUID)
-		if not isNewHeadPhase and headUnit then
-			isNewHeadPhase = true
-			self:Message(79011, "green", self:SpellName(79011), false, true) -- XXX TEST
-		elseif isNewHeadPhase and not headUnit then
-			isNewHeadPhase = false
-			self:Message(79011, "green", CL.removed:format(self:SpellName(79011)), false, true) -- XXX TEST
-		end
-	end
-end
-
-function mod:PointOfVulnerabilityRefresh(args)
-	headGUID = args.destGUID
-end
-
-do
-	local function rebootTimers()
+	-- Purposely only checking boss frames
+	local headUnit = self:GetBossId(42347) -- Exposed Head of Magmaw
+	local bossUnit = self:GetBossId(41570) -- Magmaw
+	if not isHeadPhase and headUnit and not bossUnit then -- Wait until the boss is gone before starting
+		isHeadPhase = true
+		self:Message(79011, "green", CL.weakened)
+		self:Bar(79011, 30, CL.weakened)
+		self:StopBar(78006) -- Pillar of Flame
+		self:StopBar(CL.count:format(self:SpellName(77690), lavaSpewCount)) -- Lava Spew
+		self:PlaySound(79011, "long")
+	elseif isHeadPhase and not headUnit and bossUnit then -- Wait until the boss is back before ending
 		isHeadPhase = false
-		mod:CDBar(78006, 9.5) -- Pillar of Flame
-		mod:CDBar(77690, 4.5, CL.count:format(mod:SpellName(77690), lavaSpewCount)) -- Lava Spew
-	end
-	function mod:CHAT_MSG_RAID_BOSS_EMOTE(_, msg)
-		if msg:find(L.expose_emote_trigger, nil, true) then
-			isHeadPhase = true
-			self:Message(79011, "green", CL.weakened)
-			self:Bar(79011, 30, CL.weakened)
-			self:StopBar(78006) -- Pillar of Flame
-			self:StopBar(CL.count:format(self:SpellName(77690), lavaSpewCount)) -- Lava Spew
-			self:ScheduleTimer(rebootTimers, 30)
-			self:PlaySound(79011, "long")
-		end
+		self:Message(79011, "green", CL.over:format(CL.weakened), false, true)
+		self:CDBar(78006, 9.5) -- Pillar of Flame
+		self:CDBar(77690, 4.5, CL.count:format(mod:SpellName(77690), lavaSpewCount)) -- Lava Spew
 	end
 end
 
@@ -232,15 +209,18 @@ do
 	local prevMangle = 0
 	function mod:MangleApplied(args)
 		prevMangle = args.time
-		self:StopBar(args.spellName)
-		self:TargetMessage(args.spellId, "purple", args.destName)
+		local msg = CL.count:format(args.spellName, mangleCount)
+		self:StopBar(msg)
+		self:TargetMessage(args.spellId, "purple", args.destName, msg)
 		self:TargetBar(args.spellId, 30, args.destName)
+		self:Bar(88253, 9.6, CL.count:format(self:SpellName(88253), massiveCrashCount)) -- Massive Crash, time until damage actually hits
 		self:PlaySound(args.spellId, "info", nil, args.destName)
 	end
 
 	function mod:MangleRemoved(args)
+		mangleCount = mangleCount + 1
 		self:StopBar(args.spellName, args.destName)
-		self:CDBar(args.spellId, prevMangle > 0 and (95 - (args.time-prevMangle)) or 95) -- Show the bar after it ends on the tank
+		self:CDBar(args.spellId, prevMangle > 0 and (95 - (args.time-prevMangle)) or 65, CL.count:format(args.spellName, mangleCount)) -- Show the bar after it ends on the tank
 	end
 end
 

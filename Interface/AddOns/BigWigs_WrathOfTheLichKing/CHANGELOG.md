@@ -1,7 +1,6 @@
 # BigWigs [Wrath of the Lich King]
 
-## [v10.2.15](https://github.com/BigWigsMods/BigWigs_WrathOfTheLichKing/tree/v10.2.15) (2024-05-08)
-[Full Changelog](https://github.com/BigWigsMods/BigWigs_WrathOfTheLichKing/compare/v10.2.14...v10.2.15) [Previous Releases](https://github.com/BigWigsMods/BigWigs_WrathOfTheLichKing/releases)
+## [v11.0.1](https://github.com/BigWigsMods/BigWigs_WrathOfTheLichKing/tree/v11.0.1) (2024-08-07)
+[Full Changelog](https://github.com/BigWigsMods/BigWigs_WrathOfTheLichKing/compare/v11.0.0...v11.0.1) [Previous Releases](https://github.com/BigWigsMods/BigWigs_WrathOfTheLichKing/releases)
 
-- bump toc  
-- Citadel/LichKing: Fix stuck infest bar  
+- Coliseum/Anubarak: Remove use of a function in `:Log`  

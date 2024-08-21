@@ -346,6 +346,9 @@ function SeasonOfDiscovery:LoadNPCs()
                 [zoneIDs.DUSKWOOD] = {{65.1, 23.7}},
             },
         },
+        [212252] = { -- Harvest Golem V000-A
+            [npcKeys.spawns] = {},
+        },
         [212261] = { -- Awakened Lich
             [npcKeys.spawns] = {},
         },
@@ -657,6 +660,37 @@ function SeasonOfDiscovery:LoadNPCs()
         [222188] = { -- Shadowy Figure
             [npcKeys.spawns] = {
                 [zoneIDs.MOONGLADE] = {{52.12,40.89}},
+            },
+        },
+        [223591] = { -- Echo of a Lost Soul
+            [npcKeys.spawns] = {
+                [zoneIDs.STRANGLETHORN_VALE] = {{30.0,73.0}},
+                [zoneIDs.THE_HINTERLANDS] = {{72.8,68.6}},
+                [zoneIDs.SWAMP_OF_SORROWS] = {{50.2,62.0}},
+                [zoneIDs.TANARIS] = {{53.8,29.0}},
+            },
+        },
+        [227464] = { -- Squire Cuthbert
+            [npcKeys.spawns] = {
+                [zoneIDs.EASTERN_PLAGUELANDS] = {{47.8,50.4}},
+            },
+            [npcKeys.questStarts] = {84008},
+        },
+        [227672] = { -- Squire Cuthbert
+            [npcKeys.spawns] = {
+                [zoneIDs.EASTERN_PLAGUELANDS] = {{47.8,50.4}},
+            },
+            [npcKeys.questStarts] = {83823},
+        },
+        [227673] = { -- Squire Cuthbert
+            [npcKeys.spawns] = {
+                [zoneIDs.EASTERN_PLAGUELANDS] = {{47.8,50.4}},
+            },
+            [npcKeys.questStarts] = {83823},
+        },
+        [227674] = { -- Squire Cuthbert
+            [npcKeys.spawns] = {
+                [zoneIDs.EASTERN_PLAGUELANDS] = {{47.8,50.4}},
             },
         },
 

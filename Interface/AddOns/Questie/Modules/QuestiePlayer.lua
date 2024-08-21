@@ -1,5 +1,6 @@
 ---@class QuestiePlayer
----@field numberOfGroupMembers number ---The number of players currently in the group
+---@field numberOfGroupMembers number @The number of players currently in the group
+---@field faction number @"Horde" or "Alliance"
 local QuestiePlayer = QuestieLoader:CreateModule("QuestiePlayer");
 local _QuestiePlayer = QuestiePlayer.private
 -------------------------
@@ -35,6 +36,8 @@ function QuestiePlayer:Initialize()
     local classId = select(3, UnitClass("player"))
     playerClassFlag = 2 ^ (classId - 1)
     playerClassFlagX2 = 2 * playerClassFlag
+
+    QuestiePlayer.faction = UnitFactionGroup("player")
 end
 
 --Always compare to the UnitLevel parameter, returning the highest.
@@ -57,11 +60,6 @@ end
 function QuestiePlayer.IsMaxLevel()
     local level = QuestiePlayer.GetPlayerLevel()
     return (Questie.IsCata and level == 85) or (Questie.IsWotlk and level == 80) or (Questie.IsTBC and level == 70) or (Questie.IsClassic and level == 60)
-end
-
----@return number
-function QuestiePlayer:GetRaceId()
-    return playerRaceId
 end
 
 ---@return string

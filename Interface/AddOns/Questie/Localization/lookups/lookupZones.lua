@@ -7,7 +7,7 @@ l10n.continentLookup = {
     [2] = "Kalimdor",
     [3] = "Outland",
     [4] = "Northrend",
-    [5] = "The Mealstrom",
+    [5] = "The Maelstrom",
     [6] = "Dungeons",
     [7] = "Battlegrounds",
     [8] = "Class",
@@ -2919,6 +2919,7 @@ l10n.zoneCategoryLookup = {
         [-375] = "Pilgrim's Bounty",
         [-376] = "Love is in the Air", -- Category added in WotLK
         [-641] = "Nightmare Incursions", -- Category added in SoD P3
+        [-644] = "Blackrock Eruption", -- Category added in SoD P4
         -- Below are dummy IDs to not interfere with other IDs
         -- These are needed because the events are listed as "seasonal" or "special",
         -- not with a separate ID

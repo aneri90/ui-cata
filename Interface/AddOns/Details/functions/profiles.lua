@@ -904,6 +904,10 @@ local default_profile = {
 	--segments
 		segments_amount = 25,
 		segments_amount_to_save = 15,
+		--max amount of boss wipes allowed
+		segments_amount_boss_wipes = 10,
+		--should boss wipes delete segments with less progression?
+		segments_boss_wipes_keep_best_performance = true,
 		segments_panic_mode = false,
 		segments_auto_erase = 1,
 
@@ -1105,7 +1109,8 @@ local default_profile = {
 			fontsize_title = 10,
 			fontcolor = {1, 1, 1, 1},
 			fontcolor_right = {1, 0.7, 0, 1}, --{1, 0.9254, 0.6078, 1}
-			fontshadow = false,
+			fontshadow = true,
+			fontcontour = {0, 0, 0, 1},
 			bar_color = {0.3960, 0.3960, 0.3960, 0.8700},
 			background = {0.0941, 0.0941, 0.0941, 0.8},
 			divisor_color = {1, 1, 1, 1},
@@ -1143,6 +1148,8 @@ local default_profile = {
 
 			--height used on tooltips at displays such as damage taken by spell
 			line_height = 17,
+
+			show_border_shadow = true, --from spell tooltips from the main window
 		},
 
 	--new window system
@@ -1375,6 +1382,10 @@ local default_global_data = {
 		damage_scroll_position = {
 			scale = 1,
 		},
+        cleu_debug_panel = {
+            position = {},
+            scaletable = {scale = 1},
+        },
 		data_wipes_exp = {
 			["9"] = false,
 			["10"] = false,
@@ -1386,6 +1397,16 @@ local default_global_data = {
 		current_exp_raid_encounters = {},
 		encounter_journal_cache = {}, --store a dump of the encounter journal
 		installed_skins_cache = {},
+
+		auto_change_to_standard = true,
+
+		debug_options_panel = {
+			scaletable = {scale = 1},
+			position = {},
+		},
+
+		boss_wipe_counter = {},
+		boss_wipe_min_time = 20, --minimum time to consider a wipe as a boss wipe
 
 		user_is_patreon_supporter = false,
 
@@ -1451,10 +1472,10 @@ local default_global_data = {
 		font_color = {0.9, 0.9, 0.9, 0.923},
 		font_outline = "NONE",
 		font_face = "DEFAULT",
-		bar_texture = "Skyline",
+		bar_texture = "You Are the Best!",
 	},
 
-	frame_background_color = {0.1215, 0.1176, 0.1294, 0.8},
+	frame_background_color = {0.0549, 0.0549, 0.0549, 0.934},
 
 --/run Details.breakdown_spell_tab.spellcontainer_height = 311 --352
 	--breakdown spell tab
@@ -1625,7 +1646,13 @@ local default_global_data = {
 			last_mythicrun_chart = {},
 			mythicrun_chart_frame = {},
 			mythicrun_chart_frame_minimized = {},
-			finished_run_frame = {}, --end of mythic+ panel
+			finished_run_panel3 = {}, --save window position
+			finished_run_frame_options = {
+				orientation = "horizontal",
+				grow_direction = "left",
+			},
+
+			autoclose_time = 40,
 
 			mythicrun_time_type = 1, --1: combat time (the amount of time the player is in combat) 2: run time (the amount of time it took to finish the mythic+ run)
 		}, --implementar esse time_type quando estiver dando refresh na janela
@@ -1902,7 +1929,7 @@ function Details:ExportCurrentProfile()
 	local playerData = {}
 	--data saved for the account
 	local defaultGlobalData = Details.default_global_data
-	local globaData = {}
+	local globaData = {} --typo: 'globalData' was intended, cannot be fixed due to export strings compatibility
 
 	--fill player and global data tables
 	for key, _ in pairs(defaultPlayerData) do
@@ -1940,8 +1967,9 @@ end
 ---@param newProfileName string
 ---@param bImportAutoRunCode boolean
 ---@param bIsFromImportPrompt boolean
+---@param overwriteExisting boolean
 ---@return boolean
-function Details:ImportProfile (profileString, newProfileName, bImportAutoRunCode, bIsFromImportPrompt)
+function Details:ImportProfile (profileString, newProfileName, bImportAutoRunCode, bIsFromImportPrompt, overwriteExisting)
 	if (not newProfileName or type(newProfileName) ~= "string" or string.len(newProfileName) < 2) then
 		Details:Msg("invalid profile name or profile name is too short.") --localize-me
 		return false
@@ -1955,11 +1983,13 @@ function Details:ImportProfile (profileString, newProfileName, bImportAutoRunCod
 
 		local profileObject = Details:GetProfile (newProfileName, false)
 		local nameWasDuplicate = false
-		while(profileObject) do
-			newProfileName = newProfileName .. '2';
-			profileObject = Details:GetProfile(newProfileName, false)
-			nameWasDuplicate = true
-		end
+    if not overwriteExisting then
+      while(profileObject) do
+        newProfileName = newProfileName .. '2';
+        profileObject = Details:GetProfile(newProfileName, false)
+        nameWasDuplicate = true
+      end
+    end
 		if (not profileObject) then
 			--profile doesn't exists, create new
 			profileObject = Details:CreateProfile (newProfileName)
@@ -2033,12 +2063,16 @@ function Details:ImportProfile (profileString, newProfileName, bImportAutoRunCod
 		mythicPlusSettings.last_mythicrun_chart = {}
 		mythicPlusSettings.mythicrun_chart_frame = {}
 		mythicPlusSettings.mythicrun_chart_frame_minimized = {}
-		mythicPlusSettings.finished_run_frame = {}
+		mythicPlusSettings.finished_run_panel3 = {}
 
 		--max segments allowed
 		Details.segments_amount = 25
 		--max segments to save between sections
 		Details.segments_amount_to_save = 15
+		--max amount of boss wipes allowed
+		Details.segments_amount_boss_wipes = 10
+		--should boss wipes delete segments with less progression?
+		Details.segments_boss_wipes_keep_best_performance = true
 
 		--transfer instance data to the new created profile
 		profileObject.instances = DetailsFramework.table.copy({}, profileData.instances)

@@ -69,8 +69,6 @@ end
 
 L = BigWigs:NewBossLocale("Ascendant Council", "esMX")
 if L then
-	L.static_overload_say = "Sobrecarga estática"
-	L.gravity_core_say = "Núcleo de gravedad"
 	L.health_report = "%s está al %d%% de vida, ¡cambio pronto!"
 	L.switch = "Cambio"
 	L.switch_desc = "Avisa los cambios de jefes"

@@ -1,18 +1,18 @@
 local L = BigWigsAPI:NewLocale("BigWigs: Common", "frFR")
 if not L then return end
-local female = UnitSex("player") == 3
+local female = BigWigsLoader.UnitSex("player") == 3
 
 -- Prototype.lua common words
 L.you = "%s sur VOUS"
 L.you_icon = "%s sur |T13700%d:0|tVOUS"
 L.underyou = "%s en dessous de VOUS"
-L.aboveyou = "%s au dessus de VOUS"
+L.aboveyou = "%s au-dessus de VOUS"
 L.other = "%s : %s"
 L.onboss = "%s sur le BOSS"
 L.buff_boss = "Buff sur le BOSS : %s"
 L.buff_other = "Buff sur %s : %s"
---L.magic_buff_boss = "Magic buff on BOSS: %s" -- Magic buff on BOSS: SPELL_NAME
---L.magic_buff_other = "Magic buff on %s: %s" -- Magic buff on NPC_NAME: SPELL_NAME
+L.magic_buff_boss = "Buff magique sur le BOSS : %s" -- Magic buff on BOSS: SPELL_NAME
+L.magic_buff_other = "Buff magique sur %s : %s" -- Magic buff on NPC_NAME: SPELL_NAME
 L.on = "%s sur %s"
 L.stack = "%dx %s sur %s"
 L.stackyou = "%dx %s sur VOUS"
@@ -32,8 +32,8 @@ L.extra = "%s (%s)" -- SPELL_NAME (short spell name or extra information)
 
 L.phase = "Phase %d"
 L.stage = "Phase %d"
---L.wave = "Wave %d" -- e.g. "Wave 1" (Waves of adds)
---L.wave_count = "Wave %d of %d" -- Wave 1 of 3 (Usually waves of adds)
+L.wave = "Vague %d" -- e.g. "Wave 1" (Waves of adds)
+L.wave_count = "Vague %d sur %d" -- Wave 1 of 3 (Usually waves of adds)
 L.normal = "Mode normal"
 L.heroic = "Mode héroïque"
 L.mythic = "Mode mythique"
@@ -42,12 +42,14 @@ L.active = "Actif" -- When a boss becomes active, after speech finishes
 L.ready = "Prêt" -- When a player is ready to do something
 L.dead = "Mort" -- When a player is dead
 L.general = "Général" -- General settings, i.e. things that apply to normal, heroic and mythic mode.
---L.health = "Health" -- The health of an NPC
---L.health_percent = "%d%% Health" -- "10% Health" The health percentage of an NPC
---L.door_open = "Door open" -- When a door is open, usually after a speech from an NPC
---L.gate_open = "Gate open" -- When a gate is open, usually after a speech from an NPC
+L.health = "Vie" -- The health of an NPC
+L.health_percent = "%d%% vie" -- "10% Health" The health percentage of an NPC
+L.door_open = "Porte ouverte" -- When a door is open, usually after a speech from an NPC
+L.gate_open = "Portail ouvert" -- When a gate is open, usually after a speech from an NPC
+L.threat = "Menace"
+L.energy = "Énergie"
 
---L.remaining = "%d remaining" -- 5 remaining
+L.remaining = "%d |4restant:restants;" -- 5 remaining
 L.duration = "%s pendant %s sec." -- Spell for 10 seconds
 L.over = "%s terminé" -- Spell Over
 L.removed = "%s enlevé" -- Spell Removed
@@ -57,21 +59,26 @@ L.removed_after = "%s enlevé en %.1fs" -- "Spell removed after 1.1s" (s = secon
 L.incoming = "Arrivée |2 %s" -- Spell Incoming
 L.interrupted = "%s interrompu" -- Spell Interrupted
 L.interrupted_by = "%s interrompu par %s" -- Spell interrupted by Player
---L.interruptible = "Interruptible" -- when a spell is interruptible
+L.interruptible = "Interruptible" -- when a spell is interruptible
 L.no = "Sans %s" -- No Spell
 L.intermission = "Intervalle"
 L.percent = "%d%% - %s" -- 20% - Spell
 L.cancelled = "%s annulé" -- Spell Cancelled
 L.you_die = "Vous êtes mort" -- You will die
 L.you_die_sec = "Vous mourrez dans %d sec." -- "You die in 15 sec" (sec = seconds)
---L.next_ability = "Next ability" -- We don't know what ability will be next, we only know when it will happen (showing a bar)
+L.next_ability = "Prochaine compétence" -- We don't know what ability will be next, we only know when it will happen (showing a bar)
+L.landing = "%s atterri" -- "NPC_NAME is landing" Used when a flying NPC/dragon/boss is landing
+L.flying_available = "Vous pouvez maintenant voler"
 
 -- Add related
-L.add_spawned = "Add apparu"
---L.adds_spawned = "Adds apparu"
-L.spawned = "%s apparu"
-L.spawning = "Apparition |2 %s"
-L.next_add = "Prochain Add"
+L.add_spawned = "Add est apparu" -- singular
+L.adds_spawned = "Adds sont apparus" -- plural
+L.adds_spawned_count = "%d |4add est apparu:adds sont apparus;" -- 1 add spawned / 2 adds spawned
+L.add_spawning = "Add en train d'apparaître" -- singular
+L.adds_spawning = "Adds en train d'apparaître" -- plural
+L.spawned = "%s est apparu"
+L.spawning = "%s en train d'apparaître"
+L.next_add = "Prochain add"
 L.add_killed = "Add tué (%d/%d)"
 L.add_remaining = "Add tué, il en reste %d"
 L.add = "Add"
@@ -102,20 +109,23 @@ L.affixes = "Affixes" -- Seasonal affixes for raids and mythic+ dungeons
 L.marker = "Marquage %s"
 L.marker_player_desc = "Marque les joueurs affectés par %s avec %s. Nécessite d'être assistant ou chef de raid." -- Mark players affected by 'SPELL_NAME' with SKULL_ICON
 L.marker_npc_desc = "Marque %s avec %s. Nécessite d'être assistant ou chef de raid." -- Mark NPC_NAME with SKULL_ICON
---L.marker_npc_aura_desc = "Mark NPCs affected by '%s' with %s, requires promoted or leader." -- Mark NPCs affected by 'SPELL_NAME' with SKULL_ICON
+L.marker_npc_aura_desc = "Marque les PNJ affectés par '%s' avec %s. Nécessite d'être assistant ou chef de raid." -- Mark NPCs affected by 'SPELL_NAME' with SKULL_ICON
 
 -- Ability where two players have to move close to each other
 L.link = "Lien"
 L.link_with = (female and "Liée" or "Lié") .." avec %s"
 L.link_with_icon = (female and "Liée" or "Lié") .." avec |T13700%d:0|t%s"
-L.link_short = (female and "Liée" or "Lié") .." : %s"
-L.link_both = "%s est ".. (female and "liée" or "lié") .." avec %s"
+L.link_with_rticon = "{rt%d}".. (female and "Liée" or "Lié") .." avec %s"
+L.link_both = "%s et %s sont liés"
+L.link_both_icon = "|T13700%d:0|t%s et |T13700%d:0|t%s sont liés"
 L.link_removed = "Lien enlevé"
+L.link_say_option_name = "Répète '".. (female and "Liée" or "Lié") .."' dans le canal dire"
+L.link_say_option_desc = "Répète le message dans le canal de discussion en disant avec qui vous êtes liés."
 
 -- Abbreviated numbers
-L.amount_one = "%dB" -- Billions 1,000,000,000
+L.amount_one = "%dMd" -- Billions 1,000,000,000
 L.amount_two = "%dM" -- Millions 1,000,000
-L.amount_three = "%dK" -- Thousands 1,000
+L.amount_three = "%dk" -- Thousands 1,000
 L.seconds = "%.1fs" -- 1.1 seconds
 
 -- Directions
@@ -143,14 +153,14 @@ L.nature = "Nature"
 L.arcane = "Arcanes"
 
 -- Autotalk
---L.autotalk = "Automatic NPC interaction"
---L.autotalk_boss_desc = "Automatically select the NPC dialog options that cause the boss encounter to begin."
---L.autotalk_generic_desc = "Automatically select the NPC dialog options that cause you to progress to the next stage of the dungeon."
+L.autotalk = "Interaction automatique avec un PNJ"
+L.autotalk_boss_desc = "Sélectionne automatiquement le diaglogue avec le PNJ qui lance la rencontre."
+L.autotalk_generic_desc = "Sélectionne automatiquement le diaglogue avec le PNJ qui vous fait progresser à la prochaine étape du donjon."
 
 -- Common ability name replacements
 L.absorb = "Absorbe" -- Used for shield-like abilities that absorb damage or healing
---L.heal_absorb = "Heal Absorb" -- Used for shield-like abilities that absorb healing only
---L.heal_absorbs = "Heal Absorbs" -- Plural of L.heal_absorb
+L.heal_absorb = "Soins absorbés" -- Used for shield-like abilities that absorb healing only
+L.heal_absorbs = "Soins absorbés" -- Plural of L.heal_absorb
 L.tank_combo = "Combo Tank" -- Used for tank swap mechanics where the boss casts a sequence of tank buster attacks
 L.laser = "Laser" -- Used for abilities that act like a laser. Usually from the boss to a player, or, from the boss to a specific area
 L.lasers = "Lasers" -- Plural of L.lasers
@@ -161,7 +171,7 @@ L.bombs = "Bombes" -- Plural of L.bomb
 L.explosion = "Explosion" -- When the explosion from a bomb-like ability will occur
 L.fixate = "Fixer" -- Used when a boss or add is chasing/fixated on a player
 L.knockback = "Repousser" -- Used when an ability knocks players away from a certain point, like a "smash" type ability that knocks you back 10 meters
-L.pushback = "Repousser continu" -- Used when an ability slowly and continually pushes a player away, like winds gradually pushing you away over time
+L.pushback = "Repousse en continu" -- Used when an ability slowly and continually pushes a player away, like winds gradually pushing you away over time
 L.traps = "Pièges" -- Used for abilities that act like traps on the floor e.g. move into it and something bad happens like you die, or are rooted, etc.
 L.meteor = "Météore" -- This one will probably only ever be used for actual meteors
 L.shield = "Bouclier" -- Abilities that absorb damage/healing creating a "shield" around the boss/player e.g. "Shield on boss" or "Shield remaining"
@@ -174,6 +184,7 @@ L.charge = "Charge" -- When a boss select a new target and charges at it quickly
 L.full_energy = "Energie pleine" -- When a boss reaches full/maximum energy, usually the boss will cast something big and powerful when this happens
 L.weakened = "Affaibli" -- When a boss becomes weakened and sometimes takes extra damage, usually the "hit all your cooldowns" part of the fight
 L.immune = "Insensible" -- When a boss becomes immune to all damage and you can no longer hurt it
+L.stunned = "Etourdi" -- When a boss becomes stunned and cannot cast abilities or move
 L.pool = "Flaque" -- A pool or puddle on the ground, usually something bad that you should avoid standing in
 L.pools = "Flaques" -- Plural of L.pool
 L.totem = "Totem" -- A totem, usually summoned by a boss, the same thing that shamans summon

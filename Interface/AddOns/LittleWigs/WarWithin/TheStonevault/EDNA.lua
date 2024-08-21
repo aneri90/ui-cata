@@ -1,4 +1,3 @@
-if not BigWigsLoader.isBeta then return end
 --------------------------------------------------------------------------------
 -- Module Declaration
 --
@@ -8,6 +7,15 @@ if not mod then return end
 mod:RegisterEnableMob(210108) -- E.D.N.A.
 mod:SetEncounterID(2854)
 mod:SetRespawnTime(30)
+
+--------------------------------------------------------------------------------
+-- Locals
+--
+
+local refractingBeamCount = 1
+local seismicSmashCount = 1
+local volatileSpikeCount = 1
+local earthShattererCount = 1
 
 --------------------------------------------------------------------------------
 -- Localization
@@ -25,10 +33,11 @@ end
 function mod:GetOptions()
 	return {
 		"warmup",
-		{424795, "SAY", "ME_ONLY_EMPHASIZE"}, -- Refracting Beam
+		{424795, "SAY"}, -- Refracting Beam
 		{424888, "TANK_HEALER"}, -- Seismic Smash
 		{424889, "DISPEL"}, -- Seismic Reverberation
 		424903, -- Volatile Spike
+		-- Mythic
 		424879, -- Earth Shatterer
 	}, {
 		[424879] = CL.mythic,
@@ -38,35 +47,36 @@ function mod:GetOptions()
 end
 
 function mod:OnBossEnable()
-	self:RegisterEvent("ENCOUNTER_START") -- XXX no boss frames
-	self:Log("SPELL_AURA_APPLIED", "RefractingBeamApplied", 424795)
-	self:Log("SPELL_AURA_REMOVED", "RefractingBeamRemoved", 424795)
+	self:Log("SPELL_CAST_SUCCESS", "RefractingBeam", 424795)
 	self:Log("SPELL_CAST_START", "SeismicSmash", 424888)
 	self:Log("SPELL_AURA_APPLIED", "SeismicReverberation", 424889)
 	self:Log("SPELL_CAST_START", "VolatileSpike", 424903)
+
+	-- Mythic
 	self:Log("SPELL_CAST_START", "EarthShatterer", 424879)
 end
 
 function mod:OnEngage()
+	refractingBeamCount = 1
+	seismicSmashCount = 1
+	volatileSpikeCount = 1
 	self:StopBar(CL.active)
-	self:CDBar(424903, 6.0) -- Volatile Spike
-	self:CDBar(424795, 9.7, CL.beams) -- Refracting Beam
-	self:CDBar(424888, 15.4) -- Seismic Smash
 	if self:Mythic() then
-		self:CDBar(424879, 25.1) -- Earth Shatterer
+		earthShattererCount = 1
+		self:CDBar(424903, 6.0) -- Volatile Spike
+		self:CDBar(424795, 14.0, CL.beams) -- Refracting Beam
+		self:CDBar(424888, 18.0) -- Seismic Smash
+		self:CDBar(424879, 43.0, CL.count:format(self:SpellName(424879), earthShattererCount)) -- Earth Shatterer
+	else
+		self:CDBar(424903, 8.1) -- Volatile Spike
+		self:CDBar(424795, 11.8, CL.beams) -- Refracting Beam
+		self:CDBar(424888, 15.4) -- Seismic Smash
 	end
 end
 
 --------------------------------------------------------------------------------
 -- Event Handlers
 --
-
--- XXX no boss frames
-function mod:ENCOUNTER_START(_, id)
-	if id == self.engageId then
-		self:Engage()
-	end
-end
 
 function mod:Warmup() -- called from trash module
 	-- 170.41 [CHAT_MSG_MONSTER_SAY] What's this? Is that golem fused with something else?#Dagran Thaurissan II
@@ -76,37 +86,53 @@ end
 
 do
 	local playerList = {}
+	local prev = 0
 
-	function mod:RefractingBeamApplied(args)
-		if not self:Player(args.destFlags) then
-			-- the boss RP fights some Skardyn Invaders before becoming active
-			return
-		end
-		playerList[#playerList + 1] = args.destName
-		self:PlaySound(args.spellId, "alarm", nil, playerList)
+	function mod:RefractingBeam(args)
+		local t = args.time
 		if self:Mythic() then
-			self:TargetsMessage(args.spellId, "red", playerList, 3, CL.beam, nil, 1.1) -- debuff staggers applications in .5s intervals
-		else
-			self:TargetsMessage(args.spellId, "red", playerList, 2, CL.beam, nil, 0.6) -- debuff staggers applications in .5s intervals
+			if t - prev > 5 then
+				-- applies to all 5 players over 2 seconds, 0.5s apart. just alert on the first debuff.
+				prev = t
+				self:Message(args.spellId, "red", CL.beams)
+				refractingBeamCount = refractingBeamCount + 1
+				if refractingBeamCount % 2 == 0 then
+					self:CDBar(args.spellId, 20.0, CL.beams)
+				else
+					self:CDBar(args.spellId, 28.0, CL.beams)
+				end
+				self:PlaySound(args.spellId, "alarm")
+			end
+		else -- Heroic, Normal
+			if t - prev > 5 then
+				prev = t
+				playerList = {}
+				self:CDBar(args.spellId, 10.9, CL.beams)
+			end
+			playerList[#playerList + 1] = args.destName
+			-- TODO reconfirm player count in Heroic
+			self:TargetsMessage(args.spellId, "red", playerList, 2, CL.beam, nil, 0.6) -- debuff applications in .5s intervals
+			self:PlaySound(args.spellId, "alarm", nil, playerList)
+			if self:Me(args.destGUID) then
+				self:Say(args.spellId, CL.beam, nil, "Beam")
+			end
 		end
-		if self:Me(args.destGUID) then
-			self:Say(args.spellId, CL.beam, nil, "Beam")
-		end
-		if #playerList == 1 then
-			self:CDBar(args.spellId, 10.9, CL.beams)
-		end
-	end
-
-	function mod:RefractingBeamRemoved(args)
-		-- TODO there is no SPELL_CAST_SUCCESS
-		playerList = {}
 	end
 end
 
 function mod:SeismicSmash(args)
 	self:Message(args.spellId, "purple")
 	self:PlaySound(args.spellId, "alert")
-	self:CDBar(args.spellId, 22.2)
+	if self:Mythic() then
+		seismicSmashCount = seismicSmashCount + 1
+		if seismicSmashCount % 2 == 0 then
+			self:CDBar(args.spellId, 20.0)
+		else
+			self:CDBar(args.spellId, 28.0)
+		end
+	else -- Normal, Heroic
+		self:CDBar(args.spellId, 23.1)
+	end
 end
 
 function mod:SeismicReverberation(args)
@@ -120,14 +146,23 @@ function mod:VolatileSpike(args)
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "info")
 	if self:Mythic() then
-		self:CDBar(args.spellId, 27.5)
-	else
-		self:CDBar(args.spellId, 14.5) -- TODO recheck?
+		volatileSpikeCount = volatileSpikeCount + 1
+		if volatileSpikeCount % 2 == 0 then
+			self:CDBar(args.spellId, 20.0)
+		else
+			self:CDBar(args.spellId, 28.0)
+		end
+	else -- Normal, Heroic
+		self:CDBar(args.spellId, 14.6)
 	end
 end
 
+-- Mythic
+
 function mod:EarthShatterer(args)
-	self:Message(args.spellId, "yellow")
+	self:StopBar(CL.count:format(args.spellName, earthShattererCount))
+	self:Message(args.spellId, "yellow", CL.count:format(args.spellName, earthShattererCount))
 	self:PlaySound(args.spellId, "long")
-	self:CDBar(args.spellId, 54.5)
+	earthShattererCount = earthShattererCount + 1
+	self:CDBar(args.spellId, 48.0, CL.count:format(args.spellName, earthShattererCount))
 end

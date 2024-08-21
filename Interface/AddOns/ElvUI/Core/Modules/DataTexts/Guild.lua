@@ -2,12 +2,10 @@ local E, L, V, P, G = unpack(ElvUI)
 local DT = E:GetModule('DataTexts')
 
 local _G = _G
-local ipairs, select, sort, unpack, wipe, ceil = ipairs, select, sort, unpack, wipe, ceil
+local ipairs, select, next, sort, unpack, wipe, ceil = ipairs, select, next, sort, unpack, wipe, ceil
 local format, strfind, strjoin, strsplit, strmatch = format, strfind, strjoin, strsplit, strmatch
 
-local EasyMenu = EasyMenu
 local GetDisplayedInviteType = GetDisplayedInviteType
-local GetGuildFactionInfo = GetGuildFactionInfo
 local GetGuildInfo = GetGuildInfo
 local GetGuildRosterInfo = GetGuildRosterInfo
 local GetGuildRosterMOTD = GetGuildRosterMOTD
@@ -19,20 +17,22 @@ local IsInGuild = IsInGuild
 local IsShiftKeyDown = IsShiftKeyDown
 local SetItemRef = SetItemRef
 local ToggleGuildFrame = ToggleGuildFrame
-local ToggleFriendsFrame = ToggleFriendsFrame
 local UnitInParty = UnitInParty
 local UnitInRaid = UnitInRaid
 local IsAltKeyDown = IsAltKeyDown
 
-local IsTimerunningPlayer = C_ChatInfo.IsTimerunningPlayer
-local InviteUnit = C_PartyInfo.InviteUnit or InviteUnit
+local InviteUnit = C_PartyInfo.InviteUnit
 local C_PartyInfo_RequestInviteFromUnit = C_PartyInfo.RequestInviteFromUnit
-local LoadAddOn = (C_AddOns and C_AddOns.LoadAddOn) or LoadAddOn
+local LoadAddOn = C_AddOns.LoadAddOn
 
 local COMBAT_FACTION_CHANGE = COMBAT_FACTION_CHANGE
 local REMOTE_CHAT = REMOTE_CHAT
 local GUILD_MOTD = GUILD_MOTD
 local GUILD = GUILD
+
+local GetAndSortMemberInfo = CommunitiesUtil.GetAndSortMemberInfo
+local GetSubscribedClubs = C_Club.GetSubscribedClubs
+local CLUBTYPE_GUILD = Enum.ClubType.Guild
 
 local TIMERUNNING_ATLAS = '|A:timerunning-glues-icon-small:%s:%s:0:0|a'
 local TIMERUNNING_SMALL = format(TIMERUNNING_ATLAS, 12, 10)
@@ -51,7 +51,13 @@ local standingString = E:RGBToHex(ttsubh.r, ttsubh.g, ttsubh.b)..'%s:|r |cFFFFFF
 local moreMembersOnlineString = strjoin('', '+ %d ', _G.FRIENDS_LIST_ONLINE, '...')
 local noteString = strjoin('', '|cff999999   ', _G.LABEL_NOTE, ':|r %s')
 local officerNoteString = strjoin('', '|cff999999   ', _G.GUILD_RANK1_DESC, ':|r %s')
-local guildTable, guildMotD = {}, ''
+local clubTable, guildTable, guildMotD = {}, {}, ''
+
+local factionTemp = {}
+local GetGuildFactionInfo = (C_Reputation and C_Reputation.GetGuildFactionData) or function()
+	factionTemp.name, factionTemp.description, factionTemp.reaction, factionTemp.currentReactionThreshold, factionTemp.nextReactionThreshold, factionTemp.currentStanding = _G.GetGuildFactionInfo()
+	return factionTemp
+end
 
 local function sortByRank(a, b)
 	if a and b then
@@ -94,6 +100,25 @@ end
 
 local function BuildGuildTable()
 	wipe(guildTable)
+	wipe(clubTable)
+
+	local clubs = E.Retail and GetSubscribedClubs()
+	if clubs then -- use this to get the timerunning flag (and other info?)
+		local guildClubID
+		for _, data in next, clubs do
+			if data.clubType == CLUBTYPE_GUILD then
+				guildClubID = data.clubId
+				break
+			end
+		end
+
+		local members = guildClubID and GetAndSortMemberInfo(guildClubID)
+		if members then
+			for _, data in next, members do
+				clubTable[data.guid] = data
+			end
+		end
+	end
 
 	local totalMembers = GetNumGuildMembers()
 	for i = 1, totalMembers do
@@ -104,6 +129,8 @@ local function BuildGuildTable()
 		zone = (isMobile and not connected) and REMOTE_CHAT or zone
 
 		if connected or isMobile then
+			local clubMember = clubTable[guid]
+
 			guildTable[#guildTable + 1] = {
 				name = E:StripMyRealm(name),	--1
 				rank = rank,					--2
@@ -117,7 +144,7 @@ local function BuildGuildTable()
 				rankIndex = rankIndex,			--10
 				isMobile = isMobile,			--11
 				guid = guid,					--12
-				timerunningID = E.Retail and IsTimerunningPlayer(guid)
+				timerunningID = clubMember and clubMember.timerunningSeasonID
 			}
 		end
 	end
@@ -220,13 +247,9 @@ local function Click(self, btn)
 		end
 
 		E:SetEasyMenuAnchor(E.EasyMenu, self)
-		EasyMenu(menuList, E.EasyMenu, nil, nil, nil, 'MENU')
+		E:ComplicatedMenu(menuList, E.EasyMenu, nil, nil, nil, 'MENU')
 	elseif not E:AlertCombat() then
-		if E.Retail or E.Cata then
-			ToggleGuildFrame()
-		else
-			ToggleFriendsFrame(3)
-		end
+		ToggleGuildFrame()
 	end
 end
 
@@ -252,11 +275,11 @@ local function OnEnter(_, _, noUpdate)
 	end
 
 	if E.Retail then
-		local _, _, standingID, barMin, barMax, barValue = GetGuildFactionInfo()
-		if standingID ~= 8 then -- Not Max Rep
-			barMax = barMax - barMin
-			barValue = barValue - barMin
-			DT.tooltip:AddLine(format(standingString, COMBAT_FACTION_CHANGE, E:ShortValue(barValue), E:ShortValue(barMax), ceil((barValue / barMax) * 100)))
+		local info = GetGuildFactionInfo()
+		if info and info.reaction ~= 8 then -- Not Max Rep
+			local nextReactionThreshold = info.nextReactionThreshold - info.currentReactionThreshold
+			local currentStanding = info.currentStanding - info.currentReactionThreshold
+			DT.tooltip:AddLine(format(standingString, COMBAT_FACTION_CHANGE, E:ShortValue(currentStanding), E:ShortValue(nextReactionThreshold), ceil((currentStanding / nextReactionThreshold) * 100)))
 		end
 	end
 

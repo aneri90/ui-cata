@@ -1,0 +1,13 @@
+## Interface: 110000
+## Title: MerfinPlus
+## Notes: Inserts Merfin media into LibSharedMedia's storage.
+## Dependencies: WeakAuras
+## Version: 1.29
+## IconTexture: Interface\AddOns\MerfinPlus\Media\icons\merfinui_logo_2
+
+## OptionalDeps: LibStub, LibSharedMedia-3.0
+
+MerfinPlus.lua
+libs\libs.xml
+Media\Media.xml
+WeakAuras_API\WeakAuras_API.xml

@@ -9,6 +9,8 @@ local L = WeakAuras.L;
 
 local default = {
     progressSource = {-1, "" },
+    adjustedMax = "",
+    adjustedMin = "",
     foregroundTexture = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
     backgroundTexture = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\stopmotion",
     desaturateBackground = false,
@@ -496,6 +498,7 @@ local function modify(parent, region, data)
       region.FrameTick = FrameTickFunctions.timed
       region.subRegionEvents:AddSubscriber("FrameTick", region, true)
       function region:Update()
+        region:UpdateProgress()
       end
     elseif data.animationType == "progress" then
       function region:Update()

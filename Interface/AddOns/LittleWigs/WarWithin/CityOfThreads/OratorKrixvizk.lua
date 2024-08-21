@@ -1,4 +1,3 @@
-if not BigWigsLoader.isBeta then return end
 --------------------------------------------------------------------------------
 -- Module Declaration
 --
@@ -27,7 +26,7 @@ function mod:GetOptions()
 		434779, -- Terrorize
 		434829, -- Vociferous Indoctrination
 		434926, -- Lingering Influence
-		448561, -- Shadows of Doubt (Mythic)
+		{448561, "SAY", "SAY_COUNTDOWN"}, -- Shadows of Doubt (Mythic)
 	}, {
 		[448561] = CL.mythic, -- Shadows of Doubt
 	}
@@ -43,6 +42,7 @@ function mod:OnBossEnable()
 	-- Mythic
 	self:Log("SPELL_CAST_SUCCESS", "ShadowsOfDoubt", 448560)
 	self:Log("SPELL_AURA_APPLIED", "ShadowsOfDoubtApplied", 448561)
+	self:Log("SPELL_AURA_REMOVED", "ShadowsOfDoubtRemoved", 448561)
 end
 
 function mod:OnEngage()
@@ -124,7 +124,17 @@ do
 
 	function mod:ShadowsOfDoubtApplied(args)
 		playerList[#playerList + 1] = args.destName
-		self:PlaySound(args.spellId, "alarm", nil, playerList)
 		self:TargetsMessage(args.spellId, "red", playerList, 2)
+		self:PlaySound(args.spellId, "alarm", nil, playerList)
+		if self:Me(args.destGUID) then
+			self:Say(args.spellId, nil, nil, "Shadows of Doubt")
+			self:SayCountdown(args.spellId, 6)
+		end
+	end
+
+	function mod:ShadowsOfDoubtRemoved(args)
+		if self:Me(args.destGUID) then
+			self:CancelSayCountdown(args.spellId)
+		end
 	end
 end

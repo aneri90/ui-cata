@@ -740,7 +740,7 @@ ZoneDB.private.dungeonLocations = {
     [2057] = {{28, 69.7, 73.2}}, -- Scholomance
     [2100] = {(Questie.IsCata and {405, 29.1, 62.6}) or {405, 29.1, 62.5}}, -- Maraudon
     [2159] = {{15, 52.6, 76.8}}, -- Onyxia's Lair
-    [2257] = {((Questie.IsWotlk or Questie.IsCata) and {1519, 72, 28}) or {1519, 67.6, 4.1}, {1537, 84.1, 53.1}}, -- Deeprun Tram
+    [2257] = {(Questie.IsCata and {1519, 69.49, 31.2}) or (Questie.IsWotlk and {1519, 72, 28}) or {1519, 67.6, 4.1}, {1537, 84.1, 53.1}}, -- Deeprun Tram
     [2366] = {(Questie.IsCata and {440, 64.8, 50}) or {440, 65.7, 49.8}}, -- The Black Morass
     [2367] = {(Questie.IsCata and {440, 64.8, 50}) or {440, 65.7, 49.8}}, -- Old Hillsbrad Foothills
     [2437] = {(Questie.IsCata and {1637, 55.2, 51.2}) or {1637, 51.7, 49.8}}, -- Ragefire Chasm
@@ -3038,7 +3038,7 @@ ZoneDB.private.zoneIDs = {
     AZSHARA = 16,
     THE_BARRENS = 17, -- This is also Northern Barrens in Cata
     WESTERN_PLAGUELANDS = 28,
-    STRANGLETHORN_VALE = 33, -- This is also Northern Stranglethorn in Cata
+    STRANGLETHORN_VALE = 33, -- This is also Northern Stranglethorn in Cata, just like 5339
     ALTERAC_MOUNTAINS = 36,
     LOCH_MODAN = 38,
     WESTFALL = 40,
@@ -3243,7 +3243,9 @@ ZoneDB.private.zoneIDs = {
     SHIMMERING_EXPANSE = 5144, -- Vashj'ir sub zone
     ABYSSAL_DEPTHS = 5145, -- Vashj'ir sub zone
     THE_CAPE_OF_STRANGLETHORN = 5287,
+    NORTHERN_STRANGLETHORN = 5339,
     TOL_BARAD_PENINSULA = 5389, -- the northern isle
+    THE_MAELSTROM = 5416,
     DARKMOON_FAIRE_ISLAND = 5861,
 }
 

@@ -14,7 +14,6 @@ local CreateFrame = CreateFrame
 local GetBindingKey = GetBindingKey
 local GetCurrentBindingSet = GetCurrentBindingSet
 local GetNumGroupMembers = GetNumGroupMembers
-local GetSpellInfo = GetSpellInfo
 local InCombatLockdown = InCombatLockdown
 local IsInGroup = IsInGroup
 local IsInGuild = IsInGuild
@@ -29,8 +28,8 @@ local UnitGUID = UnitGUID
 local GetSpecialization = (E.Classic or E.Cata) and LCS.GetSpecialization or GetSpecialization
 local PlayerGetTimerunningSeasonID = PlayerGetTimerunningSeasonID
 
-local DisableAddOn = (C_AddOns and C_AddOns.DisableAddOn) or DisableAddOn
-local GetAddOnMetadata = (C_AddOns and C_AddOns.GetAddOnMetadata) or GetAddOnMetadata
+local DisableAddOn = C_AddOns.DisableAddOn
+local GetAddOnMetadata = C_AddOns.GetAddOnMetadata
 local GetCVarBool = C_CVar.GetCVarBool
 
 local LE_PARTY_CATEGORY_HOME = LE_PARTY_CATEGORY_HOME
@@ -1198,7 +1197,7 @@ do -- BFA Convert, deprecated..
 		local auraBarColors = E.global.unitframe.AuraBarColors
 		for spell, info in pairs(auraBarColors) do
 			if type(spell) == 'string' then
-				local spellID = select(7, GetSpellInfo(spell))
+				local _, _, _, _, _, _, spellID = E:GetSpellInfo(spell)
 				if spellID and not auraBarColors[spellID] then
 					auraBarColors[spellID] = info
 					auraBarColors[spell] = nil
@@ -1395,12 +1394,27 @@ function E:DBConvertDF()
 	local currency = E.global.datatexts.customCurrencies
 	if currency then
 		for id, data in next, E.global.datatexts.customCurrencies do
-			local info = { name = data.NAME, showMax = data.SHOW_MAX, currencyTooltip = data.DISPLAY_IN_MAIN_TOOLTIP, nameStyle = data.DISPLAY_STYLE and (strfind(data.DISPLAY_STYLE, 'ABBR') and 'abbr' or strfind(data.DISPLAY_STYLE, 'TEXT') and 'full' or 'none') or nil }
+			local info = {
+				name = data.NAME or nil,
+				showMax = data.SHOW_MAX or nil,
+				currencyTooltip = data.DISPLAY_IN_MAIN_TOOLTIP or nil,
+				nameStyle = data.DISPLAY_STYLE and (strfind(data.DISPLAY_STYLE, 'ABBR') and 'abbr' or strfind(data.DISPLAY_STYLE, 'TEXT') and 'full' or 'none') or nil
+			}
+
 			if next(info) then
 				E.global.datatexts.customCurrencies[id] = info
 			end
 		end
 	end
+
+	if E.private.general.gameMenuScale ~= nil then
+		E.db.general.gameMenuScale = E.private.general.gameMenuScale
+		E.private.general.gameMenuScale = nil
+	end
+end
+
+function E:DBConvertDev()
+
 end
 
 function E:UpdateDB()
@@ -1872,10 +1886,11 @@ function E:DBConversions()
 
 		E:DBConvertBFA()
 		E:DBConvertSL()
+		E:DBConvertDF()
 	end
 
 	-- development converts
-	E:DBConvertDF()
+	E:DBConvertDev()
 
 	-- always convert
 	if not ElvCharacterDB.ConvertKeybindings then

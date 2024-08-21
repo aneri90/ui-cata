@@ -137,9 +137,17 @@ function NP:SetCVars()
 	if NP.db.clampToScreen then
 		E:SetCVar('nameplateOtherTopInset', 0.08)
 		E:SetCVar('nameplateOtherBottomInset', 0.1)
+
+		if not E.Retail then -- dont exist in retail
+			E:SetCVar('clampTargetNameplateToScreen', 1)
+		end
 	elseif GetCVar('nameplateOtherTopInset') == '0.08' and GetCVar('nameplateOtherBottomInset') == '0.1' then
 		E:SetCVar('nameplateOtherTopInset', -1)
 		E:SetCVar('nameplateOtherBottomInset', -1)
+
+		if not E.Retail then
+			E:SetCVar('clampTargetNameplateToScreen', 0)
+		end
 	end
 
 	E:SetCVar('nameplateMotion', NP.db.motionType == 'STACKED' and 1 or 0)
@@ -912,6 +920,21 @@ function NP:SetNamePlateSizes()
 	C_NamePlate_SetNamePlateFriendlySize(NP.db.plateSize.friendlyWidth * E.uiscale, NP.db.plateSize.friendlyHeight * E.uiscale)
 end
 
+function NP:HideClassNameplateBar(bar)
+	if not bar then return end
+
+	bar:Hide()
+	bar:UnregisterAllEvents()
+end
+
+function NP:SetupClassNameplateBars()
+	if not self or self:IsForbidden() then return end
+
+	NP:HideClassNameplateBar(self.classNamePlatePowerBar)
+	NP:HideClassNameplateBar(self.classNamePlateMechanicFrame)
+	NP:HideClassNameplateBar(self.classNamePlateAlternatePowerBar) -- BrewmasterBar / EbonMightBar
+end
+
 function NP:Initialize()
 	NP.db = E.db.nameplates
 
@@ -934,26 +957,10 @@ function NP:Initialize()
 	NP.multiplier = 0.35
 	NP.numPlates = 0
 
-	local BlizzPlateManaBar = _G.NamePlateDriverFrame.classNamePlatePowerBar
-	if BlizzPlateManaBar then
-		BlizzPlateManaBar:Hide()
-		BlizzPlateManaBar:UnregisterAllEvents()
-	end
-
 	if E.Retail then
+		NP.SetupClassNameplateBars(_G.NamePlateDriverFrame)
 		hooksecurefunc(_G.NamePlateDriverFrame, 'UpdateNamePlateOptions', NP.SetNamePlateSizes)
-		hooksecurefunc(_G.NamePlateDriverFrame, 'SetupClassNameplateBars', function(frame)
-			if not frame or frame:IsForbidden() then
-				return
-			end
-			if frame.classNamePlateMechanicFrame then
-				frame.classNamePlateMechanicFrame:Hide()
-			end
-			if frame.classNamePlatePowerBar then
-				frame.classNamePlatePowerBar:Hide()
-				frame.classNamePlatePowerBar:UnregisterAllEvents()
-			end
-		end)
+		hooksecurefunc(_G.NamePlateDriverFrame, 'SetupClassNameplateBars', NP.SetupClassNameplateBars)
 	end
 
 	ElvUF:Spawn('player', 'ElvNP_Player', '')

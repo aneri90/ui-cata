@@ -9,10 +9,23 @@ L.positionExact = "Exact Positioning"
 L.positionDesc = "Type in the box or move the slider if you need exact positioning from the anchor."
 L.width = "Width"
 L.height = "Height"
-L.sizeDesc = "Normally you set the size by dragging the anchor. If you need an exact size you can use this slider or type the value into the box, which has no maximum."
+L.sizeDesc = "Normally you set the size by dragging the anchor. If you need an exact size you can use this slider or type the value into the box."
 L.fontSizeDesc = "Adjust the font size using the slider or type the value into the box which has a much higher maximum of 200."
 L.disableDesc = "You are about to disable the feature '%s' which is |cffff4411not recommended|r.\n\nAre you sure you want to do this?"
-L.transparency = "Transparency"
+
+-- Anchor Points
+L.TOP = "Top"
+L.RIGHT = "Right"
+L.BOTTOM = "Bottom"
+L.LEFT = "Left"
+L.TOPRIGHT = "Top Right"
+L.TOPLEFT = "Top Left"
+L.BOTTOMRIGHT = "Bottom Right"
+L.BOTTOMLEFT = "Bottom Left"
+L.CENTER = "Center"
+L.customAnchorPoint = "Advanced: Custom anchor point"
+L.sourcePoint = "Source Point"
+L.destinationPoint = "Destination Point"
 
 -----------------------------------------------------------------------
 -- AltPower.lua
@@ -67,29 +80,13 @@ L.bars = "Bars"
 L.style = "Style"
 L.bigWigsBarStyleName_Default = "Default"
 L.resetBarsDesc = "Reset all the options related to bars, including the position of the bar anchors."
+L.testBarsBtn = "Create Test Bar"
+L.testBarsBtn_desc = "Creates a bar for you to test your current display settings with."
 
-L.nameplateBars = "Nameplate Bars"
-L.nameplateAutoWidth = "Match width of nameplate"
-L.nameplateAutoWidthDesc = "Sets the width of nameplate bars to the with of their parent nameplate."
-L.nameplateOffsetY = "Y Offset"
-L.nameplateOffsetYDesc = "Offset from the top of the nameplate for upwards bars and the bottom of the nameplate for downwards bars."
-L.nameplateAlphaDesc = "Control how transparent the nameplate bars should be."
-
-L.clickableBars = "Clickable Bars"
-L.clickableBarsDesc = "BigWigs bars are click-through by default. This way you can target objects or launch targetted AoE spells behind them, change the camera angle, and so on, while your cursor is over the bars. |cffff4411If you enable clickable bars, this will no longer work.|r The bars will intercept any mouse clicks you perform on them.\n"
-L.interceptMouseDesc = "Enables bars to receive mouse clicks."
-L.modifier = "Modifier"
-L.modifierDesc = "Hold down the selected modifier key to enable click actions on the timer bars."
-L.modifierKey = "Only with modifier key"
-L.modifierKeyDesc = "Allows bars to be click-through unless the specified modifier key is held down, at which point the mouse actions described below will be available."
-
-L.temporaryCountdownDesc = "Temporarily enable countdown on the ability associated with this bar."
-L.report = "Report"
-L.reportDesc = "Reports the current bars status to the active group chat; either instance chat, raid, party or say, as appropriate."
-L.remove = "Remove"
-L.removeBarDesc = "Temporarily removes this bar."
-L.removeOther = "Remove other"
-L.removeOtherBarDesc = "Temporarily removes all other bars (except this one)."
+L.toggleAnchorsBtnShow = "Show Moving Anchors"
+L.toggleAnchorsBtnHide = "Hide Moving Anchors"
+L.toggleAnchorsBtnHide_desc = "Hide all the moving anchors, locking everything in place."
+L.toggleBarsAnchorsBtnShow_desc = "Show all the moving anchors, allowing you to move the bars."
 
 L.emphasizeAt = "Emphasize at... (seconds)"
 L.growingUpwards = "Grow upwards"
@@ -99,7 +96,6 @@ L.emphasize = "Emphasize"
 L.emphasizeMultiplier = "Size Multiplier"
 L.emphasizeMultiplierDesc = "If you disable the bars moving to the emphasize anchor, this option will decide what size the emphasized bars will be by multiplying the size of the normal bars."
 
-L.enable = "Enable"
 L.move = "Move"
 L.moveDesc = "Moves emphasized bars to the Emphasize anchor. If this option is off, emphasized bars will simply change size and color."
 L.emphasizedBars = "Emphasized bars"
@@ -264,6 +260,10 @@ L.infoBox = "InfoBox"
 L.sinkDescription = "Route output from this addon through the BigWigs message display. This display supports icons, colors and can show up to 4 messages on the screen at a time. Newly inserted messages will grow in size and shrink again quickly to notify the user."
 L.emphasizedSinkDescription = "Route output from this addon through the BigWigs Emphasized message display. This display supports text and colors, and can only show one message at a time."
 L.resetMessagesDesc = "Reset all the options related to messages, including the position of the message anchors."
+L.toggleMessagesAnchorsBtnShow_desc = "Show all the moving anchors, allowing you to move the messages."
+
+L.testMessagesBtn = "Create Test Message"
+L.testMessagesBtn_desc = "Creates a message for you to test your current display settings with."
 
 L.bwEmphasized = "BigWigs Emphasized"
 L.messages = "Messages"
@@ -372,6 +372,7 @@ L.Long = "Long"
 L.Warning = "Warning"
 L.onyou = "A spell, buff, or debuff is on you"
 L.underyou = "You need to move out of a spell under you"
+L.privateaura = "Whenever a 'Private Aura' is on you"
 
 L.sound = "Sound"
 
@@ -383,24 +384,20 @@ L.resetAllCustomSound = "If you've customized sounds for any boss encounter sett
 -- Statistics.lua
 --
 
-L.bossDefeatDurationPrint = "Defeated '%s' after %s."
-L.bossWipeDurationPrint = "Wiped on '%s' after %s."
-L.newBestTime = "New best time!"
 L.bossStatistics = "Boss Statistics"
-L.bossStatsDescription = "Recording of various boss-related statistics such as the amount of times a boss had been killed, the amount of wipes, total time that combat lasted, or the fastest boss kill. These statistics can be viewed on each boss's configuration screen, but will be hidden for bosses that have no recorded statistics."
-L.enableStats = "Enable Statistics"
-L.chatMessages = "Chat Messages"
-L.printBestTimeOption = "Best Time Notification"
-L.printDefeatOption = "Defeat Time"
-L.printWipeOption = "Wipe Time"
-L.countDefeats = "Count Defeats"
-L.countWipes = "Count Wipes"
-L.recordBestTime = "Remember Best Time"
+L.bossStatsDescription = "Recording of various boss-related statistics such as the amount of times you were victorious, the amount of times you were defeated, date of first victory, and the fastest victory. These statistics can be viewed on each boss's configuration screen, but will be hidden for bosses that have no recorded statistics."
 L.createTimeBar = "Show 'Best Time' bar"
 L.bestTimeBar = "Best Time"
-L.printHealthOption = "Boss Health"
 L.healthPrint = "Health: %s."
 L.healthFormat = "%s (%.1f%%)"
+L.chatMessages = "Chat Messages"
+L.newFastestVictoryOption = "New fastest victory"
+L.victoryOption = "You were victorious"
+L.defeatOption = "You were defeated"
+L.bossHealthOption = "Boss health"
+L.bossVictoryPrint = "You were victorious against '%s' after %s." -- You were victorious against 'BOSS_NAME' after COMBAT_DURATION.
+L.bossDefeatPrint = "You were defeated by '%s' after %s." -- You were defeated by 'BOSS_NAME' after COMBAT_DURATION.
+L.newFastestVictoryPrint = "New fastest victory: (-%s)" -- New fastest victory: (-COMBAT_DURATION)
 
 -----------------------------------------------------------------------
 -- Victory.lua

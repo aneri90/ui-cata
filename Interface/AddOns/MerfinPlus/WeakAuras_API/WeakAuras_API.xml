@@ -1,0 +1,6 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file='PullTimer.lua'/>
+	<Script file='Settings.lua'/>
+	<Script file='ButtonTemplates.lua'/>
+	<Script file='RaidCore.lua'/>
+</Ui>

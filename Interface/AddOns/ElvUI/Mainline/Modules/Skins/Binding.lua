@@ -71,18 +71,19 @@ function S:Blizzard_ClickBindingUI()
 	-- Tutorial Frame ugly af WIP
 	local tutorial = frame.TutorialFrame
 	tutorial.NineSlice:StripTextures()
-	tutorial:SetTemplate('Transparent')
+	S:HandlePortraitFrame(tutorial, nil, true)
 
 	local titleBG = tutorial.TitleBg or tutorial.Bg
 	if titleBG then
 		titleBG:Hide()
 	end
 
-	HandlePortraitIcon(frame.SpellbookPortrait, 136830)
+	HandlePortraitIcon(frame.PlayerSpellsPortrait, 136830)
 	HandlePortraitIcon(frame.MacrosPortrait, 136377)
 
 	if frame.EnableMouseoverCastCheckbox then
 		S:HandleCheckBox(frame.EnableMouseoverCastCheckbox)
+		S:HandleDropDownBox(frame.MouseoverCastKeyDropdown)
 	end
 end
 

@@ -10,7 +10,7 @@ LBIS.GemsBySpecAndId = {};
 LBIS.EnchantsBySpecAndId = {};
 
 LBIS.AllItemsCached = false;
-LBIS.CurrentPhase = 1;
+LBIS.CurrentPhase = 2;
 LBIS.Debugging = false;
 
 LBIS.EventFrame = CreateFrame("FRAME", addonName.."Events")
@@ -105,10 +105,6 @@ function LBIS:AddItem(bisEntry, id, slot, bis)
 
 	if not LBIS.ItemsByIdAndSpec[itemId] then
 		LBIS.ItemsByIdAndSpec[itemId] = {}
-	end
-
-	if zone == nil then
-		zone = "";
 	end
 
 	if bisEntry.Phase == "0" then

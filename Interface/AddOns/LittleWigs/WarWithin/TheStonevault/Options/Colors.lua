@@ -9,13 +9,12 @@ BigWigs:AddColors("E.D.N.A.", {
 
 BigWigs:AddColors("Skarmorak", {
 	[422233] = "purple",
-	[423200] = "cyan",
-	[423228] = "green",
+	[423200] = {"cyan","green"},
 	[423538] = "orange",
 	[423572] = "green",
 })
 
-BigWigs:AddColors("Forge Speakers", {
+BigWigs:AddColors("Master Machinists", {
 	[428202] = "yellow",
 	[428508] = "red",
 	[428711] = "purple",
@@ -25,20 +24,21 @@ BigWigs:AddColors("Forge Speakers", {
 	[449167] = "orange",
 })
 
-BigWigs:AddColors("High Speaker Eirich", {
-	[427461] = {"green","yellow"},
+BigWigs:AddColors("Void Speaker Eirich", {
+	[427461] = {"blue","green","yellow"},
 	[427852] = "red",
 	[427869] = "orange",
 })
 
 BigWigs:AddColors("The Stonevault Trash", {
 	[425027] = "purple",
-	[426308] = "yellow",
+	[426308] = {"blue","yellow"},
 	[426345] = "purple",
 	[426771] = "yellow",
 	[428703] = "orange",
 	[428879] = "purple",
 	[429109] = "red",
+	[429427] = "cyan",
 	[429545] = "yellow",
 	[445207] = "red",
 	[447141] = "orange",

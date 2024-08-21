@@ -71,8 +71,6 @@ end
 
 L = BigWigs:NewBossLocale("Ascendant Council", "itIT")
 if L then
-	L.static_overload_say = "Tuonofolgore"
-	L.gravity_core_say = "Gravità"
 	L.health_report = "%s al %d%%, cambio di fase tra poco!"
 	L.switch = "Cambio"
 	L.switch_desc = "Avvisi per il cambio di boss."

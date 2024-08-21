@@ -10,10 +10,23 @@ L.positionExact = "Posicionamento Exato"
 L.positionDesc = "Digite na caixa ou mova o cursor se precisa posicionamento exato para a âncora."
 L.width = "Largura"
 L.height = "Altura"
-L.sizeDesc = "Normalmente você define o tamanho arrastando a âncora. Se você precisa de um tamanho exato, você pode usar este controle deslizante ou digitar o valor na caixa, que não tem um tamanho máximo."
+L.sizeDesc = "Normalmente você define o tamanho arrastando a âncora. Se você precisa de um tamanho exato, você pode usar este controle deslizante ou digitar o valor na caixa."
 L.fontSizeDesc = "Ajusta o tamanho da fonte usando a barra deslizante ou digitando o valor na caixa que tem um limite muito maior de 200."
 L.disableDesc = "Você está prestes a desabilitar a função '%s' e isso |cffff4411não é recomendado|r.\n\nVocê tem certeza disso?"
-L.transparency = "Transparência"
+
+-- Anchor Points
+--L.TOP = "Top"
+--L.RIGHT = "Right"
+--L.BOTTOM = "Bottom"
+--L.LEFT = "Left"
+--L.TOPRIGHT = "Top Right"
+--L.TOPLEFT = "Top Left"
+--L.BOTTOMRIGHT = "Bottom Right"
+--L.BOTTOMLEFT = "Bottom Left"
+--L.CENTER = "Center"
+--L.customAnchorPoint = "Advanced: Custom anchor point"
+--L.sourcePoint = "Source Point"
+--L.destinationPoint = "Destination Point"
 
 -----------------------------------------------------------------------
 -- AltPower.lua
@@ -68,29 +81,13 @@ L.bars = "Barras"
 L.style = "Estilo"
 L.bigWigsBarStyleName_Default = "Padrão"
 L.resetBarsDesc = "Reinicia todas as opções relacionadas a barras, incluindo a posição de âncora das barras."
+L.testBarsBtn = "Criar Barra de Teste"
+L.testBarsBtn_desc = "Criar uma barra para você testar suas configurações de exibição atuais"
 
-L.nameplateBars = "Barras de Identificação"
-L.nameplateAutoWidth = "Combinar a largura da placa de identificação"
-L.nameplateAutoWidthDesc = "Configura a largura da barra de identificação com a largura da barra de identificação pai."
-L.nameplateOffsetY = "Deslocamento Y"
-L.nameplateOffsetYDesc = "Deslocamento de cima da barra de identificação para cima e a de baixo da barra de identificação para baixo das barras."
-L.nameplateAlphaDesc = "Controla o quão transparente serão as barras de identificação."
-
-L.clickableBars = "Barras clicáveis"
-L.clickableBarsDesc = "As barras do BigWigs são clicáveis por padrão. Desta forma você pode mirar em objetos e lançar feitiços AoE através delas, trocar o ângulo da câmera, e assim sucessivamente, sem precisar do cursor estar em cima das barras. |cffff4411Se habilitar as barras clicáveis, isto deixará de funcionar.|r As barras interceptarão qualquer clique do mouse feito nelas."
-L.interceptMouseDesc = "Ativa as barras para receber cliques do mouse."
-L.modifier = "Modificador"
-L.modifierDesc = "Segure a tecla de modificação selecionada para ativar o cliques nas barras de contagem."
-L.modifierKey = "Somente com uma tecla de modificação"
-L.modifierKeyDesc = "Permite que as barras sejam clicáveis se estiver com a tecla de modificação pressionada, deste jeito as ações do mouse descritas abaixo estarão disponíveis."
-
-L.temporaryCountdownDesc = "Habilita temporariamente a contagem na habilidade associada a essa barra."
-L.report = "Reportar"
-L.reportDesc = "Reporta o status das barras para o chat de grupo ativo; seja em um bate-papo de instância, raide, grupo ou falar, o que for mais adequado."
-L.remove = "Remover"
-L.removeBarDesc = "Remove temporariamente as barras."
-L.removeOther = "Remover outro"
-L.removeOtherBarDesc = "Temporariamente remove todas as outras barras (exceto esta)."
+L.toggleAnchorsBtnShow = "Mostrar Âncoras de Movimentação"
+L.toggleAnchorsBtnHide = "Esconder Âncoras de Movimentação"
+L.toggleAnchorsBtnHide_desc = "Esconde todas as âncoras de movimentação, travando tudo em seu lugar."
+L.toggleBarsAnchorsBtnShow_desc = "Mostra todas as âncoras de movimentação, permitindo que você mova as barras."
 
 L.emphasizeAt = "Enfatizar em... (segundos)"
 L.growingUpwards = "Crescimento para cima"
@@ -100,7 +97,6 @@ L.emphasize = "Enfatizar"
 L.emphasizeMultiplier = "Multiplicador de Tamanho"
 L.emphasizeMultiplierDesc = "Se você desabilitar as barras movendo-as para a âncora em destaque, esta opção irá decidir qual tamanho as barras em destaque terão, ao se multiplicar o tamanho das barras normais."
 
-L.enable = "Habilitar"
 L.move = "Mover"
 L.moveDesc = "Move barras enfatizadas para a âncora de Enfatizar. Se esta opção estiver desativada, barras enfatizadas terão apenas sua cor e tamanho alterados."
 L.emphasizedBars = "Barras enfatizadas"
@@ -265,6 +261,10 @@ L.infoBox = "Caixa de Informações"
 L.sinkDescription = "Redireciona a saída deste addOn pela exibição de mensagens do BigWigs. Ela dá suporte a ícones, cores e pode mostrar até 4 mensagens na tela de uma vez. Mensagens novas crescerão de tamanho e encolherão de novo rapidamente para notificar o usuário."
 L.emphasizedSinkDescription = "Redireciona a saída deste addOn pela exibição de mensagens enfatizadas do BigWigs. Ele dá suporte a texto e cores, e só exibe uma mensagem por vez."
 L.resetMessagesDesc = "Reinicia todas as opções relacionadas a mensagens, incluindo a posição de âncora das mensagens."
+L.toggleMessagesAnchorsBtnShow_desc = "Mostra todas as âncoras de movimentação, permitindo que você mova as mensagens."
+
+--L.testMessagesBtn = "Create Test Message"
+--L.testMessagesBtn_desc = "Creates a message for you to test your current display settings with."
 
 L.bwEmphasized = "BigWigs enfatizado"
 L.messages = "Mensagens"
@@ -373,6 +373,7 @@ L.Long = "Longo"
 L.Warning = "Aviso"
 L.onyou = "Um feitiço, buff, ou debuff em você"
 L.underyou = "Você precisa se mover do feitiço embaixo de você"
+--L.privateaura = "Whenever a 'Private Aura' is on you"
 
 L.sound = "Som"
 
@@ -384,24 +385,20 @@ L.resetAllCustomSound = "Se você personalizou sons para qualquer configuração
 -- Statistics.lua
 --
 
-L.bossDefeatDurationPrint = "Derrotou '%s' após '%s'"
-L.bossWipeDurationPrint = "Foi derrotado por '%s' após %s"
-L.newBestTime = "Novo recorde!"
 L.bossStatistics = "Estatísticas do chefe."
-L.bossStatsDescription = "Grava várias estatísticas dos encontros, como o número de vezes que um chefe foi morto, quantas derrotas, tempo total de combate, ou a morte mais rápida. Estas estatísticas podem ser visualizadas na tela de cada chefe, mas estará oculta para chefes que não têm estatísticas gravadas."
-L.enableStats = "Habilitar estatísticas"
-L.chatMessages = "Conversas"
-L.printBestTimeOption = "Notificação de melhor tempo"
-L.printDefeatOption = "Tempo de luta"
-L.printWipeOption = "Tempo até ser derrotado"
-L.countDefeats = "Contador de vitórias "
-L.countWipes = "Contador de derrotas"
-L.recordBestTime = "Gravar recorde"
+L.bossStatsDescription = "Recording of various boss-related statistics such as the amount of times you were victorious, the amount of times you were defeated, date of first victory, and the fastest victory. Estas estatísticas podem ser visualizadas na tela de cada chefe, mas estará oculta para chefes que não têm estatísticas gravadas."
 L.createTimeBar = "Mostrar barra do melhor tempo"
 L.bestTimeBar = "Melhor tempo"
-L.printHealthOption = "Vida do chefe"
 L.healthPrint = "Vida: %s."
 L.healthFormat = "%s (%.1f%%)"
+L.chatMessages = "Conversas"
+--L.newFastestVictoryOption = "New fastest victory"
+--L.victoryOption = "You were victorious"
+--L.defeatOption = "You were defeated"
+L.bossHealthOption = "Vida do chefe"
+--L.bossVictoryPrint = "You were victorious against '%s' after %s." -- You were victorious against 'BOSS_NAME' after COMBAT_DURATION.
+--L.bossDefeatPrint = "You were defeated by '%s' after %s." -- You were defeated by 'BOSS_NAME' after COMBAT_DURATION.
+--L.newFastestVictoryPrint = "New fastest victory: (-%s)" -- New fastest victory: (-COMBAT_DURATION)
 
 -----------------------------------------------------------------------
 -- Victory.lua

@@ -54,8 +54,6 @@ end
 
 L = BigWigs:NewBossLocale("Ascendant Council", "ruRU")
 if L then
-	L.static_overload_say = "Перегрузка"
-	L.gravity_core_say = "Гравитация"
 	L.health_report = "%s имеет %d%% здоровья, скоро смена!"
 	L.switch = "Смена"
 	L.switch_desc = "Сообщать о смене боссов"

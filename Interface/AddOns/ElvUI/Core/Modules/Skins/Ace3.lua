@@ -122,7 +122,7 @@ function S:Ace3_ButtonSetPoint(point, anchor, point2, xOffset, yOffset, skip)
 end
 
 function S:Ace3_SkinButton(button)
-	if not button.isSkinned then
+	if not button.IsSkinned then
 		S:HandleButton(button, true)
 
 		hooksecurefunc(button, 'SetPoint', S.Ace3_ButtonSetPoint)
@@ -456,7 +456,7 @@ end
 
 function S:Ace3_StylePopup()
 	if not self:IsForbidden() and E.private.skins.ace3Enable then
-		self:SetTemplate('Transparent', nil, true)
+		self:SetTemplate(nil, nil, true)
 		self:GetChildren():StripTextures()
 
 		S:HandleButton(self.accept, true)
@@ -628,7 +628,7 @@ do -- Early Skin Loading
 
 	for n in next, LibStub.libs do
 		if n == 'AceGUI-3.0' then
-			for _, x in ipairs({UIParent:GetChildren()}) do
+			for _, x in next, { UIParent:GetChildren() } do
 				if x and x.obj then earlyWidget(x.obj) end
 			end
 		end

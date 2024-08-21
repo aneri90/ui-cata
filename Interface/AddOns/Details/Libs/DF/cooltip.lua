@@ -19,9 +19,16 @@ local GetSpellInfo = GetSpellInfo or function(spellID) if not spellID then retur
 local SPELLBOOK_BANK_PLAYER = Enum.SpellBookSpellBank and Enum.SpellBookSpellBank.Player or "player"
 local IsPassiveSpell = IsPassiveSpell or C_Spell.IsSpellPassive
 
+local GetSpellCharges = GetSpellCharges or function(spellId)
+    local chargesInfo = C_Spell.GetSpellCharges(spellId)
+    if (chargesInfo) then
+        return chargesInfo.currentCharges, chargesInfo.maxCharges, chargesInfo.cooldownStartTime, chargesInfo.cooldownDuration, chargesInfo.chargeModRate
+    end
+end
+
 --api locals
 local PixelUtil = PixelUtil or DFPixelUtil
-local version = 24
+local version = 28
 
 local CONST_MENU_TYPE_MAINMENU = "main"
 local CONST_MENU_TYPE_SUBMENU = "sub"
@@ -38,7 +45,7 @@ function DF:CreateCoolTip()
 
 	local defaultBackdrop = {bgFile = [[Interface\Tooltips\UI-Tooltip-Background]], edgeFile = [[Interface\Buttons\WHITE8X8]], edgeSize = 1,
 	tile = true, tileSize = 16, insets = {left = 0, right = 0, top = 0, bottom = 0}}
-	local defaultBackdropColor = {0.1215, 0.1176, 0.1294, 0.8000}
+	local defaultBackdropColor = {0.1215, 0.1176, 0.1294, 0.9500}
 	local defaultBackdropBorderColor = {0.05, 0.05, 0.05, 1}
 	local defaultTexCoord = {0, 1, 0, 1}
 
@@ -137,7 +144,8 @@ function DF:CreateCoolTip()
 		["TextFont"] = true,
 		["TextColor"] = true,
 		["TextColorRight"] = true,
-		["TextShadow"] = true,
+		["TextShadow"] = true, --text shadow is doing the text outline
+		["TextActuallyShadow"] = true, --text shadow which is the actually text shadow
 		["LeftTextWidth"] = true,
 		["RightTextWidth"] = true,
 		["LeftTextHeight"] = true,
@@ -150,8 +158,11 @@ function DF:CreateCoolTip()
 		["SubMenuIsTooltip"] = true,
 		["LeftBorderSize"] = true, --offset between the left border and the left icon, default: 10 + offset
 		["RightBorderSize"] = true, --offset between the right border and the right icon, default: -10 + offset
+		["TopBorderSize"] = true, --offset between the top border and the top of the first line, default: -6 + offset
 		["HeighMod"] = true,
 		["HeighModSub"] = true,
+		["TooltipFrameHeightOffset"] = true,
+		["TooltipFrameHeightOffsetSub"] = true,
 		["IconBlendMode"] = true,
 		["IconBlendModeHover"] = true,
 		["SubFollowButton"] = true,
@@ -181,6 +192,10 @@ function DF:CreateCoolTip()
 
 		["FrameHeightSizeOffset"] = "HeighMod",
 		["FrameHeightSizeOffsetSub"] = "HeighModSub",
+
+		["TextOutline"] = "TextShadow",
+		["TextSilhouette"] = "TextActuallyShadow",
+		["TextContour"] = "TextActuallyShadow",
 
 		--space between the tooltip's left side and the start of the line
 		["LeftPadding"] = "LeftBorderSize",
@@ -337,6 +352,13 @@ function DF:CreateCoolTip()
 			self.titleText:SetJustifyH("LEFT")
 			DF:SetFontSize(self.titleText, 10)
 			self.titleText:SetPoint("CENTER", self.titleIcon, "CENTER", 0, 6)
+		end
+
+		if (not self.modelFrame) then
+			self.modelFrame = CreateFrame("PlayerModel", "$parent_ModelFrame", self)
+			self.modelFrame:SetPoint("topleft", self, "topleft", 5, -5)
+			self.modelFrame:SetPoint("bottomright", self, "bottomright", -5, 5)
+			self.modelFrame:Hide()
 		end
 	end
 
@@ -1080,6 +1102,17 @@ function DF:CreateCoolTip()
 				menuButton.leftText:SetFont(gameCooltip.defaultFont, leftTextSettings[6] or gameCooltip.OptionsTable.TextSize or 10, leftTextSettings[8] or gameCooltip.OptionsTable.TextShadow)
 			end
 
+			--text shadow color
+			if (leftTextSettings[11]) then
+				local shadow_r, shadow_g, shadow_b, shadow_a = DF:ParseColors(leftTextSettings[11])
+				menuButton.leftText:SetShadowColor(shadow_r, shadow_g, shadow_b, shadow_a)
+			elseif (gameCooltip.OptionsTable.TextActuallyShadow) then
+				local shadow_r, shadow_g, shadow_b, shadow_a = DF:ParseColors(gameCooltip.OptionsTable.TextActuallyShadow)
+				menuButton.leftText:SetShadowColor(shadow_r, shadow_g, shadow_b, shadow_a)
+			else
+				menuButton.leftText:SetShadowColor(0, 0, 0, 1)
+			end
+
 			local heightMod = gameCooltip.OptionsTable.TextHeightMod or 0
 			menuButton.leftText:SetPoint("center", menuButton.leftIcon, "center", 0, 0 + heightMod)
 			menuButton.leftText:SetPoint("left", menuButton.leftIcon, "right", 3, 0 + heightMod)
@@ -1164,6 +1197,17 @@ function DF:CreateCoolTip()
 				end
 			else
 				menuButton.rightText:SetFont(gameCooltip.defaultFont, rightTextSettings[6] or gameCooltip.OptionsTable.TextSize or 10, rightTextSettings[8] or gameCooltip.OptionsTable.TextShadow)
+			end
+
+			--text shadow color
+			if (rightTextSettings[11]) then
+				local shadow_r, shadow_g, shadow_b, shadow_a = DF:ParseColors(rightTextSettings[11])
+				menuButton.rightText:SetShadowColor(shadow_r, shadow_g, shadow_b, shadow_a)
+			elseif (gameCooltip.OptionsTable.TextActuallyShadow) then
+				local shadow_r, shadow_g, shadow_b, shadow_a = DF:ParseColors(gameCooltip.OptionsTable.TextActuallyShadow)
+				menuButton.rightText:SetShadowColor(shadow_r, shadow_g, shadow_b, shadow_a)
+			else
+				menuButton.rightText:SetShadowColor(0, 0, 0, 1)
 			end
 		else
 			menuButton.rightText:SetText("")
@@ -1826,7 +1870,8 @@ function DF:CreateCoolTip()
 		end
 
 		--normalize height of all rows
-		local heightValue = -6 + spacing + (gameCooltip.OptionsTable.ButtonsYMod or 0)
+		local heightValue = (gameCooltip.OptionsTable.TopBorderSize or -6) + spacing + (gameCooltip.OptionsTable.ButtonsYMod or 0)
+
 		for i = 1, #LeftTextTableSub do
 			local menuButton = frame2.Lines[i]
 
@@ -1855,7 +1900,7 @@ function DF:CreateCoolTip()
 
 			else
 				menuButton:SetHeight(frame2.hHeight + (gameCooltip.OptionsTable.ButtonHeightMod or 0))
-				menuButton:SetPoint("top", frame2, "top", 0, (((i-1) * frame2.hHeight) * -1) - 6 + (gameCooltip.OptionsTable.ButtonsYMod or 0) + spacing)
+				menuButton:SetPoint("top", frame2, "top", 0, (((i-1) * frame2.hHeight) * -1) + (gameCooltip.OptionsTable.TopBorderSize or -6) + (gameCooltip.OptionsTable.ButtonsYMod or 0) + spacing)
 			end
 
 			if (gameCooltip.OptionsTable.YSpacingMod and not gameCooltip.OptionsTable.IgnoreButtonAutoHeight) then
@@ -1890,17 +1935,22 @@ function DF:CreateCoolTip()
 			end
 		end
 
+		local heightMod = gameCooltip.OptionsTable.TooltipFrameHeightOffsetSub or 0
+
 		if (gameCooltip.OptionsTable.FixedHeight) then
 			PixelUtil.SetHeight(frame2, gameCooltip.OptionsTable.FixedHeight)
 		else
 			if (gameCooltip.OptionsTable.AlignAsBlizzTooltip) then
-				PixelUtil.SetHeight(frame2, ((heightValue - 10) * -1) + (gameCooltip.OptionsTable.AlignAsBlizzTooltipFrameHeightOffset or 0))
+				local newHeight = ((heightValue - 10) * -1) + (gameCooltip.OptionsTable.AlignAsBlizzTooltipFrameHeightOffset or 0)
+				PixelUtil.SetHeight(frame2, newHeight)
 
 			elseif (gameCooltip.OptionsTable.IgnoreButtonAutoHeight) then
-				PixelUtil.SetHeight(frame2, (heightValue + spacing) * -1)
+				local newHeight = (heightValue + spacing) * -1
+				PixelUtil.SetHeight(frame2, newHeight + heightMod)
 
 			else
-				PixelUtil.SetHeight(frame2, max((frame2.hHeight * gameCooltip.Indexes) + 8 + ((gameCooltip.OptionsTable.ButtonsYMod or 0) * -1), 22))
+				local newHeight = (frame2.hHeight * gameCooltip.Indexes) + 8 + ((gameCooltip.OptionsTable.ButtonsYMod or 0) * -1)
+				PixelUtil.SetHeight(frame2, max(newHeight + heightMod, 22))
 			end
 		end
 
@@ -2013,7 +2063,7 @@ function DF:CreateCoolTip()
 				--mana    range
 				--instant    cooldown
 
-				gameCooltip:ShowRoundedCorner()
+				--gameCooltip:ShowRoundedCorner()
 			end
 		end
 	end
@@ -2068,7 +2118,8 @@ function DF:CreateCoolTip()
 		end
 
 		--normalize height of all rows
-		local heightValue = -6 + spacing + (gameCooltip.OptionsTable.ButtonsYMod or 0)
+		local heightValue = (gameCooltip.OptionsTable.TopBorderSize or -6) + spacing + (gameCooltip.OptionsTable.ButtonsYMod or 0)
+
 		for i = 1, gameCooltip.Indexes do
 			local menuButton = frame1.Lines[i]
 
@@ -2094,10 +2145,9 @@ function DF:CreateCoolTip()
 				menuButton:SetHeight(height)
 				menuButton:SetPoint("top", frame1, "top", 0, heightValue)
 				heightValue = heightValue + (height * -1) + spacing + (gameCooltip.OptionsTable.ButtonsYMod or 0)
-
 			else
 				menuButton:SetHeight(frame1.hHeight + (gameCooltip.OptionsTable.ButtonHeightMod or 0))
-				menuButton:SetPoint("top", frame1, "top", 0, (((i-1) * frame1.hHeight) * -1) - 6 + (gameCooltip.OptionsTable.ButtonsYMod or 0) + spacing)
+				menuButton:SetPoint("top", frame1, "top", 0, (((i-1) * frame1.hHeight) * -1) + (gameCooltip.OptionsTable.TopBorderSize or -6) + (gameCooltip.OptionsTable.ButtonsYMod or 0) + spacing)
 			end
 
 			if (gameCooltip.OptionsTable.YSpacingMod and not gameCooltip.OptionsTable.IgnoreButtonAutoHeight) then
@@ -2132,6 +2182,8 @@ function DF:CreateCoolTip()
 			end
 		end
 
+		local heightMod = gameCooltip.OptionsTable.TooltipFrameHeightOffset or 0
+
 		if (gameCooltip.OptionsTable.FixedHeight) then
 			PixelUtil.SetHeight(frame1, gameCooltip.OptionsTable.FixedHeight)
 		else
@@ -2139,10 +2191,11 @@ function DF:CreateCoolTip()
 				PixelUtil.SetHeight(frame1, ((heightValue - 10) * -1) + (gameCooltip.OptionsTable.AlignAsBlizzTooltipFrameHeightOffset or 0))
 
 			elseif (gameCooltip.OptionsTable.IgnoreButtonAutoHeight) then
-				PixelUtil.SetHeight(frame1, (heightValue + spacing) * -1)
-
+				local newHeight = (heightValue + spacing) * -1
+				PixelUtil.SetHeight(frame1, newHeight + heightMod)
 			else
-				PixelUtil.SetHeight(frame1, max((frame1.hHeight * gameCooltip.Indexes) + 8 + ((gameCooltip.OptionsTable.ButtonsYMod or 0) * -1), 22))
+				local newHeight = (frame1.hHeight * gameCooltip.Indexes) + 8 + ((gameCooltip.OptionsTable.ButtonsYMod or 0) * -1)
+				PixelUtil.SetHeight(frame1, max(newHeight + heightMod, 22))
 			end
 		end
 
@@ -2759,6 +2812,9 @@ function DF:CreateCoolTip()
 		gameCooltip.Banner[2] = false
 		gameCooltip.Banner[3] = false
 
+		frame1.modelFrame:Hide()
+		frame2.modelFrame:Hide()
+
 		frame1.upperImage:Hide()
 		frame1.upperImage2:Hide()
 		frame1.upperImageText:Hide()
@@ -3043,6 +3099,19 @@ function DF:CreateCoolTip()
 
 	frame1.frameWallpaper:Hide()
 	frame2.frameWallpaper:Hide()
+
+	function gameCooltip:SetNpcModel(menuType, npcId)
+		menuType = gameCooltip:ParseMenuType(menuType)
+
+		if (menuType == CONST_MENU_TYPE_MAINMENU) then
+			frame1.modelFrame:Show()
+			frame1.modelFrame:SetCreature(npcId)
+
+		elseif (menuType == CONST_MENU_TYPE_SUBMENU) then
+			frame2.modelFrame:Show()
+			frame2.modelFrame:SetCreature(npcId)
+		end
+	end
 
 	---set an image as wallpaper for the cooltip frame
 	---@param menuType any
@@ -3335,13 +3404,13 @@ function DF:CreateCoolTip()
 	--adds a line.
 	--only works with cooltip type1 and 2 (tooltip and tooltip with bars)
 	--parameters: left text, right text[, L color R, L color G, L color B, L color A[, R color R, R color G, R color B, R color A[, wrap]]] 
-	function gameCooltip:AddDoubleLine (leftText, rightText, menuType, ColorR1, ColorG1, ColorB1, ColorA1, ColorR2, ColorG2, ColorB2, ColorA2, fontSize, fontFace, fontFlag, textWidth, textHeight) --ãddline ~addline
-		return gameCooltip:AddLine(leftText, rightText, menuType, ColorR1, ColorG1, ColorB1, ColorA1, ColorR2, ColorG2, ColorB2, ColorA2, fontSize, fontFace, fontFlag, textWidth, textHeight)
+	function gameCooltip:AddDoubleLine (leftText, rightText, menuType, ColorR1, ColorG1, ColorB1, ColorA1, ColorR2, ColorG2, ColorB2, ColorA2, fontSize, fontFace, fontFlag, textWidth, textHeight, textContour) --ãddline ~addline
+		return gameCooltip:AddLine(leftText, rightText, menuType, ColorR1, ColorG1, ColorB1, ColorA1, ColorR2, ColorG2, ColorB2, ColorA2, fontSize, fontFace, fontFlag, textWidth, textHeight, textContour)
 	end
 
 	--adds a line for tooltips
 	--AddLine creates a new line on the tooltip
-	function gameCooltip:AddLine(leftText, rightText, menuType, ColorR1, ColorG1, ColorB1, ColorA1, ColorR2, ColorG2, ColorB2, ColorA2, fontSize, fontFace, fontFlag, textWidth, textHeight)
+	function gameCooltip:AddLine(leftText, rightText, menuType, ColorR1, ColorG1, ColorB1, ColorA1, ColorR2, ColorG2, ColorB2, ColorA2, fontSize, fontFace, fontFlag, textWidth, textHeight, textContour)
 		--check data integrity
 		local leftTextType = type(leftText)
 		if (leftTextType ~= "string") then
@@ -3362,7 +3431,7 @@ function DF:CreateCoolTip()
 		end
 
 		if (type(ColorR1) ~= "number") then
-			ColorR2, ColorG2, ColorB2, ColorA2, fontSize, fontFace, fontFlag, textWidth, textHeight = ColorG1, ColorB1, ColorA1, ColorR2, ColorG2, ColorB2, ColorA2, fontSize, fontFace
+			ColorR2, ColorG2, ColorB2, ColorA2, fontSize, fontFace, fontFlag, textWidth, textHeight, textContour = ColorG1, ColorB1, ColorA1, ColorR2, ColorG2, ColorB2, ColorA2, fontSize, fontFace, fontFlag
 			if (type(ColorR1) == "boolean" or not ColorR1) then
 				ColorR1, ColorG1, ColorB1, ColorA1 = 0, 0, 0, 0
 			else
@@ -3371,7 +3440,7 @@ function DF:CreateCoolTip()
 		end
 
 		if (type(ColorR2) ~= "number") then
-			fontSize, fontFace, fontFlag, textWidth, textHeight = ColorG2, ColorB2, ColorA2, fontSize, fontFace
+			fontSize, fontFace, fontFlag, textWidth, textHeight, textContour = ColorG2, ColorB2, ColorA2, fontSize, fontFace, fontFlag
 			if (type(ColorR2) == "boolean" or not ColorR2) then
 				ColorR2, ColorG2, ColorB2, ColorA2 = 0, 0, 0, 0
 			else
@@ -3472,6 +3541,7 @@ function DF:CreateCoolTip()
 		lineTable_Left[8] = fontFlag
 		lineTable_Left[9] = textWidth
 		lineTable_Left[10] = textHeight
+		lineTable_Left[11] = textContour
 
 		lineTable_Right[1] = rightText
 		lineTable_Right[2] = ColorR2
@@ -3483,6 +3553,7 @@ function DF:CreateCoolTip()
 		lineTable_Right[8] = fontFlag
 		lineTable_Right[9] = textWidth
 		lineTable_Right[10] = textHeight
+		lineTable_Right[11] = textContour
 	end
 
 	function gameCooltip:AddSpecial(widgetType, index, subIndex, ...)

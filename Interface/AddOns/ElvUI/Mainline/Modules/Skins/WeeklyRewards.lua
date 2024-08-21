@@ -2,7 +2,7 @@ local E, L, V, P, G = unpack(ElvUI)
 local S = E:GetModule('Skins')
 
 local _G = _G
-local pairs, unpack = pairs, unpack
+local pairs = pairs
 local hooksecurefunc = hooksecurefunc
 
 -- Credits Siweia | AuroraClassic
@@ -23,29 +23,43 @@ local function UpdateSelection(frame)
 	if not frame.backdrop then return end
 
 	if frame.SelectedTexture:IsShown() then
-		frame.backdrop:SetBackdropBorderColor(1, .8, 0)
+		frame.backdrop:SetBackdropBorderColor(1, 0.8, 0)
 	else
 		frame.backdrop:SetBackdropBorderColor(0, 0, 0)
 	end
 end
 
 local function SkinActivityFrame(frame, isObject)
-	if frame.Border then
-		if isObject then
-			frame.Border:SetAlpha(0)
-			frame.SelectedTexture:SetAlpha(0)
-			frame.LockIcon:SetVertexColor(unpack(E.media.rgbvaluecolor))
-			hooksecurefunc(frame, 'SetSelectionState', UpdateSelection)
-			hooksecurefunc(frame.ItemFrame, 'SetDisplayedItem', SkinRewardIcon)
-		else
-			frame.Border:SetTexCoord(.926, 1, 0, 1)
-			frame.Border:Size(25, 137)
-			frame.Border:Point('LEFT', frame, 'RIGHT', 3, 0)
-		end
-	end
+	if not frame then return end
 
-	if frame.Background then
-		frame.Background:CreateBackdrop()
+	if isObject then
+		if frame.Border then
+			frame.Border:SetAlpha(0)
+		end
+
+		if frame.ItemFrame then
+			hooksecurefunc(frame.ItemFrame, 'SetDisplayedItem', SkinRewardIcon)
+		elseif frame.UnselectedFrame and E.private.skins.parchmentRemoverEnable then -- the button
+			frame:CreateBackdrop('Transparent')
+			frame.SelectedTexture:SetAlpha(0)
+			frame.UnselectedFrame:SetAlpha(0)
+
+			hooksecurefunc(frame, 'SetSelectionState', UpdateSelection)
+		end
+	else
+		if frame.Border then
+			frame.Border:SetTexCoord(.926, 1, 0, 1)
+			frame.Border:Point('LEFT', frame, 'RIGHT', 3, 0)
+			frame.Border:Size(25, 137)
+		end
+
+		if frame.Background and frame.Name then
+			frame.Background:Size(390, 140) -- manually adjust it, so it don't looks ugly af
+			frame.Background:SetDrawLayer('ARTWORK', 2)
+
+			frame.Background:CreateBackdrop('Transparent')
+			frame.Background.backdrop.Center:SetDrawLayer('ARTWORK', 1)
+		end
 	end
 end
 
@@ -54,27 +68,54 @@ local function ReskinConfirmIcon(frame)
 	S:HandleIconBorder(frame.IconBorder, frame.Icon.backdrop)
 end
 
+local function SelectReward(reward)
+	local selection = reward.confirmSelectionFrame
+	if selection then
+		_G.WeeklyRewardsFrameNameFrame:Hide()
+		ReskinConfirmIcon(selection.ItemFrame)
+
+		local alsoItems = selection.AlsoItemsFrame
+		if alsoItems and alsoItems.pool then
+			for items in alsoItems.pool:EnumerateActive() do
+				ReskinConfirmIcon(items)
+			end
+		end
+	end
+end
+
+local function UpdateOverlay(frame)
+	local overlay = frame.Overlay
+	if overlay then
+		overlay:StripTextures()
+		overlay:SetTemplate()
+	end
+end
+
+local function HandleWarning(frame)
+	frame:SetTemplate('Transparent')
+	frame.ExtraBG:Hide()
+end
+
 function S:Blizzard_WeeklyRewards()
 	if not (E.private.skins.blizzard.enable and E.private.skins.blizzard.weeklyRewards) then return end
 
 	-- /run UIParent_OnEvent({}, 'WEEKLY_REWARDS_SHOW')
 	local frame = _G.WeeklyRewardsFrame
-	local header = frame.HeaderFrame
 
 	if E.private.skins.parchmentRemoverEnable then
 		frame:StripTextures()
-		frame.NineSlice:Kill()
-		frame.BackgroundTile:SetAlpha(0)
 		frame:SetTemplate('Transparent')
 
-		header:StripTextures()
-		header:SetTemplate('Transparent')
-		header.Left:SetAlpha(0)
-		header.Center:SetAlpha(0)
-		header.Right:SetAlpha(0)
-		header.Middle:SetAlpha(0)
-		header:ClearAllPoints()
-		header:Point('TOP', 1, -42)
+		local header = frame.HeaderFrame
+		if header then
+			header:ClearAllPoints()
+			header:Point('TOP', 1, -42)
+			header:StripTextures()
+			header:SetTemplate('Transparent')
+		end
+
+		frame.BorderContainer:StripTextures()
+		frame.ConcessionFrame:StripTextures()
 	end
 
 	S:HandleCloseButton(frame.CloseButton)
@@ -83,37 +124,26 @@ function S:Blizzard_WeeklyRewards()
 	SkinActivityFrame(frame.RaidFrame)
 	SkinActivityFrame(frame.MythicFrame)
 	SkinActivityFrame(frame.PVPFrame)
+	SkinActivityFrame(frame.WorldFrame)
 
 	for _, activity in pairs(frame.Activities) do
 		SkinActivityFrame(activity, true)
 	end
 
-	hooksecurefunc(frame, 'SelectReward', function(reward)
-		local selection = reward.confirmSelectionFrame
-		if selection then
-			_G.WeeklyRewardsFrameNameFrame:Hide()
-			ReskinConfirmIcon(selection.ItemFrame)
-
-			local alsoItems = selection.AlsoItemsFrame
-			if alsoItems and alsoItems.pool then
-				for items in alsoItems.pool:EnumerateActive() do
-					ReskinConfirmIcon(items)
-				end
-			end
-		end
-	end)
-
-	hooksecurefunc(frame, 'UpdateOverlay', function()
-		local overlay = frame.Overlay
-		if overlay then
-			overlay:StripTextures()
-			overlay:SetTemplate()
-		end
-	end)
-
 	local rewardText = frame.ConcessionFrame.RewardsFrame.Text
-	S.ReplaceIconString(rewardText)
-	hooksecurefunc(rewardText, 'SetText', S.ReplaceIconString)
+	if rewardText then
+		S.ReplaceIconString(rewardText)
+		hooksecurefunc(rewardText, 'SetText', S.ReplaceIconString)
+	end
+
+	local warningDialog = _G.WeeklyRewardExpirationWarningDialog
+	if warningDialog then -- doesn't always exist
+		warningDialog:Point('TOP', frame, 'BOTTOM', 0, -1)
+		warningDialog.NineSlice:HookScript('OnShow', HandleWarning)
+	end
+
+	hooksecurefunc(frame, 'SelectReward', SelectReward)
+	hooksecurefunc(frame, 'UpdateOverlay', UpdateOverlay)
 end
 
 S:AddCallbackForAddon('Blizzard_WeeklyRewards')

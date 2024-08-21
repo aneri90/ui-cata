@@ -34,6 +34,7 @@ P.general = {
 	questRewardMostValueIcon = true,
 	questXPPercent = true,
 	durabilityScale = 1,
+	gameMenuScale = 1,
 	lockCameraDistanceMax = true,
 	cameraDistanceMax = E.Retail and 2.6 or 4,
 	afk = true,
@@ -58,6 +59,11 @@ P.general = {
 		transparent = true,
 		height = 22,
 		width = 0
+	},
+	raidUtility = {
+		modifier = 'SHIFT',
+		modifierSwap = 'world',
+		showTooltip = true
 	},
 	fonts = {
 		cooldown = { enable = true, font = 'Expressway', size = 20, outline = 'SHADOWOUTLINE' },
@@ -94,6 +100,10 @@ P.general = {
 	itemLevel = {
 		displayCharacterInfo = true,
 		displayInspectInfo = true,
+		enchantAbbrev = true,
+		showItemLevel = true,
+		showEnchants = true,
+		showGems = true,
 		itemLevelRarity = true,
 		itemLevelFont = 'PT Sans Narrow',
 		itemLevelFontSize = 12,
@@ -549,7 +559,7 @@ local NP_Health = {
 
 local NP_Power = {
 	enable = false,
-	classColor = false,
+	useClassColor = false,
 	hideWhenEmpty = false,
 	costPrediction = true,
 	width = 150,
@@ -1328,6 +1338,7 @@ local UF_Auras = {
 	keepSizeRatio = true,
 	height = 30,
 	spacing = 1,
+	strataAndLevel = CopyTable(UF_StrataAndLevel),
 }
 
 local UF_AuraBars = {
@@ -1536,6 +1547,8 @@ local UF_Portrait = {
 local UF_Power = {
 	attachTextTo = 'Health',
 	autoHide = false,
+	onlyHealer = false,
+	notInCombat = false,
 	detachedWidth = 250,
 	detachFromFrame = false,
 	enable = true,
@@ -2075,6 +2088,7 @@ P.unitframe = {
 			portrait = CopyTable(UF_Portrait),
 			power = CopyTable(UF_Power),
 			raidicon = CopyTable(UF_RaidIcon),
+			strataAndLevel = CopyTable(UF_StrataAndLevel),
 			privateAuras = CopyTable(UF_PrivateAuras)
 		},
 		arena = {
@@ -2111,6 +2125,7 @@ P.unitframe = {
 			portrait = CopyTable(UF_Portrait),
 			power = CopyTable(UF_Power),
 			pvpclassificationindicator = CopyTable(UF_PvPClassificationIndicator),
+			strataAndLevel = CopyTable(UF_StrataAndLevel),
 			raidicon = CopyTable(UF_RaidIcon),
 		},
 		party = {
@@ -2162,6 +2177,7 @@ P.unitframe = {
 			roleIcon = CopyTable(UF_RoleIcon),
 			summonIcon = CopyTable(UF_SummonIcon),
 			targetsGroup = CopyTable(UF_SubGroup),
+			strataAndLevel = CopyTable(UF_StrataAndLevel),
 			privateAuras = CopyTable(UF_PrivateAuras)
 		},
 		tank = {
@@ -2189,6 +2205,7 @@ P.unitframe = {
 			raidicon = CopyTable(UF_RaidIcon),
 			rdebuffs = CopyTable(UF_RaidDebuffs),
 			targetsGroup = CopyTable(UF_SubGroup),
+			strataAndLevel = CopyTable(UF_StrataAndLevel),
 			privateAuras = CopyTable(UF_PrivateAuras)
 		},
 	},
@@ -2672,7 +2689,9 @@ P.actionbar = {
 		fontOutline = 'OUTLINE',
 		fontSize = 12,
 		mouseover = false,
-		visibility = '[vehicleui] hide;show'
+		visibility = '[vehicleui] hide;show',
+		frameStrata = 'LOW',
+		frameLevel = 5,
 	},
 	microbar = {
 		enabled = false,

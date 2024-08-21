@@ -4,37 +4,11 @@ local S = E:GetModule('Skins')
 local _G = _G
 local next, pairs, select = next, pairs, select
 
-local C_CreatureInfo_GetClassInfo = C_CreatureInfo.GetClassInfo
 local C_GuildInfo_GetGuildNewsInfo = C_GuildInfo.GetGuildNewsInfo
 local BATTLENET_FONT_COLOR = BATTLENET_FONT_COLOR
-local GetClassInfo = GetClassInfo
 local GREEN_FONT_COLOR = GREEN_FONT_COLOR
 local CreateFrame = CreateFrame
 local hooksecurefunc = hooksecurefunc
-
----- current unused:
-local function UpdateNames(button)
-	if not button.expanded then return end
-
-	local memberInfo = button:GetMemberInfo()
-	if memberInfo and memberInfo.classID then
-		local classInfo = C_CreatureInfo_GetClassInfo(memberInfo.classID)
-		if classInfo then
-			button.Class:SetTexCoord(E:GetClassCoords(classInfo.classFile, true))
-		end
-	end
-end
-
-local function ColorMemberName(button, info)
-	if not info then return end
-
-	local class = button.Class
-	local _, classTag = GetClassInfo(info.classID)
-	if classTag then
-		class:SetTexCoord(E:GetClassCoords(classTag, true))
-	end
-end
----- TODO: need to reimplement this ^
 
 local function HandleCommunitiesButtons(button)
 	button.Background:Hide()
@@ -138,7 +112,7 @@ function S:Blizzard_Communities()
 	CommunitiesFrameCommunitiesList.ScrollBar:GetChildren():Hide()
 	S:HandleTrimScrollBar(CommunitiesFrameCommunitiesList.ScrollBar)
 	_G.ChannelFrame.ChannelRoster.ScrollBar:StripTextures()
-	S:HandleDropDownBox(CommunitiesFrame.StreamDropDownMenu)
+	S:HandleDropDownBox(CommunitiesFrame.StreamDropdown)
 
 	hooksecurefunc(CommunitiesFrameCommunitiesList.ScrollBox, 'Update', function(frame)
 		for _, child in next, { frame.ScrollTarget:GetChildren() } do
@@ -163,7 +137,7 @@ function S:Blizzard_Communities()
 	S:HandleButton(CommunitiesFrame.InviteButton)
 	S:HandleNextPrevButton(CommunitiesFrame.AddToChatButton)
 
-	S:HandleDropDownBox(CommunitiesFrame.CommunitiesListDropDownMenu)
+	S:HandleDropDownBox(CommunitiesFrame.CommunitiesListDropdown)
 
 	hooksecurefunc(_G.CommunitiesNotificationSettingsStreamEntryMixin, 'SetFilter', function(s)
 		s.ShowNotificationsButton:Size(20, 20)
@@ -208,9 +182,9 @@ function S:Blizzard_Communities()
 
 				hooksecurefunc(requestFrame, 'Initialize', function(s)
 					for button in s.SpecsPool:EnumerateActive() do
-						if button.CheckBox then
-							S:HandleCheckBox(button.CheckBox)
-							button.CheckBox:Size(26)
+						if button.Checkbox then
+							S:HandleCheckBox(button.Checkbox)
+							button.Checkbox:Size(26)
 						end
 					end
 				end)
@@ -240,41 +214,51 @@ function S:Blizzard_Communities()
 	local ClubFinderGuildFinderFrame = _G.ClubFinderGuildFinderFrame
 	ClubFinderGuildFinderFrame:StripTextures()
 
-	S:HandleDropDownBox(_G.ClubFinderLanguageDropdown)
-	S:HandleDropDownBox(ClubFinderGuildFinderFrame.OptionsList.ClubFilterDropdown)
-	S:HandleDropDownBox(ClubFinderGuildFinderFrame.OptionsList.ClubSizeDropdown)
+	local ClubFinderGuildOptionsList = ClubFinderGuildFinderFrame.OptionsList
+	S:HandleDropDownBox(ClubFinderGuildOptionsList.ClubFilterDropdown)
+	ClubFinderGuildOptionsList.ClubSizeDropdown:ClearAllPoints() -- FIX ME 11.0 Is this DropDown trolling us?
+	ClubFinderGuildOptionsList.ClubSizeDropdown:Point('LEFT', ClubFinderGuildOptionsList.ClubFilterDropdown, 'RIGHT', 3, 0)
+	S:HandleDropDownBox(ClubFinderGuildOptionsList.ClubSizeDropdown)
 
-	ClubFinderGuildFinderFrame.OptionsList.SearchBox:Size(118, 20)
-	ClubFinderGuildFinderFrame.OptionsList.Search:Size(118, 20)
-	ClubFinderGuildFinderFrame.OptionsList.Search:ClearAllPoints()
-	ClubFinderGuildFinderFrame.OptionsList.Search:Point('TOP', ClubFinderGuildFinderFrame.OptionsList.SearchBox, 'BOTTOM', 1, -3)
-	S:HandleEditBox(ClubFinderGuildFinderFrame.OptionsList.SearchBox)
-	S:HandleButton(ClubFinderGuildFinderFrame.OptionsList.Search)
-
-	S:HandleCheckBox(ClubFinderGuildFinderFrame.OptionsList.TankRoleFrame.CheckBox)
-	S:HandleCheckBox(ClubFinderGuildFinderFrame.OptionsList.HealerRoleFrame.CheckBox)
-	S:HandleCheckBox(ClubFinderGuildFinderFrame.OptionsList.DpsRoleFrame.CheckBox)
+	ClubFinderGuildOptionsList.SearchBox:Size(118, 20)
+	ClubFinderGuildOptionsList.Search:Size(118, 20)
+	ClubFinderGuildOptionsList.Search:ClearAllPoints()
+	ClubFinderGuildOptionsList.Search:Point('TOP', ClubFinderGuildOptionsList.SearchBox, 'BOTTOM', 1, -3)
+	S:HandleEditBox(ClubFinderGuildOptionsList.SearchBox)
+	S:HandleButton(ClubFinderGuildOptionsList.Search)
 
 	S:HandleItemButton(ClubFinderGuildFinderFrame.ClubFinderSearchTab)
 	S:HandleItemButton(ClubFinderGuildFinderFrame.ClubFinderPendingTab)
 
 	-- Community and Guild finder Tab
 	local ClubFinderCommunityAndGuildFinderFrame = _G.ClubFinderCommunityAndGuildFinderFrame
+	local ClubFinderCommunityOptionsList = ClubFinderCommunityAndGuildFinderFrame.OptionsList
 	ClubFinderCommunityAndGuildFinderFrame:StripTextures()
 
-	S:HandleDropDownBox(ClubFinderCommunityAndGuildFinderFrame.OptionsList.ClubFilterDropdown)
-	S:HandleDropDownBox(ClubFinderCommunityAndGuildFinderFrame.OptionsList.SortByDropdown)
+	for _, checkButton in next, {
+		ClubFinderGuildOptionsList.TankRoleFrame.Checkbox,
+		ClubFinderGuildOptionsList.HealerRoleFrame.Checkbox,
+		ClubFinderGuildOptionsList.DpsRoleFrame.Checkbox,
+		ClubFinderCommunityOptionsList.TankRoleFrame.Checkbox,
+		ClubFinderCommunityOptionsList.HealerRoleFrame.Checkbox,
+		ClubFinderCommunityOptionsList.DpsRoleFrame.Checkbox
+	} do
+		S:HandleCheckBox(checkButton)
+		checkButton:SetFrameLevel(checkButton:GetFrameLevel() + 1)
+	end
 
-	S:HandleButton(ClubFinderCommunityAndGuildFinderFrame.OptionsList.Search)
-	ClubFinderCommunityAndGuildFinderFrame.OptionsList.Search:ClearAllPoints()
-	ClubFinderCommunityAndGuildFinderFrame.OptionsList.Search:Point('TOP', ClubFinderCommunityAndGuildFinderFrame.OptionsList.SearchBox, 'BOTTOM', 1, -3)
-	ClubFinderCommunityAndGuildFinderFrame.OptionsList.Search:Size(118, 20)
-	ClubFinderCommunityAndGuildFinderFrame.OptionsList.SearchBox:Size(118, 20)
-	S:HandleEditBox(ClubFinderCommunityAndGuildFinderFrame.OptionsList.SearchBox)
+	S:HandleDropDownBox(ClubFinderCommunityOptionsList.ClubFilterDropdown, 120)
+	S:HandleDropDownBox(ClubFinderCommunityOptionsList.SortByDropdown, 120)
 
-	S:HandleCheckBox(ClubFinderCommunityAndGuildFinderFrame.OptionsList.TankRoleFrame.CheckBox)
-	S:HandleCheckBox(ClubFinderCommunityAndGuildFinderFrame.OptionsList.HealerRoleFrame.CheckBox)
-	S:HandleCheckBox(ClubFinderCommunityAndGuildFinderFrame.OptionsList.DpsRoleFrame.CheckBox)
+	ClubFinderCommunityOptionsList.SortByDropdown:ClearAllPoints()
+	ClubFinderCommunityOptionsList.SortByDropdown:Point('RIGHT', ClubFinderCommunityOptionsList.ClubFilterDropdown, 'RIGHT', 120, 0)
+
+	S:HandleButton(ClubFinderCommunityOptionsList.Search)
+	ClubFinderCommunityOptionsList.Search:ClearAllPoints()
+	ClubFinderCommunityOptionsList.Search:Point('TOP', ClubFinderCommunityOptionsList.SearchBox, 'BOTTOM', 1, -3)
+	ClubFinderCommunityOptionsList.Search:Size(118, 20)
+	ClubFinderCommunityOptionsList.SearchBox:Size(118, 20)
+	S:HandleEditBox(ClubFinderCommunityOptionsList.SearchBox)
 
 	S:HandleItemButton(ClubFinderCommunityAndGuildFinderFrame.ClubFinderSearchTab)
 	S:HandleItemButton(ClubFinderCommunityAndGuildFinderFrame.ClubFinderPendingTab)
@@ -294,8 +278,8 @@ function S:Blizzard_Communities()
 	CommunitiesFrame.GuildMemberDetailFrame.RemoveButton:Point('BOTTOMLEFT', 10, 4)
 
 	local DropDown = CommunitiesFrame.GuildMemberDetailFrame.RankDropdown
-	DropDown:Point('LEFT', CommunitiesFrame.GuildMemberDetailFrame.RankLabel, 'RIGHT', -12, -3)
-	S:HandleDropDownBox(DropDown, 175)
+	DropDown:Point('LEFT', CommunitiesFrame.GuildMemberDetailFrame.RankLabel, 'RIGHT', 0, -3)
+	S:HandleDropDownBox(DropDown, 150)
 
 	-- Roster Tab
 	local MemberList = CommunitiesFrame.MemberList
@@ -307,7 +291,7 @@ function S:Blizzard_Communities()
 	ColumnDisplay.InsetBorderTop:Hide()
 
 	S:HandleInsetFrame(MemberList.InsetFrame)
-	S:HandleDropDownBox(CommunitiesFrame.GuildMemberListDropDownMenu)
+	S:HandleDropDownBox(CommunitiesFrame.GuildMemberListDropdown)
 	S:HandleButton(CommunitiesFrame.CommunitiesControlFrame.GuildControlButton)
 	S:HandleButton(CommunitiesFrame.CommunitiesControlFrame.GuildRecruitmentButton)
 	S:HandleButton(CommunitiesFrame.CommunitiesControlFrame.CommunitiesSettingsButton)
@@ -341,6 +325,7 @@ function S:Blizzard_Communities()
 	GuildBenefitsFrame.Perks.TitleText:FontTemplate(nil, 14)
 	GuildBenefitsFrame.Rewards.TitleText:FontTemplate(nil, 14)
 
+	S:HandleTrimScrollBar(CommunitiesFrame.GuildBenefitsFrame.Perks.ScrollBar)
 	S:HandleTrimScrollBar(CommunitiesFrame.GuildBenefitsFrame.Rewards.ScrollBar)
 
 	if E.private.skins.parchmentRemoverEnable then
@@ -351,21 +336,24 @@ function S:Blizzard_Communities()
 		hooksecurefunc(CommunitiesFrame.GuildBenefitsFrame.Rewards.ScrollBox, 'Update', HandleRewardButton)
 	end
 
-	-- Guild Reputation Bar TO DO: Adjust me!
 	local StatusBar = CommunitiesFrame.GuildBenefitsFrame.FactionFrame.Bar
 	StatusBar.Middle:Hide()
 	StatusBar.Right:Hide()
 	StatusBar.Left:Hide()
 	StatusBar.BG:Hide()
-	StatusBar.Shadow:Hide()
+	StatusBar.Shadow:SetAlpha(0)
 	StatusBar.Progress:SetTexture(E.media.normTex)
-	StatusBar.Progress:SetAllPoints()
+	StatusBar.Progress:ClearAllPoints()
+	StatusBar.Progress:Point('TOPLEFT')
+	StatusBar.Progress:Point('BOTTOMLEFT')
 	E:RegisterStatusBar(StatusBar)
 
-	local bg = CreateFrame('Frame', nil, StatusBar)
-	bg:SetFrameLevel(StatusBar:GetFrameLevel())
-	bg:SetTemplate()
-	bg:SetOutside()
+	local ProgressBarBG = CreateFrame('Frame', nil, StatusBar)
+	ProgressBarBG:SetFrameLevel(StatusBar:GetFrameLevel())
+	ProgressBarBG:SetTemplate()
+	ProgressBarBG:Point('TOPLEFT')
+	ProgressBarBG:Point('BOTTOMRIGHT')
+	StatusBar.background = ProgressBarBG
 
 	-- Info Tab
 	local GuildDetails = _G.CommunitiesFrameGuildDetailsFrame
@@ -432,7 +420,6 @@ function S:Blizzard_Communities()
 	_G.CommunitiesFrameGuildDetailsFrameNews.TitleText:FontTemplate(nil, 14)
 
 	_G.CommunitiesFrameGuildDetailsFrameNews.ScrollBar:GetChildren():Hide()
-	S:HandleTrimScrollBar(_G.CommunitiesFrameGuildDetailsFrameNews.ScrollBar)
 	S:HandleButton(CommunitiesFrame.GuildLogButton)
 
 	local BossModel = _G.CommunitiesFrameGuildDetailsFrameNews.BossModel
@@ -481,9 +468,9 @@ function S:Blizzard_Communities()
 	RecruitmentDialog:StripTextures()
 	RecruitmentDialog:SetTemplate('Transparent')
 	S:HandleCheckBox(RecruitmentDialog.ShouldListClub.Button)
-	S:HandleDropDownBox(RecruitmentDialog.ClubFocusDropdown, 220)
-	S:HandleDropDownBox(RecruitmentDialog.LookingForDropdown, 220)
-	S:HandleDropDownBox(RecruitmentDialog.LanguageDropdown, 190)
+	S:HandleDropDownBox(RecruitmentDialog.ClubFocusDropdown, 200)
+	S:HandleDropDownBox(RecruitmentDialog.LookingForDropdown, 200)
+	S:HandleDropDownBox(RecruitmentDialog.LanguageDropdown, 140)
 	RecruitmentDialog.RecruitmentMessageFrame:StripTextures()
 	S:HandleEditBox(RecruitmentDialog.RecruitmentMessageFrame.RecruitmentMessageInput)
 	S:HandleCheckBox(RecruitmentDialog.MaxLevelOnly.Button)
@@ -497,7 +484,7 @@ function S:Blizzard_Communities()
 	local NotificationSettings = _G.CommunitiesFrame.NotificationSettingsDialog
 	NotificationSettings.Selector:StripTextures()
 	S:HandleFrame(NotificationSettings)
-	S:HandleDropDownBox(NotificationSettings.CommunitiesListDropDownMenu, 190)
+	S:HandleDropDownBox(NotificationSettings.CommunitiesListDropdown, 190)
 	S:HandleCheckBox(NotificationSettings.ScrollFrame.Child.QuickJoinButton)
 	S:HandleButton(NotificationSettings.ScrollFrame.Child.AllButton)
 	S:HandleButton(NotificationSettings.ScrollFrame.Child.NoneButton)
@@ -513,7 +500,7 @@ function S:Blizzard_Communities()
 	S:HandleEditBox(EditStreamDialog.NameEdit)
 	EditStreamDialog.NameEdit:Size(280, 20)
 	S:HandleEditBox(EditStreamDialog.Description)
-	S:HandleCheckBox(EditStreamDialog.TypeCheckBox)
+	S:HandleCheckBox(EditStreamDialog.TypeCheckbox)
 
 	S:HandleButton(EditStreamDialog.Accept)
 	S:HandleButton(EditStreamDialog.Cancel)
@@ -524,6 +511,15 @@ function S:Blizzard_Communities()
 	Settings:SetTemplate('Transparent')
 	S:HandleIcon(Settings.IconPreview)
 	Settings.IconPreviewRing:Hide()
+
+	S:HandleCheckBox(Settings.CrossFactionToggle.CheckButton)
+	S:HandleCheckBox(Settings.ShouldListClub.Button)
+	S:HandleCheckBox(Settings.AutoAcceptApplications.Button)
+	S:HandleCheckBox(Settings.MaxLevelOnly.Button)
+	S:HandleCheckBox(Settings.MinIlvlOnly.Button)
+	S:HandleEditBox(Settings.MinIlvlOnly.EditBox)
+	S:HandleDropDownBox(Settings.ClubFocusDropdown, 180)
+	S:HandleDropDownBox(Settings.LookingForDropdown, 180)
 
 	S:HandleEditBox(Settings.NameEdit)
 	S:HandleEditBox(Settings.ShortNameEdit)
@@ -558,8 +554,8 @@ function S:Blizzard_Communities()
 	S:HandleButton(TicketManager.Close)
 	S:HandleButton(TicketManager.GenerateLinkButton)
 
-	S:HandleDropDownBox(TicketManager.ExpiresDropDownMenu)
-	S:HandleDropDownBox(TicketManager.UsesDropDownMenu)
+	S:HandleDropDownBox(TicketManager.ExpiresDropdown)
+	S:HandleDropDownBox(TicketManager.UsesDropdown)
 
 	S:HandleButton(TicketManager.MaximizeButton)
 

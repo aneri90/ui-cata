@@ -1,16 +1,75 @@
 
 DetailsDataStorage = {
+	["normal"] = {
+	},
+	["mythic"] = {
+	},
 	["Data"] = {
 	},
-	[15] = {
-	},
-	["VERSION"] = 6,
-	["saved_encounters"] = {
-	},
-	[14] = {
-	},
-	[16] = {
+	["VERSION"] = 7,
+	["heroic"] = {
 	},
 	["mythic_plus"] = {
+	},
+	["saved_encounters"] = {
+	},
+	["totalkills"] = {
+		["10playerheroic"] = {
+			[1034] = {
+				["time_incombat"] = 0,
+				["time_fasterkill"] = 0,
+				["wipes"] = 1,
+				["kills"] = 0,
+				["dps_best"] = 0,
+				["dps_best_when"] = 0,
+				["time_fasterkill_when"] = 0,
+				["dps_best_raid_when"] = 0,
+				["dps_best_raid"] = 0,
+			},
+			[1024] = {
+				["time_incombat"] = 0,
+				["time_fasterkill"] = 0,
+				["wipes"] = 1,
+				["kills"] = 0,
+				["dps_best"] = 0,
+				["dps_best_when"] = 0,
+				["time_fasterkill_when"] = 0,
+				["dps_best_raid_when"] = 0,
+				["dps_best_raid"] = 0,
+			},
+			[1035] = {
+				["time_incombat"] = 0,
+				["time_fasterkill"] = 0,
+				["wipes"] = 1,
+				["kills"] = 0,
+				["dps_best"] = 0,
+				["dps_best_when"] = 0,
+				["time_fasterkill_when"] = 0,
+				["dps_best_raid_when"] = 0,
+				["dps_best_raid"] = 0,
+			},
+			[1025] = {
+				["time_incombat"] = 0,
+				["time_fasterkill"] = 0,
+				["wipes"] = 2,
+				["kills"] = 0,
+				["dps_best"] = 0,
+				["dps_best_when"] = 0,
+				["time_fasterkill_when"] = 0,
+				["dps_best_raid_when"] = 0,
+				["dps_best_raid"] = 0,
+			},
+			[1027] = {
+				["time_incombat"] = 0,
+				["time_fasterkill"] = 0,
+				["wipes"] = 1,
+				["kills"] = 0,
+				["dps_best"] = 0,
+				["dps_best_raid"] = 0,
+				["time_fasterkill_when"] = 0,
+				["dps_best_raid_when"] = 0,
+				["dps_best_when"] = 0,
+			},
+		},
 	},
 }

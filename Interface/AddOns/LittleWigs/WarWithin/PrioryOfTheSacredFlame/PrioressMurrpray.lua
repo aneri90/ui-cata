@@ -1,4 +1,3 @@
-if not BigWigsLoader.isBeta then return end
 --------------------------------------------------------------------------------
 -- Module Declaration
 --
@@ -17,8 +16,9 @@ mod:SetStage(1)
 function mod:GetOptions()
 	return {
 		423588, -- Barrier of Light
-		444546, -- Purifying Light
-		{444608, "HEALER"}, -- Inner Light
+		423664, -- Embrace the Light
+		{444546, "SAY"}, -- Purify
+		{444608, "HEALER"}, -- Inner Fire
 		451605, -- Holy Flame
 	}
 end
@@ -26,17 +26,18 @@ end
 function mod:OnBossEnable()
 	self:Log("SPELL_CAST_SUCCESS", "BarrierOfLight", 423588)
 	self:Log("SPELL_AURA_REMOVED", "BarrierOfLightRemoved", 423588)
-	self:Log("SPELL_AURA_REMOVED", "EmbraceTheLightRemoved", 423664)
-	self:Log("SPELL_CAST_START", "PurifyingLight", 444546)
-	self:Log("SPELL_CAST_START", "InnerLight", 444608)
+	self:Log("SPELL_INTERRUPT", "EmbraceTheLightInterrupted", "*")
+	self:Log("SPELL_CAST_SUCCESS", "Purify", 444546)
+	self:RegisterEvent("CHAT_MSG_RAID_BOSS_WHISPER") -- Purify
+	self:Log("SPELL_CAST_START", "InnerFire", 444608)
 	self:Log("SPELL_CAST_START", "HolyFlame", 451605)
 end
 
 function mod:OnEngage()
 	self:SetStage(1)
 	self:CDBar(451605, 7.1) -- Holy Flame
-	self:CDBar(444546, 12.0) -- Purifying Light
-	self:CDBar(444608, 15.7) -- Inner Light
+	self:CDBar(444546, 13.1) -- Purify
+	self:CDBar(444608, 15.6) -- Inner Fire
 end
 
 function mod:VerifyEnable(unit)
@@ -53,8 +54,8 @@ do
 
 	function mod:BarrierOfLight(args)
 		barrierOfLightStart = args.time
-		self:StopBar(444546) -- Purifying Light
-		self:StopBar(444608) -- Inner Light
+		self:StopBar(444546) -- Purify
+		self:StopBar(444608) -- Inner Fire
 		self:StopBar(451605) -- Holy Flame
 		self:SetStage(2)
 		self:Message(args.spellId, "cyan", CL.percent:format(50, args.spellName))
@@ -68,27 +69,40 @@ do
 	end
 end
 
-function mod:EmbraceTheLightRemoved(args)
-	self:SetStage(1)
-	self:CDBar(444608, 6.4) -- Inner Light
-	self:CDBar(444546, 8.8) -- Purifying Light
-	self:CDBar(451605, 12.5) -- Holy Flame
+function mod:EmbraceTheLightInterrupted(args)
+	if args.extraSpellId == 423664 then -- Embrace the Light
+		self:Message(423664, "green", CL.interrupted_by:format(args.extraSpellName, self:ColorName(args.sourceName)))
+		self:PlaySound(423664, "info")
+		self:SetStage(1)
+		self:CDBar(444546, 6.3) -- Purify
+		self:CDBar(444608, 9.9) -- Inner Fire
+		self:CDBar(451605, 12.3) -- Holy Flame
+	end
 end
 
-function mod:PurifyingLight(args)
-	self:Message(args.spellId, "orange")
+function mod:Purify(args)
+	self:Message(args.spellId, "orange", CL.incoming:format(args.spellName))
 	self:PlaySound(args.spellId, "alarm")
-	self:CDBar(args.spellId, 23.0)
+	self:CDBar(args.spellId, 28.8)
 end
 
-function mod:InnerLight(args)
+function mod:CHAT_MSG_RAID_BOSS_WHISPER(_, msg)
+	if msg:find("425556", nil, true) then -- Purify
+		-- [CHAT_MSG_RAID_BOSS_WHISPER] |TInterface\\ICONS\\Ability_Paladin_TowerofLight.BLP:20|t %s targets you with |cFFFF0000|Hspell:425556|h[Purifying Light]|h|r!#Eternal Flame
+		self:PersonalMessage(444546)
+		self:PlaySound(444546, "warning")
+		self:Say(444546, nil, nil, "Purify")
+	end
+end
+
+function mod:InnerFire(args)
 	self:Message(args.spellId, "red")
 	self:PlaySound(args.spellId, "info")
-	self:CDBar(args.spellId, 23.0)
+	self:CDBar(args.spellId, 22.6)
 end
 
 function mod:HolyFlame(args)
 	self:Message(args.spellId, "yellow")
 	self:PlaySound(args.spellId, "alert")
-	self:CDBar(args.spellId, 9.7)
+	self:CDBar(args.spellId, 12.1)
 end

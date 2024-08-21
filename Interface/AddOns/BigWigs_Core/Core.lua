@@ -21,7 +21,6 @@ end
 local adb = LibStub("AceDB-3.0")
 local lds = LibStub("LibDualSpec-1.0", true)
 
-local L = BigWigsAPI:GetLocale("BigWigs")
 local CL = BigWigsAPI:GetLocale("BigWigs: Common")
 local loader = BigWigsLoader
 core.SendMessage = loader.SendMessage
@@ -33,8 +32,9 @@ local coreEnabled = false
 local GetBestMapForUnit = loader.GetBestMapForUnit
 local SendAddonMessage = loader.SendAddonMessage
 local GetInstanceInfo = loader.GetInstanceInfo
-local UnitName = BigWigsLoader.UnitName
-local UnitGUID = BigWigsLoader.UnitGUID
+local UnitName = loader.UnitName
+local UnitGUID = loader.UnitGUID
+local UnitIsDeadOrGhost = loader.UnitIsDeadOrGhost
 
 -- Upvalues
 local next, type, setmetatable = next, type, setmetatable
@@ -205,76 +205,6 @@ function core:GetEnableMobs()
 end
 
 -------------------------------------------------------------------------------
--- Testing
---
-
-do
-	local callbackRegistered = false
-	local messages = {}
-	local count = 1
-	local colors = {"green", "red", "orange", "yellow", "cyan", "blue", "blue", "purple"}
-	local sounds = {"Long", "Warning", "Alert", "Alarm", "Info", "onyou", "underyou", false}
-
-	local function barStopped(_, bar)
-		local a = bar:Get("bigwigs:anchor")
-		local key = bar:GetLabel()
-		if a and messages[key] then
-			if not colors[count] then count = 1 end
-			local color = colors[count]
-			local sound = sounds[count]
-			local emphasized = count == 2
-			core:Print(L.test .." - ".. color ..": ".. key)
-			core:SendMessage("BigWigs_Message", core, key, color..": "..key, color, messages[key], emphasized)
-			core:SendMessage("BigWigs_Sound", core, key, sound)
-			count = count + 1
-			messages[key] = nil
-		end
-	end
-
-	local lastNamePlateBar = 0
-	local lastSpell = 1
-	local lastTest = 1
-	function core:Test()
-		if not callbackRegistered then
-			LibStub("LibCandyBar-3.0").RegisterCallback(core, "LibCandyBar_Stop", barStopped)
-			callbackRegistered = true
-		end
-
-		local msg = CL.count:format(L.test, lastTest)
-		local icon = loader.GetSpellTexture(lastSpell)
-		while not icon or icon == ((loader.isVanilla or loader.isTBC) and 136235 or 136243) do -- 136243 = cogwheel, 136235 = samwise (classic)
-			lastSpell = lastSpell + 1
-			icon = loader.GetSpellTexture(lastSpell)
-		end
-		lastSpell = lastSpell + 1
-		lastTest = lastTest + 1
-
-		local time = random(11, 30)
-		messages[msg] = icon
-
-		core:SendMessage("BigWigs_StartBar", core, msg, msg, time, icon)
-
-		if loader.isRetail then
-			local guid = UnitGUID("target")
-			if guid and UnitCanAttack("player", "target") then
-				for i = 1, 40 do
-					local unit = ("nameplate%d"):format(i)
-					if UnitGUID(unit) == guid then
-						local t = GetTime()
-						if (t - lastNamePlateBar) > 25 then
-							lastNamePlateBar = t
-							core:Print(L.testNameplate)
-							core:SendMessage("BigWigs_StartNameplateTimer", core, msg, msg, 25, icon, false, guid)
-						end
-						return
-					end
-				end
-			end
-		end
-	end
-end
-
--------------------------------------------------------------------------------
 -- Communication
 --
 
@@ -350,6 +280,9 @@ end
 do
 	local function DisableModules()
 		for _, module in next, bosses do
+			if module:IsEngaged() and (module:GetJournalID() or module:GetAllowWin()) and UnitIsDeadOrGhost("player") then
+				module:Wipe()
+			end
 			module:Disable()
 		end
 		for _, module in next, plugins do
@@ -380,9 +313,9 @@ do
 	end
 	local function zoneChanged()
 		-- Not if you released spirit on a world boss or if the GUI is open
-		if not UnitIsDeadOrGhost("player") and (not BigWigsOptions or (not BigWigsOptions:IsOpen() and not BigWigsOptions:InConfigureMode())) then
+		if not UnitIsDeadOrGhost("player") and (not BigWigsOptions or not BigWigsOptions:IsOpen()) then
 			local bars = core:GetPlugin("Bars", true)
-			if bars and not bars:HasActiveBars() then -- Not if bars are showing
+			if not bars or not bars:HasActiveBars() then -- Not if bars are showing
 				DisableCore() -- Alive in a non-enable zone, disable
 			end
 		end
@@ -463,7 +396,7 @@ do
 	local bossMeta = { __index = bossPrototype, __metatable = false }
 	local EJ_GetEncounterInfo = loader.isCata and function(key)
 		return EJ_GetEncounterInfo(key) or BigWigsAPI:GetLocale("BigWigs: Encounters")[key]
-	end or EJ_GetEncounterInfo or function(key)
+	end or loader.isRetail and EJ_GetEncounterInfo or function(key)
 		return BigWigsAPI:GetLocale("BigWigs: Encounters")[key]
 	end
 	function core:NewBoss(moduleName, zoneId, journalId)
@@ -473,6 +406,7 @@ do
 			local m = setmetatable({
 				name = "BigWigs_Bosses_"..moduleName, -- XXX AceAddon/AceDB backwards compat
 				moduleName = moduleName,
+				enableMobs = {},
 
 				-- Embed callback handler
 				RegisterMessage = loader.RegisterMessage,
@@ -561,11 +495,11 @@ end
 do
 	local C_EncounterJournal_GetSectionInfo = loader.isCata and function(key)
 		return C_EncounterJournal.GetSectionInfo(key) or BigWigsAPI:GetLocale("BigWigs: Encounter Info")[key]
-	end or C_EncounterJournal and C_EncounterJournal.GetSectionInfo or function(key)
+	end or loader.isRetail and C_EncounterJournal.GetSectionInfo or function(key)
 		return BigWigsAPI:GetLocale("BigWigs: Encounter Info")[key]
 	end
 	local C = core.C -- Set from Constants.lua
-	local standardFlag = C.BAR + C.CASTBAR + C.MESSAGE + C.ICON + C.SOUND + C.SAY + C.SAY_COUNTDOWN + C.PROXIMITY + C.FLASH + C.ALTPOWER + C.VOICE + C.INFOBOX + C.NAMEPLATEBAR
+	local standardFlag = C.BAR + C.CASTBAR + C.MESSAGE + C.ICON + C.SOUND + C.SAY + C.SAY_COUNTDOWN + C.PROXIMITY + C.FLASH + C.ALTPOWER + C.VOICE + C.INFOBOX + C.NAMEPLATE
 	local defaultToggles = setmetatable({
 		berserk = C.BAR + C.MESSAGE + C.SOUND,
 		proximity = C.PROXIMITY,

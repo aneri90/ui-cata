@@ -45,6 +45,8 @@ L.general = "Generali" -- General settings, i.e. things that apply to normal, he
 --L.health_percent = "%d%% Health" -- "10% Health" The health percentage of an NPC
 L.door_open = "Porta aperta" -- When a door is open, usually after a speech from an NPC
 L.gate_open = "Cancello aperto" -- When a gate is open, usually after a speech from an NPC
+L.threat = "Minaccia"
+L.energy = "Energia"
 
 --L.remaining = "%d remaining" -- 5 remaining
 L.duration = "%s per %s sec" -- Spell for 10 seconds
@@ -64,10 +66,15 @@ L.cancelled = "%s Cancellata" -- Spell Cancelled
 L.you_die = "Tu muori" -- You will die
 L.you_die_sec = "Morirai in %d sec" -- "You die in 15 sec" (sec = seconds)
 --L.next_ability = "Next ability" -- We don't know what ability will be next, we only know when it will happen (showing a bar)
+--L.landing = "%s is landing" -- "NPC_NAME is landing" Used when a flying NPC/dragon/boss is landing
+L.flying_available = "Adesso puoi volare"
 
 -- Add related
-L.add_spawned = "Add Apparso"
-L.adds_spawned = "Adds Apparso"
+L.add_spawned = "Add Apparso" -- singular
+L.adds_spawned = "Adds Apparso" -- plural
+--L.adds_spawned_count = "%d |4add:adds; spawned" -- 1 add spawned / 2 adds spawned
+--L.add_spawning = "Add spawning" -- singular
+--L.adds_spawning = "Adds spawning" -- plural
 L.spawned = "%s Reinizializzato"
 L.spawning = "Apparizione di %s"
 L.next_add = "Prossimo Add"
@@ -107,9 +114,12 @@ L.marker_npc_desc = "Marchia %s con %s, necessario ruolo assistente o capo." -- 
 L.link = "Vincolo"
 L.link_with = "Vincolato a %s"
 L.link_with_icon = "Vincolato a |T13700%d:0|t%s"
-L.link_short = "Vincolo: %s"
-L.link_both = "%s Vincolato a %s"
+L.link_with_rticon = "{rt%d}Vincolato a %s"
+L.link_both = "%s vincolato a %s" -- XXX needs updated
+L.link_both_icon = "|T13700%d:0|t%s vincolato a |T13700%d:0|t%s" -- XXX needs updated
 L.link_removed = "Vincolo rimosso"
+--L.link_say_option_name = "Repeating 'Linked' say messages"
+--L.link_say_option_desc = "Repeating say messages in chat stating who you are linked with."
 
 -- Abbreviated numbers
 L.amount_one = "%dMrd" -- Billions 1,000,000,000
@@ -173,6 +183,7 @@ L.charge = "Carica" -- When a boss select a new target and charges at it quickly
 L.full_energy = "Energia al massimo" -- When a boss reaches full/maximum energy, usually the boss will cast something big and powerful when this happens
 L.weakened = "Indebolito" -- When a boss becomes weakened and sometimes takes extra damage, usually the "hit all your cooldowns" part of the fight
 L.immune = "Immune" -- When a boss becomes immune to all damage and you can no longer hurt it
+L.stunned = "Stordimento" -- When a boss becomes stunned and cannot cast abilities or move
 L.pool = "Pozza" -- A pool or puddle on the ground, usually something bad that you should avoid standing in
 L.pools = "Pozze" -- Plural of L.pool
 L.totem = "Totem" -- A totem, usually summoned by a boss, the same thing that shamans summon

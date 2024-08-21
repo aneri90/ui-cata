@@ -15,14 +15,14 @@ local GetSpellDescription, GetSpellName, GetSpellTexture = BigWigsLoader.GetSpel
 local type, next, tonumber, gsub, lshift, band = type, next, tonumber, gsub, bit.lshift, bit.band
 local C_EncounterJournal_GetSectionInfo = BigWigsLoader.isCata and function(key)
 	return C_EncounterJournal.GetSectionInfo(key) or BigWigsAPI:GetLocale("BigWigs: Encounter Info")[key]
-end or C_EncounterJournal and C_EncounterJournal.GetSectionInfo or function(key)
+end or BigWigsLoader.isRetail and C_EncounterJournal and C_EncounterJournal.GetSectionInfo or function(key)
 	return BigWigsAPI:GetLocale("BigWigs: Encounter Info")[key]
 end
 
 -- Option bitflags
 local coreToggles = {
 	"BAR", "MESSAGE", "ICON", "PULSE", "SOUND", "SAY", "PROXIMITY", "FLASH", "ME_ONLY", "EMPHASIZE", "TANK", "HEALER", "TANK_HEALER",
-	"DISPEL", "ALTPOWER", "VOICE", "COUNTDOWN", "INFOBOX", "CASTBAR", "SAY_COUNTDOWN", "ME_ONLY_EMPHASIZE", "NAMEPLATEBAR", "PRIVATE",
+	"DISPEL", "ALTPOWER", "VOICE", "COUNTDOWN", "INFOBOX", "CASTBAR", "SAY_COUNTDOWN", "ME_ONLY_EMPHASIZE", "NAMEPLATE", "PRIVATE",
 	"CASTBAR_COUNTDOWN"
 }
 for i, toggle in next, coreToggles do
@@ -133,12 +133,7 @@ end
 local function replaceIdWithDescription(msg)
 	local id = tonumber(msg)
 	if id > 0 then
-		local desc
-		if BigWigsLoader.isBeta then
-			desc = GetSpellDescription(id) or "" -- XXX in TWW returns nil instead of empty string if there's no description
-		else
-			desc = GetSpellDescription(id)
-		end
+		local desc = GetSpellDescription(id)
 		if desc then
 			return desc:gsub("[\r\n]+$", "") -- Remove stray CR+LF for e.g. 299250 spells that show another spell in their tooltip which isn't part of GetSpellDescription
 		else
@@ -182,8 +177,12 @@ local function getIcon(icon, module, option)
 			BigWigs:Print(("No icon found for %s using id %d."):format(module.name, moduleLocale[option .. "_icon"]))
 		end
 		return icon
-	elseif type(icon) == "string" and not icon:find("\\", nil, true) then
-		return "Interface\\Icons\\" .. icon
+	elseif type(icon) == "string" then
+		if not icon:find("\\", nil, true) then
+			return "Interface\\Icons\\" .. icon
+		else
+			return icon
+		end
 	elseif customBossOptions[option] then
 		return customBossOptions[option][3]
 	end
@@ -240,12 +239,7 @@ function BigWigs:GetBossOptionDetails(module, option)
 				BigWigs:Error(("Invalid option %d in module %s."):format(option, module.name))
 				spellName = option
 			end
-			local desc
-			if BigWigsLoader.isBeta then
-				desc = GetSpellDescription(option) or "" -- XXX in TWW returns nil instead of empty string if there's no description
-			else
-				desc = GetSpellDescription(option)
-			end
+			local desc = GetSpellDescription(option)
 			if not desc then
 				BigWigs:Error(("No spell description was returned for id %d!"):format(option))
 				desc = option

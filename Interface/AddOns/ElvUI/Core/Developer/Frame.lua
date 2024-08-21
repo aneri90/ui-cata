@@ -2,12 +2,16 @@ local print, strmatch, strlower = print, strmatch, strlower
 local _G, UNKNOWN, format, type, next = _G, UNKNOWN, format, type, next
 
 local SlashCmdList = SlashCmdList
-local GetMouseFocus = GetMouseFocus
 local UIParentLoadAddOn = UIParentLoadAddOn
 
-local GetAddOnInfo = (C_AddOns and C_AddOns.GetAddOnInfo) or GetAddOnInfo
-local IsAddOnLoaded = (C_AddOns and C_AddOns.IsAddOnLoaded) or IsAddOnLoaded
-local LoadAddOn = (C_AddOns and C_AddOns.LoadAddOn) or LoadAddOn
+local GetAddOnInfo = C_AddOns.GetAddOnInfo
+local IsAddOnLoaded = C_AddOns.IsAddOnLoaded
+local LoadAddOn = C_AddOns.LoadAddOn
+
+local GetMouseFocus = GetMouseFocus or function()
+	local frames = _G.GetMouseFoci()
+	return frames and frames[1]
+end
 
 -- GLOBALS: ElvUI_CPU, ElvUI
 
@@ -107,9 +111,9 @@ AddCommand('FRAMELIST', '/framelist', function(arg)
 	end
 	print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
-	if _G.CopyChatFrame and IsTrue(copyChat) then
-		if _G.CopyChatFrame:IsShown() then
-			_G.CopyChatFrame:Hide()
+	if _G.ElvUI_CopyChatFrame and IsTrue(copyChat) then
+		if _G.ElvUI_CopyChatFrame:IsShown() then
+			_G.ElvUI_CopyChatFrame:Hide()
 		end
 
 		ElvUI[1]:GetModule('Chat'):CopyChat(_G.ChatFrame1)

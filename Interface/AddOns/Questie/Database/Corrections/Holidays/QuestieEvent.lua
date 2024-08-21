@@ -53,6 +53,8 @@ local QuestieEvent = QuestieLoader:CreateModule("QuestieEvent")
 ---@class QuestieEventPrivate
 local _QuestieEvent = QuestieEvent.private
 
+-- This variable will be cleared at the end of the load, do not use, use QuestieEvent.activeQuests.
+QuestieEvent.eventQuests = {}
 QuestieEvent.activeQuests = {}
 _QuestieEvent.eventNamesForQuests = {}
 
@@ -307,6 +309,8 @@ function QuestieEvent:IsEventQuest(questId)
     return _QuestieEvent.eventNamesForQuests[questId] ~= nil
 end
 
+local isChinaRegion = GetCurrentRegion() == 5
+
 -- EUROPEAN FORMAT! NO FUCKING AMERICAN SHIDAZZLE FORMAT!
 QuestieEvent.eventDates = {
     ["Lunar Festival"] = { -- WARNING THIS DATE VARIES!!!!
@@ -319,7 +323,7 @@ QuestieEvent.eventDates = {
         endDate = "6/4"
     },
     ["Children's Week"] = {startDate = "1/5", endDate = "15/5"}, -- TODO: Usually it is only a week long
-    ["Midsummer"] = {startDate = "21/6", endDate = "4/7"},
+    ["Midsummer"] = (isChinaRegion and Questie.IsWotlk) and {startDate = "21/6", endDate = "28/7"} or {startDate = "21/6", endDate = "4/7"},
     ["Brewfest"] = {startDate = "20/9", endDate = "5/10"}, -- TODO: This might be different (retail date)
     ["Harvest Festival"] = { -- WARNING THIS DATE VARIES!!!!
         startDate = "26/9",

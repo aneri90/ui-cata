@@ -1,7 +1,7 @@
 
 LBISSettings = {
 	["SelectedZoneNumber"] = "All",
-	["SelectedZone"] = "Blackwing Descent",
+	["SelectedZone"] = "The Bastion of Twilight",
 	["OpenTab"] = "ItemList",
 	["Tooltip"] = {
 		["BloodDeath Knight"] = true,
@@ -53,5 +53,5 @@ LBISSettings = {
 	["SelectedSourceType"] = "All",
 	["SelectedSlot"] = "All",
 	["ShowCustom"] = true,
-	["SelectedPhase"] = "All",
+	["SelectedPhase"] = "BIS",
 }

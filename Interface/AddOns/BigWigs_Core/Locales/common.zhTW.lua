@@ -45,9 +45,11 @@ L.health = "生命值" -- The health of an NPC
 L.health_percent = "%d%% 生命值" -- "10% Health" The health percentage of an NPC
 L.door_open = "開門" -- 小的門 When a door is open, usually after a speech from an NPC
 L.gate_open = "開門" -- 大的門 When a gate is open, usually after a speech from an NPC
+L.threat = "威脅"
+L.energy = "能量"
 
---L.remaining = "%d remaining" -- 5 remaining
-L.duration = "%s持續%s秒" -- Spell for 10 seconds
+L.remaining = "剩餘 %d" -- 5 remaining
+L.duration = "%s持續 %s 秒" -- Spell for 10 seconds
 L.over = "%s結束" -- Spell Over
 L.removed = "%s移除" -- Spell Removed
 L.removed_from = "%2$s已移除%1$s" -- Spell removed from Player 自玩家身上清除 語句不順 應該是 %2$s身上的%1$s已移除 或 %2$s的%1$s被清除
@@ -64,10 +66,15 @@ L.cancelled = "%s取消" -- Spell Cancelled
 L.you_die = "你將死亡" -- You will die
 L.you_die_sec = "你將在%d秒後死亡" -- "You die in 15 sec" (sec = seconds)
 L.next_ability = "下個技能" -- We don't know what ability will be next, we only know when it will happen (showing a bar)
+L.landing = "%s即將著陸" -- "NPC_NAME is landing" Used when a flying NPC/dragon/boss is landing 即將著陸、正在降落
+L.flying_available = "可以飛行"
 
 -- Add related
-L.add_spawned = "小怪出現"
-L.adds_spawned = "小怪出現"
+L.add_spawned = "增援出現" -- singular 小怪OR增援，開發者要求用增援
+L.adds_spawned = "增援出現" -- plural
+L.adds_spawned_count = "%d名增援出現" -- 1 add spawned / 2 adds spawned
+L.add_spawning = "增援出現" -- singular 小怪正在出現/小怪出現/小怪已出現，中文沒有英文那麼明確的時態和單複數之別
+L.adds_spawning = "增援出現" -- plural
 L.spawned = "%s已重生"
 L.spawning = "%s出現"
 L.next_add = "下一波小怪"
@@ -107,9 +114,12 @@ L.marker_npc_aura_desc = "將受到%s影響的 NPC 標記為%s，需要權限。
 L.link = "連結"
 L.link_with = "與%s連結"
 L.link_with_icon = "與|T13700%d:0|t%s連結"
-L.link_short = "連結：%s"
+L.link_with_rticon = "{rt%d}與%s連結"
 L.link_both = "%s和%s連結"
+L.link_both_icon = "|T13700%d:0|t%s和|T13700%d:0|t%s連結"
 L.link_removed = "連結移除"
+L.link_say_option_name = "重覆「連結」喊話"
+L.link_say_option_desc = "不停地喊話你和誰連結了。" -- 可能需要再改
 
 -- Abbreviated numbers
 L.amount_one = "%.2f億" -- Billions 1,000,000,000
@@ -142,9 +152,9 @@ L.nature = "自然"
 L.arcane = "秘法"
 
 -- Autotalk
---L.autotalk = "Automatic NPC interaction"
---L.autotalk_boss_desc = "Automatically select the NPC dialog options that cause the boss encounter to begin."
---L.autotalk_generic_desc = "Automatically select the NPC dialog options that cause you to progress to the next stage of the dungeon."
+L.autotalk = "自動與 NPC 對話"
+L.autotalk_boss_desc = "自動選擇開始首領戰鬥的對話選項。"
+L.autotalk_generic_desc = "自動選擇使地城進入下一階段的對話選項。"
 
 -- Common ability name replacements
 L.absorb = "吸收" -- Used for shield-like abilities that absorb damage or healing
@@ -173,6 +183,7 @@ L.charge = "衝鋒" -- When a boss select a new target and charges at it quickly
 L.full_energy = "滿能量" -- When a boss reaches full/maximum energy, usually the boss will cast something big and powerful when this happens
 L.weakened = "虛弱" -- When a boss becomes weakened and sometimes takes extra damage, usually the "hit all your cooldowns" part of the fight
 L.immune = "免疫" -- When a boss becomes immune to all damage and you can no longer hurt it
+L.stunned = "昏迷" -- When a boss becomes stunned and cannot cast abilities or move
 L.pool = "水池" -- A pool or puddle on the ground, usually something bad that you should avoid standing in
 L.pools = "水池" -- Plural of L.pool
 L.totem = "圖騰" -- A totem, usually summoned by a boss, the same thing that shamans summon
@@ -186,7 +197,7 @@ L.orbs = "寶珠" -- Plural for L.orb
 L.curse = "詛咒" -- Any curse-type dispellable debuff, or debuffs called "Curse of XYZ", etc.
 L.curses = "詛咒" -- Plural of L.curse
 L.disease = "疾病" -- Any disease-type dispellable debuff, or debuffs called "Disease of XYZ", etc.
---L.poison = "Poison" -- Any poison-type dispellable debuff, or debuffs called "Poison of XYZ", etc.
+L.poison = "毒" -- Any poison-type dispellable debuff, or debuffs called "Poison of XYZ", etc.
 L.spirit = "靈魂" -- Sometimes a boss will summon spirits, similar to ghosts, but not exactly, although you might have the same word for both. e.g. "Spirits of X" or "Wild Spirits"
 L.spirits = "靈魂" -- Plural of L.spirit
 L.tornado = "旋風" -- 'A tornado is a violently rotating column of air that is in contact with both the surface of the Earth and a cloud' - Wikipedia

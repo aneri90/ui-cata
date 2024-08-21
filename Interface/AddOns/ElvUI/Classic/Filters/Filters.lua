@@ -408,6 +408,9 @@ G.unitframe.aurafilters.Blacklist = {
 	spells = {
 	-- Seasonal
 		[362859] = List(), -- Adventure Awaits: Quest experience increased by 100%.
+		[458841] = List(), -- Sweltering Heat: Perma roleplay text while in Molten Core. (Heat level 1)
+		[458842] = List(), -- Blistering Heat: Perma roleplay text while in Molten Core. (Heat level 2)
+		[446720] = List(), -- Stinky: Perma roleplay text after eating Sunken Temple food.
 	-- Druid
 	-- Hunter
 	-- Mage
@@ -938,6 +941,10 @@ G.unitframe.ChannelTicks = {
 }
 
 if E.ClassicSOD then
+	-- Mage
+	G.unitframe.ChannelTicks[401417] = 3 -- Regeneration
+	G.unitframe.ChannelTicks[412510] = 3 -- Mass Regeneration
+	-- Priest
 	G.unitframe.ChannelTicks[402261] = 3 -- Penance (DPS)
 	G.unitframe.ChannelTicks[402277] = 3 -- Penance (Healing)
 	G.unitframe.ChannelTicks[413259] = 5 -- Mind Sear (Rune)

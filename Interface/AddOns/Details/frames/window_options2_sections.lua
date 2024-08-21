@@ -401,50 +401,27 @@ do
                 desc = Loc ["STRING_OPTIONS_SEGMENTSSAVE_DESC"],
             },
 
-            {type = "blank"},
-            {type = "label", get = function() return "Auto Erase:" end, text_template = subSectionTitleTextTemplate},
-
-            {--auto erase settings | erase data
-                type = "select",
-                get = function() return Details.segments_auto_erase end,
-                values = function()
-                    return buildEraseDataMenu()
-                end,
-                name = Loc ["STRING_OPTIONS_ED"],
-                desc = Loc ["STRING_OPTIONS_ED_DESC"],
-            },
-
-            {--auto erase trash segments
-                type = "toggle",
-                get = function() return Details.trash_auto_remove end,
+            {--max segments on boss wipes
+                type = "range",
+                get = function() return Details.segments_amount_boss_wipes end,
                 set = function(self, fixedparam, value)
-                    Details.trash_auto_remove = value
+                    Details.segments_amount_boss_wipes = value
                     afterUpdate()
                 end,
-                name = Loc ["STRING_OPTIONS_CLEANUP"],
-                desc = Loc ["STRING_OPTIONS_CLEANUP_DESC"],
-                boxfirst = true,
+                min = 1,
+                max = 40,
+                step = 1,
+                name = "Segments Boss Wipe",
+                desc = "Amount of segments to keep for wipes on the same boss.",
             },
-            {--auto erase world segments
+            {--wipe segments keep the best segments and delete the worst ones
                 type = "toggle",
-                get = function() return Details.world_combat_is_trash end,
+                get = function() return Details.segments_boss_wipes_keep_best_performance end,
                 set = function(self, fixedparam, value)
-                    Details.world_combat_is_trash = value
-                    afterUpdate()
+                    Details.segments_boss_wipes_keep_best_performance = value
                 end,
-                name = Loc ["STRING_OPTIONS_PERFORMANCE_ERASEWORLD"],
-                desc = Loc ["STRING_OPTIONS_PERFORMANCE_ERASEWORLD_DESC"],
-                boxfirst = true,
-            },
-            {--erase chart data
-                type = "toggle",
-                get = function() return Details.clear_graphic end,
-                set = function(self, fixedparam, value)
-                    Details.clear_graphic = value
-                    afterUpdate()
-                end,
-                name = Loc ["STRING_OPTIONS_ERASECHARTDATA"],
-                desc = Loc ["STRING_OPTIONS_ERASECHARTDATA_DESC"],
+                name = "Keep Best Performance (boss wipes)",
+                desc = "Keep the segments with more progress in the boss health and delete the ones with less progress.",
                 boxfirst = true,
             },
 
@@ -685,6 +662,53 @@ do
 				desc = "Your Bar Color",
                 boxfirst = true,
             },
+
+            {type = "blank"},
+            {type = "label", get = function() return "Auto Erase:" end, text_template = subSectionTitleTextTemplate},
+
+            {--auto erase settings | erase data
+                type = "select",
+                get = function() return Details.segments_auto_erase end,
+                values = function()
+                    return buildEraseDataMenu()
+                end,
+                name = Loc ["STRING_OPTIONS_ED"],
+                desc = Loc ["STRING_OPTIONS_ED_DESC"],
+            },
+
+            {--auto erase trash segments
+                type = "toggle",
+                get = function() return Details.trash_auto_remove end,
+                set = function(self, fixedparam, value)
+                    Details.trash_auto_remove = value
+                    afterUpdate()
+                end,
+                name = Loc ["STRING_OPTIONS_CLEANUP"],
+                desc = Loc ["STRING_OPTIONS_CLEANUP_DESC"],
+                boxfirst = true,
+            },
+            {--auto erase world segments
+                type = "toggle",
+                get = function() return Details.world_combat_is_trash end,
+                set = function(self, fixedparam, value)
+                    Details.world_combat_is_trash = value
+                    afterUpdate()
+                end,
+                name = Loc ["STRING_OPTIONS_PERFORMANCE_ERASEWORLD"],
+                desc = Loc ["STRING_OPTIONS_PERFORMANCE_ERASEWORLD_DESC"],
+                boxfirst = true,
+            },
+            {--erase chart data
+                type = "toggle",
+                get = function() return Details.clear_graphic end,
+                set = function(self, fixedparam, value)
+                    Details.clear_graphic = value
+                    afterUpdate()
+                end,
+                name = Loc ["STRING_OPTIONS_ERASECHARTDATA"],
+                desc = Loc ["STRING_OPTIONS_ERASECHARTDATA_DESC"],
+                boxfirst = true,
+            },            
 
         }
 
@@ -3716,7 +3740,7 @@ do
                 end
             end
             
-            if (pluginObject.OpenOptionsPanel) then
+            if (rawget(pluginObject, "OpenOptionsPanel")) then
                 DF:NewButton(bframe, nil, "$parentOptionsButton"..i, "OptionsButton"..i, 86, 18, pluginObject.OpenOptionsPanel, nil, nil, nil, Loc ["STRING_OPTIONS_PLUGINS_OPTIONS"], nil, options_button_template)
                 bframe ["OptionsButton"..i]:SetPoint("topleft", anchorFrame, "topleft", 510, y-0)
                 bframe ["OptionsButton"..i]:SetTextColor(button_color_rgb)
@@ -4286,8 +4310,27 @@ do
                     Details.tooltip.fontshadow = value
                     afterUpdate()
                 end,
-                name = Loc ["STRING_OPTIONS_TEXT_LOUTILINE"],
+                name = Loc ["STRING_OPTIONS_TEXT_OUTLINE"],
                 desc = Loc ["STRING_OPTIONS_TOOLTIPS_FONTSHADOW_DESC"],
+            },
+
+			{--shadow color
+                type = "color",
+                get = function()
+                    local r, g, b, a = unpack(Details.tooltip.fontcontour)
+                    return {r, g, b, a}
+                end,
+                set = function(self, r, g, b, a)
+                    local color = Details.tooltip.fontcontour
+                    color[1] = r
+                    color[2] = g
+                    color[3] = b
+                    color[4] = a
+                    afterUpdate()
+                end,
+                name = "Shadow Color",
+                desc = "Color of the text shadow",
+                hidden = true,
             },
 
             {--text size
@@ -6383,7 +6426,7 @@ do
 			spellname_entry:SetPoint("left", spellname, "right", 2, 0)
 
 			local spellid_entry_func = function(arg1, arg2, spellid) 
-				local spellname, _, icon = GetSpellInfo(spellid)
+				local spellname, _, icon = _GetSpellInfo(spellid)
 				if (spellname) then
 					spellname_entry:SetText(spellname) 
 					addframe.spellIconButton.icon.texture = icon
@@ -6982,6 +7025,20 @@ do
                 end,
                 name = Loc["STRING_OPTIONS_MPLUS_SHOWENDPANEL"],
                 desc = Loc["STRING_OPTIONS_MPLUS_SHOWENDPANEL"],
+            },
+
+            {--time to auto hide
+                type = "range",
+                get = function() return Details.mythic_plus.autoclose_time end,
+                set = function(self, fixedparam, value)
+                    Details.mythic_plus.autoclose_time = value
+                    afterUpdate()
+                end,
+                min = 20,
+                max = 300,
+                step = 1,
+                name = Loc ["STRING_OPTIONS_MPLUS_AUTO_CLOSE_TIME"],
+                desc = Loc ["STRING_OPTIONS_MPLUS_AUTO_CLOSE_TIME_DESC"],
             },
         }
 

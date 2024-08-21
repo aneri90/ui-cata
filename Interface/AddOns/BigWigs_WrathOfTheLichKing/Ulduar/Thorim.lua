@@ -5,7 +5,7 @@
 local mod, CL = BigWigs:NewBoss("Thorim", 603, 1645)
 if not mod then return end
 mod:RegisterEnableMob(32865)
-mod:SetEncounterID(1141)
+mod:SetEncounterID(mod:Classic() and 752 or 1141)
 mod:SetRespawnTime(32)
 
 --------------------------------------------------------------------------------
@@ -144,7 +144,7 @@ end
 
 function mod:RuneDetonation(args)
 	if self:Me(args.destGUID) then
-		self:Say(args.spellId, 40332) -- 40332 = "Bomb"
+		self:Say(args.spellId, CL.bomb, nil, "Bomb")
 	end
 	self:TargetMessageOld(args.spellId, args.destName, "red")
 	self:TargetBar(args.spellId, 4, args.destName)

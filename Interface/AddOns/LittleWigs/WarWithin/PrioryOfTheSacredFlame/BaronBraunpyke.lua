@@ -1,4 +1,3 @@
-if not BigWigsLoader.isBeta then return end
 --------------------------------------------------------------------------------
 -- Module Declaration
 --
@@ -37,15 +36,15 @@ function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "VindictiveWrath", 422969)
 	self:Log("SPELL_CAST_START", "CastigatorsShield", 423015, 446649) -- Standard, Empowered
 	self:Log("SPELL_CAST_START", "BurningLight", 423051, 446657) -- Standard, Empowered
-	self:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", nil, "boss1") -- Hammer of Purity
+	self:Log("SPELL_CAST_START", "HammerOfPurity", 423062, 446598) -- Standard, Empowered
 end
 
 function mod:OnEngage()
 	self:StopBar(CL.active)
-	self:CDBar(423062, 9.7) -- Hammer of Purity
+	self:CDBar(423062, 8.5) -- Hammer of Purity
 	self:CDBar(423051, 17.0) -- Burning Light
 	self:CDBar(423015, 23.0) -- Castigator's Shield
-	self:CDBar(422969, 46.1) -- Vindictive Wrath
+	self:CDBar(422969, 45.8) -- Vindictive Wrath
 end
 
 --------------------------------------------------------------------------------
@@ -61,25 +60,23 @@ end
 function mod:VindictiveWrath(args)
 	self:Message(args.spellId, "cyan")
 	self:PlaySound(args.spellId, "info")
-	self:CDBar(args.spellId, 48.6)
+	self:CDBar(args.spellId, 48.1)
 end
 
 function mod:CastigatorsShield(args)
 	self:Message(423015, "orange")
 	self:PlaySound(423015, "alert")
-	self:CDBar(423015, 25.5)
+	self:CDBar(423015, 23.1)
 end
 
 function mod:BurningLight(args)
 	self:Message(423051, "red", CL.casting:format(args.spellName))
 	self:PlaySound(423051, "warning")
-	self:CDBar(423051, 31.6)
+	self:CDBar(423051, 32.7)
 end
 
-function mod:UNIT_SPELLCAST_SUCCEEDED(_, _, _, spellId)
-	if spellId == 446587 then -- Hammer of Purity
-		self:Message(423062, "yellow")
-		self:PlaySound(423062, "alarm")
-		self:CDBar(423062, 19.4)
-	end
+function mod:HammerOfPurity(args)
+	self:Message(423062, "yellow")
+	self:PlaySound(423062, "alarm")
+	self:CDBar(423062, 20.7)
 end

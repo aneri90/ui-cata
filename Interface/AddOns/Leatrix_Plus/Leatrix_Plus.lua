@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 4.0.11 (12th June 2024)
+-- 	Leatrix Plus 4.0.20 (14th August 2024)
 ----------------------------------------------------------------------
 
 --	01:Functions  02:Locks    03:Restart  40:Player   45:Rest
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "4.0.11"
+	LeaPlusLC["AddonVer"] = "4.0.20"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -5404,6 +5404,21 @@
 							_G[name]:GetScript("OnLeave")()
 							GameTooltip:Hide()
 						end)
+					elseif name == "ZygorGuidesViewerMapIcon" then
+						-- Zygor (uses LibDBIcon10_LeaPlusCustomIcon_ZygorGuidesViewerMapIcon)
+						local myButton = LibStub("LibDBIcon-1.0"):GetMinimapButton("LeaPlusCustomIcon_" .. name)
+						myButton.icon:SetTexture("Interface\\AddOns\\ZygorGuidesViewerClassicTBC\\Skins\\minimap-icon.tga")
+						hooksecurefunc(myButton.icon, "UpdateCoord", function()
+							myButton.icon:SetTexCoord(0, 0.5, 0, 0.25)
+						end)
+						myButton.icon:SetTexCoord(0, 0.5, 0, 0.25)
+						myButton:HookScript("OnEnter", function()
+							_G[name]:GetScript("OnEnter")(_G[name], true)
+							ReanchorTooltip(GameTooltip, myButton)
+						end)
+						myButton:HookScript("OnLeave", function()
+							GameTooltip:Hide()
+						end)
 					elseif name == "BtWQuestsMinimapButton"				-- BtWQuests
 						or name == "TomCats-MinimapButton"				-- TomCat's Tours
 						or name == "LibDBIcon10_MethodRaidTools"		-- Method Raid Tools
@@ -7693,7 +7708,7 @@
 			local function TrainerFunc(frame)
 
 				-- Make the frame double-wide
-				UIPanelWindows["ClassTrainerFrame"] = {area = "override", pushable = 0, xoffset = -16, yoffset = 12, bottomClampOverride = 140 + 12, width = 714, height = 487, whileDead = 1}
+				UIPanelWindows["ClassTrainerFrame"] = {area = "override", pushable = 0, xoffset = -16, yoffset = 12, bottomClampOverride = 140 + 12, width = 685, height = 487, whileDead = 1}
 
 				-- Size the frame
 				_G["ClassTrainerFrame"]:SetSize(714, 487 + tall)
@@ -8038,7 +8053,7 @@
 			local function TradeSkillFunc(frame)
 
 				-- Make the tradeskill frame double-wide
-				UIPanelWindows["TradeSkillFrame"] = {area = "override", pushable = 3, xoffset = -16, yoffset = 12, bottomClampOverride = 140 + 12, width = 714, height = 487, whileDead = 1}
+				UIPanelWindows["TradeSkillFrame"] = {area = "override", pushable = 3, xoffset = -16, yoffset = 12, bottomClampOverride = 140 + 12, width = 685, height = 487, whileDead = 1}
 
 				-- Size the tradeskill frame
 				_G["TradeSkillFrame"]:SetWidth(714)
@@ -8394,7 +8409,7 @@
 
 			-- Function to unregister search event for guild bank since it isn't used
 			local function SetGuildBankFunc()
-				for i = 1, 6 do
+				for i = 1, MAX_GUILDBANK_TABS do
 					_G["GuildBankTab" .. i].Button:UnregisterEvent("INVENTORY_SEARCH_UPDATE")
 				end
 			end

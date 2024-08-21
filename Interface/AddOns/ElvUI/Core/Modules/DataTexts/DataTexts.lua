@@ -14,7 +14,6 @@ local hooksecurefunc = hooksecurefunc
 
 local CloseDropDownMenus = CloseDropDownMenus
 local CreateFrame = CreateFrame
-local EasyMenu = EasyMenu
 local GetCurrencyInfo = GetCurrencyInfo
 local GetCurrencyListInfo = GetCurrencyListInfo
 local GetNumSpecializations = GetNumSpecializations
@@ -74,7 +73,7 @@ function DT:QuickDTMode(_, key, active)
 		if active == 1 and MouseIsOver(DT.SelectedDatatext) then
 			DT.OnLeave(DT.SelectedDatatext)
 			E:SetEasyMenuAnchor(E.EasyMenu, DT.SelectedDatatext)
-			EasyMenu(QuickList, E.EasyMenu, nil, nil, nil, 'MENU')
+			E:ComplicatedMenu(QuickList, E.EasyMenu, nil, nil, nil, 'MENU')
 		elseif _G.DropDownList1:IsShown() and not _G.DropDownList1:IsMouseOver() then
 			CloseDropDownMenus()
 		end
@@ -167,15 +166,15 @@ end
 
 function DT:ReleasePanel(givenName)
 	local panel = DT.PanelPool.InUse[givenName]
-	if panel then
-		DT:EmptyPanel(panel)
-		DT.PanelPool.Free[givenName] = panel
-		DT.PanelPool.InUse[givenName] = nil
-		DT.RegisteredPanels[givenName] = nil
+	if not panel then return end
 
-		if E.db.movers then
-			E.db.movers[panel.moverName] = nil
-		end
+	DT:EmptyPanel(panel)
+	DT.PanelPool.Free[givenName] = panel
+	DT.PanelPool.InUse[givenName] = nil
+	DT.RegisteredPanels[givenName] = nil
+
+	if E.db.movers then
+		E.db.movers[panel.moverName] = nil
 	end
 end
 
@@ -644,6 +643,8 @@ end
 
 function DT:UpdatePanelAttributes(name, db, fromLoad)
 	local Panel = DT.PanelPool.InUse[name]
+	if not Panel then return end
+
 	DT.OnLeave(Panel)
 
 	Panel.db = db
@@ -801,7 +802,7 @@ end
 
 function DT:CURRENCY_DISPLAY_UPDATE(_, currencyID)
 	if currencyID and not DT.CurrencyList[tostring(currencyID)] then
-		local name = DT:CurrencyInfo(currencyID)
+		local _, name = DT:CurrencyInfo(currencyID)
 		if name then
 			DT:PopulateData(true)
 		end
@@ -862,6 +863,17 @@ function DT:BuildTables()
 	db.serverID[E.serverID][E.myrealm] = true
 end
 
+function DT:CloseMenus()
+	if E.Retail then
+		local manager = _G.Menu.GetManager()
+		if manager then
+			manager:CloseMenus()
+		end
+	else
+		CloseDropDownMenus()
+	end
+end
+
 function DT:Initialize()
 	DT.Initialized = true
 	DT.db = E.db.datatexts
@@ -871,16 +883,18 @@ function DT:Initialize()
 	E.EasyMenu:SetClampedToScreen(true)
 	E.EasyMenu:EnableMouse(true)
 	E.EasyMenu.MenuSetItem = function(dt, value)
-		local panelDB = dt.battlePanel and DT.db.battlePanel or DT.db.panels
-
-		panelDB[dt.parentName][dt.pointIndex] = value
-		DT:UpdatePanelInfo(dt.parentName, dt.parent)
+		local panelDB = (dt and dt.battlePanel) and DT.db.battlePanel or DT.db.panels
+		if panelDB then
+			panelDB[dt.parentName][dt.pointIndex] = value
+			DT:UpdatePanelInfo(dt.parentName, dt.parent)
+		end
 
 		DT.SelectedDatatext = nil
-		CloseDropDownMenus()
+
+		DT:CloseMenus()
 	end
 	E.EasyMenu.MenuGetItem = function(dt, value)
-		local panelDB = dt.battlePanel and DT.db.battlePanel or DT.db.panels
+		local panelDB = (dt and dt.battlePanel) and DT.db.battlePanel or DT.db.panels
 		return dt and (panelDB[dt.parentName] and panelDB[dt.parentName][dt.pointIndex] == value)
 	end
 

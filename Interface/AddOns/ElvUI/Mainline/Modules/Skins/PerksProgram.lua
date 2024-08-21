@@ -4,10 +4,25 @@ local S = E:GetModule('Skins')
 local _G = _G
 local hooksecurefunc = hooksecurefunc
 
+local function HandleSetButtons(button)
+	if not button then return end
+
+	if not button.Icon.backdrop then
+		S:HandleIcon(button.Icon, true)
+		S:HandleIconBorder(button.IconBorder, button.Icon.backdrop)
+	end
+
+	button.BackgroundTexture:SetAlpha(0)
+	button.SelectedTexture:SetColorTexture(1, .8, 0, .25)
+	button.SelectedTexture:SetInside()
+	button.HighlightTexture:SetColorTexture(1, 1, 1, .25)
+	button.HighlightTexture:SetInside()
+end
+
 local function HandleRewardButton(box)
 	local container = box.ContentsContainer
-	if container and not container.isSkinned then
-		container.isSkinned = true
+	if container and not container.IsSkinned then
+		container.IsSkinned = true
 
 		S:HandleIcon(container.Icon)
 		S.ReplaceIconString(container.Price)
@@ -25,12 +40,6 @@ local function HandleSortLabel(button)
 	if button and button.Label then
 		button.Label:FontTemplate()
 	end
-end
-
-local function HandleButton(button) -- Same as Barber Skin
-	S:HandleButton(button, nil, nil, nil, true, nil, nil, nil, true)
-	button:SetScale(E.uiscale)
-	button:Size(200, 50)
 end
 
 local function HandleNextPrev(button)
@@ -88,6 +97,10 @@ local function GlowEmitterFactory_Hide(frame, target)
 	GlowEmitterFactory_Toggle(frame, target)
 end
 
+local function DetailsScrollBoxUpdate(box)
+	box:ForEachFrame(HandleSetButtons)
+end
+
 function S:Blizzard_PerksProgram()
 	if not (E.private.skins.blizzard.enable and E.private.skins.blizzard.perks) then return end
 
@@ -99,7 +112,7 @@ function S:Blizzard_PerksProgram()
 	end
 
 	if products then
-		S:HandleButton(products.PerksProgramFilter.FilterDropDownButton)
+		S:HandleButton(products.PerksProgramFilter)
 
 		local currency = products.PerksProgramCurrencyFrame
 		if currency then
@@ -112,7 +125,13 @@ function S:Blizzard_PerksProgram()
 		if details then
 			details.Border:Hide()
 			details:SetTemplate('Transparent')
-			S:HandleTrimScrollBar(details.SetDetailsScrollBoxContainer.ScrollBar)
+
+			local container = details.SetDetailsScrollBoxContainer
+			if container then
+				S:HandleTrimScrollBar(container.ScrollBar)
+
+				hooksecurefunc(container.ScrollBox, 'Update', DetailsScrollBoxUpdate)
+			end
 
 			local carousel = details.CarouselFrame
 			if carousel and carousel.IncrementButton then
@@ -144,6 +163,7 @@ function S:Blizzard_PerksProgram()
 	local footer = frame.FooterFrame
 	if footer then
 		S:HandleCheckBox(footer.TogglePlayerPreview)
+		S:HandleCheckBox(footer.ToggleMountSpecial)
 		S:HandleCheckBox(footer.ToggleHideArmor)
 
 		local armorText = footer.ToggleHideArmor.Text
@@ -153,9 +173,9 @@ function S:Blizzard_PerksProgram()
 
 		local purchase = footer.PurchaseButton
 		if purchase then
-			HandleButton(footer.LeaveButton)
-			HandleButton(footer.RefundButton)
-			HandleButton(footer.PurchaseButton)
+			S:HandleButton(footer.LeaveButton, nil, nil, nil, true, nil, nil, nil, true)
+			S:HandleButton(footer.RefundButton, nil, nil, nil, true, nil, nil, nil, true)
+			S:HandleButton(footer.PurchaseButton, nil, nil, nil, true, nil, nil, nil, true)
 
 			purchase:HookScript('OnEnter', PurchaseButton_OnEnter)
 			purchase:HookScript('OnLeave', PurchaseButton_OnLeave)

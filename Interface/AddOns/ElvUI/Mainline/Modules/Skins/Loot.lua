@@ -96,7 +96,7 @@ local function MasterLooterShow()
 	end
 
 	for _, child in next, { looter:GetChildren() } do
-		if not child.isSkinned and not child:GetName() and child:IsObjectType('Button') then
+		if not child.IsSkinned and not child:GetName() and child:IsObjectType('Button') then
 			if child:GetPushedTexture() then
 				S:HandleCloseButton(child)
 			else
@@ -104,7 +104,7 @@ local function MasterLooterShow()
 				child:StyleButton()
 			end
 
-			child.isSkinned = true
+			child.IsSkinned = true
 		end
 	end
 end
@@ -192,7 +192,7 @@ function S:LootFrame()
 			HistoryFrame.Bg:SetAlpha(0)
 		end
 
-		local Dropdown = HistoryFrame.EncounterDropDown
+		local Dropdown = HistoryFrame.EncounterDropdown
 		if Dropdown then
 			S:HandleDropDownBox(Dropdown)
 			hooksecurefunc(Dropdown, 'SetWidth', EncounterDropdownWidth)

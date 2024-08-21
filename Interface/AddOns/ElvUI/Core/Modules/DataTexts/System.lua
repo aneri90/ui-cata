@@ -24,9 +24,9 @@ local UpdateAddOnMemoryUsage = UpdateAddOnMemoryUsage
 
 local GetCVarBool = C_CVar.GetCVarBool
 
-local GetAddOnInfo = (C_AddOns and C_AddOns.GetAddOnInfo) or GetAddOnInfo
-local GetNumAddOns = (C_AddOns and C_AddOns.GetNumAddOns) or GetNumAddOns
-local IsAddOnLoaded = (C_AddOns and C_AddOns.IsAddOnLoaded) or IsAddOnLoaded
+local GetAddOnInfo = C_AddOns.GetAddOnInfo
+local GetNumAddOns = C_AddOns.GetNumAddOns
+local IsAddOnLoaded = C_AddOns.IsAddOnLoaded
 
 local UNKNOWN = UNKNOWN
 
@@ -113,6 +113,8 @@ end
 
 local infoDisplay, ipTypes = {}, {'IPv4', 'IPv6'}
 local function OnEnter(_, slow)
+	if not db.showTooltip then return end
+
 	DT.tooltip:ClearLines()
 	enteredFrame = true
 

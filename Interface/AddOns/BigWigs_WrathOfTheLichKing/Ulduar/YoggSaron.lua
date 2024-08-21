@@ -5,7 +5,7 @@
 local mod, CL = BigWigs:NewBoss("Yogg-Saron", 603, 1649)
 if not mod then return end
 mod:RegisterEnableMob(33288, 33134, 33890) -- Yogg-Saron, Sara, Brain of Yogg-Saron
-mod:SetEncounterID(1143)
+mod:SetEncounterID(mod:Classic() and 756 or 1143)
 mod:SetRespawnTime(46)
 
 --------------------------------------------------------------------------------
@@ -207,7 +207,7 @@ end
 function mod:MaladyOfTheMind(args)
 	self:TargetMessageOld(args.spellId, args.destName, "yellow", "alert", L.malady_message)
 	if self:Me(args.destGUID) then
-		self:Say(args.spellId, L.malady_message)
+		self:Say(args.spellId, L.malady_message, nil, "Malady")
 	end
 	self:PrimaryIcon(args.spellId, args.destName)
 end

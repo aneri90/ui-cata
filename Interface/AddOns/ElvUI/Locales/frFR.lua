@@ -2,14 +2,19 @@
 local E = unpack(ElvUI)
 local L = E.Libs.ACL:NewLocale('ElvUI', 'frFR')
 
+L["Player"] = "Joueur"
+L["Small"] = "Petit"
+L["Medium"] = "Moyen"
+L["Large"] = "Grand"
 L["Countdown"] = "Compte à rebours"
 L["Reset"] = "Réinitialiser"
 L["ELVUI_DESC"] = ("*ElvUI|r |cFFffffffest une interface de remplacement complète pour World of Warcraft.|r"):gsub('*', E.InfoColor)
 L["UPDATE_REQUEST"] = "There seems to be an issue with your installation. Please reinstall ElvUI."
 L[" |cff00ff00bound to |r"] = "|cff00ff00lié à |r"
 L["%s frame has a conflicting anchor point. Forcing the Buffs to be attached to the main unitframe."] = "Le cadre %s a un point d'ancrage en conflit. Les améliorations seront forcées à s'attacher à la frame principale de l'unité."
-L["%s is attempting to share his filters with you. Would you like to accept the request?"] = "%s tente de partager ses filtres avec vous. Souhaitez-vous accepter la demande ?"
-L["%s is attempting to share the profile %s with you. Would you like to accept the request?"] = "%s tente de partager le profil %s avec vous. Souhaitez-vous accepter la demande ?"
+L["%s is attempting to share the Private Profile (%s) with you. Would you like to accept the request?"] = true
+L["%s is attempting to share the Global Profile with you. Would you like to accept the request?"] = true
+L["%s is attempting to share the Profile (%s) with you. Would you like to accept the request?"] = "%s tente de partager le Profil (%s) avec vous. Souhaitez-vous accepter la demande ?"
 L["%s: %s tried to call the protected function '%s'."] = "%s : %s a tenté d'appeler la fonction protégée '%s'."
 L["(Ctrl & Shift Click) Toggle CPU Profiling"] = "(Ctrl & Shift Clic) Basculer le profilage du CPU"
 L["(Hold Shift) Memory Usage"] = "(Maintenir Shift) Utilisation de la mémoire"
@@ -103,6 +108,7 @@ L["Debuffs"] = "Affaiblissements"
 L["Deficit:"] = "Déficit :"
 L["Delete gray items?"] = "Supprimer les objets gris ?"
 L["Deposit Reagents"] = "Déposer les composants"
+L["Deposit Warbound Items"] = true
 L["Disable Warning"] = "Désactiver l'avertissement"
 L["Disable"] = "Désactiver"
 L["Disabled"] = "Désactivé"
@@ -128,7 +134,7 @@ L["Error resetting UnitFrame."] = "Erreur lors de la réinitialisation du cadre 
 L["EventToastWidget"] = "Widget de message d'événement"
 L["Experience Bar"] = "Barre d'expérience"
 L["Experience"] = "Expérience"
-L["Filter download complete from %s, would you like to apply changes now?"] = "Téléchargement du filtre complet depuis %s, souhaitez-vous appliquer les changements maintenant ?"
+L["Download complete from %s, would you like to apply changes now?"] = true
 L["Finished"] = "Terminé"
 L["Fishy Loot"] = "Butin de pêche"
 L["Focus Aura Bars"] = "Barres d'auras de la focalisation"
@@ -171,6 +177,7 @@ L["Importance: |cffD3CF00Medium|r"] = "Importance : |cffD3CF00Moyenne|r"
 L["Importance: |cffFF3333High|r"] = "Importance : |cffFF3333Élevée|r"
 L["In Combat"] = "En combat"
 L["In Progress"] = "En cours"
+L["Include Reagents"] = "Inclure les composants"
 L["INCOMPATIBLE_ADDON"] = "%s n'est pas compatible avec %s.\nVeuillez sélectionner l'addon/module à utiliser."
 L["Installation Complete"] = "Installation terminée"
 L["Interrupted %s's |cff71d5ff|Hspell:%d:0|h[%s]|h|r!"] = "Interruption de %s |cff71d5ff|Hspell:%d:0|h[%s]|h|r !"
@@ -236,7 +243,7 @@ L["Need help? Join our Discord: https://discord.tukui.org"] = "Besoin d'aide ? R
 L["New Profile will create a fresh profile for this character."] = "Nouveau profil va créer un profil frais pour ce personnage."
 L["New Profile"] = "Nouveau profil"
 L["No bindings set."] = "Aucune combinaison de touches définie."
-L["No gray items to sell."] = true
+L["No gray items to sell."] = "Aucun objet gris à vendre."
 L["No Guild"] = "Pas de guilde"
 L["No Loot"] = "Pas de butin"
 L["None"] = "Aucun"
@@ -420,21 +427,21 @@ L["|cFFffffffShift + Right Click:|r Select Output Audio Device"] = "|cFFffffffMa
 L["DESC_MOVERCONFIG"] = [=[Cadres déverrouillés. Déplacez-les et cliquez sur Verrouiller une fois terminé.
 
 Options:
-  LeftClick - Toggle Nudge Frame.
-  Clic Droit - Open Config Section.
+  Clic Gauche - Ouvre le cadre d'aide au positionnement.
+  Clic Droit - Ouvre la section Configuration.
   Shift + clic droit - Cacher temporairement.
   Ctrl + clic droit - Réinitialiser la position par défaut.
 ]=]
 
-L["EHELP_COMMANDS"] = ([=[Here is a list of all important *ElvUI|r commands:
- */ec|r or */elvui|r  -  Toggle the *Options|r.
- */kb|r  -  Toggle the keybind mode.
- */emove|r  -  Toggle anchors to reposition various elements.
- */ereset|r  -  Reset all frames to their original positions.
- */bgstats|r  -  Toggle Battleground stats on your DataTexts.
- */estatus|r  -  Important informations for support questions.
- */egrid|r ^64|r or ^128|r or ^256|r  -  Toggle a pixel grid.
- */edebug|r ^on|r or ^off|r  -  Disable all AddOns except ElvUI.
-  NOTE: */edebug|r ^off|r will re-enable the addons disabled from
-  using */edebug|r ^on|r within that session.
+L["EHELP_COMMANDS"] = ([=[Voici une liste de toutes les commandes importantes d'*ElvUI|r :
+ */ec|r or */elvui|r  -  Ouvre les *Options|r.
+ */kb|r  -  Ouvre le mode des raccourcis clavier.
+ */emove|r  -  Ouvre les ancres, afin de repositionner divers éléments.
+ */ereset|r  -  Réinitialise tous les cadres d'unités à leur position originale.
+ */bgstats|r  -  Ouvre les statistiques de Champ de bataille au niveau de vos Textes d'informations.
+ */estatus|r  -  Informations importantes à fournir si vous posez une question au support.
+ */egrid|r ^64|r or ^128|r or ^256|r  -  Ouvre une grille pixel.
+ */edebug|r ^on|r or ^off|r  -  Désactive tous les AddOns sauf ElvUI.
+  NOTE: */edebug|r ^off|r réactivera tous les AddOns désactivés par
+  la commande */edebug|r ^on|r pendant cette session.
 ]=]):gsub('*', E.InfoColor):gsub('%^', E.InfoColor2)

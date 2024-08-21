@@ -85,7 +85,6 @@ L[ [=[Active boss mod addon: |cFFffcc00DBM|r
 Note: This trigger will use BigWigs or DBM, in that order if both are installed.]=] ] = "Componente aggiuntivo mod boss attivo: |cFFffcc00DBM|r Nota: questa attivazione utilizzerà BigWigs o DBM, in quest'ordine se entrambi sono installati."
 L["Add"] = "Aggiungi"
 L["Add Missing Auras"] = "Aggiungi Aure Mancanti"
-L["Additional Trigger Replacements"] = "Ulteriori Sostituzioni di Innesco"
 L["Advanced Caster's Target Check"] = "Controllo del bersaglio dell'incantatore avanzato"
 L["Affected"] = "Affetto"
 L["Affected Unit Count"] = "Conta Unità Interessate"
@@ -94,8 +93,6 @@ L["Afk"] = "Afk"
 L["Aggro"] = "Aggro"
 L["Agility"] = "Agilità"
 L["Ahn'Qiraj"] = "Ahn'Qiraj"
---[[Translation missing --]]
-L["Aku'mai"] = "Aku'mai"
 L["Alert Type"] = "Tipo di Allerta"
 L["Alive"] = "Vivo"
 L["All"] = "Tutto"
@@ -143,10 +140,6 @@ L["At missing Value"] = "Al valore mancante"
 L["At Percent"] = "In Percentuale"
 L["At Value"] = "Al valore"
 L["At War"] = "In guerra"
---[[Translation missing --]]
-L["Atal'ai Defenders"] = "Atal'ai Defenders"
---[[Translation missing --]]
-L["Atal'alarion"] = "Atal'alarion"
 L["Attach to End"] = "Aggiungi alla Fine"
 L["Attach to Start"] = "Aggiungi all'inizio"
 L["Attack Power"] = "Potenza d'attacco"
@@ -183,18 +176,17 @@ L["Automatic"] = "Automatico"
 L["Automatic Length"] = "Lunghezza Automatica"
 L["Automatic Rotation"] = "Rotazione Automatica"
 L["Available features: %s"] = "Funzionalità disponibili: %s"
---[[Translation missing --]]
-L["Avatar of Hakkar"] = "Avatar of Hakkar"
 L["Avoidance (%)"] = "Elusione (%)"
 L["Avoidance Rating"] = "Grado di Elusione"
 L["Ayamiss the Hunter"] = "Ayamiss il Cacciatore"
+--[[Translation missing --]]
+L["Azuregos"] = "Azuregos"
 L["Back and Forth"] = "Avanti e indietro"
 L["Background"] = "Sfondo"
 L["Background Color"] = "Colore Sfondo"
 L["Bar Color/Gradient Start"] = "Inizio Colore/Inclinazione della Barra"
 --[[Translation missing --]]
 L["Bar Texture"] = "Bar Texture"
-L["Baron Aquanis"] = "Barone Acquanis"
 L["Baron Geddon"] = "Barone Geddon"
 --[[Translation missing --]]
 L["Battle for Azeroth"] = "Battle for Azeroth"
@@ -216,7 +208,6 @@ L["BigWigs Message"] = "Messaggio di BigWigs"
 L["BigWigs Stage"] = "BigWigs Stage"
 L["BigWigs Timer"] = "Timer di BigWigs"
 L["Black Wing Lair"] = "Sotterranei dell'Ala Nera"
-L["Blackfathom Deeps"] = "Abissi di Fondocupo"
 L["Blizzard Combat Text"] = "Testo di combattimento Blizzard"
 L["Blizzard Cooldown Reduction"] = "Riduzione Cooldown Blizzard"
 L["Block"] = "Bloccare"
@@ -248,6 +239,8 @@ L["Bottom Right"] = "Basso a destra"
 L["Bottom to Top"] = "Basso verso l'alto"
 L["Bounce"] = "Balzo"
 L["Bounce with Decay"] = "Bounce with Decay"
+--[[Translation missing --]]
+L["BreakUpLargeNumbers (Blizzard)"] = "BreakUpLargeNumbers (Blizzard)"
 L["Broodlord Lashlayer"] = "Signore della Progenie Lashlayer"
 L["Buff"] = "Buff"
 --[[Translation missing --]]
@@ -335,6 +328,8 @@ L["Combat Log"] = "Registro di combattimento"
 L[ [=[COMBAT_LOG_EVENT_UNFILTERED without a filter is generally advised against as it’s very performance costly.
 Find more information:
 https://github.com/WeakAuras/WeakAuras2/wiki/Custom-Triggers#events]=] ] = "COMBAT_LOG_EVENT_UNFILTERED senza filtro è generalmente sconsigliato poiché è molto costoso in termini di prestazioni. Trova ulteriori informazioni: https://github.com/WeakAuras/WeakAuras2/wiki/Custom-Triggers#events"
+--[[Translation missing --]]
+L["Communities"] = "Communities"
 L["Condition Custom Text"] = "Condizione Testo Personalizzato"
 L["Conditions"] = "Condizioni"
 L["Contains"] = "Contiene"
@@ -438,6 +433,8 @@ L["Defensive Stats"] = "Defensive Stats"
 --[[Translation missing --]]
 L["Deflect"] = "Deflect"
 --[[Translation missing --]]
+L["Delve"] = "Delve"
+--[[Translation missing --]]
 L["Desaturate"] = "Desaturate"
 --[[Translation missing --]]
 L["Desaturate Background"] = "Desaturate Background"
@@ -506,11 +503,7 @@ L["Down, then Right"] = "Down, then Right"
 --[[Translation missing --]]
 L["Dragonflight"] = "Dragonflight"
 --[[Translation missing --]]
-L["Dragonriding"] = "Dragonriding"
---[[Translation missing --]]
 L["Drain"] = "Drain"
---[[Translation missing --]]
-L["Dreamscythe and Weaver"] = "Dreamscythe and Weaver"
 --[[Translation missing --]]
 L["Dropdown Menu"] = "Dropdown Menu"
 --[[Translation missing --]]
@@ -593,6 +586,8 @@ L["Enables (incorrect) round down of seconds, which was the previous default beh
 L["Enchant Applied"] = "Enchant Applied"
 --[[Translation missing --]]
 L["Enchant Found"] = "Enchant Found"
+--[[Translation missing --]]
+L["Enchant ID"] = "Enchant ID"
 --[[Translation missing --]]
 L["Enchant Missing"] = "Enchant Missing"
 --[[Translation missing --]]
@@ -716,8 +711,6 @@ L["Feature %q is already disabled"] = "Feature %q is already disabled"
 --[[Translation missing --]]
 L["Feature %q is already enabled"] = "Feature %q is already enabled"
 --[[Translation missing --]]
-L["Festering Rotslime"] = "Festering Rotslime"
---[[Translation missing --]]
 L["Fetch Absorb"] = "Fetch Absorb"
 --[[Translation missing --]]
 L["Fetch Heal Absorb"] = "Fetch Heal Absorb"
@@ -753,6 +746,8 @@ L["Flip"] = "Flip"
 L["Floor"] = "Floor"
 --[[Translation missing --]]
 L["Focus"] = "Focus"
+--[[Translation missing --]]
+L["Follower Dungeon"] = "Follower Dungeon"
 --[[Translation missing --]]
 L["Font"] = "Font"
 --[[Translation missing --]]
@@ -813,15 +808,11 @@ L["Garr"] = "Garr"
 --[[Translation missing --]]
 L["Gehennas"] = "Gehennas"
 --[[Translation missing --]]
-L["Gelihast"] = "Gelihast"
---[[Translation missing --]]
 L["General"] = "General"
 --[[Translation missing --]]
 L["General Rajaxx"] = "General Rajaxx"
 --[[Translation missing --]]
 L["GetNameAndIcon Function (fallback state)"] = "GetNameAndIcon Function (fallback state)"
---[[Translation missing --]]
-L["Ghamoo-ra"] = "Ghamoo-ra"
 --[[Translation missing --]]
 L["Glancing"] = "Glancing"
 --[[Translation missing --]]
@@ -963,6 +954,8 @@ L["Ignore Rune CDs"] = "Ignore Rune CDs"
 --[[Translation missing --]]
 L["Ignore Self"] = "Ignore Self"
 --[[Translation missing --]]
+L["Ignore Spell Override"] = "Ignore Spell Override"
+--[[Translation missing --]]
 L["Immune"] = "Immune"
 --[[Translation missing --]]
 L["Important"] = "Important"
@@ -1099,19 +1092,17 @@ L["Item Type"] = "Item Type"
 --[[Translation missing --]]
 L["Item Type Equipped"] = "Item Type Equipped"
 --[[Translation missing --]]
-L["Jammal'an and Ogom"] = "Jammal'an and Ogom"
---[[Translation missing --]]
 L["Jin'do the Hexxer"] = "Jin'do the Hexxer"
 --[[Translation missing --]]
 L["Journal Stage"] = "Journal Stage"
+--[[Translation missing --]]
+L["Kazzak"] = "Kazzak"
 --[[Translation missing --]]
 L["Keep Inside"] = "Keep Inside"
 --[[Translation missing --]]
 L["Kel'Thuzad"] = "Kel'Thuzad"
 --[[Translation missing --]]
 L["Kurinnaxx"] = "Kurinnaxx"
---[[Translation missing --]]
-L["Lady Sarevess"] = "Lady Sarevess"
 --[[Translation missing --]]
 L["Large"] = "Large"
 --[[Translation missing --]]
@@ -1174,8 +1165,6 @@ L["Loot Specialization"] = "Loot Specialization"
 L["Loot Specialization Id"] = "Loot Specialization Id"
 --[[Translation missing --]]
 L["Loot Specialization Name"] = "Loot Specialization Name"
---[[Translation missing --]]
-L["Lorgus Jett"] = "Lorgus Jett"
 --[[Translation missing --]]
 L["Lost"] = "Lost"
 --[[Translation missing --]]
@@ -1311,8 +1300,6 @@ L["Monster Yell"] = "Monster Yell"
 --[[Translation missing --]]
 L["Moon"] = "Moon"
 --[[Translation missing --]]
-L["Morphaz and Hazzas"] = "Morphaz and Hazzas"
---[[Translation missing --]]
 L["Most remaining time"] = "Most remaining time"
 --[[Translation missing --]]
 L["Mounted"] = "Mounted"
@@ -1392,8 +1379,6 @@ L["Not in Smart Group"] = "Not in Smart Group"
 L["Not on Cooldown"] = "Not on Cooldown"
 --[[Translation missing --]]
 L["Not On Threat Table"] = "Not On Threat Table"
---[[Translation missing --]]
-L["Note, that cross realm transmission is possible if you are on the same group"] = "Note, that cross realm transmission is possible if you are on the same group"
 --[[Translation missing --]]
 L["Note: Due to how complicated the swing timer behavior is and the lack of APIs from Blizzard, results are inaccurate in edge cases."] = "Note: Due to how complicated the swing timer behavior is and the lack of APIs from Blizzard, results are inaccurate in edge cases."
 --[[Translation missing --]]
@@ -1508,8 +1493,6 @@ L["Only if on a different realm"] = "Only if on a different realm"
 L["Only if Primary"] = "Only if Primary"
 --[[Translation missing --]]
 L["Onyxia"] = "Onyxia"
---[[Translation missing --]]
-L["Onyxia's Lair"] = "Onyxia's Lair"
 --[[Translation missing --]]
 L["Opaque"] = "Opaque"
 --[[Translation missing --]]
@@ -1683,8 +1666,6 @@ L["Pulse"] = "Pulse"
 --[[Translation missing --]]
 L["PvP Flagged"] = "PvP Flagged"
 --[[Translation missing --]]
-L["PvP Talent %i"] = "PvP Talent %i"
---[[Translation missing --]]
 L["PvP Talent selected"] = "PvP Talent selected"
 --[[Translation missing --]]
 L["PvP Talent Selected"] = "PvP Talent Selected"
@@ -1694,6 +1675,8 @@ L["Quality Id"] = "Quality Id"
 L["Quantity"] = "Quantity"
 --[[Translation missing --]]
 L["Quantity earned this week"] = "Quantity earned this week"
+--[[Translation missing --]]
+L["Quest Party"] = "Quest Party"
 --[[Translation missing --]]
 L["Queued Action"] = "Queued Action"
 --[[Translation missing --]]
@@ -1905,8 +1888,6 @@ L["Set IDs can be found on websites such as wowhead.com/cata/item-sets"] = "Set 
 --[[Translation missing --]]
 L["Set IDs can be found on websites such as wowhead.com/item-sets"] = "Set IDs can be found on websites such as wowhead.com/item-sets"
 --[[Translation missing --]]
-L["Shade of Eranikus"] = "Shade of Eranikus"
---[[Translation missing --]]
 L["Shadow Resistance"] = "Shadow Resistance"
 --[[Translation missing --]]
 L["Shadowlands"] = "Shadowlands"
@@ -1933,10 +1914,6 @@ L["Show Loss of Control"] = "Show Loss of Control"
 --[[Translation missing --]]
 L["Show On"] = "Show On"
 --[[Translation missing --]]
-L["Show Override"] = "Show Override"
---[[Translation missing --]]
-L["Show Override Spell"] = "Show Override Spell"
---[[Translation missing --]]
 L["Show Rested Overlay"] = "Show Rested Overlay"
 --[[Translation missing --]]
 L["Shrink"] = "Shrink"
@@ -1960,6 +1937,8 @@ L["Since Stack Gain"] = "Since Stack Gain"
 L["Since Stack Lost"] = "Since Stack Lost"
 --[[Translation missing --]]
 L["Size & Position"] = "Size & Position"
+--[[Translation missing --]]
+L["Skyriding"] = "Skyriding"
 --[[Translation missing --]]
 L["Slide Animation"] = "Slide Animation"
 --[[Translation missing --]]
@@ -2083,6 +2062,8 @@ L["Spirit"] = "Spirit"
 --[[Translation missing --]]
 L["Stack Count"] = "Stack Count"
 --[[Translation missing --]]
+L["Stack trace:"] = "Stack trace:"
+--[[Translation missing --]]
 L["Stacks"] = "Stacks"
 --[[Translation missing --]]
 L["Stacks Function"] = "Stacks Function"
@@ -2121,6 +2102,8 @@ L["Stolen"] = "Stolen"
 --[[Translation missing --]]
 L["Stop"] = "Stop"
 --[[Translation missing --]]
+L["Story Raid"] = "Story Raid"
+--[[Translation missing --]]
 L["Strength"] = "Strength"
 --[[Translation missing --]]
 L["String"] = "String"
@@ -2142,8 +2125,6 @@ L["Sulfuron Harbinger"] = "Sulfuron Harbinger"
 L["Summon"] = "Summon"
 --[[Translation missing --]]
 L["Sun"] = "Sun"
---[[Translation missing --]]
-L["Sunken Temple"] = "Sunken Temple"
 --[[Translation missing --]]
 L["Supports multiple entries, separated by commas"] = "Supports multiple entries, separated by commas"
 --[[Translation missing --]]
@@ -2227,7 +2208,7 @@ L["The 'ID' value can be found in the BigWigs options of a specific spell"] = "T
 --[[Translation missing --]]
 L["The Prophet Skeram"] = "The Prophet Skeram"
 --[[Translation missing --]]
-L["The trigger number is optional, and uses the trigger providing dynamic information if not specified."] = "The trigger number is optional, and uses the trigger providing dynamic information if not specified."
+L["The War Within"] = "The War Within"
 --[[Translation missing --]]
 L["There are %i updates to your auras ready to be installed!"] = "There are %i updates to your auras ready to be installed!"
 --[[Translation missing --]]
@@ -2381,8 +2362,6 @@ L["True"] = "True"
 --[[Translation missing --]]
 L["Trying to repair broken conditions in %s likely caused by a WeakAuras bug."] = "Trying to repair broken conditions in %s likely caused by a WeakAuras bug."
 --[[Translation missing --]]
-L["Twilight Lord Kelris"] = "Twilight Lord Kelris"
---[[Translation missing --]]
 L["Twin Emperors"] = "Twin Emperors"
 --[[Translation missing --]]
 L["Type"] = "Type"
@@ -2532,6 +2511,8 @@ L["Width"] = "Width"
 L["Wobble"] = "Wobble"
 --[[Translation missing --]]
 L["World Boss"] = "World Boss"
+--[[Translation missing --]]
+L["World Bosses"] = "World Bosses"
 --[[Translation missing --]]
 L["Wrap"] = "Wrap"
 --[[Translation missing --]]

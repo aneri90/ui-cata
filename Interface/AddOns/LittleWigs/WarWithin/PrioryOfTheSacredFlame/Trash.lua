@@ -1,4 +1,3 @@
-if not BigWigsLoader.isBeta then return end
 --------------------------------------------------------------------------------
 -- Module Declaration
 --
@@ -16,8 +15,9 @@ mod:RegisterEnableMob(
 	206696, -- Arathi Knight
 	206705, -- Arathi Footman
 	206697, -- Devout Priest
-	206698, -- Fanatical Mage
+	206698, -- Fanatical Mage / Fanatical Conjuror
 	206710, -- Lightspawn
+	221760, -- Risen Mage
 	217658 -- Sir Braunpyke
 )
 
@@ -39,29 +39,32 @@ if L then
 	L.devout_priest = "Devout Priest"
 	L.fanatical_mage = "Fanatical Mage"
 	L.lightspawn = "Lightspawn"
+	L.risen_mage = "Risen Mage"
 	L.sir_braunpyke = "Sir Braunpyke"
 
 	L.baron_braunpyke_warmup_trigger = "They've served their purpose. Baron, demonstrate your worth."
+	L.custom_on_autotalk = CL.autotalk
+	L.custom_on_autotalk_desc = "|cFFFF0000Requires Priest or Paladin.|r Automatically select the NPC dialog option that grants you the 'Blessing of the Sacred Flame' aura."
+	L.custom_on_autotalk_icon = mod:GetMenuIcon("SAY")
 end
 
 --------------------------------------------------------------------------------
 -- Initialization
 --
 
-local autotalk = mod:AddAutoTalkOption(true) -- TODO buff locale?
 function mod:GetOptions()
 	return {
 		-- Sacred Flame
-		autotalk,
+		"custom_on_autotalk",
 		435088, -- Blessing of the Sacred Flame
 		-- Guard Captain Suleyman
-		448485, -- Shield Slam
+		{448485, "TANK_HEALER"}, -- Shield Slam
 		448492, -- Thunderclap
 		-- Forge Master Damian
 		427897, -- Heat Wave
 		427950, -- Seal of Flame
 		-- High Priest Aemya
-		429091, -- Inner Light
+		429091, -- Inner Fire
 		428150, -- Reflective Shield
 		-- Sergeant Shaynemail
 		424621, -- Brutal Smash
@@ -74,20 +77,20 @@ function mod:GetOptions()
 		{424420, "DISPEL"}, -- Cinderblast
 		424462, -- Ember Storm
 		-- Arathi Knight
-		427609, -- Disrupting Shout
+		{427609, "NAMEPLATE"}, -- Disrupting Shout
 		-- Arathi Footman
-		427342, -- Defend
+		{427342, "NAMEPLATE"}, -- Defend
 		-- Devout Priest
-		427356, -- Greater Heal
-		{427346, "DISPEL"}, -- Inner Light
+		{427356, "NAMEPLATE"}, -- Greater Heal
+		{427346, "DISPEL", "NAMEPLATE"}, -- Inner Fire
 		-- Fanatical Mage
-		427484, -- Flamestrike
+		{427484, "NAMEPLATE"}, -- Flamestrike
 		-- Lightspawn
 		427601, -- Burst of Light
-		-- Sir Braunpyke
-		451818, -- Crushing Leap
+		-- Risen Mage
+		{444743, "NAMEPLATE"}, -- Fireball Volley
 	}, {
-		[autotalk] = L.sacred_flame,
+		["custom_on_autotalk"] = L.sacred_flame,
 		[448485] = L.guard_captain_suleyman,
 		[427897] = L.forge_master_damian,
 		[429091] = L.high_priest_aemya,
@@ -99,7 +102,7 @@ function mod:GetOptions()
 		[427356] = L.devout_priest,
 		[427484] = L.fanatical_mage,
 		[427601] = L.lightspawn,
-		[451818] = L.sir_braunpyke,
+		[444743] = L.risen_mage,
 	}
 end
 
@@ -122,7 +125,7 @@ function mod:OnBossEnable()
 	self:Death("ForgeMasterDamianDeath", 212831)
 
 	-- High Priest Aemya
-	self:Log("SPELL_CAST_START", "InnerLight", 429091)
+	self:Log("SPELL_CAST_START", "InnerFireAemya", 429091)
 	self:Log("SPELL_CAST_START", "ReflectiveShield", 428150)
 	self:Death("HighPriestAemyaDeath", 212827)
 
@@ -145,23 +148,34 @@ function mod:OnBossEnable()
 
 	-- Arathi Knight
 	self:Log("SPELL_CAST_START", "DisruptingShout", 427609)
+	self:Death("ArathiKnightDeath", 206696)
 
 	-- Arathi Footman
-	self:Log("SPELL_CAST_START", "Defend", 427342)
+	self:Log("SPELL_CAST_SUCCESS", "Defend", 427342)
+	self:Death("ArathiFootmanDeath", 206705)
 
 	-- Devout Priest
 	self:Log("SPELL_CAST_START", "GreaterHeal", 427356)
-	self:Log("SPELL_AURA_APPLIED", "InnerLightApplied", 427346)
+	self:Log("SPELL_INTERRUPT", "GreaterHealInterrupt", 427356)
+	self:Log("SPELL_CAST_SUCCESS", "GreaterHealSuccess", 427356)
+	self:Log("SPELL_CAST_START", "InnerFire", 427346)
+	self:Log("SPELL_INTERRUPT", "InnerFireInterrupt", 427346)
+	self:Log("SPELL_CAST_SUCCESS", "InnerFireSuccess", 427346)
+	self:Log("SPELL_AURA_APPLIED", "InnerFireApplied", 427346)
+	self:Death("DevoutPriestDeath", 206697)
 
 	-- Fanatical Mage
 	self:Log("SPELL_CAST_START", "Flamestrike", 427484)
+	self:Death("FanaticalMageDeath", 206698)
 
 	-- Lightspawn
 	self:Log("SPELL_CAST_START", "BurstOfLight", 427601)
 
-	-- Sir Braunpyke
-	self:Log("SPELL_CAST_SUCCESS", "CrushingLeap", 451818)
-	self:Death("SirBraunpykeDeath", 217658)
+	-- Risen Mage
+	self:Log("SPELL_CAST_START", "FireballVolley", 444743)
+	self:Log("SPELL_INTERRUPT", "FireballVolleyInterrupt", 444743)
+	self:Log("SPELL_CAST_SUCCESS", "FireballVolleySuccess", 444743)
+	self:Death("RisenMageDeath", 221760)
 end
 
 --------------------------------------------------------------------------------
@@ -181,14 +195,17 @@ function mod:CHAT_MSG_MONSTER_SAY(_, msg)
 	end
 end
 
--- Sacred Flame Autotalk
+-- Sacred Flame
 
 function mod:GOSSIP_SHOW()
-	if self:GetOption(autotalk) then
-		if self:GetGossipID(120716) then
-			-- Paladins and Priests can talk to the Sacred Flame to buff the whole party with
-			-- Blessing of the Sacred Flame, which causes your attacks to deal bonus damage.
-			-- 120716:Harness the power of the Eternal Flame.
+	if self:GetOption("custom_on_autotalk") then
+		-- Priests and Paladins can talk to the Sacred Flame to buff the whole party with
+		-- Blessing of the Sacred Flame, which causes your attacks to deal bonus damage.
+		if self:GetGossipID(120715) then -- Priest
+			-- 120715:Harness the power of the Sacred Flame.
+			self:SelectGossipID(120715)
+		elseif self:GetGossipID(120716) then -- Paladin
+			-- 120716:Harness the power of the Sacred Flame.
 			self:SelectGossipID(120716)
 		end
 	end
@@ -210,9 +227,9 @@ do
 		if timer then
 			self:CancelTimer(timer)
 		end
-		self:Message(args.spellId, "orange") -- TODO revisit sound/color
+		self:Message(args.spellId, "purple")
 		self:PlaySound(args.spellId, "alarm")
-		self:CDBar(args.spellId, 9.7)
+		self:CDBar(args.spellId, 14.6)
 		timer = self:ScheduleTimer("GuardCaptainSuleymanDeath", 30)
 	end
 
@@ -226,7 +243,7 @@ do
 		timer = self:ScheduleTimer("GuardCaptainSuleymanDeath", 30)
 	end
 
-	function mod:GuardCaptainSuleymanDeath(args)
+	function mod:GuardCaptainSuleymanDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -247,7 +264,7 @@ do
 		end
 		self:Message(args.spellId, "orange")
 		self:PlaySound(args.spellId, "alarm")
-		self:CDBar(args.spellId, 9.7)
+		self:CDBar(args.spellId, 17.0)
 		timer = self:ScheduleTimer("ForgeMasterDamianDeath", 30)
 	end
 
@@ -257,11 +274,11 @@ do
 		end
 		self:Message(args.spellId, "red")
 		self:PlaySound(args.spellId, "alert")
-		self:CDBar(args.spellId, 26.7)
+		self:CDBar(args.spellId, 17.0)
 		timer = self:ScheduleTimer("ForgeMasterDamianDeath", 30)
 	end
 
-	function mod:ForgeMasterDamianDeath(args)
+	function mod:ForgeMasterDamianDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -276,7 +293,7 @@ end
 do
 	local timer
 
-	function mod:InnerLight(args)
+	function mod:InnerFireAemya(args)
 		local unit = self:UnitTokenFromGUID(args.sourceGUID)
 		if not unit or not UnitAffectingCombat(unit) then
 			-- occasionally cast when not engaged
@@ -285,10 +302,11 @@ do
 		if timer then
 			self:CancelTimer(timer)
 		end
+		-- TODO is this still cast in combat?
 		self:Message(args.spellId, "yellow")
 		self:PlaySound(args.spellId, "info")
 		self:CDBar(args.spellId, 30.3)
-		timer = self:ScheduleTimer("HighPriestAemyaDeath", 30)
+		timer = self:ScheduleTimer("HighPriestAemyaDeath", 60)
 	end
 
 	function mod:ReflectiveShield(args)
@@ -297,16 +315,16 @@ do
 		end
 		self:Message(args.spellId, "red")
 		self:PlaySound(args.spellId, "alert")
-		--self:CDBar(args.spellId, 57.1) -- TODO is it just cast once at 50% now?
-		timer = self:ScheduleTimer("HighPriestAemyaDeath", 30)
+		self:CDBar(args.spellId, 53.4)
+		timer = self:ScheduleTimer("HighPriestAemyaDeath", 60)
 	end
 
-	function mod:HighPriestAemyaDeath(args)
+	function mod:HighPriestAemyaDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
 		end
-		self:StopBar(429091) -- Inner Light
+		self:StopBar(429091) -- Inner Fire
 		self:StopBar(428150) -- Reflective Shield
 	end
 end
@@ -337,7 +355,7 @@ do
 		timer = self:ScheduleTimer("SergeantShaynemailDeath", 30)
 	end
 
-	function mod:SergeantShaynemailDeath(args)
+	function mod:SergeantShaynemailDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -368,7 +386,7 @@ do
 		end
 		self:Message(args.spellId, "purple")
 		self:PlaySound(args.spellId, "alert")
-		self:CDBar(args.spellId, 14.5)
+		self:CDBar(args.spellId, 13.4)
 		timer = self:ScheduleTimer("ElaenaEmberlanzDeath", 30)
 	end
 
@@ -377,12 +395,12 @@ do
 			self:CancelTimer(timer)
 		end
 		self:Message(args.spellId, "red", CL.casting:format(args.spellName))
-		self:PlaySound(args.spellId, "long")
-		self:CDBar(args.spellId, 15.8)
+		self:PlaySound(args.spellId, "warning")
+		self:CDBar(args.spellId, 20.6)
 		timer = self:ScheduleTimer("ElaenaEmberlanzDeath", 30)
 	end
 
-	function mod:ElaenaEmberlanzDeath(args)
+	function mod:ElaenaEmberlanzDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -403,15 +421,22 @@ do
 			self:CancelTimer(timer)
 		end
 		self:Message(args.spellId, "red", CL.casting:format(args.spellName))
-		self:PlaySound(args.spellId, "alarm")
-		self:CDBar(args.spellId, 14.6)
+		if self:Interrupter() then
+			self:PlaySound(args.spellId, "warning")
+		end
+		self:CDBar(args.spellId, 17.0)
 		timer = self:ScheduleTimer("TaenerDuelmalDeath", 30)
 	end
 
 	function mod:CinderblastApplied(args)
-		if self:Me(args.destGUID) or self:Dispeller("magic", nil, args.spellId) then
+		local onMe = self:Me(args.destGUID)
+		if onMe or self:Dispeller("magic", nil, args.spellId) then
 			self:TargetMessage(args.spellId, "orange", args.destName)
-			self:PlaySound(args.spellId, "warning", nil, args.destName)
+			if onMe then
+				self:PlaySound(args.spellId, "info", nil, args.destName)
+			else
+				self:PlaySound(args.spellId, "warning", nil, args.destName)
+			end
 		end
 	end
 
@@ -425,7 +450,7 @@ do
 		timer = self:ScheduleTimer("TaenerDuelmalDeath", 30)
 	end
 
-	function mod:TaenerDuelmalDeath(args)
+	function mod:TaenerDuelmalDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -440,6 +465,11 @@ end
 function mod:DisruptingShout(args)
 	self:Message(args.spellId, "red")
 	self:PlaySound(args.spellId, "alarm")
+	self:Nameplate(args.spellId, 21.8, args.sourceGUID)
+end
+
+function mod:ArathiKnightDeath(args)
+	self:ClearNameplate(args.destGUID)
 end
 
 -- Arathi Footman
@@ -453,7 +483,12 @@ do
 			self:Message(args.spellId, "yellow")
 			self:PlaySound(args.spellId, "info")
 		end
+		self:Nameplate(args.spellId, 31.6, args.sourceGUID)
 	end
+end
+
+function mod:ArathiFootmanDeath(args)
+	self:ClearNameplate(args.destGUID)
 end
 
 -- Devout Priest
@@ -467,14 +502,39 @@ do
 			self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 			self:PlaySound(args.spellId, "warning")
 		end
+		self:Nameplate(args.spellId, 0, args.sourceGUID)
 	end
 end
 
-function mod:InnerLightApplied(args)
-	if self:Dispeller("magic", true, args.spellId) and not self:Player(args.destFlags) then -- filter Spellsteal
+function mod:GreaterHealInterrupt(args)
+	self:Nameplate(427356, 25.5, args.destGUID)
+end
+
+function mod:GreaterHealSuccess(args)
+	self:Nameplate(args.spellId, 25.5, args.sourceGUID)
+end
+
+function mod:InnerFire(args)
+	self:Nameplate(args.spellId, 0, args.sourceGUID)
+end
+
+function mod:InnerFireInterrupt(args)
+	self:Nameplate(427346, 21.1, args.destGUID)
+end
+
+function mod:InnerFireSuccess(args)
+	self:Nameplate(args.spellId, 21.1, args.sourceGUID)
+end
+
+function mod:InnerFireApplied(args)
+	if self:Dispeller("magic", true, args.spellId) and not self:Friendly(args.destFlags) then -- filter Spellsteal
 		self:Message(args.spellId, "orange", CL.on:format(args.spellName, args.destName))
 		self:PlaySound(args.spellId, "info")
 	end
+end
+
+function mod:DevoutPriestDeath(args)
+	self:ClearNameplate(args.destGUID)
 end
 
 -- Fanatical Mage
@@ -488,7 +548,12 @@ do
 			self:Message(args.spellId, "orange")
 			self:PlaySound(args.spellId, "alarm")
 		end
+		self:Nameplate(args.spellId, 20.6, args.sourceGUID)
 	end
+end
+
+function mod:FanaticalMageDeath(args)
+	self:ClearNameplate(args.destGUID)
 end
 
 -- Lightspawn
@@ -498,26 +563,29 @@ function mod:BurstOfLight(args)
 	self:PlaySound(args.spellId, "long")
 end
 
--- Sir Braunpyke
+-- Risen Mage
 
 do
-	local timer
-
-	function mod:CrushingLeap(args)
-		if timer then
-			self:CancelTimer(timer)
+	local prev = 0
+	function mod:FireballVolley(args)
+		local t = args.time
+		if t - prev > 1.5 then
+			prev = t
+			self:Message(args.spellId, "red", CL.casting:format(args.spellName))
+			self:PlaySound(args.spellId, "alert")
 		end
-		self:Message(args.spellId, "orange")
-		self:PlaySound(args.spellId, "alarm")
-		self:CDBar(args.spellId, 14.5)
-		timer = self:ScheduleTimer("SirBraunpykeDeath", 30)
+		self:Nameplate(args.spellId, 0, args.sourceGUID)
 	end
+end
 
-	function mod:SirBraunpykeDeath(args)
-		if timer then
-			self:CancelTimer(timer)
-			timer = nil
-		end
-		self:StopBar(451818) -- Crushing Leap
-	end
+function mod:FireballVolleyInterrupt(args)
+	self:Nameplate(444743, 15.7, args.destGUID)
+end
+
+function mod:FireballVolleySuccess(args)
+	self:Nameplate(args.spellId, 15.7, args.sourceGUID)
+end
+
+function mod:RisenMageDeath(args)
+	self:ClearNameplate(args.destGUID)
 end

@@ -41,8 +41,6 @@ local QuestieMenu = QuestieLoader:ImportModule("QuestieMenu")
 local l10n = QuestieLoader:ImportModule("l10n")
 ---@type QuestLogCache
 local QuestLogCache = QuestieLoader:ImportModule("QuestLogCache")
----@type ThreadLib
-local ThreadLib = QuestieLoader:ImportModule("ThreadLib")
 ---@type AvailableQuests
 local AvailableQuests = QuestieLoader:ImportModule("AvailableQuests")
 ---@type Phasing
@@ -53,8 +51,6 @@ local tostring = tostring;
 local tinsert = table.insert;
 local pairs = pairs;
 local ipairs = ipairs;
-local yield = coroutine.yield
-local NewThread = ThreadLib.ThreadSimple
 
 local NOP_FUNCTION = function()
 end
@@ -152,9 +148,6 @@ function _QuestieQuest:HideQuestIcons()
             if icon ~= nil and (not icon.hidden) and icon:ShouldBeHidden() then -- check for function to make sure its a frame
                 -- Hides Objective Icons
                 icon:FakeHide()
-
-                -- Hides Objective Tooltips
-                QuestieTooltips:RemoveQuest(icon.data.Id)
 
                 if icon.data.lineFrames then
                     for _, lineIcon in pairs(icon.data.lineFrames) do
@@ -545,7 +538,6 @@ function QuestieQuest:AbandonedQuest(questId)
             if childQuests then
                 for _, childQuestId in pairs(childQuests) do
                     Questie.db.char.complete[childQuestId] = nil
-                    QuestLogCache.RemoveQuest(childQuestId)
                 end
             end
         end
@@ -589,7 +581,6 @@ function QuestieQuest:UpdateQuest(questId)
             Questie:Debug(Questie.DEBUG_DEVELOP, "[QuestieQuest:UpdateQuest] Quest is: Complete!")
 
             QuestieMap:UnloadQuestFrames(questId)
-            QuestieTooltips:RemoveQuest(questId) -- Remove any tooltips, the finisher will be added in AddFinisher
             QuestieQuest:AddFinisher(quest)
             quest.WasComplete = true
         elseif isComplete == -1 then
@@ -648,7 +639,6 @@ function QuestieQuest:UpdateQuest(questId)
                     if numCompleteObjectives == #quest.Objectives then
                         Questie:Debug(Questie.DEBUG_DEVELOP, "[QuestieQuest:UpdateQuest] All Quest Objective(s) are Complete! Manually setting quest to Complete!")
                         QuestieMap:UnloadQuestFrames(questId)
-                        QuestieTooltips:RemoveQuest(questId) -- Remove any tooltips, the finisher will be added in AddFinisher
                         QuestieQuest:AddFinisher(quest)
                         quest.WasComplete = true
                         quest.isComplete = true
@@ -1523,7 +1513,6 @@ function QuestieQuest:PopulateQuestLogInfo(quest)
         -- check assumes the Quest should have been flagged questLogEngtry.isComplete == 1. We're specifically looking for a quest.triggerEnd or
         -- a quest.Finisher.Id because this might throw an error if there is nothing to populate when we call QuestieQuest:AddFinisher().
         QuestieMap:UnloadQuestFrames(quest.Id)
-        QuestieTooltips:RemoveQuest(quest.Id) -- Remove any tooltips, the finisher will be added in AddFinisher
         QuestieQuest:AddFinisher(quest)
         quest.isComplete = true
     end

@@ -1,4 +1,3 @@
-if not BigWigsLoader.isBeta then return end
 --------------------------------------------------------------------------------
 -- Module Declaration
 --
@@ -44,7 +43,7 @@ function mod:GetOptions()
 end
 
 function mod:OnBossEnable()
-	self:Log("SPELL_CAST_START", "HappyHour", 442525)
+	self:Log("SPELL_CAST_SUCCESS", "HappyHour", 442525)
 	self:Log("SPELL_AURA_REMOVED", "HappyHourOver", 442525)
 	self:Log("SPELL_AURA_APPLIED", "CarryingCinderbrew", 431895)
 	self:Log("SPELL_AURA_REMOVED", "CarryingCinderbrewRemoved", 431895)
@@ -62,8 +61,8 @@ function mod:OnEngage()
 	self:CDBar(432229, 5.1) -- Keg Smash
 	self:CDBar(432179, 10.7) -- Throw Cinderbrew
 	self:CDBar(432198, 14.4) -- Blazing Belch
-	-- cast at 100 energy, starts at 55 energy: .9s delay + 20.25s energy gain + runs to bar + 1.5s delay
-	self:CDBar(442525, 26.7, CL.count:format(self:SpellName(442525), happyHourCount)) -- Happy Hour
+	-- cast at 100 energy, starts at 55 energy: .9s delay + 20.25s energy gain + runs to bar + 1.5s delay + 2s cast
+	self:CDBar(442525, 28.7, CL.count:format(self:SpellName(442525), happyHourCount)) -- Happy Hour
 end
 
 --------------------------------------------------------------------------------
@@ -92,11 +91,11 @@ do
 		self:SetStage(1)
 		self:Message(args.spellId, "green", CL.removed_after:format(args.spellName, args.time - happyHourStart))
 		self:PlaySound(args.spellId, "info")
-		self:CDBar(432229, 9.3) -- Keg Smash
-		self:CDBar(432179, 14.2) -- Throw Cinderbrew
-		self:CDBar(432198, 17.8) -- Blazing Belch
-		-- cast at 100 energy, 2.4s delay + 45s energy gain + runs to bar + 1.5s delay
-		self:CDBar(args.spellId, 48.9, CL.count:format(args.spellName, happyHourCount)) -- Happy Hour
+		self:CDBar(432229, 9.1) -- Keg Smash
+		self:CDBar(432179, 14.0) -- Throw Cinderbrew
+		self:CDBar(432198, 17.6) -- Blazing Belch
+		-- cast at 100 energy, 2.4s delay + 45s energy gain + runs to bar + 1.5s delay + 2s cast
+		self:CDBar(args.spellId, 50.9, CL.count:format(args.spellName, happyHourCount))
 	end
 end
 

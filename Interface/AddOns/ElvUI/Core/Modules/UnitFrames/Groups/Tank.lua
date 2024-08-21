@@ -113,6 +113,9 @@ function UF:Update_TankFrames(frame, db)
 		frame:Size(frame.UNIT_WIDTH, frame.UNIT_HEIGHT)
 	end
 
+	frame:SetFrameStrata(db.strataAndLevel and db.strataAndLevel.useCustomStrata and db.strataAndLevel.frameStrata or 'LOW')
+	frame:SetFrameLevel(db.strataAndLevel and db.strataAndLevel.useCustomLevel and db.strataAndLevel.frameLevel or 1)
+
 	UF:Configure_HealthBar(frame)
 	UF:UpdateNameSettings(frame)
 	UF:Configure_Threat(frame)
@@ -136,4 +139,4 @@ function UF:Update_TankFrames(frame, db)
 	frame:UpdateAllElements('ElvUI_UpdateAllElements')
 end
 
-UF.headerstoload.tank = {'MAINTANK', 'ELVUI_UNITTARGET'}
+UF.headerstoload.tank = {'MAINTANK', E.Retail and 'ELVUI_UNITTARGET_PINGABLE' or 'ELVUI_UNITTARGET'}

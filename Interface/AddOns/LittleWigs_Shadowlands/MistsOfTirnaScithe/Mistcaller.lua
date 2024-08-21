@@ -50,9 +50,9 @@ end
 
 function mod:OnEngage()
 	guessingGameHp = 100
-	self:CDBar(321834, 7) -- Dodge Ball
-	self:CDBar(321828, 13.7) -- Patty Cake
-	self:CDBar(341709, 18.1, L.vulpin) -- Freeze Tag
+	self:CDBar(321834, 6.0) -- Dodge Ball
+	self:CDBar(321828, 13.1) -- Patty Cake
+	self:CDBar(341709, 17.0, L.vulpin) -- Freeze Tag
 end
 
 --------------------------------------------------------------------------------
@@ -67,23 +67,23 @@ end
 
 function mod:DodgeBall(args)
 	self:Message(args.spellId, "orange")
+	self:CDBar(args.spellId, 13.3)
 	self:PlaySound(args.spellId, "alarm")
-	self:CDBar(args.spellId, 13.5)
 end
 
 function mod:PattyCake(args)
+	self:CDBar(args.spellId, 20.6)
 	local bossUnit = self:GetBossId(args.sourceGUID)
 	if bossUnit and self:Tanking(bossUnit) then
 		self:PersonalMessage(args.spellId)
 		self:PlaySound(args.spellId, "warning")
 	end
-	self:CDBar(args.spellId, 19.3) -- 19-23
 end
 
 function mod:FreezeTag(args)
 	self:Message(args.spellId, "yellow", CL.incoming:format(L.vulpin))
+	self:CDBar(args.spellId, 21.8, L.vulpin)
 	self:PlaySound(args.spellId, "alert")
-	self:CDBar(args.spellId, 23, L.vulpin)
 end
 
 function mod:FreezeTagFixation(args)
@@ -91,5 +91,7 @@ function mod:FreezeTagFixation(args)
 	if self:Me(args.destGUID) then
 		self:PlaySound(args.spellId, "warning")
 		self:Say(args.spellId, CL.fixate, nil, "Fixate")
+	else
+		self:PlaySound(args.spellId, "alert", nil, args.destName)
 	end
 end

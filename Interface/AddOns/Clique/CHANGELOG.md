@@ -1,6 +1,6 @@
 # Clique
 
-## [v3.6.3-release](https://github.com/jnwhiteh/Clique/tree/v3.6.3-release) (2024-05-08)
-[Full Changelog](https://github.com/jnwhiteh/Clique/compare/v3.6.2-release...v3.6.3-release) [Previous Releases](https://github.com/jnwhiteh/Clique/releases)
+## [v4.0.25-release](https://github.com/jnwhiteh/Clique/tree/v4.0.25-release) (2024-08-19)
+[Full Changelog](https://github.com/jnwhiteh/Clique/compare/v4.0.24-release...v4.0.25-release) [Previous Releases](https://github.com/jnwhiteh/Clique/releases)
 
-- Update TOC for 11.5.2  
+- Revert "Fix anchor of spellbook tab"  

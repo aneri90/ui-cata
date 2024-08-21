@@ -33,10 +33,12 @@
 --  default bindings, and will warn you of the situation.
 -------------------------------------------------------------------]]--
 
-local addonName, addon = ...
+local addonName = select(1, ...)
+
+---@class addon
+local addon = select(2, ...)
 local L = addon.L
 
----@diagnostic disable-next-line: undefined-field
 local twipe = table.wipe
 
 function addon:Initialize()
@@ -254,10 +256,10 @@ function addon:RegisterFrame(button)
     local protected = button.IsProtected and button:IsProtected()
     local nameplateish = button.IsAnchoringRestricted and button:IsAnchoringRestricted()
     if not protected or nameplateish then
-        -- addon:Printf("Skipping frame registration for " .. tostring(button:GetName()))
-        -- addon:Printf("  - protected: %s", tostring(protected))
-        -- addon:Printf("  - nameplateish: %s", tostring(nameplateish))
-        -- addon:Printf("  - forbidden: %s", tostring(forbidden))
+        -- addon:Printf(L["Skipping frame registration for "] .. tostring(button:GetName()))
+        -- addon:Printf(L["  - protected: %s"], tostring(protected))
+        -- addon:Printf(L["  - nameplateish: %s"], tostring(nameplateish))
+        -- addon:Printf(L["  - forbidden: %s"], tostring(forbidden))
         return
     end
 
@@ -299,16 +301,39 @@ function addon:UnregisterFrame(button)
     addon.header:UnwrapScript(button, "OnLeave")
 end
 
-function addon:Enable()
-    -- Make the options window a pushable panel window
-    UIPanelWindows["CliqueConfig"] = {
-        area = "left",
-        pushable = 1,
-        whileDead = 1,
-    }
+function addon:ADDON_LOADED(event, addonName)
+    if addonName == "Blizzard_PlayerSpells" then
+        -- Place the spellbook tab
+        self:ShowSpellBookButton()
+    end
+end
 
-    -- Set the tooltip for the spellbook tab
-    CliqueSpellTab.tooltip = L["Clique binding configuration"]
+function addon:FixMyBindingsV1()
+    -- Reverse iterate over all bindings and fix broken ones
+    local bindings = addon.db.profile.bindings or {}
+    for idx=#bindings, 1, -1 do
+        local bind = bindings[idx]
+
+        if bind.type == nil or bind.type == "" then
+            table.remove(bindings, idx)
+            addon:Printf("Removed broken binding with action type '%s' from index %s", tostring(bind.type), tostring(idx))
+        end
+    end
+end
+
+function addon:Enable()
+    if SpellBookFrame then
+        -- We're on a legacy spellbook
+        self:ShowSpellBookButton()
+    elseif PlayerSpellsFrame then
+        -- Spellbook already loaded
+        self:ShowSpellBookButton()
+    else
+        -- Wait for spellbook to be loaded
+        addon:RegisterEvent("ADDON_LOADED")
+    end
+
+    addon:FixMyBindingsV1()
 end
 
 -- A new profile is being created in the db, called 'profile'
@@ -335,7 +360,7 @@ end
 function addon:ImportBindings(importBindings)
     self.db.profile.bindings = importBindings
     self.bindings = self.db.profile.bindings
-    addon:Printf("Importing new bindings into current profile")
+    addon:Printf(L["Importing new bindings into current profile"])
     self:FireMessage("BINDINGS_CHANGED")
 end
 
@@ -394,7 +419,8 @@ local function shouldApply(global, entry)
 end
 
 function addon:EntryIsCorrectSpec(entry)
-    if not addon:ProjectIsRetail() then
+    -- Classic era doesn't have talents, simplify here
+    if not addon:GameVersionHasTalentSpecs() then
         return true
     end
 
@@ -550,6 +576,7 @@ function addon:GetClickAttributes(global)
                 local set_text = ATTR(indent, prefix, "type", suffix, "togglemenu")
                 bits[#bits + 1] = string.gsub(set_text, '"togglemenu"', 'button:GetAttribute("*type2") == "menu" and "menu" or "togglemenu"')
                 rembits[#rembits + 1] = REMATTR(prefix, "type", suffix)
+
             elseif entry.type == "spell" and self.settings.stopcastingfix then
                 -- Implement the 'stop casting' fix
                 local macrotext
@@ -570,19 +597,27 @@ function addon:GetClickAttributes(global)
                 bits[#bits + 1] = ATTR(indent, prefix, "spell", suffix, spellText)
                 rembits[#rembits + 1] = REMATTR(prefix, "type", suffix)
                 rembits[#rembits + 1] = REMATTR(prefix, "spell", suffix)
+            -- Macros aren't available on The War Within and above
             elseif entry.type == "macro" and self.settings.stopcastingfix then
                 local macrotext = string.format("/click %s\n%s", self.stopbutton.name, entry.macrotext)
                 bits[#bits + 1] = ATTR(indent, prefix, "type", suffix, entry.type)
                 bits[#bits + 1] = ATTR(indent, prefix, "macrotext", suffix, macrotext)
                 rembits[#rembits + 1] = REMATTR(prefix, "type", suffix)
                 rembits[#rembits + 1] = REMATTR(prefix, "macrotext", suffix)
-            elseif entry.type == "macro" then
+            -- Macros aren't available on The War Within and above
+            elseif entry.type == "macro" and entry.macrotext then
+                -- Macros aren't available on 11.x: The War Within
                 bits[#bits + 1] = ATTR(indent, prefix, "type", suffix, entry.type)
                 bits[#bits + 1] = ATTR(indent, prefix, "macrotext", suffix, entry.macrotext)
                 rembits[#rembits + 1] = REMATTR(prefix, "type", suffix)
                 rembits[#rembits + 1] = REMATTR(prefix, "macrotext", suffix)
+            elseif entry.type == "macro" and entry.macro then
+                bits[#bits + 1] = ATTR(indent, prefix, "type", suffix, entry.type)
+                bits[#bits + 1] = ATTR(indent, prefix, "macro", suffix, entry.macro)
+                rembits[#rembits + 1] = REMATTR(prefix, "type", suffix)
+                rembits[#rembits + 1] = REMATTR(prefix, "macro", suffix)
             else
-                error(string.format("Invalid action type: '%s'", entry.type))
+                error(string.format("Invalid action type: '%s'", tostring(entry.type)))
             end
 
             -- Finish the conditional statements started above
@@ -633,7 +668,7 @@ function addon:GetBindingAttributes(global)
         set = {
             "local button = self",
             "local name = button:GetName()",
-            --"print('onenter: ' .. tostring(name and name or button))",
+            -- "print('onenter: ' .. tostring(name and name or button))",
             "if blacklist[name] then return end",
             "if danglingButton then ",
             --"  local dangleName = danglingButton:GetName()",
@@ -840,6 +875,16 @@ function addon:ApplyAttributes()
     self.globutton:Execute(self.globutton.setbinds)
 end
 
+function addon:GameVersionHasTalentSpecs()
+    if addon:ProjectIsRetail() then
+        return true
+    elseif addon:ProjectIsWrath() or addon:ProjectIsCataclysm() then
+        return true
+    end
+
+    return false
+end
+
 -- Returns the active talent spec, encapsulating the differences between
 -- Retail and Wrath.
 function addon:GetActiveTalentSpec()
@@ -874,6 +919,8 @@ function addon:GetNumTalentSpecs()
         return GetNumSpecializations()
     elseif addon:ProjectIsWrath() or addon:ProjectIsCataclysm() then
         return 2
+    else
+        return 0
     end
 end
 
@@ -899,36 +946,7 @@ function addon:TalentGroupChanged()
 end
 
 function addon:PlayerEnteringWorld()
-    addon:CheckSelfCastIssue()
-
     self:FireMessage("BINDINGS_CHANGED")
-end
-
-function addon:CheckSelfCastIssue()
-    if addon.db.profile.disableWarningSelfcast then
-        return
-    end
-
-    -- Issue only seems present on Dragonflight at the moment
-    if not addon:ProjectIsDragonflight() then
-        return
-    end
-
-    local selfCastModifier = GetModifiedClick("SELFCAST"):lower()
-
-    if selfCastModifier ~= "none" then
-        local count = 0
-        for idx, entry in ipairs(self.bindings) do
-            local prefix = self:GetBindingPrefixSuffix(entry)
-            if prefix == selfCastModifier then
-                count = count + 1
-            end
-        end
-
-        if count > 0 then
-            addon:Printf(L["|cffff3333Warning!|r You have %d bindings that may conflict with the 'self cast' modifier and may not function correctly. Run the |cffbbbbbb/cliquewarning|r command to get more information on how to resolve this. You can use the |cffaaaaaa/cliquewarning disable|r command to suppress this message in the future."]:format(count))
-        end
-    end
 end
 
 
@@ -1055,7 +1073,7 @@ function addon:IsFrameBlacklisted(frame)
 end
 
 function addon:UpdateGlobalButtonClicks()
-    if self:ProjectIsDragonflight() then
+    if self:ProjectIsRetail() then
         self.globutton:RegisterForClicks("AnyUp", "AnyDown")
     else
         local direction = self.settings.downclick and "AnyDown" or "AnyUp"
@@ -1129,7 +1147,6 @@ function addon:BINDINGS_CHANGED()
     self:UpdateAttributes()
 
     -- Update the bindings list, if open
-    CliqueConfig:UpdateList()
 
     -- Update the actual attributes on all frames
     self:ApplyAttributes()
@@ -1169,6 +1186,57 @@ function addon:BLACKLIST_CHANGED()
     self:ApplyAttributes()
 end
 
+function addon:ShowSpellBookButton()
+    if not addon.spellbookTab then
+        addon.spellbookTab = CreateFrame("Button", "CliqueSpellbookTabButton", UIParent)
+        addon.spellbookTab.bg = addon.spellbookTab:CreateTexture(nil, "BACKGROUND")
+
+        local tab = addon.spellbookTab
+        tab:ClearAllPoints()
+        tab:SetWidth(32)
+        tab:SetHeight(32)
+        tab:SetNormalTexture("Interface\\AddOns\\Clique\\images\\icon_square_64")
+        tab:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+
+        tab.bg:ClearAllPoints()
+        tab.bg:SetPoint("TOPLEFT", -3, 11)
+        tab.bg:SetTexture("Interface\\SpellBook\\SpellBook-SkillLineTab")
+
+        -- Handle clicks on the tab button
+        tab:SetScript("OnClick", function()
+            addon:ShowBindingConfig()
+
+            -- Hide the spellbook if its open
+            -- but don't try if we're in combat
+            if InCombatLockdown() then
+                return
+            end
+
+            if SpellBookFrame then
+                HideUIPanel(SpellBookFrame)
+            elseif PlayerSpellsFrame then
+                HideUIPanel(PlayerSpellsFrame)
+            end
+        end)
+    end
+
+    if SpellBookFrame then
+        -- We're on a legacy client with the old spellbook frame, place it!
+
+        local tab = addon.spellbookTab
+        tab:SetParent(SpellBookFrame)
+        local num = GetNumSpellTabs()
+        local lastTab = _G["SpellBookSkillLineTab" .. tostring(num)]
+        if lastTab then
+            tab:SetPoint("TOPLEFT", lastTab, "BOTTOMLEFT", 0, -17)
+        end
+    elseif PlayerSpellsFrame then
+        local tab = addon.spellbookTab
+        tab:SetParent(PlayerSpellsFrame)
+        tab:SetPoint("LEFT", PlayerSpellsFrame, "TOPRIGHT", 0, -125)
+    end
+end
+
 local contains = function(arr, value)
     for idx, key in ipairs(arr) do
         if key == value then
@@ -1183,37 +1251,17 @@ SlashCmdList["CLIQUE"] = function(msg, editbox)
     local profile = (msg or ""):match("^profile (.+)$")
     if profile then
         if InCombatLockdown() then
-            addon:Printf("Cannot change profiles while in combat lockdown")
+            addon:Printf(L["Cannot change profiles while in combat lockdown"])
         else
             local availableProfiles = addon.db:GetProfiles({})
             if contains(availableProfiles, profile) then
-                addon:Printf("Switching to profile '%s'", profile)
+                addon:Printf(L["Switching to profile '%s'"], profile)
                 addon.db:SetProfile(profile)
             else
-                addon:Printf("Cannot find profile '%s'", profile)
+                addon:Printf(L["Cannot find profile '%s'"], profile)
             end
         end
     else
-        if SpellBookFrame:IsVisible() then
-            CliqueConfig:ShowWithSpellBook()
-        else
-            ShowUIPanel(CliqueConfig)
-        end
+        addon:ShowBindingConfig()
     end
-end
-
-SLASH_CLIQUEWARNING1 = "/cliquewarning"
-SlashCmdList["CLIQUEWARNING"] = function(msg)
-    if msg and msg:lower():match("disable") then
-        addon:Printf(L["Disabling future warnings for the self cast issue. You can re-enable this message using |cffaaaaaa/cliquewarning enable|r."])
-        addon.db.profile.disableWarningSelfcast = true
-        return
-    elseif msg and msg:lower():match("enable") then
-        addon:Printf(L["Enabling future warnings."])
-        addon.db.profile.disableWarningSelfcast = nil
-        return
-    end
-
-    addon:Printf(L["There is currently an issue with the 'Self Cast' key, regardless of whether the 'Auto Self Cast' key is set. This can cause your bindings to cast on your player rather than the intended target."])
-    addon:Printf(L["Until Blizzard resolves this, you may want to change that key. Open the Interface Options and select the 'Combat' category. Go to the 'Self Cast Key' and set that to NONE."])
 end

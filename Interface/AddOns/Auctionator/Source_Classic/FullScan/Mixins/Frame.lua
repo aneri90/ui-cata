@@ -90,6 +90,12 @@ end
 
 function AuctionatorFullScanFrameMixin:ProcessBatch(startIndex, stepSize, limit)
   if startIndex >= limit then
+    C_Timer.After(2, function()
+      if self.waitingForData > 0 then
+        self.waitingForData = 0
+        self:EndProcessing()
+      end
+    end)
     return
   end
 
@@ -107,7 +113,7 @@ function AuctionatorFullScanFrameMixin:ProcessBatch(startIndex, stepSize, limit)
     local link = GetAuctionItemLink("list", i)
     local itemID = info[17]
 
-    if itemID == 0 then
+    if itemID == 0 or C_Item.GetItemInfoInstant(itemID) == nil then
       self.waitingForData = self.waitingForData - 1
     elseif not link then
       local item = Item:CreateFromItemID(itemID)

@@ -8,6 +8,7 @@ local string_gsub, string_match = string.gsub, string.match
 local RAID_CLASS_COLORS, COMBATLOG_OBJECT_TYPE_MASK, COMBATLOG_OBJECT_CONTROL_MASK, COMBATLOG_OBJECT_REACTION_MASK, COMBATLOG_OBJECT_AFFILIATION_MASK, COMBATLOG_OBJECT_SPECIAL_MASK = RAID_CLASS_COLORS, COMBATLOG_OBJECT_TYPE_MASK, COMBATLOG_OBJECT_CONTROL_MASK, COMBATLOG_OBJECT_REACTION_MASK, COMBATLOG_OBJECT_AFFILIATION_MASK, COMBATLOG_OBJECT_SPECIAL_MASK
 local UnitGroupRolesAssigned = UnitGroupRolesAssigned or ExRT.NULLfunc
 local GetRaidRosterInfo = GetRaidRosterInfo
+local GetItemInfo, GetItemInfoInstant  = C_Item and C_Item.GetItemInfo or GetItemInfo,  C_Item and C_Item.GetItemInfoInstant or GetItemInfoInstant
 
 do
 	local antiSpamArr = {}
@@ -186,7 +187,12 @@ do
 		if not x then
 			x,y = ExRT.F.GetCursorPos(self)
 		end
-		local obj = GetMouseFoci and GetMouseFoci()[1] or GetMouseFocus()
+		local obj
+		if GetMouseFoci then
+			obj = GetMouseFoci()[1]
+		else
+			obj = GetMouseFocus()
+		end
 		if x > 0 and y > 0 and x < self:GetWidth() and y < self:GetHeight() and (obj == self or (childs and FindAllParents(self,obj))) then
 			return true
 		end
@@ -544,6 +550,9 @@ do
 	local printTable = nil
 	local function cmp(t1,t2,r,p)
 		local c,t = 0,0
+		if type(t1) ~= "table" or type(t2) ~= "table" then
+			return c, t
+		end
 		p = p or "."
 		for k,v in pairs(t1) do
 			if type(v) == "table" then
@@ -2418,6 +2427,7 @@ function ExRT.F.EJ_AutoScan()
 
 	VMRT.Addon.EJ_CHECK_VER = ExRT.clientUIinterface
 	VMRT.Addon.EJ_DATA = NEW_DATA
+	VMRT.Addon.EJ_CHECK_VER_PTR = ExRT.clientBuildVersion
 
 	ExRT.F.EJ_LoadData()
 end

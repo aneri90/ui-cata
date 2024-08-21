@@ -1,5 +1,9 @@
-local addonName, addon = ...
-local L = addon.L
+--[[-------------------------------------------------------------------
+--  Clique - Copyright 2006-2024 - James N. Whitehead II
+-------------------------------------------------------------------]] ---
+
+---@class addon
+local addon = select(2, ...)
 
 addon.defaults = {
     char = {

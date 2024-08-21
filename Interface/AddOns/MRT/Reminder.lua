@@ -3050,6 +3050,8 @@ function module.options:Load()
 						if name then
 							fieldName = name..(currZoneID == zoneID and " |cff00ff00("..L.ReminderNow..")|r" or "")
 						end
+					elseif tonumber(zoneID) == -1 then
+						fieldName = ALWAYS
 					end
 					zoneData = {
 						zoneID = zoneID,
@@ -4578,6 +4580,10 @@ function module.options:Load()
 					extraFilled = true
 				end
 			end
+			if zoneID == "-1" then
+				self:ExtraText(ALWAYS)
+				extraFilled = true
+			end
 		end
 		if not extraFilled then
 			self:ExtraText("")
@@ -4590,18 +4596,8 @@ function module.options:Load()
 		return L.ReminderZoneIDTip1..(name or "")..L.ReminderZoneIDTip2..(instanceID or 0)
 	end)
 
-	self.setupFrame.zoneID.dd = ELib:DropDownButton(self,"",250,#ExRT.GDB.JournalInstance+2)
+	self.setupFrame.zoneID.dd = ELib:DropDownButton(self,"",250,#ExRT.GDB.JournalInstance+3)
 	self.setupFrame.zoneID.dd.isModern = true
-	self.setupFrame.zoneID.dd.List = {
-		{text = L.ReminderZoneIDAutoTip,func = function()
-			local name, instanceType, difficultyID, difficultyName, maxPlayers, dynamicDifficulty, isDynamic, instanceID, instanceGroupSize, LfgDungeonID = GetInstanceInfo()
-			module.options.setupFrame.data.zoneID = tostring(instanceID)
-			ELib:DropDownClose()
-			module.options.setupFrame.tab.tabs[3].button.alert:Update()
-			self.setupFrame:Update(self.setupFrame.data)
-		end},
-		{text = L.minimapmenuclose,func = ELib.ScrollDropDown.Close},
-	}
 	do
 		local function SetZone(_,arg)
 			module.options.setupFrame.data.zoneID = tostring(arg)
@@ -4609,6 +4605,16 @@ function module.options:Load()
 			module.options.setupFrame.tab.tabs[3].button.alert:Update()
 			self.setupFrame:Update(self.setupFrame.data)
 		end
+		self.setupFrame.zoneID.dd.List = {
+			{text = L.ReminderZoneIDAutoTip,func = function()
+				local name, instanceType, difficultyID, difficultyName, maxPlayers, dynamicDifficulty, isDynamic, instanceID, instanceGroupSize, LfgDungeonID = GetInstanceInfo()
+				SetZone(nil,instanceID)
+			end},
+			{text = ALWAYS,func = function()
+				SetZone(nil,-1)
+			end},
+			{text = L.minimapmenuclose,func = ELib.ScrollDropDown.Close},
+		}
 		if EJ_GetInstanceInfo then
 			for i=1,#ExRT.GDB.JournalInstance do
 				local line = ExRT.GDB.JournalInstance[i]
@@ -11987,7 +11993,7 @@ function module:LoadReminders(encounterID,encounterDiff,zoneID,zoneName)
 			#data.triggers > 0 and
 			(
 			 (encounterID and data.bossID == encounterID and (not data.diffID or data.diffID == encounterDiff)) or
-			 (zoneID and module:FindNumberInString(zoneID,data.zoneID))
+			 (zoneID and (module:FindNumberInString(zoneID,data.zoneID) or data.zoneID=="-1"))
 			) and
 			module:CheckPlayerCondition(data,myName,myClass,myRole) and
 			bit.band(VMRT.Reminder2.options[data.uid or 0] or 0,bit.lshift(1,0)) == 0

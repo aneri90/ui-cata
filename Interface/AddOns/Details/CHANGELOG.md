@@ -1,6 +1,8 @@
 # Details! Damage Meter
 
-## [Details.20240607.12801.156](https://github.com/Tercioo/Details-Damage-Meter/tree/Details.20240607.12801.156) (2024-06-07)
-[Full Changelog](https://github.com/Tercioo/Details-Damage-Meter/compare/Details.20240607.12800.156...Details.20240607.12801.156) 
+## [Details.12879.159](https://github.com/Tercioo/Details-Damage-Meter/tree/Details.12879.159) (2024-08-19)
+[Full Changelog](https://github.com/Tercioo/Details-Damage-Meter/compare/Details.12878.159...Details.12879.159) 
 
-- Fixed an issue with Cataclysm classic not having the "ENCOUNTER\_LOOT\_RECEIVED" event.  
+- Fixed Streamer plugin bug  
+- Open Raid update  
+- Removed deprecated code and fixes  

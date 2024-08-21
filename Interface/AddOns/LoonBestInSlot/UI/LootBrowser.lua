@@ -285,7 +285,11 @@ local function createDropDowns(window)
         ['name']='phase',
         ['parent']=window,
         ['title']='Phase:',
-        ['items']= { LBIS.L["All"], LBIS.L["PreRaid"], LBIS.L["Phase 1"], LBIS.L["BIS"] },
+        ['items']= { LBIS.L["All"], LBIS.L["PreRaid"], LBIS.L["Phase 1"],
+            LBIS.L["Phase 2"],
+            --LBIS.L["Phase 3"],
+            --LBIS.L["Phase 4"],
+            LBIS.L["BIS"] },
         ['defaultVal']=LBISSettings.SelectedPhase,
         ['changeFunc']=function(dropdown_frame, dropdown_val)
             LBISSettings.SelectedPhase = dropdown_val;
@@ -329,6 +333,7 @@ local function createDropDowns(window)
         ['title']='Zone:',
         ['items']= { LBIS.L["All"], LBIS.L["Blackrock Caverns"], LBIS.L["The Deadmines"], LBIS.L["Grim Batol"], LBIS.L["Halls of Origination"], LBIS.L["Lost City of the Tol'vir"],
             LBIS.L["Shadowfang Keep"], LBIS.L["The Stonecore"], LBIS.L["Throne of the Tides"], LBIS.L["Vortex Pinnacle"],-- Phase 0
+            LBIS.L["Zul'Aman"], LBIS.L["Zul'Gurub"],--Phase 2
             LBIS.L["Throne of the Four Winds"], LBIS.L["Blackwing Descent"], LBIS.L["The Bastion of Twilight"] , LBIS.L["Baradin Hold"]--Phase 1
         },
         ['defaultVal']= LBISSettings.SelectedZone,

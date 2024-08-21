@@ -13,7 +13,10 @@
 --       have been loaded and initialized.
 -------------------------------------------------------------------------]]--
 
-local addonName, addon = ...
+local addonName = select(1, ...)
+
+---@class addon
+local addon = select(2, ...)
 
 -- Set global name of addon
 _G[addonName] = addon
@@ -27,7 +30,6 @@ local GetLocale = GetLocale
 local InCombatLockdown = InCombatLockdown
 local IsLoggedIn = IsLoggedIn
 local Mixin = Mixin
----@diagnostic disable-next-line: undefined-field
 local twipe = table.wipe
 local UIParent = UIParent
 

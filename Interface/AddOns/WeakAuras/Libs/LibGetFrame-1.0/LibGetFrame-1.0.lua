@@ -1,5 +1,5 @@
 local MAJOR_VERSION = "LibGetFrame-1.0"
-local MINOR_VERSION = 57
+local MINOR_VERSION = 61
 if not LibStub then
   error(MAJOR_VERSION .. " requires LibStub.")
 end
@@ -11,8 +11,8 @@ end
 lib.callbacks = lib.callbacks or LibStub("CallbackHandler-1.0"):New(lib)
 local callbacks = lib.callbacks
 
-local GetPlayerInfoByGUID, UnitExists, IsAddOnLoaded, C_Timer, UnitIsUnit, SecureButton_GetUnit =
-  GetPlayerInfoByGUID, UnitExists, IsAddOnLoaded, C_Timer, UnitIsUnit, SecureButton_GetUnit
+local GetPlayerInfoByGUID, UnitExists, C_Timer, UnitIsUnit, SecureButton_GetUnit, C_AddOns =
+  GetPlayerInfoByGUID, UnitExists, C_Timer, UnitIsUnit, SecureButton_GetUnit, C_AddOns
 local tinsert, CopyTable, wipe = tinsert, CopyTable, wipe
 
 local maxDepth = 50
@@ -49,6 +49,7 @@ local defaultFramePriorities = {
   "^PitBull4_Groups_Party", -- pitbull4
   "^CompactRaid", -- blizz
   "^CompactParty", -- blizz
+  "^PartyFrame",
   -- player frame
   "^InvenUnitFrames_Player",
   "^SUFUnitplayer",
@@ -113,6 +114,7 @@ local defaultPartyFrames = {
   "^ElvUF_PartyGroup",
   "^oUF_.-Party",
   "^PitBull4_Groups_Party",
+  "^PartyFrame",
   "^CompactParty",
 }
 local getDefaultPartyFrames = function()
@@ -295,6 +297,22 @@ function lib.GetProfileData()
   return profileData or {}
 end
 
+-- if frame doesn't have a name, try to use the key from it's parent
+local function recurseGetName(frame)
+  local name = frame.GetName and frame:GetName() or nil
+  if name then
+     return name
+  end
+  local parent = frame.GetParent and frame:GetParent()
+  if parent then
+     for key, child in pairs(parent) do
+        if child == frame then
+           return (recurseGetName(parent) or "") .. "." .. key
+        end
+     end
+  end
+end
+
 local function ScanFrames(depth, frame, ...)
   coroutine.yield()
   if not frame then
@@ -307,10 +325,12 @@ local function ScanFrames(depth, frame, ...)
     end
     if frameType == "Button" then
       local unit = SecureButton_GetUnit(frame)
-      local name = frame:GetName()
-      if unit and frame:IsVisible() and name then
-        FrameToFrameName:Add(frame, name)
-        FrameToUnit:Add(frame, unit)
+      if unit and frame:IsVisible() then
+        local name = recurseGetName(frame)
+        if name then
+          FrameToFrameName:Add(frame, name)
+          FrameToUnit:Add(frame, unit)
+        end
       end
     end
   end
@@ -435,11 +455,18 @@ local function GetUnitFrames(target, ignoredFrames)
 end
 
 local function ElvuiWorkaround(frame)
-  if IsAddOnLoaded("ElvUI") and frame and frame:GetName():find("^ElvUF_") and frame.Health then
+  if C_AddOns.IsAddOnLoaded("ElvUI") and frame and frame:GetName():find("^ElvUF_") and frame.Health then
     return frame.Health
   else
     return frame
   end
+end
+
+local function CellGetUnitFrames(target, frames, framePriorities)
+  if not C_AddOns.IsAddOnLoaded("Cell") or not Cell.GetUnitFramesForLGF then
+    return frames
+  end
+  return Cell.GetUnitFramesForLGF(target, frames, framePriorities)
 end
 
 local defaultOptions = {
@@ -466,6 +493,7 @@ local defaultOptions = {
     "InvenUnitFrames_TargetTargetTarget",
     "CellQuickCastButton",
   },
+  skipCellOverrides = false,
   returnAll = false,
 }
 local getDefaultOptions = function()
@@ -491,6 +519,15 @@ end
 
 local unitPetState = {} -- track if unit's pet exists
 
+local saveGetUnitFrame
+local function fixGetUnitFrameIntegrity()
+  lib.GetUnitFrame = saveGetUnitFrame
+  lib.GetFrame = saveGetUnitFrame
+  if WeakAuras and WeakAuras.GetUnitFrame then
+    WeakAuras.GetUnitFrame = saveGetUnitFrame
+  end
+end
+
 local GetFramesCacheListener
 local function Init(noDelay)
   GetFramesCacheListener = CreateFrame("Frame")
@@ -501,6 +538,7 @@ local function Init(noDelay)
   GetFramesCacheListener:RegisterEvent("UNIT_PET")
   GetFramesCacheListener:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT")
   GetFramesCacheListener:SetScript("OnEvent", function(self, event, unit, ...)
+    fixGetUnitFrameIntegrity()
     if event == "GROUP_ROSTER_UPDATE" then
       wipe(unitPetState)
       for member in IterateGroupMembers() do
@@ -573,6 +611,11 @@ function lib.GetUnitFrame(target, opt)
   end
 
   local frames = GetUnitFrames(target, ignoredFrames)
+
+  if not (opt.ignoreRaidFrame or opt.skipCellOverrides) then
+    frames = CellGetUnitFrames(target, frames, opt.framePriorities)
+  end
+
   if not frames then
     return
   end
@@ -594,6 +637,7 @@ function lib.GetUnitFrame(target, opt)
     return frames
   end
 end
+saveGetUnitFrame = lib.GetUnitFrame
 lib.GetFrame = lib.GetUnitFrame -- compatibility
 
 -- nameplates

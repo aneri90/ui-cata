@@ -54,15 +54,11 @@ local Private = select(2, ...)
 -- Lua APIs
 local tinsert, tconcat, wipe = table.insert, table.concat, wipe
 local tostring, pairs, type = tostring, pairs, type
-local error, setmetatable = error, setmetatable
+local error = error
 local CombatLogGetCurrentEventInfo = CombatLogGetCurrentEventInfo;
 
 -- WoW APIs
 local IsPlayerMoving = IsPlayerMoving
-
-WeakAurasAceEvents = setmetatable({}, {__tostring=function() return "WeakAuras" end});
-LibStub("AceEvent-3.0"):Embed(WeakAurasAceEvents);
-local aceEvents = WeakAurasAceEvents
 
 ---@class WeakAuras
 local WeakAuras = WeakAuras;
@@ -393,44 +389,46 @@ function ConstructFunction(prototype, trigger)
     tinsert(tests, "("..table.concat(orConjunctionGroup, " or ")..")")
   end
 
-  local ret = preambles .. "return function("..tconcat(input, ", ")..")\n";
-  ret = ret..(init or "");
+  local ret = {preambles .. "return function("..tconcat(input, ", ")..")\n"}
+  if init then
+    table.insert(ret, init)
+  end
+  if #debug > 0 then
+    table.insert(ret, tconcat(debug, "\n") or "")
+  end
 
-  ret = ret..(#debug > 0 and tconcat(debug, "\n") or "");
-
-  ret = ret.."if(";
-  ret = ret..((#required > 0) and tconcat(required, " and ").." and " or "");
-  ret = ret..(#tests > 0 and tconcat(tests, " and ") or "true");
-  ret = ret..") then\n";
+  table.insert(ret, "if("..((#required > 0) and tconcat(required, " and ").." and " or ""))
+  table.insert(ret, #tests > 0 and tconcat(tests, " and ") or "true")
+  table.insert(ret, ") then\n")
   if(#debug > 0) then
-    ret = ret.."print('ret: true');\n";
+    table.insert("print('ret: true');\n")
   end
 
   if (prototype.statesParameter == "all") then
-    ret = ret .. "  state[cloneId] = state[cloneId] or {}\n"
-    ret = ret .. "  state = state[cloneId]\n"
-    ret = ret .. "  state.changed = true\n"
+    table.insert(ret, "  state[cloneId] = state[cloneId] or {}\n")
+    table.insert(ret, "  state = state[cloneId]\n")
+    table.insert(ret, "  state.changed = true\n")
   end
 
   if prototype.countEvents then
-    ret = ret .. "  local count = counter:GetNext()\n"
+    table.insert(ret, "  local count = counter:GetNext()\n")
     if trigger.use_count and type(trigger.count) == "string" and trigger.count ~= "" then
-      ret = ret .. "  local match = counter:Match()"
-      ret = ret .. "  if not match then return false end\n"
+      table.insert(ret, "  local match = counter:Match()")
+      table.insert(ret, "  if not match then return false end\n")
     end
-    ret = ret .. "  state.count = count\n"
-    ret = ret .. "  state.changed = true\n"
+    table.insert(ret, "  state.count = count\n")
+    table.insert(ret, "  state.changed = true\n")
   end
 
   for _, v in ipairs(store) do
-    ret = ret .. "    if (state." .. v .. " ~= " .. v .. ") then\n"
-    ret = ret .. "      state." .. v .. " = " .. v .. "\n"
-    ret = ret .. "      state.changed = true\n"
-    ret = ret .. "    end\n"
+    table.insert(ret, "    if (state." .. v .. " ~= " .. v .. ") then\n")
+    table.insert(ret, "      state." .. v .. " = " .. v .. "\n")
+    table.insert(ret, "      state.changed = true\n")
+    table.insert(ret, "    end\n")
   end
-  ret = ret.."return true else return false end end";
+  table.insert(ret, "return true else return false end end")
 
-  return ret;
+  return table.concat(ret);
 end
 
 function Private.EndEvent(state)
@@ -793,16 +791,35 @@ local function RunTriggerFunc(allStates, data, id, triggernum, event, arg1, arg2
   return updateTriggerState;
 end
 
+---ScanEvents may receive composed events like `event:spellId`
+---For system profiling we want extract the event
+---@param composedEvent string
+---@return string
+local function getGameEventFromComposedEvent(composedEvent)
+  local separatorPosition = composedEvent:find(":", 1, true)
+  return separatorPosition == nil and composedEvent or composedEvent:sub(1, separatorPosition - 1)
+end
+
+function Private.ScanEventsByID(event, id, ...)
+  if loaded_events[event] then
+    WeakAuras.ScanEvents(event, id, ...)
+  end
+  local eventWithID = event .. ":" .. id
+  if loaded_events[eventWithID] then
+    WeakAuras.ScanEvents(eventWithID, id, ...)
+  end
+end
+
 ---@param event string
 ---@param arg1? any
 ---@param arg2? any
 ---@param ... any
 function WeakAuras.ScanEvents(event, arg1, arg2, ...)
-  local orgEvent = event;
-  Private.StartProfileSystem("generictrigger " .. orgEvent )
+  local system = getGameEventFromComposedEvent(event)
+  Private.StartProfileSystem("generictrigger " .. system)
   local event_list = loaded_events[event];
   if (not event_list) then
-    Private.StopProfileSystem("generictrigger " .. orgEvent )
+    Private.StopProfileSystem("generictrigger " .. system)
     return
   end
   if(event == "COMBAT_LOG_EVENT_UNFILTERED") then
@@ -810,7 +827,7 @@ function WeakAuras.ScanEvents(event, arg1, arg2, ...)
 
     event_list = event_list[arg2];
     if (not event_list) then
-      Private.StopProfileSystem("generictrigger " .. orgEvent )
+      Private.StopProfileSystem("generictrigger " .. system)
       return;
     end
     WeakAuras.ScanEventsInternal(event_list, event, CombatLogGetCurrentEventInfo());
@@ -824,7 +841,7 @@ function WeakAuras.ScanEvents(event, arg1, arg2, ...)
   else
     WeakAuras.ScanEventsInternal(event_list, event, arg1, arg2, ...);
   end
-  Private.StopProfileSystem("generictrigger " .. orgEvent )
+  Private.StopProfileSystem("generictrigger " .. system)
 end
 
 ---@param event string
@@ -1112,8 +1129,8 @@ function HandleEvent(frame, event, arg1, arg2, ...)
   end
   if (event == "PLAYER_ENTERING_WORLD") then
     timer:ScheduleTimer(function()
-      Private.StartProfileSystem("generictrigger WA_DELAYED_PLAYER_ENTERING_WORLD");
       HandleEvent(frame, "WA_DELAYED_PLAYER_ENTERING_WORLD", arg1, arg2)
+      Private.StartProfileSystem("generictrigger WA_DELAYED_PLAYER_ENTERING_WORLD");
       Private.CheckCooldownReady();
       Private.StopProfileSystem("generictrigger WA_DELAYED_PLAYER_ENTERING_WORLD");
       Private.PreShowModels()
@@ -1304,6 +1321,15 @@ function LoadEvent(id, triggernum, data)
   end
   if (data.internal_events) then
     for index, event in pairs(data.internal_events) do
+      loaded_events[event] = loaded_events[event] or {};
+      loaded_events[event][id] = loaded_events[event][id] or {};
+      loaded_events[event][id][triggernum] = data;
+    end
+  end
+  -- this special internal_events function is run when aura load instead of when it is added
+  if data.loadInternalEventFunc then
+    local internal_events = data.loadInternalEventFunc(data.trigger)
+    for index, event in pairs(internal_events) do
       loaded_events[event] = loaded_events[event] or {};
       loaded_events[event][id] = loaded_events[event][id] or {};
       loaded_events[event][id][triggernum] = data;
@@ -1529,7 +1555,7 @@ function GenericTrigger.Add(data, region)
         local trigger_subevents = {};
         ---@type boolean|string|table
         local force_events = false;
-        local durationFunc, overlayFuncs, nameFunc, iconFunc, textureFunc, stacksFunc, loadFunc;
+        local durationFunc, overlayFuncs, nameFunc, iconFunc, textureFunc, stacksFunc, loadFunc, loadInternalEventFunc;
         local tsuConditionVariables;
         local prototype = nil
         local automaticAutoHide
@@ -1569,6 +1595,7 @@ function GenericTrigger.Add(data, region)
             textureFunc = prototype.textureFunc;
             stacksFunc = prototype.stacksFunc;
             loadFunc = prototype.loadFunc;
+            loadInternalEventFunc = prototype.loadInternalEventFunc;
 
             if (prototype.overlayFuncs) then
               overlayFuncs = {};
@@ -1702,6 +1729,8 @@ function GenericTrigger.Add(data, region)
                     tinsert(trigger_subevents, subevent)
                     hasParam = true
                   end
+                elseif Private.InternalEventByIDList[trueEvent] then
+                  tinsert(trigger_events, trueEvent..":"..i)
                 elseif trueEvent:match("^UNIT_") or Private.UnitEventList[trueEvent] then
                   isUnitEvent = true
 
@@ -1771,6 +1800,7 @@ function GenericTrigger.Add(data, region)
           event = trigger.event,
           events = trigger_events,
           internal_events = internal_events,
+          loadInternalEventFunc = loadInternalEventFunc,
           force_events = force_events,
           unit_events = trigger_unit_events,
           includePets = includePets,
@@ -1858,25 +1888,6 @@ do
   end
 end
 
-local combatLogUpgrade = {
-  ["sourceunit"] = "sourceUnit",
-  ["source"] = "sourceName",
-  ["destunit"] = "destUnit",
-  ["dest"] = "destName"
-}
-
-local oldPowerTriggers = {
-  ["Combo Points"] = 4,
-  ["Holy Power"] = 9,
-  ["Insanity"] = 13,
-  ["Chi Power"] = 12,
-  ["Astral Power"] = 8,
-  ["Maelstrom"] =  11,
-  ["Arcane Charges"] = 16,
-  ["Fury"] = 17,
-  ["Pain"] = 18,
-  ["Shards"] = 7,
-}
 
 --#############################
 --# Support code for triggers #
@@ -2136,19 +2147,6 @@ end
 do
   local cdReadyFrame;
 
-  ---@type table<number|string, boolean> Tracks which spells we want to fetch information on,
-  local spells = {};
-  ---@type table<number, boolean>
-  local checkOverrideSpell = {}
-  ---@type table<number, boolean>
-  local spellKnown = {};
-
-  local spellCharges = {};
-  local spellChargesMax = {};
-  local spellCounts = {}
-  local spellChargeGainTime = {}
-  local spellChargeLostTime = {}
-
   local items = {};
   local itemCdDurs = {};
   local itemCdExps = {};
@@ -2355,6 +2353,15 @@ do
     return changed, nowReady
   end
 
+  ---@class SpellCDHandler
+  ---@field duration table<number, number>
+  ---@field expirationTime table<number, number>
+  ---@field remainingTime table<number, number>
+  ---@field readyTime table<number, number>
+  ---@field modRate table<number, number>
+  ---@field handles table<number, any>
+  ---@field HandleSpell fun(self: SpellCDHandler, id: number, startTime: number?, duration: number?, modRate: number?, paused: boolean?)
+  ---@field FetchSpellCooldown fun(self: SpellCDHandler, id: number): number, number, boolean, number, number
   local function CreateSpellCDHandler()
     local cd = {
       duration = {},
@@ -2369,13 +2376,337 @@ do
     return cd
   end
 
-  local spellCds = CreateSpellCDHandler();
-  local spellCdsRune = CreateSpellCDHandler();
-  local spellCdsOnlyCooldown = CreateSpellCDHandler();
-  local spellCdsOnlyCooldownRune = CreateSpellCDHandler();
-  local spellCdsCharges = CreateSpellCDHandler();
 
-  local spellDetails = {}
+  --- @class PerSpellDetails
+  --- @field known boolean? whether the spell is known by the player or not
+  --- @field charges number? the number of charges as returned by GetSpellCharges
+  --- @field chargesMax number? the number of max charges as returned by GetSpellCharges
+  --- @field chargeGainTime number?
+  --- @field chargeLostTime number?
+  --- @field count number?
+  --- @field name string
+  --- @field icon number
+  --- @field id number
+  --- @field watched number[]
+
+  -- Basic details like name, icon, charges, times per effective spell id
+  -- Also contains the mapping from effective spell id to watched
+  --- @class SpellDetails
+  --- @field private data table<number, PerSpellDetails>
+  --- @field private watchedSpellIds table<number, table<boolean, table<boolean, number>>> --- Maps user spell id to effective spell id via useExact and followoverride
+  --- @field private spellCds SpellCDHandler
+  --- @field private spellCdsRune SpellCDHandler
+  --- @field private spellCdsOnlyCooldown SpellCDHandler
+  --- @field private spellCdsOnlyCooldownRune SpellCDHandler
+  --- @field private spellCdsCharges SpellCDHandler
+  --- @field private AddEffectiveSpellId fun(self: SpellDetails, effectiveSpellId: number, userSpellId: number)
+  --- @field CheckSpellKnown fun(self: SpellDetails) Handles the SPELLS_CHANGED event (and intial setup)
+  --- @field CheckSpellCooldowns fun(self: SpellDetails, runeDuration: number?)
+  --- @field CheckSpellCooldown fun(self: SpellDetails, effectiveSpelLId: number, runeDuration: number?)
+  --- @field SendEventsForSpell fun(self: SpellDetails, effectiveSpellId: number, event: string, ...: any[])
+  --- @field GetSpellCharges fun(self: SpellDetails, effectiveSpellId: number, ignoreSpellKnown: boolean): number?, number?, number?, number?, number?
+  local SpellDetails = {
+    -- The data per effective spellId
+    data = {
+    },
+    -- The SpellDetails uses internally effective spell ids,
+    -- But the api uses user spell ids, so we need to map in three places
+    -- In the API, when SPELLS_CHANGED and when sending the events
+    -- Contains the list of user spell ids we watch
+    watchedSpellIds = {
+
+    },
+
+    -- Interprets the basic information to figure out whether an ability is on cd or not
+    -- for th various different api variants we have
+    -- This can probably be simplfied
+    spellCds = CreateSpellCDHandler(),
+    spellCdsRune = CreateSpellCDHandler(),
+    spellCdsOnlyCooldown = CreateSpellCDHandler(),
+    spellCdsOnlyCooldownRune = CreateSpellCDHandler(),
+    spellCdsCharges = CreateSpellCDHandler(),
+
+    -- Helper functions
+    AddEffectiveSpellId = function(self, effectiveSpellId, userSpellId)
+      local name, _, icon, _, _, _, spellId = Private.ExecEnv.GetSpellInfo(effectiveSpellId)
+      self.data[effectiveSpellId] = {
+        name = name,
+        icon = icon,
+        id = spellId,
+        watched = { effectiveSpellId }
+      }
+      if effectiveSpellId ~= userSpellId then
+        tinsert(self.data[effectiveSpellId].watched, userSpellId)
+      end
+
+      local spellDetail = self.data[effectiveSpellId]
+      spellDetail.known = WeakAuras.IsSpellKnownIncludingPet(effectiveSpellId)
+
+      local charges, maxCharges, startTime, duration, unifiedCooldownBecauseRune,
+            startTimeCooldown, durationCooldown, cooldownBecauseRune, startTimeCharges, durationCharges,
+            spellCount, unifiedModRate, modRate, modRateCharges, paused
+            = WeakAuras.GetSpellCooldownUnified(effectiveSpellId, GetRuneDuration());
+
+      spellDetail.charges = charges
+      spellDetail.chargesMax = maxCharges
+      spellDetail.count = spellCount
+      self.spellCds:HandleSpell(effectiveSpellId, startTime, duration, unifiedModRate, paused)
+      if not unifiedCooldownBecauseRune then
+        self.spellCdsRune:HandleSpell(effectiveSpellId, startTime, duration, unifiedModRate, paused)
+      end
+      self.spellCdsOnlyCooldown:HandleSpell(effectiveSpellId, startTimeCooldown, durationCooldown, modRate, paused)
+      if not cooldownBecauseRune then
+        self.spellCdsOnlyCooldownRune:HandleSpell(effectiveSpellId, startTimeCooldown, durationCooldown, modRate, paused)
+      end
+      self.spellCdsCharges:HandleSpell(effectiveSpellId, startTimeCharges, durationCharges, modRateCharges, paused)
+    end,
+
+    -- Actual api
+    CheckSpellKnown = function(self)
+      -- Check for spells whose effective spell id changed
+      for userSpellId, watchedData in pairs(self.watchedSpellIds) do
+        for useExact, useExactData in pairs(watchedData) do
+          for followoverride, oldEffectiveSpellId in pairs(useExactData) do
+            local newEffectiveSpellId = Private.ExecEnv.GetEffectiveSpellId(userSpellId, useExact, followoverride)
+
+            if oldEffectiveSpellId ~= newEffectiveSpellId then
+              -- The effective spell id has changed
+              -- There are lots of cases to consider here:
+
+              -- For the new effective spell id
+              -- a) We are already tracking it, only add the wathed spell ids
+              -- b) We aren't tracking it yet add it
+              if self.data[newEffectiveSpellId] then
+                tinsert(self.data[newEffectiveSpellId].watched, userSpellId)
+              else
+                self:AddEffectiveSpellId(newEffectiveSpellId, userSpellId)
+              end
+
+              local oldSpellDetail = self.data[oldEffectiveSpellId]
+              local newSpellDetail = self.data[newEffectiveSpellId]
+
+              -- Check whether we need to emit the SPEL_CHARGES_CHANGED or SPELL_COOLDOWN_READY events
+              local chargesChanged = oldSpellDetail.charges ~= newSpellDetail.charges or oldSpellDetail.count ~= newSpellDetail.count
+                or oldSpellDetail.chargesMax ~= newSpellDetail.maxCharges
+              local oldCharge = oldSpellDetail.charges or oldSpellDetail.count or 0
+              local newCharge = newSpellDetail.charges or newSpellDetail.count or 0
+              local chargesDifference = newCharge - oldCharge
+
+              local nowReady = not self.spellCdsOnlyCooldown.readyTime[oldEffectiveSpellId]
+                               and self.spellCdsOnlyCooldown.readyTime[newEffectiveSpellId]
+
+              -- For the old effective spell id
+              -- * Remove the spell from watched
+              -- * If we removed the last mapping, remove the spell details of the effective spell id
+              tremove(oldSpellDetail.watched, userSpellId)
+              if #oldSpellDetail.watched == 0 then
+                self.data[oldEffectiveSpellId] = nil
+              end
+
+              -- Finally update the watchedSpellIds mapping
+              self.watchedSpellIds[userSpellId][useExact][followoverride] = newEffectiveSpellId
+
+              -- We only send events for the userSpellId, since only those get remapped
+              Private.ScanEventsByID("SPELL_COOLDOWN_CHANGED", userSpellId, newEffectiveSpellId)
+              if nowReady then
+                Private.ScanEventsByID("SPELL_COOLDOWN_READY", userSpellId, newEffectiveSpellId)
+              end
+              if chargesChanged ~= 0 then
+                Private.ScanEventsByID("SPELL_CHARGES_CHANGED", userSpellId, newEffectiveSpellId, chargesDifference, newCharge)
+              end
+            end
+          end
+        end
+      end
+
+      -- Check for changes in the effective spells
+      local changed = {}
+      for effectiveSpellId, spellDetailsData in pairs(self.data) do
+        local known = WeakAuras.IsSpellKnownIncludingPet(effectiveSpellId)
+        if (known ~= spellDetailsData.known) then
+          spellDetailsData.known = known
+          changed[effectiveSpellId] = true
+        end
+
+        local name, _, icon, _, _, _, spellId = Private.ExecEnv.GetSpellInfo(effectiveSpellId)
+        if self.data[effectiveSpellId].name ~= name then
+          self.data[effectiveSpellId].name = name
+          changed[effectiveSpellId] = true
+        end
+        if self.data[effectiveSpellId].icon ~= icon then
+          self.data[effectiveSpellId].icon = icon
+          changed[effectiveSpellId] = true
+        end
+      end
+
+      if not WeakAuras.IsPaused() then
+        for id in pairs(changed) do
+          self:SendEventsForSpell(id, "SPELL_COOLDOWN_CHANGED", id)
+        end
+      end
+    end,
+
+    CheckSpellCooldowns = function(self, runeDuration)
+      for id, _ in pairs(self.data) do
+        self:CheckSpellCooldown(id, runeDuration)
+      end
+    end,
+
+    CheckSpellCooldown = function(self, effectiveSpelLId, runeDuration)
+      local charges, maxCharges, startTime, duration, unifiedCooldownBecauseRune,
+        startTimeCooldown, durationCooldown, cooldownBecauseRune, startTimeCharges, durationCharges,
+        spellCount, unifiedModRate, modRate, modRateCharges, paused
+        = WeakAuras.GetSpellCooldownUnified(effectiveSpelLId, runeDuration);
+
+      local time = GetTime();
+
+      local spellDetail = self.data[effectiveSpelLId]
+
+      local chargesChanged = spellDetail.charges ~= charges or spellDetail.count ~= spellCount
+                            or spellDetail.chargesMax ~= maxCharges
+      local chargesDifference = (charges or spellCount or 0) - (spellDetail.charges or spellDetail.count or 0)
+      spellDetail.charges = charges
+      spellDetail.chargesMax = maxCharges
+      spellDetail.count = spellCount
+      if chargesDifference ~= 0 then
+        if chargesDifference > 0 then
+          spellDetail.chargeGainTime = time
+          spellDetail.chargeLostTime = nil
+        else
+          spellDetail.chargeGainTime = nil
+          spellDetail.chargeLostTime = time
+        end
+      end
+
+      local changed = false
+      changed = self.spellCds:HandleSpell(effectiveSpelLId, startTime, duration, unifiedModRate, paused) or changed
+      if not unifiedCooldownBecauseRune then
+        changed = self.spellCdsRune:HandleSpell(effectiveSpelLId, startTime, duration, unifiedModRate, paused) or changed
+      end
+      local cdChanged, nowReady = self.spellCdsOnlyCooldown:HandleSpell(effectiveSpelLId, startTimeCooldown, durationCooldown, modRate, paused)
+      changed = cdChanged or changed
+      if not cooldownBecauseRune then
+        changed = self.spellCdsOnlyCooldownRune:HandleSpell(effectiveSpelLId, startTimeCooldown, durationCooldown, modRate, paused) or changed
+      end
+      local chargeChanged = self.spellCdsCharges:HandleSpell(effectiveSpelLId, startTimeCharges, durationCharges, modRateCharges)
+      changed = chargeChanged or changed
+
+      if not WeakAuras.IsPaused() then
+        if nowReady then
+          self:SendEventsForSpell(effectiveSpelLId, "SPELL_COOLDOWN_READY", effectiveSpelLId)
+        end
+
+        if changed or chargesChanged then
+          self:SendEventsForSpell(effectiveSpelLId, "SPELL_COOLDOWN_CHANGED", effectiveSpelLId)
+        end
+
+        if (chargesDifference ~= 0 ) then
+          self:SendEventsForSpell(effectiveSpelLId, "SPELL_CHARGES_CHANGED", effectiveSpelLId, chargesDifference, charges or spellCount or 0)
+        end
+      end
+    end,
+
+    WatchSpellCooldown = function(self, userSpellId, ignoreRunes, useExact, followoverride)
+      if not(cdReadyFrame) then
+        Private.InitCooldownReady();
+      end
+
+      if not userSpellId or userSpellId == 0 then
+        return
+      end
+
+      useExact = useExact and true or false
+      followoverride = followoverride and true or false
+
+      if ignoreRunes and WeakAuras.IsCataOrRetail() then
+        for i = 1, 6 do
+          WeakAuras.WatchRuneCooldown(i)
+        end
+      end
+
+      local effectiveSpellId = Private.ExecEnv.GetEffectiveSpellId(userSpellId, useExact, followoverride)
+
+      self.watchedSpellIds[userSpellId] = self. watchedSpellIds[userSpellId] or {}
+      self.watchedSpellIds[userSpellId][useExact] = self.watchedSpellIds[userSpellId][useExact] or {}
+      if self.watchedSpellIds[userSpellId][useExact][followoverride] == effectiveSpellId then
+        -- We are already watching userSpellId and have the mapping to effectiveSpellId
+        -- Nothing t odo then
+        return
+      end
+
+      -- We aren't watching userSpellId yet
+      self.watchedSpellIds[userSpellId][useExact][followoverride] = effectiveSpellId
+
+      if self.data[effectiveSpellId] then
+        -- But we are already tracking the effectiveSpellId, so only add the mapping
+        if not tContains(self.data[effectiveSpellId].watched, userSpellId) then
+          tinsert(self.data[effectiveSpellId].watched, userSpellId)
+        end
+        return
+      end
+
+      self:AddEffectiveSpellId(effectiveSpellId, userSpellId)
+    end,
+
+    SendEventsForSpell = function(self, effectiveSpellId, event, ...)
+      local watchedSpells = self.data[effectiveSpellId] and self.data[effectiveSpellId].watched
+      if watchedSpells then
+        for _, userSpellId in ipairs(watchedSpells) do
+          Private.ScanEventsByID(event, userSpellId, ...)
+        end
+      end
+    end,
+
+    GetSpellCharges = function(self, effectiveSpellId, ignoreSpellKnown)
+      local spellDetail = self.data[effectiveSpellId]
+      if not spellDetail then
+        return
+      end
+
+      if not spellDetail.known and not ignoreSpellKnown then
+        return
+      end
+      return spellDetail.charges, spellDetail.chargesMax, spellDetail.count, spellDetail.chargeGainTime, spellDetail.chargeLostTime
+    end,
+
+    GetSpellCooldown = function(self, effectiveSpellId, ignoreRuneCD, showgcd, ignoreSpellKnown, track)
+      if (not (self.data[effectiveSpellId] and self.data[effectiveSpellId].known) and not ignoreSpellKnown) then
+        return;
+      end
+      local startTime, duration, paused, gcdCooldown, readyTime, modRate
+      if track == "charges" then
+        startTime, duration, paused, readyTime, modRate = self.spellCdsCharges:FetchSpellCooldown(effectiveSpellId)
+      elseif track == "cooldown" then
+        if ignoreRuneCD then
+          startTime, duration, paused, readyTime, modRate = self.spellCdsOnlyCooldownRune:FetchSpellCooldown(effectiveSpellId)
+        else
+          startTime, duration, paused, readyTime, modRate = self.spellCdsOnlyCooldown:FetchSpellCooldown(effectiveSpellId)
+        end
+      elseif (ignoreRuneCD) then
+        startTime, duration, paused, readyTime, modRate = self.spellCdsRune:FetchSpellCooldown(effectiveSpellId)
+      else
+        startTime, duration, paused, readyTime, modRate = self.spellCds:FetchSpellCooldown(effectiveSpellId)
+      end
+
+      if paused then
+        return startTime, duration, false, readyTime, modRate, true
+      end
+
+      if (showgcd) then
+        if ((gcdStart or 0) + (gcdDuration or 0) > startTime + duration) then
+          if startTime == 0 then
+            gcdCooldown = true
+          end
+          startTime = gcdStart;
+          duration = gcdDuration;
+          modRate = gcdModrate
+        end
+      end
+
+      return startTime, duration, gcdCooldown, readyTime, modRate, false
+    end
+  }
+
   local mark_ACTIONBAR_UPDATE_COOLDOWN, mark_PLAYER_ENTERING_WORLD
 
   ---@type fun()
@@ -2395,7 +2726,7 @@ do
     cdReadyFrame:RegisterEvent("SPELL_UPDATE_USABLE")
     cdReadyFrame:RegisterEvent("UNIT_SPELLCAST_SENT");
     cdReadyFrame:RegisterEvent("BAG_UPDATE_DELAYED");
-    cdReadyFrame:RegisterEvent("UNIT_INVENTORY_CHANGED")
+    cdReadyFrame:RegisterUnitEvent("UNIT_INVENTORY_CHANGED", "player")
     cdReadyFrame:RegisterEvent("PLAYER_EQUIPMENT_CHANGED");
     cdReadyFrame:RegisterEvent("ACTIONBAR_UPDATE_COOLDOWN");
     cdReadyFrame:RegisterEvent("SPELLS_CHANGED");
@@ -2430,7 +2761,7 @@ do
       Private.StartProfileSystem("generictrigger cd tracking");
       if type(event) == "number" then-- Called from OnUpdate!
         if mark_PLAYER_ENTERING_WORLD then
-          Private.CheckSpellKnown()
+          SpellDetails:CheckSpellKnown()
           Private.CheckCooldownReady()
           Private.CheckItemSlotCooldowns()
           mark_PLAYER_ENTERING_WORLD = nil
@@ -2449,7 +2780,7 @@ do
         end
         Private.CheckCooldownReady();
       elseif(event == "SPELLS_CHANGED") then
-        Private.CheckSpellKnown()
+        SpellDetails:CheckSpellKnown()
         Private.CheckCooldownReady()
       elseif(event == "UNIT_SPELLCAST_SENT") then
         local unit, guid, castGUID, name = ...;
@@ -2600,80 +2931,41 @@ do
     end
   end
 
+
+  ---@param identifier string | number
+  ---@return number? startTime, number? duration
+  function WeakAuras.GetSpellLossOfControlCooldown(identifier)
+    if WeakAuras.IsTWW() then
+      return C_Spell.GetSpellLossOfControlCooldown(identifier)
+    else
+      return GetSpellLossOfControlCooldown(identifier)
+    end
+  end
+
   ---@param id string
   ---@param ignoreRuneCD boolean
   ---@param showgcd boolean
   ---@param ignoreSpellKnown boolean
   ---@param track boolean
-  ---@param followOverride boolean
   ---@return number? startTime
   ---@return number? duration
   ---@return number? gcdCooldown
   ---@return number? readyTime
   ---@return number? modRate
   ---@return boolean? paused
-  function WeakAuras.GetSpellCooldown(id, ignoreRuneCD, showgcd, ignoreSpellKnown, track, followOverride)
-    if followOverride then
-      if spellDetails[id] then
-        id = spellDetails[id].override or id
-      end
-    end
-
-    if (not spellKnown[id] and not ignoreSpellKnown) then
-      return;
-    end
-    local startTime, duration, paused, gcdCooldown, readyTime, modRate
-    if track == "charges" then
-      startTime, duration, paused, readyTime, modRate = spellCdsCharges:FetchSpellCooldown(id)
-    elseif track == "cooldown" then
-      if ignoreRuneCD then
-        startTime, duration, paused, readyTime, modRate = spellCdsOnlyCooldownRune:FetchSpellCooldown(id)
-      else
-        startTime, duration, paused, readyTime, modRate = spellCdsOnlyCooldown:FetchSpellCooldown(id)
-      end
-    elseif (ignoreRuneCD) then
-      startTime, duration, paused, readyTime, modRate = spellCdsRune:FetchSpellCooldown(id)
-    else
-      startTime, duration, paused, readyTime, modRate = spellCds:FetchSpellCooldown(id)
-    end
-
-    if paused then
-      return startTime, duration, false, readyTime, modRate, true
-    end
-
-    if (showgcd) then
-      if ((gcdStart or 0) + (gcdDuration or 0) > startTime + duration) then
-        if startTime == 0 then
-          gcdCooldown = true
-        end
-        startTime = gcdStart;
-        duration = gcdDuration;
-        modRate = gcdModrate
-      end
-    end
-
-    return startTime, duration, gcdCooldown, readyTime, modRate, false
+  function WeakAuras.GetSpellCooldown(id, ignoreRuneCD, showgcd, ignoreSpellKnown, track)
+    return SpellDetails:GetSpellCooldown(id, ignoreRuneCD, showgcd, ignoreSpellKnown, track)
   end
 
   ---@param id string
   ---@param ignoreSpellKnown? boolean
-  ---@param followoverride? boolean
   ---@return integer? charges
   ---@return integer? chargesMax
   ---@return integer? count
   ---@return number? chargeGainTime
   ---@return number? chargeLostTime
-  function WeakAuras.GetSpellCharges(id, ignoreSpellKnown, followoverride)
-    if followoverride then
-      if spellDetails[id] then
-        id = spellDetails[id].override or id
-      end
-    end
-
-    if (not spellKnown[id] and not ignoreSpellKnown) then
-      return;
-    end
-    return spellCharges[id], spellChargesMax[id], spellCounts[id], spellChargeGainTime[id], spellChargeLostTime[id]
+  function WeakAuras.GetSpellCharges(id, ignoreSpellKnown)
+    return SpellDetails:GetSpellCharges(id, ignoreSpellKnown)
   end
 
   ---@param id string
@@ -2762,14 +3054,14 @@ do
     itemCdDurs[id] = nil;
     itemCdExps[id] = nil;
     itemCdEnabled[id] = 1;
-    WeakAuras.ScanEvents("ITEM_COOLDOWN_READY", id);
+    Private.ScanEventsByID("ITEM_COOLDOWN_READY", id);
   end
 
   local function ItemSlotCooldownFinished(id)
     itemSlotsCdHandles[id] = nil;
     itemSlotsCdDurs[id] = nil;
     itemSlotsCdExps[id] = nil;
-    WeakAuras.ScanEvents("ITEM_SLOT_COOLDOWN_READY", id);
+    Private.ScanEventsByID("ITEM_SLOT_COOLDOWN_READY", id);
   end
 
   ---@type fun()
@@ -2824,12 +3116,22 @@ do
     return runeDuration;
   end
 
+  local GetSpellCharges = GetSpellCharges or function(id)
+    local chargeInfo = C_Spell.GetSpellCharges(id)
+    if not chargeInfo then return end
+    return chargeInfo.currentCharges, chargeInfo.maxCharges, chargeInfo.cooldownStartTime, chargeInfo.cooldownDuration, chargeInfo.chargeModRate
+  end
+  local GetSpellCount = GetSpellCount or C_Spell.GetSpellCastCount
+
   ---@param id string
   ---@param runeDuration? number
   function WeakAuras.GetSpellCooldownUnified(id, runeDuration)
     local startTimeCooldown, durationCooldown, enabled, modRate
     if GetSpellCooldown then
       startTimeCooldown, durationCooldown, enabled, modRate = GetSpellCooldown(id)
+      if type(enabled) == "number" then
+        enabled = enabled == 1 and true or false
+      end
     else
       local spellCooldownInfo = C_Spell.GetSpellCooldown(id);
       if spellCooldownInfo then
@@ -2875,8 +3177,8 @@ do
     -- For Evoker, using an empowered spell puts spells on pause. Some spells are put on an entirely bogus 0.5 paused cd
     -- Others the real cd (that continues ticking) is paused.
     -- We treat anything with less than 0.5 as not on cd, and hope for the best.
-    if enabled == 0 and durationCooldown <= 0.5 then
-      startTimeCooldown, durationCooldown, enabled = 0, 0, 1
+    if not enabled and durationCooldown <= 0.5 then
+      startTimeCooldown, durationCooldown, enabled = 0, 0, true
     end
 
     local onNonGCDCD = durationCooldown and startTimeCooldown and durationCooldown > 0 and (durationCooldown ~= gcdDuration or startTimeCooldown ~= gcdStart);
@@ -2910,124 +3212,12 @@ do
 
     return charges, maxCharges, startTime, duration, unifiedCooldownBecauseRune,
            startTimeCooldown, durationCooldown, cooldownBecauseRune, startTimeCharges, durationCharges,
-           count, unifiedModRate, modRate, modRateCharges, enabled == 0
-  end
-
-  ---@type fun()
-  function Private.CheckSpellKnown()
-    local overrides = {}
-    -- First check for overrides, if we don't yet track a specific override, add it
-    for id, _ in pairs(checkOverrideSpell) do
-      local override
-      if type(id) == "number" then
-        override = FindSpellOverrideByID(id)
-      else
-        local spellId = select(7, Private.ExecEnv.GetSpellInfo(id))
-        if spellId then
-          override = FindSpellOverrideByID(spellId)
-        end
-      end
-      if id ~= override and override and not spells[override] then
-        WeakAuras.WatchSpellCooldown(override, false, false)
-      end
-      overrides[id] = override
-    end
-
-    for id, _ in pairs(spells) do
-      local known = WeakAuras.IsSpellKnownIncludingPet(id);
-      local changed = false
-      if (known ~= spellKnown[id]) then
-        spellKnown[id] = known
-        changed = true
-      end
-
-      local name, _, icon, _, _, _, spellId = Private.ExecEnv.GetSpellInfo(id)
-      if spellDetails[id].name ~= name then
-        spellDetails[id].name = name
-        changed = true
-      end
-      if spellDetails[id].icon ~= icon then
-        spellDetails[id].icon = icon
-        changed = true
-      end
-      if spellDetails[id].id ~= spellId then
-        spellDetails[id].id = spellId
-        changed = true
-      end
-
-      if checkOverrideSpell[id] then
-        local override = overrides[id]
-        if spellDetails[id].override ~= override then
-          spellDetails[id].override = override
-          changed = true
-        end
-      end
-
-      if changed and not WeakAuras.IsPaused() then
-        WeakAuras.ScanEvents("SPELL_COOLDOWN_CHANGED", id)
-      end
-    end
+           count, unifiedModRate, modRate, modRateCharges, not enabled
   end
 
   ---@type fun(id, runeDuration)
   function Private.CheckSpellCooldown(id, runeDuration)
-    local charges, maxCharges, startTime, duration, unifiedCooldownBecauseRune,
-          startTimeCooldown, durationCooldown, cooldownBecauseRune, startTimeCharges, durationCharges,
-          spellCount, unifiedModRate, modRate, modRateCharges, paused
-          = WeakAuras.GetSpellCooldownUnified(id, runeDuration);
-
-    local time = GetTime();
-
-    local chargesChanged = spellCharges[id] ~= charges or spellCounts[id] ~= spellCount
-                           or spellChargesMax[id] ~= maxCharges
-    local chargesDifference = (charges or spellCount or 0) - (spellCharges[id] or spellCounts[id] or 0)
-    spellCharges[id] = charges;
-    spellChargesMax[id] = maxCharges;
-    spellCounts[id] = spellCount
-    if chargesDifference ~= 0 then
-      if chargesDifference > 0 then
-        spellChargeGainTime[id] = time
-        spellChargeLostTime[id] = nil
-      else
-        spellChargeGainTime[id] = nil
-        spellChargeLostTime[id] = time
-      end
-    end
-
-    local changed = false
-    changed = spellCds:HandleSpell(id, startTime, duration, unifiedModRate, paused) or changed
-    if not unifiedCooldownBecauseRune then
-      changed = spellCdsRune:HandleSpell(id, startTime, duration, unifiedModRate, paused) or changed
-    end
-    local cdChanged, nowReady = spellCdsOnlyCooldown:HandleSpell(id, startTimeCooldown, durationCooldown, modRate, paused)
-    changed = cdChanged or changed
-    if not cooldownBecauseRune then
-      changed = spellCdsOnlyCooldownRune:HandleSpell(id, startTimeCooldown, durationCooldown, modRate, paused) or changed
-    end
-    local chargeChanged, chargeNowReady = spellCdsCharges:HandleSpell(id, startTimeCharges, durationCharges, modRateCharges)
-    changed = chargeChanged or changed
-    nowReady = chargeNowReady or nowReady
-
-    if not WeakAuras.IsPaused() then
-      if nowReady then
-        WeakAuras.ScanEvents("SPELL_COOLDOWN_READY", id);
-      end
-
-      if changed or chargesChanged then
-        WeakAuras.ScanEvents("SPELL_COOLDOWN_CHANGED", id);
-      end
-
-      if (chargesDifference ~= 0 ) then
-        WeakAuras.ScanEvents("SPELL_CHARGES_CHANGED", id, chargesDifference, charges or spellCount or 0);
-      end
-    end
-  end
-
-  ---@type fun(runeDuration)
-  function Private.CheckSpellCooldows(runeDuration)
-    for id, _ in pairs(spells) do
-      Private.CheckSpellCooldown(id, runeDuration)
-    end
+    SpellDetails:CheckSpellCooldown(id, runeDuration)
   end
 
   ---@type fun()
@@ -3066,7 +3256,7 @@ do
           itemCdExps[id] = endTime;
           itemCdHandles[id] = timer:ScheduleTimerFixed(ItemCooldownFinished, endTime - time, id);
           if not WeakAuras.IsPaused() then
-            WeakAuras.ScanEvents("ITEM_COOLDOWN_STARTED", id)
+            Private.ScanEventsByID("ITEM_COOLDOWN_STARTED", id)
           end
           itemCdEnabledChanged = false;
         elseif(itemCdExps[id] ~= endTime) then
@@ -3078,7 +3268,7 @@ do
           itemCdExps[id] = endTime;
           itemCdHandles[id] = timer:ScheduleTimerFixed(ItemCooldownFinished, endTime - time, id);
           if not WeakAuras.IsPaused() then
-            WeakAuras.ScanEvents("ITEM_COOLDOWN_CHANGED", id)
+            Private.ScanEventsByID("ITEM_COOLDOWN_CHANGED", id)
           end
           itemCdEnabledChanged = false;
         end
@@ -3096,7 +3286,7 @@ do
         end
       end
       if (itemCdEnabledChanged and not WeakAuras.IsPaused()) then
-        WeakAuras.ScanEvents("ITEM_COOLDOWN_CHANGED", id);
+        Private.ScanEventsByID("ITEM_COOLDOWN_CHANGED", id);
       end
     end
   end
@@ -3122,7 +3312,7 @@ do
           itemSlotsCdExps[id] = endTime;
           itemSlotsCdHandles[id] = timer:ScheduleTimerFixed(ItemSlotCooldownFinished, endTime - time, id);
           if not WeakAuras.IsPaused() then
-            WeakAuras.ScanEvents("ITEM_SLOT_COOLDOWN_STARTED", id)
+            Private.ScanEventsByID("ITEM_SLOT_COOLDOWN_STARTED", id)
           end
         elseif(itemSlotsCdExps[id] ~= endTime) then
           -- Cooldown is now different
@@ -3133,7 +3323,7 @@ do
           itemSlotsCdExps[id] = endTime;
           itemSlotsCdHandles[id] = timer:ScheduleTimerFixed(ItemSlotCooldownFinished, endTime - time, id);
           if not WeakAuras.IsPaused() then
-            WeakAuras.ScanEvents("ITEM_SLOT_COOLDOWN_CHANGED", id)
+            Private.ScanEventsByID("ITEM_SLOT_COOLDOWN_CHANGED", id)
           end
         end
       elseif(duration > 0) then
@@ -3152,7 +3342,7 @@ do
       local newItemId = GetInventoryItemID("player", id);
       if (itemId ~= newItemId) then
         if not WeakAuras.IsPaused() then
-          WeakAuras.ScanEvents("ITEM_SLOT_COOLDOWN_ITEM_CHANGED")
+          Private.ScanEventsByID("ITEM_SLOT_COOLDOWN_ITEM_CHANGED", id)
         end
         itemSlots[id] = newItemId or 0;
       end
@@ -3163,7 +3353,7 @@ do
   function Private.CheckCooldownReady()
     CheckGCD();
     local runeDuration = Private.CheckRuneCooldown();
-    Private.CheckSpellCooldows(runeDuration);
+    SpellDetails:CheckSpellCooldowns(runeDuration);
     Private.CheckItemCooldowns();
     Private.CheckItemSlotCooldowns();
   end
@@ -3204,66 +3394,36 @@ do
     end
   end
 
-  ---@private
-  function WeakAuras.WatchSpellCooldown(id, ignoreRunes, followoverride)
-    if not(cdReadyFrame) then
-      Private.InitCooldownReady();
-    end
+  local GetOverrideSpell
+  if WeakAuras.IsTWW() then
+    GetOverrideSpell = C_Spell.GetOverrideSpell
+  else
+    GetOverrideSpell = FindSpellOverrideByID
+  end
 
-    if not id or id == 0 then return end
-
-    if ignoreRunes and WeakAuras.IsCataOrRetail() then
-      for i = 1, 6 do
-        WeakAuras.WatchRuneCooldown(i);
+  function Private.ExecEnv.GetEffectiveSpellId(spellId, exactMatch, followoverride)
+    if not exactMatch then
+      local spellName = Private.ExecEnv.GetSpellName(spellId or "")
+      if spellName then
+        local spellIdForName = select(7, Private.ExecEnv.GetSpellInfo(spellName))
+        if spellIdForName then
+          spellId = spellIdForName
+        end
       end
     end
-
-    if (spells[id] and not followoverride or checkOverrideSpell[id]) then
-      return;
-    end
-    spells[id] = true;
-    checkOverrideSpell[id] = followoverride
-    local name, _, icon, _, _, _, spellId = Private.ExecEnv.GetSpellInfo(id)
-    spellDetails[id] = {
-      name = name,
-      icon = icon,
-      id = spellId
-    }
-
     if followoverride then
-      if type(id) == "number" then
-        spellDetails[id].override = FindSpellOverrideByID(id)
-      else
-        spellDetails[id].override = spellId and FindSpellOverrideByID(spellId) or nil
+      local override = spellId and GetOverrideSpell(spellId)
+      if override then
+        spellId = override
       end
     end
 
-    spellKnown[id] = WeakAuras.IsSpellKnownIncludingPet(id);
+    return spellId
+  end
 
-    local charges, maxCharges, startTime, duration, unifiedCooldownBecauseRune,
-          startTimeCooldown, durationCooldown, cooldownBecauseRune, startTimeCharges, durationCharges,
-          spellCount, unifiedModRate, modRate, modRateCharges, paused
-          = WeakAuras.GetSpellCooldownUnified(id, GetRuneDuration());
-
-    spellCharges[id] = charges;
-    spellChargesMax[id] = maxCharges;
-    spellCounts[id] = spellCount
-    spellCds:HandleSpell(id, startTime, duration, unifiedModRate, paused)
-    if not unifiedCooldownBecauseRune then
-      spellCdsRune:HandleSpell(id, startTime, duration, unifiedModRate, paused)
-    end
-    spellCdsOnlyCooldown:HandleSpell(id, startTimeCooldown, durationCooldown, modRate, paused)
-    if not cooldownBecauseRune then
-      spellCdsOnlyCooldownRune:HandleSpell(id, startTimeCooldown, durationCooldown, modRate, paused)
-    end
-    spellCdsCharges:HandleSpell(id, startTimeCharges, durationCharges, modRateCharges, paused)
-
-    if spellDetails[id].override then
-      -- If this spell is overridden and the option is on, track the overridden spell too
-      if spellDetails[id].override ~= id then
-        WeakAuras.WatchSpellCooldown(spellDetails[id].override, false, false)
-      end
-    end
+  ---@private
+  function WeakAuras.WatchSpellCooldown(id, ignoreRunes, useExact, followoverride)
+    SpellDetails:WatchSpellCooldown(id, ignoreRunes, useExact, followoverride)
   end
 
   ---@private
@@ -3286,7 +3446,7 @@ do
         startTime, duration = 0, 0
       end
       itemCdEnabled[id] = enabled;
-      if(duration > 0 and duration > 1.5 and duration ~= WeakAuras.gcdDuration()) then
+      if(duration and duration > 0 and duration > 1.5 and duration ~= WeakAuras.gcdDuration()) then
         local time = GetTime();
         local endTime = startTime + duration;
         itemCdDurs[id] = duration;
@@ -3333,18 +3493,19 @@ do
     spellActivationFrame:RegisterEvent("SPELL_ACTIVATION_OVERLAY_GLOW_SHOW");
     spellActivationFrame:RegisterEvent("SPELL_ACTIVATION_OVERLAY_GLOW_HIDE");
     spellActivationFrame:SetScript("OnEvent", function(self, event, spell)
-      Private.StartProfileSystem("generictrigger");
+      Private.StartProfileSystem("generictrigger spell activation");
       local spellName = Private.ExecEnv.GetSpellName(spell)
       if (spellActivationSpells[spell] or spellActivationSpells[spellName]) then
         local active = (event == "SPELL_ACTIVATION_OVERLAY_GLOW_SHOW")
         spellActivationSpellsCurrent[spell] = active
         spellActivationSpellsCurrent[spellName] = active
         if not WeakAuras.IsPaused() then
-          WeakAuras.ScanEvents("WA_UPDATE_OVERLAY_GLOW", spell)
+          Private.ScanEventsByID("WA_UPDATE_OVERLAY_GLOW", spell)
+          Private.ScanEventsByID("WA_UPDATE_OVERLAY_GLOW", spellName)
         end
       end
 
-      Private.StopProfileSystem("generictrigger");
+      Private.StopProfileSystem("generictrigger spell activation");
     end);
   end
 
@@ -3384,20 +3545,23 @@ function WeakAuras.WatchUnitChange(unit)
   if not watchUnitChange then
     ---@class UnitChangeFrame: FrameScriptObject
     watchUnitChange = CreateFrame("Frame");
-    watchUnitChange.unitChangeGUIDS = {}
+    watchUnitChange.trackedUnits = {}
+    watchUnitChange.unitIdToGUID = {}
+    watchUnitChange.GUIDToUnitIds = {}
     watchUnitChange.unitRoles = {}
     watchUnitChange.unitRaidRole = {}
     watchUnitChange.inRaid = IsInRaid()
     watchUnitChange.nameplateFaction = {}
     watchUnitChange.raidmark = {}
+    watchUnitChange.unitIsUnit = {}
 
     Private.frames["Unit Change Frame"] = watchUnitChange;
     watchUnitChange:RegisterEvent("PLAYER_TARGET_CHANGED")
     if not WeakAuras.IsClassicEra() then
       watchUnitChange:RegisterEvent("PLAYER_FOCUS_CHANGED")
-    else
-      watchUnitChange:RegisterEvent("PLAYER_ROLES_ASSIGNED")
+      watchUnitChange:RegisterEvent("ARENA_OPPONENT_UPDATE")
     end
+    watchUnitChange:RegisterEvent("PLAYER_ROLES_ASSIGNED")
     watchUnitChange:RegisterEvent("PLAYER_SOFT_ENEMY_CHANGED")
     watchUnitChange:RegisterEvent("PLAYER_SOFT_FRIEND_CHANGED")
     watchUnitChange:RegisterEvent("UNIT_TARGET");
@@ -3410,85 +3574,210 @@ function WeakAuras.WatchUnitChange(unit)
     watchUnitChange:RegisterEvent("UNIT_PET")
     watchUnitChange:RegisterEvent("RAID_TARGET_UPDATE")
 
-    watchUnitChange:SetScript("OnEvent", function(self, event, unit)
-      Private.StartProfileSystem("generictrigger unit change");
-      if event == "NAME_PLATE_UNIT_ADDED" or event == "NAME_PLATE_UNIT_REMOVED" then
-        local newGuid = WeakAuras.UnitExistsFixed(unit) and UnitGUID(unit) or ""
-        local newMarker = GetRaidTargetIndex(unit) or 0
-        if newGuid ~= watchUnitChange.unitChangeGUIDS[unit] then
-          WeakAuras.ScanEvents("UNIT_CHANGED_" .. unit, unit)
-          watchUnitChange.unitChangeGUIDS[unit] = newGuid
-          watchUnitChange.raidmark[unit] = newMarker
-        end
-        if event == "NAME_PLATE_UNIT_ADDED" then
-          watchUnitChange.nameplateFaction[unit] = WeakAuras.GetPlayerReaction(unit)
-        end
-      elseif event == "UNIT_FACTION" then
-        if unit:sub(1, 9) == "nameplate" then
-          local reaction = WeakAuras.GetPlayerReaction(unit)
-          if reaction ~= watchUnitChange.nameplateFaction[unit] then
-            watchUnitChange.nameplateFaction[unit] = reaction
-            WeakAuras.ScanEvents("UNIT_CHANGED_" .. unit, unit)
-          end
-        end
-      elseif event == "UNIT_PET" then
-        local pet = WeakAuras.unitToPetUnit[unit]
-        if pet then
-          WeakAuras.ScanEvents("UNIT_CHANGED_" .. pet, pet)
-        end
-      elseif event == "RAID_TARGET_UPDATE" then
-        for unit, marker in pairs(watchUnitChange.raidmark) do
-          local newMarker = GetRaidTargetIndex(unit) or 0
-          if marker ~= newMarker then
-            watchUnitChange.raidmark[unit] = newMarker
-            WeakAuras.ScanEvents("UNIT_CHANGED_" .. unit, unit)
-          end
-        end
-      else
-        local inRaid = IsInRaid()
-        local inRaidChanged = inRaid ~= watchUnitChange.inRaid
-
-        for unit, guid in pairs(watchUnitChange.unitChangeGUIDS) do
-          local newGuid = WeakAuras.UnitExistsFixed(unit) and UnitGUID(unit) or ""
-          local newMarker = GetRaidTargetIndex(unit) or 0
-          if guid ~= newGuid
-          or newMarker ~= watchUnitChange.raidmark[unit]
-          or event == "PLAYER_ENTERING_WORLD"
-          then
-            WeakAuras.ScanEvents("UNIT_CHANGED_" .. unit, unit)
-            watchUnitChange.unitChangeGUIDS[unit] = newGuid
-            watchUnitChange.raidmark[unit] = newMarker
-          elseif Private.multiUnitUnits.group[unit] then
-            -- If in raid changed we send a UNIT_CHANGED for the group units
-            if inRaidChanged then
-              WeakAuras.ScanEvents("UNIT_CHANGED_" .. unit, unit)
-            else
-              if WeakAuras.IsClassicEra() then
-                local newRaidRole = WeakAuras.UnitRaidRole(unit)
-                if watchUnitChange.unitRaidRole[unit] ~= newRaidRole then
-                  watchUnitChange.unitRaidRole[unit] = newRaidRole
-                  WeakAuras.ScanEvents("UNIT_ROLE_CHANGED_" .. unit, unit)
-                end
-              end
-              if WeakAuras.IsCataOrRetail() then
-                local newRole = UnitGroupRolesAssigned(unit)
-                if watchUnitChange.unitRoles[unit] ~= newRole then
-                  watchUnitChange.unitRoles[unit] = newRole
-                  WeakAuras.ScanEvents("UNIT_ROLE_CHANGED_" .. unit, unit)
-                end
-              end
+    local function unitUpdate(unitA, eventsToSend)
+      local oldGUID = watchUnitChange.unitIdToGUID[unitA]
+      local newGUID = WeakAuras.UnitExistsFixed(unitA) and UnitGUID(unitA)
+      if oldGUID ~= newGUID then
+        eventsToSend["UNIT_CHANGED_" .. unitA] = unitA
+        if watchUnitChange.GUIDToUnitIds[oldGUID] then
+          for unitB in pairs(watchUnitChange.GUIDToUnitIds[oldGUID]) do
+            if unitA ~= unitB then
+              eventsToSend["UNIT_IS_UNIT_CHANGED_" .. unitA .. "_" .. unitB] = unitA
+              eventsToSend["UNIT_IS_UNIT_CHANGED_" .. unitB .. "_" .. unitA] = unitB
             end
           end
         end
-        watchUnitChange.inRaid = inRaid
+        if watchUnitChange.GUIDToUnitIds[newGUID] then
+          for unitB in pairs(watchUnitChange.GUIDToUnitIds[newGUID]) do
+            if unitA ~= unitB then
+              eventsToSend["UNIT_IS_UNIT_CHANGED_" .. unitA .. "_" .. unitB] = unitA
+              eventsToSend["UNIT_IS_UNIT_CHANGED_" .. unitB .. "_" .. unitA] = unitB
+            end
+          end
+        end
       end
+      -- update data
+      if oldGUID and watchUnitChange.GUIDToUnitIds[oldGUID] then
+        watchUnitChange.GUIDToUnitIds[oldGUID][unitA] = nil
+        if next(watchUnitChange.GUIDToUnitIds[oldGUID]) == nil then
+          watchUnitChange.GUIDToUnitIds[oldGUID] = nil
+        end
+      end
+      if newGUID then
+        watchUnitChange.GUIDToUnitIds[newGUID] = watchUnitChange.GUIDToUnitIds[newGUID] or {}
+        watchUnitChange.GUIDToUnitIds[newGUID][unitA] = true
+      end
+      watchUnitChange.unitIdToGUID[unitA] = newGUID
+    end
+
+    local function markerUpdate(unit, eventsToSend)
+      local oldMarker = watchUnitChange.raidmark[unit]
+      local newMarker = GetRaidTargetIndex(unit) or 0
+      if newMarker ~= oldMarker then
+        eventsToSend["UNIT_CHANGED_" .. unit] = unit
+        watchUnitChange.raidmark[unit] = newMarker
+      end
+    end
+
+    local function markerInit(unit)
+      watchUnitChange.raidmark[unit] = GetRaidTargetIndex(unit) or 0
+    end
+
+    local function markerClear(unit)
+      watchUnitChange.raidmark[unit] = nil
+    end
+
+    local function reactionUpdate(unit, eventsToSend)
+      local oldReaction = watchUnitChange.nameplateFaction[unit]
+      local newReaction = WeakAuras.GetPlayerReaction(unit)
+      if oldReaction ~= newReaction then
+        eventsToSend["UNIT_CHANGED_" .. unit] = unit
+        watchUnitChange.nameplateFaction[unit] = newReaction
+      end
+    end
+
+    local function reactionInit(unit)
+      watchUnitChange.nameplateFaction[unit] = WeakAuras.GetPlayerReaction(unit)
+    end
+
+    local function reactionClear(unit)
+      watchUnitChange.nameplateFaction[unit] = nil
+    end
+
+    local roleUpdate
+    if WeakAuras.IsClassicEra() then
+      function roleUpdate(unit, eventsToSend)
+        local oldRaidRole = watchUnitChange.unitRaidRole[unit]
+        local newRaidRole = WeakAuras.UnitRaidRole(unit)
+        if oldRaidRole ~= newRaidRole then
+          eventsToSend["UNIT_ROLE_CHANGED_" .. unit] = unit
+          watchUnitChange.unitRaidRole[unit] = newRaidRole
+        end
+      end
+    end
+    if WeakAuras.IsCataOrRetail() then
+      function roleUpdate(unit, eventsToSend)
+        local oldRole = watchUnitChange.unitRoles[unit]
+        local newRole = UnitGroupRolesAssigned(unit)
+        if oldRole ~= newRole then
+          eventsToSend["UNIT_ROLE_CHANGED_" .. unit] = unit
+          watchUnitChange.unitRoles[unit] = newRole
+        end
+      end
+    end
+
+    local function handleUnit(unit, eventsToSend, ...)
+      if watchUnitChange.trackedUnits[unit] then
+        local fn
+        for i = 1, select("#", ...) do
+          fn = select(i, ...)
+          fn(unit, eventsToSend)
+        end
+      end
+    end
+
+    local handleEvent = {
+      PLAYER_ENTERING_WORLD = function(_, eventsToSend)
+        for unit in pairs(watchUnitChange.unitIdToGUID) do
+          handleUnit(unit, eventsToSend, unitUpdate, markerUpdate, reactionUpdate)
+        end
+      end,
+      NAME_PLATE_UNIT_ADDED = function(unit, eventsToSend)
+        handleUnit(unit, eventsToSend, unitUpdate, markerInit, reactionInit)
+      end,
+      NAME_PLATE_UNIT_REMOVED = function(unit, eventsToSend)
+        handleUnit(unit, eventsToSend, unitUpdate, markerClear, reactionClear)
+      end,
+      INSTANCE_ENCOUNTER_ENGAGE_UNIT = function(_, eventsToSend)
+        for i = 1, 5 do
+          handleUnit("boss" .. i, eventsToSend, unitUpdate, markerInit, reactionInit)
+          handleUnit("boss" .. i .. "target", eventsToSend, unitUpdate, markerInit, reactionInit)
+        end
+      end,
+      ARENA_OPPONENT_UPDATE = function(unit, eventsToSend)
+        handleUnit(unit, eventsToSend, unitUpdate, markerInit, reactionInit)
+        handleUnit(unit .. "target", eventsToSend, unitUpdate, markerInit, reactionInit)
+      end,
+      PLAYER_TARGET_CHANGED = function(_, eventsToSend)
+        handleUnit("target", eventsToSend, unitUpdate, markerInit, reactionInit)
+        handleUnit("targettarget", eventsToSend, unitUpdate, markerInit, reactionInit)
+      end,
+      PLAYER_FOCUS_CHANGED = function(_, eventsToSend)
+        handleUnit("focus", eventsToSend, unitUpdate, markerInit, reactionInit)
+        handleUnit("focustarget", eventsToSend, unitUpdate, markerInit, reactionInit)
+      end,
+      PLAYER_SOFT_ENEMY_CHANGED = function(_, eventsToSend)
+        handleUnit("softenemy", eventsToSend, unitUpdate, markerInit, reactionInit)
+        handleUnit("softenemytarget", eventsToSend, unitUpdate, markerInit, reactionInit)
+      end,
+      PLAYER_SOFT_FRIEND_CHANGED = function(_, eventsToSend)
+        handleUnit("softfriend", eventsToSend, unitUpdate, markerInit, reactionInit)
+        handleUnit("softfriendtarget", eventsToSend, unitUpdate, markerInit, reactionInit)
+      end,
+      RAID_TARGET_UPDATE = function(_, eventsToSend)
+        for unit in pairs(watchUnitChange.raidmark) do
+          handleUnit(unit, eventsToSend, markerUpdate)
+        end
+      end,
+      UNIT_FACTION = function(unit, eventsToSend)
+        handleUnit(unit, eventsToSend, reactionUpdate)
+      end,
+      UNIT_PET = function(unit, eventsToSend)
+        local pet = WeakAuras.unitToPetUnit[unit]
+        if pet and watchUnitChange.trackedUnits[pet] then
+          eventsToSend["UNIT_CHANGED_" .. pet] = pet
+        end
+      end,
+      PLAYER_ROLES_ASSIGNED = function(_, eventsToSend)
+        for unit in pairs(Private.multiUnitUnits.group) do
+          handleUnit(unit, eventsToSend, roleUpdate)
+        end
+      end,
+      UNIT_TARGET = function(unit, eventsToSend)
+        handleUnit(unit .. "target", eventsToSend, unitUpdate, markerInit, reactionInit)
+      end,
+      GROUP_ROSTER_UPDATE = function(_, eventsToSend)
+        for unit in pairs(Private.multiUnitUnits.group) do
+          handleUnit(unit, eventsToSend, unitUpdate, markerInit, reactionInit)
+        end
+        local inRaid = IsInRaid()
+        local inRaidChanged = inRaid ~= watchUnitChange.inRaid
+        if inRaidChanged then
+          for unit in pairs(Private.multiUnitUnits.group) do
+            if watchUnitChange.trackedUnits[unit] and watchUnitChange.unitIdToGUID[unit] then
+              eventsToSend["UNIT_CHANGED_" .. unit] = unit
+            end
+          end
+          watchUnitChange.inRaid = inRaid
+        end
+      end
+    }
+
+    watchUnitChange:SetScript("OnEvent", function(self, event, unit)
+      Private.StartProfileSystem("generictrigger unit change");
+      local eventsToSend = {}
+      handleEvent[event](unit, eventsToSend)
+      -- send events
+      for event, unit in pairs(eventsToSend) do
+        WeakAuras.ScanEvents(event, unit)
+      end
+
       Private.StopProfileSystem("generictrigger unit change");
     end)
   end
-  watchUnitChange.unitChangeGUIDS = watchUnitChange.unitChangeGUIDS or {}
-  watchUnitChange.unitChangeGUIDS[unit] = UnitGUID(unit) or ""
+  if watchUnitChange.trackedUnits[unit] then
+    return
+  end
+  local guid = UnitGUID(unit)
+  watchUnitChange.trackedUnits[unit] = true
+  watchUnitChange.unitIdToGUID[unit] = guid
+  if guid then
+    watchUnitChange.GUIDToUnitIds[guid] = watchUnitChange.GUIDToUnitIds[guid] or {}
+    watchUnitChange.GUIDToUnitIds[guid][unit] = true
+  end
   watchUnitChange.raidmark = watchUnitChange.raidmark or {}
   watchUnitChange.raidmark[unit] = GetRaidTargetIndex(unit) or 0
+  watchUnitChange.inRaid = IsInRaid()
 end
 
 function WeakAuras.GetEquipmentSetInfo(itemSetName, partial)
@@ -3598,6 +3887,8 @@ if WeakAuras.IsClassicEra() then
   end
 end
 
+local GetSpellPowerCost = GetSpellPowerCost or C_Spell and C_Spell.GetSpellPowerCost
+
 ---@param powerTypeToCheck integer
 ---@return number? cost
 function WeakAuras.GetSpellCost(powerTypeToCheck)
@@ -3607,10 +3898,12 @@ function WeakAuras.GetSpellCost(powerTypeToCheck)
   end
   if spellID then
     local costTable = GetSpellPowerCost(spellID);
-    for _, costInfo in pairs(costTable) do
-      -- When there is no required aura for a power cost, the API returns an aura ID of 0 and false for hasRequiredAura despite being valid.
-      if costInfo.type == powerTypeToCheck and (costInfo.requiredAuraID == 0 or costInfo.hasRequiredAura) then
-        return costInfo.cost;
+    if costTable then
+      for _, costInfo in pairs(costTable) do
+        -- When there is no required aura for a power cost, the API returns an aura ID of 0 and false for hasRequiredAura despite being valid.
+        if costInfo.type == powerTypeToCheck and (costInfo.requiredAuraID == 0 or costInfo.hasRequiredAura) then
+          return costInfo.cost;
+        end
       end
     end
   end
@@ -3646,7 +3939,7 @@ do
   function WeakAuras.TenchInit()
     if not(tenchFrame) then
       tenchFrame = CreateFrame("Frame");
-      tenchFrame:RegisterEvent("UNIT_INVENTORY_CHANGED");
+      tenchFrame:RegisterUnitEvent("UNIT_INVENTORY_CHANGED", "player");
       tenchFrame:RegisterEvent("PLAYER_ENTERING_WORLD");
       if WeakAuras.IsClassicEra() then
         tenchFrame:RegisterEvent("PLAYER_EQUIPMENT_CHANGED");
@@ -3698,7 +3991,7 @@ do
       end
 
       local function tenchUpdate()
-        Private.StartProfileSystem("generictrigger");
+        Private.StartProfileSystem("generictrigger temporary enchant");
         local _, mh_rem, oh_rem, rw_rem
         _, mh_rem, mh_charges, mh_EnchantID, _, oh_rem, oh_charges, oh_EnchantID, _, rw_rem, rw_charges, rw_EnchantID = GetWeaponEnchantInfo();
         local time = GetTime();
@@ -3738,13 +4031,13 @@ do
           end
         end
         WeakAuras.ScanEvents("TENCH_UPDATE");
-        Private.StopProfileSystem("generictrigger");
+        Private.StopProfileSystem("generictrigger temporary enchant");
       end
 
       tenchFrame:SetScript("OnEvent", function()
-        Private.StartProfileSystem("generictrigger");
+        Private.StartProfileSystem("generictrigger temporary enchant");
         timer:ScheduleTimer(tenchUpdate, 0.1);
-        Private.StopProfileSystem("generictrigger");
+        Private.StopProfileSystem("generictrigger temporary enchant");
       end);
 
       tenchUpdate();
@@ -3774,9 +4067,24 @@ do
       petFrame = CreateFrame("Frame");
       petFrame:RegisterUnitEvent("UNIT_PET", "player")
       petFrame:SetScript("OnEvent", function(event, unit)
-        Private.StartProfileSystem("generictrigger")
+        Private.StartProfileSystem("generictrigger pet update")
         WeakAuras.ScanEvents("PET_UPDATE", "pet")
-        Private.StopProfileSystem("generictrigger")
+        Private.StopProfileSystem("generictrigger pet update")
+      end)
+    end
+  end
+end
+
+do
+  local watchFrame
+  function Private.WatchCOMBO_TARGET_CHANGED()
+    if not watchFrame then
+      watchFrame = CreateFrame("Frame")
+      watchFrame:RegisterEvent("COMBO_TARGET_CHANGED")
+      watchFrame:SetScript("OnEvent", function()
+        Private.StartProfileSystem("generictrigger COMBO_TARGET_CHANGED")
+        WeakAuras.ScanEvents("WA_COMBO_TARGET_CHANGED", "player")
+        Private.StopProfileSystem("generictrigger COMBO_TARGET_CHANGED")
       end)
     end
   end
@@ -3882,7 +4190,7 @@ do
   local playerMovingFrame = nil
 
   local function PlayerMoveUpdate()
-    Private.StartProfileSystem("generictrigger");
+    Private.StartProfileSystem("generictrigger player moving");
     local moving = IsPlayerMoving()
     if (playerMovingFrame.moving ~= moving or playerMovingFrame.moving == nil) then
       playerMovingFrame.moving = moving
@@ -3894,7 +4202,7 @@ do
       playerMovingFrame.speed = speed
       WeakAuras.ScanEvents("PLAYER_MOVE_SPEED_UPDATE")
     end
-    Private.StopProfileSystem("generictrigger");
+    Private.StopProfileSystem("generictrigger player moving");
   end
 
   ---@private
@@ -4156,6 +4464,14 @@ function GenericTrigger.SetToolTip(trigger, state)
     elseif (state.unit and state.unitAuraIndex) then
       GameTooltip:SetUnitAura(state.unit, state.unitAuraIndex, state.unitAuraFilter)
       return true
+    elseif (state.unit and state.unitAuraInstanceID and state.unitAuraFilter) then
+      if state.unitAuraFilter == "HELPFUL" then
+        GameTooltip:SetUnitBuffByAuraInstanceID(state.unit, state.auraInstanceID, state.unitAuraFilter)
+        return true
+      elseif state.unitAuraFilter == "HARMFUL" then
+        GameTooltip:SetUnitDebuffByAuraInstanceID(state.unit, state.auraInstanceID, state.unitAuraFilter)
+        return true
+      end
     end
   end
 
@@ -4172,14 +4488,12 @@ function GenericTrigger.SetToolTip(trigger, state)
   return false
 end
 
----@type fun(data: auraData, triggernum: number): string
+---@type fun(data: auraData, triggernum: number): table
 function GenericTrigger.GetAdditionalProperties(data, triggernum)
   local trigger = data.triggers[triggernum].trigger
-  local ret = "";
+  local props = {}
   local prototype = GenericTrigger.GetPrototype(trigger)
   if prototype then
-    local found = false;
-    local additional = ""
     for _, v in pairs(prototype.args) do
       local enable = true
       if(type(v.enable) == "function") then
@@ -4188,17 +4502,11 @@ function GenericTrigger.GetAdditionalProperties(data, triggernum)
         enable = v.enable
       end
       if (enable and v.store and v.name and v.display and v.conditionType ~= "bool") then
-        found = true;
-        additional = additional .. "|cFFFFCC00%".. triggernum .. "." .. v.name .. "|r - " .. v.display .. "\n";
+        props[v.name] = v.display
       end
     end
     if prototype.countEvents then
-      found = true;
-      additional = additional .. "|cFFFFCC00%".. triggernum .. ".count|r - " .. L["Count"] .. "\n";
-    end
-
-    if (found) then
-      ret = ret .. additional;
+      props.count = L["Count"]
     end
   else
     if (trigger.custom_type == "stateupdate") then
@@ -4206,16 +4514,13 @@ function GenericTrigger.GetAdditionalProperties(data, triggernum)
       if (type(variables) == "table") then
         for var, varData in pairs(variables) do
           if (type(varData) == "table") then
-            if varData.display then
-              ret = ret .. "|cFFFFCC00%".. triggernum .. "." .. var .. "|r - " .. varData.display .. "\n"
-            end
+            props[var] = varData.display or var
           end
         end
       end
     end
   end
-
-  return ret;
+  return props;
 end
 
 function GenericTrigger.GetProgressSources(data, triggernum, values)
@@ -4722,42 +5027,13 @@ WeakAuras.GetHitChance = function()
   return max(melee, ranged, spell)
 end
 
-Private.ExecEnv.GetCurrencyInfo = function(id)
-  if WeakAuras.IsRetail() then
-    return C_CurrencyInfo.GetCurrencyInfo(id)
-  elseif WeakAuras.IsCataClassic() then
-    local name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity = GetCurrencyInfo(id)
-    local currencyInfo = {
-      name = name,
-      description = "",
-      isHeader = false,
-      isHeaderExpanded = false,
-      isTypeUnused = false,
-      isShowInBackpack = false,
-      quantity = currentAmount,
-      trackedQuantity = 0,
-      iconFileID = texture,
-      maxQuantity = totalMax,
-      canEarnPerWeek = weeklyMax > 0,
-      quantityEarnedThisWeek = earnedThisWeek,
-      isTradeable = false,
-      quality = rarity,
-      maxWeeklyQuantity = weeklyMax,
-      totalEarned = 0,
-      discovered = isDiscovered,
-      useTotalEarnedForMaxQty = false,
-    }
-    return currencyInfo
-  end
-end
-
 ---@type fun(trigger: triggerData)
 ---@return CurrencyInfo|nil
 Private.GetCurrencyInfoForTrigger = function(trigger)
   if trigger.currencyId then
     local currencyId = tonumber(trigger.currencyId)
     if currencyId then
-      return Private.ExecEnv.GetCurrencyInfo(currencyId)
+      return C_CurrencyInfo.GetCurrencyInfo(currencyId)
     end
   end
 end

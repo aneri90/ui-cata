@@ -147,7 +147,7 @@ function mod:GetOptions()
 		-- General
 		358443, -- Blood in the Water
 		-- Murkbrine Scalebinder
-		{355132, "NAMEPLATEBAR"}, -- Invigorating Fish Stick
+		{355132, "NAMEPLATE"}, -- Invigorating Fish Stick
 		-- Murkbrine Shellcrusher
 		355057, -- Cry of Mrrggllrrgg
 		-- Coastwalker Goliath
@@ -556,7 +556,7 @@ do
 		-- we're using UNIT_TARGET as a proxy for the Scalebinder entering combat.
 		if mobId == 178141 and not registeredMobs[sourceGUID] then -- Murkbrine Scalebinder
 			registeredMobs[sourceGUID] = true
-			self:NameplateCDBar(355132, 7.2, sourceGUID) -- Invigorating Fish Stick
+			--self:Nameplate(355132, 7.2, sourceGUID) -- Invigorating Fish Stick
 		end
 	end
 	function mod:InvigoratingFishStick(args)
@@ -565,7 +565,7 @@ do
 
 		-- if for some reason this mob isn't registered already, register it so this bar won't be overwritten
 		registeredMobs[args.sourceGUID] = true
-		self:NameplateCDBar(args.spellId, 27.9, args.sourceGUID)
+		--self:Nameplate(args.spellId, 27.9, args.sourceGUID)
 	end
 end
 function mod:InvigoratingFishStickSpawned(args)

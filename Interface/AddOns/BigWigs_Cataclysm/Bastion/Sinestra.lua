@@ -33,24 +33,22 @@ end
 -- Locals
 --
 
-local roleCheckWarned = false
 local eggs = 0
 local orbList = {}
 local orbOnMe = false
 local orbWarned = nil
-local playerInList = nil
 local whelpGUIDs = {}
 
-local function isTargetableByOrb(unit)
+local function isTargetableByOrb(unit, bossUnit)
 	-- check tanks
 	if mod:Tank(unit) then return false end
 	-- check sinestra's target too
-	if UnitIsUnit("boss1target", unit) then return false end
+	if bossUnit and mod:ThreatTarget(unit, bossUnit) then return false end
 	-- and maybe do a check for whelp targets
-	for k, v in pairs(whelpGUIDs) do
+	for k in next, whelpGUIDs do
 		local whelp = mod:GetUnitIdByGUID(k)
-		if whelp then
-			if UnitIsUnit(whelp.."target", unit) then return false end
+		if whelp and mod:ThreatTarget(unit, whelp) then
+			return false
 		end
 	end
 	return true
@@ -59,12 +57,10 @@ end
 local function populateOrbList()
 	orbList = {}
 	orbOnMe = false
+	local bossUnit = mod:GetUnitIdByGUID(45213) -- Sinestra
 	for unit in mod:IterateGroup() do
 		-- Tanking something, but not a tank (aka not tanking Sinestra or Whelps)
-		if UnitThreatSituation(unit) == 3 and isTargetableByOrb(unit) then
-			if UnitIsUnit(unit, "player") then
-				playerInList = true
-			end
+		if mod:ThreatTarget(unit) and isTargetableByOrb(unit, bossUnit) then
 			orbList[#orbList + 1] = mod:UnitName(unit)
 			if mod:Me(mod:UnitGUID(unit)) then
 				orbOnMe = true
@@ -73,10 +69,8 @@ local function populateOrbList()
 	end
 end
 
-local function wipeWhelpList(resetWarning)
-	if resetWarning then orbWarned = nil end
-	playerInList = nil
-	whelpGUIDs = {}
+local function ResetOrbWarning()
+	orbWarned = nil
 end
 
 --------------------------------------------------------------------------------
@@ -105,11 +99,6 @@ function mod:GetOptions(CL)
 end
 
 function mod:OnBossEnable()
-	if not roleCheckWarned and (UnitIsGroupLeader("player") or UnitIsGroupAssistant("player")) then
-		BigWigs:Print("It is recommended that your raid has proper main tanks set for this encounter to improve orb target detection.")
-		roleCheckWarned = true
-	end
-
 	if self:Retail() then
 		if self:Difficulty() == 6 then
 			self:SetEncounterID(1083)
@@ -123,6 +112,8 @@ function mod:OnBossEnable()
 
 	self:Log("SWING_DAMAGE", "WhelpWatcher", "*")
 	self:Log("SWING_MISSED", "WhelpWatcher", "*")
+	self:Death("TwilightWhelpDeaths", 47265, 48047, 48048, 48049, 48050) -- Twilight Whelp
+	self:RegisterEvent("NAME_PLATE_UNIT_ADDED")
 
 	self:Log("SPELL_CAST_START", "Breath", 90125)
 
@@ -137,15 +128,14 @@ function mod:OnBossEnable()
 end
 
 function mod:OnEngage()
-	self:CDBar(90125, 24) -- Slicer
-	self:CDBar(92852, 29) -- Breath
-	self:Bar("whelps", 16, L["whelps"], 69005) -- whelp like icon
-	self:ScheduleTimer("NextOrbSpawned", 29)
-	eggs = 0
-	self:RegisterUnitEvent("UNIT_HEALTH", "PhaseWarn", "boss1")
 	whelpGUIDs = {}
 	orbWarned = nil
-	playerInList = nil
+	eggs = 0
+	self:CDBar(90125, 23) -- Breath
+	self:CDBar(92852, 29) -- Slicer
+	self:Bar("whelps", 16, L["whelps"], 69005) -- whelp like icon
+	self:ScheduleTimer("NextOrbSpawned", 30)
+	self:RegisterUnitEvent("UNIT_HEALTH", "PhaseWarn", "boss1")
 end
 
 --------------------------------------------------------------------------------
@@ -164,39 +154,54 @@ do
 		local mobId = self:MobId(args.sourceGUID)
 		if whelpIds[mobId] then
 			whelpGUIDs[args.sourceGUID] = true
+		else
+			mobId = self:MobId(args.destGUID)
+			if whelpIds[mobId] then
+				whelpGUIDs[args.destGUID] = true
+			end
+		end
+	end
+	function mod:TwilightWhelpDeaths(args)
+		whelpGUIDs[args.destGUID] = nil
+	end
+	function mod:NAME_PLATE_UNIT_ADDED(_, unit)
+		local guid = self:UnitGUID(unit)
+		if whelpIds[self:MobId(guid)] then
+			whelpGUIDs[guid] = true
 		end
 	end
 end
 
 local repeatCount = 0
 function mod:OrbWarning(source)
-	--if playerInList then mod:Flash(92852) end
-
-	-- this is why orbList can't be created by :NewTargetList
 	if orbList[1] then mod:PrimaryIcon(92852, orbList[1]) end
 	if orbList[2] then mod:SecondaryIcon(92852, orbList[2]) end
 
 	if source == "spawn" then
 		if #orbList > 0 then
-			mod:TargetsMessage(92852, "yellow", orbList, nil, L.slicer_message)
-			-- if we could guess orb targets lets wipe the whelpGUIDs in 5 sec
-			-- if not then we might as well just save them for next time
-			mod:ScheduleTimer(wipeWhelpList, 5) -- might need to adjust this
+			mod:TargetsMessage(92852, "yellow", orbList, #orbList, L.slicer_message)
+			if #orbList == 1 and repeatCount == 0 then
+				repeatCount = 1
+				self:SimpleTimer(function()
+					populateOrbList()
+					self:OrbWarning("spawn")
+				end, 1)
+			end
 			if orbOnMe then
 				self:PlaySound(92852, "warning")
 			end
 		else
 			repeatCount = repeatCount + 1
-			if repeatCount <= 3 then
-				self:ScheduleTimer(function()
+			if repeatCount <= 6 then
+				self:SimpleTimer(function()
 					populateOrbList()
 					self:OrbWarning("spawn")
 				end, 1)
 			end
 		end
 	elseif source == "damage" then
-		mod:TargetsMessage(92852, "yellow", orbList, nil, L.slicer_message)
-		mod:ScheduleTimer(wipeWhelpList, 10, true) -- might need to adjust this
+		mod:TargetsMessage(92852, "yellow", orbList, #orbList, L.slicer_message)
+		mod:SimpleTimer(ResetOrbWarning, 10) -- might need to adjust this
 		if orbOnMe then
 			self:PlaySound(92852, "warning")
 		end
@@ -207,11 +212,11 @@ end
 -- need to change it once there is a proper trigger for orbs
 function mod:NextOrbSpawned()
 	repeatCount = 0
-	self:CDBar(92852, 28)
+	self:CDBar(92852, 28.5)
 	self:MessageOld(92852, "blue")
 	populateOrbList()
 	self:OrbWarning("spawn")
-	self:ScheduleTimer("NextOrbSpawned", 28)
+	self:ScheduleTimer("NextOrbSpawned", 28.5)
 end
 
 function mod:OrbDamage()
@@ -279,9 +284,9 @@ function mod:TwilightEggDeaths()
 	if eggs == 2 then
 		self:MessageOld("phase", "green", "info", CL["phase"]:format(3), 51070) -- broken egg icon
 		self:Bar("whelps", 50, L["whelps"], 69005)
-		self:CDBar(92852, 30) -- Slicer
+		self:CDBar(92852, 29) -- Slicer
 		self:CDBar(90125, 24) -- Breath
-		self:ScheduleTimer("NextOrbSpawned", 30)
+		self:ScheduleTimer("NextOrbSpawned", 29)
 	end
 end
 

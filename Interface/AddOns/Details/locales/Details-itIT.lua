@@ -184,7 +184,6 @@ L["STRING_ENVIRONMENTAL_FATIGUE"] = "Ambiente (Fatica)"
 L["STRING_ENVIRONMENTAL_FIRE"] = "Ambiente (Fuoco)"
 L["STRING_ENVIRONMENTAL_LAVA"] = "Ambiente (Lava)"
 L["STRING_ENVIRONMENTAL_SLIME"] = "Ambiente (Slime)"
-L["STRING_EQUILIZING"] = "Condivisione data incontro"
 L["STRING_ERASE"] = "cancella"
 L["STRING_ERASE_DATA"] = "Cancella Tutti i Dati"
 L["STRING_ERASE_DATA_OVERALL"] = "Cancella i Dati Complessivi"
@@ -708,6 +707,10 @@ L["STRING_OPTIONS_MINIMAP_DESC"] = "Mostra o Nascondi le icone minimappa"
 L["STRING_OPTIONS_MISCTITLE"] = "Impostazioni varie"
 L["STRING_OPTIONS_MISCTITLE2"] = "Questi controllano diverse opzioni."
 --[[Translation missing --]]
+L["STRING_OPTIONS_MPLUS_AUTO_CLOSE_TIME"] = "Time To Auto Close"
+--[[Translation missing --]]
+L["STRING_OPTIONS_MPLUS_AUTO_CLOSE_TIME_DESC"] = "Time to auto close the Show End of M+ Panel automatically."
+--[[Translation missing --]]
 L["STRING_OPTIONS_MPLUS_BOSSNEWCOMBAT"] = "New Combat on Boss Pull"
 --[[Translation missing --]]
 L["STRING_OPTIONS_MPLUS_BOSSNEWCOMBAT_DESC"] = "If a boss is pulled while in combat, this option closes the current combat encounter and initiates a new one for the boss."
@@ -987,6 +990,8 @@ L["STRING_OPTIONS_TEXT_LPOSITION"] = "Mostra Numero"
 L["STRING_OPTIONS_TEXT_LPOSITION_DESC"] = "Mostra la posizione del numero sul lato sinistro del nome del player."
 L["STRING_OPTIONS_TEXT_LTRANSLIT"] = "Translit"
 L["STRING_OPTIONS_TEXT_LTRANSLIT_DESC"] = "Rendi quelle lettere russe che nessuno capisce da presentare come lettere occidentali."
+--[[Translation missing --]]
+L["STRING_OPTIONS_TEXT_OUTLINE"] = "Text Outline"
 L["STRING_OPTIONS_TEXT_RIGHT_ANCHOR"] = "Testo Destro:"
 L["STRING_OPTIONS_TEXT_ROUTILINE_DESC"] = "Attiva o Disattiva il contorno per il testo a destra."
 L["STRING_OPTIONS_TEXT_ROWICONS_ANCHOR"] = "Icone"

@@ -175,6 +175,7 @@ function Private.GetTalentInfo(specId)
 end
 
 Private.talentInfo = {}
+Private.talentInfoByNodeId = {}
 
 local function GetClassId(classFile)
 	for classID = 1, GetNumClasses() do
@@ -193,6 +194,7 @@ function Private.GetTalentData(specId)
 	end
 	local configId = Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID
 	local specData = {}
+  local specDataByNodeId = {}
 	local heroData = {}
 	C_ClassTalents.InitializeViewLoadout(specId, 70)
 	C_ClassTalents.ViewLoadout({})
@@ -214,8 +216,11 @@ function Private.GetTalentData(specId)
 								talentId,
 								definitionInfo.spellID,
 								{ node.posX, node.posY, idx, #node.entryIDs },
-								{}
+								{}, -- Target if it exists,
+								node.maxRanks
 							}
+							specDataByNodeId[node.ID] = specDataByNodeId[node.ID] or {}
+							specDataByNodeId[node.ID][idx] = talentData
 							for _, edge in pairs(node.visibleEdges) do
 								local targetNodeId = edge.targetNode
 								local targetNode = C_Traits.GetNodeInfo(configId, targetNodeId)
@@ -226,11 +231,12 @@ function Private.GetTalentData(specId)
 									tinsert(talentData[4], targetNodeTalentId1)
 								end
 							end
-							if node.subTreeID then
+							local subTreeIndex = node.subTreeID and tIndexOf(subTreeIDs, node.subTreeID) or nil
+							if subTreeIndex then
 								local subTreeInfo = C_Traits.GetSubTreeInfo(configId, node.subTreeID)
 								talentData[3][1] = node.posX - subTreeInfo.posX
 								talentData[3][2] = node.posY - subTreeInfo.posY
-								talentData[3][5] = tIndexOf(subTreeIDs, node.subTreeID)
+								talentData[3][5] = subTreeIndex
 								tinsert(heroData, talentData)
 							else
 								tinsert(specData, talentData)
@@ -251,8 +257,9 @@ function Private.GetTalentData(specId)
 	specData[1000] = { offsetX = basePanOffsetX, offsetY = basePanOffsetY }
 	heroData[999] = backgroundAlias[specId]
 	heroData[1001] = true
-	Private.talentInfo[specId] = { specData, heroData }
-	return specData, heroData
+	Private.talentInfo[specId] = { specData, heroData, specDataByNodeId }
+	return specData, heroData, specDataByNodeId
+  -- TODO fix callers
 end
 
 WeakAuras.StopMotion = {

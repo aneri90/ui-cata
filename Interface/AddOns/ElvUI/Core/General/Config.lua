@@ -15,18 +15,15 @@ local CreateFrame = CreateFrame
 local InCombatLockdown = InCombatLockdown
 local IsAltKeyDown = IsAltKeyDown
 local IsControlKeyDown = IsControlKeyDown
-local GetMouseFocus = GetMouseFocus
 local UIParent = UIParent
 
 local EditBox_HighlightText = EditBox_HighlightText
 local EditBox_ClearFocus = EditBox_ClearFocus
 
-local EnableAddOn = (C_AddOns and C_AddOns.EnableAddOn) or EnableAddOn
-local GetAddOnInfo = (C_AddOns and C_AddOns.GetAddOnInfo) or GetAddOnInfo
-local IsAddOnLoaded = (C_AddOns and C_AddOns.IsAddOnLoaded) or IsAddOnLoaded
-local LoadAddOn = (C_AddOns and C_AddOns.LoadAddOn) or LoadAddOn
-
--- GLOBALS: ElvUIMoverNudgeWindow, ElvUIMoverPopupWindow, ElvUIMoverPopupWindowDropDown
+local EnableAddOn = C_AddOns.EnableAddOn
+local GetAddOnInfo = C_AddOns.GetAddOnInfo
+local IsAddOnLoaded = C_AddOns.IsAddOnLoaded
+local LoadAddOn = C_AddOns.LoadAddOn
 
 local grid
 E.ConfigModeLayouts = {
@@ -86,12 +83,15 @@ function E:ToggleMoveMode(which)
 		E:Grid_Show()
 		_G.ElvUIGrid:SetAlpha(0.4)
 
-		if not ElvUIMoverPopupWindow then
+		if not E.MoverPopupWindow then
 			E:CreateMoverPopup()
 		end
 
-		ElvUIMoverPopupWindow:Show()
-		_G.UIDropDownMenu_SetSelectedValue(ElvUIMoverPopupWindowDropDown, strupper(which))
+		E.MoverPopupWindow:Show()
+
+		if not E.Retail then
+			_G.UIDropDownMenu_SetSelectedValue(E.MoverPopupDropdown, strupper(which))
+		end
 
 		if IsAddOnLoaded('ElvUI_Options') then
 			E:Config_CloseWindow()
@@ -100,8 +100,8 @@ function E:ToggleMoveMode(which)
 		E:Grid_Hide()
 		_G.ElvUIGrid:SetAlpha(1)
 
-		if ElvUIMoverPopupWindow then
-			ElvUIMoverPopupWindow:Hide()
+		if E.MoverPopupWindow then
+			E.MoverPopupWindow:Hide()
 		end
 	end
 end
@@ -198,22 +198,46 @@ function E:ConfigMode_OnClick()
 	E:ToggleMoveMode(self.value)
 end
 
-function E:ConfigMode_Initialize()
-	local info = _G.UIDropDownMenu_CreateInfo()
-	info.func = E.ConfigMode_OnClick
-
-	for _, configMode in ipairs(E.ConfigModeLayouts) do
-		info.text = E.ConfigModeLocalizedStrings[configMode]
-		info.value = configMode
-		_G.UIDropDownMenu_AddButton(info)
+do
+	local selected = 'ALL'
+	local function IsSelected(restrictEnum)
+		return selected == restrictEnum
 	end
 
-	local dd = ElvUIMoverPopupWindowDropDown
-	_G.UIDropDownMenu_SetSelectedValue(dd, dd.selectedValue or 'ALL')
+	local function SetSelected(restrictEnum)
+		E:ToggleMoveMode(restrictEnum)
+		selected = restrictEnum
+	end
+
+	function E:ConfigMode_Initialize(root)
+		if E.Retail then
+			root:SetTag('ELVUI_MOVER_LAYOUT')
+
+			for _, configMode in ipairs(E.ConfigModeLayouts) do
+				root:CreateRadio(E.ConfigModeLocalizedStrings[configMode], IsSelected, SetSelected, configMode)
+			end
+
+			--[[if self.menu then -- 11.0 this doesnt work...
+				self.menu:SetFrameStrata('DIALOG')
+				self.menu:SetFrameLevel(1200)
+			end]]
+		else
+			local info = _G.UIDropDownMenu_CreateInfo()
+			info.func = E.ConfigMode_OnClick
+
+			for _, configMode in ipairs(E.ConfigModeLayouts) do
+				info.text = E.ConfigModeLocalizedStrings[configMode]
+				info.value = configMode
+				_G.UIDropDownMenu_AddButton(info)
+			end
+
+			_G.UIDropDownMenu_SetSelectedValue(E.MoverPopupDropdown, E.MoverPopupDropdown.selectedValue or 'ALL')
+		end
+	end
 end
 
 function E:NudgeMover(nudgeX, nudgeY)
-	local mover = ElvUIMoverNudgeWindow.child
+	local mover = E.MoverNudgeFrame.child
 	if not mover then return end
 
 	local x, y, point = E:CalculateMoverPoints(mover, nudgeX, nudgeY)
@@ -234,16 +258,15 @@ function E:UpdateNudgeFrame(mover, x, y)
 	x = E:Round(x)
 	y = E:Round(y)
 
-	local ElvUIMoverNudgeWindow = ElvUIMoverNudgeWindow
-	ElvUIMoverNudgeWindow.xOffset:SetText(x)
-	ElvUIMoverNudgeWindow.yOffset:SetText(y)
-	ElvUIMoverNudgeWindow.xOffset.currentValue = x
-	ElvUIMoverNudgeWindow.yOffset.currentValue = y
-	ElvUIMoverNudgeWindow.title:SetText(mover.textString)
+	E.MoverNudgeFrame.xOffset:SetText(x)
+	E.MoverNudgeFrame.yOffset:SetText(y)
+	E.MoverNudgeFrame.xOffset.currentValue = x
+	E.MoverNudgeFrame.yOffset.currentValue = y
+	E.MoverNudgeFrame.title:SetText(mover.textString)
 end
 
 function E:AssignFrameToNudge()
-	ElvUIMoverNudgeWindow.child = self
+	E.MoverNudgeFrame.child = self
 	E:UpdateNudgeFrame(self)
 end
 
@@ -251,16 +274,21 @@ function E:CreateMoverPopup()
 	local r, g, b = unpack(E.media.rgbvaluecolor)
 
 	local f = CreateFrame('Frame', 'ElvUIMoverPopupWindow', UIParent)
-	f:SetFrameStrata('FULLSCREEN_DIALOG')
+	f:SetFrameStrata('DIALOG')
+	f:SetFrameLevel(1000)
 	f:SetToplevel(true)
 	f:EnableMouse(true)
 	f:SetMovable(true)
-	f:SetFrameLevel(200)
 	f:SetClampedToScreen(true)
 	f:Size(370, 190)
 	f:SetTemplate('Transparent')
 	f:Point('BOTTOM', UIParent, 'CENTER', 0, 100)
 	f:Hide()
+	f:HookScript('OnHide', function()
+		E.MoverNudgeFrame:Hide()
+	end)
+
+	E.MoverPopupWindow = f
 
 	local header = CreateFrame('Button', nil, f)
 	header:SetTemplate(nil, true)
@@ -375,16 +403,24 @@ function E:CreateMoverPopup()
 		end
 	end)
 
-	local dropDown = CreateFrame('Frame', f:GetName()..'DropDown', f, 'UIDropDownMenuTemplate')
-	dropDown:Point('BOTTOMRIGHT', lock, 'TOPRIGHT', 8, -5)
-	S:HandleDropDownBox(dropDown, 165)
+	local dropDown = CreateFrame(E.Retail and 'DropdownButton' or 'Frame', f:GetName()..'DropDown', f, E.Retail and 'WowStyle1DropdownTemplate' or 'UIDropDownMenuTemplate')
+	dropDown:Point('BOTTOMRIGHT', lock, 'TOPRIGHT', 2, 0)
+	S:HandleDropDownBox(dropDown, 160)
+
 	dropDown.text = dropDown:CreateFontString(nil, 'OVERLAY', 'GameFontNormal')
 	dropDown.text:Point('RIGHT', dropDown.backdrop, 'LEFT', -2, 0)
 	dropDown.text:SetText(L["Config Mode:"])
 	dropDown.text:FontTemplate(nil, 12, 'SHADOW')
+
+	E.MoverPopupDropdown = dropDown
+
 	f.dropDown = dropDown
 
-	_G.UIDropDownMenu_Initialize(dropDown, E.ConfigMode_Initialize)
+	if E.Retail then
+		dropDown:SetupMenu(E.ConfigMode_Initialize)
+	else
+		_G.UIDropDownMenu_Initialize(dropDown, E.ConfigMode_Initialize)
+	end
 
 	local nudgeFrame = CreateFrame('Frame', 'ElvUIMoverNudgeWindow', E.UIParent)
 	nudgeFrame:SetFrameStrata('DIALOG')
@@ -409,7 +445,7 @@ function E:CreateMoverPopup()
 		end
 	end)
 
-	ElvUIMoverPopupWindow:HookScript('OnHide', function() ElvUIMoverNudgeWindow:Hide() end)
+	E.MoverNudgeFrame = nudgeFrame
 
 	desc = nudgeFrame:CreateFontString(nil, 'ARTWORK')
 	desc:SetFontObject('GameFontHighlight')
@@ -508,8 +544,8 @@ function E:CreateMoverPopup()
 	resetButton:Point('TOP', nudgeFrame, 'CENTER', 0, 2)
 	resetButton:Size(100, 25)
 	resetButton:SetScript('OnClick', function()
-		if ElvUIMoverNudgeWindow.child and ElvUIMoverNudgeWindow.child.textString then
-			E:ResetMovers(ElvUIMoverNudgeWindow.child.textString)
+		if E.MoverNudgeFrame.child and E.MoverNudgeFrame.child.textString then
+			E:ResetMovers(E.MoverNudgeFrame.child.textString)
 		end
 	end)
 	S:HandleButton(resetButton)
@@ -677,6 +713,11 @@ function E:Config_SearchUpdate(userInput)
 		C:Search_AddResults()
 
 		ACD:SelectGroup('ElvUI', 'search') -- trigger update
+	else
+		local _, selected = E:Config_GetStatus(self.frame)
+		if selected == 'search' then
+			ACD:SelectGroup('ElvUI', self.selected or 'general') -- try to stay or swap back to general if it cant
+		end
 	end
 end
 
@@ -707,7 +748,7 @@ function E:Config_SearchFocusLost()
 end
 
 function E:Config_SearchOnEvent()
-	local frame = self:HasFocus() and GetMouseFocus()
+	local frame = self:HasFocus() and E:GetMouseFocus()
 	if frame and (frame ~= self and frame ~= self.clearButton) then
 		EditBox_ClearFocus(self)
 	end
@@ -1007,8 +1048,8 @@ E.valueColorUpdateFuncs.ConfigLogo = function(_, _, r, g, b)
 		ConfigLogoTop:SetVertexColor(r, g, b)
 	end
 
-	if ElvUIMoverNudgeWindow and ElvUIMoverNudgeWindow.shadow then
-		ElvUIMoverNudgeWindow.shadow:SetBackdropBorderColor(r, g, b, 0.9)
+	if E.MoverNudgeFrame and E.MoverNudgeFrame.shadow then
+		E.MoverNudgeFrame.shadow:SetBackdropBorderColor(r, g, b, 0.9)
 	end
 end
 

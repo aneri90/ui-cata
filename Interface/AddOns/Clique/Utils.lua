@@ -13,7 +13,6 @@ local addonName, addon = ...
 local L = addon.L
 
 local strconcat = strconcat
----@diagnostic disable-next-line: undefined-field
 local strsplit = string.split
 
 -- Returns the prefix string for the current keyboard state.
@@ -108,7 +107,7 @@ local convertMap = setmetatable({
     MOUSEWHEELUP = L["MousewheelUp"],
     MOUSEWHEELDOWN = L["MousewheelDown"],
 }, {
-    __index = function(t, k, v)
+    __index = function(t, k)
         if k:match("^BUTTON(%d+)$") then
             return k:gsub("^BUTTON(%d+)$", "Button%1")
         else
@@ -145,11 +144,9 @@ function addon:GetBindingIcon(binding)
 
     local btype = binding.type
     if btype == "menu" then
-        --return "Interface\\Icons\\Trade_Engineering"
-        return nil
+        return 132212
     elseif btype == "target" then
-        --return "Interface\\Icons\\Ability_Mage_IncantersAbsorbtion"
-        return nil
+        return 132331
     else
         return binding.icon or "Interface\\Icons\\INV_Misc_QuestionMark"
     end
@@ -173,17 +170,25 @@ function addon:SpellTextWithSubName(binding)
     end
 end
 
-function addon:GetBindingActionText(btype, binding)
+function addon:SpellTextWithoutSubName(binding)
+    return binding.spell
+end
+
+function addon:GetBindingActionText(btype, binding, skipSubName)
     if btype == "menu" then
         return L["Show unit menu"]
     elseif btype == "target" then
         return L["Target clicked unit"]
+    elseif btype == "spell" and skipSubName then
+        return L["Cast %s"]:format(addon:SpellTextWithoutSubName(binding))
     elseif btype == "spell" then
         return L["Cast %s"]:format(addon:SpellTextWithSubName(binding))
-    elseif btype == "macro" and type(binding) == "table" then
-        return L["Run macro '%s'"]:format(tostring(binding.macrotext))
+    elseif btype == "macro" and type(binding) == "table" and binding.macro then
+        return L["Run macro '%s'"]:format(tostring(binding.macro))
+    elseif btype == "macro" and binding.macrotext then
+        return L["Run custom macro '%s'"]:format(tostring(binding.macrotext))
     elseif btype == "macro" then
-        return L["Run macro"]:format(tostring(binding.macrotext))
+        return L["Run custom macro"]
     else
         return L["Unknown binding type '%s'"]:format(tostring(btype))
     end
@@ -357,4 +362,130 @@ function addon:GetSelfCastKeyText()
     if not selfCastKey then return "Undefined" end
 
     return selfCastKey:upper()
+end
+
+-- Target, menu, spell macro
+-- Within each sort by name, then by binding key, then by random ID
+
+local actionTypeSortValue = {
+    target = 1,
+    menu = 2,
+    spell = 3,
+    macro = 4,
+}
+
+local sortComparison = function(a, b)
+    if a.type == b.type then
+        local texta = addon:GetBindingActionText(a.type, a)
+        local textb = addon:GetBindingActionText(b.type, b)
+        if texta == textb then
+            local keya = addon:GetBindingKey(a)
+            local keyb = addon:GetBindingKey(b)
+            if keya == keyb then
+                return tostring(a) < tostring(b)
+            else
+                return keya < keyb
+            end
+        else
+            return texta < textb
+        end
+    else
+        local aVal = actionTypeSortValue[a.type]
+        local bVal = actionTypeSortValue[b.type]
+        if not aVal then aVal = 999 end
+        if not bVal then bVal = 999 end
+
+        return aVal < bVal
+    end
+end
+
+local memoizeBindings = {}
+local compareFunctions
+compareFunctions = {
+    name = function(a, b)
+        local texta = addon:GetBindingActionText(a.type, a)
+        local textb = addon:GetBindingActionText(b.type, b)
+        if texta == textb then
+            return compareFunctions.key(a, b)
+        end
+        return texta < textb
+    end,
+    key = function(a, b)
+        local keya = addon:GetBindingKey(a)
+        local keyb = addon:GetBindingKey(b)
+        if keya == keyb then
+            return tostring(a) < tostring(b)
+        elseif not keya or not keyb then
+            return false
+        else
+            return keya < keyb
+        end
+    end,
+    binding = function(a, b)
+        local mem = memoizeBindings
+		if mem[a] == mem[b] then
+			return compareFunctions.name(a, b)
+		else
+			return mem[a] < mem[b]
+		end
+    end,
+}
+
+local buttonSortValues = {
+    BUTTON1 = 1,
+    BUTTON2 = 2,
+    BUTTON3 = 3,
+}
+
+local compareFunctions = {
+    name = function(a, b)
+        local texta = addon:GetBindingActionText(a.type, a)
+        local textb = addon:GetBindingActionText(b.type, b)
+        if texta == textb then
+            return compareFunctions.key(a, b)
+        end
+        return texta < textb
+    end,
+    key = function(a, b)
+        local keya = addon:GetBindingKey(a)
+        local keyb = addon:GetBindingKey(b)
+        if keya == keyb then
+            return compareFunctions.binding(a, b)
+        elseif not keya or not keyb then
+            return false
+        elseif buttonSortValues[keya] and not buttonSortValues[keyb] then
+            -- Left value is a mouse button, prefer that
+            return true
+        elseif buttonSortValues[keyb] and not buttonSortValues[keya] then
+            -- Right value is a mouse button, prefer that
+            return false
+        else
+            return keya < keyb
+        end
+    end,
+    binding = function(a, b)
+        local comboa = addon:GetBindingKeyComboText(a)
+        local combob = addon:GetBindingKeyComboText(b)
+        if comboa == combob then
+            local texta = addon:GetBindingActionText(a.type, a)
+            local textb = addon:GetBindingActionText(b.type, b)
+            if texta == textb then
+                return tostring(a) < tostring(b)
+            else
+                return texta < textb
+            end
+        else
+            return comboa < combob
+        end
+    end,
+}
+
+
+function addon:SortBindingsByKey(bindings)
+    table.sort(bindings, compareFunctions.key)
+end
+
+
+function addon:SortBindingsByName(bindings)
+    table.sort(bindings, compareFunctions.name)
 end

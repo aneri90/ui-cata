@@ -5,7 +5,7 @@
 local mod, CL = BigWigs:NewBoss("Kologarn", 603, 1642)
 if not mod then return end
 mod:RegisterEnableMob(32930)
-mod:SetEncounterID(1137)
+mod:SetEncounterID(mod:Classic() and 749 or 1137)
 -- mod:SetRespawnTime(0) -- Respawn is based on running over the line at the room entrance
 
 --------------------------------------------------------------------------------
@@ -80,7 +80,7 @@ function mod:CHAT_MSG_RAID_BOSS_WHISPER(event, msg, unitName)
 	-- Kologarn focuses his eyes on you!#Kologarn
 	if unitName == self.displayName then
 		self:Flash("eyebeam", 63976)
-		self:Say("eyebeam", eyeBeam)
+		self:Say("eyebeam", eyeBeam, nil, "Eyebeam")
 		self:Sync("EyeBeamWarn")
 	end
 end

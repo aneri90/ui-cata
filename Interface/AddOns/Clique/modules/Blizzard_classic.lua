@@ -9,7 +9,8 @@
 --   * ADDON_LOADED - To watch for loading of the ArenaUI
 -------------------------------------------------------------------------]]--
 
-local addonName, addon = ...
+---@class addon
+local addon = select(2, ...)
 local L = addon.L
 
 -- Only load if this is Classic

@@ -60,31 +60,22 @@ CliqueDB3 = {
 				}, -- [5]
 				{
 					["type"] = "spell",
+					["key"] = "ALT-2",
+					["sets"] = {
+						["enemy"] = true,
+					},
+					["icon"] = 136122,
+					["spell"] = "Bane of Doom",
+				}, -- [6]
+				{
+					["type"] = "spell",
 					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
 						["friend"] = true,
 					},
 					["icon"] = 463285,
 					["spell"] = "Dark Intent",
-				}, -- [6]
-				{
-					["type"] = "spell",
-					["key"] = "ALT-1",
-					["sets"] = {
-						["enemy"] = true,
-					},
-					["icon"] = 136139,
-					["spell"] = "Bane of Agony",
 				}, -- [7]
-				{
-					["type"] = "spell",
-					["key"] = "1",
-					["sets"] = {
-						["enemy"] = true,
-					},
-					["icon"] = 136197,
-					["spell"] = "Shadow Bolt",
-				}, -- [8]
 				{
 					["type"] = "spell",
 					["key"] = "ALT-3",
@@ -93,15 +84,24 @@ CliqueDB3 = {
 					},
 					["icon"] = 136118,
 					["spell"] = "Corruption",
-				}, -- [9]
+				}, -- [8]
 				{
 					["type"] = "spell",
-					["key"] = "ALT-2",
+					["key"] = "ALT-1",
 					["sets"] = {
 						["enemy"] = true,
 					},
-					["icon"] = 136122,
-					["spell"] = "Bane of Doom",
+					["icon"] = 136139,
+					["spell"] = "Bane of Agony",
+				}, -- [9]
+				{
+					["type"] = "spell",
+					["key"] = "1",
+					["sets"] = {
+						["enemy"] = true,
+					},
+					["icon"] = 136197,
+					["spell"] = "Shadow Bolt",
 				}, -- [10]
 				{
 					["type"] = "spell",

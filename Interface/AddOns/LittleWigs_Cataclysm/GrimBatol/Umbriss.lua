@@ -35,7 +35,7 @@ end
 function mod:OnEngage()
 	commandingRoarCount = 1
 	self:CDBar(448847, 6.0, CL.count:format(self:SpellName(448847), commandingRoarCount)) -- Commanding Roar
-	self:CDBar(448877, 10.0) -- Rock Spike
+	self:CDBar(448877, 16.0) -- Rock Spike
 	self:CDBar(447261, 24.0) -- Skullsplitter
 end
 
@@ -48,7 +48,7 @@ end
 -- Classic Initialization
 --
 
-if not BigWigsLoader.isBeta then
+if mod:Classic() then
 	function mod:GetOptions()
 		return {
 			{74670, "ICON"}, -- Blitz

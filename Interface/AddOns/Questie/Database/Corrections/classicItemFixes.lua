@@ -675,6 +675,9 @@ function QuestieItemFixes:Load()
             [itemKeys.npcDrops] = {},
             [itemKeys.objectDrops] = {},
         },
+        [10515] = { -- Torch of Retribution
+            [itemKeys.class] = itemClasses.QUEST,
+        },
         [10575] = {
             [itemKeys.npcDrops] = {9461}, -- #1216
         },
@@ -793,9 +796,6 @@ function QuestieItemFixes:Load()
             [itemKeys.relatedQuests] = {4294},
             [itemKeys.npcDrops] = {},
             [itemKeys.objectDrops] = {175265},
-        },
-        [12283] = {
-            [itemKeys.npcDrops] = {7047,7048,7049},
         },
         [12291] = {
             [itemKeys.npcDrops] = {6557,9621},
@@ -1063,6 +1063,9 @@ function QuestieItemFixes:Load()
             [itemKeys.npcDrops] = {},
             [itemKeys.objectDrops] = {},
         },
+        [18240] = {
+            [itemKeys.npcDrops] = {},
+        },
         [18335] = {
             [itemKeys.class] = 12,
         },
@@ -1308,6 +1311,15 @@ function QuestieItemFixes:Load()
             [itemKeys.name] = "Wooden Figurine",
             [itemKeys.objectDrops] = {375544},
             [itemKeys.relatedQuests] = {65602},
+        },
+        ----------------
+        [227911] = {
+            [itemKeys.name] = "Head of Rend Blackhand",
+            [itemKeys.npcDrops] = {10429},
+            [itemKeys.objectDrops] = nil,
+            [itemKeys.itemDrops] = nil,
+            [itemKeys.vendors] = nil,
+            [itemKeys.startQuest] = 84377,
         },
     }
 end

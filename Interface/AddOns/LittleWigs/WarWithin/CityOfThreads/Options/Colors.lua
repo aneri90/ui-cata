@@ -8,21 +8,20 @@ BigWigs:AddColors("Orator Krix'vizk", {
 })
 
 BigWigs:AddColors("Fangs of the Queen", {
-	[439522] = "cyan",
-	[439621] = "purple",
+	[439621] = "red",
 	[439692] = "orange",
-	[440238] = {"blue","yellow"},
+	[440218] = {"blue","yellow"},
 	[440468] = "purple",
-	[441286] = {"blue","red"},
 	[441298] = {"blue","yellow"},
+	[441384] = "cyan",
 	[458741] = {"blue","purple"},
 })
 
 BigWigs:AddColors("The Coaglamation", {
-	[438658] = "orange",
 	[441289] = "red",
 	[441395] = "yellow",
-	[448185] = "cyan",
+	[461842] = "purple",
+	[461880] = "orange",
 })
 
 BigWigs:AddColors("Izo, the Grand Splicer", {
@@ -35,7 +34,7 @@ BigWigs:AddColors("Izo, the Grand Splicer", {
 
 BigWigs:AddColors("City of Threads Trash", {
 	[434137] = "yellow",
-	[442653] = "cyan",
+	[441795] = "green",
 	[443430] = "red",
 	[443437] = {"blue","yellow"},
 	[443500] = "orange",
